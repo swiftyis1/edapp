@@ -36,26 +36,28 @@ gantt
 ```
 
 ### Phase 1: Core Game & Telemetry MVP
-*   **Goal:** Build a playable simulation level (specifically DNA Transcription & Translation) that logs student action telemetry to PostgreSQL.
+*   **Goal:** Build a playable simulation level (specifically DNA Transcription & Translation) that logs student action telemetry to PostgreSQL, alongside a dev-mode admin panel.
 *   **Deliverables:**
     *   Next.js project container + styling system.
     *   Django database models for `Student`, `Session`, and `TelemetryEvent`.
-    *   Playable DNA base-pairing and codon-translation simulation emitting telemetry.
+    *   Playable DNA base-pairing simulation emitting telemetry, and a mock District Admin dashboard layout.
 
 ### Phase 2: Analytics & Dashboards
-*   **Goal:** Surface diagnostic reports to parents/teachers showing predicted science assessment scores and standard mastery based on the 11th Grade CCRA blueprint.
+*   **Goal:** Surface diagnostic reports to parents, teachers, and district administrators showing predicted science assessment scores and standard mastery based on the 11th Grade CCRA blueprint.
 *   **Deliverables:**
-    *   Authentication and Role-Based Access Control (RBAC).
-    *   Teacher dashboard (rosters, progress tracking, OAS standard gaps).
+    *   Authentication and Role-Based Access Control (RBAC) for Students, Teachers, and District Admins.
+    *   Teacher dashboard (rosters, progress tracking, OAS standard gaps, OPI cutoff colors).
     *   Parent dashboard (growth metrics, family tips).
+    *   District Admin dashboard (cross-campus OPI average, seat license utilization, and EOY score import interface).
     *   Python background tasks for calculating student state (e.g., Bayesian Knowledge Tracing parameters).
 
 ### Phase 3: Admin & Monetization
 *   **Goal:** Implement school/campus seat licenses and individual family subscriptions.
 *   **Deliverables:**
-    *   School admin portals (seat quota management, invite systems).
-    *   Stripe checkout integrations.
+    *   School/District admin portals (seat quota allocations, teacher invite codes, subscription logs).
+    *   Stripe checkout integrations (direct consumer card billing & B2B district invoice generation).
     *   Google Classroom / Clever SSO integration.
+
 
 ---
 
