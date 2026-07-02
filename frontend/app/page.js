@@ -37,6 +37,14 @@ export default function Home() {
   // Telemetry dispatch logs (stored locally for preview in Task 3)
   const [dispatchedTelemetry, setDispatchedTelemetry] = useState([]);
 
+  // District admin mock upload states
+  const [csvFile, setCsvFile] = useState(null);
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const [isCalibrating, setIsCalibrating] = useState(false);
+  const [calibrationLogs, setCalibrationLogs] = useState([]);
+  const [isCalibrated, setIsCalibrated] = useState(false);
+
+
   // Start timer on first user action
   const handleFirstAction = () => {
     if (!startTime) {
@@ -110,6 +118,36 @@ export default function Home() {
     logTelemetryEvent("reset", { message: "User cleared and reset transcription canvas" });
   };
 
+  const simulateCsvUpload = () => {
+    if (isCalibrating) return;
+    setCsvFile("ccra_export_sample.csv");
+    setUploadProgress(0);
+    setIsCalibrating(true);
+    setIsCalibrated(false);
+    setCalibrationLogs(["[INFO] Initiating EOY assessment data import..."]);
+
+    const steps = [
+      { progress: 20, log: "[INFO] Parsing CSV headers..." },
+      { progress: 45, log: "[INFO] Stripping student names, emails, and PII... OK" },
+      { progress: 65, log: "[INFO] Generating secure cryptographic UUIDv4 hashes... OK" },
+      { progress: 85, log: "[INFO] Merging EOY test scores with student telemetry vectors... OK" },
+      { progress: 95, log: "[INFO] Purging raw identifiers and file from memory buffer... OK" },
+      { progress: 100, log: "[SUCCESS] Model retrained successfully! 1,420 matched student records. Active Model: v1.3." }
+    ];
+
+    steps.forEach((step, index) => {
+      setTimeout(() => {
+        setUploadProgress(step.progress);
+        setCalibrationLogs((prev) => [...prev, step.log]);
+        if (step.progress === 100) {
+          setIsCalibrating(false);
+          setIsCalibrated(true);
+        }
+      }, (index + 1) * 600);
+    });
+  };
+
+
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
       {/* Header Bar */}
@@ -148,11 +186,22 @@ export default function Home() {
           >
             Teacher Roster
           </button>
+          <button
+            onClick={() => setRole("admin")}
+            className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${
+              role === "admin"
+                ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/20"
+                : "text-zinc-400 hover:text-zinc-200"
+            }`}
+          >
+            District Admin
+          </button>
         </div>
       </header>
 
+
       {/* Main Content Area */}
-      {role === "student" ? (
+      {role === "student" && (
         <main className="flex-1 max-w-7xl w-full mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Simulator Panel */}
           <div className="lg:col-span-2 space-y-6">
@@ -254,7 +303,7 @@ export default function Home() {
                               ? `bg-gradient-to-b ${BASE_COLORS[base]}`
                               : isNext
                               ? "border-dashed border-zinc-700 bg-zinc-900/30 text-indigo-400 animate-pulse"
-                              : "border-dashed border-zinc-800 text-zinc-850"
+                              : "border-dashed border-zinc-800 text-zinc-855"
                           }`}
                         >
                           <span className="text-[10px] text-zinc-500 mb-0.5">{idx + 1}</span>
@@ -332,7 +381,7 @@ export default function Home() {
                   JSON Streams
                 </span>
               </div>
-              <div className="flex-1 bg-zinc-950 border border-zinc-850 rounded-xl p-3 font-mono text-[10px] text-zinc-400 overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-850">
+              <div className="flex-1 bg-zinc-950 border border-zinc-850 rounded-xl p-3 font-mono text-[10px] text-zinc-400 overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-855">
                 {dispatchedTelemetry.length === 0 ? (
                   <span className="text-zinc-600 italic">
                     {"// Telemetry payload streams will render here in real time..."}
@@ -346,16 +395,169 @@ export default function Home() {
             </div>
           </div>
         </main>
-      ) : (
+      )}
+
+      {role === "teacher" && (
         /* Teacher Dashboard Stub View */
         <main className="flex-1 max-w-7xl w-full mx-auto p-6">
           <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl">
-            <h2 className="text-2xl font-bold text-white mb-2">Teacher Analytics Stub</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">Teacher Analytics Dashboard</h2>
             <p className="text-sm text-zinc-400 mb-6">
               This dashboard view will render in Week 2 (Sprint 1 Tasks 6 & 7) once database telemetry integration is complete.
             </p>
             <div className="border border-dashed border-zinc-800 p-12 rounded-xl text-center text-zinc-650 italic">
-              Dashboard views, performance rosters, and predicted OPI cutoffs (Below Basic, Basic, Proficient, Advanced) will render here.
+              Rosters, completed student profiles, and predicted OPI levels (Below Basic, Basic, Proficient, Advanced) will render here.
+            </div>
+          </div>
+        </main>
+      )}
+
+      {role === "admin" && (
+        /* District Admin Dashboard View */
+        <main className="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+          <div className="flex justify-between items-center">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-white">District Administrator Hub</h2>
+              <p className="text-sm text-zinc-400">Manage licenses, view campus performance, and calibrate predictive models.</p>
+            </div>
+            <div className="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+              <span className="text-xs font-semibold text-zinc-300">
+                Model: {isCalibrated ? "Active v1.3 (Calibrated)" : "Active v1.2 (Default Heuristic)"}
+              </span>
+            </div>
+          </div>
+
+          {/* Stat Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+              <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Active Campuses</span>
+              <div className="text-2xl font-bold text-white mt-1">4 Schools</div>
+            </div>
+            <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+              <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Seat Licenses</span>
+              <div className="text-2xl font-bold text-white mt-1">1,420 / 2,000</div>
+              <div className="text-xs text-zinc-500 mt-0.5">71% Seat Utilization</div>
+            </div>
+            <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+              <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Est. Proficiency Rate</span>
+              <div className="text-2xl font-bold text-indigo-400 mt-1">68.4%</div>
+              <div className="text-xs text-zinc-500 mt-0.5">Target: 70% for positive card</div>
+            </div>
+            <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+              <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Total Telemetry Streams</span>
+              <div className="text-2xl font-bold text-white mt-1">18,342 events</div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Campus List Table */}
+            <div className="lg:col-span-2 bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl">
+              <h3 className="text-lg font-bold text-white mb-4">Campus Performance Summary</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-sm text-zinc-400">
+                  <thead className="text-xs text-zinc-500 uppercase border-b border-zinc-850">
+                    <tr>
+                      <th className="py-3">School Name</th>
+                      <th className="py-3">Students Active</th>
+                      <th className="py-3">Avg Accuracy</th>
+                      <th className="py-3 text-right">Est. Proficient+</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-zinc-850 font-medium">
+                    <tr>
+                      <td className="py-3.5 text-white">Central High School</td>
+                      <td className="py-3.5">680 / 800 seats</td>
+                      <td className="py-3.5">84.2%</td>
+                      <td className="py-3.5 text-right text-emerald-400">74.1%</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3.5 text-white">Westside Academy</td>
+                      <td className="py-3.5">420 / 600 seats</td>
+                      <td className="py-3.5">71.8%</td>
+                      <td className="py-3.5 text-right text-amber-400">48.2%</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3.5 text-white">Oak Creek High</td>
+                      <td className="py-3.5">210 / 400 seats</td>
+                      <td className="py-3.5">91.5%</td>
+                      <td className="py-3.5 text-right text-emerald-400">88.5%</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3.5 text-white">Innovation Charter</td>
+                      <td className="py-3.5">110 / 200 seats</td>
+                      <td className="py-3.5">64.0%</td>
+                      <td className="py-3.5 text-right text-rose-400">35.4%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Score Calibration Panel */}
+            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">EOY Score Calibration</h3>
+                <p className="text-xs text-zinc-500 mb-4">
+                  Upload de-identified score tables to map EOY actual CCRA grades to in-app telemetry for model retraining.
+                </p>
+
+                {/* Upload Action Area */}
+                <div className="border border-dashed border-zinc-800 bg-zinc-950/40 rounded-xl p-6 text-center space-y-3">
+                  <div className="text-3xl text-zinc-650">📊</div>
+                  <div>
+                    <span className="text-xs font-semibold text-indigo-400 hover:text-indigo-300 cursor-pointer" onClick={simulateCsvUpload}>
+                      {csvFile ? `Attached: ${csvFile}` : "Click to select de-identified CSV"}
+                    </span>
+                    <p className="text-[10px] text-zinc-600 mt-1">Accepts serial user-id & scaled score columns.</p>
+                  </div>
+                </div>
+
+                {/* Progress bar */}
+                {isCalibrating && (
+                  <div className="mt-4 space-y-1.5">
+                    <div className="flex justify-between text-[10px] font-semibold text-zinc-500">
+                      <span>Calibrating model...</span>
+                      <span>{uploadProgress}%</span>
+                    </div>
+                    <div className="w-full bg-zinc-800 h-1 rounded-full overflow-hidden">
+                      <div className="bg-indigo-500 h-1 transition-all duration-300" style={{ width: `${uploadProgress}%` }}></div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Ingestion Log Output */}
+                {calibrationLogs.length > 0 && (
+                  <div className="mt-4 bg-zinc-950 border border-zinc-850 p-3 rounded-lg font-mono text-[9px] text-zinc-400 h-36 overflow-y-auto space-y-1.5">
+                    {calibrationLogs.map((log, idx) => (
+                      <div key={idx} className={log.startsWith("[SUCCESS]") ? "text-emerald-400" : ""}>
+                        {log}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div className="mt-6 pt-4 border-t border-zinc-850 flex gap-3">
+                <button
+                  disabled={isCalibrating || !csvFile}
+                  onClick={() => {
+                    setCsvFile(null);
+                    setCalibrationLogs([]);
+                    setIsCalibrated(false);
+                  }}
+                  className="flex-1 py-2 text-xs font-semibold bg-zinc-800 text-zinc-300 rounded-lg hover:bg-zinc-700 transition disabled:opacity-40"
+                >
+                  Clear Data
+                </button>
+                <button
+                  disabled={isCalibrating || isCalibrated}
+                  onClick={simulateCsvUpload}
+                  className="flex-1 py-2 text-xs font-semibold bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition shadow-md shadow-indigo-600/20 disabled:opacity-40"
+                >
+                  {isCalibrated ? "Calibrated" : "Run Ingestion"}
+                </button>
+              </div>
             </div>
           </div>
         </main>
