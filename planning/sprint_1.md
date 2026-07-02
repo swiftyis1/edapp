@@ -29,9 +29,10 @@
     *   Implement transcription status feedback (e.g. displaying the transcribed mRNA chain).
     *   Implement District Administrator Dashboard stub displaying active campuses, seat license metrics, and a mock EOY de-identified CSV import log.
 
-*   [ ] **4. First Telemetry Dispatch**
+*   [x] **4. First Telemetry Dispatch**
     *   Write a client-side telemetry sender that catches click events (e.g., base matching attempt, checking sequence accuracy, clearing chain) and sends them via `fetch` to `/api/telemetry/`.
     *   *Verification:* Verify in browser network logs that events are firing and returning successful response codes.
+
 
 
 ---

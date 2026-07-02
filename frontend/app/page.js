@@ -96,16 +96,39 @@ export default function Home() {
     });
   };
 
-  // Log events locally for developer visualization
-  const logTelemetryEvent = (eventType, payload) => {
+  // Log events locally for developer visualization and dispatch to Django backend
+  const logTelemetryEvent = async (eventType, payload) => {
     const newEvent = {
       event_id: `evt_${Math.random().toString(36).substr(2, 9)}`,
+      student_id: "student_uuid_1",   // Mock UUID
+      session_id: "session_uuid_abc", // Mock Session UUID
       timestamp: new Date().toISOString(),
       event_type: eventType,
+      level_id: "dna_transcription_1",
+      construct_tag: "OAS.B.LS1.1",
       payload: payload,
     };
+
+    // Add to local preview state
     setDispatchedTelemetry((prev) => [newEvent, ...prev]);
+
+    // Dispatch to the backend API stub
+    try {
+      const response = await fetch("http://localhost:8000/api/telemetry/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newEvent),
+      });
+      if (!response.ok) {
+        console.warn("Failed to dispatch telemetry to backend:", response.statusText);
+      }
+    } catch (err) {
+      console.warn("Network error dispatching telemetry:", err.message);
+    }
   };
+
 
   const resetSimulation = () => {
     setMrnaChain([]);
