@@ -205,7 +205,7 @@ export default function Home() {
                 {/* DNA Template Strand */}
                 <div>
                   <div className="text-xs font-semibold text-zinc-500 mb-2 uppercase tracking-wide">
-                    DNA Template Strand (3' -> 5')
+                    {"DNA Template Strand (3' -> 5')"}
                   </div>
                   <div className="flex flex-wrap gap-2.5">
                     {templateDNA.map((base, idx) => {
@@ -239,8 +239,9 @@ export default function Home() {
                 {/* Transcribed mRNA Strand */}
                 <div>
                   <div className="text-xs font-semibold text-zinc-500 mb-2 uppercase tracking-wide">
-                    mRNA Transcript Strand (5' -> 3')
+                    {"mRNA Transcript Strand (5' -> 3')"}
                   </div>
+
                   <div className="flex flex-wrap gap-2.5">
                     {templateDNA.map((_, idx) => {
                       const base = mrnaChain[idx];
