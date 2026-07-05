@@ -1,31 +1,105 @@
 import uuid
 from django.core.management.base import BaseCommand
 from django.utils import timezone
-from telemetry.models import Student, Session, TelemetryEvent
+from django.contrib.auth.models import User
+from telemetry.models import Student, Session, TelemetryEvent, UserProfile, Classroom, Campus, ScoringConfig
 
 class Command(BaseCommand):
-    help = "Seeds the database with mock student profiles and structured gameplay telemetry logs"
+    help = "Seeds the database with mock student profiles, users, classrooms, campuses, and structured gameplay telemetry logs"
 
     def handle(self, *args, **options):
-        self.stdout.write("Purging existing student and telemetry data...")
+        self.stdout.write("Purging existing student, classroom, user and telemetry data...")
         TelemetryEvent.objects.all().delete()
         Session.objects.all().delete()
         Student.objects.all().delete()
+        Classroom.objects.all().delete()
+        UserProfile.objects.all().delete()
+        Campus.objects.all().delete()
+        ScoringConfig.objects.all().delete()
+        User.objects.filter(is_superuser=False).delete()
+
+        # Seed default ScoringConfig
+        ScoringConfig.objects.create(key='default', a=23.08, b=303.00)
+        self.stdout.write("Created default ScoringConfig: A=23.08, B=303.00")
+
+        # Seed Teacher
+        teacher_user = User.objects.create_user(
+            username="teacher_albright",
+            password="password123",
+            first_name="Mrs.",
+            last_name="Albright"
+        )
+        UserProfile.objects.create(user=teacher_user, role="teacher")
+        self.stdout.write("Created teacher: Mrs. Albright (teacher_albright)")
+
+        # Seed District Admin
+        admin_user = User.objects.create_user(
+            username="admin_smith",
+            password="password123",
+            first_name="Superintendent",
+            last_name="Smith"
+        )
+        UserProfile.objects.create(user=admin_user, role="admin")
+        self.stdout.write("Created admin: Superintendent Smith (admin_smith)")
+
+        # Seed Classroom
+        classroom = Classroom.objects.create(
+            id=uuid.UUID("c1111111-1111-1111-1111-111111111111"),
+            name="Period 3 Biology",
+            teacher=teacher_user,
+            class_code="BIO101"
+        )
+        self.stdout.write("Created classroom: Period 3 Biology (BIO101)")
+
+        # Seed Campuses
+        Campus.objects.create(name="Central High School", students_active=680, seat_limit=800)
+        Campus.objects.create(name="Westside Academy", students_active=420, seat_limit=600)
+        Campus.objects.create(name="Oak Creek High", students_active=210, seat_limit=400)
+        Campus.objects.create(name="Innovation Charter", students_active=110, seat_limit=200)
+        self.stdout.write("Created campuses for District Admin KPIs")
 
         # Seed Students with fixed UUIDs to match the implementation plan
         students_data = [
-            {"id": "da59114f-c0df-4d51-a957-cc3b23c92b23", "name": "Alex Rivera"},
-            {"id": "e2d1d0c5-5a7c-47bc-8367-4f6c122bb33f", "name": "Blake Henderson"},
-            {"id": "f04eb32d-2098-4b72-88ec-8f0a1c6a23b1", "name": "Charlie Smith"},
-            {"id": "0e46be9f-b7a4-4df8-9226-eb52cbfb27d4", "name": "Daniela Garcia"},
-            {"id": "1b131012-38d5-4ad9-bf9f-864a66a1cc92", "name": "Erik Johnson"},
+            {"id": "da59114f-c0df-4d51-a957-cc3b23c92b23", "name": "Alex Rivera", "username": "alex_rivera"},
+            {"id": "e2d1d0c5-5a7c-47bc-8367-4f6c122bb33f", "name": "Blake Henderson", "username": "blake_henderson"},
+            {"id": "f04eb32d-2098-4b72-88ec-8f0a1c6a23b1", "name": "Charlie Smith", "username": "charlie_smith"},
+            {"id": "0e46be9f-b7a4-4df8-9226-eb52cbfb27d4", "name": "Daniela Garcia", "username": "daniela_garcia"},
+            {"id": "1b131012-38d5-4ad9-bf9f-864a66a1cc92", "name": "Erik Johnson", "username": "erik_johnson"},
         ]
 
         students = {}
         for sd in students_data:
-            student = Student.objects.create(id=uuid.UUID(sd["id"]), name=sd["name"])
+            first_name, last_name = sd["name"].split(' ', 1)
+            user = User.objects.create_user(
+                username=sd["username"],
+                password="password123",
+                first_name=first_name,
+                last_name=last_name
+            )
+            UserProfile.objects.create(user=user, role="student")
+            
+            student = Student.objects.create(
+                id=uuid.UUID(sd["id"]),
+                name=sd["name"],
+                user=user,
+                classroom=classroom
+            )
             students[sd["name"]] = student
-            self.stdout.write(f"Created student: {student.name} ({student.id})")
+            self.stdout.write(f"Created student user and profile: {student.name} ({student.id})")
+
+        # Seed Parent
+        parent_user = User.objects.create_user(
+            username="parent_smith",
+            password="password123",
+            first_name="John",
+            last_name="Smith"
+        )
+        UserProfile.objects.create(
+            user=parent_user,
+            role="parent",
+            parent_student=students["Charlie Smith"]
+        )
+        self.stdout.write("Created parent: John Smith (parent_smith), linked to Charlie Smith")
 
         # Define template DNA (9 bases)
         template_dna = ["T", "A", "C", "G", "G", "C", "T", "T", "A"]
