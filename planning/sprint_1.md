@@ -39,24 +39,24 @@
 
 ### Week 2: Database Integration & First Dashboard View
 
-*   [ ] **5. Telemetry Schema & Storage**
+*   [x] **5. Telemetry Schema & Storage**
     *   Create Django models for `Student`, `Session`, and `TelemetryEvent`.
     *   Migrate the database to apply the telemetry schema.
     *   Update the `/api/telemetry/` endpoint to parse the incoming JSON and save it to the database.
-*   [ ] **6. Simple Teacher Dashboard View**
+*   [x] **6. Simple Teacher Dashboard View**
     *   Create an endpoint `/api/reports/teacher/` that aggregates telemetry events (e.g., total transcription attempts, base error counts).
     *   Build a simple Next.js table view showing:
         *   Student Name
         *   Base Match Accuracy (%)
         *   Average Time per Base Pair
         *   Total Actions Logged
-*   [ ] **7. Rule-Based "State" Heuristic (CCRA Performance Band Proxy)**
+*   [x] **7. Rule-Based "State" Heuristic (CCRA Performance Band Proxy)**
     *   Implement a basic rule-based classifier in Python that maps student telemetry performance (e.g., error rate, time-to-solve) to a predicted CCRA Performance Band:
         *   High accuracy/fast speed $\rightarrow$ **Advanced (327-399)**
         *   Normal accuracy/moderate speed $\rightarrow$ **Proficient (300-326)**
         *   Minor errors/high retries $\rightarrow$ **Basic (278-299)**
         *   High error rate (>30%)/low engagement $\rightarrow$ **Below Basic (200-277)**
     *   Surface these predicted score ranges and color-coded status highlights on the teacher's dashboard (flagging anyone in the Basic/Below Basic range).
-*   [ ] **8. Walkthrough Demo**
+*   [x] **8. Walkthrough Demo**
     *   Play the DNA simulator, confirm transcription data is saved in PostgreSQL, and watch the teacher dashboard update in real time.
 

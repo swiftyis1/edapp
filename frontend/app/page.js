@@ -19,6 +19,14 @@ const BASE_COLORS = {
   default: "bg-zinc-800 border-zinc-700 text-zinc-400",
 };
 
+const MOCK_STUDENTS = [
+  { id: "da59114f-c0df-4d51-a957-cc3b23c92b23", name: "Alex Rivera" },
+  { id: "e2d1d0c5-5a7c-47bc-8367-4f6c122bb33f", name: "Blake Henderson" },
+  { id: "f04eb32d-2098-4b72-88ec-8f0a1c6a23b1", name: "Charlie Smith" },
+  { id: "0e46be9f-b7a4-4df8-9226-eb52cbfb27d4", name: "Daniela Garcia" },
+  { id: "1b131012-38d5-4ad9-bf9f-864a66a1cc92", name: "Erik Johnson" },
+];
+
 export default function Home() {
   // App Role View: 'student' (DNA Sandbox) vs 'teacher' (Dashboard Stub)
   const [role, setRole] = useState("student");
@@ -32,10 +40,19 @@ export default function Home() {
   const [errors, setErrors] = useState(0);
   const [startTime, setStartTime] = useState(null);
   const [isCompleted, setIsCompleted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [feedbackLog, setFeedbackLog] = useState([]);
+
+  // Active student & session IDs
+  const [selectedStudent, setSelectedStudent] = useState(MOCK_STUDENTS[1]); // Default to Blake Henderson
+  const [sessionId, setSessionId] = useState("");
 
   // Telemetry dispatch logs (stored locally for preview in Task 3)
   const [dispatchedTelemetry, setDispatchedTelemetry] = useState([]);
+
+  // Teacher dashboard live report states
+  const [teacherReportData, setTeacherReportData] = useState([]);
+  const [isLoadingReport, setIsLoadingReport] = useState(false);
 
   // District admin mock upload states
   const [csvFile, setCsvFile] = useState(null);
@@ -43,6 +60,38 @@ export default function Home() {
   const [isCalibrating, setIsCalibrating] = useState(false);
   const [calibrationLogs, setCalibrationLogs] = useState([]);
   const [isCalibrated, setIsCalibrated] = useState(false);
+
+
+  // Initialize Session ID on mount or on student change
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setSessionId(crypto.randomUUID());
+    }
+  }, [selectedStudent]);
+
+  // Fetch report data when role switches to teacher
+  useEffect(() => {
+    if (role === "teacher") {
+      fetchTeacherReport();
+    }
+  }, [role]);
+
+  const fetchTeacherReport = async () => {
+    setIsLoadingReport(true);
+    try {
+      const response = await fetch("http://localhost:8000/api/reports/teacher/");
+      if (response.ok) {
+        const data = await response.json();
+        setTeacherReportData(data);
+      } else {
+        console.warn("Failed to fetch teacher report:", response.statusText);
+      }
+    } catch (err) {
+      console.warn("Error fetching teacher report:", err.message);
+    } finally {
+      setIsLoadingReport(false);
+    }
+  };
 
 
   // Start timer on first user action
@@ -77,6 +126,7 @@ export default function Home() {
       } else {
         setIsCompleted(true);
         newLogEntry.message = "Transcription Complete! Click 'Submit' to process telemetry.";
+        setFeedbackLog((prev) => [newLogEntry, ...prev]);
       }
     } else {
       // Incorrect Match
@@ -99,9 +149,9 @@ export default function Home() {
   // Log events locally for developer visualization and dispatch to Django backend
   const logTelemetryEvent = async (eventType, payload) => {
     const newEvent = {
-      event_id: `evt_${Math.random().toString(36).substr(2, 9)}`,
-      student_id: "student_uuid_1",   // Mock UUID
-      session_id: "session_uuid_abc", // Mock Session UUID
+      event_id: typeof window !== "undefined" ? crypto.randomUUID() : `evt_${Math.random().toString(36).substr(2, 9)}`,
+      student_id: selectedStudent.id,   // Dynamic UUID
+      session_id: sessionId,           // Dynamic Session UUID
       timestamp: new Date().toISOString(),
       event_type: eventType,
       level_id: "dna_transcription_1",
@@ -129,6 +179,20 @@ export default function Home() {
     }
   };
 
+  const handleSubmitSimulation = async () => {
+    const duration = startTime ? (Date.now() - startTime) / 1000 : 0.0;
+    const accuracy = mrnaChain.length + errors > 0
+      ? Math.round((mrnaChain.length / (mrnaChain.length + errors)) * 100)
+      : 100;
+
+    await logTelemetryEvent("session_complete", {
+      total_errors: errors,
+      accuracy: accuracy,
+      duration_seconds: parseFloat(duration.toFixed(2)),
+    });
+
+    setIsSubmitted(true);
+  };
 
   const resetSimulation = () => {
     setMrnaChain([]);
@@ -136,8 +200,12 @@ export default function Home() {
     setErrors(0);
     setStartTime(null);
     setIsCompleted(false);
+    setIsSubmitted(false);
     setFeedbackLog([]);
     setDispatchedTelemetry([]);
+    if (typeof window !== "undefined") {
+      setSessionId(crypto.randomUUID());
+    }
     logTelemetryEvent("reset", { message: "User cleared and reset transcription canvas" });
   };
 
@@ -231,7 +299,7 @@ export default function Home() {
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 h-40 w-40 bg-indigo-500/5 rounded-full blur-3xl" />
               
-              <div className="flex justify-between items-center mb-6">
+              <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6 border-b border-zinc-800/60 pb-6">
                 <div>
                   <span className="text-xs font-bold uppercase tracking-wider text-indigo-400">
                     Active Challenge
@@ -240,125 +308,207 @@ export default function Home() {
                     DNA Transcription (B.LS1.1)
                   </h2>
                 </div>
-                <button
-                  onClick={resetSimulation}
-                  className="px-3 py-1 text-xs font-medium bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded-md border border-zinc-700 transition"
-                >
-                  Reset Canvas
-                </button>
-              </div>
-
-              {/* Progress Summary Cards */}
-              <div className="grid grid-cols-3 gap-4 mb-8">
-                <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
-                  <span className="text-xs text-zinc-500">Progress</span>
-                  <div className="text-lg font-bold text-white mt-0.5">
-                    {mrnaChain.length} / {templateDNA.length}
-                  </div>
-                </div>
-                <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
-                  <span className="text-xs text-zinc-500">Errors Logged</span>
-                  <div className={`text-lg font-bold mt-0.5 ${errors > 0 ? "text-rose-400" : "text-emerald-400"}`}>
-                    {errors}
-                  </div>
-                </div>
-                <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
-                  <span className="text-xs text-zinc-500">Accuracy</span>
-                  <div className="text-lg font-bold text-white mt-0.5">
-                    {mrnaChain.length + errors > 0
-                      ? `${Math.round((mrnaChain.length / (mrnaChain.length + errors)) * 100)}%`
-                      : "100%"}
-                  </div>
-                </div>
-              </div>
-
-              {/* DNA Double Helix Representation */}
-              <div className="space-y-8 bg-zinc-950/80 border border-zinc-850 p-6 rounded-2xl mb-8">
-                {/* DNA Template Strand */}
-                <div>
-                  <div className="text-xs font-semibold text-zinc-500 mb-2 uppercase tracking-wide">
-                    {"DNA Template Strand (3' -> 5')"}
-                  </div>
-                  <div className="flex flex-wrap gap-2.5">
-                    {templateDNA.map((base, idx) => {
-                      const isActive = idx === currentIndex && !isCompleted;
-                      return (
-                        <div
-                          key={idx}
-                          className={`h-14 w-12 rounded-xl flex flex-col justify-center items-center font-bold text-lg border transition-all ${
-                            isActive
-                              ? "bg-zinc-800 border-indigo-500 scale-105 shadow-lg shadow-indigo-500/10 ring-2 ring-indigo-500/20"
-                              : "bg-zinc-900 border-zinc-800 text-zinc-400"
-                          }`}
-                        >
-                          <span className="text-xs text-zinc-600 font-semibold mb-0.5">{idx + 1}</span>
-                          {base}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Connecting Bonds Representation */}
-                <div className="flex gap-2.5 px-3 py-1 text-zinc-700 justify-start select-none">
-                  {templateDNA.map((_, idx) => (
-                    <div key={idx} className="w-12 flex justify-center text-zinc-700/40 text-xs font-black">
-                      ║
-                    </div>
-                  ))}
-                </div>
-
-                {/* Transcribed mRNA Strand */}
-                <div>
-                  <div className="text-xs font-semibold text-zinc-500 mb-2 uppercase tracking-wide">
-                    {"mRNA Transcript Strand (5' -> 3')"}
-                  </div>
-
-                  <div className="flex flex-wrap gap-2.5">
-                    {templateDNA.map((_, idx) => {
-                      const base = mrnaChain[idx];
-                      const isNext = idx === currentIndex && !isCompleted;
-                      return (
-                        <div
-                          key={idx}
-                          className={`h-14 w-12 rounded-xl flex flex-col justify-center items-center font-bold text-lg border transition-all ${
-                            base
-                              ? `bg-gradient-to-b ${BASE_COLORS[base]}`
-                              : isNext
-                              ? "border-dashed border-zinc-700 bg-zinc-900/30 text-indigo-400 animate-pulse"
-                              : "border-dashed border-zinc-800 text-zinc-855"
-                          }`}
-                        >
-                          <span className="text-[10px] text-zinc-500 mb-0.5">{idx + 1}</span>
-                          {base || "?"}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-
-              {/* Interaction Nucleotide Picker Controls */}
-              <div className="bg-zinc-950/40 border border-zinc-800/60 p-6 rounded-2xl text-center">
-                <p className="text-sm text-zinc-400 mb-4 font-medium">
-                  {isCompleted
-                    ? "Helix fully transcribed! Proceed to submission."
-                    : `Select the matching mRNA base for DNA nucleotide ${templateDNA[currentIndex]} at position ${currentIndex + 1}:`}
-                </p>
-
-                <div className="flex justify-center gap-4">
-                  {["A", "U", "C", "G"].map((base) => (
-                    <button
-                      key={base}
-                      disabled={isCompleted}
-                      onClick={() => handleBaseSelection(base)}
-                      className={`h-16 w-16 rounded-full font-black text-xl bg-gradient-to-b transition-all transform hover:scale-105 active:scale-95 disabled:opacity-30 disabled:pointer-events-none shadow-md ${BASE_COLORS[base]}`}
+                
+                <div className="flex flex-wrap items-center gap-3">
+                  {/* Student Select Dropdown */}
+                  <div className="flex items-center gap-2 bg-zinc-950 px-3 py-1.5 rounded-lg border border-zinc-800">
+                    <span className="text-[10px] uppercase font-bold text-zinc-500">Student:</span>
+                    <select
+                      value={selectedStudent.id}
+                      onChange={(e) => {
+                        const s = MOCK_STUDENTS.find(x => x.id === e.target.value);
+                        if (s) {
+                          setSelectedStudent(s);
+                          resetSimulation();
+                        }
+                      }}
+                      className="bg-transparent text-xs font-bold text-white focus:outline-none border-none cursor-pointer"
                     >
-                      {base}
-                    </button>
-                  ))}
+                      {MOCK_STUDENTS.map(s => (
+                        <option key={s.id} value={s.id} className="bg-zinc-900 text-white">
+                          {s.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <button
+                    onClick={resetSimulation}
+                    className="px-3 py-1.5 text-xs font-medium bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded-md border border-zinc-700 transition"
+                  >
+                    Reset Canvas
+                  </button>
                 </div>
               </div>
+
+              {isSubmitted ? (
+                <div className="text-center py-12 px-4 space-y-6">
+                  <div className="h-16 w-16 mx-auto bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-3xl font-black shadow-lg shadow-emerald-500/10">
+                    ✓
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">Simulation Completed!</h3>
+                    <p className="text-sm text-zinc-400 mt-2 max-w-md mx-auto">
+                      DNA transcription telemetry data has been successfully transmitted and logged in PostgreSQL.
+                    </p>
+                  </div>
+                  <div className="bg-zinc-950/60 border border-zinc-800/80 p-5 rounded-xl max-w-sm mx-auto grid grid-cols-2 gap-4 text-left font-sans">
+                    <div>
+                      <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">Student Profile</span>
+                      <div className="text-sm font-semibold text-white mt-0.5">{selectedStudent.name}</div>
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">Session ID</span>
+                      <div className="text-sm font-mono text-zinc-400 mt-0.5">{sessionId.slice(0, 8)}...</div>
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">Errors Logged</span>
+                      <div className="text-sm font-bold mt-0.5 text-rose-400">{errors}</div>
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">Accuracy</span>
+                      <div className="text-sm font-bold mt-0.5 text-emerald-400">
+                        {mrnaChain.length + errors > 0
+                          ? `${Math.round((mrnaChain.length / (mrnaChain.length + errors)) * 100)}%`
+                          : "100%"}
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    onClick={resetSimulation}
+                    className="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-md shadow-indigo-600/20 transition-all transform hover:scale-105 active:scale-95"
+                  >
+                    Reset & Play Again
+                  </button>
+                </div>
+              ) : (
+                <>
+                  {/* Progress Summary Cards */}
+                  <div className="grid grid-cols-3 gap-4 mb-8">
+                    <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
+                      <span className="text-xs text-zinc-500">Progress</span>
+                      <div className="text-lg font-bold text-white mt-0.5">
+                        {mrnaChain.length} / {templateDNA.length}
+                      </div>
+                    </div>
+                    <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
+                      <span className="text-xs text-zinc-500">Errors Logged</span>
+                      <div className={`text-lg font-bold mt-0.5 ${errors > 0 ? "text-rose-400" : "text-emerald-400"}`}>
+                        {errors}
+                      </div>
+                    </div>
+                    <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
+                      <span className="text-xs text-zinc-500">Accuracy</span>
+                      <div className="text-lg font-bold text-white mt-0.5">
+                        {mrnaChain.length + errors > 0
+                          ? `${Math.round((mrnaChain.length / (mrnaChain.length + errors)) * 100)}%`
+                          : "100%"}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* DNA Double Helix Representation */}
+                  <div className="space-y-8 bg-zinc-950/80 border border-zinc-850 p-6 rounded-2xl mb-8">
+                    {/* DNA Template Strand */}
+                    <div>
+                      <div className="text-xs font-semibold text-zinc-500 mb-2 uppercase tracking-wide">
+                        {"DNA Template Strand (3' -> 5')"}
+                      </div>
+                      <div className="flex flex-wrap gap-2.5">
+                        {templateDNA.map((base, idx) => {
+                          const isActive = idx === currentIndex && !isCompleted;
+                          return (
+                            <div
+                              key={idx}
+                              className={`h-14 w-12 rounded-xl flex flex-col justify-center items-center font-bold text-lg border transition-all ${
+                                isActive
+                                  ? "bg-zinc-800 border-indigo-500 scale-105 shadow-lg shadow-indigo-500/10 ring-2 ring-indigo-500/20"
+                                  : "bg-zinc-900 border-zinc-800 text-zinc-400"
+                              }`}
+                            >
+                              <span className="text-xs text-zinc-600 font-semibold mb-0.5">{idx + 1}</span>
+                              {base}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Connecting Bonds Representation */}
+                    <div className="flex gap-2.5 px-3 py-1 text-zinc-700 justify-start select-none">
+                      {templateDNA.map((_, idx) => (
+                        <div key={idx} className="w-12 flex justify-center text-zinc-700/40 text-xs font-black">
+                          ║
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Transcribed mRNA Strand */}
+                    <div>
+                      <div className="text-xs font-semibold text-zinc-500 mb-2 uppercase tracking-wide">
+                        {"mRNA Transcript Strand (5' -> 3')"}
+                      </div>
+
+                      <div className="flex flex-wrap gap-2.5">
+                        {templateDNA.map((_, idx) => {
+                          const base = mrnaChain[idx];
+                          const isNext = idx === currentIndex && !isCompleted;
+                          return (
+                            <div
+                              key={idx}
+                              className={`h-14 w-12 rounded-xl flex flex-col justify-center items-center font-bold text-lg border transition-all ${
+                                base
+                                  ? `bg-gradient-to-b ${BASE_COLORS[base]}`
+                                  : isNext
+                                  ? "border-dashed border-zinc-700 bg-zinc-900/30 text-indigo-400 animate-pulse"
+                                  : "border-dashed border-zinc-800 text-zinc-855"
+                              }`}
+                            >
+                              <span className="text-[10px] text-zinc-500 mb-0.5">{idx + 1}</span>
+                              {base || "?"}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Interaction Nucleotide Picker Controls */}
+                  <div className="bg-zinc-950/40 border border-zinc-800/60 p-6 rounded-2xl text-center">
+                    {isCompleted ? (
+                      <div className="space-y-4 py-2">
+                        <p className="text-sm text-emerald-400 font-semibold animate-pulse">
+                          ✓ Helix fully transcribed! Ready to submit telemetry data to backend.
+                        </p>
+                        <button
+                          onClick={handleSubmitSimulation}
+                          className="px-8 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/20 transform hover:scale-105 transition-all duration-300 active:scale-95 text-xs uppercase tracking-wider"
+                        >
+                          Submit Simulation Results
+                        </button>
+                      </div>
+                    ) : (
+                      <>
+                        <p className="text-sm text-zinc-400 mb-4 font-medium">
+                          Select the matching mRNA base for DNA nucleotide {templateDNA[currentIndex]} at position {currentIndex + 1}:
+                        </p>
+
+                        <div className="flex justify-center gap-4">
+                          {["A", "U", "C", "G"].map((base) => (
+                            <button
+                              key={base}
+                              onClick={() => handleBaseSelection(base)}
+                              className={`h-16 w-16 rounded-full font-black text-xl bg-gradient-to-b transition-all transform hover:scale-105 active:scale-95 shadow-md ${BASE_COLORS[base]}`}
+                            >
+                              {base}
+                            </button>
+                          ))}
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </>
+              )}
             </div>
           </div>
 
@@ -421,15 +571,145 @@ export default function Home() {
       )}
 
       {role === "teacher" && (
-        /* Teacher Dashboard Stub View */
-        <main className="flex-1 max-w-7xl w-full mx-auto p-6">
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl">
-            <h2 className="text-2xl font-bold text-white mb-2">Teacher Analytics Dashboard</h2>
-            <p className="text-sm text-zinc-400 mb-6">
-              This dashboard view will render in Week 2 (Sprint 1 Tasks 6 & 7) once database telemetry integration is complete.
-            </p>
-            <div className="border border-dashed border-zinc-800 p-12 rounded-xl text-center text-zinc-650 italic">
-              Rosters, completed student profiles, and predicted OPI levels (Below Basic, Basic, Proficient, Advanced) will render here.
+        <main className="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+          <div className="flex justify-between items-center">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-white">Teacher Analytics Dashboard</h2>
+              <p className="text-sm text-zinc-400">Monitor student standard mastery, session metrics, and predicted OPI Performance Bands.</p>
+            </div>
+            <button
+              onClick={fetchTeacherReport}
+              disabled={isLoadingReport}
+              className="px-3 py-1.5 text-xs font-semibold bg-zinc-800 hover:bg-zinc-700 text-zinc-200 rounded-lg border border-zinc-700 transition flex items-center gap-2"
+            >
+              {isLoadingReport ? "Refreshing..." : "Refresh Roster"}
+            </button>
+          </div>
+
+          {/* Quick Metrics Summary */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+              <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Total Roster</span>
+              <div className="text-2xl font-bold text-white mt-1">{teacherReportData.length} Students</div>
+            </div>
+            <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+              <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Class Avg Accuracy</span>
+              <div className="text-2xl font-bold text-indigo-400 mt-1">
+                {teacherReportData.length > 0
+                  ? `${Math.round(teacherReportData.reduce((acc, curr) => acc + curr.accuracy, 0) / teacherReportData.length)}%`
+                  : "0%"}
+              </div>
+            </div>
+            <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+              <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Class Avg Speed</span>
+              <div className="text-2xl font-bold text-white mt-1">
+                {teacherReportData.length > 0
+                  ? `${(teacherReportData.reduce((acc, curr) => acc + curr.avg_time_per_base, 0) / teacherReportData.length).toFixed(2)}s / base`
+                  : "0.00s / base"}
+              </div>
+            </div>
+            <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+              <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Accountability Flag</span>
+              <div className="text-2xl font-bold text-rose-400 mt-1">
+                {teacherReportData.filter(s => s.status_flag === "Needs Support").length} Flagged
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl relative overflow-hidden">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-lg font-bold text-white">Student Mastery Roster (OAS B.LS1.1)</h3>
+              <div className="text-xs bg-zinc-950 px-2.5 py-1.5 rounded-md border border-zinc-850 font-mono text-zinc-500">
+                Active Standard: DNA & Proteins
+              </div>
+            </div>
+            
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-sm text-zinc-400">
+                <thead className="text-xs text-zinc-500 uppercase border-b border-zinc-850">
+                  <tr>
+                    <th className="py-3">Student Name</th>
+                    <th className="py-3">OPI Performance Band</th>
+                    <th className="py-3">Predicted OPI Score</th>
+                    <th className="py-3">Accuracy (%)</th>
+                    <th className="py-3">Avg Speed</th>
+                    <th className="py-3">Actions Logged</th>
+                    <th className="py-3 text-right">Accountability Status</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-zinc-850 font-medium">
+                  {teacherReportData.length === 0 ? (
+                    <tr>
+                      <td colSpan="7" className="py-8 text-center text-zinc-500 italic">
+                        No students found. Run the seed telemetry script to populate.
+                      </td>
+                    </tr>
+                  ) : (
+                    teacherReportData.map((student) => (
+                      <tr key={student.id} className="hover:bg-zinc-900/30 transition-colors">
+                        <td className="py-3.5 text-white flex items-center gap-3">
+                          <div className="h-7 w-7 rounded-full bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 text-indigo-400 border border-indigo-500/30 flex items-center justify-center text-xs font-bold font-mono">
+                            {student.name.split(' ').map(n => n[0]).join('')}
+                          </div>
+                          <span>{student.name}</span>
+                        </td>
+                        <td className="py-3.5">
+                          {student.performance_band !== "N/A" ? (
+                            <span className={`px-2.5 py-1 rounded-full text-xs font-bold border ${student.color_class}`}>
+                              {student.performance_band}
+                            </span>
+                          ) : (
+                            <span className="text-zinc-600">—</span>
+                          )}
+                        </td>
+                        <td className="py-3.5 font-bold font-mono text-white">
+                          {student.opi_score > 0 ? student.opi_score : "—"}
+                        </td>
+                        <td className="py-3.5">
+                          <div className="flex items-center gap-2">
+                            <span className="font-mono text-zinc-200">{student.accuracy}%</span>
+                            <div className="w-16 bg-zinc-800 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                              <div 
+                                className={`h-full ${
+                                  student.accuracy >= 90 
+                                    ? "bg-emerald-500" 
+                                    : student.accuracy >= 80 
+                                    ? "bg-indigo-500" 
+                                    : student.accuracy >= 70 
+                                    ? "bg-amber-500" 
+                                    : "bg-rose-500"
+                                }`} 
+                                style={{ width: `${student.accuracy}%` }}
+                              ></div>
+                            </div>
+                          </div>
+                        </td>
+                        <td className="py-3.5 font-mono text-zinc-300">
+                          {student.avg_time_per_base > 0 ? `${student.avg_time_per_base}s` : "—"}
+                        </td>
+                        <td className="py-3.5 font-mono text-zinc-400">
+                          {student.total_actions}
+                        </td>
+                        <td className="py-3.5 text-right">
+                          {student.status_flag === "On Track" ? (
+                            <span className="inline-flex items-center gap-1.5 px-2 py-1 text-xs font-semibold text-emerald-400 bg-emerald-500/5 rounded-md border border-emerald-500/10">
+                              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                              On Track
+                            </span>
+                          ) : student.status_flag === "Needs Support" ? (
+                            <span className="inline-flex items-center gap-1.5 px-2 py-1 text-xs font-semibold text-rose-400 bg-rose-500/5 rounded-md border border-rose-500/10 animate-pulse">
+                              <span className="h-1.5 w-1.5 rounded-full bg-rose-500"></span>
+                              Needs Support
+                            </span>
+                          ) : (
+                            <span className="text-zinc-600">—</span>
+                          )}
+                        </td>
+                      </tr>
+                    ))
+                  )}
+                </tbody>
+              </table>
             </div>
           </div>
         </main>
