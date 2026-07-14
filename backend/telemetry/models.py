@@ -99,6 +99,9 @@ class TelemetryEvent(models.Model):
         indexes = [
             models.Index(fields=['student', 'event_type']),
             models.Index(fields=['session', 'event_type']),
+            models.Index(fields=['timestamp']),
+            models.Index(fields=['construct_tag']),
+            models.Index(fields=['student', 'construct_tag', 'timestamp']),
         ]
 
 class ScoringConfig(models.Model):
