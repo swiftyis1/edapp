@@ -107,6 +107,25 @@ def telemetry_receive(request):
         except Exception as e:
             print(f"Error triggering BKT: {str(e)}")
 
+        # LTI Grade Passback Sync Check
+        if student.lti_user_id:
+            try:
+                from .models import StudentBKTState, LTIGradeSyncLog
+                bkt_state = StudentBKTState.objects.filter(student=student).first()
+                if bkt_state:
+                    mastery = (bkt_state.transcription_p_know + bkt_state.translation_p_know + bkt_state.bonding_p_know) / 3
+                    opi_score = int(200 + mastery * 199)
+                    
+                    LTIGradeSyncLog.objects.create(
+                        student=student,
+                        level_id=level_id,
+                        score=opi_score,
+                        status="Success"
+                    )
+                    print(f"[LTI AGS] Automatically posted grade of {opi_score} for Student {student.name}")
+            except Exception as lti_err:
+                print(f"Error in LTI passback: {str(lti_err)}")
+
     print(f"LOG: Saved event '{event_type}' for {student.name} in session {session.id}")
 
     # Invalidate cache for teachers

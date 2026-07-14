@@ -47,6 +47,7 @@ class Classroom(models.Model):
     class_code = models.CharField(max_length=6, unique=True)
     campus = models.ForeignKey(Campus, on_delete=models.SET_NULL, null=True, blank=True, related_name='classrooms')
     created_at = models.DateTimeField(auto_now_add=True)
+    lti_context_id = models.CharField(max_length=255, blank=True, null=True)
 
     def __str__(self):
         return f"{self.name} ({self.class_code})"
@@ -68,6 +69,7 @@ class Student(models.Model):
     name = models.CharField(max_length=100)
     classroom = models.ForeignKey(Classroom, on_delete=models.SET_NULL, null=True, blank=True, related_name='students')
     created_at = models.DateTimeField(auto_now_add=True)
+    lti_user_id = models.CharField(max_length=255, blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -165,3 +167,29 @@ class InvoiceReceipt(models.Model):
 
     def __str__(self):
         return f"Invoice {self.stripe_invoice_id} - {self.campus.name} (${self.amount_paid})"
+
+
+class LTIPlatform(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=100) # e.g. "Canvas LMS"
+    issuer = models.CharField(max_length=255, unique=True) # e.g. "https://canvas.instructure.com"
+    client_id = models.CharField(max_length=255)
+    auth_login_url = models.URLField()
+    auth_token_url = models.URLField()
+    key_set_url = models.URLField()
+
+    def __str__(self):
+        return self.name
+
+
+class LTIGradeSyncLog(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='lti_grade_logs')
+    level_id = models.CharField(max_length=100)
+    score = models.IntegerField()
+    status = models.CharField(max_length=20, default='Success') # 'Success' or 'Failed'
+    error_message = models.TextField(blank=True, null=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.student.name} - {self.level_id}: {self.score} ({self.status})"

@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from . import lti_views
 
 urlpatterns = [
     path('telemetry/', views.telemetry_receive, name='telemetry_receive'),
@@ -30,4 +31,12 @@ urlpatterns = [
     path('sync/google-classroom/', views.sync_google_classroom, name='sync_google_classroom'),
     path('sync/clever/', views.sync_clever, name='sync_clever'),
     path('reports/school-admin/', views.school_admin_dashboard, name='school_admin_dashboard'),
+
+    # LTI 1.3
+    path('lti/login/', lti_views.lti_login_initiate, name='lti_login_initiate'),
+    path('lti/launch/', lti_views.lti_launch_callback, name='lti_launch_callback'),
+    path('lti/jwks/', lti_views.lti_jwks_endpoint, name='lti_jwks_endpoint'),
+    path('lti/config/', lti_views.lti_config_update, name='lti_config_update'),
+    path('lti/sync-logs/', lti_views.lti_sync_logs, name='lti_sync_logs'),
+    path('lti/retry-sync/', lti_views.lti_retry_sync, name='lti_retry_sync'),
 ]

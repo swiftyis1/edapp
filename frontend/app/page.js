@@ -261,6 +261,10 @@ export default function Home() {
   const [isLoadingAdminKpis, setIsLoadingAdminKpis] = useState(false);
   const [schoolAdminData, setSchoolAdminData] = useState(null);
   const [isLoadingSchoolAdminData, setIsLoadingSchoolAdminData] = useState(false);
+  const [ltiLogs, setLtiLogs] = useState([]);
+  const [isLtiSyncEnabled, setIsLtiSyncEnabled] = useState(true);
+  const [ltiScoreScale, setLtiScoreScale] = useState("opi");
+  const [isLoadingLtiLogs, setIsLoadingLtiLogs] = useState(false);
 
   // DNA Template Sequence (B.LS1.1 Target)
   const templateDNA = ["T", "A", "C", "G", "G", "C", "T", "T", "T"];
@@ -362,6 +366,7 @@ export default function Home() {
   useEffect(() => {
     if (role === "teacher" && token) {
       fetchTeacherReport();
+      fetchLtiLogs();
     }
   }, [role, token]);
 
@@ -390,6 +395,19 @@ export default function Home() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
+
+      // LTI 1.3 Token Launch Pre-fill
+      const ltiToken = params.get("lti_token");
+      const ltiRole = params.get("role");
+      if (ltiToken && ltiRole) {
+        setToken(ltiToken);
+        setRole(ltiRole);
+        localStorage.setItem("swift_token", ltiToken);
+        localStorage.setItem("swift_role", ltiRole);
+        setSuccessNotificationMessage("App launched successfully via LTI 1.3 Advantage!");
+        setShowSuccessNotification(true);
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
       
       // Success Notification
       if (params.get("billing_success") === "true") {
@@ -500,6 +518,62 @@ export default function Home() {
       console.warn("Failed to fetch school admin data:", err.message);
     } finally {
       setIsLoadingSchoolAdminData(false);
+    }
+  };
+
+  const fetchLtiLogs = async () => {
+    setIsLoadingLtiLogs(true);
+    try {
+      const headers = {};
+      if (token) {
+        headers["Authorization"] = `Token ${token}`;
+      }
+      const response = await fetch("http://localhost:8000/api/lti/sync-logs/", { headers });
+      if (response.ok) {
+        const data = await response.json();
+        setLtiLogs(data);
+      }
+    } catch (err) {
+      console.warn("Failed to fetch LTI logs:", err.message);
+    } finally {
+      setIsLoadingLtiLogs(false);
+    }
+  };
+
+  const handleLtiRetrySync = async (logId) => {
+    try {
+      const response = await fetch("http://localhost:8000/api/lti/retry-sync/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": token ? `Token ${token}` : ""
+        },
+        body: JSON.stringify({ log_id: logId })
+      });
+      if (response.ok) {
+        setSuccessNotificationMessage("Grade successfully re-sent to LMS Gradebook!");
+        setShowSuccessNotification(true);
+        fetchLtiLogs();
+      }
+    } catch (err) {
+      console.error("LTI Retry Error:", err);
+    }
+  };
+
+  const handleLtiConfigUpdate = async (enabled, scale) => {
+    setIsLtiSyncEnabled(enabled);
+    setLtiScoreScale(scale);
+    try {
+      await fetch("http://localhost:8000/api/lti/config/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": token ? `Token ${token}` : ""
+        },
+        body: JSON.stringify({ enable_sync: enabled, score_scale: scale })
+      });
+    } catch (err) {
+      console.error("LTI Config Update Error:", err);
     }
   };
 
@@ -2923,6 +2997,106 @@ export default function Home() {
                         </tr>
                       );
                     })
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* LTI 1.3 Advantage Integration Panel */}
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-6">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-zinc-850 pb-4">
+              <div>
+                <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Advantage Integration</span>
+                <h3 className="text-lg font-bold text-white mt-0.5">LTI 1.3 LMS Gradebook Sync</h3>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 bg-zinc-950 px-3 py-1.5 rounded-lg border border-zinc-850 text-xs">
+                  <span className="text-zinc-500">LMS Sync:</span>
+                  <button
+                    onClick={() => handleLtiConfigUpdate(!isLtiSyncEnabled, ltiScoreScale)}
+                    className={`px-2 py-0.5 rounded font-bold transition-all ${
+                      isLtiSyncEnabled ? "bg-indigo-600 text-white" : "bg-zinc-800 text-zinc-405"
+                    }`}
+                  >
+                    {isLtiSyncEnabled ? "ON" : "OFF"}
+                  </button>
+                </div>
+                <div className="flex items-center gap-2 bg-zinc-950 px-3 py-1.5 rounded-lg border border-zinc-850 text-xs">
+                  <span className="text-zinc-500">Scale:</span>
+                  <select
+                    value={ltiScoreScale}
+                    onChange={(e) => handleLtiConfigUpdate(isLtiSyncEnabled, e.target.value)}
+                    className="bg-transparent border-none text-white focus:outline-none font-bold"
+                  >
+                    <option value="opi" className="bg-zinc-900 text-white">OPI Scaled (200-399)</option>
+                    <option value="percent" className="bg-zinc-900 text-white">Percentage (0-100%)</option>
+                  </select>
+                </div>
+                <button
+                  onClick={fetchLtiLogs}
+                  disabled={isLoadingLtiLogs}
+                  className="px-3 py-1.5 bg-zinc-850 hover:bg-zinc-750 text-zinc-200 border border-zinc-700 text-xs font-bold rounded-lg transition"
+                >
+                  {isLoadingLtiLogs ? "Loading Logs..." : "Refresh Logs"}
+                </button>
+              </div>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-sm text-zinc-400">
+                <thead className="text-xs text-zinc-500 uppercase border-b border-zinc-850">
+                  <tr>
+                    <th className="py-2.5">Student Name</th>
+                    <th className="py-2.5">Assignment (Level)</th>
+                    <th className="py-2.5">LMS Synced Grade</th>
+                    <th className="py-2.5">Sync Status</th>
+                    <th className="py-2.5">Last Sync Transmission</th>
+                    <th className="py-2.5 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-zinc-850 font-medium">
+                  {ltiLogs.length === 0 ? (
+                    <tr>
+                      <td colSpan="6" className="py-8 text-center text-zinc-500 italic">
+                        No LTI grade syncing logs recorded yet. Complete an LMS-initiated student session to sync grades.
+                      </td>
+                    </tr>
+                  ) : (
+                    ltiLogs.map((log) => (
+                      <tr key={log.id} className="hover:bg-zinc-900/30 transition-colors">
+                        <td className="py-3 text-white">{log.student_name}</td>
+                        <td className="py-3 font-mono text-zinc-300">{log.level_id}</td>
+                        <td className="py-3 font-mono font-bold text-white">
+                          {log.score} {ltiScoreScale === 'opi' ? 'OPI' : '%'}
+                        </td>
+                        <td className="py-3">
+                          {log.status === "Success" ? (
+                            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-bold text-emerald-400 bg-emerald-500/5 rounded border border-emerald-500/10">
+                              ✓ Success
+                            </span>
+                          ) : (
+                            <span 
+                              className="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-bold text-rose-400 bg-rose-500/5 rounded border border-rose-500/10"
+                              title={log.error_message}
+                            >
+                              ✕ Failed
+                            </span>
+                          )}
+                        </td>
+                        <td className="py-3 text-zinc-500 font-mono text-[10px]">
+                          {new Date(log.timestamp).toLocaleString()}
+                        </td>
+                        <td className="py-3 text-right">
+                          <button
+                            onClick={() => handleLtiRetrySync(log.id)}
+                            className="px-2.5 py-1 bg-zinc-800 hover:bg-zinc-750 text-zinc-200 rounded border border-zinc-700 text-[10px] font-bold transition"
+                          >
+                            Retry Sync
+                          </button>
+                        </td>
+                      </tr>
+                    ))
                   )}
                 </tbody>
               </table>
