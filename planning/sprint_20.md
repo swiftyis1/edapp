@@ -1,5 +1,6 @@
 # Sprint 20: Comprehensive System Launch, Stress-Test & CCRA Calibration (Weeks 39 & 40)
 
+**Status:** 🗄️ Backlog
 **Theme:** Conduct load testing across all learning dashboards, finalize IRT calibration, and freeze production branches.
 
 ---

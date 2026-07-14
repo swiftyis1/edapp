@@ -1,5 +1,6 @@
 # Sprint 16: SQL Database Management Sandbox & Schema Designer (Weeks 31 & 32)
 
+**Status:** 🗄️ Backlog
 **Theme:** Implement a visual SQL table schema designer and query console sandbox for database management training.
 
 ---

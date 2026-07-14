@@ -97,4 +97,22 @@ CREATE TABLE telemetry_events (
     *   **Billing Account:** Linked to `01FC83-1C38A1-D898DA` (My Billing Account)
 
 
+---
+
+## 5. Future Curriculum & Technical Backlog (Sprints 11-20)
+
+These milestones represent subsequent curriculum extensions and cloud integrations planned for next-year implementation:
+
+*   **[Sprint 11 (Backlog)](file:///c:/Users/swift/edapp/planning/sprint_11.md): FAA Part 107 Exam Prep & Ground School** (Weeks 21 & 22)
+*   **[Sprint 12 (Backlog)](file:///c:/Users/swift/edapp/planning/sprint_12.md): Drone Engineering & Flight Physics Simulator** (Weeks 23 & 24)
+*   **[Sprint 13 (Backlog)](file:///c:/Users/swift/edapp/planning/sprint_13.md): Vertex AI Integration & CareerTech ML Predictor** (Weeks 25 & 26)
+*   **[Sprint 14 (Backlog)](file:///c:/Users/swift/edapp/planning/sprint_14.md): AI Ethics Simulator & Ethical Decision Trees** (Weeks 27 & 28)
+*   **[Sprint 15 (Backlog)](file:///c:/Users/swift/edapp/planning/sprint_15.md): Animatronics Microcontroller & Logic Gates Simulator** (Weeks 29 & 30)
+*   **[Sprint 16 (Backlog)](file:///c:/Users/swift/edapp/planning/sprint_16.md): SQL Database Sandbox & Schema Designer** (Weeks 31 & 32)
+*   **[Sprint 17 (Backlog)](file:///c:/Users/swift/edapp/planning/sprint_17.md): Interactive Data Analytics Pipeline & Dashboards** (Weeks 33 & 34)
+*   **[Sprint 18 (Backlog)](file:///c:/Users/swift/edapp/planning/sprint_18.md): Video Game Design Engine & Scripting Sandbox** (Weeks 35 & 36)
+*   **[Sprint 19 (Backlog)](file:///c:/Users/swift/edapp/planning/sprint_19.md): Student Portfolio Builder & Credentials Registry** (Weeks 37 & 38)
+*   **[Sprint 20 (Backlog)](file:///c:/Users/swift/edapp/planning/sprint_20.md): Comprehensive Launch, Stress-Test & CCRA Calibration** (Weeks 39 & 40)
+
+
 
