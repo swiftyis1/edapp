@@ -12,7 +12,9 @@ import random
 import string
 import csv
 import io
-from .models import Student, Session, TelemetryEvent, UserProfile, Classroom, Campus, ScoringConfig
+from django.conf import settings
+import stripe
+from .models import Student, Session, TelemetryEvent, UserProfile, Classroom, Campus, ScoringConfig, TeacherInvite
 from .scoring import calculate_opi_score, calculate_student_theta
 
 @api_view(['POST'])
@@ -77,12 +79,35 @@ def telemetry_receive(request):
         payload=payload
     )
 
-    # If session is complete, update session completed_at
-    if event_type == 'session_complete':
+    # Trigger real-time BKT updates
+    if event_type in ['pair_base', 'codon_match_attempt', 'octet_rule_check']:
+        try:
+            from .bkt_service import update_bkt_state_for_event
+            is_correct = payload.get('is_correct', True)
+            update_bkt_state_for_event(student, event_type, is_correct)
+        except Exception as bkt_err:
+            print(f"Error updating BKT in real-time: {str(bkt_err)}")
+
+    # If session is complete, update session completed_at and trigger BKT updates
+    if event_type in ['session_complete', 'translation_complete']:
         session.completed_at = timestamp
         session.save()
+        try:
+            from .bkt import trigger_bkt_update_async
+            trigger_bkt_update_async(student.id, session.id)
+        except Exception as e:
+            print(f"Error triggering BKT: {str(e)}")
 
     print(f"LOG: Saved event '{event_type}' for {student.name} in session {session.id}")
+
+    # Invalidate cache for teachers
+    try:
+        from django.core.cache import cache
+        cache.delete("teacher_report_anonymous")
+        if student.classroom and student.classroom.teacher:
+            cache.delete(f"teacher_report_{student.classroom.teacher.id}")
+    except Exception as cache_err:
+        pass
 
     return Response(
         {"status": "success", "message": "Telemetry event stored successfully"},
@@ -96,11 +121,20 @@ def teacher_report(request):
     Endpoint to aggregate student telemetry events and run the rule-based performance classifier.
     Filters by the teacher's classroom if authenticated.
     """
+    from django.core.cache import cache
+
     if request.user.is_authenticated and hasattr(request.user, 'profile') and request.user.profile.role == 'teacher':
+        cache_key = f"teacher_report_{request.user.id}"
         classrooms = Classroom.objects.filter(teacher=request.user)
         students = Student.objects.filter(classroom__in=classrooms).order_by('name')
     else:
+        cache_key = "teacher_report_anonymous"
         students = Student.objects.all().order_by('name')
+
+    cached_data = cache.get(cache_key)
+    if cached_data is not None:
+        return Response(cached_data, status=status.HTTP_200_OK)
+
     report_data = []
 
     for student in students:
@@ -160,6 +194,16 @@ def teacher_report(request):
             status_flag = opi_res["status_flag"]
             color_class = opi_res["color_class"]
 
+        # Fetch student BKT state
+        from .models import StudentBKTState
+        bkt_state = StudentBKTState.objects.filter(student=student).first()
+        if bkt_state:
+            bkt_mastery = round(((bkt_state.transcription_p_know + bkt_state.translation_p_know) / 2) * 100, 1)
+            bkt_bonding_mastery = round(bkt_state.bonding_p_know * 100, 1)
+        else:
+            bkt_mastery = 17.5
+            bkt_bonding_mastery = 15.0
+
         report_data.append({
             "id": str(student.id),
             "name": student.name,
@@ -170,9 +214,12 @@ def teacher_report(request):
             "opi_score": opi_score,
             "performance_band": performance_band,
             "status_flag": status_flag,
-            "color_class": color_class
+            "color_class": color_class,
+            "bkt_mastery": bkt_mastery,
+            "bkt_bonding_mastery": bkt_bonding_mastery
         })
 
+    cache.set(cache_key, report_data, 300)
     return Response(report_data, status=status.HTTP_200_OK)
 
 
@@ -316,6 +363,28 @@ def classroom_join(request):
             name=f"{request.user.first_name} {request.user.last_name}".strip() or request.user.username
         )
         
+    # Enforce Seat Quota Checks
+    old_classroom = student.classroom
+    new_campus = classroom.campus
+    old_campus = old_classroom.campus if (old_classroom and old_classroom.campus) else None
+    
+    if new_campus:
+        # Check if student is new to this campus
+        if old_campus != new_campus:
+            if new_campus.students_active >= new_campus.seat_limit:
+                return Response({
+                    "error": f"Seat limit reached for campus '{new_campus.name}' ({new_campus.students_active}/{new_campus.seat_limit} seats). Please contact your administrator."
+                }, status=status.HTTP_400_BAD_REQUEST)
+            
+            # Increment new campus active count
+            new_campus.students_active += 1
+            new_campus.save()
+            
+            # Decrement old campus active count if exists
+            if old_campus and old_campus.students_active > 0:
+                old_campus.students_active -= 1
+                old_campus.save()
+                
     student.classroom = classroom
     student.save()
     
@@ -494,14 +563,55 @@ def parent_report(request):
     """
     Returns performance metrics, daily gameplay logs, and home activity recommendation cards for a parent's child.
     """
+    is_premium = False
+    student = None
+    
+    student_id = request.query_params.get('student_id')
+    
     if request.user.is_authenticated and hasattr(request.user, 'profile') and request.user.profile.role == 'parent':
-        student = request.user.profile.parent_student
-    else:
-        try:
-            student = Student.objects.get(name="Charlie Smith")
-        except Student.DoesNotExist:
-            student = Student.objects.first()
+        profile = request.user.profile
+        linked_students = list(profile.parent_students.all())
+        
+        # Populate ManyToMany list from legacy field if empty
+        if not linked_students and profile.parent_student:
+            profile.parent_students.add(profile.parent_student)
+            linked_students = [profile.parent_student]
             
+        if student_id:
+            try:
+                student = profile.parent_students.get(id=student_id)
+            except Student.DoesNotExist:
+                pass
+                
+        if not student and linked_students:
+            student = linked_students[0]
+            
+        if profile.is_premium and student in linked_students:
+            student_idx = linked_students.index(student)
+            if student_idx < profile.premium_slots:
+                is_premium = True
+    else:
+        # Mock/dev fallback or query param override
+        if student_id:
+            try:
+                student = Student.objects.get(id=student_id)
+            except Student.DoesNotExist:
+                pass
+        if not student:
+            try:
+                student = Student.objects.get(name="Charlie Smith")
+            except Student.DoesNotExist:
+                student = Student.objects.first()
+        if student:
+            try:
+                parent_prof = UserProfile.objects.filter(parent_student=student).first()
+                if not parent_prof:
+                    parent_prof = UserProfile.objects.filter(parent_students=student).first()
+                if parent_prof:
+                    is_premium = parent_prof.is_premium
+            except Exception:
+                pass
+                
     if not student:
         return Response({"error": "No child associated with this parent account"}, status=status.HTTP_404_NOT_FOUND)
         
@@ -581,7 +691,32 @@ def parent_report(request):
             }
         ]
         
+    linked_students = []
+    premium_slots = 1
+    if request.user.is_authenticated and hasattr(request.user, 'profile') and request.user.profile.role == 'parent':
+        linked_students = list(request.user.profile.parent_students.all())
+        premium_slots = request.user.profile.premium_slots
+        if not linked_students and request.user.profile.parent_student:
+            linked_students = [request.user.profile.parent_student]
+    else:
+        linked_students = [student]
+
+    # Fetch child BKT state
+    from .models import StudentBKTState
+    bkt_state = StudentBKTState.objects.filter(student=student).first()
+    if bkt_state:
+        bkt_transcription = round(bkt_state.transcription_p_know * 100, 1)
+        bkt_translation = round(bkt_state.translation_p_know * 100, 1)
+        bkt_mastery = round(((bkt_state.transcription_p_know + bkt_state.translation_p_know) / 2) * 100, 1)
+        bkt_bonding_mastery = round(bkt_state.bonding_p_know * 100, 1)
+    else:
+        bkt_transcription = 20.0
+        bkt_translation = 15.0
+        bkt_mastery = 17.5
+        bkt_bonding_mastery = 15.0
+
     return Response({
+        "child_id": str(student.id),
         "child_name": student.name,
         "accuracy": accuracy,
         "avg_time_per_base": avg_time_per_base,
@@ -591,6 +726,493 @@ def parent_report(request):
         "status_flag": opi_res["status_flag"],
         "color_class": opi_res["color_class"],
         "daily_gameplay": daily_gameplay,
-        "home_activity_cards": tips
+        "home_activity_cards": tips,
+        "is_premium": is_premium,
+        "premium_slots": premium_slots,
+        "linked_children": [{"id": str(s.id), "name": s.name} for s in linked_students],
+        "bkt_transcription": bkt_transcription,
+        "bkt_translation": bkt_translation,
+        "bkt_mastery": bkt_mastery,
+        "bkt_bonding_mastery": bkt_bonding_mastery
+    }, status=status.HTTP_200_OK)
+
+
+# ==========================================
+# Billing & Stripe Integration
+# ==========================================
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def create_checkout_session(request):
+    """
+    Creates a Stripe Checkout Session for B2C premium parent subscriptions,
+    additional children, or B2B seat licenses for district campuses.
+    """
+    checkout_type = request.data.get('type')  # 'b2c', 'b2c_additional', or 'b2b'
+    
+    if checkout_type not in ['b2c', 'b2b', 'b2c_additional']:
+        return Response({"error": "Invalid checkout type"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    if getattr(settings, 'STRIPE_MOCK_MODE', True):
+        # Local mock checkout session creation
+        mock_session_id = f"mock_sess_{uuid.uuid4().hex[:16]}"
+        seats = request.data.get('seats', 1)
+        slots = request.data.get('slots', 1)
+        campus_id = request.data.get('campus_id', '')
+        
+        # Build a mock redirect URL that the frontend can catch
+        mock_url = f"http://localhost:3000/?mock_checkout=true&type={checkout_type}&session_id={mock_session_id}"
+        if checkout_type == 'b2b':
+            mock_url += f"&campus_id={campus_id}&seats={seats}"
+        elif checkout_type == 'b2c_additional':
+            mock_url += f"&slots={slots}"
+            
+        return Response({
+            "url": mock_url,
+            "session_id": mock_session_id,
+            "mock": True
+        }, status=status.HTTP_200_OK)
+        
+    # Real Stripe integration
+    stripe.api_key = settings.STRIPE_SECRET_KEY
+    try:
+        if checkout_type == 'b2c':
+            session = stripe.checkout.Session.create(
+                payment_method_types=['card'],
+                line_items=[{
+                    'price': settings.STRIPE_PRICE_ID_B2C,
+                    'quantity': 1,
+                }],
+                mode='subscription',
+                success_url='http://localhost:3000/?billing_success=true&type=b2c',
+                cancel_url='http://localhost:3000/?billing_cancel=true',
+                metadata={
+                    'type': 'b2c',
+                    'user_id': request.user.id
+                }
+            )
+        elif checkout_type == 'b2c_additional':
+            slots = int(request.data.get('slots', 1))
+            session = stripe.checkout.Session.create(
+                payment_method_types=['card'],
+                line_items=[{
+                    'price': settings.STRIPE_PRICE_ID_B2C_ADDITIONAL,
+                    'quantity': slots,
+                }],
+                mode='subscription',
+                success_url=f'http://localhost:3000/?billing_success=true&type=b2c_additional&slots={slots}',
+                cancel_url='http://localhost:3000/?billing_cancel=true',
+                metadata={
+                    'type': 'b2c_additional',
+                    'user_id': request.user.id,
+                    'slots': slots
+                }
+            )
+        else:  # B2B
+            campus_id = request.data.get('campus_id')
+            seats = int(request.data.get('seats', 0))
+            if not campus_id or seats <= 0:
+                return Response({"error": "Campus ID and number of seats (> 0) required for B2B"}, status=status.HTTP_400_BAD_REQUEST)
+                
+            session = stripe.checkout.Session.create(
+                payment_method_types=['card'],
+                line_items=[{
+                    'price': settings.STRIPE_PRICE_ID_B2B,
+                    'quantity': seats,
+                }],
+                mode='subscription',
+                success_url=f'http://localhost:3000/?billing_success=true&type=b2b&campus_id={campus_id}&seats={seats}',
+                cancel_url='http://localhost:3000/?billing_cancel=true',
+                metadata={
+                    'type': 'b2b',
+                    'campus_id': str(campus_id),
+                    'seats': seats
+                }
+            )
+            
+        return Response({
+            "url": session.url,
+            "session_id": session.id,
+            "mock": False
+        }, status=status.HTTP_200_OK)
+        
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def stripe_webhook(request):
+    """
+    Stripe webhook receiver. Processes payment completion and subscription events.
+    Bypasses signature verification if settings.STRIPE_MOCK_MODE is enabled or in DEBUG
+    with special header (for dev/scripts testing).
+    """
+    payload = request.body
+    sig_header = request.META.get('HTTP_STRIPE_SIGNATURE')
+    mock_header = request.META.get('HTTP_X_MOCK_SIGNATURE')
+    
+    event = None
+    is_mock = getattr(settings, 'STRIPE_MOCK_MODE', True)
+    
+    if is_mock or (settings.DEBUG and mock_header == "bypass-sig"):
+        # Process directly as mock JSON
+        try:
+            import json
+            event = json.loads(payload.decode('utf-8'))
+        except Exception as e:
+            return Response({"error": f"Invalid mock JSON payload: {str(e)}"}, status=status.HTTP_400_BAD_REQUEST)
+    else:
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        try:
+            event = stripe.Webhook.construct_event(
+                payload, sig_header, settings.STRIPE_WEBHOOK_SECRET
+            )
+        except stripe.error.SignatureVerificationError as e:
+            return Response({"error": f"Signature verification failed: {str(e)}"}, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+    event_type = event.get('type') if isinstance(event, dict) else event.type
+    data_obj = event.get('data', {}).get('object', {}) if isinstance(event, dict) else event.data.object
+    
+    if event_type == 'checkout.session.completed':
+        metadata = data_obj.get('metadata', {})
+        customer_id = data_obj.get('customer')
+        subscription_id = data_obj.get('subscription')
+        checkout_type = metadata.get('type')
+        
+        if checkout_type == 'b2c':
+            user_id = metadata.get('user_id')
+            try:
+                profile = UserProfile.objects.get(user_id=user_id)
+                profile.is_premium = True
+                profile.stripe_customer_id = customer_id
+                profile.stripe_subscription_id = subscription_id
+                profile.subscription_status = 'active'
+                profile.save()
+                print(f"[WEBHOOK] Upgraded B2C user profile {profile.user.username} to Premium")
+            except UserProfile.DoesNotExist:
+                print(f"[WEBHOOK ERROR] UserProfile for user_id={user_id} not found")
+                
+        elif checkout_type == 'b2c_additional':
+            user_id = metadata.get('user_id')
+            slots = int(metadata.get('slots', 1))
+            try:
+                profile = UserProfile.objects.get(user_id=user_id)
+                profile.is_premium = True
+                profile.premium_slots += slots
+                profile.stripe_customer_id = customer_id
+                profile.stripe_subscription_id = subscription_id
+                profile.subscription_status = 'active'
+                profile.save()
+                print(f"[WEBHOOK] Added {slots} premium child slots to parent profile {profile.user.username}. New total slots: {profile.premium_slots}")
+            except UserProfile.DoesNotExist:
+                print(f"[WEBHOOK ERROR] UserProfile for user_id={user_id} not found")
+                
+        elif checkout_type == 'b2b':
+            campus_id = metadata.get('campus_id')
+            seats = int(metadata.get('seats', 0))
+            try:
+                campus = Campus.objects.get(id=campus_id)
+                campus.stripe_customer_id = customer_id
+                campus.stripe_subscription_id = subscription_id
+                campus.subscription_status = 'active'
+                campus.seat_limit += seats
+                campus.save()
+                print(f"[WEBHOOK] Credited campus {campus.name} with {seats} seats. New limit: {campus.seat_limit}")
+            except Campus.DoesNotExist:
+                print(f"[WEBHOOK ERROR] Campus id={campus_id} not found")
+                
+    elif event_type in ['customer.subscription.updated', 'customer.subscription.deleted']:
+        sub_id = data_obj.get('id')
+        stripe_status = data_obj.get('status') # 'active', 'past_due', 'canceled', 'unpaid'
+        
+        # Check UserProfiles
+        profiles = UserProfile.objects.filter(stripe_subscription_id=sub_id)
+        for p in profiles:
+            p.subscription_status = stripe_status
+            p.is_premium = stripe_status in ['active', 'trialing']
+            p.save()
+            print(f"[WEBHOOK] Updated B2C subscription {sub_id} status for {p.user.username} to {stripe_status}")
+            
+        # Check Campuses
+        campuses = Campus.objects.filter(stripe_subscription_id=sub_id)
+        for c in campuses:
+            c.subscription_status = stripe_status
+            if stripe_status == 'canceled':
+                c.subscription_status = 'inactive'
+            c.save()
+            print(f"[WEBHOOK] Updated B2B subscription {sub_id} status for Campus {c.name} to {stripe_status}")
+            
+    return Response({"status": "success", "event_processed": event_type}, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def adjust_campus_quota(request):
+    """
+    Endpoint for District Admins to adjust campus seat limits.
+    """
+    if not hasattr(request.user, 'profile') or request.user.profile.role != 'admin':
+        return Response({"error": "Only District Admins can adjust seat quotas"}, status=status.HTTP_403_FORBIDDEN)
+        
+    campus_id = request.data.get("campus_id")
+    seat_limit = request.data.get("seat_limit")
+    
+    if not campus_id or seat_limit is None:
+        return Response({"error": "Campus ID and seat limit required"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    try:
+        campus = Campus.objects.get(id=campus_id)
+    except Campus.DoesNotExist:
+        return Response({"error": "Campus not found"}, status=status.HTTP_404_NOT_FOUND)
+        
+    try:
+        campus.seat_limit = int(seat_limit)
+        campus.save()
+    except ValueError:
+        return Response({"error": "Invalid seat limit format"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    return Response({
+        "message": f"Successfully updated seat quota for {campus.name}",
+        "campus_id": str(campus.id),
+        "seat_limit": campus.seat_limit
+    }, status=status.HTTP_200_OK)
+
+
+# ==========================================
+# SSO Authentication Stubs
+# ==========================================
+
+def _generate_sso_user_response(email, first_name, last_name, provider):
+    """
+    Helper to find or create a user via SSO details and detect role from email domain/pattern.
+    """
+    username = f"{provider}_{email.split('@')[0]}"
+    try:
+        user = User.objects.get(email=email)
+        created = False
+    except User.DoesNotExist:
+        # Create user
+        random_pw = ''.join(random.choices(string.ascii_letters + string.digits, k=24))
+        user = User.objects.create_user(
+            username=username,
+            email=email,
+            password=random_pw,
+            first_name=first_name,
+            last_name=last_name
+        )
+        created = True
+        
+    # Auto-detect role
+    role = 'student'
+    email_lower = email.lower()
+    if 'admin' in email_lower or 'superintendent' in email_lower:
+        role = 'admin'
+    elif 'teacher' in email_lower or email_lower.endswith('.edu') or 'instructor' in email_lower:
+        role = 'teacher'
+    elif 'parent' in email_lower or 'family' in email_lower:
+        role = 'parent'
+        
+    # Get or create profile
+    profile, profile_created = UserProfile.objects.get_or_create(user=user, defaults={'role': role})
+    if not profile_created and profile.role != role:
+        # If user exists but role detected is different, update it
+        profile.role = role
+        profile.save()
+        
+    token, _ = Token.objects.get_or_create(user=user)
+    
+    student_id = None
+    if role == 'student':
+        student_prof, _ = Student.objects.get_or_create(
+            user=user,
+            defaults={"name": f"{first_name} {last_name}".strip() or user.username}
+        )
+        student_id = str(student_prof.id)
+        
+    return {
+        "token": token.key,
+        "username": user.username,
+        "role": role,
+        "student_id": student_id,
+        "first_name": user.first_name,
+        "last_name": user.last_name,
+        "created": created
+    }
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def sso_google_login(request):
+    """
+    Stub for initiating Google SSO redirect.
+    """
+    mock_redirect_url = "http://localhost:3000/?sso_provider=google&sso_login=true"
+    return Response({"url": mock_redirect_url}, status=status.HTTP_200_OK)
+
+
+@api_view(['GET', 'POST'])
+@permission_classes([AllowAny])
+def sso_google_callback(request):
+    """
+    Stub for Google SSO callback auth code exchange.
+    Accepts query params or POST request parameters.
+    """
+    data = request.data if request.method == 'POST' else request.GET
+    email = data.get('email', 'sso_student@school.edu')
+    first_name = data.get('first_name', 'Google')
+    last_name = data.get('last_name', 'User')
+    
+    auth_data = _generate_sso_user_response(email, first_name, last_name, 'google')
+    return Response(auth_data, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def sso_clever_login(request):
+    """
+    Stub for initiating Clever SSO redirect.
+    """
+    mock_redirect_url = "http://localhost:3000/?sso_provider=clever&sso_login=true"
+    return Response({"url": mock_redirect_url}, status=status.HTTP_200_OK)
+
+
+@api_view(['GET', 'POST'])
+@permission_classes([AllowAny])
+def sso_clever_callback(request):
+    """
+    Stub for Clever SSO callback auth code exchange.
+    """
+    data = request.data if request.method == 'POST' else request.GET
+    email = data.get('email', 'sso_clever_teacher@school.edu')
+    first_name = data.get('first_name', 'Clever')
+    last_name = data.get('last_name', 'Teacher')
+    
+    auth_data = _generate_sso_user_response(email, first_name, last_name, 'clever')
+    return Response(auth_data, status=status.HTTP_200_OK)
+
+
+# ==========================================
+# Teacher Invitation System
+# ==========================================
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def invite_create(request):
+    """
+    Endpoint for School/District Admins to create unique invite codes for teachers.
+    """
+    if not hasattr(request.user, 'profile') or request.user.profile.role != 'admin':
+        return Response({"error": "Only administrators can generate teacher invites"}, status=status.HTTP_403_FORBIDDEN)
+        
+    email = request.data.get('email')
+    campus_id = request.data.get('campus_id')
+    
+    if not email or not campus_id:
+        return Response({"error": "Email and Campus ID are required"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    try:
+        campus = Campus.objects.get(id=campus_id)
+    except Campus.DoesNotExist:
+        return Response({"error": "Campus not found"}, status=status.HTTP_404_NOT_FOUND)
+        
+    # Generate unique 12-character alphanumeric code: TCH-XXXX-XXXX
+    random_str = ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
+    code = f"TCH-{random_str[:4]}-{random_str[4:]}"
+    
+    invite = TeacherInvite.objects.create(
+        email=email,
+        campus=campus,
+        code=code
+    )
+    
+    invite_url = f"http://localhost:3000/?invite_code={code}"
+    return Response({
+        "id": str(invite.id),
+        "email": invite.email,
+        "campus_name": campus.name,
+        "code": invite.code,
+        "invite_url": invite_url
+    }, status=status.HTTP_201_CREATED)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def auth_register_invite(request):
+    """
+    Endpoint for teachers to register using a unique invitation code.
+    """
+    username = request.data.get("username")
+    password = request.data.get("password")
+    first_name = request.data.get("first_name", "")
+    last_name = request.data.get("last_name", "")
+    invite_code = request.data.get("invite_code")
+    
+    if not username or not password or not invite_code:
+        return Response({"error": "Username, password and invitation code are required"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    try:
+        invite = TeacherInvite.objects.get(code=invite_code.upper(), is_used=False)
+    except TeacherInvite.DoesNotExist:
+        return Response({"error": "Invalid or already used invitation code"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    if User.objects.filter(username=username).exists():
+        return Response({"error": "Username already exists"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    user = User.objects.create_user(
+        username=username,
+        password=password,
+        email=invite.email,
+        first_name=first_name,
+        last_name=last_name
+    )
+    
+    # Create profile linked to the invite campus
+    UserProfile.objects.create(
+        user=user,
+        role='teacher',
+        campus=invite.campus
+    )
+    
+    # Mark invite as used
+    invite.is_used = True
+    invite.save()
+    
+    token, _ = Token.objects.get_or_create(user=user)
+    
+    return Response({
+        "token": token.key,
+        "username": user.username,
+        "role": 'teacher',
+        "campus_id": str(invite.campus.id),
+        "campus_name": invite.campus.name,
+        "first_name": user.first_name,
+        "last_name": user.last_name
+    }, status=status.HTTP_201_CREATED)
+
+
+@api_view(['POST'])
+def parent_add_child(request):
+    """
+    Allows a parent to link a new student to their household profile.
+    """
+    if not request.user.is_authenticated or not hasattr(request.user, 'profile') or request.user.profile.role != 'parent':
+        return Response({"error": "Unauthorized"}, status=status.HTTP_403_FORBIDDEN)
+        
+    student_name = request.data.get('name')
+    if not student_name:
+        return Response({"error": "Student name is required"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    profile = request.user.profile
+    # Try to find or create the student
+    student, created = Student.objects.get_or_create(name=student_name)
+    profile.parent_students.add(student)
+    
+    return Response({
+        "message": f"Successfully linked {student_name} to your household.",
+        "student_id": str(student.id),
+        "name": student.name
     }, status=status.HTTP_200_OK)
 

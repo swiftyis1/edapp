@@ -15,20 +15,20 @@
 
 ### Week 9: Level 3 Chemical Bonding (OAS B.PS1.1)
 
-*   [ ] **1. Level 3 Interactive Canvas**
+*   [x] **1. Level 3 Interactive Canvas**
     *   Design an interactive puzzle where students drag valence electrons to construct stable covalent (e.g. $H_2O$, $CO_2$) and ionic (e.g. $NaCl$) chemical bonds.
-*   [ ] **2. Chemical Bonding Telemetry**
+*   [x] **2. Chemical Bonding Telemetry**
     *   Emit telemetry events: `electron_share_attempt`, `octet_rule_check`, `bond_completed`, and `valence_reset`.
-*   [ ] **3. DRF Telemetry Storage**
+*   [x] **3. DRF Telemetry Storage**
     *   Add Level 3 validation schema and log bonding actions under the `OAS.B.PS1.1` construct tag in PostgreSQL JSONB.
 
 ---
 
 ### Week 10: Real-Time BKT Engine integration
 
-*   [ ] **4. Bayesian Knowledge Tracing (BKT) Service**
+*   [x] **4. Bayesian Knowledge Tracing (BKT) Service**
     *   Implement standard BKT parameters: initial knowledge $P(L_0)$, transition $P(T)$, slip $P(S)$, and guess $P(G)$ for each OAS standard tag.
-*   [ ] **5. Dynamic Probability Updates**
+*   [x] **5. Dynamic Probability Updates**
     *   Create a backend utility `bkt_service.py` to recursively update the student's mastery probability $P(L_t)$ upon receiving telemetry actions.
-*   [ ] **6. Performance Verification**
+*   [x] **6. Performance Verification**
     *   Validate BKT state changes on consecutive correct/incorrect base-pairing and octet-matching events.

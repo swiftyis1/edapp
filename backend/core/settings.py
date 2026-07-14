@@ -143,3 +143,30 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ],
 }
+
+# Stripe API Keys & Settings
+import os
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', 'sk_test_mock_secret_key_51O1')
+STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY', 'pk_test_mock_pub_key_51O1')
+STRIPE_WEBHOOK_SECRET = os.environ.get('STRIPE_WEBHOOK_SECRET', 'whsec_mock_webhook_secret_key')
+
+# Stripe Products & Pricing Configuration
+# Individual B2C Family Premium Subscription ($60.00/year)
+STRIPE_PRICE_ID_B2C = os.environ.get('STRIPE_PRICE_ID_B2C', 'price_mock_b2c_premium_6000')
+# Additional child under same household ($30.00/year)
+STRIPE_PRICE_ID_B2C_ADDITIONAL = os.environ.get('STRIPE_PRICE_ID_B2C_ADDITIONAL', 'price_mock_b2c_additional_3000')
+# B2B District/School Seat License ($6.00/seat/year)
+STRIPE_PRICE_ID_B2B = os.environ.get('STRIPE_PRICE_ID_B2B', 'price_mock_b2b_seat_600')
+
+# Automatically determine if Stripe should run in Mock Mode
+# If we have default/mock keys in development, Mock Mode handles redirects and webhooks locally.
+STRIPE_MOCK_MODE = STRIPE_SECRET_KEY.startswith('sk_test_mock') or not STRIPE_SECRET_KEY
+
+# Memory caching backend configuration
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'swift-science-cache',
+    }
+}
+

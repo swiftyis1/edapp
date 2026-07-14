@@ -19,6 +19,34 @@ const BASE_COLORS = {
   default: "bg-zinc-800 border-zinc-700 text-zinc-400",
 };
 
+// Codon -> Anticodon Pairing Map (mRNA -> tRNA)
+const CODON_ANTICODON_MAP = {
+  "AUG": "UAC",
+  "CCG": "GGC",
+  "AAA": "UUU",
+  "UUU": "AAA",
+  "GGC": "CCG",
+  "UAC": "AUG"
+};
+
+// Codon -> Amino Acid Mapping
+const CODON_AMINO_ACID_MAP = {
+  "AUG": "Methionine (Met)",
+  "CCG": "Proline (Pro)",
+  "AAA": "Lysine (Lys)",
+  "UUU": "Phenylalanine (Phe)",
+  "GGC": "Glycine (Gly)",
+  "UAC": "Tyrosine (Tyr)"
+};
+
+// tRNA Anticodon distractor cards palette
+const ANTICODON_COLORS = {
+  "UAC": "from-emerald-500 to-teal-600 border-teal-500/30 text-white shadow-emerald-500/10",
+  "GGC": "from-purple-500 to-indigo-600 border-indigo-500/30 text-white shadow-indigo-500/10",
+  "UUU": "from-rose-500 to-pink-600 border-pink-500/30 text-white shadow-rose-500/10",
+  "AAA": "from-amber-500 to-orange-600 border-orange-500/30 text-white shadow-orange-500/10"
+};
+
 const MOCK_STUDENTS = [
   { id: "da59114f-c0df-4d51-a957-cc3b23c92b23", name: "Alex Rivera" },
   { id: "e2d1d0c5-5a7c-47bc-8367-4f6c122bb33f", name: "Blake Henderson" },
@@ -75,6 +103,24 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [errors, setErrors] = useState(0);
   const [startTime, setStartTime] = useState(null);
+  const [activeLevel, setActiveLevel] = useState(1);
+  const [translationIndex, setTranslationIndex] = useState(0);
+  const [translationErrors, setTranslationErrors] = useState(0);
+  const [translationChain, setTranslationChain] = useState([]);
+  const [translationStartTime, setTranslationStartTime] = useState(null);
+  const [isTranslationCompleted, setIsTranslationCompleted] = useState(false);
+  const [translationFeedbackLog, setTranslationFeedbackLog] = useState([]);
+  
+  // Level 3 Chemical Bonding States
+  const [bondingTarget, setBondingTarget] = useState("H2O"); // "H2O" (covalent) or "NaCl" (ionic)
+  const [bondingSharedH1, setBondingSharedH1] = useState(0); // electrons shared by H1 (target: 1)
+  const [bondingSharedH2, setBondingSharedH2] = useState(0); // electrons shared by H2 (target: 1)
+  const [bondingNaTransfer, setBondingNaTransfer] = useState(false); // electron transferred from Na to Cl
+  const [bondingErrors, setBondingErrors] = useState(0);
+  const [bondingCompleted, setBondingCompleted] = useState(false);
+  const [bondingStartTime, setBondingStartTime] = useState(null);
+  const [bondingFeedbackLog, setBondingFeedbackLog] = useState([]);
+
   const [isCompleted, setIsCompleted] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [feedbackLog, setFeedbackLog] = useState([]);
@@ -93,6 +139,10 @@ export default function Home() {
   // Parent dashboard report states
   const [parentReportData, setParentReportData] = useState(null);
   const [isLoadingParentReport, setIsLoadingParentReport] = useState(false);
+  const [newChildName, setNewChildName] = useState("");
+  const [addChildMessage, setAddChildMessage] = useState("");
+  const [addChildError, setAddChildError] = useState("");
+  const [showAddChildForm, setShowAddChildForm] = useState(false);
   const [parentReportError, setParentReportError] = useState(null);
 
   // District admin mock upload states
@@ -101,6 +151,28 @@ export default function Home() {
   const [isCalibrating, setIsCalibrating] = useState(false);
   const [calibrationLogs, setCalibrationLogs] = useState([]);
   const [isCalibrated, setIsCalibrated] = useState(false);
+
+  // Sprint 3 Billing, SSO, Invite States
+  const [showMockCheckoutModal, setShowMockCheckoutModal] = useState(false);
+  const [mockCheckoutDetails, setMockCheckoutDetails] = useState(null);
+  const [showSuccessNotification, setShowSuccessNotification] = useState(false);
+  const [successNotificationMessage, setSuccessNotificationMessage] = useState("");
+  const [showSsoConsentModal, setShowSsoConsentModal] = useState(false);
+  const [ssoDetails, setSsoDetails] = useState(null);
+
+  // Invite states
+  const [inviteEmailInput, setInviteEmailInput] = useState("");
+  const [inviteCampusIdInput, setInviteCampusIdInput] = useState("");
+  const [generatedInviteCode, setGeneratedInviteCode] = useState("");
+  const [inviteSuccessMessage, setInviteSuccessMessage] = useState("");
+  const [inviteErrorMessage, setInviteErrorMessage] = useState("");
+
+  // Quota adjust states
+  const [adjustCampusIdInput, setAdjustCampusIdInput] = useState("");
+  const [adjustSeatLimitInput, setAdjustSeatLimitInput] = useState("");
+  const [adjustQuotaSuccessMessage, setAdjustQuotaSuccessMessage] = useState("");
+  const [adjustQuotaErrorMessage, setAdjustQuotaErrorMessage] = useState("");
+
 
   // Initialize Session ID on mount or on student change
   useEffect(() => {
@@ -139,6 +211,63 @@ export default function Home() {
       fetchParentReport();
     }
   }, [role, token]);
+
+  // Sprint 3: URL Parameters Processing Hook
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      
+      // Success Notification
+      if (params.get("billing_success") === "true") {
+        setSuccessNotificationMessage("Success! Your subscription is active. Welcome to Premium!");
+        setShowSuccessNotification(true);
+        window.history.replaceState({}, document.title, window.location.pathname);
+        if (role === "parent") fetchParentReport();
+        if (role === "admin") fetchAdminKpis();
+      }
+      
+      // Mock Checkout Simulation
+      if (params.get("mock_checkout") === "true") {
+        const type = params.get("type");
+        const session_id = params.get("session_id");
+        const campus_id = params.get("campus_id");
+        const seats = params.get("seats");
+        const slots = params.get("slots") || 1;
+        
+        setMockCheckoutDetails({ type, session_id, campus_id, seats, slots });
+        setShowMockCheckoutModal(true);
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+      
+      // Invite Code Prefill
+      const inviteCode = params.get("invite_code");
+      if (inviteCode) {
+        setAuthMode("register");
+        setRoleInput("teacher");
+        setClassCodeInput(inviteCode);
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+      
+      // SSO Redirect Login
+      if (params.get("sso_login") === "true") {
+        const provider = params.get("sso_provider");
+        let mockEmail = "sso_student@school.edu";
+        let mockFirst = "Sam";
+        let mockLast = "Student";
+        
+        if (provider === "clever") {
+          mockEmail = "clever_teacher@okla.edu";
+          mockFirst = "Carol";
+          mockLast = "Clever";
+        }
+        
+        setSsoDetails({ provider, email: mockEmail, firstName: mockFirst, lastName: mockLast });
+        setShowSsoConsentModal(true);
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    }
+  }, [role]);
+
 
   const fetchTeacherReport = async () => {
     setIsLoadingReport(true);
@@ -180,7 +309,7 @@ export default function Home() {
     }
   };
 
-  const fetchParentReport = async () => {
+  const fetchParentReport = async (studentId = null) => {
     setIsLoadingParentReport(true);
     setParentReportError(null);
     try {
@@ -188,7 +317,11 @@ export default function Home() {
       if (token) {
         headers["Authorization"] = `Token ${token}`;
       }
-      const response = await fetch("http://localhost:8000/api/reports/parent/", { headers });
+      let url = "http://localhost:8000/api/reports/parent/";
+      if (studentId) {
+        url += `?student_id=${studentId}`;
+      }
+      const response = await fetch(url, { headers });
       if (response.ok) {
         const data = await response.json();
         setParentReportData(data);
@@ -199,6 +332,53 @@ export default function Home() {
       setParentReportError("Network error fetching parent report.");
     } finally {
       setIsLoadingParentReport(false);
+    }
+  };
+
+  const handleBuyAdditionalSlot = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/api/billing/checkout/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": token ? `Token ${token}` : "",
+        },
+        body: JSON.stringify({ type: "b2c_additional", slots: 1 }),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        window.location.href = data.url;
+      }
+    } catch (err) {
+      console.error("Additional B2C Slot Error:", err);
+    }
+  };
+
+  const handleAddChild = async (e) => {
+    e.preventDefault();
+    setAddChildError("");
+    setAddChildMessage("");
+    try {
+      const response = await fetch("http://localhost:8000/api/parent/add-child/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": token ? `Token ${token}` : "",
+        },
+        body: JSON.stringify({ name: newChildName }),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setAddChildMessage(data.message);
+        setNewChildName("");
+        setShowAddChildForm(false);
+        fetchParentReport(data.student_id);
+      } else {
+        const err = await response.json();
+        setAddChildError(err.error || "Failed to link child.");
+      }
+    } catch (err) {
+      setAddChildError("Network error adding child.");
     }
   };
 
@@ -297,6 +477,245 @@ export default function Home() {
     setRole("student");
     resetSimulation();
   };
+
+  // ==========================================
+  // Billing, SSO, Invite Handlers
+  // ==========================================
+
+  const handleGoPremium = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/api/billing/checkout/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": token ? `Token ${token}` : "",
+        },
+        body: JSON.stringify({ type: "b2c" }),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        window.location.href = data.url;
+      }
+    } catch (err) {
+      console.error("B2C Billing Error:", err);
+    }
+  };
+
+  const handleBuySeats = async (campusId, seatsCount) => {
+    try {
+      const response = await fetch("http://localhost:8000/api/billing/checkout/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": token ? `Token ${token}` : "",
+        },
+        body: JSON.stringify({
+          type: "b2b",
+          campus_id: campusId,
+          seats: seatsCount
+        }),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        window.location.href = data.url;
+      }
+    } catch (err) {
+      console.error("B2B Billing Error:", err);
+    }
+  };
+
+  const handleAdjustQuota = async (e) => {
+    e.preventDefault();
+    setAdjustQuotaSuccessMessage("");
+    setAdjustQuotaErrorMessage("");
+    if (!adjustCampusIdInput || !adjustSeatLimitInput) return;
+    try {
+      const response = await fetch("http://localhost:8000/api/admin/campuses/adjust-quota/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": token ? `Token ${token}` : "",
+        },
+        body: JSON.stringify({
+          campus_id: adjustCampusIdInput,
+          seat_limit: parseInt(adjustSeatLimitInput, 10)
+        }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setAdjustQuotaSuccessMessage(data.message);
+        setAdjustCampusIdInput("");
+        setAdjustSeatLimitInput("");
+        fetchAdminKpis();
+      } else {
+        setAdjustQuotaErrorMessage(data.error || "Failed to adjust quota.");
+      }
+    } catch (err) {
+      setAdjustQuotaErrorMessage("Network error adjusting quota.");
+    }
+  };
+
+  const handleCreateInvite = async (e) => {
+    e.preventDefault();
+    setInviteSuccessMessage("");
+    setInviteErrorMessage("");
+    setGeneratedInviteCode("");
+    if (!inviteEmailInput || !inviteCampusIdInput) return;
+    try {
+      const response = await fetch("http://localhost:8000/api/admin/invites/create/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": token ? `Token ${token}` : "",
+        },
+        body: JSON.stringify({
+          email: inviteEmailInput,
+          campus_id: inviteCampusIdInput
+        }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setGeneratedInviteCode(data.code);
+        setInviteSuccessMessage(`Created invite for ${data.email} to ${data.campus_name}!`);
+        setInviteEmailInput("");
+        setInviteCampusIdInput("");
+      } else {
+        setInviteErrorMessage(data.error || "Failed to generate invite code.");
+      }
+    } catch (err) {
+      setInviteErrorMessage("Network error generating invite code.");
+    }
+  };
+
+  const handleRegisterInvite = async (e) => {
+    e.preventDefault();
+    setAuthError("");
+    try {
+      const response = await fetch("http://localhost:8000/api/auth/register-invite/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: usernameInput,
+          password: passwordInput,
+          first_name: firstNameInput,
+          last_name: lastNameInput,
+          invite_code: classCodeInput, // Reused classCodeInput as invite_code field
+        }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setToken(data.token);
+        setCurrentUser(data);
+        localStorage.setItem("swift_science_token", data.token);
+        localStorage.setItem("swift_science_user", JSON.stringify(data));
+        setRole(data.role);
+        
+        setUsernameInput("");
+        setPasswordInput("");
+        setFirstNameInput("");
+        setLastNameInput("");
+        setClassCodeInput("");
+      } else {
+        setAuthError(data.error || "Registration with invite code failed.");
+      }
+    } catch (err) {
+      setAuthError("Failed to connect to backend server.");
+    }
+  };
+
+  const handleSsoLogin = async (provider) => {
+    try {
+      const response = await fetch(`http://localhost:8000/api/auth/sso/${provider}/login/`);
+      const data = await response.json();
+      if (response.ok) {
+        window.location.href = data.url;
+      }
+    } catch (err) {
+      console.error("SSO Login Error:", err);
+    }
+  };
+
+  const handleSsoConsentSubmit = async (e) => {
+    e.preventDefault();
+    setShowSsoConsentModal(false);
+    try {
+      const response = await fetch(`http://localhost:8000/api/auth/sso/${ssoDetails.provider}/callback/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: ssoDetails.email,
+          first_name: ssoDetails.firstName,
+          last_name: ssoDetails.lastName
+        })
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setToken(data.token);
+        setCurrentUser(data);
+        localStorage.setItem("swift_science_token", data.token);
+        localStorage.setItem("swift_science_user", JSON.stringify(data));
+        setRole(data.role);
+        
+        if (data.role === "student" && data.student_id) {
+          setSelectedStudent({
+            id: data.student_id,
+            name: `${data.first_name} ${data.last_name}`.trim() || data.username
+          });
+        }
+        
+        setSuccessNotificationMessage(`Successfully logged in via ${ssoDetails.provider === 'google' ? 'Google' : 'Clever'} SSO! Role detected: ${data.role}`);
+        setShowSuccessNotification(true);
+      } else {
+        setAuthError(data.error || "SSO Callback authentication failed.");
+      }
+    } catch (err) {
+      setAuthError("SSO callback network error.");
+    }
+  };
+
+  const handleMockCheckoutComplete = async () => {
+    setShowMockCheckoutModal(false);
+    try {
+      const response = await fetch("http://localhost:8000/api/billing/webhook/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Mock-Signature": "bypass-sig"
+        },
+        body: JSON.stringify({
+          type: "checkout.session.completed",
+          data: {
+            object: {
+              customer: "cus_mock_" + Math.random().toString(36).substr(2, 9),
+              subscription: mockCheckoutDetails.session_id,
+              metadata: {
+                type: mockCheckoutDetails.type,
+                user_id: currentUser ? currentUser.id : null,
+                campus_id: mockCheckoutDetails.campus_id,
+                seats: mockCheckoutDetails.seats,
+                slots: mockCheckoutDetails.slots
+              }
+            }
+          }
+        })
+      });
+      if (response.ok) {
+        setSuccessNotificationMessage("Mock checkout successfully simulated! Subscription active.");
+        setShowSuccessNotification(true);
+        if (role === "parent") fetchParentReport();
+        if (role === "admin") fetchAdminKpis();
+      } else {
+        console.error("Webhook processing error");
+      }
+    } catch (err) {
+      console.error("Failed to connect to webhook", err);
+    }
+  };
+
 
   const handleCreateClassroom = async (e) => {
     e.preventDefault();
@@ -402,16 +821,221 @@ export default function Home() {
     });
   };
 
+  const getCodons = () => {
+    if (mrnaChain.length < 9) {
+      return ["AUG", "CCG", "AAA"];
+    }
+    const list = [];
+    for (let i = 0; i < mrnaChain.length; i += 3) {
+      if (i + 3 <= mrnaChain.length) {
+        list.push(mrnaChain.slice(i, i + 3).join(""));
+      }
+    }
+    return list;
+  };
+
+  const handleCodonMatch = (anticodon) => {
+    if (isTranslationCompleted) return;
+    
+    let currentStartTime = translationStartTime;
+    if (translationIndex === 0 && translationChain.length === 0 && !translationStartTime) {
+      currentStartTime = Date.now();
+      setTranslationStartTime(currentStartTime);
+    }
+
+    const codons = getCodons();
+    const currentCodon = codons[translationIndex];
+    const expectedAnticodon = CODON_ANTICODON_MAP[currentCodon];
+    const isCorrect = anticodon === expectedAnticodon;
+    
+    const newLogEntry = {
+      timestamp: new Date().toLocaleTimeString(),
+      codon: currentCodon,
+      attempt: anticodon,
+      status: isCorrect ? "SUCCESS" : "ERROR",
+      message: isCorrect 
+        ? `Correctly paired tRNA ${anticodon} with mRNA codon ${currentCodon} (Added ${CODON_AMINO_ACID_MAP[currentCodon]})`
+        : `Incorrect: tRNA ${anticodon} does not pair with mRNA codon ${currentCodon}`
+    };
+    
+    setTranslationFeedbackLog((prev) => [newLogEntry, ...prev]);
+
+    // Dispatch telemetry event for attempt
+    logTelemetryEvent("codon_match_attempt", {
+      codon: currentCodon,
+      attempted_anticodon: anticodon,
+      is_correct: isCorrect,
+      cumulative_errors: isCorrect ? translationErrors : translationErrors + 1
+    });
+
+    if (isCorrect) {
+      const aminoAcid = CODON_AMINO_ACID_MAP[currentCodon];
+      const newChain = [...translationChain, aminoAcid];
+      setTranslationChain(newChain);
+
+      // Dispatch amino acid added event
+      logTelemetryEvent("amino_acid_added", {
+        amino_acid: aminoAcid,
+        chain: newChain
+      });
+
+      if (translationIndex + 1 < codons.length) {
+        setTranslationIndex(translationIndex + 1);
+      } else {
+        setIsTranslationCompleted(true);
+        const elapsed = currentStartTime ? Math.round((Date.now() - currentStartTime) / 1000) : 12;
+        
+        // Dispatch translation complete event
+        logTelemetryEvent("translation_complete", {
+          total_errors: translationErrors,
+          duration_seconds: elapsed,
+          amino_acid_chain: newChain
+        });
+      }
+    } else {
+      setTranslationErrors((prev) => prev + 1);
+    }
+  };
+
+  const handleShareElectron = (hydrogenKey, isSharing) => {
+    if (bondingCompleted) return;
+    
+    if (hydrogenKey === "H1") {
+      setBondingSharedH1(isSharing ? 1 : 0);
+    } else {
+      setBondingSharedH2(isSharing ? 1 : 0);
+    }
+    
+    logTelemetryEvent("electron_share_attempt", {
+      atom: hydrogenKey,
+      is_sharing: isSharing,
+      target_atom: "O"
+    }, "chemical_bonding_3", "OAS.B.PS1.1");
+  };
+
+  const handleTransferElectron = (isTransferred) => {
+    if (bondingCompleted) return;
+    setBondingNaTransfer(isTransferred);
+    
+    logTelemetryEvent("electron_share_attempt", {
+      atom: "Na",
+      is_transferred: isTransferred,
+      target_atom: "Cl"
+    }, "chemical_bonding_3", "OAS.B.PS1.1");
+  };
+
+  const handleValenceReset = () => {
+    if (bondingCompleted) return;
+    setBondingSharedH1(0);
+    setBondingSharedH2(0);
+    setBondingNaTransfer(false);
+    
+    logTelemetryEvent("valence_reset", {
+      bonding_target: bondingTarget
+    }, "chemical_bonding_3", "OAS.B.PS1.1");
+    
+    setBondingFeedbackLog((prev) => [{
+      timestamp: new Date().toLocaleTimeString(),
+      status: "RESET",
+      message: "Valence electrons reset to initial shell states."
+    }, ...prev]);
+  };
+
+  const handleOctetCheck = () => {
+    if (bondingCompleted) return;
+    
+    let isCorrect = false;
+    let message = "";
+    
+    if (bondingTarget === "H2O") {
+      isCorrect = bondingSharedH1 === 1 && bondingSharedH2 === 1;
+      message = isCorrect
+        ? "✓ Success: Covalent bonds stable! Oxygen central octet (8) and Hydrogen duets (2) fully satisfied."
+        : "Failed: Valence shell unstable. Oxygen needs 8 valence electrons, Hydrogens need 2. Adjust shared electrons.";
+    } else {
+      isCorrect = bondingNaTransfer === true;
+      message = isCorrect
+        ? "✓ Success: Ionic bond stable! Na+ cation and Cl- anion electrostatic attraction satisfied."
+        : "Failed: Valence shell unstable. Sodium (Na) must transfer its 1 valence electron to Chlorine (Cl).";
+    }
+    
+    const newLogEntry = {
+      timestamp: new Date().toLocaleTimeString(),
+      status: isCorrect ? "SUCCESS" : "ERROR",
+      message: message
+    };
+    setBondingFeedbackLog((prev) => [newLogEntry, ...prev]);
+    
+    logTelemetryEvent("octet_rule_check", {
+      bonding_target: bondingTarget,
+      is_correct: isCorrect,
+      shared_h1: bondingSharedH1,
+      shared_h2: bondingSharedH2,
+      na_transfer: bondingNaTransfer
+    }, "chemical_bonding_3", "OAS.B.PS1.1");
+    
+    if (isCorrect) {
+      setBondingCompleted(true);
+      logTelemetryEvent("bond_completed", {
+        compound: bondingTarget,
+        bond_type: bondingTarget === "H2O" ? "covalent" : "ionic"
+      }, "chemical_bonding_3", "OAS.B.PS1.1");
+    } else {
+      setBondingErrors((prev) => prev + 1);
+    }
+  };
+
+  const handleSubmitBondingSimulation = async () => {
+    const durationLevel1 = startTime ? (Date.now() - startTime) / 1000 : 0.0;
+    const accuracyLevel1 = mrnaChain.length + errors > 0
+      ? Math.round((mrnaChain.length / (mrnaChain.length + errors)) * 100)
+      : 100;
+
+    const durationLevel2 = translationStartTime ? (Date.now() - translationStartTime) / 1000 : 0.0;
+    const accuracyLevel2 = translationChain.length + translationErrors > 0
+      ? Math.round((translationIndex / (translationIndex + translationErrors)) * 100)
+      : 100;
+
+    const durationLevel3 = bondingStartTime ? (Date.now() - bondingStartTime) / 1000 : 0.0;
+    const accuracyLevel3 = bondingErrors === 0 ? 100 : Math.round((1 / (1 + bondingErrors)) * 100);
+
+    await logTelemetryEvent("session_complete", {
+      transcription: {
+        total_errors: errors,
+        accuracy: accuracyLevel1,
+        duration_seconds: parseFloat(durationLevel1.toFixed(2))
+      },
+      translation: {
+        total_errors: translationErrors,
+        accuracy: accuracyLevel2,
+        duration_seconds: parseFloat(durationLevel2.toFixed(2))
+      },
+      bonding: {
+        total_errors: bondingErrors,
+        accuracy: accuracyLevel3,
+        duration_seconds: parseFloat(durationLevel3.toFixed(2))
+      },
+      total_errors: errors + translationErrors + bondingErrors,
+      duration_seconds: parseFloat((durationLevel1 + durationLevel2 + durationLevel3).toFixed(2))
+    }, "chemical_bonding_3", "OAS.B.PS1.1");
+
+    setIsSubmitted(true);
+    if (classroomInfo) {
+      fetchTeacherReport();
+    }
+    fetchParentReport();
+  };
+
   // Log events locally for developer visualization and dispatch to Django backend
-  const logTelemetryEvent = async (eventType, payload) => {
+  const logTelemetryEvent = async (eventType, payload, levelId = "dna_transcription_1", constructTag = "OAS.B.LS1.1") => {
     const newEvent = {
       event_id: typeof window !== "undefined" ? crypto.randomUUID() : `evt_${Math.random().toString(36).substr(2, 9)}`,
       student_id: selectedStudent.id,   // Dynamic UUID
       session_id: sessionId,           // Dynamic Session UUID
       timestamp: new Date().toISOString(),
       event_type: eventType,
-      level_id: "dna_transcription_1",
-      construct_tag: "OAS.B.LS1.1",
+      level_id: levelId,
+      construct_tag: constructTag,
       payload: payload,
     };
 
@@ -440,15 +1064,29 @@ export default function Home() {
   };
 
   const handleSubmitSimulation = async () => {
-    const duration = startTime ? (Date.now() - startTime) / 1000 : 0.0;
-    const accuracy = mrnaChain.length + errors > 0
+    const durationLevel1 = startTime ? (Date.now() - startTime) / 1000 : 0.0;
+    const accuracyLevel1 = mrnaChain.length + errors > 0
       ? Math.round((mrnaChain.length / (mrnaChain.length + errors)) * 100)
       : 100;
 
+    const durationLevel2 = translationStartTime ? (Date.now() - translationStartTime) / 1000 : 0.0;
+    const accuracyLevel2 = translationChain.length + translationErrors > 0
+      ? Math.round((translationChain.length / (translationChain.length + translationErrors)) * 100)
+      : 100;
+
     await logTelemetryEvent("session_complete", {
-      total_errors: errors,
-      accuracy: accuracy,
-      duration_seconds: parseFloat(duration.toFixed(2)),
+      transcription: {
+        total_errors: errors,
+        accuracy: accuracyLevel1,
+        duration_seconds: parseFloat(durationLevel1.toFixed(2))
+      },
+      translation: {
+        total_errors: translationErrors,
+        accuracy: accuracyLevel2,
+        duration_seconds: parseFloat(durationLevel2.toFixed(2))
+      },
+      total_errors: errors + translationErrors,
+      duration_seconds: parseFloat((durationLevel1 + durationLevel2).toFixed(2))
     });
 
     setIsSubmitted(true);
@@ -463,6 +1101,13 @@ export default function Home() {
     setIsSubmitted(false);
     setFeedbackLog([]);
     setDispatchedTelemetry([]);
+    setActiveLevel(1);
+    setTranslationIndex(0);
+    setTranslationErrors(0);
+    setTranslationChain([]);
+    setTranslationStartTime(null);
+    setIsTranslationCompleted(false);
+    setTranslationFeedbackLog([]);
     if (typeof window !== "undefined") {
       setSessionId(crypto.randomUUID());
     }
@@ -530,6 +1175,133 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
+      {/* Notifications & Modals */}
+      {showSuccessNotification && (
+        <div className="bg-emerald-600 text-white px-6 py-3 flex justify-between items-center text-xs font-bold shadow-xl sticky top-0 z-[100] border-b border-emerald-500/20">
+          <span className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-white animate-ping"></span>
+            {successNotificationMessage}
+          </span>
+          <button onClick={() => setShowSuccessNotification(false)} className="hover:text-emerald-200 font-bold ml-4">✕</button>
+        </div>
+      )}
+
+      {showMockCheckoutModal && mockCheckoutDetails && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-6 z-[110]">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+            <div className="flex items-center gap-2 border-b border-zinc-800 pb-3">
+              <span className="text-xl">💳</span>
+              <h3 className="text-lg font-bold text-white">Stripe Checkout Simulator</h3>
+            </div>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              You are simulating a Stripe redirect for a <strong>
+                {mockCheckoutDetails.type === 'b2c' 
+                  ? 'B2C Family Premium Subscription' 
+                  : mockCheckoutDetails.type === 'b2c_additional'
+                    ? 'B2C Additional Household Child Slot'
+                    : 'B2B School/District Seat Quota'}
+              </strong>.
+            </p>
+            {mockCheckoutDetails.type === 'b2b' && (
+              <div className="bg-zinc-950 p-3 rounded-lg border border-zinc-850 text-xs text-zinc-400 font-mono">
+                <p>Campus ID: <span className="text-indigo-400">{mockCheckoutDetails.campus_id}</span></p>
+                <p className="mt-1">Seats: <span className="text-white font-bold">{mockCheckoutDetails.seats}</span> ($6.00 / seat / year)</p>
+              </div>
+            )}
+            {mockCheckoutDetails.type === 'b2c_additional' && (
+              <div className="bg-zinc-950 p-3 rounded-lg border border-zinc-850 text-xs text-zinc-400 font-mono">
+                <p>Additional Slots: <span className="text-white font-bold">{mockCheckoutDetails.slots}</span> ($30.00 / slot / year)</p>
+              </div>
+            )}
+            <div className="flex gap-3 pt-2">
+              <button
+                onClick={handleMockCheckoutComplete}
+                className="flex-1 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all"
+              >
+                Simulate Payment Success
+              </button>
+              <button
+                onClick={() => setShowMockCheckoutModal(false)}
+                className="flex-1 py-2 bg-zinc-850 hover:bg-zinc-800 text-zinc-400 font-bold rounded-lg text-xs uppercase tracking-wider transition-all"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showSsoConsentModal && ssoDetails && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-6 z-[110]">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+            <div className="flex items-center gap-3 border-b border-zinc-800 pb-3">
+              <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-sm font-bold text-white">
+                {ssoDetails.provider === 'google' ? 'G' : 'C'}
+              </div>
+              <h3 className="text-lg font-bold text-white">Authorize {ssoDetails.provider === 'google' ? 'Google' : 'Clever'} SSO</h3>
+            </div>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              Confirm your de-identified profile metadata to complete registration and log in:
+            </p>
+            
+            <form onSubmit={handleSsoConsentSubmit} className="space-y-3">
+              <div>
+                <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">SSO Email Address</label>
+                <input
+                  type="email"
+                  value={ssoDetails.email}
+                  onChange={(e) => setSsoDetails({ ...ssoDetails, email: e.target.value })}
+                  required
+                  className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                />
+                <span className="text-[9px] text-zinc-500 block mt-1">
+                  * Role detection: email containing 'admin' $\rightarrow$ Admin; ends in '.edu' or containing 'teacher' $\rightarrow$ Teacher; else $\rightarrow$ Student.
+                </span>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">First Name</label>
+                  <input
+                    type="text"
+                    value={ssoDetails.firstName}
+                    onChange={(e) => setSsoDetails({ ...ssoDetails, firstName: e.target.value })}
+                    required
+                    className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                  />
+                </div>
+                <div>
+                  <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Last Name</label>
+                  <input
+                    type="text"
+                    value={ssoDetails.lastName}
+                    onChange={(e) => setSsoDetails({ ...ssoDetails, lastName: e.target.value })}
+                    required
+                    className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                  />
+                </div>
+              </div>
+              
+              <div className="flex gap-3 pt-3">
+                <button
+                  type="submit"
+                  className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all"
+                >
+                  Agree & Connect
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowSsoConsentModal(false)}
+                  className="flex-1 py-2 bg-zinc-850 hover:bg-zinc-800 text-zinc-400 font-bold rounded-lg text-xs uppercase tracking-wider transition-all"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
       {/* Header Bar */}
       <header className="border-b border-zinc-800 bg-zinc-900/50 backdrop-blur px-6 py-4 flex justify-between items-center sticky top-0 z-50">
         <div className="flex items-center gap-3">
@@ -640,7 +1412,7 @@ export default function Home() {
               </div>
             )}
 
-            <form onSubmit={authMode === "login" ? handleLogin : handleRegister} className="space-y-4">
+            <form onSubmit={authMode === "login" ? handleLogin : (roleInput === "teacher" && classCodeInput ? handleRegisterInvite : handleRegister)} className="space-y-4">
               {authMode === "register" && (
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -697,7 +1469,7 @@ export default function Home() {
                     <select
                       value={roleInput}
                       onChange={(e) => setRoleInput(e.target.value)}
-                      className="w-full bg-zinc-950 border border-zinc-850.rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors bg-zinc-900"
+                      className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors bg-zinc-900"
                     >
                       <option value="student">Student</option>
                       <option value="teacher">Teacher</option>
@@ -718,6 +1490,20 @@ export default function Home() {
                       />
                     </div>
                   )}
+
+                  {roleInput === "teacher" && (
+                    <div>
+                      <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Invitation Code</label>
+                      <input
+                        type="text"
+                        value={classCodeInput}
+                        onChange={(e) => setClassCodeInput(e.target.value)}
+                        placeholder="e.g. TCH-ABCD-1234"
+                        required
+                        className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                      />
+                    </div>
+                  )}
                 </>
               )}
 
@@ -728,6 +1514,34 @@ export default function Home() {
                 {authMode === "login" ? "Sign In" : "Create Account"}
               </button>
             </form>
+
+            <div className="relative my-4 flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-zinc-800" />
+              </div>
+              <span className="relative bg-zinc-900 px-3 text-[10px] uppercase font-bold text-zinc-500">Or Continue With</span>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 mb-4">
+              <button
+                type="button"
+                onClick={() => handleSsoLogin('google')}
+                className="flex items-center justify-center gap-2 py-2 px-3 bg-zinc-950 hover:bg-zinc-800 border border-zinc-850 rounded-lg text-xs font-bold text-zinc-200 transition-all hover:scale-[1.02]"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24">
+                  <path fill="#EA4335" d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-5.136 4.114A5.99 5.99 0 0 1 8 12.5a5.99 5.99 0 0 1 5.99-6.012c1.49 0 2.858.547 3.916 1.448l3.137-3.137C19.123 2.99 16.742 2 13.99 2A9.99 9.99 0 0 0 4 11.99 9.99 9.99 0 0 0 13.99 22c5.99 0 9.873-4.14 9.873-10.05 0-.674-.06-1.258-.19-1.665H12.24Z"/>
+                </svg>
+                Google
+              </button>
+              <button
+                type="button"
+                onClick={() => handleSsoLogin('clever')}
+                className="flex items-center justify-center gap-2 py-2 px-3 bg-zinc-950 hover:bg-zinc-850 border border-zinc-850 rounded-lg text-xs font-bold text-zinc-200 transition-all hover:scale-[1.02]"
+              >
+                <span className="text-sky-400 font-black text-sm tracking-tighter mr-1">C</span>
+                Clever
+              </button>
+            </div>
 
             <div className="text-center mt-6 pt-6 border-t border-zinc-800/60 text-xs">
               <span className="text-zinc-500">
@@ -748,9 +1562,27 @@ export default function Home() {
       ) : (
         <>
       {role === "student" && (
-        <main className="flex-1 max-w-7xl w-full mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Simulator Panel */}
-          <div className="lg:col-span-2 space-y-6">
+        <main className="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+          {joinError && joinError.includes("Seat limit") && (
+            <div className="bg-rose-500/10 border border-rose-500/30 text-rose-450 p-4 rounded-2xl flex items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <span className="text-xl">⚠️</span>
+                <div>
+                  <h4 className="text-sm font-bold text-white">Campus Seat License Limit Reached</h4>
+                  <p className="text-xs text-zinc-400 mt-0.5">Your campus has exceeded its active seat quota. Please contact your district administrator to purchase additional seats.</p>
+                </div>
+              </div>
+              <button 
+                onClick={() => setJoinError("")}
+                className="px-3 py-1 bg-zinc-850 hover:bg-zinc-800 text-zinc-300 text-xs font-bold rounded-lg border border-zinc-700 transition shrink-0"
+              >
+                Dismiss
+              </button>
+            </div>
+          )}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Simulator Panel */}
+            <div className="lg:col-span-2 space-y-6">
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 h-40 w-40 bg-indigo-500/5 rounded-full blur-3xl" />
               
@@ -838,130 +1670,579 @@ export default function Home() {
                 </div>
               ) : (
                 <>
-                  {/* Progress Summary Cards */}
-                  <div className="grid grid-cols-3 gap-4 mb-8">
-                    <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
-                      <span className="text-xs text-zinc-500">Progress</span>
-                      <div className="text-lg font-bold text-white mt-0.5">
-                        {mrnaChain.length} / {templateDNA.length}
-                      </div>
-                    </div>
-                    <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
-                      <span className="text-xs text-zinc-500">Errors Logged</span>
-                      <div className={`text-lg font-bold mt-0.5 ${errors > 0 ? "text-rose-400" : "text-emerald-400"}`}>
-                        {errors}
-                      </div>
-                    </div>
-                    <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
-                      <span className="text-xs text-zinc-500">Accuracy</span>
-                      <div className="text-lg font-bold text-white mt-0.5">
-                        {mrnaChain.length + errors > 0
-                          ? `${Math.round((mrnaChain.length / (mrnaChain.length + errors)) * 100)}%`
-                          : "100%"}
-                      </div>
-                    </div>
+                  {/* Level Tabs Selector */}
+                  <div className="flex gap-4 mb-6 border-b border-zinc-800 pb-2">
+                    <button
+                      onClick={() => setActiveLevel(1)}
+                      className={`pb-2 text-sm font-bold uppercase tracking-wider transition-all border-b-2 ${
+                        activeLevel === 1
+                          ? "text-indigo-400 border-indigo-500"
+                          : "text-zinc-500 border-transparent hover:text-zinc-300"
+                      }`}
+                    >
+                      Level 1: Transcription
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (isCompleted) {
+                          setActiveLevel(2);
+                        }
+                      }}
+                      disabled={!isCompleted}
+                      className={`pb-2 text-sm font-bold uppercase tracking-wider transition-all border-b-2 flex items-center gap-1.5 ${
+                        activeLevel === 2
+                          ? "text-indigo-400 border-indigo-500"
+                          : !isCompleted
+                          ? "text-zinc-650 border-transparent cursor-not-allowed"
+                          : "text-zinc-500 border-transparent hover:text-zinc-300"
+                      }`}
+                    >
+                      Level 2: Translation
+                      {!isCompleted && <span className="text-[9px] bg-zinc-800 text-zinc-500 px-1.5 py-0.5 rounded font-black">LOCKED</span>}
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (isTranslationCompleted) {
+                          setActiveLevel(3);
+                          if (!bondingStartTime) {
+                            setBondingStartTime(Date.now());
+                            logTelemetryEvent("level_start", { bondingTarget: "H2O" }, "chemical_bonding_3", "OAS.B.PS1.1");
+                          }
+                        }
+                      }}
+                      disabled={!isTranslationCompleted}
+                      className={`pb-2 text-sm font-bold uppercase tracking-wider transition-all border-b-2 flex items-center gap-1.5 ${
+                        activeLevel === 3
+                          ? "text-indigo-400 border-indigo-500"
+                          : !isTranslationCompleted
+                          ? "text-zinc-650 border-transparent cursor-not-allowed"
+                          : "text-zinc-500 border-transparent hover:text-zinc-300"
+                      }`}
+                    >
+                      Level 3: Bonding
+                      {!isTranslationCompleted && <span className="text-[9px] bg-zinc-800 text-zinc-500 px-1.5 py-0.5 rounded font-black">LOCKED</span>}
+                    </button>
                   </div>
 
-                  {/* DNA Double Helix Representation */}
-                  <div className="space-y-8 bg-zinc-950/80 border border-zinc-850 p-6 rounded-2xl mb-8">
-                    {/* DNA Template Strand */}
-                    <div>
-                      <div className="text-xs font-semibold text-zinc-500 mb-2 uppercase tracking-wide">
-                        {"DNA Template Strand (3' -> 5')"}
-                      </div>
-                      <div className="flex flex-wrap gap-2.5">
-                        {templateDNA.map((base, idx) => {
-                          const isActive = idx === currentIndex && !isCompleted;
-                          return (
-                            <div
-                              key={idx}
-                              className={`h-14 w-12 rounded-xl flex flex-col justify-center items-center font-bold text-lg border transition-all ${
-                                isActive
-                                  ? "bg-zinc-800 border-indigo-500 scale-105 shadow-lg shadow-indigo-500/10 ring-2 ring-indigo-500/20"
-                                  : "bg-zinc-900 border-zinc-800 text-zinc-400"
-                              }`}
-                            >
-                              <span className="text-xs text-zinc-600 font-semibold mb-0.5">{idx + 1}</span>
-                              {base}
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Connecting Bonds Representation */}
-                    <div className="flex gap-2.5 px-3 py-1 text-zinc-700 justify-start select-none">
-                      {templateDNA.map((_, idx) => (
-                        <div key={idx} className="w-12 flex justify-center text-zinc-700/40 text-xs font-black">
-                          ║
+                  {activeLevel === 1 && (
+                    <>
+                      {/* Progress Summary Cards */}
+                      <div className="grid grid-cols-3 gap-4 mb-8">
+                        <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
+                          <span className="text-xs text-zinc-500">Progress</span>
+                          <div className="text-lg font-bold text-white mt-0.5">
+                            {mrnaChain.length} / {templateDNA.length}
+                          </div>
                         </div>
-                      ))}
-                    </div>
-
-                    {/* Transcribed mRNA Strand */}
-                    <div>
-                      <div className="text-xs font-semibold text-zinc-500 mb-2 uppercase tracking-wide">
-                        {"mRNA Transcript Strand (5' -> 3')"}
+                        <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
+                          <span className="text-xs text-zinc-500">Errors Logged</span>
+                          <div className={`text-lg font-bold mt-0.5 ${errors > 0 ? "text-rose-400" : "text-emerald-400"}`}>
+                            {errors}
+                          </div>
+                        </div>
+                        <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
+                          <span className="text-xs text-zinc-500">Accuracy</span>
+                          <div className="text-lg font-bold text-white mt-0.5">
+                            {mrnaChain.length + errors > 0
+                              ? `${Math.round((mrnaChain.length / (mrnaChain.length + errors)) * 100)}%`
+                              : "100%"}
+                          </div>
+                        </div>
                       </div>
 
-                      <div className="flex flex-wrap gap-2.5">
-                        {templateDNA.map((_, idx) => {
-                          const base = mrnaChain[idx];
-                          const isNext = idx === currentIndex && !isCompleted;
-                          return (
-                            <div
-                              key={idx}
-                              className={`h-14 w-12 rounded-xl flex flex-col justify-center items-center font-bold text-lg border transition-all ${
-                                base
-                                  ? `bg-gradient-to-b ${BASE_COLORS[base]}`
-                                  : isNext
-                                  ? "border-dashed border-zinc-700 bg-zinc-900/30 text-indigo-400 animate-pulse"
-                                  : "border-dashed border-zinc-800 text-zinc-855"
-                              }`}
-                            >
-                              <span className="text-[10px] text-zinc-500 mb-0.5">{idx + 1}</span>
-                              {base || "?"}
+                      {/* DNA Double Helix Representation */}
+                      <div className="space-y-8 bg-zinc-950/80 border border-zinc-850 p-6 rounded-2xl mb-8">
+                        {/* DNA Template Strand */}
+                        <div>
+                          <div className="text-xs font-semibold text-zinc-500 mb-2 uppercase tracking-wide">
+                            {"DNA Template Strand (3' -> 5')"}
+                          </div>
+                          <div className="flex flex-wrap gap-2.5">
+                            {templateDNA.map((base, idx) => {
+                              const isActive = idx === currentIndex && !isCompleted;
+                              return (
+                                <div
+                                  key={idx}
+                                  className={`h-14 w-12 rounded-xl flex flex-col justify-center items-center font-bold text-lg border transition-all ${
+                                    isActive
+                                      ? "bg-zinc-800 border-indigo-500 scale-105 shadow-lg shadow-indigo-500/10 ring-2 ring-indigo-500/20"
+                                      : "bg-zinc-900 border-zinc-800 text-zinc-400"
+                                  }`}
+                                >
+                                  <span className="text-xs text-zinc-600 font-semibold mb-0.5">{idx + 1}</span>
+                                  {base}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+
+                        {/* Connecting Bonds Representation */}
+                        <div className="flex gap-2.5 px-3 py-1 text-zinc-700 justify-start select-none">
+                          {templateDNA.map((_, idx) => (
+                            <div key={idx} className="w-12 flex justify-center text-zinc-700/40 text-xs font-black">
+                              ║
                             </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Interaction Nucleotide Picker Controls */}
-                  <div className="bg-zinc-950/40 border border-zinc-800/60 p-6 rounded-2xl text-center">
-                    {isCompleted ? (
-                      <div className="space-y-4 py-2">
-                        <p className="text-sm text-emerald-400 font-semibold animate-pulse">
-                          ✓ Helix fully transcribed! Ready to submit telemetry data to backend.
-                        </p>
-                        <button
-                          onClick={handleSubmitSimulation}
-                          className="px-8 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/20 transform hover:scale-105 transition-all duration-300 active:scale-95 text-xs uppercase tracking-wider"
-                        >
-                          Submit Simulation Results
-                        </button>
-                      </div>
-                    ) : (
-                      <>
-                        <p className="text-sm text-zinc-400 mb-4 font-medium">
-                          Select the matching mRNA base for DNA nucleotide {templateDNA[currentIndex]} at position {currentIndex + 1}:
-                        </p>
-
-                        <div className="flex justify-center gap-4">
-                          {["A", "U", "C", "G"].map((base) => (
-                            <button
-                              key={base}
-                              onClick={() => handleBaseSelection(base)}
-                              className={`h-16 w-16 rounded-full font-black text-xl bg-gradient-to-b transition-all transform hover:scale-105 active:scale-95 shadow-md ${BASE_COLORS[base]}`}
-                            >
-                              {base}
-                            </button>
                           ))}
                         </div>
-                      </>
-                    )}
-                  </div>
+
+                        {/* Transcribed mRNA Strand */}
+                        <div>
+                          <div className="text-xs font-semibold text-zinc-500 mb-2 uppercase tracking-wide">
+                            {"mRNA Transcript Strand (5' -> 3')"}
+                          </div>
+
+                          <div className="flex flex-wrap gap-2.5">
+                            {templateDNA.map((_, idx) => {
+                              const base = mrnaChain[idx];
+                              const isNext = idx === currentIndex && !isCompleted;
+                              return (
+                                <div
+                                  key={idx}
+                                  className={`h-14 w-12 rounded-xl flex flex-col justify-center items-center font-bold text-lg border transition-all ${
+                                    base
+                                      ? `bg-gradient-to-b ${BASE_COLORS[base]}`
+                                      : isNext
+                                      ? "border-dashed border-zinc-700 bg-zinc-900/30 text-indigo-400 animate-pulse"
+                                      : "border-dashed border-zinc-800 text-zinc-855"
+                                  }`}
+                                >
+                                  <span className="text-[10px] text-zinc-500 mb-0.5">{idx + 1}</span>
+                                  {base || "?"}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Interaction Nucleotide Picker Controls */}
+                      <div className="bg-zinc-950/40 border border-zinc-800/60 p-6 rounded-2xl text-center">
+                        {isCompleted ? (
+                          <div className="space-y-4 py-2">
+                            <p className="text-sm text-emerald-400 font-semibold animate-pulse">
+                              ✓ DNA Strand fully transcribed into mRNA transcript!
+                            </p>
+                            <button
+                              onClick={() => setActiveLevel(2)}
+                              className="px-8 py-3.5 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-450 hover:to-purple-500 text-white font-bold rounded-xl shadow-lg shadow-indigo-500/20 transform hover:scale-105 transition-all duration-300 active:scale-95 text-xs uppercase tracking-wider"
+                            >
+                              Proceed to Level 2: Translation →
+                            </button>
+                          </div>
+                        ) : (
+                          <>
+                            <p className="text-sm text-zinc-400 mb-4 font-medium">
+                              Select the matching mRNA base for DNA nucleotide {templateDNA[currentIndex]} at position {currentIndex + 1}:
+                            </p>
+
+                            <div className="flex justify-center gap-4">
+                              {["A", "U", "C", "G"].map((base) => (
+                                <button
+                                  key={base}
+                                  onClick={() => handleBaseSelection(base)}
+                                  className={`h-16 w-16 rounded-full font-black text-xl bg-gradient-to-b transition-all transform hover:scale-105 active:scale-95 shadow-md ${BASE_COLORS[base]}`}
+                                >
+                                  {base}
+                                </button>
+                              ))}
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    </>
+                  )}
+
+                  {activeLevel === 2 && (
+                    <>
+                      {/* Level 2 Progress Cards */}
+                      <div className="grid grid-cols-3 gap-4 mb-8">
+                        <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
+                          <span className="text-xs text-zinc-500">Translation Progress</span>
+                          <div className="text-lg font-bold text-white mt-0.5">
+                            {translationIndex} / {getCodons().length}
+                          </div>
+                        </div>
+                        <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
+                          <span className="text-xs text-zinc-500">Translation Errors</span>
+                          <div className={`text-lg font-bold mt-0.5 ${translationErrors > 0 ? "text-rose-400" : "text-emerald-400"}`}>
+                            {translationErrors}
+                          </div>
+                        </div>
+                        <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
+                          <span className="text-xs text-zinc-500">Accuracy</span>
+                          <div className="text-lg font-bold text-white mt-0.5">
+                            {translationIndex + translationErrors > 0
+                              ? `${Math.round((translationIndex / (translationIndex + translationErrors)) * 100)}%`
+                              : "100%"}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Codon translation screen */}
+                      <div className="space-y-8 bg-zinc-950/80 border border-zinc-850 p-6 rounded-2xl mb-8">
+                        {/* mRNA template codons */}
+                        <div>
+                          <div className="text-xs font-semibold text-zinc-500 mb-3 uppercase tracking-wide">
+                            {"Ribosome Translation Site (mRNA -> tRNA)"}
+                          </div>
+                          <div className="flex justify-center items-center gap-8 py-6 bg-zinc-900/40 rounded-xl border border-zinc-800 relative">
+                            {/* Ribosome illustration */}
+                            <div className="absolute inset-x-0 h-10 bg-indigo-950/20 border-y border-indigo-900/30 flex items-center justify-center text-[10px] uppercase font-bold text-indigo-400/60 tracking-widest select-none">
+                              Ribosome A-Site
+                            </div>
+                            
+                            {getCodons().map((codon, idx) => {
+                              const isCurrent = idx === translationIndex && !isTranslationCompleted;
+                              const isDone = idx < translationIndex;
+                              return (
+                                <div
+                                  key={idx}
+                                  className={`z-10 h-16 w-20 rounded-xl flex flex-col justify-center items-center font-bold text-base border transition-all ${
+                                    isCurrent
+                                      ? "bg-indigo-900/40 border-indigo-500 scale-110 shadow-lg shadow-indigo-500/20 ring-2 ring-indigo-500/30"
+                                      : isDone
+                                      ? "bg-zinc-950 border-zinc-800 text-zinc-550 line-through animate-pulse"
+                                      : "bg-zinc-900 border-zinc-800 text-zinc-500"
+                                  }`}
+                                >
+                                  <span className="text-[10px] text-zinc-650 font-bold mb-1">Codon {idx + 1}</span>
+                                  {codon}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+
+                        {/* Growing Amino Acid Chain */}
+                        <div>
+                          <div className="text-xs font-semibold text-zinc-500 mb-2 uppercase tracking-wide">
+                            Growing Peptide Chain (Protein Synthesis)
+                          </div>
+                          <div className="h-16 bg-zinc-950 p-4 rounded-xl border border-zinc-850 flex items-center gap-3 overflow-x-auto">
+                            {translationChain.length === 0 ? (
+                              <span className="text-zinc-600 text-xs italic">No amino acids linked yet. Pair tRNA to start chain.</span>
+                            ) : (
+                              translationChain.map((aa, idx) => (
+                                <React.Fragment key={idx}>
+                                  <div className="px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg text-xs font-bold text-white shadow-md shadow-emerald-500/10 flex items-center gap-1.5 animate-bounce">
+                                    <span className="h-2 w-2 rounded-full bg-white/80 animate-ping" />
+                                    {aa}
+                                  </div>
+                                  {idx < translationChain.length - 1 && (
+                                    <span className="text-indigo-400 font-bold text-sm">✦</span>
+                                  )}
+                                </React.Fragment>
+                              ))
+                            )}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* tRNA anticodon matching controls */}
+                      <div className="bg-zinc-950/40 border border-zinc-800/60 p-6 rounded-2xl text-center">
+                        {isTranslationCompleted ? (
+                          <div className="space-y-4 py-2 flex flex-col items-center justify-center">
+                            <p className="text-sm text-emerald-400 font-semibold animate-pulse">
+                              ✓ Protein translation complete! 3-letter amino acid chain synthesized successfully.
+                            </p>
+                            <div className="flex gap-4">
+                              <button
+                                onClick={() => {
+                                  setActiveLevel(3);
+                                  if (!bondingStartTime) {
+                                    setBondingStartTime(Date.now());
+                                    logTelemetryEvent("level_start", { bondingTarget: "H2O" }, "chemical_bonding_3", "OAS.B.PS1.1");
+                                  }
+                                }}
+                                className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-450 hover:to-purple-500 text-white font-bold rounded-xl shadow-lg shadow-indigo-500/20 transform hover:scale-105 transition-all duration-300 active:scale-95 text-xs uppercase tracking-wider"
+                              >
+                                Proceed to Level 3: Chemical Bonding →
+                              </button>
+                              <button
+                                onClick={handleSubmitSimulation}
+                                className="px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-bold rounded-xl border border-zinc-700 transform hover:scale-105 transition-all duration-300 active:scale-95 text-xs uppercase tracking-wider"
+                              >
+                                Submit & Exit
+                              </button>
+                            </div>
+                          </div>
+                        ) : (
+                          <>
+                            <p className="text-sm text-zinc-400 mb-5 font-medium">
+                              Select the matching tRNA anticodon to bind with mRNA codon <strong className="text-white font-mono">{getCodons()[translationIndex]}</strong>:
+                            </p>
+
+                            <div className="flex flex-wrap justify-center gap-4">
+                              {["UAC", "GGC", "UUU", "AAA"].map((anticodon) => (
+                                <button
+                                  key={anticodon}
+                                  onClick={() => handleCodonMatch(anticodon)}
+                                  className={`h-20 w-24 rounded-xl border flex flex-col justify-center items-center font-bold text-xs bg-gradient-to-b transition-all transform hover:scale-105 active:scale-95 shadow-md ${ANTICODON_COLORS[anticodon] || 'from-zinc-800 to-zinc-900 border-zinc-700 text-zinc-400'}`}
+                                >
+                                  <span className="text-[9px] opacity-75 font-bold mb-1">tRNA anticodon</span>
+                                  <span className="text-sm font-black tracking-wider">{anticodon}</span>
+                                  <span className="text-[8px] mt-1 text-white/80 font-bold bg-black/20 px-1 py-0.5 rounded">
+                                    {anticodon === "UAC" ? "Met" : anticodon === "GGC" ? "Pro" : anticodon === "UUU" ? "Lys" : "Phe"}
+                                  </span>
+                                </button>
+                              ))}
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    </>
+                  )}
+
+                  {activeLevel === 3 && (
+                    <>
+                      {/* Level 3 Progress Cards */}
+                      <div className="grid grid-cols-3 gap-4 mb-8">
+                        <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
+                          <span className="text-xs text-zinc-500">Target Standard</span>
+                          <div className="text-lg font-bold text-white mt-0.5 font-mono">
+                            OAS B.PS1.1
+                          </div>
+                        </div>
+                        <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
+                          <span className="text-xs text-zinc-500">Errors Logged</span>
+                          <div className={`text-lg font-bold mt-0.5 ${bondingErrors > 0 ? "text-rose-400" : "text-emerald-400"}`}>
+                            {bondingErrors}
+                          </div>
+                        </div>
+                        <div className="bg-zinc-950/60 border border-zinc-800/80 p-3.5 rounded-xl text-center">
+                          <span className="text-xs text-zinc-500">Stability</span>
+                          <div className="text-lg font-bold text-white mt-0.5">
+                            {bondingCompleted ? (
+                              <span className="text-emerald-400 font-bold">STABLE</span>
+                            ) : (
+                              <span className="text-amber-500 font-bold animate-pulse">UNSTABLE</span>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Compound selection tabs */}
+                      <div className="bg-zinc-950/80 border border-zinc-850 p-6 rounded-2xl mb-8 space-y-6">
+                        <div className="flex justify-between items-center border-b border-zinc-850 pb-4">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Level 3: Chemical Bonding Puzzle</span>
+                            <h3 className="text-sm font-bold text-white mt-0.5">Satisfy the Octet Rule</h3>
+                          </div>
+                          <div className="flex gap-2 bg-zinc-900 p-1 rounded-lg border border-zinc-800">
+                            <button
+                              onClick={() => {
+                                if (!bondingCompleted) {
+                                  setBondingTarget("H2O");
+                                  logTelemetryEvent("level_start", { bondingTarget: "H2O" }, "chemical_bonding_3", "OAS.B.PS1.1");
+                                }
+                              }}
+                              className={`px-3 py-1.5 rounded-md text-xs font-bold transition ${
+                                bondingTarget === "H2O"
+                                  ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/10"
+                                  : "text-zinc-400 hover:text-zinc-200"
+                              }`}
+                            >
+                              Water (H₂O) Covalent
+                            </button>
+                            <button
+                              onClick={() => {
+                                if (!bondingCompleted) {
+                                  setBondingTarget("NaCl");
+                                  logTelemetryEvent("level_start", { bondingTarget: "NaCl" }, "chemical_bonding_3", "OAS.B.PS1.1");
+                                }
+                              }}
+                              className={`px-3 py-1.5 rounded-md text-xs font-bold transition ${
+                                bondingTarget === "NaCl"
+                                  ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/10"
+                                  : "text-zinc-400 hover:text-zinc-200"
+                              }`}
+                            >
+                              Salt (NaCl) Ionic
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Interactive Bonding Canvas */}
+                        <div className="bg-zinc-950/40 p-6 rounded-xl border border-zinc-850 flex flex-col items-center justify-center min-h-[220px]">
+                          {bondingTarget === "H2O" ? (
+                            // Covalent Water
+                            <div className="w-full space-y-6">
+                              <div className="flex justify-center items-center gap-12">
+                                {/* H1 Atom */}
+                                <div className="flex flex-col items-center gap-3">
+                                  <div className="h-14 w-14 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-white font-black text-sm relative">
+                                    H₁
+                                    {/* Electron shell representation */}
+                                    <div className="absolute -inset-2.5 rounded-full border border-dashed border-zinc-700/50 flex items-center justify-center">
+                                      {bondingSharedH1 === 0 && (
+                                        <span className="absolute right-0 top-1/2 -translate-y-1/2 h-2 w-2 rounded-full bg-indigo-400 shadow shadow-indigo-500" />
+                                      )}
+                                    </div>
+                                  </div>
+                                  <button
+                                    onClick={() => handleShareElectron("H1", bondingSharedH1 === 0)}
+                                    className={`px-3 py-1 text-[10px] font-bold rounded-lg transition ${
+                                      bondingSharedH1 === 1
+                                        ? "bg-indigo-650/40 border border-indigo-500 text-indigo-300"
+                                        : "bg-zinc-800 hover:bg-zinc-700 text-zinc-300"
+                                    }`}
+                                  >
+                                    {bondingSharedH1 === 1 ? "Shared ✓" : "Share Electron"}
+                                  </button>
+                                </div>
+
+                                {/* Oxygen central atom */}
+                                <div className="h-24 w-24 rounded-full bg-gradient-to-tr from-indigo-950/50 to-indigo-900/20 border-2 border-indigo-650 flex flex-col items-center justify-center text-white font-black text-xl relative shadow-lg shadow-indigo-500/5">
+                                  O
+                                  <span className="text-[9px] text-indigo-400 font-bold mt-1 font-mono">
+                                    Valence: {6 + bondingSharedH1 + bondingSharedH2}
+                                  </span>
+
+                                  {/* Valence electrons representations */}
+                                  <div className="absolute top-1 right-1/2 translate-x-1/2 h-2 w-2 rounded-full bg-indigo-500" />
+                                  <div className="absolute bottom-1 right-1/2 translate-x-1/2 h-2 w-2 rounded-full bg-indigo-500" />
+                                  <div className="absolute left-1 top-1/2 -translate-y-1/2 h-2 w-2 rounded-full bg-indigo-500" />
+                                  <div className="absolute right-1 top-1/2 -translate-y-1/2 h-2 w-2 rounded-full bg-indigo-500" />
+                                  
+                                  {/* Sharing regions */}
+                                  {bondingSharedH1 === 1 && (
+                                    <div className="absolute -left-5 top-1/2 -translate-y-1/2 flex gap-1">
+                                      <span className="h-2 w-2 rounded-full bg-indigo-400" />
+                                      <span className="h-2 w-2 rounded-full bg-indigo-500" />
+                                    </div>
+                                  )}
+                                  {bondingSharedH2 === 1 && (
+                                    <div className="absolute -right-5 top-1/2 -translate-y-1/2 flex gap-1">
+                                      <span className="h-2 w-2 rounded-full bg-indigo-500" />
+                                      <span className="h-2 w-2 rounded-full bg-indigo-400" />
+                                    </div>
+                                  )}
+                                </div>
+
+                                {/* H2 Atom */}
+                                <div className="flex flex-col items-center gap-3">
+                                  <div className="h-14 w-14 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-white font-black text-sm relative">
+                                    H₂
+                                    <div className="absolute -inset-2.5 rounded-full border border-dashed border-zinc-700/50 flex items-center justify-center">
+                                      {bondingSharedH2 === 0 && (
+                                        <span className="absolute left-0 top-1/2 -translate-y-1/2 h-2 w-2 rounded-full bg-indigo-400 shadow shadow-indigo-500" />
+                                      )}
+                                    </div>
+                                  </div>
+                                  <button
+                                    onClick={() => handleShareElectron("H2", bondingSharedH2 === 0)}
+                                    className={`px-3 py-1 text-[10px] font-bold rounded-lg transition ${
+                                      bondingSharedH2 === 1
+                                        ? "bg-indigo-650/40 border border-indigo-500 text-indigo-300"
+                                        : "bg-zinc-800 hover:bg-zinc-700 text-zinc-300"
+                                    }`}
+                                  >
+                                    {bondingSharedH2 === 1 ? "Shared ✓" : "Share Electron"}
+                                  </button>
+                                </div>
+                              </div>
+                              <p className="text-[11px] text-zinc-500 text-center max-w-sm mx-auto leading-relaxed">
+                                Hydrogens have 1 valence electron each. Oxygen has 6. Share 1 electron from each Hydrogen into the central Oxygen's valence shell to form single covalent bonds.
+                              </p>
+                            </div>
+                          ) : (
+                            // Ionic Salt
+                            <div className="w-full space-y-6">
+                              <div className="flex justify-center items-center gap-16">
+                                {/* Sodium cation */}
+                                <div className="flex flex-col items-center gap-3">
+                                  <div className="h-16 w-16 rounded-full bg-zinc-900 border border-zinc-850 flex flex-col items-center justify-center text-white font-black text-base relative">
+                                    Na
+                                    <span className="text-[9px] text-zinc-550 font-bold font-mono">
+                                      {bondingNaTransfer ? "+" : "Valence: 1"}
+                                    </span>
+                                    {!bondingNaTransfer && (
+                                      <span className="absolute -top-1.5 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-indigo-400 shadow shadow-indigo-500" />
+                                    )}
+                                  </div>
+                                  <button
+                                    onClick={() => handleTransferElectron(!bondingNaTransfer)}
+                                    className={`px-3 py-1 text-[10px] font-bold rounded-lg transition ${
+                                      bondingNaTransfer
+                                        ? "bg-indigo-650/40 border border-indigo-500 text-indigo-300"
+                                        : "bg-zinc-800 hover:bg-zinc-700 text-zinc-300"
+                                    }`}
+                                  >
+                                    {bondingNaTransfer ? "Transferred ✓" : "Transfer Electron"}
+                                  </button>
+                                </div>
+
+                                {/* Chlorine anion */}
+                                <div className="flex flex-col items-center gap-3">
+                                  <div className="h-20 w-20 rounded-full bg-gradient-to-tr from-zinc-900 to-zinc-950 border-2 border-zinc-800 flex flex-col items-center justify-center text-white font-black text-base relative">
+                                    Cl
+                                    <span className="text-[9px] text-zinc-500 font-bold font-mono">
+                                      {bondingNaTransfer ? "-" : "Valence: 7"}
+                                    </span>
+                                    
+                                    <div className="absolute top-1 right-1/2 translate-x-1/2 h-2 w-2 rounded-full bg-indigo-500" />
+                                    <div className="absolute bottom-1 right-1/2 translate-x-1/2 h-2 w-2 rounded-full bg-indigo-500" />
+                                    <div className="absolute left-1 top-1/2 -translate-y-1/2 h-2 w-2 rounded-full bg-indigo-500" />
+                                    <div className="absolute right-1 top-1/2 -translate-y-1/2 h-2 w-2 rounded-full bg-indigo-500" />
+                                    <div className="absolute top-3.5 left-3.5 h-2 w-2 rounded-full bg-indigo-500" />
+                                    <div className="absolute top-3.5 right-3.5 h-2 w-2 rounded-full bg-indigo-500" />
+                                    <div className="absolute bottom-3.5 left-3.5 h-2 w-2 rounded-full bg-indigo-500" />
+                                    {bondingNaTransfer && (
+                                      <div className="absolute bottom-3.5 right-3.5 h-2 w-2 rounded-full bg-indigo-400 shadow shadow-indigo-500" />
+                                    )}
+                                  </div>
+                                  <div className="h-6" />
+                                </div>
+                              </div>
+                              <p className="text-[11px] text-zinc-500 text-center max-w-sm mx-auto leading-relaxed">
+                                Sodium has 1 electron in its outer shell; Chlorine has 7. Transfer Sodium's valence electron to Chlorine to satisfy the octet rule for both.
+                              </p>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Interactive Action Controls */}
+                        <div className="flex gap-4">
+                          <button
+                            onClick={handleOctetCheck}
+                            disabled={bondingCompleted}
+                            className="flex-1 py-3 bg-indigo-600 hover:bg-indigo-500 disabled:bg-zinc-800 disabled:text-zinc-600 text-white font-bold rounded-xl transition text-xs uppercase tracking-wider"
+                          >
+                            Check Octet Rule
+                          </button>
+                          <button
+                            onClick={handleValenceReset}
+                            disabled={bondingCompleted}
+                            className="px-6 py-3 bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white rounded-xl transition text-xs uppercase tracking-wider"
+                          >
+                            Reset Valence
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Level 3 logs and completion action */}
+                      <div className="bg-zinc-950/40 border border-zinc-800/60 p-6 rounded-2xl text-center">
+                        {bondingCompleted ? (
+                          <div className="space-y-4 py-2 flex flex-col items-center justify-center">
+                            <p className="text-sm text-emerald-400 font-semibold animate-pulse">
+                              ✓ Chemical bonding completed successfully!
+                            </p>
+                            <button
+                              onClick={handleSubmitBondingSimulation}
+                              className="px-8 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/20 transform hover:scale-105 transition-all duration-300 active:scale-95 text-xs uppercase tracking-wider"
+                            >
+                              Submit Level 3 Simulation Results
+                            </button>
+                          </div>
+                        ) : (
+                          <div className="text-zinc-500 text-xs py-2">
+                            Select shared/transferred electrons above, and verify octet configuration.
+                          </div>
+                        )}
+                      </div>
+                    </>
+                  )}
                 </>
               )}
             </div>
@@ -969,32 +2250,113 @@ export default function Home() {
 
           {/* Feedback & Telemetry Visualizer Sidebar */}
           <div className="space-y-6">
+            {/* Classroom Connection Card */}
+            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 shadow-xl space-y-3">
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider text-zinc-400">
+                🏫 Classroom Connection
+              </h3>
+              
+              {classroomInfo || (currentUser && currentUser.classroom_name) ? (
+                <div className="p-3 bg-zinc-950/60 border border-zinc-850 rounded-lg text-xs space-y-1">
+                  <p className="text-zinc-550 font-bold uppercase text-[9px]">Linked Classroom</p>
+                  <p className="text-white font-bold">{classroomInfo ? classroomInfo.classroom_name : currentUser.classroom_name}</p>
+                  <p className="text-indigo-400 font-mono font-bold text-[10px]">Code: {classroomInfo ? classroomInfo.class_code : currentUser.class_code}</p>
+                </div>
+              ) : (
+                <form onSubmit={handleJoinClassroom} className="space-y-3">
+                  <p className="text-[11px] text-zinc-500 leading-relaxed">Join your teacher's classroom to share your standard mastery reports.</p>
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      placeholder="Enter Class Code"
+                      value={classCodeJoin}
+                      onChange={(e) => setClassCodeJoin(e.target.value)}
+                      className="flex-1 bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-1.5 text-xs text-white focus:outline-none focus:border-indigo-500"
+                    />
+                    <button type="submit" className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-xs font-bold transition">
+                      Join
+                    </button>
+                  </div>
+                  {joinMessage && <p className="text-[10px] text-emerald-400 font-bold">{joinMessage}</p>}
+                  {joinError && <p className="text-[10px] text-rose-400 font-bold">{joinError}</p>}
+                </form>
+              )}
+            </div>
+
             {/* Live Feedback Logs */}
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 shadow-xl h-72 flex flex-col">
               <h3 className="text-sm font-bold text-white mb-3 uppercase tracking-wider text-zinc-400">
                 Action Feedback Log
               </h3>
               <div className="flex-1 overflow-y-auto space-y-2.5 pr-2 scrollbar-thin scrollbar-thumb-zinc-800">
-                {feedbackLog.length === 0 ? (
-                  <p className="text-zinc-500 text-xs italic text-center mt-16">
-                    No actions taken yet. Click a base to begin transcription.
-                  </p>
+                {activeLevel === 1 ? (
+                  feedbackLog.length === 0 ? (
+                    <p className="text-zinc-500 text-xs italic text-center mt-16">
+                      No actions taken yet. Click a base to begin transcription.
+                    </p>
+                  ) : (
+                    feedbackLog.map((log, idx) => (
+                      <div
+                        key={idx}
+                        className={`p-2.5 rounded-lg border text-xs flex gap-2.5 items-start ${
+                          log.status === "SUCCESS"
+                            ? "bg-emerald-500/5 border-emerald-500/20 text-emerald-300"
+                            : "bg-rose-500/5 border-rose-500/20 text-rose-300"
+                        }`}
+                      >
+                        <span className="font-mono text-[10px] text-zinc-500 pt-0.5">
+                          {log.timestamp}
+                        </span>
+                        <div>{log.message}</div>
+                      </div>
+                    ))
+                  )
+                ) : activeLevel === 2 ? (
+                  translationFeedbackLog.length === 0 ? (
+                    <p className="text-zinc-500 text-xs italic text-center mt-16">
+                      No translation steps taken yet. Pair tRNA to begin translation.
+                    </p>
+                  ) : (
+                    translationFeedbackLog.map((log, idx) => (
+                      <div
+                        key={idx}
+                        className={`p-2.5 rounded-lg border text-xs flex gap-2.5 items-start ${
+                          log.status === "SUCCESS"
+                            ? "bg-emerald-500/5 border-emerald-500/20 text-emerald-300"
+                            : "bg-rose-500/5 border-rose-500/20 text-rose-300"
+                        }`}
+                      >
+                        <span className="font-mono text-[10px] text-zinc-500 pt-0.5">
+                          {log.timestamp}
+                        </span>
+                        <div>{log.message}</div>
+                      </div>
+                    ))
+                  )
                 ) : (
-                  feedbackLog.map((log, idx) => (
-                    <div
-                      key={idx}
-                      className={`p-2.5 rounded-lg border text-xs flex gap-2.5 items-start ${
-                        log.status === "SUCCESS"
-                          ? "bg-emerald-500/5 border-emerald-500/20 text-emerald-300"
-                          : "bg-rose-500/5 border-rose-500/20 text-rose-300"
-                      }`}
-                    >
-                      <span className="font-mono text-[10px] text-zinc-500 pt-0.5">
-                        {log.timestamp}
-                      </span>
-                      <div>{log.message}</div>
-                    </div>
-                  ))
+                  bondingFeedbackLog.length === 0 ? (
+                    <p className="text-zinc-500 text-xs italic text-center mt-16">
+                      No bonding attempts made yet. Share/transfer electrons to begin.
+                    </p>
+                  ) : (
+                    bondingFeedbackLog.map((log, idx) => (
+                      <div
+                        key={idx}
+                        className={`p-2.5 rounded-lg border text-xs flex gap-2.5 items-start ${
+                          log.status === "SUCCESS"
+                            ? "bg-emerald-500/5 border-emerald-500/20 text-emerald-300"
+                            : log.status === "RESET"
+                            ? "bg-zinc-800 border-zinc-700 text-zinc-400"
+                            : "bg-rose-500/5 border-rose-500/20 text-rose-300"
+                        }`}
+                      >
+                        <span className="font-mono text-[10px] text-zinc-500 pt-0.5">
+                          {log.timestamp}
+                        </span>
+                        <div>{log.message}</div>
+                      </div>
+                    ))
+                  )
                 )}
               </div>
             </div>
@@ -1022,8 +2384,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </main>
-      )}
+        </div>
+      </main>
+    )}
       {role === "teacher" && (
         <main className="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
@@ -1124,6 +2487,8 @@ export default function Home() {
                     <th className="py-3">Student Name</th>
                     <th className="py-3">OPI Performance Band</th>
                     <th className="py-3">Predicted OPI Score</th>
+                    <th className="py-3">BKT LS1.1 (Life Sci)</th>
+                    <th className="py-3">BKT PS1.1 (Phys Sci)</th>
                     <th className="py-3">Accuracy (%)</th>
                     <th className="py-3">Avg Speed</th>
                     <th className="py-3">Intervention Recommendation / Next Steps</th>
@@ -1171,6 +2536,12 @@ export default function Home() {
                           </td>
                           <td className="py-3.5 font-bold font-mono text-white">
                             {student.opi_score > 0 ? student.opi_score : "—"}
+                          </td>
+                          <td className="py-3.5 font-bold font-mono text-indigo-400">
+                            {student.bkt_mastery ?? "17.5"}%
+                          </td>
+                          <td className="py-3.5 font-bold font-mono text-indigo-400">
+                            {student.bkt_bonding_mastery ?? "15.0"}%
                           </td>
                           <td className="py-3.5">
                             <div className="flex items-center gap-2">
@@ -1359,6 +2730,174 @@ export default function Home() {
               </div>
             </div>
 
+            {/* B2B Seat Purchasing, Invite generation, and Manual Quota overrides */}
+            <div className="lg:col-span-2 space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* B2B Seat Purchasing */}
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+                  <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                    <span>💳</span> B2B Campus Seat Purchasing
+                  </h3>
+                  <p className="text-xs text-zinc-500 leading-relaxed">
+                    Purchase additional student seat blocks for any campus in the district ($6.00 / seat / year).
+                  </p>
+                  {adminKpisData && adminKpisData.campuses && (
+                    <form onSubmit={(e) => {
+                      e.preventDefault();
+                      const targetCampus = e.target.elements.campus.value;
+                      const count = parseInt(e.target.elements.seats.value, 10);
+                      if (targetCampus && count > 0) {
+                        handleBuySeats(targetCampus, count);
+                      }
+                    }} className="space-y-3">
+                      <div className="grid grid-cols-2 gap-3">
+                        <div>
+                          <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Select Campus</label>
+                          <select name="campus" required className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900">
+                            <option value="">-- Select --</option>
+                            {adminKpisData.campuses.map(c => (
+                              <option key={c.id} value={c.id}>{c.name}</option>
+                            ))}
+                          </select>
+                        </div>
+                        <div>
+                          <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Seats Count</label>
+                          <input type="number" name="seats" defaultValue="50" min="10" required className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none" />
+                        </div>
+                      </div>
+                      <button type="submit" className="w-full py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all">
+                        Purchase Seat Block
+                      </button>
+                    </form>
+                  )}
+                </div>
+
+                {/* Teacher Invite Panel */}
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4 font-sans">
+                  <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                    <span>✉️</span> Generate Teacher Invites
+                  </h3>
+                  <p className="text-xs text-zinc-500 leading-relaxed">
+                    Issue secure invite codes linking teachers directly to their designated campuses.
+                  </p>
+                  
+                  <form onSubmit={handleCreateInvite} className="space-y-3">
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Teacher Email</label>
+                        <input 
+                          type="email" 
+                          value={inviteEmailInput} 
+                          onChange={(e) => setInviteEmailInput(e.target.value)} 
+                          placeholder="teacher@school.edu" 
+                          required 
+                          className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors" 
+                        />
+                      </div>
+                      <div>
+                        <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Designated Campus</label>
+                        {adminKpisData && adminKpisData.campuses ? (
+                          <select 
+                            value={inviteCampusIdInput} 
+                            onChange={(e) => setInviteCampusIdInput(e.target.value)} 
+                            required 
+                            className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900"
+                          >
+                            <option value="">-- Select --</option>
+                            {adminKpisData.campuses.map(c => (
+                              <option key={c.id} value={c.id}>{c.name}</option>
+                            ))}
+                          </select>
+                        ) : (
+                          <select required className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900">
+                            <option value="">No Campuses</option>
+                          </select>
+                        )}
+                      </div>
+                    </div>
+                    <button type="submit" className="w-full py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all">
+                      Generate Invite Code
+                    </button>
+                  </form>
+
+                  {inviteSuccessMessage && (
+                    <div className="p-3 bg-zinc-950 border border-zinc-850 rounded-lg space-y-2">
+                      <p className="text-[11px] text-emerald-400 font-bold">{inviteSuccessMessage}</p>
+                      {generatedInviteCode && (
+                        <div className="flex gap-2 items-center">
+                          <input 
+                            type="text" 
+                            readOnly 
+                            value={`http://localhost:3000/?invite_code=${generatedInviteCode}`} 
+                            className="flex-1 bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-[10px] font-mono text-zinc-300 focus:outline-none cursor-pointer"
+                            onClick={(e) => e.target.select()}
+                          />
+                          <span className="text-[9px] uppercase font-bold text-zinc-500">Copied url</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                  {inviteErrorMessage && (
+                    <p className="text-[11px] text-rose-400 font-semibold">{inviteErrorMessage}</p>
+                  )}
+                </div>
+              </div>
+
+              {/* Manual Quota Override */}
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+                <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                  <span>⚙️</span> District Quota Overrides
+                </h3>
+                <p className="text-xs text-zinc-500 leading-relaxed">
+                  District Admin overrides to manually adjust campus seat allocations (without B2B Stripe transactions).
+                </p>
+                
+                <form onSubmit={handleAdjustQuota} className="flex flex-col sm:flex-row gap-3 items-end">
+                  <div className="flex-1">
+                    <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Select Campus</label>
+                    {adminKpisData && adminKpisData.campuses ? (
+                      <select 
+                        value={adjustCampusIdInput} 
+                        onChange={(e) => setAdjustCampusIdInput(e.target.value)} 
+                        required 
+                        className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900"
+                      >
+                        <option value="">-- Select --</option>
+                        {adminKpisData.campuses.map(c => (
+                          <option key={c.id} value={c.id}>{c.name}</option>
+                        ))}
+                      </select>
+                    ) : (
+                      <select required className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900">
+                        <option value="">No Campuses</option>
+                      </select>
+                    )}
+                  </div>
+                  <div className="w-32">
+                    <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">New Limit</label>
+                    <input 
+                      type="number" 
+                      value={adjustSeatLimitInput} 
+                      onChange={(e) => setAdjustSeatLimitInput(e.target.value)} 
+                      placeholder="e.g. 500" 
+                      required 
+                      className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none" 
+                    />
+                  </div>
+                  <button type="submit" className="py-2 px-6 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 font-bold rounded-lg text-xs uppercase tracking-wider transition-colors h-9">
+                    Update Limit
+                  </button>
+                </form>
+                {adjustQuotaSuccessMessage && (
+                  <p className="text-[11px] text-emerald-400 font-bold">{adjustQuotaSuccessMessage}</p>
+                )}
+                {adjustQuotaErrorMessage && (
+                  <p className="text-[11px] text-rose-400 font-semibold">{adjustQuotaErrorMessage}</p>
+                )}
+              </div>
+            </div>
+
+
             {/* Score Calibration Panel */}
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
               <div>
@@ -1461,9 +3000,42 @@ export default function Home() {
                     <div className="h-12 w-12 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center font-bold text-lg text-white shadow-lg shadow-indigo-500/20">
                       {parentReportData.child_name.split(' ').map(n => n[0]).join('')}
                     </div>
-                    <div>
-                      <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Student Profile</span>
-                      <h3 className="text-xl font-bold text-white mt-0.5">{parentReportData.child_name}</h3>
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Student Profile</span>
+                          <h3 className="text-xl font-bold text-white mt-0.5 flex items-center gap-2">
+                            {parentReportData.child_name}
+                            {parentReportData.is_premium ? (
+                              <span className="text-[9px] bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-2 py-0.5 rounded font-black uppercase tracking-wider shadow-md shadow-emerald-500/10 animate-pulse">PRO</span>
+                            ) : (
+                              <button 
+                                onClick={handleGoPremium}
+                                className="text-[9px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-zinc-700 transition"
+                              >
+                                Upgrade
+                              </button>
+                            )}
+                          </h3>
+                        </div>
+                        
+                        {parentReportData.linked_children && parentReportData.linked_children.length > 1 && (
+                          <div className="flex items-center gap-2 bg-zinc-950 px-2 py-1 rounded-lg border border-zinc-800">
+                            <span className="text-[9px] uppercase font-bold text-zinc-500">Child:</span>
+                            <select
+                              value={parentReportData.child_id}
+                              onChange={(e) => fetchParentReport(e.target.value)}
+                              className="bg-transparent text-xs font-bold text-white focus:outline-none border-none cursor-pointer"
+                            >
+                              {parentReportData.linked_children.map(c => (
+                                <option key={c.id} value={c.id} className="bg-zinc-900 text-white">
+                                  {c.name}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+                        )}
+                      </div>
                       <p className="text-xs text-zinc-400 mt-0.5">OAS Science standard: B.LS1.1 (DNA & Proteins)</p>
                     </div>
                   </div>
@@ -1493,6 +3065,68 @@ export default function Home() {
                       <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Avg Speed</span>
                       <div className="text-xl font-black text-white mt-1 font-mono">
                         {parentReportData.avg_time_per_base}s
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* BKT Mastery Modeling Section */}
+                  <div className="mt-5 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                        <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS1.1</h4>
+                      </div>
+                      <div className="text-right">
+                        <span className="text-xl font-mono font-black text-indigo-300">
+                          {parentReportData.bkt_mastery ?? "17.5"}%
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                      <div
+                        className="bg-indigo-650 h-full rounded-full transition-all duration-1000"
+                        style={{ width: `${parentReportData.bkt_mastery ?? 17.5}%` }}
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4 pt-1 text-[11px] text-zinc-400 font-mono">
+                      <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                        <span>Transcription (Base pairing):</span>
+                        <span className="text-white font-bold">{parentReportData.bkt_transcription ?? "20.0"}%</span>
+                      </div>
+                      <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                        <span>Translation (Codon match):</span>
+                        <span className="text-white font-bold">{parentReportData.bkt_translation ?? "15.0"}%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* BKT Mastery Modeling Section (Physical Sciences - B.PS1.1) */}
+                  <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                        <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.PS1.1</h4>
+                      </div>
+                      <div className="text-right">
+                        <span className="text-xl font-mono font-black text-indigo-300">
+                          {parentReportData.bkt_bonding_mastery ?? "15.0"}%
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                      <div
+                        className="bg-indigo-650 h-full rounded-full transition-all duration-1000"
+                        style={{ width: `${parentReportData.bkt_bonding_mastery ?? 15.0}%` }}
+                      />
+                    </div>
+
+                    <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                      <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                        <span>Valence Shell Electron Sharing & Ionic Transfers:</span>
+                        <span className="text-white font-bold">{parentReportData.bkt_bonding_mastery ?? "15.0"}%</span>
                       </div>
                     </div>
                   </div>
@@ -1546,8 +3180,65 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right Column: Home Labs & Experiment Recommendations */}
+              {/* Right Column: Household Management & Home Labs */}
               <div className="space-y-6">
+                {/* Household Management Card */}
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-1">👨‍👩‍👧‍👦 Household Children</h3>
+                    <p className="text-xs text-zinc-500 leading-relaxed">
+                      Manage linked children and slots. Base premium ($60/yr) includes 1 child slot. Add more for $30/yr.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-zinc-950 p-3.5 rounded-xl border border-zinc-850 text-xs space-y-2">
+                    <div className="flex justify-between text-zinc-400">
+                      <span>Premium child slots:</span>
+                      <span className="text-white font-bold font-mono">{parentReportData.premium_slots}</span>
+                    </div>
+                    <div className="flex justify-between text-zinc-400">
+                      <span>Linked kids count:</span>
+                      <span className="text-white font-bold font-mono">{parentReportData.linked_children ? parentReportData.linked_children.length : 1}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => setShowAddChildForm(!showAddChildForm)}
+                      className="flex-1 py-2 bg-zinc-800 hover:bg-zinc-750 text-zinc-200 border border-zinc-700 font-bold rounded-lg text-xs uppercase tracking-wider transition-all text-center"
+                    >
+                      Add Child
+                    </button>
+                    <button
+                      onClick={handleBuyAdditionalSlot}
+                      className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all text-center"
+                    >
+                      Buy Slot ($30)
+                    </button>
+                  </div>
+
+                  {showAddChildForm && (
+                    <form onSubmit={handleAddChild} className="p-3 bg-zinc-950 border border-zinc-850 rounded-xl space-y-3">
+                      <div>
+                        <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Child's Name</label>
+                        <input
+                          type="text"
+                          value={newChildName}
+                          onChange={(e) => setNewChildName(e.target.value)}
+                          placeholder="e.g. Liam Smith"
+                          required
+                          className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500"
+                        />
+                      </div>
+                      <button type="submit" className="w-full py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded text-xs font-bold transition">
+                        Link Child
+                      </button>
+                    </form>
+                  )}
+                  {addChildMessage && <p className="text-[11px] text-emerald-400 font-bold">{addChildMessage}</p>}
+                  {addChildError && <p className="text-[11px] text-rose-450 font-bold">{addChildError}</p>}
+                </div>
+
                 <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl relative overflow-hidden flex flex-col h-full justify-between">
                   <div>
                     <h3 className="text-lg font-bold text-white mb-1">🏡 At-Home Science Connection</h3>
@@ -1556,19 +3247,34 @@ export default function Home() {
                     </p>
 
                     <div className="space-y-4">
-                      {parentReportData.home_activity_cards.map((card, idx) => (
-                        <div key={idx} className="bg-zinc-950 border border-zinc-850 p-4 rounded-xl hover:border-zinc-700 transition">
-                          <span className="text-[9px] uppercase font-bold text-indigo-400 tracking-wider block">
-                            {card.difficulty}
-                          </span>
-                          <h4 className="text-sm font-bold text-white mt-1">
-                            {card.title}
-                          </h4>
-                          <p className="text-xs text-zinc-400 mt-1.5 leading-relaxed">
-                            {card.description}
-                          </p>
-                        </div>
-                      ))}
+                      {parentReportData.home_activity_cards.map((card, idx) => {
+                        const isLocked = !parentReportData.is_premium && idx > 0;
+                        return (
+                          <div key={idx} className={`bg-zinc-950 border border-zinc-850 p-4 rounded-xl hover:border-zinc-700 transition relative overflow-hidden ${isLocked ? 'brightness-50 select-none' : ''}`}>
+                            <span className="text-[9px] uppercase font-bold text-indigo-400 tracking-wider block">
+                              {card.difficulty}
+                            </span>
+                            <h4 className="text-sm font-bold text-white mt-1">
+                              {card.title}
+                            </h4>
+                            <p className="text-xs text-zinc-400 mt-1.5 leading-relaxed">
+                              {card.description}
+                            </p>
+                            {isLocked && (
+                              <div className="absolute inset-0 bg-zinc-950/90 flex flex-col items-center justify-center p-3 text-center border border-zinc-850 rounded-xl">
+                                <span className="text-sm">🔒</span>
+                                <h5 className="text-xs font-bold text-white mt-1">Premium Activity Locked</h5>
+                                <button
+                                  onClick={handleGoPremium}
+                                  className="mt-2 px-3 py-1 bg-indigo-600 hover:bg-indigo-500 text-white rounded text-[10px] font-bold uppercase transition"
+                                >
+                                  Unlock All Labs
+                                </button>
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>

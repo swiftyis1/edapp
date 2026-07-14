@@ -15,24 +15,24 @@
 
 ### Week 7: In-Game DNA Translation & Telemetry
 
-*   [ ] **1. Translation Puzzle Level Design**
+*   [x] **1. Translation Puzzle Level Design**
     *   Build a drag-and-drop codon-matching level where students match tRNA anticodons to mRNA codons to build an amino acid chain.
-*   [ ] **2. Level 2 Telemetry Dispatch**
+*   [x] **2. Level 2 Telemetry Dispatch**
     *   Emit specialized events: `codon_match_attempt`, `amino_acid_added`, and `translation_complete` with error counts and duration payloads.
-*   [ ] **3. DRF Telemetry Storage for Translation**
+*   [x] **3. DRF Telemetry Storage for Translation**
     *   Map new translation payload formats to PostgreSQL JSONB columns.
 
 ---
 
 ### Week 8: Bayesian Knowledge Tracing & Production Hardening
 
-*   [ ] **4. Python BKT Modeling Pipeline**
+*   [x] **4. Python BKT Modeling Pipeline**
     *   Implement a Bayesian Knowledge Tracing (BKT) service to update transition, slip, guess, and knowledge probabilities based on base-pairing and translation telemetry.
-*   [ ] **5. Live score calculation**
+*   [x] **5. Live score calculation**
     *   Run BKT updates asynchronously in Django when sessions finish to predict standard mastery.
-*   [ ] **6. Database & Cache Tuning**
+*   [x] **6. Database & Cache Tuning**
     *   Add indexes to PostgreSQL JSONB columns on frequently filtered fields (`student_id`, `event_type`).
     *   Implement Redis/Django cache caching for roster analytics to keep load times under 200ms.
-*   [ ] **7. Production Bundle Hardening**
+*   [x] **7. Production Bundle Hardening**
     *   Run Next.js build (`npm run build`) to resolve static generation and hydration errors.
     *   Configure clean environment variable files and remove debug endpoints.
