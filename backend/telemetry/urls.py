@@ -39,4 +39,10 @@ urlpatterns = [
     path('lti/config/', lti_views.lti_config_update, name='lti_config_update'),
     path('lti/sync-logs/', lti_views.lti_sync_logs, name='lti_sync_logs'),
     path('lti/retry-sync/', lti_views.lti_retry_sync, name='lti_retry_sync'),
+
+    # OSDE Compliance
+    path('admin/osde-export/', views.osde_compliance_export, name='osde_compliance_export'),
+    path('admin/schedule-report/', views.schedule_report_update, name='schedule_report_update'),
+    path('admin/audit-logs/', views.audit_logs_list, name='audit_logs_list'),
+    path('admin/run-purge/', views.run_retention_purge, name='run_retention_purge'),
 ]

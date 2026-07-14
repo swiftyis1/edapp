@@ -581,6 +581,13 @@ def import_eoy_csv(request):
     logs.append(f"[SUCCESS] Model retrained successfully! {N} matched student records.")
     logs.append(f"[SUCCESS] New scaling constants: A = {config.a:.4f}, B = {config.b:.4f}.")
     logs.append(f"[SUCCESS] Model calibration completed! Active Model: v1.3.")
+
+    from .models import AuditLog
+    AuditLog.objects.create(
+        action_by=request.user if request.user.is_authenticated else None,
+        action_name="import_data",
+        description=f"Calibrated predictive engine (Active Model v1.3) using EOY CSV import containing {N} student records."
+    )
     
     return Response({
         "status": "success",
@@ -1070,8 +1077,16 @@ def adjust_campus_quota(request):
         return Response({"error": "Campus not found"}, status=status.HTTP_404_NOT_FOUND)
         
     try:
+        old_quota = campus.seat_limit
         campus.seat_limit = int(seat_limit)
         campus.save()
+
+        from .models import AuditLog
+        AuditLog.objects.create(
+            action_by=request.user,
+            action_name="adjust_quota",
+            description=f"Adjusted seat quota for Campus {campus.name} from {old_quota} to {seat_limit}"
+        )
     except ValueError:
         return Response({"error": "Invalid seat limit format"}, status=status.HTTP_400_BAD_REQUEST)
         
@@ -1505,5 +1520,182 @@ def school_admin_dashboard(request):
         "subscription_status": campus.subscription_status or "active",
         "invoices": invoices,
         "invites": invites
+    }, status=status.HTTP_200_OK)
+
+
+import csv
+import zipfile
+import io
+from django.http import HttpResponse
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def osde_compliance_export(request):
+    """
+    District Admin endpoint to export OSDE-compliant CSV or de-identified ZIP telemetry.
+    """
+    if not hasattr(request.user, 'profile') or request.user.profile.role != 'admin':
+        return Response({"error": "District Admins only"}, status=status.HTTP_403_FORBIDDEN)
+
+    export_format = request.GET.get('export_format', 'csv')
+
+    from .models import Campus, Student, StudentBKTState, AuditLog, TelemetryEvent
+
+    if export_format == 'csv':
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="osde_compliance_report.csv"'
+        
+        writer = csv.writer(response)
+        writer.writerow(['Campus Name', 'Total Students', 'Below Basic', 'Basic', 'Proficient', 'Advanced', 'Proficiency Rate (%)'])
+
+        for campus in Campus.objects.all():
+            students = Student.objects.filter(classroom__campus=campus)
+            total = students.count()
+            
+            below_basic = 0
+            basic = 0
+            proficient = 0
+            advanced = 0
+            
+            for student in students:
+                bkt_state = StudentBKTState.objects.filter(student=student).first()
+                if bkt_state:
+                    mastery = (bkt_state.transcription_p_know + bkt_state.translation_p_know + bkt_state.bonding_p_know) / 3
+                    score = int(200 + mastery * 199)
+                else:
+                    score = 250
+
+                if score >= 327:
+                    advanced += 1
+                elif score >= 300:
+                    proficient += 1
+                elif score >= 278:
+                    basic += 1
+                else:
+                    below_basic += 1
+
+            prof_rate = round(((proficient + advanced) / total * 100), 2) if total > 0 else 0.0
+            writer.writerow([campus.name, total, below_basic, basic, proficient, advanced, prof_rate])
+
+        AuditLog.objects.create(
+            action_by=request.user,
+            action_name="osde_export_csv",
+            description="Exported district-wide OSDE compliance CSV report"
+        )
+        return response
+
+    elif export_format == 'zip':
+        zip_buffer = io.BytesIO()
+        with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
+            csv_buffer = io.StringIO()
+            csv_writer = csv.writer(csv_buffer)
+            csv_writer.writerow(['DeIdentified_Student_ID', 'Event_Type', 'Level_ID', 'Construct_Tag', 'Timestamp'])
+
+            for ev in TelemetryEvent.objects.all():
+                import hashlib
+                anon_id = hashlib.sha256(str(ev.student.id).encode()).hexdigest()[:16]
+                csv_writer.writerow([anon_id, ev.event_type, ev.level_id, ev.construct_tag, ev.timestamp.isoformat()])
+
+            zip_file.writestr("de_identified_telemetry.csv", csv_buffer.getvalue())
+
+        response = HttpResponse(zip_buffer.getvalue(), content_type='application/zip')
+        response['Content-Disposition'] = 'attachment; filename="district_telemetry_export.zip"'
+
+        AuditLog.objects.create(
+            action_by=request.user,
+            action_name="osde_export_zip",
+            description="Exported de-identified telemetry ZIP archive"
+        )
+        return response
+
+    return Response({"error": "Invalid format requested"}, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def schedule_report_update(request):
+    """
+    Allows District Admins to schedule weekly/monthly report runs.
+    """
+    if not hasattr(request.user, 'profile') or request.user.profile.role != 'admin':
+        return Response({"error": "District Admins only"}, status=status.HTTP_403_FORBIDDEN)
+
+    email = request.data.get('email')
+    frequency = request.data.get('frequency', 'weekly')
+
+    if not email:
+        return Response({"error": "Email is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+    from .models import ReportSchedule, AuditLog
+    schedule, _ = ReportSchedule.objects.update_or_create(
+        email=email,
+        defaults={"frequency": frequency}
+    )
+
+    AuditLog.objects.create(
+        action_by=request.user,
+        action_name="schedule_report",
+        description=f"Scheduled {frequency} OSDE progress report deliveries to {email}"
+    )
+
+    return Response({
+        "status": "success",
+        "email": email,
+        "frequency": frequency
+    }, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def audit_logs_list(request):
+    """
+    District Admin endpoint to retrieve administrative audit logs.
+    """
+    if not hasattr(request.user, 'profile') or request.user.profile.role != 'admin':
+        return Response({"error": "District Admins only"}, status=status.HTTP_403_FORBIDDEN)
+
+    from .models import AuditLog
+    logs_qs = AuditLog.objects.all().order_by('-timestamp')[:50]
+    logs = [
+        {
+            "id": str(log.id),
+            "action_by": log.action_by.username if log.action_by else "System",
+            "action_name": log.action_name,
+            "description": log.description,
+            "timestamp": log.timestamp.isoformat()
+        }
+        for log in logs_qs
+    ]
+    return Response(logs, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def run_retention_purge(request):
+    """
+    Anonymizes or deletes student telemetry records older than 1 year (365 days).
+    """
+    if not hasattr(request.user, 'profile') or request.user.profile.role != 'admin':
+        return Response({"error": "District Admins only"}, status=status.HTTP_403_FORBIDDEN)
+
+    from django.utils import timezone
+    from datetime import timedelta
+    from .models import TelemetryEvent, AuditLog
+
+    cutoff_date = timezone.now() - timedelta(days=365)
+    old_events = TelemetryEvent.objects.filter(timestamp__lt=cutoff_date)
+    deleted_count = old_events.count()
+    old_events.delete()
+
+    AuditLog.objects.create(
+        action_by=request.user,
+        action_name="purge_data",
+        description=f"Executed FERPA-compliant data retention policy: deleted {deleted_count} telemetry records older than 1 year"
+    )
+
+    return Response({
+        "status": "success",
+        "purged_count": deleted_count,
+        "message": f"Successfully purged {deleted_count} records older than 1 year"
     }, status=status.HTTP_200_OK)
 

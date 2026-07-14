@@ -265,6 +265,11 @@ export default function Home() {
   const [isLtiSyncEnabled, setIsLtiSyncEnabled] = useState(true);
   const [ltiScoreScale, setLtiScoreScale] = useState("opi");
   const [isLoadingLtiLogs, setIsLoadingLtiLogs] = useState(false);
+  const [auditLogs, setAuditLogs] = useState([]);
+  const [isLoadingAuditLogs, setIsLoadingAuditLogs] = useState(false);
+  const [scheduleEmail, setScheduleEmail] = useState("");
+  const [scheduleFrequency, setScheduleFrequency] = useState("weekly");
+  const [isPurging, setIsPurging] = useState(false);
 
   // DNA Template Sequence (B.LS1.1 Target)
   const templateDNA = ["T", "A", "C", "G", "G", "C", "T", "T", "T"];
@@ -374,6 +379,7 @@ export default function Home() {
   useEffect(() => {
     if (role === "admin" && token) {
       fetchAdminKpis();
+      fetchAuditLogs();
     }
   }, [role, token]);
 
@@ -574,6 +580,94 @@ export default function Home() {
       });
     } catch (err) {
       console.error("LTI Config Update Error:", err);
+    }
+  };
+
+  const fetchAuditLogs = async () => {
+    setIsLoadingAuditLogs(true);
+    try {
+      const headers = {};
+      if (token) {
+        headers["Authorization"] = `Token ${token}`;
+      }
+      const response = await fetch("http://localhost:8000/api/admin/audit-logs/", { headers });
+      if (response.ok) {
+        const data = await response.json();
+        setAuditLogs(data);
+      }
+    } catch (err) {
+      console.warn("Failed to fetch audit logs:", err.message);
+    } finally {
+      setIsLoadingAuditLogs(false);
+    }
+  };
+
+  const handleScheduleReport = async (e) => {
+    e.preventDefault();
+    if (!scheduleEmail) return;
+    try {
+      const response = await fetch("http://localhost:8000/api/admin/schedule-report/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": token ? `Token ${token}` : ""
+        },
+        body: JSON.stringify({ email: scheduleEmail, frequency: scheduleFrequency })
+      });
+      if (response.ok) {
+        setSuccessNotificationMessage(`Reports scheduled successfully for ${scheduleEmail}!`);
+        setShowSuccessNotification(true);
+        setScheduleEmail("");
+        fetchAuditLogs();
+      }
+    } catch (err) {
+      console.error("Scheduling Error:", err);
+    }
+  };
+
+  const handleRunPurge = async () => {
+    if (!window.confirm("Are you sure you want to run the telemetry retention purge? Records older than 365 days will be permanently deleted.")) return;
+    setIsPurging(true);
+    try {
+      const response = await fetch("http://localhost:8000/api/admin/run-purge/", {
+        method: "POST",
+        headers: {
+          "Authorization": token ? `Token ${token}` : ""
+        }
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setSuccessNotificationMessage(`Purge complete! Deleted ${data.purged_count} records older than 1 year.`);
+        setShowSuccessNotification(true);
+        fetchAuditLogs();
+      }
+    } catch (err) {
+      console.error("Purge Error:", err);
+    } finally {
+      setIsPurging(false);
+    }
+  };
+
+  const handleDownloadExport = async (format) => {
+    try {
+      const response = await fetch(`http://localhost:8000/api/admin/osde-export/?format=${format}`, {
+        headers: {
+          "Authorization": token ? `Token ${token}` : ""
+        }
+      });
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = format === 'csv' ? 'osde_compliance_report.csv' : 'district_telemetry_export.zip';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        fetchAuditLogs();
+      }
+    } catch (err) {
+      console.error("Export Error:", err);
     }
   };
 
@@ -3469,6 +3563,122 @@ export default function Home() {
                 </button>
               </div>
             </div>
+          </div>
+
+          {/* OSDE Compliance Export Hub, Scheduling, Retention Policies & Audit Log streams */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            {/* OSDE Export & Scheduling Hub */}
+            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-5">
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">OSDE Export & Scheduling</h3>
+                <p className="text-xs text-zinc-500">
+                  Download official compliance reports or schedule automated deliveries.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <button
+                  onClick={() => handleDownloadExport('csv')}
+                  className="py-2.5 bg-zinc-850 hover:bg-zinc-750 text-zinc-200 border border-zinc-700 text-xs font-bold rounded-xl transition flex flex-col items-center gap-1.5"
+                >
+                  <span>📊</span> Download CSV Report
+                </button>
+                <button
+                  onClick={() => handleDownloadExport('zip')}
+                  className="py-2.5 bg-zinc-850 hover:bg-zinc-750 text-zinc-200 border border-zinc-700 text-xs font-bold rounded-xl transition flex flex-col items-center gap-1.5"
+                >
+                  <span>📦</span> Export Telemetry ZIP
+                </button>
+              </div>
+
+              <form onSubmit={handleScheduleReport} className="border-t border-zinc-855 pt-4 space-y-3">
+                <h4 className="text-xs uppercase font-bold text-zinc-450 tracking-wider">Schedule Automated Reports</h4>
+                <div className="space-y-2">
+                  <input
+                    type="email"
+                    required
+                    value={scheduleEmail}
+                    onChange={(e) => setScheduleEmail(e.target.value)}
+                    placeholder="coordinator@district.edu"
+                    className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                  />
+                  <div className="flex gap-2">
+                    <select
+                      value={scheduleFrequency}
+                      onChange={(e) => setScheduleFrequency(e.target.value)}
+                      className="flex-1 bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900"
+                    >
+                      <option value="weekly">Weekly Frequency</option>
+                      <option value="monthly">Monthly Frequency</option>
+                    </select>
+                    <button
+                      type="submit"
+                      className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs transition"
+                    >
+                      Schedule
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              {/* Data Retention purger */}
+              <div className="border-t border-zinc-855 pt-4 space-y-2.5">
+                <h4 className="text-xs uppercase font-bold text-zinc-450 tracking-wider">Data Retention Clean Policies</h4>
+                <p className="text-[10px] text-zinc-500 leading-relaxed">
+                  Purge student telemetry older than 1 year to comply with state records retention schedules.
+                </p>
+                <button
+                  onClick={handleRunPurge}
+                  disabled={isPurging}
+                  className="w-full py-2 bg-rose-950 hover:bg-rose-900 text-rose-350 border border-rose-900/40 text-xs font-bold rounded-lg transition"
+                >
+                  {isPurging ? "Purging Records..." : "Trigger Manual Retention Purge (365d)"}
+                </button>
+              </div>
+            </div>
+
+            {/* Audit Trail Log Stream Console */}
+            <div className="lg:col-span-2 bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4 font-sans">
+              <div className="flex justify-between items-center border-b border-zinc-850 pb-3">
+                <div>
+                  <h3 className="text-lg font-bold text-white">Administrative Audit Trail</h3>
+                  <p className="text-xs text-zinc-500">
+                    Real-time stream of administrative modifications and de-identified uploads.
+                  </p>
+                </div>
+                <button
+                  onClick={fetchAuditLogs}
+                  disabled={isLoadingAuditLogs}
+                  className="px-2.5 py-1 bg-zinc-800 hover:bg-zinc-750 text-zinc-200 border border-zinc-700 text-xs font-bold rounded-lg transition"
+                >
+                  {isLoadingAuditLogs ? "Refreshing..." : "Refresh Trail"}
+                </button>
+              </div>
+
+              <div className="overflow-y-auto max-h-[360px] pr-2 space-y-3">
+                {auditLogs.length === 0 ? (
+                  <p className="text-zinc-500 italic text-center py-12 text-sm">
+                    No administrative events logged in the audit trail.
+                  </p>
+                ) : (
+                  auditLogs.map((log) => (
+                    <div key={log.id} className="p-3.5 bg-zinc-950 border border-zinc-850 rounded-xl space-y-1.5 hover:border-zinc-800 transition">
+                      <div className="flex justify-between items-center text-[10px]">
+                        <span className="font-bold text-indigo-400 uppercase tracking-wider">{log.action_name}</span>
+                        <span className="text-zinc-650 font-mono">{new Date(log.timestamp).toLocaleString()}</span>
+                      </div>
+                      <p className="text-xs text-zinc-300 leading-relaxed font-sans">{log.description}</p>
+                      <div className="text-[9px] text-zinc-500 flex items-center gap-1">
+                        <span>Initiated by:</span>
+                        <span className="font-bold text-zinc-400">{log.action_by}</span>
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+
           </div>
         </main>
       )}

@@ -193,3 +193,24 @@ class LTIGradeSyncLog(models.Model):
 
     def __str__(self):
         return f"{self.student.name} - {self.level_id}: {self.score} ({self.status})"
+
+
+class AuditLog(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    action_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='audit_logs')
+    action_name = models.CharField(max_length=100) # e.g. "adjust_quota", "import_data", "schedule_report", "purge_data"
+    description = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.action_name} by {self.action_by.username if self.action_by else 'System'} ({self.timestamp})"
+
+
+class ReportSchedule(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    email = models.EmailField()
+    frequency = models.CharField(max_length=20, default='weekly') # 'weekly', 'monthly'
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Report for {self.email} ({self.frequency})"
