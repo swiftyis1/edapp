@@ -96,7 +96,7 @@ export default function Home() {
   const [isLoadingAdminKpis, setIsLoadingAdminKpis] = useState(false);
 
   // DNA Template Sequence (B.LS1.1 Target)
-  const templateDNA = ["T", "A", "C", "G", "G", "C", "T", "T", "A"];
+  const templateDNA = ["T", "A", "C", "G", "G", "C", "T", "T", "T"];
   
   // Game states
   const [mrnaChain, setMrnaChain] = useState([]);
