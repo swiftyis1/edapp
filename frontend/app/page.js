@@ -217,6 +217,69 @@ const MOCK_STUDENTS = [
   { id: "1b131012-38d5-4ad9-bf9f-864a66a1cc92", name: "Erik Johnson" },
 ];
 
+const ACTIVITIES_DATABASE = {
+  "OAS.B.LS1.1": {
+    1: [
+      { name: "Base-Pairing Identification", description: "Recall which RNA bases pair with DNA bases (A-U, T-A, C-G, G-C) to build transcription templates." },
+      { name: "Codon-to-Amino Acid Table Drill", description: "Look up and recall matching amino acids using the standard codon wheel." },
+      { name: "Transcription Vocabulary Matching", description: "Match core definitions for transcription, translation, mRNA, tRNA, and ribosomes." },
+      { name: "DNA Nucleotide Recognition", description: "Classify purine and pyrimidine rings based on nucleotide chemical structure." },
+      { name: "Ribosome Site Identification", description: "Label the A, P, and E binding sites of ribosomes and list their functions." }
+    ],
+    2: [
+      { name: "DNA Transcription Simulator", description: "Transcribe a given 9-base template DNA sequence into a matching mRNA chain." },
+      { name: "mRNA Translation Simulator", description: "Process triplet codons to link corresponding amino acids into peptides." },
+      { name: "Point Mutation Effect Analyzer", description: "Model the outcome of a single nucleotide substitution (silent, missense, nonsense)." },
+      { name: "Frameshift Mutation Analyzer", description: "Simulate single base insertions or deletions to observe downstream codon offsets." },
+      { name: "Protein Folding Structural Match", description: "Sort amino acids by hydrophobicity and predict inward/outward structural folds." }
+    ],
+    3: [
+      { name: "Mutational Disease Diagnostics", description: "Analyze a de-identified genetic report to diagnose sickle-cell beta-globin substitutions." },
+      { name: "Transcription Regulation Simulation", description: "Arrange promoters, transcription factors, and repressors to control transcription rates." },
+      { name: "Anticodon Designing Experiment", description: "Engineer tRNA anticodons capable of translating mutated mRNA sequences to rescue cell function." },
+      { name: "Enzymatic Transcription Inhibitors", description: "Analyze how antibiotics (like Rifampin) interfere with RNA polymerase transcription loops." },
+      { name: "Alternative Splicing Predictor", description: "Predict multiple splicing variants from the same pre-mRNA using exon choices." }
+    ],
+    4: [
+      { name: "Semi-Conservative Replication Model", description: "Map the continuous leading strand and Okazaki fragment lagging strand synthesis." },
+      { name: "Epigenetics Methylation Impact Case", description: "Investigate how DNA methylation blocks transcription factors, passing traits non-genetically." },
+      { name: "CRISPR-Cas9 Gene Editing Sandbox", description: "Select gRNA sequences to cut and edit mutated beta-globin genes in-silico." },
+      { name: "Evolutionary Codon Optimization Project", description: "Redesign codons to match expression transfer rates in host model organisms." },
+      { name: "Synthetic Life Amino Acid Expansion", description: "Design a synthetic codon table utilizing 4-base codons to incorporate non-standard amino acids." }
+    ]
+  },
+  "OAS.B.PS1.1": {
+    1: [
+      { name: "Valence Electron Counter", description: "Identify valence electron counts for main-group elements in periodic groups 1-18." },
+      { name: "Periodic Table Trend Memory", description: "Recall trends in electronegativity, ionization energy, and atomic radius." },
+      { name: "Octet Rule Definition Check", description: "List criteria for elements achieving stable valence outer shells (noble gas configurations)." },
+      { name: "Ionic vs. Covalent Bond Matching", description: "Classify bonding descriptions based on electron transfer vs. sharing characteristics." },
+      { name: "Periodic Group Identification", description: "Label Alkali Metals, Halogens, and Transition Metals on a periodic table layout." }
+    ],
+    2: [
+      { name: "Lewis Dot Structure Simulator", description: "Draw valence electron structures to represent bonds and lone pairs." },
+      { name: "Ionic Crystal Lattice Simulator", description: "Combine cations and anions in correct stoichiometry to balance charge grids." },
+      { name: "Single vs. Double Covalent Bond Match", description: "Share electron pairs between oxygen and carbon to achieve stable outer shells." },
+      { name: "Electronegativity Difference Calculator", description: "Calculate polarity differences to classify ionic, polar, and nonpolar bonds." },
+      { name: "VSEPR Geometry Matcher", description: "Map molecular formulas (H2O, CO2, CH4) with their 3D geometric configurations." }
+    ],
+    3: [
+      { name: "Solubility Predictor Sandbox", description: "Analyze molecular symmetry and polarity to predict solubility grids in polar vs nonpolar solvents." },
+      { name: "Chemical Reaction Energy Balancer", description: "Sum bond dissociation energies to estimate net enthalpy changes in exothermic and endothermic runs." },
+      { name: "Electrolyte Conductivity Analysis", description: "Correlate ion dissociation rates of dissolved compounds with electrical currents." },
+      { name: "Boiling Point Polarity Experiment", description: "Rank molecules by dispersion, dipole, and hydrogen bonding intermolecular forces." },
+      { name: "Alloy Lattice Defect Simulation", description: "Model how interstitial and substitutional atoms modify ductility in alloys." }
+    ],
+    4: [
+      { name: "Nano-Material Graphene Conductive Design", description: "Construct carbon allotrope configurations and analyze thermal/electrical conductivity." },
+      { name: "Catalytic Converter Adsorption Case", description: "Model how surface catalysts weaken molecular bonds to reduce activation energy barriers." },
+      { name: "Polymer Synthesis & Tensile Strength Project", description: "Design polymer chains with cross-linking densities to maximize tensile strength." },
+      { name: "Superconductor Crystal Structure Design", description: "Arrange complex metal oxide lattices to optimize electron pair sharing pathways." },
+      { name: "Green Chemistry Solvent Selection Model", description: "Analyze toxicity and polarity parameters to select eco-friendly industrial solvents." }
+    ]
+  }
+};
+
 export default function Home() {
   // App Role View: 'student' (DNA Sandbox) vs 'teacher' vs 'admin' vs 'parent'
   const [role, setRole] = useState("student");
@@ -270,6 +333,18 @@ export default function Home() {
   const [scheduleEmail, setScheduleEmail] = useState("");
   const [scheduleFrequency, setScheduleFrequency] = useState("weekly");
   const [isPurging, setIsPurging] = useState(false);
+  const [selectedStandard, setSelectedStandard] = useState("OAS.B.LS1.1");
+  const [selectedDok, setSelectedDok] = useState(1);
+  const [selectedActivityIndex, setSelectedActivityIndex] = useState(0);
+
+  const getActivitiesForSelectedDok = () => {
+    return ACTIVITIES_DATABASE[selectedStandard]?.[selectedDok] || [];
+  };
+
+  const getActiveActivity = () => {
+    const list = getActivitiesForSelectedDok();
+    return list[selectedActivityIndex] || null;
+  };
 
   // DNA Template Sequence (B.LS1.1 Target)
   const templateDNA = ["T", "A", "C", "G", "G", "C", "T", "T", "T"];
@@ -2073,7 +2148,100 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Simulator Panel */}
             <div className="lg:col-span-2 space-y-6">
-            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl relative overflow-hidden">
+              
+              {/* OAS Standard DOK Activity Selector */}
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl relative overflow-hidden space-y-4">
+                <div className="absolute top-0 right-0 h-40 w-40 bg-indigo-500/5 rounded-full blur-3xl" />
+                <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 border-b border-zinc-800/60 pb-4">
+                  <div>
+                    <span className="text-[10px] uppercase font-black text-indigo-400 tracking-widest block">State Standards Alignment</span>
+                    <h3 className="text-lg font-bold text-white mt-0.5">OAS Activities & DOK Levels</h3>
+                  </div>
+                  <div>
+                    <select
+                      value={selectedStandard}
+                      onChange={(e) => {
+                        setSelectedStandard(e.target.value);
+                        setSelectedDok(1);
+                        setSelectedActivityIndex(0);
+                        logTelemetryEvent("standard_select", { standard: e.target.value });
+                        // Sync simulation level based on standard selection
+                        if (e.target.value === "OAS.B.PS1.1") {
+                          setActiveLevel(3);
+                          setBondingTarget("H2O");
+                        } else {
+                          setActiveLevel(1);
+                        }
+                      }}
+                      className="bg-zinc-950 border border-zinc-800 rounded-lg px-3 py-1.5 text-xs text-white focus:outline-none focus:border-indigo-500 font-bold bg-zinc-900 cursor-pointer"
+                    >
+                      <option value="OAS.B.LS1.1">OAS B.LS1.1: DNA & Proteins</option>
+                      <option value="OAS.B.PS1.1">OAS B.PS1.1: Matter & Interactions</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* DOK Level Selector Tabs */}
+                <div className="flex gap-2">
+                  {[1, 2, 3, 4].map((dok) => (
+                    <button
+                      key={dok}
+                      onClick={() => {
+                        setSelectedDok(dok);
+                        setSelectedActivityIndex(0);
+                        logTelemetryEvent("dok_select", { dok });
+                      }}
+                      className={`flex-1 py-2 rounded-lg border text-xs font-black uppercase tracking-wider transition-all ${
+                        selectedDok === dok
+                          ? "bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-600/15"
+                          : "bg-zinc-950 border-zinc-850 text-zinc-400 hover:text-zinc-200"
+                      }`}
+                    >
+                      DOK {dok}
+                    </button>
+                  ))}
+                </div>
+
+                {/* 5 Activities List for Selected DOK */}
+                <div className="grid grid-cols-1 sm:grid-cols-5 gap-2">
+                  {getActivitiesForSelectedDok().map((act, index) => (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        setSelectedActivityIndex(index);
+                        logTelemetryEvent("activity_select", { activity_name: act.name, dok: act.dok, standard: selectedStandard });
+                      }}
+                      className={`p-3 rounded-xl border text-[11px] font-bold text-left transition-all flex flex-col justify-between h-20 ${
+                        selectedActivityIndex === index
+                          ? "bg-zinc-850 border-indigo-500 text-white"
+                          : "bg-zinc-950/40 border-zinc-850 text-zinc-400 hover:border-zinc-800 hover:text-zinc-300"
+                      }`}
+                    >
+                      <span className="text-[9px] uppercase font-black text-indigo-400">Act {index + 1}</span>
+                      <span className="line-clamp-2 leading-tight mt-1">{act.name}</span>
+                    </button>
+                  ))}
+                </div>
+
+                {/* Selected Activity Description card */}
+                {getActiveActivity() && (
+                  <div className="p-4 bg-zinc-950/50 border border-zinc-850 rounded-xl space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[9px] bg-indigo-950 text-indigo-400 px-2 py-0.5 rounded font-black border border-indigo-900/30 uppercase tracking-widest">
+                        Task Definition
+                      </span>
+                      <span className="text-xs font-bold text-white">
+                        {getActiveActivity().name}
+                      </span>
+                    </div>
+                    <p className="text-xs text-zinc-400 leading-relaxed pt-1">
+                      {getActiveActivity().description}
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 h-40 w-40 bg-indigo-500/5 rounded-full blur-3xl" />
               
               <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6 border-b border-zinc-800/60 pb-6">
