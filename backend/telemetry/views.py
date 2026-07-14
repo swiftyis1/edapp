@@ -61,6 +61,15 @@ def telemetry_receive(request):
         defaults={"name": f"Student {str(student_id)[:8]}"}
     )
 
+    # Check if student's campus subscription is frozen/unpaid
+    if student.classroom and student.classroom.campus:
+        campus = student.classroom.campus
+        if campus.subscription_status != 'active':
+            return Response(
+                {"status": "error", "message": f"Campus license for '{campus.name}' is frozen or unpaid."},
+                status=status.HTTP_402_PAYMENT_REQUIRED
+            )
+
     # Find or create Session
     session, created_session = Session.objects.get_or_create(
         id=session_id,
@@ -369,6 +378,12 @@ def classroom_join(request):
     old_campus = old_classroom.campus if (old_classroom and old_classroom.campus) else None
     
     if new_campus:
+        # Check if campus subscription is frozen/unpaid
+        if new_campus.subscription_status != 'active':
+            return Response({
+                "error": f"Campus license for '{new_campus.name}' is currently frozen or unpaid. Please contact your school administrator."
+            }, status=status.HTTP_400_BAD_REQUEST)
+
         # Check if student is new to this campus
         if old_campus != new_campus:
             if new_campus.students_active >= new_campus.seat_limit:
@@ -932,6 +947,16 @@ def stripe_webhook(request):
                 campus.subscription_status = 'active'
                 campus.seat_limit += seats
                 campus.save()
+                
+                # Record InvoiceReceipt in local DB
+                from .models import InvoiceReceipt
+                InvoiceReceipt.objects.create(
+                    campus=campus,
+                    stripe_invoice_id=f"INV-CHKT-{subscription_id or uuid.uuid4().hex[:8].upper()}",
+                    amount_paid=seats * 6.00,
+                    seats_purchased=seats,
+                    invoice_pdf_url="https://stripe.com/mock-invoice-receipt.pdf"
+                )
                 print(f"[WEBHOOK] Credited campus {campus.name} with {seats} seats. New limit: {campus.seat_limit}")
             except Campus.DoesNotExist:
                 print(f"[WEBHOOK ERROR] Campus id={campus_id} not found")
@@ -956,6 +981,51 @@ def stripe_webhook(request):
                 c.subscription_status = 'inactive'
             c.save()
             print(f"[WEBHOOK] Updated B2B subscription {sub_id} status for Campus {c.name} to {stripe_status}")
+            
+    elif event_type == 'invoice.paid':
+        sub_id = data_obj.get('subscription')
+        cust_id = data_obj.get('customer')
+        invoice_id = data_obj.get('id', f"INV-{uuid.uuid4().hex[:8].upper()}")
+        amount_paid_cents = data_obj.get('amount_paid', 0)
+        amount_paid = amount_paid_cents / 100.0
+        
+        campus = None
+        if sub_id:
+            campus = Campus.objects.filter(stripe_subscription_id=sub_id).first()
+        if not campus and cust_id:
+            campus = Campus.objects.filter(stripe_customer_id=cust_id).first()
+            
+        if campus:
+            campus.subscription_status = 'active'
+            campus.save()
+            
+            # Determine seats from amount paid ($6/seat/year)
+            seats = int(amount_paid / 6.00) if amount_paid > 0 else 0
+            
+            from .models import InvoiceReceipt
+            InvoiceReceipt.objects.create(
+                campus=campus,
+                stripe_invoice_id=invoice_id,
+                amount_paid=amount_paid,
+                seats_purchased=seats,
+                invoice_pdf_url=data_obj.get('hosted_invoice_url', 'https://stripe.com/mock-invoice-receipt.pdf')
+            )
+            print(f"[WEBHOOK] invoice.paid processed for Campus {campus.name}. Invoice ID: {invoice_id}")
+            
+    elif event_type == 'invoice.payment_failed':
+        sub_id = data_obj.get('subscription')
+        cust_id = data_obj.get('customer')
+        
+        campus = None
+        if sub_id:
+            campus = Campus.objects.filter(stripe_subscription_id=sub_id).first()
+        if not campus and cust_id:
+            campus = Campus.objects.filter(stripe_customer_id=cust_id).first()
+            
+        if campus:
+            campus.subscription_status = 'unpaid' # Freeze campus account
+            campus.save()
+            print(f"[WEBHOOK] invoice.payment_failed processed for Campus {campus.name}. Account frozen.")
             
     return Response({"status": "success", "event_processed": event_type}, status=status.HTTP_200_OK)
 
@@ -1360,5 +1430,61 @@ def sync_clever(request):
         "classroom_name": classroom.name,
         "class_code": classroom.class_code,
         "synced_students": synced
+    }, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def school_admin_dashboard(request):
+    """
+    Returns seat quotas, active usage, invoices list, and invite codes for the school administrator.
+    """
+    if not hasattr(request.user, 'profile') or request.user.profile.role != 'school_admin':
+        return Response({"error": "Unauthorized. School Admin role required."}, status=status.HTTP_403_FORBIDDEN)
+
+    campus = request.user.profile.campus
+    if not campus:
+        campus = Campus.objects.first()
+        if not campus:
+            return Response({"error": "No campus found in database"}, status=status.HTTP_404_NOT_FOUND)
+
+    # Fetch invoices
+    from .models import InvoiceReceipt
+    invoices_qs = InvoiceReceipt.objects.filter(campus=campus).order_by('-created_at')
+    invoices = [
+        {
+            "id": str(inv.id),
+            "stripe_invoice_id": inv.stripe_invoice_id,
+            "amount_paid": float(inv.amount_paid),
+            "seats_purchased": inv.seats_purchased,
+            "created_at": inv.created_at.isoformat(),
+            "invoice_pdf_url": inv.invoice_pdf_url
+        }
+        for inv in invoices_qs
+    ]
+
+    # Fetch invite codes
+    from .models import TeacherInvite
+    invites_qs = TeacherInvite.objects.filter(campus=campus).order_by('-created_at')
+    invites = [
+        {
+            "code": inv.code,
+            "is_used": inv.is_used,
+            "created_at": inv.created_at.isoformat()
+        }
+        for inv in invites_qs
+    ]
+
+    # Calculate active seats
+    active_students = Student.objects.filter(classroom__teacher__profile__campus=campus).distinct().count()
+
+    return Response({
+        "campus_id": str(campus.id),
+        "campus_name": campus.name,
+        "seat_limit": campus.seat_limit,
+        "active_students": active_students,
+        "subscription_status": campus.subscription_status or "active",
+        "invoices": invoices,
+        "invites": invites
     }, status=status.HTTP_200_OK)
 

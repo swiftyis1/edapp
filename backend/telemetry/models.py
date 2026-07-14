@@ -8,6 +8,7 @@ class UserProfile(models.Model):
         ('teacher', 'Teacher'),
         ('parent', 'Parent'),
         ('admin', 'District Admin'),
+        ('school_admin', 'School Admin'),
     ]
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     role = models.CharField(max_length=20, choices=ROLE_CHOICES)
@@ -148,3 +149,16 @@ class StudentBKTHistory(models.Model):
 
     def __str__(self):
         return f"{self.student.name} - {self.construct_tag}: {self.p_know:.3f} ({self.timestamp})"
+
+
+class InvoiceReceipt(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    campus = models.ForeignKey(Campus, on_delete=models.CASCADE, related_name='invoices')
+    stripe_invoice_id = models.CharField(max_length=200)
+    amount_paid = models.DecimalField(max_digits=10, decimal_places=2)
+    seats_purchased = models.IntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    invoice_pdf_url = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return f"Invoice {self.stripe_invoice_id} - {self.campus.name} (${self.amount_paid})"

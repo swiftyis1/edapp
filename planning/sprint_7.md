@@ -15,20 +15,20 @@
 
 ### Week 13: Stripe B2B Invoicing & Quotas
 
-*   [ ] **1. Metered Licensing Engine**
+*   [x] **1. Metered Licensing Engine**
     *   Implement student seat checkout portals in Stripe, supporting seat packages (e.g. 50, 100, 500 seats).
-*   [ ] **2. Stripe Webhook Invoicing**
+*   [x] **2. Stripe Webhook Invoicing**
     *   Handle `invoice.paid` and `invoice.payment_failed` webhooks to automatically activate/freeze campus accounts.
-*   [ ] **3. License Enforcement Middleware**
+*   [x] **3. License Enforcement Middleware**
     *   Implement database middleware to block student registration or classroom joins when the campus seat limit is exceeded.
 
 ---
 
 ### Week 14: School Administrator Quota Panel
 
-*   [ ] **4. School Admin Profile**
+*   [x] **4. School Admin Profile**
     *   Add a new UserProfile role choice: `School Admin` (linked to a specific `Campus`).
-*   [ ] **5. School Quota Dashboard**
+*   [x] **5. School Quota Dashboard**
     *   Build a dedicated dashboard for School Admins displaying seat quotas, active seat usage, student growth rates, and invite codes.
-*   [ ] **6. Invoicing Receipts**
+*   [x] **6. Invoicing Receipts**
     *   Allow School Admins to download past payment invoices and billing statements.

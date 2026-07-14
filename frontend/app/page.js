@@ -259,6 +259,8 @@ export default function Home() {
   // District Admin KPIs State
   const [adminKpisData, setAdminKpisData] = useState(null);
   const [isLoadingAdminKpis, setIsLoadingAdminKpis] = useState(false);
+  const [schoolAdminData, setSchoolAdminData] = useState(null);
+  const [isLoadingSchoolAdminData, setIsLoadingSchoolAdminData] = useState(false);
 
   // DNA Template Sequence (B.LS1.1 Target)
   const templateDNA = ["T", "A", "C", "G", "G", "C", "T", "T", "T"];
@@ -377,6 +379,13 @@ export default function Home() {
     }
   }, [role, token]);
 
+  // Fetch school admin data when role switches or token changes
+  useEffect(() => {
+    if (role === "school_admin" && token) {
+      fetchSchoolAdminData();
+    }
+  }, [role, token]);
+
   // Sprint 3: URL Parameters Processing Hook
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -389,6 +398,7 @@ export default function Home() {
         window.history.replaceState({}, document.title, window.location.pathname);
         if (role === "parent") fetchParentReport();
         if (role === "admin") fetchAdminKpis();
+        if (role === "school_admin") fetchSchoolAdminData();
       }
       
       // Mock Checkout Simulation
@@ -471,6 +481,25 @@ export default function Home() {
       console.warn("Failed to fetch admin KPIs:", err.message);
     } finally {
       setIsLoadingAdminKpis(false);
+    }
+  };
+
+  const fetchSchoolAdminData = async () => {
+    setIsLoadingSchoolAdminData(true);
+    try {
+      const headers = {};
+      if (token) {
+        headers["Authorization"] = `Token ${token}`;
+      }
+      const response = await fetch("http://localhost:8000/api/reports/school-admin/", { headers });
+      if (response.ok) {
+        const data = await response.json();
+        setSchoolAdminData(data);
+      }
+    } catch (err) {
+      console.warn("Failed to fetch school admin data:", err.message);
+    } finally {
+      setIsLoadingSchoolAdminData(false);
     }
   };
 
@@ -873,6 +902,7 @@ export default function Home() {
         setShowSuccessNotification(true);
         if (role === "parent") fetchParentReport();
         if (role === "admin") fetchAdminKpis();
+        if (role === "school_admin") fetchSchoolAdminData();
       } else {
         console.error("Webhook processing error");
       }
@@ -1645,6 +1675,18 @@ export default function Home() {
                 }`}
               >
                 Parent Portal
+              </button>
+            )}
+            {currentUser.role === "school_admin" && (
+              <button
+                onClick={() => setRole("school_admin")}
+                className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${
+                  role === "school_admin"
+                    ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/20"
+                    : "text-zinc-400 hover:text-zinc-200"
+                }`}
+              >
+                School Admin Portal
               </button>
             )}
           </div>
@@ -3589,6 +3631,177 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+          )}
+        </main>
+      )}
+
+      {role === "school_admin" && (
+        <main className="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+          <div className="flex justify-between items-center">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-white">School Administrator Quota Portal</h2>
+              <p className="text-sm text-zinc-400">Manage metered seat allocations, campus accounts status, and download billing invoices.</p>
+            </div>
+            <button
+              onClick={fetchSchoolAdminData}
+              disabled={isLoadingSchoolAdminData}
+              className="px-3 py-1.5 text-xs font-semibold bg-zinc-850 hover:bg-zinc-750 text-zinc-200 rounded-lg border border-zinc-700 transition"
+            >
+              {isLoadingSchoolAdminData ? "Refreshing..." : "Refresh Portal"}
+            </button>
+          </div>
+
+          {schoolAdminData ? (
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* Left Column: Campus Status & Active Quotas */}
+              <div className="lg:col-span-2 space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                    <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Campus Name</span>
+                    <div className="text-xl font-black text-white mt-1">{schoolAdminData.campus_name}</div>
+                  </div>
+                  <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                    <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Seat Limit</span>
+                    <div className="text-2xl font-mono font-bold text-indigo-400 mt-1">{schoolAdminData.seat_limit}</div>
+                  </div>
+                  <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                    <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Active Seats Used</span>
+                    <div className="text-2xl font-mono font-bold text-white mt-1">
+                      {schoolAdminData.active_students} / {schoolAdminData.seat_limit}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Quota Gauge Card */}
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Metered seat utilization</span>
+                      <h4 className="text-sm font-bold text-white mt-0.5">Active Campus Allocation Percentage</h4>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-xl font-mono font-black text-white">
+                        {schoolAdminData.seat_limit > 0
+                          ? Math.round((schoolAdminData.active_students / schoolAdminData.seat_limit) * 100)
+                          : 0}%
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="w-full bg-zinc-950 rounded-full h-3 overflow-hidden border border-zinc-850">
+                    <div
+                      className={`h-full rounded-full transition-all duration-1000 ${
+                        (schoolAdminData.active_students / schoolAdminData.seat_limit) >= 0.9
+                          ? "bg-rose-500"
+                          : (schoolAdminData.active_students / schoolAdminData.seat_limit) >= 0.7
+                          ? "bg-amber-500"
+                          : "bg-indigo-500"
+                      }`}
+                      style={{
+                        width: `${
+                          schoolAdminData.seat_limit > 0
+                            ? Math.min(100, (schoolAdminData.active_students / schoolAdminData.seat_limit) * 100)
+                            : 0
+                        }%`
+                      }}
+                    />
+                  </div>
+
+                  <div className="pt-2 flex justify-between items-center">
+                    <div className="text-xs text-zinc-500">
+                      Status:{" "}
+                      <span
+                        className={`font-bold px-2 py-0.5 rounded text-[10px] uppercase ${
+                          schoolAdminData.subscription_status === "active"
+                            ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
+                            : "bg-rose-500/10 text-rose-450 border border-rose-500/20"
+                        }`}
+                      >
+                        {schoolAdminData.subscription_status}
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => handleBuySeats(schoolAdminData.campus_id, 50)}
+                      className="px-4 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs transition shadow-md shadow-indigo-600/10"
+                    >
+                      Buy +50 Seats ($300)
+                    </button>
+                  </div>
+                </div>
+
+                {/* Past Billing Statements & Invoicing Receipts */}
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400">Past Payment Invoices</h3>
+                  {schoolAdminData.invoices.length === 0 ? (
+                    <p className="text-zinc-500 text-xs italic py-6 text-center">No past payment statements found for this campus.</p>
+                  ) : (
+                    <div className="divide-y divide-zinc-850">
+                      {schoolAdminData.invoices.map((inv) => (
+                        <div key={inv.id} className="py-3 flex justify-between items-center text-xs">
+                          <div>
+                            <p className="text-white font-bold">{inv.stripe_invoice_id}</p>
+                            <p className="text-[10px] text-zinc-500 font-mono mt-0.5">
+                              {new Date(inv.created_at).toLocaleDateString()} • {inv.seats_purchased} seats
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <span className="font-mono font-bold text-white">${inv.amount_paid.toFixed(2)}</span>
+                            <a
+                              href={inv.invoice_pdf_url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="px-2.5 py-1 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 rounded border border-zinc-700 transition text-[10px] font-bold"
+                            >
+                              Download PDF
+                            </a>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Right Column: Campus Invite Codes */}
+              <div className="space-y-6">
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-1">🏫 Teacher Registration Links</h3>
+                    <p className="text-xs text-zinc-500 leading-relaxed">
+                      Generated invitation codes linked to this campus. Teachers joining with these links will register under your seat license limit automatically.
+                    </p>
+                  </div>
+
+                  {schoolAdminData.invites.length === 0 ? (
+                    <p className="text-zinc-500 text-xs italic py-4 text-center">No invite codes generated yet.</p>
+                  ) : (
+                    <div className="space-y-2">
+                      {schoolAdminData.invites.map((inv, idx) => (
+                        <div key={idx} className="p-3 bg-zinc-950 border border-zinc-850 rounded-xl flex justify-between items-center text-xs">
+                          <div>
+                            <span className="font-mono font-bold text-indigo-400 select-all">{inv.code}</span>
+                            <span className="text-[9px] text-zinc-550 block font-mono mt-0.5">
+                              {new Date(inv.created_at).toLocaleDateString()}
+                            </span>
+                          </div>
+                          <div>
+                            {inv.is_used ? (
+                              <span className="text-[9px] px-2 py-0.5 bg-zinc-800 text-zinc-500 rounded font-bold uppercase">Used</span>
+                            ) : (
+                              <span className="text-[9px] px-2 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded font-bold uppercase">Available</span>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="h-64 flex items-center justify-center text-zinc-500 italic">
+              Loading school admin dashboard data...
             </div>
           )}
         </main>

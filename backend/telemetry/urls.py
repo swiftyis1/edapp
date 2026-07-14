@@ -29,4 +29,5 @@ urlpatterns = [
     path('parent/add-child/', views.parent_add_child, name='parent_add_child'),
     path('sync/google-classroom/', views.sync_google_classroom, name='sync_google_classroom'),
     path('sync/clever/', views.sync_clever, name='sync_clever'),
+    path('reports/school-admin/', views.school_admin_dashboard, name='school_admin_dashboard'),
 ]
