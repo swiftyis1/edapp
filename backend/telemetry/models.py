@@ -137,3 +137,14 @@ class StudentBKTState(models.Model):
 
     def __str__(self):
         return f"BKT State for {self.student.name}"
+
+
+class StudentBKTHistory(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='bkt_history')
+    timestamp = models.DateTimeField(auto_now_add=True)
+    construct_tag = models.CharField(max_length=100) # 'OAS.B.LS1.1' or 'OAS.B.PS1.1'
+    p_know = models.FloatField()
+
+    def __str__(self):
+        return f"{self.student.name} - {self.construct_tag}: {self.p_know:.3f} ({self.timestamp})"

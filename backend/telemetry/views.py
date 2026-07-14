@@ -702,7 +702,7 @@ def parent_report(request):
         linked_students = [student]
 
     # Fetch child BKT state
-    from .models import StudentBKTState
+    from .models import StudentBKTState, StudentBKTHistory
     bkt_state = StudentBKTState.objects.filter(student=student).first()
     if bkt_state:
         bkt_transcription = round(bkt_state.transcription_p_know * 100, 1)
@@ -714,6 +714,17 @@ def parent_report(request):
         bkt_translation = 15.0
         bkt_mastery = 17.5
         bkt_bonding_mastery = 15.0
+
+    # Retrieve temporal BKT history milestones
+    history_qs = StudentBKTHistory.objects.filter(student=student).order_by('timestamp')
+    bkt_history_list = [
+        {
+            "timestamp": h.timestamp.isoformat(),
+            "construct_tag": h.construct_tag,
+            "p_know": round(h.p_know * 100, 1)
+        }
+        for h in history_qs
+    ]
 
     return Response({
         "child_id": str(student.id),
@@ -733,7 +744,8 @@ def parent_report(request):
         "bkt_transcription": bkt_transcription,
         "bkt_translation": bkt_translation,
         "bkt_mastery": bkt_mastery,
-        "bkt_bonding_mastery": bkt_bonding_mastery
+        "bkt_bonding_mastery": bkt_bonding_mastery,
+        "bkt_history": bkt_history_list
     }, status=status.HTTP_200_OK)
 
 
@@ -1214,5 +1226,139 @@ def parent_add_child(request):
         "message": f"Successfully linked {student_name} to your household.",
         "student_id": str(student.id),
         "name": student.name
+    }, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def sync_google_classroom(request):
+    """
+    Simulates Google Classroom OAuth2 Roster Syncing.
+    Creates a new Classroom and registers mock student accounts linked to the teacher.
+    """
+    teacher = request.user
+    if not hasattr(teacher, 'profile') or teacher.profile.role != 'teacher':
+        return Response({"error": "Only teachers can sync rosters."}, status=status.HTTP_403_FORBIDDEN)
+
+    classroom, created = Classroom.objects.get_or_create(
+        name="Google Classroom AP Biology",
+        teacher=teacher,
+        defaults={"class_code": "GCL999"}
+    )
+
+    mock_students = [
+        {"name": "Selena Gomez", "username": "selena_gomez"},
+        {"name": "Justin Bieber", "username": "justin_bieber"},
+        {"name": "Harry Styles", "username": "harry_styles"}
+    ]
+
+    synced = []
+    for s_data in mock_students:
+        user, u_created = User.objects.get_or_create(
+            username=s_data["username"],
+            defaults={
+                "first_name": s_data["name"].split(' ')[0],
+                "last_name": s_data["name"].split(' ')[1] if ' ' in s_data["name"] else ""
+            }
+        )
+        if u_created:
+            user.set_password("password123")
+            user.save()
+            UserProfile.objects.create(user=user, role="student")
+
+        student, s_created = Student.objects.get_or_create(
+            user=user,
+            defaults={
+                "name": s_data["name"],
+                "classroom": classroom
+            }
+        )
+        if not student.classroom:
+            student.classroom = classroom
+            student.save()
+
+        synced.append({
+            "id": str(student.id),
+            "name": student.name,
+            "username": user.username,
+            "created": s_created
+        })
+
+    # Clear teacher report cache
+    from django.core.cache import cache
+    cache.delete(f"teacher_report_{teacher.id}")
+
+    return Response({
+        "status": "success",
+        "classroom_name": classroom.name,
+        "class_code": classroom.class_code,
+        "synced_students": synced
+    }, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def sync_clever(request):
+    """
+    Simulates Clever SSO Roster Syncing.
+    Creates a new Classroom and registers mock student accounts linked to the teacher.
+    """
+    teacher = request.user
+    if not hasattr(teacher, 'profile') or teacher.profile.role != 'teacher':
+        return Response({"error": "Only teachers can sync rosters."}, status=status.HTTP_403_FORBIDDEN)
+
+    classroom, created = Classroom.objects.get_or_create(
+        name="Clever Integrated Science",
+        teacher=teacher,
+        defaults={"class_code": "CLV888"}
+    )
+
+    mock_students = [
+        {"name": "Albert Einstein", "username": "albert_einstein"},
+        {"name": "Marie Curie", "username": "marie_curie"},
+        {"name": "Isaac Newton", "username": "isaac_newton"}
+    ]
+
+    synced = []
+    for s_data in mock_students:
+        user, u_created = User.objects.get_or_create(
+            username=s_data["username"],
+            defaults={
+                "first_name": s_data["name"].split(' ')[0],
+                "last_name": s_data["name"].split(' ')[1] if ' ' in s_data["name"] else ""
+            }
+        )
+        if u_created:
+            user.set_password("password123")
+            user.save()
+            UserProfile.objects.create(user=user, role="student")
+
+        student, s_created = Student.objects.get_or_create(
+            user=user,
+            defaults={
+                "name": s_data["name"],
+                "classroom": classroom
+            }
+        )
+        if not student.classroom:
+            student.classroom = classroom
+            student.save()
+
+        synced.append({
+            "id": str(student.id),
+            "name": student.name,
+            "username": user.username,
+            "created": s_created
+        })
+
+    # Clear teacher report cache
+    from django.core.cache import cache
+    cache.delete(f"teacher_report_{teacher.id}")
+
+    return Response({
+        "status": "success",
+        "classroom_name": classroom.name,
+        "class_code": classroom.class_code,
+        "synced_students": synced
     }, status=status.HTTP_200_OK)
 

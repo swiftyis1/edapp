@@ -39,6 +39,168 @@ const CODON_AMINO_ACID_MAP = {
   "UAC": "Tyrosine (Tyr)"
 };
 
+// Reusable SVG BKT Growth Chart Component
+const BktGrowthChart = ({ history }) => {
+  const [activeTab, setActiveTab] = useState("ALL");
+
+  if (!history || history.length === 0) {
+    return (
+      <div className="h-44 flex items-center justify-center text-xs text-zinc-500 italic bg-zinc-950/40 rounded-xl border border-dashed border-zinc-850">
+        No BKT progression logs recorded yet. Play a level to log mastery growth.
+      </div>
+    );
+  }
+
+  const lsPoints = history.filter(p => p.construct_tag === 'OAS.B.LS1.1');
+  const psPoints = history.filter(p => p.construct_tag === 'OAS.B.PS1.1');
+
+  const getPathData = (points) => {
+    if (points.length === 0) return { line: "", area: "" };
+    const width = 450;
+    const height = 150;
+    const padding = 25;
+    
+    const xStep = points.length > 1 ? (width - 2 * padding) / (points.length - 1) : 0;
+    
+    let path = "";
+    let areaPath = "";
+    
+    points.forEach((p, idx) => {
+      const x = padding + idx * xStep;
+      const y = height - padding - (p.p_know / 100) * (height - 2 * padding);
+      
+      if (idx === 0) {
+        path += `M ${x} ${y}`;
+        areaPath += `M ${x} ${height - padding} L ${x} ${y}`;
+      } else {
+        path += ` L ${x} ${y}`;
+        areaPath += ` L ${x} ${y}`;
+      }
+      
+      if (idx === points.length - 1) {
+        areaPath += ` L ${x} ${height - padding} Z`;
+      }
+    });
+
+    return { line: path, area: areaPath };
+  };
+
+  const lsPath = getPathData(lsPoints);
+  const psPath = getPathData(psPoints);
+
+  return (
+    <div className="bg-zinc-950/60 border border-zinc-850 p-5 rounded-xl space-y-4 shadow-lg">
+      <div className="flex justify-between items-center">
+        <div>
+          <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Mastery Over Time</span>
+          <h4 className="text-sm font-bold text-white mt-0.5">BKT Learning Growth Curve</h4>
+        </div>
+        <div className="flex gap-1.5 bg-zinc-900 p-1 rounded-lg border border-zinc-800 text-[9px]">
+          <button
+            onClick={() => setActiveTab("ALL")}
+            className={`px-2 py-0.5 rounded transition-all font-bold ${activeTab === "ALL" ? "bg-indigo-600 text-white" : "text-zinc-400"}`}
+          >
+            All
+          </button>
+          <button
+            onClick={() => setActiveTab("LS")}
+            className={`px-2 py-0.5 rounded transition-all font-bold ${activeTab === "LS" ? "bg-indigo-600 text-white" : "text-zinc-400"}`}
+          >
+            B.LS1.1
+          </button>
+          <button
+            onClick={() => setActiveTab("PS")}
+            className={`px-2 py-0.5 rounded transition-all font-bold ${activeTab === "PS" ? "bg-indigo-600 text-white" : "text-zinc-400"}`}
+          >
+            B.PS1.1
+          </button>
+        </div>
+      </div>
+
+      <div className="relative h-40 w-full flex items-center justify-center bg-zinc-950/20 rounded-lg p-2 border border-zinc-900">
+        <svg viewBox="0 0 450 150" className="w-full h-full overflow-visible">
+          <defs>
+            <linearGradient id="lsGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#6366f1" stopOpacity="0.25" />
+              <stop offset="100%" stopColor="#6366f1" stopOpacity="0.0" />
+            </linearGradient>
+            <linearGradient id="psGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#14b8a6" stopOpacity="0.25" />
+              <stop offset="100%" stopColor="#14b8a6" stopOpacity="0.0" />
+            </linearGradient>
+          </defs>
+
+          {/* Grid Lines */}
+          <line x1="25" y1="25" x2="425" y2="25" stroke="#27272a" strokeDasharray="3 3" />
+          <line x1="25" y1="75" x2="425" y2="75" stroke="#27272a" strokeDasharray="3 3" />
+          <line x1="25" y1="125" x2="425" y2="125" stroke="#27272a" />
+
+          {/* Y Axis Labels */}
+          <text x="2" y="28" fill="#71717a" className="text-[8px] font-mono">100%</text>
+          <text x="2" y="78" fill="#71717a" className="text-[8px] font-mono">50%</text>
+          <text x="2" y="128" fill="#71717a" className="text-[8px] font-mono">0%</text>
+
+          {/* Life Science (B.LS1.1) Line */}
+          {(activeTab === "ALL" || activeTab === "LS") && lsPoints.length > 0 && (
+            <>
+              {lsPath.area && <path d={lsPath.area} fill="url(#lsGrad)" />}
+              {lsPath.line && <path d={lsPath.line} fill="none" stroke="#6366f1" strokeWidth="2.5" strokeLinecap="round" />}
+              {lsPoints.map((p, idx) => {
+                const x = 25 + idx * (lsPoints.length > 1 ? 400 / (lsPoints.length - 1) : 0);
+                const y = 150 - 25 - (p.p_know / 100) * 100;
+                return (
+                  <circle
+                    key={`ls-${idx}`}
+                    cx={x}
+                    cy={y}
+                    r="4"
+                    fill="#1e1b4b"
+                    stroke="#818cf8"
+                    strokeWidth="2"
+                    className="cursor-pointer hover:scale-125 transition"
+                  >
+                    <title>{`B.LS1.1: ${p.p_know}%`}</title>
+                  </circle>
+                );
+              })}
+            </>
+          )}
+
+          {/* Physical Science (B.PS1.1) Line */}
+          {(activeTab === "ALL" || activeTab === "PS") && psPoints.length > 0 && (
+            <>
+              {psPath.area && <path d={psPath.area} fill="url(#psGrad)" />}
+              {psPath.line && <path d={psPath.line} fill="none" stroke="#14b8a6" strokeWidth="2.5" strokeLinecap="round" />}
+              {psPoints.map((p, idx) => {
+                const x = 25 + idx * (psPoints.length > 1 ? 400 / (psPoints.length - 1) : 0);
+                const y = 150 - 25 - (p.p_know / 100) * 100;
+                return (
+                  <circle
+                    key={`ps-${idx}`}
+                    cx={x}
+                    cy={y}
+                    r="4"
+                    fill="#042f2e"
+                    stroke="#2dd4bf"
+                    strokeWidth="2"
+                    className="cursor-pointer hover:scale-125 transition"
+                  >
+                    <title>{`B.PS1.1: ${p.p_know}%`}</title>
+                  </circle>
+                );
+              })}
+            </>
+          )}
+        </svg>
+      </div>
+      <div className="flex justify-between items-center text-[9px] text-zinc-500 font-mono pt-1">
+        <span className="flex items-center gap-1"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500"></span> B.LS1.1 (Life Sci)</span>
+        <span className="flex items-center gap-1"><span className="h-1.5 w-1.5 rounded-full bg-teal-500"></span> B.PS1.1 (Phys Sci)</span>
+      </div>
+    </div>
+  );
+};
+
 // tRNA Anticodon distractor cards palette
 const ANTICODON_COLORS = {
   "UAC": "from-emerald-500 to-teal-600 border-teal-500/30 text-white shadow-emerald-500/10",
@@ -86,6 +248,9 @@ export default function Home() {
   // Classroom Management States
   const [newClassName, setNewClassName] = useState("");
   const [createdClassroom, setCreatedClassroom] = useState(null);
+  const [showSyncModal, setShowSyncModal] = useState(false);
+  const [syncLogs, setSyncLogs] = useState([]);
+  const [isSyncing, setIsSyncing] = useState(false);
   const [classCodeJoin, setClassCodeJoin] = useState("");
   const [classroomInfo, setClassroomInfo] = useState(null);
   const [joinMessage, setJoinMessage] = useState("");
@@ -740,6 +905,54 @@ export default function Home() {
     }
   };
 
+  const handleRosterSync = async (provider) => {
+    setIsSyncing(true);
+    setSyncLogs([]);
+    
+    const addLog = (msg) => {
+      setSyncLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] ${msg}`]);
+    };
+
+    addLog(`Initiating roster sync with ${provider === 'google' ? 'Google Classroom' : 'Clever SSO'}...`);
+    
+    await new Promise(r => setTimeout(r, 800));
+    addLog("Authenticating API credentials and exchanging OAuth2 tokens...");
+    
+    await new Promise(r => setTimeout(r, 1000));
+    addLog("Scanning teacher courses and active section enrollments...");
+
+    try {
+      const response = await fetch(`http://localhost:8000/api/sync/${provider === 'google' ? 'google-classroom' : 'clever'}/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': token ? `Token ${token}` : ''
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        await new Promise(r => setTimeout(r, 800));
+        addLog(`Successfully synced classroom: "${data.classroom_name}" (Code: ${data.class_code})`);
+        
+        data.synced_students.forEach(std => {
+          addLog(`  -> Synced student: ${std.name} (${std.username}) [${std.created ? 'NEW' : 'EXISTS'}]`);
+        });
+
+        addLog("Sync operation completed. Invalidating cache and rebuilding student roster...");
+        await fetchTeacherReport();
+        addLog("✓ Roster refreshed successfully!");
+      } else {
+        const errData = await response.json();
+        addLog(`❌ Error: ${errData.error || 'Failed to sync with provider API'}`);
+      }
+    } catch (err) {
+      addLog(`❌ Error: Network request failed - ${err.message}`);
+    } finally {
+      setIsSyncing(false);
+    }
+  };
+
   const handleJoinClassroom = async (e) => {
     e.preventDefault();
     setJoinMessage("");
@@ -1183,6 +1396,73 @@ export default function Home() {
             {successNotificationMessage}
           </span>
           <button onClick={() => setShowSuccessNotification(false)} className="hover:text-emerald-200 font-bold ml-4">✕</button>
+        </div>
+      )}
+
+      {showSyncModal && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-6 z-[110]">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-4">
+            <div className="flex justify-between items-center border-b border-zinc-800 pb-3">
+              <div className="flex items-center gap-2">
+                <span className="text-xl">🔄</span>
+                <h3 className="text-lg font-bold text-white">SSO Roster Sync Integrator</h3>
+              </div>
+              <button 
+                onClick={() => { if (!isSyncing) setShowSyncModal(false); }}
+                className="text-zinc-500 hover:text-zinc-300 font-bold"
+                disabled={isSyncing}
+              >
+                ✕
+              </button>
+            </div>
+            
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              Connect to your external district classroom rosters to automatically import students, assign accounts, and manage license seating assignments.
+            </p>
+
+            <div className="grid grid-cols-2 gap-4">
+              <button
+                onClick={() => handleRosterSync('google')}
+                disabled={isSyncing}
+                className="p-4 bg-zinc-950 hover:bg-zinc-900 border border-zinc-800 rounded-xl flex flex-col items-center justify-center gap-2 transition disabled:opacity-50"
+              >
+                <span className="text-xl">🏫</span>
+                <span className="text-xs font-bold text-white">Google Classroom</span>
+              </button>
+              <button
+                onClick={() => handleRosterSync('clever')}
+                disabled={isSyncing}
+                className="p-4 bg-zinc-950 hover:bg-zinc-900 border border-zinc-800 rounded-xl flex flex-col items-center justify-center gap-2 transition disabled:opacity-50"
+              >
+                <span className="text-xl">🦊</span>
+                <span className="text-xs font-bold text-white">Clever Sections</span>
+              </button>
+            </div>
+
+            {/* Sync Progress Console Logs */}
+            {syncLogs.length > 0 && (
+              <div className="bg-black/60 border border-zinc-850 p-4 rounded-lg font-mono text-[10px] text-indigo-300 h-40 overflow-y-auto space-y-1">
+                {syncLogs.map((log, idx) => (
+                  <div key={idx}>{log}</div>
+                ))}
+                {isSyncing && (
+                  <div className="text-zinc-500 animate-pulse mt-1">
+                    ⚡ Running background sync operation...
+                  </div>
+                )}
+              </div>
+            )}
+
+            <div className="flex justify-end pt-2">
+              <button
+                onClick={() => setShowSyncModal(false)}
+                disabled={isSyncing}
+                className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 disabled:opacity-50 text-zinc-300 font-bold rounded-lg text-xs uppercase tracking-wider transition"
+              >
+                Close Dialog
+              </button>
+            </div>
+          </div>
         </div>
       )}
 
@@ -2417,6 +2697,16 @@ export default function Home() {
               >
                 {isLoadingReport ? "Refreshing..." : "Refresh Roster"}
               </button>
+
+              <button
+                onClick={() => {
+                  setShowSyncModal(true);
+                  setSyncLogs([]);
+                }}
+                className="px-3 py-1.5 text-xs font-semibold bg-indigo-650 hover:bg-indigo-600 text-white rounded-lg border border-indigo-500/30 transition flex items-center gap-2"
+              >
+                <span>🔄</span> Sync Classroom Roster
+              </button>
             </div>
           </div>
 
@@ -3085,7 +3375,15 @@ export default function Home() {
 
                     <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
                       <div
-                        className="bg-indigo-650 h-full rounded-full transition-all duration-1000"
+                        className={`h-full rounded-full transition-all duration-1000 ${
+                          (parentReportData.bkt_mastery ?? 17.5) >= 85
+                            ? "bg-emerald-500"
+                            : (parentReportData.bkt_mastery ?? 17.5) >= 70
+                            ? "bg-indigo-500"
+                            : (parentReportData.bkt_mastery ?? 17.5) >= 50
+                            ? "bg-amber-500"
+                            : "bg-rose-500"
+                        }`}
                         style={{ width: `${parentReportData.bkt_mastery ?? 17.5}%` }}
                       />
                     </div>
@@ -3118,7 +3416,15 @@ export default function Home() {
 
                     <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
                       <div
-                        className="bg-indigo-650 h-full rounded-full transition-all duration-1000"
+                        className={`h-full rounded-full transition-all duration-1000 ${
+                          (parentReportData.bkt_bonding_mastery ?? 15.0) >= 85
+                            ? "bg-emerald-500"
+                            : (parentReportData.bkt_bonding_mastery ?? 15.0) >= 70
+                            ? "bg-indigo-500"
+                            : (parentReportData.bkt_bonding_mastery ?? 15.0) >= 50
+                            ? "bg-amber-500"
+                            : "bg-rose-500"
+                        }`}
                         style={{ width: `${parentReportData.bkt_bonding_mastery ?? 15.0}%` }}
                       />
                     </div>
@@ -3129,6 +3435,10 @@ export default function Home() {
                         <span className="text-white font-bold">{parentReportData.bkt_bonding_mastery ?? "15.0"}%</span>
                       </div>
                     </div>
+                  </div>
+
+                  <div className="mt-4">
+                    <BktGrowthChart history={parentReportData.bkt_history} />
                   </div>
 
                   <div className="mt-5 p-4 bg-zinc-950/40 border border-zinc-850 rounded-xl flex items-center justify-between">

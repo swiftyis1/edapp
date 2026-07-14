@@ -3,6 +3,7 @@ from django.core.management.base import BaseCommand
 from django.utils import timezone
 from django.contrib.auth.models import User
 from telemetry.models import Student, Session, TelemetryEvent, UserProfile, Classroom, Campus, ScoringConfig
+from telemetry.bkt_service import update_bkt_state_for_event
 
 class Command(BaseCommand):
     help = "Seeds the database with mock student profiles, users, classrooms, campuses, and structured gameplay telemetry logs"
@@ -94,15 +95,15 @@ class Command(BaseCommand):
             first_name="John",
             last_name="Smith"
         )
-        UserProfile.objects.create(
+        parent_profile = UserProfile.objects.create(
             user=parent_user,
-            role="parent",
-            parent_student=students["Charlie Smith"]
+            role="parent"
         )
+        parent_profile.parent_students.add(students["Charlie Smith"])
         self.stdout.write("Created parent: John Smith (parent_smith), linked to Charlie Smith")
 
         # Define template DNA (9 bases)
-        template_dna = ["T", "A", "C", "G", "G", "C", "T", "T", "A"]
+        template_dna = ["T", "A", "C", "G", "G", "C", "T", "T", "T"]
         complementary_map = {"T": "A", "A": "U", "C": "G", "G": "C"}
 
         base_time = timezone.now() - timezone.timedelta(days=1)
@@ -129,14 +130,17 @@ class Command(BaseCommand):
                 event_type="pair_base",
                 level_id="dna_transcription_1",
                 construct_tag="OAS.B.LS1.1",
-                payload={
-                    "index": idx,
-                    "template_base": dna_base,
-                    "attempted_base": mrna_base,
-                    "is_correct": True,
-                    "cumulative_errors": 0
-                }
+                payload={"index": idx, "template_base": dna_base, "attempted_base": mrna_base, "is_correct": True, "cumulative_errors": 0}
             )
+            update_bkt_state_for_event(alex, "pair_base", True)
+
+        # Add translation events (Level 2)
+        for i in range(3):
+            update_bkt_state_for_event(alex, "codon_match_attempt", True)
+
+        # Add chemical bonding events (Level 3)
+        update_bkt_state_for_event(alex, "octet_rule_check", True)
+        update_bkt_state_for_event(alex, "octet_rule_check", True)
 
         # Session complete event
         curr_time += timezone.timedelta(seconds=1)
@@ -147,11 +151,7 @@ class Command(BaseCommand):
             event_type="session_complete",
             level_id="dna_transcription_1",
             construct_tag="OAS.B.LS1.1",
-            payload={
-                "total_errors": 0,
-                "accuracy": 100.0,
-                "duration_seconds": 9.9
-            }
+            payload={"total_errors": 0, "accuracy": 100.0, "duration_seconds": 9.9}
         )
         alex_session.completed_at = curr_time
         alex_session.save()
@@ -169,7 +169,6 @@ class Command(BaseCommand):
         
         curr_time = base_time + timezone.timedelta(hours=1)
         errors = 0
-        # Complete transcription with 1 error at index 3 (expected G, tries A, then corrects with G)
         actions = [
             (0, "T", "A", True),
             (1, "A", "U", True),
@@ -194,14 +193,17 @@ class Command(BaseCommand):
                 event_type="pair_base",
                 level_id="dna_transcription_1",
                 construct_tag="OAS.B.LS1.1",
-                payload={
-                    "index": idx,
-                    "template_base": dna_base,
-                    "attempted_base": attempted,
-                    "is_correct": is_correct,
-                    "cumulative_errors": errors
-                }
+                payload={"index": idx, "template_base": dna_base, "attempted_base": attempted, "is_correct": is_correct, "cumulative_errors": errors}
             )
+            update_bkt_state_for_event(blake, "pair_base", is_correct)
+
+        # Add translation events (Level 2)
+        update_bkt_state_for_event(blake, "codon_match_attempt", False)
+        update_bkt_state_for_event(blake, "codon_match_attempt", True)
+        update_bkt_state_for_event(blake, "codon_match_attempt", True)
+
+        # Add chemical bonding events (Level 3)
+        update_bkt_state_for_event(blake, "octet_rule_check", True)
 
         curr_time += timezone.timedelta(seconds=1)
         TelemetryEvent.objects.create(
@@ -211,11 +213,7 @@ class Command(BaseCommand):
             event_type="session_complete",
             level_id="dna_transcription_1",
             construct_tag="OAS.B.LS1.1",
-            payload={
-                "total_errors": 1,
-                "accuracy": 90.0,
-                "duration_seconds": 20.0
-            }
+            payload={"total_errors": 1, "accuracy": 90.0, "duration_seconds": 20.0}
         )
         blake_session.completed_at = curr_time
         blake_session.save()
@@ -259,14 +257,14 @@ class Command(BaseCommand):
                 event_type="pair_base",
                 level_id="dna_transcription_1",
                 construct_tag="OAS.B.LS1.1",
-                payload={
-                    "index": idx,
-                    "template_base": dna_base,
-                    "attempted_base": attempted,
-                    "is_correct": is_correct,
-                    "cumulative_errors": errors
-                }
+                payload={"index": idx, "template_base": dna_base, "attempted_base": attempted, "is_correct": is_correct, "cumulative_errors": errors}
             )
+            update_bkt_state_for_event(charlie, "pair_base", is_correct)
+
+        # Add translation events (Level 2)
+        update_bkt_state_for_event(charlie, "codon_match_attempt", False)
+        update_bkt_state_for_event(charlie, "codon_match_attempt", False)
+        update_bkt_state_for_event(charlie, "codon_match_attempt", True)
 
         curr_time += timezone.timedelta(seconds=1)
         TelemetryEvent.objects.create(
@@ -276,11 +274,7 @@ class Command(BaseCommand):
             event_type="session_complete",
             level_id="dna_transcription_1",
             construct_tag="OAS.B.LS1.1",
-            payload={
-                "total_errors": 3,
-                "accuracy": 75.0,
-                "duration_seconds": 42.0
-            }
+            payload={"total_errors": 3, "accuracy": 75.0, "duration_seconds": 42.0}
         )
         charlie_session.completed_at = curr_time
         charlie_session.save()
@@ -327,14 +321,9 @@ class Command(BaseCommand):
                 event_type="pair_base",
                 level_id="dna_transcription_1",
                 construct_tag="OAS.B.LS1.1",
-                payload={
-                    "index": idx,
-                    "template_base": dna_base,
-                    "attempted_base": attempted,
-                    "is_correct": is_correct,
-                    "cumulative_errors": errors
-                }
+                payload={"index": idx, "template_base": dna_base, "attempted_base": attempted, "is_correct": is_correct, "cumulative_errors": errors}
             )
+            update_bkt_state_for_event(daniela, "pair_base", is_correct)
 
         curr_time += timezone.timedelta(seconds=1)
         TelemetryEvent.objects.create(
@@ -344,11 +333,7 @@ class Command(BaseCommand):
             event_type="session_complete",
             level_id="dna_transcription_1",
             construct_tag="OAS.B.LS1.1",
-            payload={
-                "total_errors": 6,
-                "accuracy": 60.0,
-                "duration_seconds": 63.0
-            }
+            payload={"total_errors": 6, "accuracy": 60.0, "duration_seconds": 63.0}
         )
         daniela_session.completed_at = curr_time
         daniela_session.save()

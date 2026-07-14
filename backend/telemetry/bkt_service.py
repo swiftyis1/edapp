@@ -58,4 +58,20 @@ def update_bkt_state_for_event(student, event_type, is_correct):
         state.bonding_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
 
     state.save()
+
+    # Append to BKT History for temporal growth charting
+    from .models import StudentBKTHistory
+    if event_type in ['pair_base', 'codon_match_attempt']:
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS1.1',
+            p_know=(state.transcription_p_know + state.translation_p_know) / 2
+        )
+    elif event_type == 'octet_rule_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.PS1.1',
+            p_know=state.bonding_p_know
+        )
+
     return state

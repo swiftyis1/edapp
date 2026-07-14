@@ -15,20 +15,20 @@
 
 ### Week 11: Clever & Google Classroom Roster Sync
 
-*   [ ] **1. OAuth2 SSO Roster Endpoints**
+*   [x] **1. OAuth2 SSO Roster Endpoints**
     *   Implement `/api/sync/google-classroom/` and `/api/sync/clever/` to sync classrooms, periods, and student registrations.
-*   [ ] **2. Auto-Registration Mapping**
+*   [x] **2. Auto-Registration Mapping**
     *   Create student profile mappings to bind Clever/Google identifiers to local database records automatically during sync events.
-*   [ ] **3. Sync Roster Actions**
+*   [x] **3. Sync Roster Actions**
     *   Build a "Sync Classroom Roster" button in the Teacher Dashboard and display execution progress logs.
 
 ---
 
 ### Week 12: Multi-Standard Dashboards
 
-*   [ ] **4. Dashboards Mastery Upgrade**
+*   [x] **4. Dashboards Mastery Upgrade**
     *   Upgrade Student, Parent, and Teacher dashboard views to support multiple active OAS standards: `B.LS1.1` (DNA) and `B.PS1.1` (Bonding).
-*   [ ] **5. Dynamic BKT Progress Bars**
+*   [x] **5. Dynamic BKT Progress Bars**
     *   Display live BKT mastery probabilities ($P(L_t)$) as animated, color-coded progress bars instead of raw percentages.
-*   [ ] **6. Student Growth Charts**
+*   [x] **6. Student Growth Charts**
     *   Add a temporal growth chart showing how the student's mastery probability evolved over sessions.

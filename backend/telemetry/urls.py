@@ -27,4 +27,6 @@ urlpatterns = [
     path('admin/invites/create/', views.invite_create, name='invite_create'),
     path('auth/register-invite/', views.auth_register_invite, name='auth_register_invite'),
     path('parent/add-child/', views.parent_add_child, name='parent_add_child'),
+    path('sync/google-classroom/', views.sync_google_classroom, name='sync_google_classroom'),
+    path('sync/clever/', views.sync_clever, name='sync_clever'),
 ]
