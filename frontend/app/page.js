@@ -284,20 +284,28 @@ export default function Home() {
   // App Role View: 'student' (DNA Sandbox) vs 'teacher' vs 'admin' vs 'parent'
   const [role, setRole] = useState("student");
 
+  // Mounting guard to prevent Next.js hydration mismatches
+  const [isMounted, setIsMounted] = useState(false);
+
   // Auth States
-  const [token, setToken] = useState(() => {
+  const [token, setToken] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    setIsMounted(true);
     if (typeof window !== "undefined") {
-      return localStorage.getItem("swift_science_token") || null;
+      const storedToken = localStorage.getItem("swift_science_token");
+      const storedUser = localStorage.getItem("swift_science_user");
+      if (storedToken) setToken(storedToken);
+      if (storedUser) {
+        try {
+          setCurrentUser(JSON.parse(storedUser));
+        } catch (e) {
+          console.error(e);
+        }
+      }
     }
-    return null;
-  });
-  const [currentUser, setCurrentUser] = useState(() => {
-    if (typeof window !== "undefined") {
-      const stored = localStorage.getItem("swift_science_user");
-      return stored ? JSON.parse(stored) : null;
-    }
-    return null;
-  });
+  }, []);
 
   const [authMode, setAuthMode] = useState("login"); // 'login' or 'register'
   const [usernameInput, setUsernameInput] = useState("");
@@ -1658,6 +1666,17 @@ export default function Home() {
     }
   };
 
+
+  if (!isMounted) {
+    return (
+      <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col font-sans justify-center items-center">
+        <div className="flex flex-col items-center gap-3">
+          <div className="h-6 w-6 border-2 border-indigo-500/80 border-t-transparent rounded-full animate-spin"></div>
+          <span className="text-xs text-zinc-500 font-medium uppercase tracking-wider">Initializing Swift Science...</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
