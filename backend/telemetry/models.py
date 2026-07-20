@@ -139,6 +139,60 @@ class StudentBKTState(models.Model):
     bonding_p_slip = models.FloatField(default=0.10)
     bonding_p_transit = models.FloatField(default=0.15)
     
+    # Skill: Mutation Analysis (OAS B.LS1.1)
+    mutation_p_know = models.FloatField(default=0.10)
+    mutation_p_guess = models.FloatField(default=0.25)
+    mutation_p_slip = models.FloatField(default=0.10)
+    mutation_p_transit = models.FloatField(default=0.15)
+    
+    # Skill: Multicellular Hierarchical Systems (OAS B.LS1.2)
+    hierarchy_p_know = models.FloatField(default=0.15)
+    hierarchy_p_guess = models.FloatField(default=0.20)
+    hierarchy_p_slip = models.FloatField(default=0.10)
+    hierarchy_p_transit = models.FloatField(default=0.15)
+    
+    # Skill: Maintaining Homeostasis (OAS B.LS1.3)
+    homeostasis_p_know = models.FloatField(default=0.15)
+    homeostasis_p_guess = models.FloatField(default=0.20)
+    homeostasis_p_slip = models.FloatField(default=0.10)
+    homeostasis_p_transit = models.FloatField(default=0.15)
+    
+    # Skill: Cellular Division & Differentiation (OAS B.LS1.4)
+    division_p_know = models.FloatField(default=0.15)
+    division_p_guess = models.FloatField(default=0.20)
+    division_p_slip = models.FloatField(default=0.10)
+    division_p_transit = models.FloatField(default=0.15)
+    
+    # Skill: Photosynthesis Energy Transformation (OAS B.LS1.5)
+    photosynthesis_p_know = models.FloatField(default=0.15)
+    photosynthesis_p_guess = models.FloatField(default=0.20)
+    photosynthesis_p_slip = models.FloatField(default=0.10)
+    photosynthesis_p_transit = models.FloatField(default=0.15)
+    
+    # Skill: Macromolecule Synthesis (OAS B.LS1.6)
+    synthesis_p_know = models.FloatField(default=0.15)
+    synthesis_p_guess = models.FloatField(default=0.20)
+    synthesis_p_slip = models.FloatField(default=0.10)
+    synthesis_p_transit = models.FloatField(default=0.15)
+    
+    # Skill: Cellular Respiration Energy Transfer (OAS B.LS1.7)
+    respiration_p_know = models.FloatField(default=0.15)
+    respiration_p_guess = models.FloatField(default=0.20)
+    respiration_p_slip = models.FloatField(default=0.10)
+    respiration_p_transit = models.FloatField(default=0.15)
+    
+    # Skill: Carrying Capacity Factors (OAS B.LS2.1)
+    capacity_p_know = models.FloatField(default=0.15)
+    capacity_p_guess = models.FloatField(default=0.20)
+    capacity_p_slip = models.FloatField(default=0.10)
+    capacity_p_transit = models.FloatField(default=0.15)
+    
+    # Skill: Biodiversity Factors (OAS B.LS2.2)
+    biodiversity_p_know = models.FloatField(default=0.15)
+    biodiversity_p_guess = models.FloatField(default=0.20)
+    biodiversity_p_slip = models.FloatField(default=0.10)
+    biodiversity_p_transit = models.FloatField(default=0.15)
+    
     last_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):

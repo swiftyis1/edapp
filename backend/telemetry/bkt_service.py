@@ -7,6 +7,7 @@ def update_bkt_state_for_event(student, event_type, is_correct):
       - 'pair_base': Transcription (OAS B.LS1.1)
       - 'codon_match_attempt': Translation (OAS B.LS1.1)
       - 'octet_rule_check': Chemical Bonding (OAS B.PS1.1)
+      - 'mutation_check': Mutation Analysis (OAS B.LS1.1)
     """
     state, created = StudentBKTState.objects.get_or_create(student=student)
     
@@ -57,21 +58,204 @@ def update_bkt_state_for_event(student, event_type, is_correct):
             
         state.bonding_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
 
+    elif event_type == 'mutation_check':
+        p_know = state.mutation_p_know
+        p_guess = state.mutation_p_guess
+        p_slip = state.mutation_p_slip
+        p_transit = state.mutation_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.mutation_p_slip = max(0.02, state.mutation_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.mutation_p_slip = min(0.30, state.mutation_p_slip + 0.01)
+            
+        state.mutation_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'hierarchy_check':
+        p_know = state.hierarchy_p_know
+        p_guess = state.hierarchy_p_guess
+        p_slip = state.hierarchy_p_slip
+        p_transit = state.hierarchy_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.hierarchy_p_slip = max(0.02, state.hierarchy_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.hierarchy_p_slip = min(0.30, state.hierarchy_p_slip + 0.01)
+            
+        state.hierarchy_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'homeostasis_check':
+        p_know = state.homeostasis_p_know
+        p_guess = state.homeostasis_p_guess
+        p_slip = state.homeostasis_p_slip
+        p_transit = state.homeostasis_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.homeostasis_p_slip = max(0.02, state.homeostasis_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.homeostasis_p_slip = min(0.30, state.homeostasis_p_slip + 0.01)
+            
+        state.homeostasis_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'division_check':
+        p_know = state.division_p_know
+        p_guess = state.division_p_guess
+        p_slip = state.division_p_slip
+        p_transit = state.division_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.division_p_slip = max(0.02, state.division_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.division_p_slip = min(0.30, state.division_p_slip + 0.01)
+            
+        state.division_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'photosynthesis_check':
+        p_know = state.photosynthesis_p_know
+        p_guess = state.photosynthesis_p_guess
+        p_slip = state.photosynthesis_p_slip
+        p_transit = state.photosynthesis_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.photosynthesis_p_slip = max(0.02, state.photosynthesis_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.photosynthesis_p_slip = min(0.30, state.photosynthesis_p_slip + 0.01)
+            
+        state.photosynthesis_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'synthesis_check':
+        p_know = state.synthesis_p_know
+        p_guess = state.synthesis_p_guess
+        p_slip = state.synthesis_p_slip
+        p_transit = state.synthesis_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.synthesis_p_slip = max(0.02, state.synthesis_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.synthesis_p_slip = min(0.30, state.synthesis_p_slip + 0.01)
+            
+        state.synthesis_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'respiration_check':
+        p_know = state.respiration_p_know
+        p_guess = state.respiration_p_guess
+        p_slip = state.respiration_p_slip
+        p_transit = state.respiration_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.respiration_p_slip = max(0.02, state.respiration_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.respiration_p_slip = min(0.30, state.respiration_p_slip + 0.01)
+            
+        state.respiration_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'capacity_check':
+        p_know = state.capacity_p_know
+        p_guess = state.capacity_p_guess
+        p_slip = state.capacity_p_slip
+        p_transit = state.capacity_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.capacity_p_slip = max(0.02, state.capacity_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.capacity_p_slip = min(0.30, state.capacity_p_slip + 0.01)
+            
+        state.capacity_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'biodiversity_check':
+        p_know = state.biodiversity_p_know
+        p_guess = state.biodiversity_p_guess
+        p_slip = state.biodiversity_p_slip
+        p_transit = state.biodiversity_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.biodiversity_p_slip = max(0.02, state.biodiversity_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.biodiversity_p_slip = min(0.30, state.biodiversity_p_slip + 0.01)
+            
+        state.biodiversity_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
     state.save()
 
     # Append to BKT History for temporal growth charting
     from .models import StudentBKTHistory
-    if event_type in ['pair_base', 'codon_match_attempt']:
+    if event_type in ['pair_base', 'codon_match_attempt', 'mutation_check']:
         StudentBKTHistory.objects.create(
             student=student,
             construct_tag='OAS.B.LS1.1',
-            p_know=(state.transcription_p_know + state.translation_p_know) / 2
+            p_know=(state.transcription_p_know + state.translation_p_know + state.mutation_p_know) / 3
         )
     elif event_type == 'octet_rule_check':
         StudentBKTHistory.objects.create(
             student=student,
             construct_tag='OAS.B.PS1.1',
             p_know=state.bonding_p_know
+        )
+    elif event_type == 'hierarchy_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS1.2',
+            p_know=state.hierarchy_p_know
+        )
+    elif event_type == 'homeostasis_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS1.3',
+            p_know=state.homeostasis_p_know
+        )
+    elif event_type == 'division_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS1.4',
+            p_know=state.division_p_know
+        )
+    elif event_type == 'photosynthesis_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS1.5',
+            p_know=state.photosynthesis_p_know
+        )
+    elif event_type == 'synthesis_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS1.6',
+            p_know=state.synthesis_p_know
+        )
+    elif event_type == 'respiration_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS1.7',
+            p_know=state.respiration_p_know
+        )
+    elif event_type == 'capacity_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS2.1',
+            p_know=state.capacity_p_know
+        )
+    elif event_type == 'biodiversity_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS2.2',
+            p_know=state.biodiversity_p_know
         )
 
     return state

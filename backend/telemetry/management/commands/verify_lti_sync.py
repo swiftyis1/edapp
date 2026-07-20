@@ -68,6 +68,7 @@ class Command(BaseCommand):
         bkt_state.transcription_p_know = 0.85
         bkt_state.translation_p_know = 0.70
         bkt_state.bonding_p_know = 0.60
+        bkt_state.mutation_p_know = 0.70
         bkt_state.save()
 
         # Post completion event
@@ -93,8 +94,8 @@ class Command(BaseCommand):
         log = LTIGradeSyncLog.objects.filter(student=student).first()
         assert log is not None
         assert log.level_id == "dna_transcription_1"
-        # Average mastery = (0.85 + 0.70 + 0.60) / 3 = 0.716 -> OPI score = 200 + 0.716 * 199 = 342
-        assert log.score == 342
+        # Average mastery = (0.85 + 0.70 + 0.70 + 0.60) / 4 = 0.7125 -> OPI score = 200 + 0.7125 * 199 = 341
+        assert log.score == 341
         assert log.status == "Success"
 
         self.stdout.write(self.style.SUCCESS(f"  - LTI Gradebook Passback automatically triggered! Synced OPI: {log.score}"))

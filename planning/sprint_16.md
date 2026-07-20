@@ -1,20 +1,22 @@
-# Sprint 16: SQL Database Management Sandbox & Schema Designer (Weeks 31 & 32)
+# Sprint 16: Carbon Cycling & Ecosystem Stability (Weeks 31 & 32)
 
-**Status:** 🗄️ Backlog
-**Theme:** Implement a visual SQL table schema designer and query console sandbox for database management training.
+**Status:** 🏃 Current Worklog
+**Theme:** Develop activities for B.LS2.5 (Carbon Cycling Spheres) and B.LS2.6 (Ecosystem Stability Evaluation).
 
 ---
 
 ## 📋 Iteration Checklist
 
-### Week 31: Visual SQL Schema Designer
-*   [ ] **1. SQL Sandbox Schema & Database Storage**
-    *   Create models to save student SQL schemas (tables, columns, relationships, constraints).
-*   [ ] **2. Drag-and-Drop Table Relationship Canvas**
-    *   Build a visual workspace allowing students to draw Foreign Key links between tables (e.g. Students -> Classrooms).
+### Week 31: Global Carbon Sphere Balance
+*   [ ] **1. Standard B.LS2.5 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS2.5.
+    *   Create locked/unlocked interactive activity workspace for B.LS2.5.
+*   [ ] **2. Telemetry and BKT Integration**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.
 
-### Week 32: Interactive SQL Query Sandbox
-*   [ ] **3. Safe SQLite In-Memory Query Engine**
-    *   Build a backend handler using a sandbox SQLite connection to execute student SQL queries safely and return tabular JSON data.
-*   [ ] **4. Database Query Log Ingestion**
-    *   Capture telemetry events of SQL syntax errors, join complexity metrics, and performance indexes for grading.
+### Week 32: Resilience & Ecosystem Stability
+*   [ ] **3. Standard B.LS2.6 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS2.6.
+    *   Create locked/unlocked interactive activity workspace for B.LS2.6.
+*   [ ] **4. Telemetry and Dashboard Panels**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.

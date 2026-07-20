@@ -1,20 +1,22 @@
-# Sprint 17: Interactive Data Analytics Pipeline & Dashboards (Weeks 33 & 34)
+# Sprint 17: Group Behavior & Genetics Inheritance (Weeks 33 & 34)
 
-**Status:** 🗄️ Backlog
-**Theme:** Implement a data science dashboard allowing students to filter, aggregate, and plot datasets using Python/pandas simulation models.
+**Status:** 🏃 Current Worklog
+**Theme:** Develop activities for B.LS2.8 (Group Behavior Evidence) and B.LS3.1 (Genetics Inheritable Traits Coding).
 
 ---
 
 ## 📋 Iteration Checklist
 
-### Week 33: Data Aggregation Pipeline Builder
-*   [ ] **1. Data Source Configurator**
-    *   Create models allowing students to import raw CSV datasets (demographics, weather, or sales records).
-*   [ ] **2. Step-by-Step Data Cleaning Workspace**
-    *   Build a pipeline dashboard where students define filter blocks (Drop Nulls, Filter by Column, Group & Aggregate).
+### Week 33: Social & Group Survival Behaviors
+*   [ ] **1. Standard B.LS2.8 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS2.8.
+    *   Create locked/unlocked interactive activity workspace for B.LS2.8.
+*   [ ] **2. Telemetry and BKT Integration**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.
 
-### Week 34: Chart & Plot Dashboard Designer
-*   [ ] **3. Dynamic Recharts/Canvas Plotter**
-    *   Develop a dynamic charting widget enabling students to construct bar charts, line plots, and scatter diagrams.
-*   [ ] **4. Analytics Telemetry Logging**
-    *   Ingest telemetry logs tracking student data cleaning correctness, charting choices, and anomaly detection speeds.
+### Week 34: Chromosomal Inheritance Mapping
+*   [ ] **3. Standard B.LS3.1 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS3.1.
+    *   Create locked/unlocked interactive activity workspace for B.LS3.1.
+*   [ ] **4. Telemetry and Dashboard Panels**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.

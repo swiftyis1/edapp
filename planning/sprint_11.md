@@ -1,20 +1,22 @@
-# Sprint 11: FAA Part 107 Exam Prep & Drone Ground School (Weeks 21 & 22)
+# Sprint 11: Hierarchical Systems & Homeostasis (Weeks 21 & 22)
 
-**Status:** 🗄️ Backlog
-**Theme:** Implement a Part 107 ground school training simulator with dynamic study modules, mock exams, and teacher telemetry tracking for FAA regulations.
+**Status:** ✅ Completed
+**Theme:** Develop activities for B.LS1.2 (Multicellular Hierarchical Systems) and B.LS1.3 (Maintaining Homeostasis).
 
 ---
 
 ## 📋 Iteration Checklist
 
-### Week 21: Part 107 Quiz Engine & Interactive Modules
-*   [ ] **1. Ground School Curriculum Database Schema**
-    *   Create `Part107Question` and `StudentPart107Progress` models to track student scores by regulation area (Weather, Loading, Operations, Airspace, Regulations).
-*   [ ] **2. Sectional Chart Visualizer**
-    *   Implement an interactive Leaflet/Canvas overlay displaying FAA sectional charts (airspace boundaries, airports, obstructions) for airspace classification queries.
+### Week 21: Hierarchical Organization
+*   [x] **1. Standard B.LS1.2 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS1.2.
+    *   Create locked/unlocked interactive activity workspace for B.LS1.2.
+*   [x] **2. Telemetry and BKT Integration**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.
 
-### Week 22: Mock Exam Simulator & Teacher Logs
-*   [ ] **3. Realistic FAA 60-Question Mock Exam**
-    *   Create a timed exam simulator replicating the real FAA exam constraints, dynamically sampling from target competency areas.
-*   [ ] **4. Part 107 Ground School Dashboard Panel**
-    *   Add a tab to the Teacher Dashboard displaying sectional map query accuracy, mock exam passing rates, and regulation weak spots.
+### Week 22: Homeostatic Balance
+*   [x] **3. Standard B.LS1.3 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS1.3.
+    *   Create locked/unlocked interactive activity workspace for B.LS1.3.
+*   [x] **4. Telemetry and Dashboard Panels**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.

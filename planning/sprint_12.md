@@ -1,20 +1,22 @@
-# Sprint 12: Drone Engineering & Flight Physics Simulator (Weeks 23 & 24)
+# Sprint 12: Cellular Division & Photosynthesis (Weeks 23 & 24)
 
-**Status:** 🗄️ Backlog
-**Theme:** Implement a drone assembly workbench, 3D lift/thrust physics modeler, and flight telemetry ingestion services.
+**Status:** ✅ Completed
+**Theme:** Develop activities for B.LS1.4 (Mitosis and Differentiation) and B.LS1.5 (Photosynthesis Energy Transformation).
 
 ---
 
 ## 📋 Iteration Checklist
 
-### Week 23: Drone Assembly Workbench & Thrust Modeler
-*   [ ] **1. Drone Components Database Schema**
-    *   Create models to track frame configurations, motor KV ratings, propeller pitch, and battery voltages.
-*   [ ] **2. Lift, Thrust & Aerodynamics Physics Engine**
-    *   Build a 2D/3D physics calculator computing thrust-to-weight ratios, hover efficiencies, and battery discharge rates.
+### Week 23: Mitosis & Cell Differentiation
+*   [x] **1. Standard B.LS1.4 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS1.4.
+    *   Create locked/unlocked interactive activity workspace for B.LS1.4.
+*   [x] **2. Telemetry and BKT Integration**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.
 
-### Week 24: Flight In-App Telemetry & Logs
-*   [ ] **3. Real-Time Flight Path Log Ingestion**
-    *   Build `/api/telemetry/drone/` endpoint to ingest flight coordinates, tilt angles, motor RPMs, and power efficiency payloads.
-*   [ ] **4. Drone Flight Diagnostics Panel**
-    *   Add a diagnostics visualizer in the Student Portal showcasing motor temperature warnings and center-of-gravity calibration errors.
+### Week 24: Photosynthesis Energy Capture
+*   [x] **3. Standard B.LS1.5 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS1.5.
+    *   Create locked/unlocked interactive activity workspace for B.LS1.5.
+*   [x] **4. Telemetry and Dashboard Panels**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.

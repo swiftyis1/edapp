@@ -1,20 +1,22 @@
-# Sprint 13: Vertex AI Integration & CareerTech ML Predictor (Weeks 25 & 26)
+# Sprint 13: Macromolecule Synthesis & Respiration (Weeks 25 & 26)
 
-**Status:** 🗄️ Backlog
-**Theme:** Connect Google Cloud Vertex AI to predict student credential readiness and classify skill gaps using student telemetry.
+**Status:** ✅ Completed
+**Theme:** Develop activities for B.LS1.6 (Macromolecule Synthesis) and B.LS1.7 (Cellular Respiration Energy Transfer).
 
 ---
 
 ## 📋 Iteration Checklist
 
-### Week 25: Vertex AI Client & Model Connection
-*   [ ] **1. GCP Vertex AI API Service**
-    *   Integrate Google Cloud SDK and build a client service to dispatch student telemetry features (accuracy, response times, history) to a hosted model.
-*   [ ] **2. Feature Vector Compiler**
-    *   Build a background task to compile daily student performance vectors for BKT standard mastery levels.
+### Week 25: Carbon Compound Synthesizer
+*   [x] **1. Standard B.LS1.6 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS1.6.
+    *   Create locked/unlocked interactive activity workspace for B.LS1.6.
+*   [x] **2. Telemetry and BKT Integration**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.
 
-### Week 26: Credentials Readiness Predictor Panel
-*   [ ] **3. CareerTech Certification Predictor API**
-    *   Expose endpoints predicting student success odds on industry credentials (e.g. FAA Part 107, CompTIA A+, Autodesk animatronics certifications).
-*   [ ] **4. Teacher Prediction dashboard**
-    *   Build a Vertex AI Career readiness indicator map highlighting certification recommendation pathways for every student.
+### Week 26: Cellular Respiration Pathway
+*   [x] **3. Standard B.LS1.7 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS1.7.
+    *   Create locked/unlocked interactive activity workspace for B.LS1.7.
+*   [x] **4. Telemetry and Dashboard Panels**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.

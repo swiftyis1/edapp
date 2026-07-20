@@ -1,20 +1,22 @@
-# Sprint 15: Animatronics Microcontroller & Logic Gates Simulator (Weeks 29 & 30)
+# Sprint 15: Biogeochemical Cycling & Ecosystem Energy (Weeks 29 & 30)
 
-**Status:** 🗄️ Backlog
-**Theme:** Create a visual breadboard, logic gate circuit board designer, and microcontroller compiler simulation for high school robotics.
+**Status:** 🏃 Current Worklog
+**Theme:** Develop activities for B.LS2.3 (Cycling of Matter) and B.LS2.4 (Cycling of Matter Claim).
 
 ---
 
 ## 📋 Iteration Checklist
 
-### Week 29: Microcontroller Breadboard Simulator
-*   [ ] **1. Virtual Breadboard Canvas**
-    *   Build an interactive UI allowing students to place virtual microcontrollers, LED pins, resistors, servo motors, and ultrasonic sensors.
-*   [ ] **2. Schematic Logic Engine**
-    *   Develop schematic validation logic verifying correct wiring connections, voltage limits, and grounding paths.
+### Week 29: Aerobic & Anaerobic Matter Cycles
+*   [ ] **1. Standard B.LS2.3 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS2.3.
+    *   Create locked/unlocked interactive activity workspace for B.LS2.3.
+*   [ ] **2. Telemetry and BKT Integration**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.
 
-### Week 30: Animatronics Motor Control & Logic Scripting
-*   [ ] **3. Animatronics Logic Gate Builder**
-    *   Build a visual logic gate connector (AND, OR, NOT) to control motor activation states based on sensor inputs.
-*   [ ] **4. Microcontroller Code Compiler**
-    *   Create a virtual C++/Python code execution environment simulating microcontroller motor routines (e.g. eye blinking, jaw rotation animatronics).
+### Week 30: Ecosystem Energy Flow Pyramids
+*   [ ] **3. Standard B.LS2.4 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS2.4.
+    *   Create locked/unlocked interactive activity workspace for B.LS2.4.
+*   [ ] **4. Telemetry and Dashboard Panels**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.

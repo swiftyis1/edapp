@@ -1,20 +1,22 @@
-# Sprint 20: Comprehensive System Launch, Stress-Test & CCRA Calibration (Weeks 39 & 40)
+# Sprint 20: Advantageous Traits & Evolution Adaptation (Weeks 39 & 40)
 
-**Status:** 🗄️ Backlog
-**Theme:** Conduct load testing across all learning dashboards, finalize IRT calibration, and freeze production branches.
+**Status:** 🏃 Current Worklog
+**Theme:** Develop activities for B.LS4.3 (Advantageous Traits Frequency) and B.LS4.4 (Natural Selection Adaptation).
 
 ---
 
 ## 📋 Iteration Checklist
 
-### Week 39: Load Stress Testing & Scaling
-*   [ ] **1. K6 Load Testing Script for Dashboards**
-    *   Create load testing simulations to verify endpoints under concurrent school district sessions (10,000+ operations/sec).
-*   [ ] **2. Cache Layer and DB Optimization**
-    *   Implement Redis query caching for high-load Student BKT Mastery status responses.
+### Week 39: Advantageous Allele Drift Model
+*   [ ] **1. Standard B.LS4.3 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS4.3.
+    *   Create locked/unlocked interactive activity workspace for B.LS4.3.
+*   [ ] **2. Telemetry and BKT Integration**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.
 
-### Week 40: Production Branch Freeze & Final Release
-*   [ ] **3. Anchor Item IRT Calibration Check**
-    *   Conduct final alignment checks between BKT mastery levels and EOY state CCRA score datasets.
-*   [ ] **4. Production Branch Release Sign-Off**
-    *   Compile all test suites, freeze master branches, and configure production server deployment configurations.
+### Week 40: Adaptation & Natural Selection Explanation
+*   [ ] **3. Standard B.LS4.4 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS4.4.
+    *   Create locked/unlocked interactive activity workspace for B.LS4.4.
+*   [ ] **4. Telemetry and Dashboard Panels**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.

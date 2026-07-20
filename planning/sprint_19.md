@@ -1,20 +1,22 @@
-# Sprint 19: Student Portfolio Builder & CareerTech Credentials (Weeks 37 & 38)
+# Sprint 19: Common Ancestry & Selection Drivers (Weeks 37 & 38)
 
-**Status:** 🗄️ Backlog
-**Theme:** Create a public-facing digital portfolio portal highlighting student STEM projects, mock FAA credentials, and standard mastery reports.
+**Status:** 🏃 Current Worklog
+**Theme:** Develop activities for B.LS4.1 (Common Ancestry Evidence) and B.LS4.2 (Natural Selection Drivers).
 
 ---
 
 ## 📋 Iteration Checklist
 
-### Week 37: Student Project Portfolio Builder
-*   [ ] **1. Public Portfolio Database Schema**
-    *   Create `StudentPortfolio` and `PortfolioProject` models holding student accomplishments.
-*   [ ] **2. Rich Text & Media Uploader**
-    *   Allow students to publish design briefs, photos of animatronic boards, or code repositories.
+### Week 37: Comparative Anatomical Evidence
+*   [ ] **1. Standard B.LS4.1 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS4.1.
+    *   Create locked/unlocked interactive activity workspace for B.LS4.1.
+*   [ ] **2. Telemetry and BKT Integration**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.
 
-### Week 38: Certification Registry & Share Links
-*   [ ] **3. Dynamic PDF Credential Generator**
-    *   Implement an endpoint `/api/student/portfolio/credential-pdf/` generating customized course completion badges.
-*   [ ] **4. Shareable Portfolio URLs**
-    *   Provide students with secure, public links (`/portfolios/<random-hash>/`) to share credentials with colleges and employers.
+### Week 38: Resource Competition & Proliferation
+*   [ ] **3. Standard B.LS4.2 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS4.2.
+    *   Create locked/unlocked interactive activity workspace for B.LS4.2.
+*   [ ] **4. Telemetry and Dashboard Panels**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.

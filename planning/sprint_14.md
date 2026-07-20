@@ -1,20 +1,22 @@
-# Sprint 14: AI Ethics Simulator & Ethical Decision Trees (Weeks 27 & 28)
+# Sprint 14: Carrying Capacity & Biodiversity Scale (Weeks 27 & 28)
 
-**Status:** 🗄️ Backlog
-**Theme:** Create interactive case studies and decision-tree simulators addressing bias, safety, privacy, and accountability in AI applications.
+**Status:** ✅ Completed
+**Theme:** Develop activities for B.LS2.1 (Carrying Capacity Factors) and B.LS2.2 (Biodiversity Factors).
 
 ---
 
 ## 📋 Iteration Checklist
 
-### Week 27: AI Ethics Case Study Engine
-*   [ ] **1. Case Study Interactive Database**
-    *   Create models for ethical decision scenarios (e.g. self-driving car triage, algorithmic grading bias, facial recognition surveillance).
-*   [ ] **2. Scenario Choice Branching trees**
-    *   Build branching choice paths mapping student decisions to utilitarian, deontological, and virtue ethics frameworks.
+### Week 27: Carrying Capacity Simulator
+*   [x] **1. Standard B.LS2.1 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS2.1.
+    *   Create locked/unlocked interactive activity workspace for B.LS2.1.
+*   [x] **2. Telemetry and BKT Integration**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.
 
-### Week 28: Ethical Alignment Scoring & Logging
-*   [ ] **3. Bias Mitigation Simulator**
-    *   Build a data sanitization sandbox where students adjust data weights to eliminate gender/race bias in hiring algorithm parameters.
-*   [ ] **4. Ethics Telemetry Dashboard**
-    *   Add an ethical reasoning summary tab inside the Student Portfolio, showcasing their alignment scores across global AI ethics guidelines.
+### Week 28: Biodiversity Ecosystem Balance
+*   [x] **3. Standard B.LS2.2 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS2.2.
+    *   Create locked/unlocked interactive activity workspace for B.LS2.2.
+*   [x] **4. Telemetry and Dashboard Panels**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.

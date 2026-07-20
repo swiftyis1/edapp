@@ -89,11 +89,52 @@ def telemetry_receive(request):
     )
 
     # Trigger real-time BKT updates
-    if event_type in ['pair_base', 'codon_match_attempt', 'octet_rule_check']:
+    if event_type in ['pair_base', 'codon_match_attempt', 'octet_rule_check', 'mutation_check', 'dok1_activity_check', 'dok2_activity_check', 'dok3_activity_check', 'dok4_activity_check']:
         try:
             from .bkt_service import update_bkt_state_for_event
             is_correct = payload.get('is_correct', True)
-            update_bkt_state_for_event(student, event_type, is_correct)
+            
+            actual_event_type = event_type
+            if construct_tag == 'OAS.B.LS1.2':
+                actual_event_type = 'hierarchy_check'
+            elif construct_tag == 'OAS.B.LS1.3':
+                actual_event_type = 'homeostasis_check'
+            elif construct_tag == 'OAS.B.LS1.4':
+                actual_event_type = 'division_check'
+            elif construct_tag == 'OAS.B.LS1.5':
+                actual_event_type = 'photosynthesis_check'
+            elif construct_tag == 'OAS.B.LS1.6':
+                actual_event_type = 'synthesis_check'
+            elif construct_tag == 'OAS.B.LS1.7':
+                actual_event_type = 'respiration_check'
+            elif construct_tag == 'OAS.B.LS2.1':
+                actual_event_type = 'capacity_check'
+            elif construct_tag == 'OAS.B.LS2.2':
+                actual_event_type = 'biodiversity_check'
+            elif event_type in ['dok1_activity_check', 'dok2_activity_check', 'dok3_activity_check', 'dok4_activity_check']:
+                activity_id = payload.get('activity_id', '')
+                if activity_id in [
+                    'bio_dok1_act1', 'bio_dok1_act3', 'bio_dok1_act4', 'bio_dok1_act3_workspace', 'bio_dok1_act4_workspace',
+                    'bio_dok2_act1', 'bio_dok2_act1_workspace',
+                    'bio_dok3_act2', 'bio_dok3_act2_workspace', 'bio_dok3_act4', 'bio_dok3_act4_workspace', 'bio_dok3_act5', 'bio_dok3_act5_workspace',
+                    'bio_dok4_act1', 'bio_dok4_act1_workspace', 'bio_dok4_act2', 'bio_dok4_act2_workspace'
+                ]:
+                    actual_event_type = 'pair_base'
+                elif activity_id in [
+                    'bio_dok1_act2', 'bio_dok1_act5', 'bio_dok1_act2_workspace', 'bio_dok1_act5_workspace',
+                    'bio_dok2_act2', 'bio_dok2_act2_workspace', 'bio_dok2_act5', 'bio_dok2_act5_workspace',
+                    'bio_dok3_act3', 'bio_dok3_act3_workspace',
+                    'bio_dok4_act4', 'bio_dok4_act4_workspace', 'bio_dok4_act5', 'bio_dok4_act5_workspace'
+                ]:
+                    actual_event_type = 'codon_match_attempt'
+                elif activity_id in [
+                    'bio_dok2_act3', 'bio_dok2_act3_workspace', 'bio_dok2_act4', 'bio_dok2_act4_workspace',
+                    'bio_dok3_act1', 'bio_dok3_act1_workspace',
+                    'bio_dok4_act3', 'bio_dok4_act3_workspace'
+                ]:
+                    actual_event_type = 'mutation_check'
+            
+            update_bkt_state_for_event(student, actual_event_type, is_correct)
         except Exception as bkt_err:
             print(f"Error updating BKT in real-time: {str(bkt_err)}")
 
@@ -113,7 +154,7 @@ def telemetry_receive(request):
                 from .models import StudentBKTState, LTIGradeSyncLog
                 bkt_state = StudentBKTState.objects.filter(student=student).first()
                 if bkt_state:
-                    mastery = (bkt_state.transcription_p_know + bkt_state.translation_p_know + bkt_state.bonding_p_know) / 3
+                    mastery = (bkt_state.transcription_p_know + bkt_state.translation_p_know + bkt_state.mutation_p_know + bkt_state.bonding_p_know) / 4
                     opi_score = int(200 + mastery * 199)
                     
                     LTIGradeSyncLog.objects.create(
@@ -226,11 +267,27 @@ def teacher_report(request):
         from .models import StudentBKTState
         bkt_state = StudentBKTState.objects.filter(student=student).first()
         if bkt_state:
-            bkt_mastery = round(((bkt_state.transcription_p_know + bkt_state.translation_p_know) / 2) * 100, 1)
+            bkt_mastery = round(((bkt_state.transcription_p_know + bkt_state.translation_p_know + bkt_state.mutation_p_know) / 3) * 100, 1)
             bkt_bonding_mastery = round(bkt_state.bonding_p_know * 100, 1)
+            bkt_hierarchy_mastery = round(bkt_state.hierarchy_p_know * 100, 1)
+            bkt_homeostasis_mastery = round(bkt_state.homeostasis_p_know * 100, 1)
+            bkt_division_mastery = round(bkt_state.division_p_know * 100, 1)
+            bkt_photosynthesis_mastery = round(bkt_state.photosynthesis_p_know * 100, 1)
+            bkt_synthesis_mastery = round(bkt_state.synthesis_p_know * 100, 1)
+            bkt_respiration_mastery = round(bkt_state.respiration_p_know * 100, 1)
+            bkt_capacity_mastery = round(bkt_state.capacity_p_know * 100, 1)
+            bkt_biodiversity_mastery = round(bkt_state.biodiversity_p_know * 100, 1)
         else:
-            bkt_mastery = 17.5
+            bkt_mastery = 15.0
             bkt_bonding_mastery = 15.0
+            bkt_hierarchy_mastery = 15.0
+            bkt_homeostasis_mastery = 15.0
+            bkt_division_mastery = 15.0
+            bkt_photosynthesis_mastery = 15.0
+            bkt_synthesis_mastery = 15.0
+            bkt_respiration_mastery = 15.0
+            bkt_capacity_mastery = 15.0
+            bkt_biodiversity_mastery = 15.0
 
         report_data.append({
             "id": str(student.id),
@@ -244,7 +301,15 @@ def teacher_report(request):
             "status_flag": status_flag,
             "color_class": color_class,
             "bkt_mastery": bkt_mastery,
-            "bkt_bonding_mastery": bkt_bonding_mastery
+            "bkt_bonding_mastery": bkt_bonding_mastery,
+            "bkt_hierarchy_mastery": bkt_hierarchy_mastery,
+            "bkt_homeostasis_mastery": bkt_homeostasis_mastery,
+            "bkt_division_mastery": bkt_division_mastery,
+            "bkt_photosynthesis_mastery": bkt_photosynthesis_mastery,
+            "bkt_synthesis_mastery": bkt_synthesis_mastery,
+            "bkt_respiration_mastery": bkt_respiration_mastery,
+            "bkt_capacity_mastery": bkt_capacity_mastery,
+            "bkt_biodiversity_mastery": bkt_biodiversity_mastery
         })
 
     cache.set(cache_key, report_data, 300)
@@ -748,13 +813,31 @@ def parent_report(request):
     if bkt_state:
         bkt_transcription = round(bkt_state.transcription_p_know * 100, 1)
         bkt_translation = round(bkt_state.translation_p_know * 100, 1)
-        bkt_mastery = round(((bkt_state.transcription_p_know + bkt_state.translation_p_know) / 2) * 100, 1)
+        bkt_mutation = round(bkt_state.mutation_p_know * 100, 1)
+        bkt_mastery = round(((bkt_state.transcription_p_know + bkt_state.translation_p_know + bkt_state.mutation_p_know) / 3) * 100, 1)
         bkt_bonding_mastery = round(bkt_state.bonding_p_know * 100, 1)
+        bkt_hierarchy_mastery = round(bkt_state.hierarchy_p_know * 100, 1)
+        bkt_homeostasis_mastery = round(bkt_state.homeostasis_p_know * 100, 1)
+        bkt_division_mastery = round(bkt_state.division_p_know * 100, 1)
+        bkt_photosynthesis_mastery = round(bkt_state.photosynthesis_p_know * 100, 1)
+        bkt_synthesis_mastery = round(bkt_state.synthesis_p_know * 100, 1)
+        bkt_respiration_mastery = round(bkt_state.respiration_p_know * 100, 1)
+        bkt_capacity_mastery = round(bkt_state.capacity_p_know * 100, 1)
+        bkt_biodiversity_mastery = round(bkt_state.biodiversity_p_know * 100, 1)
     else:
         bkt_transcription = 20.0
         bkt_translation = 15.0
-        bkt_mastery = 17.5
+        bkt_mutation = 10.0
+        bkt_mastery = 15.0
         bkt_bonding_mastery = 15.0
+        bkt_hierarchy_mastery = 15.0
+        bkt_homeostasis_mastery = 15.0
+        bkt_division_mastery = 15.0
+        bkt_photosynthesis_mastery = 15.0
+        bkt_synthesis_mastery = 15.0
+        bkt_respiration_mastery = 15.0
+        bkt_capacity_mastery = 15.0
+        bkt_biodiversity_mastery = 15.0
 
     # Retrieve temporal BKT history milestones
     history_qs = StudentBKTHistory.objects.filter(student=student).order_by('timestamp')
@@ -784,8 +867,17 @@ def parent_report(request):
         "linked_children": [{"id": str(s.id), "name": s.name} for s in linked_students],
         "bkt_transcription": bkt_transcription,
         "bkt_translation": bkt_translation,
+        "bkt_mutation": bkt_mutation,
         "bkt_mastery": bkt_mastery,
         "bkt_bonding_mastery": bkt_bonding_mastery,
+        "bkt_hierarchy_mastery": bkt_hierarchy_mastery,
+        "bkt_homeostasis_mastery": bkt_homeostasis_mastery,
+        "bkt_division_mastery": bkt_division_mastery,
+        "bkt_photosynthesis_mastery": bkt_photosynthesis_mastery,
+        "bkt_synthesis_mastery": bkt_synthesis_mastery,
+        "bkt_respiration_mastery": bkt_respiration_mastery,
+        "bkt_capacity_mastery": bkt_capacity_mastery,
+        "bkt_biodiversity_mastery": bkt_biodiversity_mastery,
         "bkt_history": bkt_history_list
     }, status=status.HTTP_200_OK)
 
@@ -1560,7 +1652,7 @@ def osde_compliance_export(request):
             for student in students:
                 bkt_state = StudentBKTState.objects.filter(student=student).first()
                 if bkt_state:
-                    mastery = (bkt_state.transcription_p_know + bkt_state.translation_p_know + bkt_state.bonding_p_know) / 3
+                    mastery = (bkt_state.transcription_p_know + bkt_state.translation_p_know + bkt_state.mutation_p_know + bkt_state.bonding_p_know) / 4
                     score = int(200 + mastery * 199)
                 else:
                     score = 250

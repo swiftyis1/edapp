@@ -39,6 +39,7 @@ class Command(BaseCommand):
         bkt_state.transcription_p_know = 0.95
         bkt_state.translation_p_know = 0.90
         bkt_state.bonding_p_know = 0.88
+        bkt_state.mutation_p_know = 0.85
         bkt_state.save()
 
         # Create older telemetry event

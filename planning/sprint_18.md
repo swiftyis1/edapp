@@ -1,20 +1,22 @@
-# Sprint 18: Video Game Design Engine & Scripting Sandbox (Weeks 35 & 36)
+# Sprint 18: Genetic Variation & Statistical Distributions (Weeks 35 & 36)
 
-**Status:** 🗄️ Backlog
-**Theme:** Implement a visual 2D game editor, sprite sheets manager, and Javascript event loop scripting sandbox.
+**Status:** 🏃 Current Worklog
+**Theme:** Develop activities for B.LS3.2 (Genetic Variation Viable Errors) and B.LS3.3 (Statistics of Trait Distribution).
 
 ---
 
 ## 📋 Iteration Checklist
 
-### Week 35: Visual 2D Tilemap Editor
-*   [ ] **1. Game Projects Schema**
-    *   Create models to store sprite placements, grid tile configurations, and game state variables.
-*   [ ] **2. 2D Sprite Grid Canvas**
-    *   Implement an interactive 16x16 grid tile selector to draw levels and lay obstacles.
+### Week 35: Meiosis & Mutation Source Code
+*   [ ] **1. Standard B.LS3.2 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS3.2.
+    *   Create locked/unlocked interactive activity workspace for B.LS3.2.
+*   [ ] **2. Telemetry and BKT Integration**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.
 
-### Week 36: Event Loop Scripting & Physics Sandbox
-*   [ ] **3. Sandbox JS Collision Script Editor**
-    *   Integrate a code window for students to write simple collision triggers and velocity commands.
-*   [ ] **4. Game Script Ingestion Telemetry**
-    *   Log game compilation errors, playtest loops, and game completion durations to measure logic fluency.
+### Week 36: Trait Frequency Statistics Grid
+*   [ ] **3. Standard B.LS3.3 Activities Setup**
+    *   Implement 10-question bank for each of the 5 activities for each of the 4 DOK levels (200 questions total) and interactive 3-question quiz before each activity for B.LS3.3.
+    *   Create locked/unlocked interactive activity workspace for B.LS3.3.
+*   [ ] **4. Telemetry and Dashboard Panels**
+    *   Wire telemetry hooks for checks and completions, and add BKT parameters.
