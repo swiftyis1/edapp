@@ -216,6 +216,30 @@ class StudentBKTState(models.Model):
     stability_p_guess = models.FloatField(default=0.20)
     stability_p_slip = models.FloatField(default=0.10)
     stability_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Group Behavior Evidence (OAS B.LS2.8)
+    behavior_p_know = models.FloatField(default=0.15)
+    behavior_p_guess = models.FloatField(default=0.20)
+    behavior_p_slip = models.FloatField(default=0.10)
+    behavior_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Genetics Inheritable Traits (OAS B.LS3.1)
+    inheritance_p_know = models.FloatField(default=0.15)
+    inheritance_p_guess = models.FloatField(default=0.20)
+    inheritance_p_slip = models.FloatField(default=0.10)
+    inheritance_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Genetic Variation Viable Errors (OAS B.LS3.2)
+    variation_p_know = models.FloatField(default=0.15)
+    variation_p_guess = models.FloatField(default=0.20)
+    variation_p_slip = models.FloatField(default=0.10)
+    variation_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Statistics of Trait Distribution (OAS B.LS3.3)
+    statistics_p_know = models.FloatField(default=0.15)
+    statistics_p_guess = models.FloatField(default=0.20)
+    statistics_p_slip = models.FloatField(default=0.10)
+    statistics_p_transit = models.FloatField(default=0.15)
     
     last_updated = models.DateTimeField(auto_now=True)
 

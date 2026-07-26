@@ -253,6 +253,66 @@ def update_bkt_state_for_event(student, event_type, is_correct):
             
         state.stability_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
 
+    elif event_type == 'behavior_check':
+        p_know = state.behavior_p_know
+        p_guess = state.behavior_p_guess
+        p_slip = state.behavior_p_slip
+        p_transit = state.behavior_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.behavior_p_slip = max(0.02, state.behavior_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.behavior_p_slip = min(0.30, state.behavior_p_slip + 0.01)
+            
+        state.behavior_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'inheritance_check':
+        p_know = state.inheritance_p_know
+        p_guess = state.inheritance_p_guess
+        p_slip = state.inheritance_p_slip
+        p_transit = state.inheritance_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.inheritance_p_slip = max(0.02, state.inheritance_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.inheritance_p_slip = min(0.30, state.inheritance_p_slip + 0.01)
+            
+        state.inheritance_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'variation_check':
+        p_know = state.variation_p_know
+        p_guess = state.variation_p_guess
+        p_slip = state.variation_p_slip
+        p_transit = state.variation_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.variation_p_slip = max(0.02, state.variation_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.variation_p_slip = min(0.30, state.variation_p_slip + 0.01)
+            
+        state.variation_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'statistics_check':
+        p_know = state.statistics_p_know
+        p_guess = state.statistics_p_guess
+        p_slip = state.statistics_p_slip
+        p_transit = state.statistics_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.statistics_p_slip = max(0.02, state.statistics_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.statistics_p_slip = min(0.30, state.statistics_p_slip + 0.01)
+            
+        state.statistics_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
     state.save()
 
     # Append to BKT History for temporal growth charting
@@ -340,6 +400,30 @@ def update_bkt_state_for_event(student, event_type, is_correct):
             student=student,
             construct_tag='OAS.B.LS2.6',
             p_know=state.stability_p_know
+        )
+    elif event_type == 'behavior_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS2.8',
+            p_know=state.behavior_p_know
+        )
+    elif event_type == 'inheritance_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS3.1',
+            p_know=state.inheritance_p_know
+        )
+    elif event_type == 'variation_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS3.2',
+            p_know=state.variation_p_know
+        )
+    elif event_type == 'statistics_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS3.3',
+            p_know=state.statistics_p_know
         )
 
     return state

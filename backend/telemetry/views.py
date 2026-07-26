@@ -119,6 +119,14 @@ def telemetry_receive(request):
                 actual_event_type = 'carbon_check'
             elif construct_tag == 'OAS.B.LS2.6':
                 actual_event_type = 'stability_check'
+            elif construct_tag == 'OAS.B.LS2.8':
+                actual_event_type = 'behavior_check'
+            elif construct_tag == 'OAS.B.LS3.1':
+                actual_event_type = 'inheritance_check'
+            elif construct_tag == 'OAS.B.LS3.2':
+                actual_event_type = 'variation_check'
+            elif construct_tag == 'OAS.B.LS3.3':
+                actual_event_type = 'statistics_check'
             elif event_type in ['dok1_activity_check', 'dok2_activity_check', 'dok3_activity_check', 'dok4_activity_check']:
                 activity_id = payload.get('activity_id', '')
                 if activity_id in [
@@ -289,6 +297,10 @@ def teacher_report(request):
             bkt_energy_mastery = round(bkt_state.energy_p_know * 100, 1)
             bkt_carbon_mastery = round(bkt_state.carbon_p_know * 100, 1)
             bkt_stability_mastery = round(bkt_state.stability_p_know * 100, 1)
+            bkt_behavior_mastery = round(bkt_state.behavior_p_know * 100, 1)
+            bkt_inheritance_mastery = round(bkt_state.inheritance_p_know * 100, 1)
+            bkt_variation_mastery = round(bkt_state.variation_p_know * 100, 1)
+            bkt_statistics_mastery = round(bkt_state.statistics_p_know * 100, 1)
         else:
             bkt_mastery = 15.0
             bkt_bonding_mastery = 15.0
@@ -304,6 +316,10 @@ def teacher_report(request):
             bkt_energy_mastery = 15.0
             bkt_carbon_mastery = 15.0
             bkt_stability_mastery = 15.0
+            bkt_behavior_mastery = 15.0
+            bkt_inheritance_mastery = 15.0
+            bkt_variation_mastery = 15.0
+            bkt_statistics_mastery = 15.0
 
         report_data.append({
             "id": str(student.id),
@@ -329,7 +345,11 @@ def teacher_report(request):
             "bkt_matter_mastery": bkt_matter_mastery,
             "bkt_energy_mastery": bkt_energy_mastery,
             "bkt_carbon_mastery": bkt_carbon_mastery,
-            "bkt_stability_mastery": bkt_stability_mastery
+            "bkt_stability_mastery": bkt_stability_mastery,
+            "bkt_behavior_mastery": bkt_behavior_mastery,
+            "bkt_inheritance_mastery": bkt_inheritance_mastery,
+            "bkt_variation_mastery": bkt_variation_mastery,
+            "bkt_statistics_mastery": bkt_statistics_mastery
         })
 
     cache.set(cache_key, report_data, 300)
@@ -848,6 +868,10 @@ def parent_report(request):
         bkt_energy_mastery = round(bkt_state.energy_p_know * 100, 1)
         bkt_carbon_mastery = round(bkt_state.carbon_p_know * 100, 1)
         bkt_stability_mastery = round(bkt_state.stability_p_know * 100, 1)
+        bkt_behavior_mastery = round(bkt_state.behavior_p_know * 100, 1)
+        bkt_inheritance_mastery = round(bkt_state.inheritance_p_know * 100, 1)
+        bkt_variation_mastery = round(bkt_state.variation_p_know * 100, 1)
+        bkt_statistics_mastery = round(bkt_state.statistics_p_know * 100, 1)
     else:
         bkt_transcription = 20.0
         bkt_translation = 15.0
@@ -866,6 +890,10 @@ def parent_report(request):
         bkt_energy_mastery = 15.0
         bkt_carbon_mastery = 15.0
         bkt_stability_mastery = 15.0
+        bkt_behavior_mastery = 15.0
+        bkt_inheritance_mastery = 15.0
+        bkt_variation_mastery = 15.0
+        bkt_statistics_mastery = 15.0
 
     # Retrieve temporal BKT history milestones
     history_qs = StudentBKTHistory.objects.filter(student=student).order_by('timestamp')
@@ -910,6 +938,10 @@ def parent_report(request):
         "bkt_energy_mastery": bkt_energy_mastery,
         "bkt_carbon_mastery": bkt_carbon_mastery,
         "bkt_stability_mastery": bkt_stability_mastery,
+        "bkt_behavior_mastery": bkt_behavior_mastery,
+        "bkt_inheritance_mastery": bkt_inheritance_mastery,
+        "bkt_variation_mastery": bkt_variation_mastery,
+        "bkt_statistics_mastery": bkt_statistics_mastery,
         "bkt_history": bkt_history_list
     }, status=status.HTTP_200_OK)
 

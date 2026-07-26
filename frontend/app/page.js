@@ -1258,6 +1258,370 @@ const ACTIVITIES_DATABASE = {
     }
   ]
 }
+,
+  "OAS.B.LS2.8": {
+  "1": [
+    {
+      "name": "Group Behavior Sorter",
+      "description": "Classify animal activities as individual behaviors vs. social group behaviors."
+    },
+    {
+      "name": "Group Taxonomy Match",
+      "description": "Identify species exhibiting schooling, herding, flocking, or pack hunting."
+    },
+    {
+      "name": "Migration Path Match",
+      "description": "Match migration routes of birds, salmon, and wildebeests to their seasonal cues."
+    },
+    {
+      "name": "Cooperative Breeding Sorter",
+      "description": "Explain help-at-the-nest cooperative breeding models in bird families."
+    },
+    {
+      "name": "Pheromone Trail Sorter",
+      "description": "Trace chemical signaling pathways coordinating foraging behaviors in ant colonies."
+    }
+  ],
+  "2": [
+    {
+      "name": "Evolutionary Benefit Match",
+      "description": "Match pack hunting, herding, and flocking to their specific survival advantages."
+    },
+    {
+      "name": "Kin Selection Calculator",
+      "description": "Determine genetic relatedness coefficients (Hamilton's Rule) for altruistic help."
+    },
+    {
+      "name": "Eusocial Caste Sorter",
+      "description": "Classify queen, drone, and worker roles in social insect hives."
+    },
+    {
+      "name": "Sentinel Safety Benefit",
+      "description": "Evaluate alarm calling benefit ratios for meerkats vs. direct warning costs."
+    },
+    {
+      "name": "Thermal Conservation Match",
+      "description": "Measure metabolic energy savings from emperor penguin group huddling."
+    }
+  ],
+  "3": [
+    {
+      "name": "Flocking Density Sandbox",
+      "description": "Calibrate starling flocking alignment weights and cohesion forces in a simulator."
+    },
+    {
+      "name": "Predator Confusion Sandbox",
+      "description": "Measure pack attack success rates as fish school swarming speeds increase."
+    },
+    {
+      "name": "Altruism Donor Simulator",
+      "description": "Simulate helper bird population growth under varied environmental pressures."
+    },
+    {
+      "name": "V-Formation Wind Tunnel",
+      "description": "Adjust bird aerodynamic alignments in V-formation flight to minimize drag."
+    },
+    {
+      "name": "Group Size Optimizer",
+      "description": "Model optimal lion pride territories based on pride count and prey density."
+    }
+  ],
+  "4": [
+    {
+      "name": "Group Foraging Optimizer",
+      "description": "Calibrate group sizing and foraging scouting ranges to maximize per-capita energy yield."
+    },
+    {
+      "name": "Optimal Hive Selection Tuner",
+      "description": "Analyze honeybee scout waggle dance duration to optimize nest choice rates."
+    },
+    {
+      "name": "Baboon Dominance Hierarchy",
+      "description": "Tune social rank variables and coalition strategies to optimize fitness outputs."
+    },
+    {
+      "name": "Schooling Fluid Dynamics",
+      "description": "Calibrate school proximity parameters to maximize swimming efficiency."
+    },
+    {
+      "name": "Territorial Cooperative Defense",
+      "description": "Optimize sentry rotation times to defend clan boundaries from rivals."
+    }
+  ]
+}
+,
+  "OAS.B.LS3.1": {
+  "1": [
+    {
+      "name": "DNA to Protein Flow",
+      "description": "Match transcription, translation, and replication definitions to their roles."
+    },
+    {
+      "name": "Genetic Macromolecules Sorter",
+      "description": "Differentiate double-stranded DNA from single-stranded mRNA and tRNA structure."
+    },
+    {
+      "name": "Transcription Enzymatic Match",
+      "description": "Identify RNA polymerase binding to promoter sequences to start transcription."
+    },
+    {
+      "name": "Translation Ribosome Sorter",
+      "description": "Track mRNA codon pairing with tRNA anticodons in the ribosome assembly site."
+    },
+    {
+      "name": "Protein Folding Sorter",
+      "description": "Explain how primary amino acid chains fold into functional shapes."
+    }
+  ],
+  "2": [
+    {
+      "name": "Genotypic Sorter",
+      "description": "Classify F1 and F2 crosses, monohybrid crosses, and dihybrid crosses."
+    },
+    {
+      "name": "Mendelian Codominance Match",
+      "description": "Differentiate complete dominance from codominance and incomplete dominance."
+    },
+    {
+      "name": "Sex-Linked Inheritance Sorter",
+      "description": "Trace hemophilia or color blindness patterns on X and Y chromosomes."
+    },
+    {
+      "name": "Multiple Alleles Blood Type",
+      "description": "Predict human ABO blood phenotypes from maternal/paternal genotype pairs."
+    },
+    {
+      "name": "Pedigree Chronological Sorter",
+      "description": "Analyze familial traits across generations to determine autosomal inheritance."
+    }
+  ],
+  "3": [
+    {
+      "name": "Punnett Square Calculator",
+      "description": "Calculate and predict genotypic and phenotypic ratios for monohybrid crosses."
+    },
+    {
+      "name": "Dihybrid Cross Predictor",
+      "description": "Predict phenotypic distributions of two independent assorting genes."
+    },
+    {
+      "name": "Non-Mendelian Epistasis Sandbox",
+      "description": "Determine coat color outputs in Labrador retrievers involving epistatic genes."
+    },
+    {
+      "name": "Polygenic Trait Simulator",
+      "description": "Model skin pigmentation ranges dictated by three additive gene loci."
+    },
+    {
+      "name": "Genotype to Phenotype Map",
+      "description": "Map gene activations to plant height outcomes under varied sunlight."
+    }
+  ],
+  "4": [
+    {
+      "name": "Gene Linkage Map Tuner",
+      "description": "Calibrate recombination frequencies between genes to draw chromosomal linkage maps."
+    },
+    {
+      "name": "Pedigree Disease Diagnosis",
+      "description": "Determine disease genotypes of family ancestors given clinical phenotypes."
+    },
+    {
+      "name": "Karyotype Mutation Classifier",
+      "description": "Identify chromosomal trisomy or deletion mutations in genetic karyotypes."
+    },
+    {
+      "name": "Epigenetic Methylation Sandbox",
+      "description": "Model transcription suppression rates as chromatin methylation increases."
+    },
+    {
+      "name": "Gene Drive Segregation Tuner",
+      "description": "Calibrate CRISPR gene drive inheritance parameters to modify wild populations."
+    }
+  ]
+}
+,
+  "OAS.B.LS3.2": {
+  "1": [
+    {
+      "name": "Meiosis Stage Match",
+      "description": "Identify meiotic phases including crossover, homologous separation, and chromatid division."
+    },
+    {
+      "name": "Meiosis vs. Mitosis Sorter",
+      "description": "Differentiate diploid somatic mitosis from haploid gamete meiosis."
+    },
+    {
+      "name": "Gamete Ploidy Match",
+      "description": "Recall haploid (n) vs. diploid (2n) status in zygotes, sperm, and eggs."
+    },
+    {
+      "name": "Independent Assortment Phase",
+      "description": "Identify Metaphase I as the stage where homologous chromosomes align randomly."
+    },
+    {
+      "name": "Homologous Chromosome Match",
+      "description": "Explain pairing of maternal and paternal matching chromosomes in Prophase I."
+    }
+  ],
+  "2": [
+    {
+      "name": "Mutation Type Match",
+      "description": "Classify frameshifts, silent mutations, and missense/nonsense mutations."
+    },
+    {
+      "name": "Nondisjunction Sorter",
+      "description": "Identify errors where chromosomes fail to separate during Anaphase I or II."
+    },
+    {
+      "name": "Mutagenic Agent Sorter",
+      "description": "Classify physical (UV, X-rays) vs. chemical (benzene, nitrous acid) mutagens."
+    },
+    {
+      "name": "Aneuploidy Disease Sorter",
+      "description": "Match chromosomal anomalies to Down, Turner, and Klinefelter syndromes."
+    },
+    {
+      "name": "Translocation Mutation Match",
+      "description": "Differentiate chromosomal inversion from deletion, duplication, and translocation."
+    }
+  ],
+  "3": [
+    {
+      "name": "Crossing Over Sandbox",
+      "description": "Calibrate chiasmata counts and spindle tensions to simulate genetic crossing over."
+    },
+    {
+      "name": "Independent Assortment Sandbox",
+      "description": "Determine unique gamete counts as chromosome count increases."
+    },
+    {
+      "name": "DNA Polymerase Proofreading",
+      "description": "Simulate DNA repair enzymes correcting replication mutations."
+    },
+    {
+      "name": "Base Excision Repair sandbox",
+      "description": "Track cellular removal of thymine dimers induced by UV radiation."
+    },
+    {
+      "name": "Mismatch Repair Sandbox",
+      "description": "Model replication error fixes by tracking template strand methylation."
+    }
+  ],
+  "4": [
+    {
+      "name": "Mutation Survival Optimizer",
+      "description": "Calibrate mutagen exposure and repair efficiency to optimize cell survivability."
+    },
+    {
+      "name": "Nondisjunction Rate Sandbox",
+      "description": "Calibrate maternal age variables to predict nondisjunction occurrences."
+    },
+    {
+      "name": "Somatosensory Mutation Accumulation",
+      "description": "Model cancer progression rates as multiple driver mutations accumulate."
+    },
+    {
+      "name": "Mitochondrial Inheritance Sorter",
+      "description": "Trace maternal-only mitochondrial inheritance pathways through pedigree trees."
+    },
+    {
+      "name": "Transposable Element Sandbox",
+      "description": "Model genomic variance jumps as transposons cut-and-paste into introns."
+    }
+  ]
+}
+,
+  "OAS.B.LS3.3": {
+  "1": [
+    {
+      "name": "Distribution Types Match",
+      "description": "Match Height, Pea Seed color, and Skewed selections to curve graphs."
+    },
+    {
+      "name": "Quantitative vs. Qualitative Traits",
+      "description": "Differentiate continuous polygenic traits from discrete single-gene phenotypes."
+    },
+    {
+      "name": "Standard Deviation Baseline",
+      "description": "Identify standard deviation (sigma) boundaries on normal distribution curves."
+    },
+    {
+      "name": "Environmental Variation",
+      "description": "Identify non-genetic phenotypical variation caused by food or soil pH."
+    },
+    {
+      "name": "Hardy-Weinberg Assumptions",
+      "description": "Recall five conditions required for genetic equilibrium (large population, no mutation, random mating, etc.)."
+    }
+  ],
+  "2": [
+    {
+      "name": "Selection Type Match",
+      "description": "Classify stabilizing selection, directional selection, and disruptive selection."
+    },
+    {
+      "name": "Hardy-Weinberg Variables",
+      "description": "Differentiate allele frequencies (p, q) from genotype frequencies (p2, 2pq, q2)."
+    },
+    {
+      "name": "Genetic Drift Bottlenecks",
+      "description": "Contrast directional natural selection against random genetic drift shifts."
+    },
+    {
+      "name": "Assortative Mating Sorter",
+      "description": "Explain how non-random mating skews homozygous genotype counts."
+    },
+    {
+      "name": "Founder Effect Sorter",
+      "description": "Trace gene frequency shifts as a small subset colonizes a new island."
+    }
+  ],
+  "3": [
+    {
+      "name": "Trait Frequency Calculator",
+      "description": "Calculate allele frequencies from recessive homozygous phenotype frequencies."
+    },
+    {
+      "name": "Hardy-Weinberg Equilibrium Solver",
+      "description": "Solve for homozygous dominant and heterozygous genotypic rates."
+    },
+    {
+      "name": "Selection Differential Simulator",
+      "description": "Determine population mean trait shift under intense breeder selection."
+    },
+    {
+      "name": "Genetic Drift Sandbox",
+      "description": "Observe allele extinction probabilities as population size decreases."
+    },
+    {
+      "name": "Gene Flow Migration sandbox",
+      "description": "Analyze allele homogenization rates between two connected populations."
+    }
+  ],
+  "4": [
+    {
+      "name": "Hardy-Weinberg Tuner",
+      "description": "Calibrate initial p allele frequencies and selection coefficients to shift traits."
+    },
+    {
+      "name": "Quantitative Genetics Breeder",
+      "description": "Design selective breeding schedules to maximize crop sugar yield distribution."
+    },
+    {
+      "name": "Balanced Polymorphism Tuner",
+      "description": "Calibrate selection coefficients to maintain sickle cell alleles via heterozygote advantage."
+    },
+    {
+      "name": "Frequency-Dependent Selection",
+      "description": "Model scale-eating fish allele cycles as prey adapt to common side bites."
+    },
+    {
+      "name": "Heritability Estimator Tuner",
+      "description": "Calibrate parent-offspring regression slopes to extract trait heritability."
+    }
+  ]
+}
 };
 
 const BIO_DOK1_ACT1_VARIANTS = [
@@ -23211,6 +23575,8210 @@ const DOK_QUIZ_BANKS = {
     ]
   ]
 }
+,
+  "OAS.B.LS2.8": {
+  "1": [
+    [
+      {
+        "question": "Behavior DOK1 Act1 Q0: Classify social group vs individual behaviors 0.",
+        "options": [
+          "Behavior mode 0",
+          "Individual 0",
+          "Group 0",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 0"
+      },
+      {
+        "question": "Behavior DOK1 Act1 Q1: Classify social group vs individual behaviors 1.",
+        "options": [
+          "Behavior mode 1",
+          "Individual 1",
+          "Group 1",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 1"
+      },
+      {
+        "question": "Behavior DOK1 Act1 Q2: Classify social group vs individual behaviors 2.",
+        "options": [
+          "Behavior mode 2",
+          "Individual 2",
+          "Group 2",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 2"
+      },
+      {
+        "question": "Behavior DOK1 Act1 Q3: Classify social group vs individual behaviors 3.",
+        "options": [
+          "Behavior mode 3",
+          "Individual 3",
+          "Group 3",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 3"
+      },
+      {
+        "question": "Behavior DOK1 Act1 Q4: Classify social group vs individual behaviors 4.",
+        "options": [
+          "Behavior mode 4",
+          "Individual 4",
+          "Group 4",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 4"
+      },
+      {
+        "question": "Behavior DOK1 Act1 Q5: Classify social group vs individual behaviors 5.",
+        "options": [
+          "Behavior mode 5",
+          "Individual 5",
+          "Group 5",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 5"
+      },
+      {
+        "question": "Behavior DOK1 Act1 Q6: Classify social group vs individual behaviors 6.",
+        "options": [
+          "Behavior mode 6",
+          "Individual 6",
+          "Group 6",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 6"
+      },
+      {
+        "question": "Behavior DOK1 Act1 Q7: Classify social group vs individual behaviors 7.",
+        "options": [
+          "Behavior mode 7",
+          "Individual 7",
+          "Group 7",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 7"
+      },
+      {
+        "question": "Behavior DOK1 Act1 Q8: Classify social group vs individual behaviors 8.",
+        "options": [
+          "Behavior mode 8",
+          "Individual 8",
+          "Group 8",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 8"
+      },
+      {
+        "question": "Behavior DOK1 Act1 Q9: Classify social group vs individual behaviors 9.",
+        "options": [
+          "Behavior mode 9",
+          "Individual 9",
+          "Group 9",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK1 Act2 Q0: Classify social group vs individual behaviors 0.",
+        "options": [
+          "Behavior mode 0",
+          "Individual 0",
+          "Group 0",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 0"
+      },
+      {
+        "question": "Behavior DOK1 Act2 Q1: Classify social group vs individual behaviors 1.",
+        "options": [
+          "Behavior mode 1",
+          "Individual 1",
+          "Group 1",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 1"
+      },
+      {
+        "question": "Behavior DOK1 Act2 Q2: Classify social group vs individual behaviors 2.",
+        "options": [
+          "Behavior mode 2",
+          "Individual 2",
+          "Group 2",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 2"
+      },
+      {
+        "question": "Behavior DOK1 Act2 Q3: Classify social group vs individual behaviors 3.",
+        "options": [
+          "Behavior mode 3",
+          "Individual 3",
+          "Group 3",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 3"
+      },
+      {
+        "question": "Behavior DOK1 Act2 Q4: Classify social group vs individual behaviors 4.",
+        "options": [
+          "Behavior mode 4",
+          "Individual 4",
+          "Group 4",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 4"
+      },
+      {
+        "question": "Behavior DOK1 Act2 Q5: Classify social group vs individual behaviors 5.",
+        "options": [
+          "Behavior mode 5",
+          "Individual 5",
+          "Group 5",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 5"
+      },
+      {
+        "question": "Behavior DOK1 Act2 Q6: Classify social group vs individual behaviors 6.",
+        "options": [
+          "Behavior mode 6",
+          "Individual 6",
+          "Group 6",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 6"
+      },
+      {
+        "question": "Behavior DOK1 Act2 Q7: Classify social group vs individual behaviors 7.",
+        "options": [
+          "Behavior mode 7",
+          "Individual 7",
+          "Group 7",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 7"
+      },
+      {
+        "question": "Behavior DOK1 Act2 Q8: Classify social group vs individual behaviors 8.",
+        "options": [
+          "Behavior mode 8",
+          "Individual 8",
+          "Group 8",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 8"
+      },
+      {
+        "question": "Behavior DOK1 Act2 Q9: Classify social group vs individual behaviors 9.",
+        "options": [
+          "Behavior mode 9",
+          "Individual 9",
+          "Group 9",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK1 Act3 Q0: Classify social group vs individual behaviors 0.",
+        "options": [
+          "Behavior mode 0",
+          "Individual 0",
+          "Group 0",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 0"
+      },
+      {
+        "question": "Behavior DOK1 Act3 Q1: Classify social group vs individual behaviors 1.",
+        "options": [
+          "Behavior mode 1",
+          "Individual 1",
+          "Group 1",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 1"
+      },
+      {
+        "question": "Behavior DOK1 Act3 Q2: Classify social group vs individual behaviors 2.",
+        "options": [
+          "Behavior mode 2",
+          "Individual 2",
+          "Group 2",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 2"
+      },
+      {
+        "question": "Behavior DOK1 Act3 Q3: Classify social group vs individual behaviors 3.",
+        "options": [
+          "Behavior mode 3",
+          "Individual 3",
+          "Group 3",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 3"
+      },
+      {
+        "question": "Behavior DOK1 Act3 Q4: Classify social group vs individual behaviors 4.",
+        "options": [
+          "Behavior mode 4",
+          "Individual 4",
+          "Group 4",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 4"
+      },
+      {
+        "question": "Behavior DOK1 Act3 Q5: Classify social group vs individual behaviors 5.",
+        "options": [
+          "Behavior mode 5",
+          "Individual 5",
+          "Group 5",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 5"
+      },
+      {
+        "question": "Behavior DOK1 Act3 Q6: Classify social group vs individual behaviors 6.",
+        "options": [
+          "Behavior mode 6",
+          "Individual 6",
+          "Group 6",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 6"
+      },
+      {
+        "question": "Behavior DOK1 Act3 Q7: Classify social group vs individual behaviors 7.",
+        "options": [
+          "Behavior mode 7",
+          "Individual 7",
+          "Group 7",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 7"
+      },
+      {
+        "question": "Behavior DOK1 Act3 Q8: Classify social group vs individual behaviors 8.",
+        "options": [
+          "Behavior mode 8",
+          "Individual 8",
+          "Group 8",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 8"
+      },
+      {
+        "question": "Behavior DOK1 Act3 Q9: Classify social group vs individual behaviors 9.",
+        "options": [
+          "Behavior mode 9",
+          "Individual 9",
+          "Group 9",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK1 Act4 Q0: Classify social group vs individual behaviors 0.",
+        "options": [
+          "Behavior mode 0",
+          "Individual 0",
+          "Group 0",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 0"
+      },
+      {
+        "question": "Behavior DOK1 Act4 Q1: Classify social group vs individual behaviors 1.",
+        "options": [
+          "Behavior mode 1",
+          "Individual 1",
+          "Group 1",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 1"
+      },
+      {
+        "question": "Behavior DOK1 Act4 Q2: Classify social group vs individual behaviors 2.",
+        "options": [
+          "Behavior mode 2",
+          "Individual 2",
+          "Group 2",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 2"
+      },
+      {
+        "question": "Behavior DOK1 Act4 Q3: Classify social group vs individual behaviors 3.",
+        "options": [
+          "Behavior mode 3",
+          "Individual 3",
+          "Group 3",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 3"
+      },
+      {
+        "question": "Behavior DOK1 Act4 Q4: Classify social group vs individual behaviors 4.",
+        "options": [
+          "Behavior mode 4",
+          "Individual 4",
+          "Group 4",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 4"
+      },
+      {
+        "question": "Behavior DOK1 Act4 Q5: Classify social group vs individual behaviors 5.",
+        "options": [
+          "Behavior mode 5",
+          "Individual 5",
+          "Group 5",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 5"
+      },
+      {
+        "question": "Behavior DOK1 Act4 Q6: Classify social group vs individual behaviors 6.",
+        "options": [
+          "Behavior mode 6",
+          "Individual 6",
+          "Group 6",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 6"
+      },
+      {
+        "question": "Behavior DOK1 Act4 Q7: Classify social group vs individual behaviors 7.",
+        "options": [
+          "Behavior mode 7",
+          "Individual 7",
+          "Group 7",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 7"
+      },
+      {
+        "question": "Behavior DOK1 Act4 Q8: Classify social group vs individual behaviors 8.",
+        "options": [
+          "Behavior mode 8",
+          "Individual 8",
+          "Group 8",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 8"
+      },
+      {
+        "question": "Behavior DOK1 Act4 Q9: Classify social group vs individual behaviors 9.",
+        "options": [
+          "Behavior mode 9",
+          "Individual 9",
+          "Group 9",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK1 Act5 Q0: Classify social group vs individual behaviors 0.",
+        "options": [
+          "Behavior mode 0",
+          "Individual 0",
+          "Group 0",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 0"
+      },
+      {
+        "question": "Behavior DOK1 Act5 Q1: Classify social group vs individual behaviors 1.",
+        "options": [
+          "Behavior mode 1",
+          "Individual 1",
+          "Group 1",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 1"
+      },
+      {
+        "question": "Behavior DOK1 Act5 Q2: Classify social group vs individual behaviors 2.",
+        "options": [
+          "Behavior mode 2",
+          "Individual 2",
+          "Group 2",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 2"
+      },
+      {
+        "question": "Behavior DOK1 Act5 Q3: Classify social group vs individual behaviors 3.",
+        "options": [
+          "Behavior mode 3",
+          "Individual 3",
+          "Group 3",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 3"
+      },
+      {
+        "question": "Behavior DOK1 Act5 Q4: Classify social group vs individual behaviors 4.",
+        "options": [
+          "Behavior mode 4",
+          "Individual 4",
+          "Group 4",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 4"
+      },
+      {
+        "question": "Behavior DOK1 Act5 Q5: Classify social group vs individual behaviors 5.",
+        "options": [
+          "Behavior mode 5",
+          "Individual 5",
+          "Group 5",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 5"
+      },
+      {
+        "question": "Behavior DOK1 Act5 Q6: Classify social group vs individual behaviors 6.",
+        "options": [
+          "Behavior mode 6",
+          "Individual 6",
+          "Group 6",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 6"
+      },
+      {
+        "question": "Behavior DOK1 Act5 Q7: Classify social group vs individual behaviors 7.",
+        "options": [
+          "Behavior mode 7",
+          "Individual 7",
+          "Group 7",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 7"
+      },
+      {
+        "question": "Behavior DOK1 Act5 Q8: Classify social group vs individual behaviors 8.",
+        "options": [
+          "Behavior mode 8",
+          "Individual 8",
+          "Group 8",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 8"
+      },
+      {
+        "question": "Behavior DOK1 Act5 Q9: Classify social group vs individual behaviors 9.",
+        "options": [
+          "Behavior mode 9",
+          "Individual 9",
+          "Group 9",
+          "Altruistic"
+        ],
+        "answer": "Behavior mode 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Behavior DOK2 Act1 Q0: Explain biological evolutionary value of pack behavior 0.",
+        "options": [
+          "Survival benefit 0",
+          "Altruism 0",
+          "Hamilton 0",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 0"
+      },
+      {
+        "question": "Behavior DOK2 Act1 Q1: Explain biological evolutionary value of pack behavior 1.",
+        "options": [
+          "Survival benefit 1",
+          "Altruism 1",
+          "Hamilton 1",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 1"
+      },
+      {
+        "question": "Behavior DOK2 Act1 Q2: Explain biological evolutionary value of pack behavior 2.",
+        "options": [
+          "Survival benefit 2",
+          "Altruism 2",
+          "Hamilton 2",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 2"
+      },
+      {
+        "question": "Behavior DOK2 Act1 Q3: Explain biological evolutionary value of pack behavior 3.",
+        "options": [
+          "Survival benefit 3",
+          "Altruism 3",
+          "Hamilton 3",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 3"
+      },
+      {
+        "question": "Behavior DOK2 Act1 Q4: Explain biological evolutionary value of pack behavior 4.",
+        "options": [
+          "Survival benefit 4",
+          "Altruism 4",
+          "Hamilton 4",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 4"
+      },
+      {
+        "question": "Behavior DOK2 Act1 Q5: Explain biological evolutionary value of pack behavior 5.",
+        "options": [
+          "Survival benefit 5",
+          "Altruism 5",
+          "Hamilton 5",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 5"
+      },
+      {
+        "question": "Behavior DOK2 Act1 Q6: Explain biological evolutionary value of pack behavior 6.",
+        "options": [
+          "Survival benefit 6",
+          "Altruism 6",
+          "Hamilton 6",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 6"
+      },
+      {
+        "question": "Behavior DOK2 Act1 Q7: Explain biological evolutionary value of pack behavior 7.",
+        "options": [
+          "Survival benefit 7",
+          "Altruism 7",
+          "Hamilton 7",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 7"
+      },
+      {
+        "question": "Behavior DOK2 Act1 Q8: Explain biological evolutionary value of pack behavior 8.",
+        "options": [
+          "Survival benefit 8",
+          "Altruism 8",
+          "Hamilton 8",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 8"
+      },
+      {
+        "question": "Behavior DOK2 Act1 Q9: Explain biological evolutionary value of pack behavior 9.",
+        "options": [
+          "Survival benefit 9",
+          "Altruism 9",
+          "Hamilton 9",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK2 Act2 Q0: Explain biological evolutionary value of pack behavior 0.",
+        "options": [
+          "Survival benefit 0",
+          "Altruism 0",
+          "Hamilton 0",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 0"
+      },
+      {
+        "question": "Behavior DOK2 Act2 Q1: Explain biological evolutionary value of pack behavior 1.",
+        "options": [
+          "Survival benefit 1",
+          "Altruism 1",
+          "Hamilton 1",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 1"
+      },
+      {
+        "question": "Behavior DOK2 Act2 Q2: Explain biological evolutionary value of pack behavior 2.",
+        "options": [
+          "Survival benefit 2",
+          "Altruism 2",
+          "Hamilton 2",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 2"
+      },
+      {
+        "question": "Behavior DOK2 Act2 Q3: Explain biological evolutionary value of pack behavior 3.",
+        "options": [
+          "Survival benefit 3",
+          "Altruism 3",
+          "Hamilton 3",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 3"
+      },
+      {
+        "question": "Behavior DOK2 Act2 Q4: Explain biological evolutionary value of pack behavior 4.",
+        "options": [
+          "Survival benefit 4",
+          "Altruism 4",
+          "Hamilton 4",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 4"
+      },
+      {
+        "question": "Behavior DOK2 Act2 Q5: Explain biological evolutionary value of pack behavior 5.",
+        "options": [
+          "Survival benefit 5",
+          "Altruism 5",
+          "Hamilton 5",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 5"
+      },
+      {
+        "question": "Behavior DOK2 Act2 Q6: Explain biological evolutionary value of pack behavior 6.",
+        "options": [
+          "Survival benefit 6",
+          "Altruism 6",
+          "Hamilton 6",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 6"
+      },
+      {
+        "question": "Behavior DOK2 Act2 Q7: Explain biological evolutionary value of pack behavior 7.",
+        "options": [
+          "Survival benefit 7",
+          "Altruism 7",
+          "Hamilton 7",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 7"
+      },
+      {
+        "question": "Behavior DOK2 Act2 Q8: Explain biological evolutionary value of pack behavior 8.",
+        "options": [
+          "Survival benefit 8",
+          "Altruism 8",
+          "Hamilton 8",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 8"
+      },
+      {
+        "question": "Behavior DOK2 Act2 Q9: Explain biological evolutionary value of pack behavior 9.",
+        "options": [
+          "Survival benefit 9",
+          "Altruism 9",
+          "Hamilton 9",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK2 Act3 Q0: Explain biological evolutionary value of pack behavior 0.",
+        "options": [
+          "Survival benefit 0",
+          "Altruism 0",
+          "Hamilton 0",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 0"
+      },
+      {
+        "question": "Behavior DOK2 Act3 Q1: Explain biological evolutionary value of pack behavior 1.",
+        "options": [
+          "Survival benefit 1",
+          "Altruism 1",
+          "Hamilton 1",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 1"
+      },
+      {
+        "question": "Behavior DOK2 Act3 Q2: Explain biological evolutionary value of pack behavior 2.",
+        "options": [
+          "Survival benefit 2",
+          "Altruism 2",
+          "Hamilton 2",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 2"
+      },
+      {
+        "question": "Behavior DOK2 Act3 Q3: Explain biological evolutionary value of pack behavior 3.",
+        "options": [
+          "Survival benefit 3",
+          "Altruism 3",
+          "Hamilton 3",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 3"
+      },
+      {
+        "question": "Behavior DOK2 Act3 Q4: Explain biological evolutionary value of pack behavior 4.",
+        "options": [
+          "Survival benefit 4",
+          "Altruism 4",
+          "Hamilton 4",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 4"
+      },
+      {
+        "question": "Behavior DOK2 Act3 Q5: Explain biological evolutionary value of pack behavior 5.",
+        "options": [
+          "Survival benefit 5",
+          "Altruism 5",
+          "Hamilton 5",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 5"
+      },
+      {
+        "question": "Behavior DOK2 Act3 Q6: Explain biological evolutionary value of pack behavior 6.",
+        "options": [
+          "Survival benefit 6",
+          "Altruism 6",
+          "Hamilton 6",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 6"
+      },
+      {
+        "question": "Behavior DOK2 Act3 Q7: Explain biological evolutionary value of pack behavior 7.",
+        "options": [
+          "Survival benefit 7",
+          "Altruism 7",
+          "Hamilton 7",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 7"
+      },
+      {
+        "question": "Behavior DOK2 Act3 Q8: Explain biological evolutionary value of pack behavior 8.",
+        "options": [
+          "Survival benefit 8",
+          "Altruism 8",
+          "Hamilton 8",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 8"
+      },
+      {
+        "question": "Behavior DOK2 Act3 Q9: Explain biological evolutionary value of pack behavior 9.",
+        "options": [
+          "Survival benefit 9",
+          "Altruism 9",
+          "Hamilton 9",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK2 Act4 Q0: Explain biological evolutionary value of pack behavior 0.",
+        "options": [
+          "Survival benefit 0",
+          "Altruism 0",
+          "Hamilton 0",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 0"
+      },
+      {
+        "question": "Behavior DOK2 Act4 Q1: Explain biological evolutionary value of pack behavior 1.",
+        "options": [
+          "Survival benefit 1",
+          "Altruism 1",
+          "Hamilton 1",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 1"
+      },
+      {
+        "question": "Behavior DOK2 Act4 Q2: Explain biological evolutionary value of pack behavior 2.",
+        "options": [
+          "Survival benefit 2",
+          "Altruism 2",
+          "Hamilton 2",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 2"
+      },
+      {
+        "question": "Behavior DOK2 Act4 Q3: Explain biological evolutionary value of pack behavior 3.",
+        "options": [
+          "Survival benefit 3",
+          "Altruism 3",
+          "Hamilton 3",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 3"
+      },
+      {
+        "question": "Behavior DOK2 Act4 Q4: Explain biological evolutionary value of pack behavior 4.",
+        "options": [
+          "Survival benefit 4",
+          "Altruism 4",
+          "Hamilton 4",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 4"
+      },
+      {
+        "question": "Behavior DOK2 Act4 Q5: Explain biological evolutionary value of pack behavior 5.",
+        "options": [
+          "Survival benefit 5",
+          "Altruism 5",
+          "Hamilton 5",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 5"
+      },
+      {
+        "question": "Behavior DOK2 Act4 Q6: Explain biological evolutionary value of pack behavior 6.",
+        "options": [
+          "Survival benefit 6",
+          "Altruism 6",
+          "Hamilton 6",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 6"
+      },
+      {
+        "question": "Behavior DOK2 Act4 Q7: Explain biological evolutionary value of pack behavior 7.",
+        "options": [
+          "Survival benefit 7",
+          "Altruism 7",
+          "Hamilton 7",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 7"
+      },
+      {
+        "question": "Behavior DOK2 Act4 Q8: Explain biological evolutionary value of pack behavior 8.",
+        "options": [
+          "Survival benefit 8",
+          "Altruism 8",
+          "Hamilton 8",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 8"
+      },
+      {
+        "question": "Behavior DOK2 Act4 Q9: Explain biological evolutionary value of pack behavior 9.",
+        "options": [
+          "Survival benefit 9",
+          "Altruism 9",
+          "Hamilton 9",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK2 Act5 Q0: Explain biological evolutionary value of pack behavior 0.",
+        "options": [
+          "Survival benefit 0",
+          "Altruism 0",
+          "Hamilton 0",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 0"
+      },
+      {
+        "question": "Behavior DOK2 Act5 Q1: Explain biological evolutionary value of pack behavior 1.",
+        "options": [
+          "Survival benefit 1",
+          "Altruism 1",
+          "Hamilton 1",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 1"
+      },
+      {
+        "question": "Behavior DOK2 Act5 Q2: Explain biological evolutionary value of pack behavior 2.",
+        "options": [
+          "Survival benefit 2",
+          "Altruism 2",
+          "Hamilton 2",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 2"
+      },
+      {
+        "question": "Behavior DOK2 Act5 Q3: Explain biological evolutionary value of pack behavior 3.",
+        "options": [
+          "Survival benefit 3",
+          "Altruism 3",
+          "Hamilton 3",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 3"
+      },
+      {
+        "question": "Behavior DOK2 Act5 Q4: Explain biological evolutionary value of pack behavior 4.",
+        "options": [
+          "Survival benefit 4",
+          "Altruism 4",
+          "Hamilton 4",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 4"
+      },
+      {
+        "question": "Behavior DOK2 Act5 Q5: Explain biological evolutionary value of pack behavior 5.",
+        "options": [
+          "Survival benefit 5",
+          "Altruism 5",
+          "Hamilton 5",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 5"
+      },
+      {
+        "question": "Behavior DOK2 Act5 Q6: Explain biological evolutionary value of pack behavior 6.",
+        "options": [
+          "Survival benefit 6",
+          "Altruism 6",
+          "Hamilton 6",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 6"
+      },
+      {
+        "question": "Behavior DOK2 Act5 Q7: Explain biological evolutionary value of pack behavior 7.",
+        "options": [
+          "Survival benefit 7",
+          "Altruism 7",
+          "Hamilton 7",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 7"
+      },
+      {
+        "question": "Behavior DOK2 Act5 Q8: Explain biological evolutionary value of pack behavior 8.",
+        "options": [
+          "Survival benefit 8",
+          "Altruism 8",
+          "Hamilton 8",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 8"
+      },
+      {
+        "question": "Behavior DOK2 Act5 Q9: Explain biological evolutionary value of pack behavior 9.",
+        "options": [
+          "Survival benefit 9",
+          "Altruism 9",
+          "Hamilton 9",
+          "Relatedness"
+        ],
+        "answer": "Survival benefit 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Behavior DOK3 Act1 Q0: Predict flocking alignment vectors under parameters 0.",
+        "options": [
+          "Flocking vector 0",
+          "Force 0",
+          "Tension 0",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 0"
+      },
+      {
+        "question": "Behavior DOK3 Act1 Q1: Predict flocking alignment vectors under parameters 1.",
+        "options": [
+          "Flocking vector 1",
+          "Force 1",
+          "Tension 1",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 1"
+      },
+      {
+        "question": "Behavior DOK3 Act1 Q2: Predict flocking alignment vectors under parameters 2.",
+        "options": [
+          "Flocking vector 2",
+          "Force 2",
+          "Tension 2",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 2"
+      },
+      {
+        "question": "Behavior DOK3 Act1 Q3: Predict flocking alignment vectors under parameters 3.",
+        "options": [
+          "Flocking vector 3",
+          "Force 3",
+          "Tension 3",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 3"
+      },
+      {
+        "question": "Behavior DOK3 Act1 Q4: Predict flocking alignment vectors under parameters 4.",
+        "options": [
+          "Flocking vector 4",
+          "Force 4",
+          "Tension 4",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 4"
+      },
+      {
+        "question": "Behavior DOK3 Act1 Q5: Predict flocking alignment vectors under parameters 5.",
+        "options": [
+          "Flocking vector 5",
+          "Force 5",
+          "Tension 5",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 5"
+      },
+      {
+        "question": "Behavior DOK3 Act1 Q6: Predict flocking alignment vectors under parameters 6.",
+        "options": [
+          "Flocking vector 6",
+          "Force 6",
+          "Tension 6",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 6"
+      },
+      {
+        "question": "Behavior DOK3 Act1 Q7: Predict flocking alignment vectors under parameters 7.",
+        "options": [
+          "Flocking vector 7",
+          "Force 7",
+          "Tension 7",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 7"
+      },
+      {
+        "question": "Behavior DOK3 Act1 Q8: Predict flocking alignment vectors under parameters 8.",
+        "options": [
+          "Flocking vector 8",
+          "Force 8",
+          "Tension 8",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 8"
+      },
+      {
+        "question": "Behavior DOK3 Act1 Q9: Predict flocking alignment vectors under parameters 9.",
+        "options": [
+          "Flocking vector 9",
+          "Force 9",
+          "Tension 9",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK3 Act2 Q0: Predict flocking alignment vectors under parameters 0.",
+        "options": [
+          "Flocking vector 0",
+          "Force 0",
+          "Tension 0",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 0"
+      },
+      {
+        "question": "Behavior DOK3 Act2 Q1: Predict flocking alignment vectors under parameters 1.",
+        "options": [
+          "Flocking vector 1",
+          "Force 1",
+          "Tension 1",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 1"
+      },
+      {
+        "question": "Behavior DOK3 Act2 Q2: Predict flocking alignment vectors under parameters 2.",
+        "options": [
+          "Flocking vector 2",
+          "Force 2",
+          "Tension 2",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 2"
+      },
+      {
+        "question": "Behavior DOK3 Act2 Q3: Predict flocking alignment vectors under parameters 3.",
+        "options": [
+          "Flocking vector 3",
+          "Force 3",
+          "Tension 3",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 3"
+      },
+      {
+        "question": "Behavior DOK3 Act2 Q4: Predict flocking alignment vectors under parameters 4.",
+        "options": [
+          "Flocking vector 4",
+          "Force 4",
+          "Tension 4",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 4"
+      },
+      {
+        "question": "Behavior DOK3 Act2 Q5: Predict flocking alignment vectors under parameters 5.",
+        "options": [
+          "Flocking vector 5",
+          "Force 5",
+          "Tension 5",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 5"
+      },
+      {
+        "question": "Behavior DOK3 Act2 Q6: Predict flocking alignment vectors under parameters 6.",
+        "options": [
+          "Flocking vector 6",
+          "Force 6",
+          "Tension 6",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 6"
+      },
+      {
+        "question": "Behavior DOK3 Act2 Q7: Predict flocking alignment vectors under parameters 7.",
+        "options": [
+          "Flocking vector 7",
+          "Force 7",
+          "Tension 7",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 7"
+      },
+      {
+        "question": "Behavior DOK3 Act2 Q8: Predict flocking alignment vectors under parameters 8.",
+        "options": [
+          "Flocking vector 8",
+          "Force 8",
+          "Tension 8",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 8"
+      },
+      {
+        "question": "Behavior DOK3 Act2 Q9: Predict flocking alignment vectors under parameters 9.",
+        "options": [
+          "Flocking vector 9",
+          "Force 9",
+          "Tension 9",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK3 Act3 Q0: Predict flocking alignment vectors under parameters 0.",
+        "options": [
+          "Flocking vector 0",
+          "Force 0",
+          "Tension 0",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 0"
+      },
+      {
+        "question": "Behavior DOK3 Act3 Q1: Predict flocking alignment vectors under parameters 1.",
+        "options": [
+          "Flocking vector 1",
+          "Force 1",
+          "Tension 1",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 1"
+      },
+      {
+        "question": "Behavior DOK3 Act3 Q2: Predict flocking alignment vectors under parameters 2.",
+        "options": [
+          "Flocking vector 2",
+          "Force 2",
+          "Tension 2",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 2"
+      },
+      {
+        "question": "Behavior DOK3 Act3 Q3: Predict flocking alignment vectors under parameters 3.",
+        "options": [
+          "Flocking vector 3",
+          "Force 3",
+          "Tension 3",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 3"
+      },
+      {
+        "question": "Behavior DOK3 Act3 Q4: Predict flocking alignment vectors under parameters 4.",
+        "options": [
+          "Flocking vector 4",
+          "Force 4",
+          "Tension 4",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 4"
+      },
+      {
+        "question": "Behavior DOK3 Act3 Q5: Predict flocking alignment vectors under parameters 5.",
+        "options": [
+          "Flocking vector 5",
+          "Force 5",
+          "Tension 5",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 5"
+      },
+      {
+        "question": "Behavior DOK3 Act3 Q6: Predict flocking alignment vectors under parameters 6.",
+        "options": [
+          "Flocking vector 6",
+          "Force 6",
+          "Tension 6",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 6"
+      },
+      {
+        "question": "Behavior DOK3 Act3 Q7: Predict flocking alignment vectors under parameters 7.",
+        "options": [
+          "Flocking vector 7",
+          "Force 7",
+          "Tension 7",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 7"
+      },
+      {
+        "question": "Behavior DOK3 Act3 Q8: Predict flocking alignment vectors under parameters 8.",
+        "options": [
+          "Flocking vector 8",
+          "Force 8",
+          "Tension 8",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 8"
+      },
+      {
+        "question": "Behavior DOK3 Act3 Q9: Predict flocking alignment vectors under parameters 9.",
+        "options": [
+          "Flocking vector 9",
+          "Force 9",
+          "Tension 9",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK3 Act4 Q0: Predict flocking alignment vectors under parameters 0.",
+        "options": [
+          "Flocking vector 0",
+          "Force 0",
+          "Tension 0",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 0"
+      },
+      {
+        "question": "Behavior DOK3 Act4 Q1: Predict flocking alignment vectors under parameters 1.",
+        "options": [
+          "Flocking vector 1",
+          "Force 1",
+          "Tension 1",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 1"
+      },
+      {
+        "question": "Behavior DOK3 Act4 Q2: Predict flocking alignment vectors under parameters 2.",
+        "options": [
+          "Flocking vector 2",
+          "Force 2",
+          "Tension 2",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 2"
+      },
+      {
+        "question": "Behavior DOK3 Act4 Q3: Predict flocking alignment vectors under parameters 3.",
+        "options": [
+          "Flocking vector 3",
+          "Force 3",
+          "Tension 3",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 3"
+      },
+      {
+        "question": "Behavior DOK3 Act4 Q4: Predict flocking alignment vectors under parameters 4.",
+        "options": [
+          "Flocking vector 4",
+          "Force 4",
+          "Tension 4",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 4"
+      },
+      {
+        "question": "Behavior DOK3 Act4 Q5: Predict flocking alignment vectors under parameters 5.",
+        "options": [
+          "Flocking vector 5",
+          "Force 5",
+          "Tension 5",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 5"
+      },
+      {
+        "question": "Behavior DOK3 Act4 Q6: Predict flocking alignment vectors under parameters 6.",
+        "options": [
+          "Flocking vector 6",
+          "Force 6",
+          "Tension 6",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 6"
+      },
+      {
+        "question": "Behavior DOK3 Act4 Q7: Predict flocking alignment vectors under parameters 7.",
+        "options": [
+          "Flocking vector 7",
+          "Force 7",
+          "Tension 7",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 7"
+      },
+      {
+        "question": "Behavior DOK3 Act4 Q8: Predict flocking alignment vectors under parameters 8.",
+        "options": [
+          "Flocking vector 8",
+          "Force 8",
+          "Tension 8",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 8"
+      },
+      {
+        "question": "Behavior DOK3 Act4 Q9: Predict flocking alignment vectors under parameters 9.",
+        "options": [
+          "Flocking vector 9",
+          "Force 9",
+          "Tension 9",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK3 Act5 Q0: Predict flocking alignment vectors under parameters 0.",
+        "options": [
+          "Flocking vector 0",
+          "Force 0",
+          "Tension 0",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 0"
+      },
+      {
+        "question": "Behavior DOK3 Act5 Q1: Predict flocking alignment vectors under parameters 1.",
+        "options": [
+          "Flocking vector 1",
+          "Force 1",
+          "Tension 1",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 1"
+      },
+      {
+        "question": "Behavior DOK3 Act5 Q2: Predict flocking alignment vectors under parameters 2.",
+        "options": [
+          "Flocking vector 2",
+          "Force 2",
+          "Tension 2",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 2"
+      },
+      {
+        "question": "Behavior DOK3 Act5 Q3: Predict flocking alignment vectors under parameters 3.",
+        "options": [
+          "Flocking vector 3",
+          "Force 3",
+          "Tension 3",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 3"
+      },
+      {
+        "question": "Behavior DOK3 Act5 Q4: Predict flocking alignment vectors under parameters 4.",
+        "options": [
+          "Flocking vector 4",
+          "Force 4",
+          "Tension 4",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 4"
+      },
+      {
+        "question": "Behavior DOK3 Act5 Q5: Predict flocking alignment vectors under parameters 5.",
+        "options": [
+          "Flocking vector 5",
+          "Force 5",
+          "Tension 5",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 5"
+      },
+      {
+        "question": "Behavior DOK3 Act5 Q6: Predict flocking alignment vectors under parameters 6.",
+        "options": [
+          "Flocking vector 6",
+          "Force 6",
+          "Tension 6",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 6"
+      },
+      {
+        "question": "Behavior DOK3 Act5 Q7: Predict flocking alignment vectors under parameters 7.",
+        "options": [
+          "Flocking vector 7",
+          "Force 7",
+          "Tension 7",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 7"
+      },
+      {
+        "question": "Behavior DOK3 Act5 Q8: Predict flocking alignment vectors under parameters 8.",
+        "options": [
+          "Flocking vector 8",
+          "Force 8",
+          "Tension 8",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 8"
+      },
+      {
+        "question": "Behavior DOK3 Act5 Q9: Predict flocking alignment vectors under parameters 9.",
+        "options": [
+          "Flocking vector 9",
+          "Force 9",
+          "Tension 9",
+          "Cooperative"
+        ],
+        "answer": "Flocking vector 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Behavior DOK4 Act1 Q0: Optimize group scouting radius and territory values 0.",
+        "options": [
+          "Pride optimizer 0",
+          "Radius 0",
+          "Territory 0",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 0"
+      },
+      {
+        "question": "Behavior DOK4 Act1 Q1: Optimize group scouting radius and territory values 1.",
+        "options": [
+          "Pride optimizer 1",
+          "Radius 1",
+          "Territory 1",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 1"
+      },
+      {
+        "question": "Behavior DOK4 Act1 Q2: Optimize group scouting radius and territory values 2.",
+        "options": [
+          "Pride optimizer 2",
+          "Radius 2",
+          "Territory 2",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 2"
+      },
+      {
+        "question": "Behavior DOK4 Act1 Q3: Optimize group scouting radius and territory values 3.",
+        "options": [
+          "Pride optimizer 3",
+          "Radius 3",
+          "Territory 3",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 3"
+      },
+      {
+        "question": "Behavior DOK4 Act1 Q4: Optimize group scouting radius and territory values 4.",
+        "options": [
+          "Pride optimizer 4",
+          "Radius 4",
+          "Territory 4",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 4"
+      },
+      {
+        "question": "Behavior DOK4 Act1 Q5: Optimize group scouting radius and territory values 5.",
+        "options": [
+          "Pride optimizer 5",
+          "Radius 5",
+          "Territory 5",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 5"
+      },
+      {
+        "question": "Behavior DOK4 Act1 Q6: Optimize group scouting radius and territory values 6.",
+        "options": [
+          "Pride optimizer 6",
+          "Radius 6",
+          "Territory 6",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 6"
+      },
+      {
+        "question": "Behavior DOK4 Act1 Q7: Optimize group scouting radius and territory values 7.",
+        "options": [
+          "Pride optimizer 7",
+          "Radius 7",
+          "Territory 7",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 7"
+      },
+      {
+        "question": "Behavior DOK4 Act1 Q8: Optimize group scouting radius and territory values 8.",
+        "options": [
+          "Pride optimizer 8",
+          "Radius 8",
+          "Territory 8",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 8"
+      },
+      {
+        "question": "Behavior DOK4 Act1 Q9: Optimize group scouting radius and territory values 9.",
+        "options": [
+          "Pride optimizer 9",
+          "Radius 9",
+          "Territory 9",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK4 Act2 Q0: Optimize group scouting radius and territory values 0.",
+        "options": [
+          "Pride optimizer 0",
+          "Radius 0",
+          "Territory 0",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 0"
+      },
+      {
+        "question": "Behavior DOK4 Act2 Q1: Optimize group scouting radius and territory values 1.",
+        "options": [
+          "Pride optimizer 1",
+          "Radius 1",
+          "Territory 1",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 1"
+      },
+      {
+        "question": "Behavior DOK4 Act2 Q2: Optimize group scouting radius and territory values 2.",
+        "options": [
+          "Pride optimizer 2",
+          "Radius 2",
+          "Territory 2",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 2"
+      },
+      {
+        "question": "Behavior DOK4 Act2 Q3: Optimize group scouting radius and territory values 3.",
+        "options": [
+          "Pride optimizer 3",
+          "Radius 3",
+          "Territory 3",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 3"
+      },
+      {
+        "question": "Behavior DOK4 Act2 Q4: Optimize group scouting radius and territory values 4.",
+        "options": [
+          "Pride optimizer 4",
+          "Radius 4",
+          "Territory 4",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 4"
+      },
+      {
+        "question": "Behavior DOK4 Act2 Q5: Optimize group scouting radius and territory values 5.",
+        "options": [
+          "Pride optimizer 5",
+          "Radius 5",
+          "Territory 5",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 5"
+      },
+      {
+        "question": "Behavior DOK4 Act2 Q6: Optimize group scouting radius and territory values 6.",
+        "options": [
+          "Pride optimizer 6",
+          "Radius 6",
+          "Territory 6",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 6"
+      },
+      {
+        "question": "Behavior DOK4 Act2 Q7: Optimize group scouting radius and territory values 7.",
+        "options": [
+          "Pride optimizer 7",
+          "Radius 7",
+          "Territory 7",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 7"
+      },
+      {
+        "question": "Behavior DOK4 Act2 Q8: Optimize group scouting radius and territory values 8.",
+        "options": [
+          "Pride optimizer 8",
+          "Radius 8",
+          "Territory 8",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 8"
+      },
+      {
+        "question": "Behavior DOK4 Act2 Q9: Optimize group scouting radius and territory values 9.",
+        "options": [
+          "Pride optimizer 9",
+          "Radius 9",
+          "Territory 9",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK4 Act3 Q0: Optimize group scouting radius and territory values 0.",
+        "options": [
+          "Pride optimizer 0",
+          "Radius 0",
+          "Territory 0",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 0"
+      },
+      {
+        "question": "Behavior DOK4 Act3 Q1: Optimize group scouting radius and territory values 1.",
+        "options": [
+          "Pride optimizer 1",
+          "Radius 1",
+          "Territory 1",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 1"
+      },
+      {
+        "question": "Behavior DOK4 Act3 Q2: Optimize group scouting radius and territory values 2.",
+        "options": [
+          "Pride optimizer 2",
+          "Radius 2",
+          "Territory 2",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 2"
+      },
+      {
+        "question": "Behavior DOK4 Act3 Q3: Optimize group scouting radius and territory values 3.",
+        "options": [
+          "Pride optimizer 3",
+          "Radius 3",
+          "Territory 3",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 3"
+      },
+      {
+        "question": "Behavior DOK4 Act3 Q4: Optimize group scouting radius and territory values 4.",
+        "options": [
+          "Pride optimizer 4",
+          "Radius 4",
+          "Territory 4",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 4"
+      },
+      {
+        "question": "Behavior DOK4 Act3 Q5: Optimize group scouting radius and territory values 5.",
+        "options": [
+          "Pride optimizer 5",
+          "Radius 5",
+          "Territory 5",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 5"
+      },
+      {
+        "question": "Behavior DOK4 Act3 Q6: Optimize group scouting radius and territory values 6.",
+        "options": [
+          "Pride optimizer 6",
+          "Radius 6",
+          "Territory 6",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 6"
+      },
+      {
+        "question": "Behavior DOK4 Act3 Q7: Optimize group scouting radius and territory values 7.",
+        "options": [
+          "Pride optimizer 7",
+          "Radius 7",
+          "Territory 7",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 7"
+      },
+      {
+        "question": "Behavior DOK4 Act3 Q8: Optimize group scouting radius and territory values 8.",
+        "options": [
+          "Pride optimizer 8",
+          "Radius 8",
+          "Territory 8",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 8"
+      },
+      {
+        "question": "Behavior DOK4 Act3 Q9: Optimize group scouting radius and territory values 9.",
+        "options": [
+          "Pride optimizer 9",
+          "Radius 9",
+          "Territory 9",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK4 Act4 Q0: Optimize group scouting radius and territory values 0.",
+        "options": [
+          "Pride optimizer 0",
+          "Radius 0",
+          "Territory 0",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 0"
+      },
+      {
+        "question": "Behavior DOK4 Act4 Q1: Optimize group scouting radius and territory values 1.",
+        "options": [
+          "Pride optimizer 1",
+          "Radius 1",
+          "Territory 1",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 1"
+      },
+      {
+        "question": "Behavior DOK4 Act4 Q2: Optimize group scouting radius and territory values 2.",
+        "options": [
+          "Pride optimizer 2",
+          "Radius 2",
+          "Territory 2",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 2"
+      },
+      {
+        "question": "Behavior DOK4 Act4 Q3: Optimize group scouting radius and territory values 3.",
+        "options": [
+          "Pride optimizer 3",
+          "Radius 3",
+          "Territory 3",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 3"
+      },
+      {
+        "question": "Behavior DOK4 Act4 Q4: Optimize group scouting radius and territory values 4.",
+        "options": [
+          "Pride optimizer 4",
+          "Radius 4",
+          "Territory 4",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 4"
+      },
+      {
+        "question": "Behavior DOK4 Act4 Q5: Optimize group scouting radius and territory values 5.",
+        "options": [
+          "Pride optimizer 5",
+          "Radius 5",
+          "Territory 5",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 5"
+      },
+      {
+        "question": "Behavior DOK4 Act4 Q6: Optimize group scouting radius and territory values 6.",
+        "options": [
+          "Pride optimizer 6",
+          "Radius 6",
+          "Territory 6",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 6"
+      },
+      {
+        "question": "Behavior DOK4 Act4 Q7: Optimize group scouting radius and territory values 7.",
+        "options": [
+          "Pride optimizer 7",
+          "Radius 7",
+          "Territory 7",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 7"
+      },
+      {
+        "question": "Behavior DOK4 Act4 Q8: Optimize group scouting radius and territory values 8.",
+        "options": [
+          "Pride optimizer 8",
+          "Radius 8",
+          "Territory 8",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 8"
+      },
+      {
+        "question": "Behavior DOK4 Act4 Q9: Optimize group scouting radius and territory values 9.",
+        "options": [
+          "Pride optimizer 9",
+          "Radius 9",
+          "Territory 9",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 9"
+      }
+    ],
+    [
+      {
+        "question": "Behavior DOK4 Act5 Q0: Optimize group scouting radius and territory values 0.",
+        "options": [
+          "Pride optimizer 0",
+          "Radius 0",
+          "Territory 0",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 0"
+      },
+      {
+        "question": "Behavior DOK4 Act5 Q1: Optimize group scouting radius and territory values 1.",
+        "options": [
+          "Pride optimizer 1",
+          "Radius 1",
+          "Territory 1",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 1"
+      },
+      {
+        "question": "Behavior DOK4 Act5 Q2: Optimize group scouting radius and territory values 2.",
+        "options": [
+          "Pride optimizer 2",
+          "Radius 2",
+          "Territory 2",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 2"
+      },
+      {
+        "question": "Behavior DOK4 Act5 Q3: Optimize group scouting radius and territory values 3.",
+        "options": [
+          "Pride optimizer 3",
+          "Radius 3",
+          "Territory 3",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 3"
+      },
+      {
+        "question": "Behavior DOK4 Act5 Q4: Optimize group scouting radius and territory values 4.",
+        "options": [
+          "Pride optimizer 4",
+          "Radius 4",
+          "Territory 4",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 4"
+      },
+      {
+        "question": "Behavior DOK4 Act5 Q5: Optimize group scouting radius and territory values 5.",
+        "options": [
+          "Pride optimizer 5",
+          "Radius 5",
+          "Territory 5",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 5"
+      },
+      {
+        "question": "Behavior DOK4 Act5 Q6: Optimize group scouting radius and territory values 6.",
+        "options": [
+          "Pride optimizer 6",
+          "Radius 6",
+          "Territory 6",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 6"
+      },
+      {
+        "question": "Behavior DOK4 Act5 Q7: Optimize group scouting radius and territory values 7.",
+        "options": [
+          "Pride optimizer 7",
+          "Radius 7",
+          "Territory 7",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 7"
+      },
+      {
+        "question": "Behavior DOK4 Act5 Q8: Optimize group scouting radius and territory values 8.",
+        "options": [
+          "Pride optimizer 8",
+          "Radius 8",
+          "Territory 8",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 8"
+      },
+      {
+        "question": "Behavior DOK4 Act5 Q9: Optimize group scouting radius and territory values 9.",
+        "options": [
+          "Pride optimizer 9",
+          "Radius 9",
+          "Territory 9",
+          "Dominance"
+        ],
+        "answer": "Pride optimizer 9"
+      }
+    ]
+  ]
+}
+,
+  "OAS.B.LS3.1": {
+  "1": [
+    [
+      {
+        "question": "Inheritance DOK1 Act1 Q0: Classify DNA to protein flow steps 0.",
+        "options": [
+          "Flow step 0",
+          "Transcription 0",
+          "Translation 0",
+          "Replication"
+        ],
+        "answer": "Flow step 0"
+      },
+      {
+        "question": "Inheritance DOK1 Act1 Q1: Classify DNA to protein flow steps 1.",
+        "options": [
+          "Flow step 1",
+          "Transcription 1",
+          "Translation 1",
+          "Replication"
+        ],
+        "answer": "Flow step 1"
+      },
+      {
+        "question": "Inheritance DOK1 Act1 Q2: Classify DNA to protein flow steps 2.",
+        "options": [
+          "Flow step 2",
+          "Transcription 2",
+          "Translation 2",
+          "Replication"
+        ],
+        "answer": "Flow step 2"
+      },
+      {
+        "question": "Inheritance DOK1 Act1 Q3: Classify DNA to protein flow steps 3.",
+        "options": [
+          "Flow step 3",
+          "Transcription 3",
+          "Translation 3",
+          "Replication"
+        ],
+        "answer": "Flow step 3"
+      },
+      {
+        "question": "Inheritance DOK1 Act1 Q4: Classify DNA to protein flow steps 4.",
+        "options": [
+          "Flow step 4",
+          "Transcription 4",
+          "Translation 4",
+          "Replication"
+        ],
+        "answer": "Flow step 4"
+      },
+      {
+        "question": "Inheritance DOK1 Act1 Q5: Classify DNA to protein flow steps 5.",
+        "options": [
+          "Flow step 5",
+          "Transcription 5",
+          "Translation 5",
+          "Replication"
+        ],
+        "answer": "Flow step 5"
+      },
+      {
+        "question": "Inheritance DOK1 Act1 Q6: Classify DNA to protein flow steps 6.",
+        "options": [
+          "Flow step 6",
+          "Transcription 6",
+          "Translation 6",
+          "Replication"
+        ],
+        "answer": "Flow step 6"
+      },
+      {
+        "question": "Inheritance DOK1 Act1 Q7: Classify DNA to protein flow steps 7.",
+        "options": [
+          "Flow step 7",
+          "Transcription 7",
+          "Translation 7",
+          "Replication"
+        ],
+        "answer": "Flow step 7"
+      },
+      {
+        "question": "Inheritance DOK1 Act1 Q8: Classify DNA to protein flow steps 8.",
+        "options": [
+          "Flow step 8",
+          "Transcription 8",
+          "Translation 8",
+          "Replication"
+        ],
+        "answer": "Flow step 8"
+      },
+      {
+        "question": "Inheritance DOK1 Act1 Q9: Classify DNA to protein flow steps 9.",
+        "options": [
+          "Flow step 9",
+          "Transcription 9",
+          "Translation 9",
+          "Replication"
+        ],
+        "answer": "Flow step 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK1 Act2 Q0: Classify DNA to protein flow steps 0.",
+        "options": [
+          "Flow step 0",
+          "Transcription 0",
+          "Translation 0",
+          "Replication"
+        ],
+        "answer": "Flow step 0"
+      },
+      {
+        "question": "Inheritance DOK1 Act2 Q1: Classify DNA to protein flow steps 1.",
+        "options": [
+          "Flow step 1",
+          "Transcription 1",
+          "Translation 1",
+          "Replication"
+        ],
+        "answer": "Flow step 1"
+      },
+      {
+        "question": "Inheritance DOK1 Act2 Q2: Classify DNA to protein flow steps 2.",
+        "options": [
+          "Flow step 2",
+          "Transcription 2",
+          "Translation 2",
+          "Replication"
+        ],
+        "answer": "Flow step 2"
+      },
+      {
+        "question": "Inheritance DOK1 Act2 Q3: Classify DNA to protein flow steps 3.",
+        "options": [
+          "Flow step 3",
+          "Transcription 3",
+          "Translation 3",
+          "Replication"
+        ],
+        "answer": "Flow step 3"
+      },
+      {
+        "question": "Inheritance DOK1 Act2 Q4: Classify DNA to protein flow steps 4.",
+        "options": [
+          "Flow step 4",
+          "Transcription 4",
+          "Translation 4",
+          "Replication"
+        ],
+        "answer": "Flow step 4"
+      },
+      {
+        "question": "Inheritance DOK1 Act2 Q5: Classify DNA to protein flow steps 5.",
+        "options": [
+          "Flow step 5",
+          "Transcription 5",
+          "Translation 5",
+          "Replication"
+        ],
+        "answer": "Flow step 5"
+      },
+      {
+        "question": "Inheritance DOK1 Act2 Q6: Classify DNA to protein flow steps 6.",
+        "options": [
+          "Flow step 6",
+          "Transcription 6",
+          "Translation 6",
+          "Replication"
+        ],
+        "answer": "Flow step 6"
+      },
+      {
+        "question": "Inheritance DOK1 Act2 Q7: Classify DNA to protein flow steps 7.",
+        "options": [
+          "Flow step 7",
+          "Transcription 7",
+          "Translation 7",
+          "Replication"
+        ],
+        "answer": "Flow step 7"
+      },
+      {
+        "question": "Inheritance DOK1 Act2 Q8: Classify DNA to protein flow steps 8.",
+        "options": [
+          "Flow step 8",
+          "Transcription 8",
+          "Translation 8",
+          "Replication"
+        ],
+        "answer": "Flow step 8"
+      },
+      {
+        "question": "Inheritance DOK1 Act2 Q9: Classify DNA to protein flow steps 9.",
+        "options": [
+          "Flow step 9",
+          "Transcription 9",
+          "Translation 9",
+          "Replication"
+        ],
+        "answer": "Flow step 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK1 Act3 Q0: Classify DNA to protein flow steps 0.",
+        "options": [
+          "Flow step 0",
+          "Transcription 0",
+          "Translation 0",
+          "Replication"
+        ],
+        "answer": "Flow step 0"
+      },
+      {
+        "question": "Inheritance DOK1 Act3 Q1: Classify DNA to protein flow steps 1.",
+        "options": [
+          "Flow step 1",
+          "Transcription 1",
+          "Translation 1",
+          "Replication"
+        ],
+        "answer": "Flow step 1"
+      },
+      {
+        "question": "Inheritance DOK1 Act3 Q2: Classify DNA to protein flow steps 2.",
+        "options": [
+          "Flow step 2",
+          "Transcription 2",
+          "Translation 2",
+          "Replication"
+        ],
+        "answer": "Flow step 2"
+      },
+      {
+        "question": "Inheritance DOK1 Act3 Q3: Classify DNA to protein flow steps 3.",
+        "options": [
+          "Flow step 3",
+          "Transcription 3",
+          "Translation 3",
+          "Replication"
+        ],
+        "answer": "Flow step 3"
+      },
+      {
+        "question": "Inheritance DOK1 Act3 Q4: Classify DNA to protein flow steps 4.",
+        "options": [
+          "Flow step 4",
+          "Transcription 4",
+          "Translation 4",
+          "Replication"
+        ],
+        "answer": "Flow step 4"
+      },
+      {
+        "question": "Inheritance DOK1 Act3 Q5: Classify DNA to protein flow steps 5.",
+        "options": [
+          "Flow step 5",
+          "Transcription 5",
+          "Translation 5",
+          "Replication"
+        ],
+        "answer": "Flow step 5"
+      },
+      {
+        "question": "Inheritance DOK1 Act3 Q6: Classify DNA to protein flow steps 6.",
+        "options": [
+          "Flow step 6",
+          "Transcription 6",
+          "Translation 6",
+          "Replication"
+        ],
+        "answer": "Flow step 6"
+      },
+      {
+        "question": "Inheritance DOK1 Act3 Q7: Classify DNA to protein flow steps 7.",
+        "options": [
+          "Flow step 7",
+          "Transcription 7",
+          "Translation 7",
+          "Replication"
+        ],
+        "answer": "Flow step 7"
+      },
+      {
+        "question": "Inheritance DOK1 Act3 Q8: Classify DNA to protein flow steps 8.",
+        "options": [
+          "Flow step 8",
+          "Transcription 8",
+          "Translation 8",
+          "Replication"
+        ],
+        "answer": "Flow step 8"
+      },
+      {
+        "question": "Inheritance DOK1 Act3 Q9: Classify DNA to protein flow steps 9.",
+        "options": [
+          "Flow step 9",
+          "Transcription 9",
+          "Translation 9",
+          "Replication"
+        ],
+        "answer": "Flow step 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK1 Act4 Q0: Classify DNA to protein flow steps 0.",
+        "options": [
+          "Flow step 0",
+          "Transcription 0",
+          "Translation 0",
+          "Replication"
+        ],
+        "answer": "Flow step 0"
+      },
+      {
+        "question": "Inheritance DOK1 Act4 Q1: Classify DNA to protein flow steps 1.",
+        "options": [
+          "Flow step 1",
+          "Transcription 1",
+          "Translation 1",
+          "Replication"
+        ],
+        "answer": "Flow step 1"
+      },
+      {
+        "question": "Inheritance DOK1 Act4 Q2: Classify DNA to protein flow steps 2.",
+        "options": [
+          "Flow step 2",
+          "Transcription 2",
+          "Translation 2",
+          "Replication"
+        ],
+        "answer": "Flow step 2"
+      },
+      {
+        "question": "Inheritance DOK1 Act4 Q3: Classify DNA to protein flow steps 3.",
+        "options": [
+          "Flow step 3",
+          "Transcription 3",
+          "Translation 3",
+          "Replication"
+        ],
+        "answer": "Flow step 3"
+      },
+      {
+        "question": "Inheritance DOK1 Act4 Q4: Classify DNA to protein flow steps 4.",
+        "options": [
+          "Flow step 4",
+          "Transcription 4",
+          "Translation 4",
+          "Replication"
+        ],
+        "answer": "Flow step 4"
+      },
+      {
+        "question": "Inheritance DOK1 Act4 Q5: Classify DNA to protein flow steps 5.",
+        "options": [
+          "Flow step 5",
+          "Transcription 5",
+          "Translation 5",
+          "Replication"
+        ],
+        "answer": "Flow step 5"
+      },
+      {
+        "question": "Inheritance DOK1 Act4 Q6: Classify DNA to protein flow steps 6.",
+        "options": [
+          "Flow step 6",
+          "Transcription 6",
+          "Translation 6",
+          "Replication"
+        ],
+        "answer": "Flow step 6"
+      },
+      {
+        "question": "Inheritance DOK1 Act4 Q7: Classify DNA to protein flow steps 7.",
+        "options": [
+          "Flow step 7",
+          "Transcription 7",
+          "Translation 7",
+          "Replication"
+        ],
+        "answer": "Flow step 7"
+      },
+      {
+        "question": "Inheritance DOK1 Act4 Q8: Classify DNA to protein flow steps 8.",
+        "options": [
+          "Flow step 8",
+          "Transcription 8",
+          "Translation 8",
+          "Replication"
+        ],
+        "answer": "Flow step 8"
+      },
+      {
+        "question": "Inheritance DOK1 Act4 Q9: Classify DNA to protein flow steps 9.",
+        "options": [
+          "Flow step 9",
+          "Transcription 9",
+          "Translation 9",
+          "Replication"
+        ],
+        "answer": "Flow step 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK1 Act5 Q0: Classify DNA to protein flow steps 0.",
+        "options": [
+          "Flow step 0",
+          "Transcription 0",
+          "Translation 0",
+          "Replication"
+        ],
+        "answer": "Flow step 0"
+      },
+      {
+        "question": "Inheritance DOK1 Act5 Q1: Classify DNA to protein flow steps 1.",
+        "options": [
+          "Flow step 1",
+          "Transcription 1",
+          "Translation 1",
+          "Replication"
+        ],
+        "answer": "Flow step 1"
+      },
+      {
+        "question": "Inheritance DOK1 Act5 Q2: Classify DNA to protein flow steps 2.",
+        "options": [
+          "Flow step 2",
+          "Transcription 2",
+          "Translation 2",
+          "Replication"
+        ],
+        "answer": "Flow step 2"
+      },
+      {
+        "question": "Inheritance DOK1 Act5 Q3: Classify DNA to protein flow steps 3.",
+        "options": [
+          "Flow step 3",
+          "Transcription 3",
+          "Translation 3",
+          "Replication"
+        ],
+        "answer": "Flow step 3"
+      },
+      {
+        "question": "Inheritance DOK1 Act5 Q4: Classify DNA to protein flow steps 4.",
+        "options": [
+          "Flow step 4",
+          "Transcription 4",
+          "Translation 4",
+          "Replication"
+        ],
+        "answer": "Flow step 4"
+      },
+      {
+        "question": "Inheritance DOK1 Act5 Q5: Classify DNA to protein flow steps 5.",
+        "options": [
+          "Flow step 5",
+          "Transcription 5",
+          "Translation 5",
+          "Replication"
+        ],
+        "answer": "Flow step 5"
+      },
+      {
+        "question": "Inheritance DOK1 Act5 Q6: Classify DNA to protein flow steps 6.",
+        "options": [
+          "Flow step 6",
+          "Transcription 6",
+          "Translation 6",
+          "Replication"
+        ],
+        "answer": "Flow step 6"
+      },
+      {
+        "question": "Inheritance DOK1 Act5 Q7: Classify DNA to protein flow steps 7.",
+        "options": [
+          "Flow step 7",
+          "Transcription 7",
+          "Translation 7",
+          "Replication"
+        ],
+        "answer": "Flow step 7"
+      },
+      {
+        "question": "Inheritance DOK1 Act5 Q8: Classify DNA to protein flow steps 8.",
+        "options": [
+          "Flow step 8",
+          "Transcription 8",
+          "Translation 8",
+          "Replication"
+        ],
+        "answer": "Flow step 8"
+      },
+      {
+        "question": "Inheritance DOK1 Act5 Q9: Classify DNA to protein flow steps 9.",
+        "options": [
+          "Flow step 9",
+          "Transcription 9",
+          "Translation 9",
+          "Replication"
+        ],
+        "answer": "Flow step 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Inheritance DOK2 Act1 Q0: Identify genetic crosses segregation rates 0.",
+        "options": [
+          "Segregation rate 0",
+          "Dihybrid 0",
+          "Codominance 0",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 0"
+      },
+      {
+        "question": "Inheritance DOK2 Act1 Q1: Identify genetic crosses segregation rates 1.",
+        "options": [
+          "Segregation rate 1",
+          "Dihybrid 1",
+          "Codominance 1",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 1"
+      },
+      {
+        "question": "Inheritance DOK2 Act1 Q2: Identify genetic crosses segregation rates 2.",
+        "options": [
+          "Segregation rate 2",
+          "Dihybrid 2",
+          "Codominance 2",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 2"
+      },
+      {
+        "question": "Inheritance DOK2 Act1 Q3: Identify genetic crosses segregation rates 3.",
+        "options": [
+          "Segregation rate 3",
+          "Dihybrid 3",
+          "Codominance 3",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 3"
+      },
+      {
+        "question": "Inheritance DOK2 Act1 Q4: Identify genetic crosses segregation rates 4.",
+        "options": [
+          "Segregation rate 4",
+          "Dihybrid 4",
+          "Codominance 4",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 4"
+      },
+      {
+        "question": "Inheritance DOK2 Act1 Q5: Identify genetic crosses segregation rates 5.",
+        "options": [
+          "Segregation rate 5",
+          "Dihybrid 5",
+          "Codominance 5",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 5"
+      },
+      {
+        "question": "Inheritance DOK2 Act1 Q6: Identify genetic crosses segregation rates 6.",
+        "options": [
+          "Segregation rate 6",
+          "Dihybrid 6",
+          "Codominance 6",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 6"
+      },
+      {
+        "question": "Inheritance DOK2 Act1 Q7: Identify genetic crosses segregation rates 7.",
+        "options": [
+          "Segregation rate 7",
+          "Dihybrid 7",
+          "Codominance 7",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 7"
+      },
+      {
+        "question": "Inheritance DOK2 Act1 Q8: Identify genetic crosses segregation rates 8.",
+        "options": [
+          "Segregation rate 8",
+          "Dihybrid 8",
+          "Codominance 8",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 8"
+      },
+      {
+        "question": "Inheritance DOK2 Act1 Q9: Identify genetic crosses segregation rates 9.",
+        "options": [
+          "Segregation rate 9",
+          "Dihybrid 9",
+          "Codominance 9",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK2 Act2 Q0: Identify genetic crosses segregation rates 0.",
+        "options": [
+          "Segregation rate 0",
+          "Dihybrid 0",
+          "Codominance 0",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 0"
+      },
+      {
+        "question": "Inheritance DOK2 Act2 Q1: Identify genetic crosses segregation rates 1.",
+        "options": [
+          "Segregation rate 1",
+          "Dihybrid 1",
+          "Codominance 1",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 1"
+      },
+      {
+        "question": "Inheritance DOK2 Act2 Q2: Identify genetic crosses segregation rates 2.",
+        "options": [
+          "Segregation rate 2",
+          "Dihybrid 2",
+          "Codominance 2",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 2"
+      },
+      {
+        "question": "Inheritance DOK2 Act2 Q3: Identify genetic crosses segregation rates 3.",
+        "options": [
+          "Segregation rate 3",
+          "Dihybrid 3",
+          "Codominance 3",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 3"
+      },
+      {
+        "question": "Inheritance DOK2 Act2 Q4: Identify genetic crosses segregation rates 4.",
+        "options": [
+          "Segregation rate 4",
+          "Dihybrid 4",
+          "Codominance 4",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 4"
+      },
+      {
+        "question": "Inheritance DOK2 Act2 Q5: Identify genetic crosses segregation rates 5.",
+        "options": [
+          "Segregation rate 5",
+          "Dihybrid 5",
+          "Codominance 5",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 5"
+      },
+      {
+        "question": "Inheritance DOK2 Act2 Q6: Identify genetic crosses segregation rates 6.",
+        "options": [
+          "Segregation rate 6",
+          "Dihybrid 6",
+          "Codominance 6",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 6"
+      },
+      {
+        "question": "Inheritance DOK2 Act2 Q7: Identify genetic crosses segregation rates 7.",
+        "options": [
+          "Segregation rate 7",
+          "Dihybrid 7",
+          "Codominance 7",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 7"
+      },
+      {
+        "question": "Inheritance DOK2 Act2 Q8: Identify genetic crosses segregation rates 8.",
+        "options": [
+          "Segregation rate 8",
+          "Dihybrid 8",
+          "Codominance 8",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 8"
+      },
+      {
+        "question": "Inheritance DOK2 Act2 Q9: Identify genetic crosses segregation rates 9.",
+        "options": [
+          "Segregation rate 9",
+          "Dihybrid 9",
+          "Codominance 9",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK2 Act3 Q0: Identify genetic crosses segregation rates 0.",
+        "options": [
+          "Segregation rate 0",
+          "Dihybrid 0",
+          "Codominance 0",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 0"
+      },
+      {
+        "question": "Inheritance DOK2 Act3 Q1: Identify genetic crosses segregation rates 1.",
+        "options": [
+          "Segregation rate 1",
+          "Dihybrid 1",
+          "Codominance 1",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 1"
+      },
+      {
+        "question": "Inheritance DOK2 Act3 Q2: Identify genetic crosses segregation rates 2.",
+        "options": [
+          "Segregation rate 2",
+          "Dihybrid 2",
+          "Codominance 2",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 2"
+      },
+      {
+        "question": "Inheritance DOK2 Act3 Q3: Identify genetic crosses segregation rates 3.",
+        "options": [
+          "Segregation rate 3",
+          "Dihybrid 3",
+          "Codominance 3",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 3"
+      },
+      {
+        "question": "Inheritance DOK2 Act3 Q4: Identify genetic crosses segregation rates 4.",
+        "options": [
+          "Segregation rate 4",
+          "Dihybrid 4",
+          "Codominance 4",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 4"
+      },
+      {
+        "question": "Inheritance DOK2 Act3 Q5: Identify genetic crosses segregation rates 5.",
+        "options": [
+          "Segregation rate 5",
+          "Dihybrid 5",
+          "Codominance 5",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 5"
+      },
+      {
+        "question": "Inheritance DOK2 Act3 Q6: Identify genetic crosses segregation rates 6.",
+        "options": [
+          "Segregation rate 6",
+          "Dihybrid 6",
+          "Codominance 6",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 6"
+      },
+      {
+        "question": "Inheritance DOK2 Act3 Q7: Identify genetic crosses segregation rates 7.",
+        "options": [
+          "Segregation rate 7",
+          "Dihybrid 7",
+          "Codominance 7",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 7"
+      },
+      {
+        "question": "Inheritance DOK2 Act3 Q8: Identify genetic crosses segregation rates 8.",
+        "options": [
+          "Segregation rate 8",
+          "Dihybrid 8",
+          "Codominance 8",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 8"
+      },
+      {
+        "question": "Inheritance DOK2 Act3 Q9: Identify genetic crosses segregation rates 9.",
+        "options": [
+          "Segregation rate 9",
+          "Dihybrid 9",
+          "Codominance 9",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK2 Act4 Q0: Identify genetic crosses segregation rates 0.",
+        "options": [
+          "Segregation rate 0",
+          "Dihybrid 0",
+          "Codominance 0",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 0"
+      },
+      {
+        "question": "Inheritance DOK2 Act4 Q1: Identify genetic crosses segregation rates 1.",
+        "options": [
+          "Segregation rate 1",
+          "Dihybrid 1",
+          "Codominance 1",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 1"
+      },
+      {
+        "question": "Inheritance DOK2 Act4 Q2: Identify genetic crosses segregation rates 2.",
+        "options": [
+          "Segregation rate 2",
+          "Dihybrid 2",
+          "Codominance 2",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 2"
+      },
+      {
+        "question": "Inheritance DOK2 Act4 Q3: Identify genetic crosses segregation rates 3.",
+        "options": [
+          "Segregation rate 3",
+          "Dihybrid 3",
+          "Codominance 3",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 3"
+      },
+      {
+        "question": "Inheritance DOK2 Act4 Q4: Identify genetic crosses segregation rates 4.",
+        "options": [
+          "Segregation rate 4",
+          "Dihybrid 4",
+          "Codominance 4",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 4"
+      },
+      {
+        "question": "Inheritance DOK2 Act4 Q5: Identify genetic crosses segregation rates 5.",
+        "options": [
+          "Segregation rate 5",
+          "Dihybrid 5",
+          "Codominance 5",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 5"
+      },
+      {
+        "question": "Inheritance DOK2 Act4 Q6: Identify genetic crosses segregation rates 6.",
+        "options": [
+          "Segregation rate 6",
+          "Dihybrid 6",
+          "Codominance 6",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 6"
+      },
+      {
+        "question": "Inheritance DOK2 Act4 Q7: Identify genetic crosses segregation rates 7.",
+        "options": [
+          "Segregation rate 7",
+          "Dihybrid 7",
+          "Codominance 7",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 7"
+      },
+      {
+        "question": "Inheritance DOK2 Act4 Q8: Identify genetic crosses segregation rates 8.",
+        "options": [
+          "Segregation rate 8",
+          "Dihybrid 8",
+          "Codominance 8",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 8"
+      },
+      {
+        "question": "Inheritance DOK2 Act4 Q9: Identify genetic crosses segregation rates 9.",
+        "options": [
+          "Segregation rate 9",
+          "Dihybrid 9",
+          "Codominance 9",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK2 Act5 Q0: Identify genetic crosses segregation rates 0.",
+        "options": [
+          "Segregation rate 0",
+          "Dihybrid 0",
+          "Codominance 0",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 0"
+      },
+      {
+        "question": "Inheritance DOK2 Act5 Q1: Identify genetic crosses segregation rates 1.",
+        "options": [
+          "Segregation rate 1",
+          "Dihybrid 1",
+          "Codominance 1",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 1"
+      },
+      {
+        "question": "Inheritance DOK2 Act5 Q2: Identify genetic crosses segregation rates 2.",
+        "options": [
+          "Segregation rate 2",
+          "Dihybrid 2",
+          "Codominance 2",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 2"
+      },
+      {
+        "question": "Inheritance DOK2 Act5 Q3: Identify genetic crosses segregation rates 3.",
+        "options": [
+          "Segregation rate 3",
+          "Dihybrid 3",
+          "Codominance 3",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 3"
+      },
+      {
+        "question": "Inheritance DOK2 Act5 Q4: Identify genetic crosses segregation rates 4.",
+        "options": [
+          "Segregation rate 4",
+          "Dihybrid 4",
+          "Codominance 4",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 4"
+      },
+      {
+        "question": "Inheritance DOK2 Act5 Q5: Identify genetic crosses segregation rates 5.",
+        "options": [
+          "Segregation rate 5",
+          "Dihybrid 5",
+          "Codominance 5",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 5"
+      },
+      {
+        "question": "Inheritance DOK2 Act5 Q6: Identify genetic crosses segregation rates 6.",
+        "options": [
+          "Segregation rate 6",
+          "Dihybrid 6",
+          "Codominance 6",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 6"
+      },
+      {
+        "question": "Inheritance DOK2 Act5 Q7: Identify genetic crosses segregation rates 7.",
+        "options": [
+          "Segregation rate 7",
+          "Dihybrid 7",
+          "Codominance 7",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 7"
+      },
+      {
+        "question": "Inheritance DOK2 Act5 Q8: Identify genetic crosses segregation rates 8.",
+        "options": [
+          "Segregation rate 8",
+          "Dihybrid 8",
+          "Codominance 8",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 8"
+      },
+      {
+        "question": "Inheritance DOK2 Act5 Q9: Identify genetic crosses segregation rates 9.",
+        "options": [
+          "Segregation rate 9",
+          "Dihybrid 9",
+          "Codominance 9",
+          "Sex-linked"
+        ],
+        "answer": "Segregation rate 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Inheritance DOK3 Act1 Q0: Predict Punnett square genotypic outputs 0.",
+        "options": [
+          "Punnett output 0",
+          "Ratios 0",
+          "Epistasis 0",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 0"
+      },
+      {
+        "question": "Inheritance DOK3 Act1 Q1: Predict Punnett square genotypic outputs 1.",
+        "options": [
+          "Punnett output 1",
+          "Ratios 1",
+          "Epistasis 1",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 1"
+      },
+      {
+        "question": "Inheritance DOK3 Act1 Q2: Predict Punnett square genotypic outputs 2.",
+        "options": [
+          "Punnett output 2",
+          "Ratios 2",
+          "Epistasis 2",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 2"
+      },
+      {
+        "question": "Inheritance DOK3 Act1 Q3: Predict Punnett square genotypic outputs 3.",
+        "options": [
+          "Punnett output 3",
+          "Ratios 3",
+          "Epistasis 3",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 3"
+      },
+      {
+        "question": "Inheritance DOK3 Act1 Q4: Predict Punnett square genotypic outputs 4.",
+        "options": [
+          "Punnett output 4",
+          "Ratios 4",
+          "Epistasis 4",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 4"
+      },
+      {
+        "question": "Inheritance DOK3 Act1 Q5: Predict Punnett square genotypic outputs 5.",
+        "options": [
+          "Punnett output 5",
+          "Ratios 5",
+          "Epistasis 5",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 5"
+      },
+      {
+        "question": "Inheritance DOK3 Act1 Q6: Predict Punnett square genotypic outputs 6.",
+        "options": [
+          "Punnett output 6",
+          "Ratios 6",
+          "Epistasis 6",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 6"
+      },
+      {
+        "question": "Inheritance DOK3 Act1 Q7: Predict Punnett square genotypic outputs 7.",
+        "options": [
+          "Punnett output 7",
+          "Ratios 7",
+          "Epistasis 7",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 7"
+      },
+      {
+        "question": "Inheritance DOK3 Act1 Q8: Predict Punnett square genotypic outputs 8.",
+        "options": [
+          "Punnett output 8",
+          "Ratios 8",
+          "Epistasis 8",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 8"
+      },
+      {
+        "question": "Inheritance DOK3 Act1 Q9: Predict Punnett square genotypic outputs 9.",
+        "options": [
+          "Punnett output 9",
+          "Ratios 9",
+          "Epistasis 9",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK3 Act2 Q0: Predict Punnett square genotypic outputs 0.",
+        "options": [
+          "Punnett output 0",
+          "Ratios 0",
+          "Epistasis 0",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 0"
+      },
+      {
+        "question": "Inheritance DOK3 Act2 Q1: Predict Punnett square genotypic outputs 1.",
+        "options": [
+          "Punnett output 1",
+          "Ratios 1",
+          "Epistasis 1",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 1"
+      },
+      {
+        "question": "Inheritance DOK3 Act2 Q2: Predict Punnett square genotypic outputs 2.",
+        "options": [
+          "Punnett output 2",
+          "Ratios 2",
+          "Epistasis 2",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 2"
+      },
+      {
+        "question": "Inheritance DOK3 Act2 Q3: Predict Punnett square genotypic outputs 3.",
+        "options": [
+          "Punnett output 3",
+          "Ratios 3",
+          "Epistasis 3",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 3"
+      },
+      {
+        "question": "Inheritance DOK3 Act2 Q4: Predict Punnett square genotypic outputs 4.",
+        "options": [
+          "Punnett output 4",
+          "Ratios 4",
+          "Epistasis 4",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 4"
+      },
+      {
+        "question": "Inheritance DOK3 Act2 Q5: Predict Punnett square genotypic outputs 5.",
+        "options": [
+          "Punnett output 5",
+          "Ratios 5",
+          "Epistasis 5",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 5"
+      },
+      {
+        "question": "Inheritance DOK3 Act2 Q6: Predict Punnett square genotypic outputs 6.",
+        "options": [
+          "Punnett output 6",
+          "Ratios 6",
+          "Epistasis 6",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 6"
+      },
+      {
+        "question": "Inheritance DOK3 Act2 Q7: Predict Punnett square genotypic outputs 7.",
+        "options": [
+          "Punnett output 7",
+          "Ratios 7",
+          "Epistasis 7",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 7"
+      },
+      {
+        "question": "Inheritance DOK3 Act2 Q8: Predict Punnett square genotypic outputs 8.",
+        "options": [
+          "Punnett output 8",
+          "Ratios 8",
+          "Epistasis 8",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 8"
+      },
+      {
+        "question": "Inheritance DOK3 Act2 Q9: Predict Punnett square genotypic outputs 9.",
+        "options": [
+          "Punnett output 9",
+          "Ratios 9",
+          "Epistasis 9",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK3 Act3 Q0: Predict Punnett square genotypic outputs 0.",
+        "options": [
+          "Punnett output 0",
+          "Ratios 0",
+          "Epistasis 0",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 0"
+      },
+      {
+        "question": "Inheritance DOK3 Act3 Q1: Predict Punnett square genotypic outputs 1.",
+        "options": [
+          "Punnett output 1",
+          "Ratios 1",
+          "Epistasis 1",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 1"
+      },
+      {
+        "question": "Inheritance DOK3 Act3 Q2: Predict Punnett square genotypic outputs 2.",
+        "options": [
+          "Punnett output 2",
+          "Ratios 2",
+          "Epistasis 2",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 2"
+      },
+      {
+        "question": "Inheritance DOK3 Act3 Q3: Predict Punnett square genotypic outputs 3.",
+        "options": [
+          "Punnett output 3",
+          "Ratios 3",
+          "Epistasis 3",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 3"
+      },
+      {
+        "question": "Inheritance DOK3 Act3 Q4: Predict Punnett square genotypic outputs 4.",
+        "options": [
+          "Punnett output 4",
+          "Ratios 4",
+          "Epistasis 4",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 4"
+      },
+      {
+        "question": "Inheritance DOK3 Act3 Q5: Predict Punnett square genotypic outputs 5.",
+        "options": [
+          "Punnett output 5",
+          "Ratios 5",
+          "Epistasis 5",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 5"
+      },
+      {
+        "question": "Inheritance DOK3 Act3 Q6: Predict Punnett square genotypic outputs 6.",
+        "options": [
+          "Punnett output 6",
+          "Ratios 6",
+          "Epistasis 6",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 6"
+      },
+      {
+        "question": "Inheritance DOK3 Act3 Q7: Predict Punnett square genotypic outputs 7.",
+        "options": [
+          "Punnett output 7",
+          "Ratios 7",
+          "Epistasis 7",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 7"
+      },
+      {
+        "question": "Inheritance DOK3 Act3 Q8: Predict Punnett square genotypic outputs 8.",
+        "options": [
+          "Punnett output 8",
+          "Ratios 8",
+          "Epistasis 8",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 8"
+      },
+      {
+        "question": "Inheritance DOK3 Act3 Q9: Predict Punnett square genotypic outputs 9.",
+        "options": [
+          "Punnett output 9",
+          "Ratios 9",
+          "Epistasis 9",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK3 Act4 Q0: Predict Punnett square genotypic outputs 0.",
+        "options": [
+          "Punnett output 0",
+          "Ratios 0",
+          "Epistasis 0",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 0"
+      },
+      {
+        "question": "Inheritance DOK3 Act4 Q1: Predict Punnett square genotypic outputs 1.",
+        "options": [
+          "Punnett output 1",
+          "Ratios 1",
+          "Epistasis 1",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 1"
+      },
+      {
+        "question": "Inheritance DOK3 Act4 Q2: Predict Punnett square genotypic outputs 2.",
+        "options": [
+          "Punnett output 2",
+          "Ratios 2",
+          "Epistasis 2",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 2"
+      },
+      {
+        "question": "Inheritance DOK3 Act4 Q3: Predict Punnett square genotypic outputs 3.",
+        "options": [
+          "Punnett output 3",
+          "Ratios 3",
+          "Epistasis 3",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 3"
+      },
+      {
+        "question": "Inheritance DOK3 Act4 Q4: Predict Punnett square genotypic outputs 4.",
+        "options": [
+          "Punnett output 4",
+          "Ratios 4",
+          "Epistasis 4",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 4"
+      },
+      {
+        "question": "Inheritance DOK3 Act4 Q5: Predict Punnett square genotypic outputs 5.",
+        "options": [
+          "Punnett output 5",
+          "Ratios 5",
+          "Epistasis 5",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 5"
+      },
+      {
+        "question": "Inheritance DOK3 Act4 Q6: Predict Punnett square genotypic outputs 6.",
+        "options": [
+          "Punnett output 6",
+          "Ratios 6",
+          "Epistasis 6",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 6"
+      },
+      {
+        "question": "Inheritance DOK3 Act4 Q7: Predict Punnett square genotypic outputs 7.",
+        "options": [
+          "Punnett output 7",
+          "Ratios 7",
+          "Epistasis 7",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 7"
+      },
+      {
+        "question": "Inheritance DOK3 Act4 Q8: Predict Punnett square genotypic outputs 8.",
+        "options": [
+          "Punnett output 8",
+          "Ratios 8",
+          "Epistasis 8",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 8"
+      },
+      {
+        "question": "Inheritance DOK3 Act4 Q9: Predict Punnett square genotypic outputs 9.",
+        "options": [
+          "Punnett output 9",
+          "Ratios 9",
+          "Epistasis 9",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK3 Act5 Q0: Predict Punnett square genotypic outputs 0.",
+        "options": [
+          "Punnett output 0",
+          "Ratios 0",
+          "Epistasis 0",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 0"
+      },
+      {
+        "question": "Inheritance DOK3 Act5 Q1: Predict Punnett square genotypic outputs 1.",
+        "options": [
+          "Punnett output 1",
+          "Ratios 1",
+          "Epistasis 1",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 1"
+      },
+      {
+        "question": "Inheritance DOK3 Act5 Q2: Predict Punnett square genotypic outputs 2.",
+        "options": [
+          "Punnett output 2",
+          "Ratios 2",
+          "Epistasis 2",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 2"
+      },
+      {
+        "question": "Inheritance DOK3 Act5 Q3: Predict Punnett square genotypic outputs 3.",
+        "options": [
+          "Punnett output 3",
+          "Ratios 3",
+          "Epistasis 3",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 3"
+      },
+      {
+        "question": "Inheritance DOK3 Act5 Q4: Predict Punnett square genotypic outputs 4.",
+        "options": [
+          "Punnett output 4",
+          "Ratios 4",
+          "Epistasis 4",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 4"
+      },
+      {
+        "question": "Inheritance DOK3 Act5 Q5: Predict Punnett square genotypic outputs 5.",
+        "options": [
+          "Punnett output 5",
+          "Ratios 5",
+          "Epistasis 5",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 5"
+      },
+      {
+        "question": "Inheritance DOK3 Act5 Q6: Predict Punnett square genotypic outputs 6.",
+        "options": [
+          "Punnett output 6",
+          "Ratios 6",
+          "Epistasis 6",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 6"
+      },
+      {
+        "question": "Inheritance DOK3 Act5 Q7: Predict Punnett square genotypic outputs 7.",
+        "options": [
+          "Punnett output 7",
+          "Ratios 7",
+          "Epistasis 7",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 7"
+      },
+      {
+        "question": "Inheritance DOK3 Act5 Q8: Predict Punnett square genotypic outputs 8.",
+        "options": [
+          "Punnett output 8",
+          "Ratios 8",
+          "Epistasis 8",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 8"
+      },
+      {
+        "question": "Inheritance DOK3 Act5 Q9: Predict Punnett square genotypic outputs 9.",
+        "options": [
+          "Punnett output 9",
+          "Ratios 9",
+          "Epistasis 9",
+          "Polygenic"
+        ],
+        "answer": "Punnett output 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Inheritance DOK4 Act1 Q0: Calibrate gene linkage map recombination frequencies 0.",
+        "options": [
+          "Linkage map 0",
+          "Methylation 0",
+          "Trisomy 0",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 0"
+      },
+      {
+        "question": "Inheritance DOK4 Act1 Q1: Calibrate gene linkage map recombination frequencies 1.",
+        "options": [
+          "Linkage map 1",
+          "Methylation 1",
+          "Trisomy 1",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 1"
+      },
+      {
+        "question": "Inheritance DOK4 Act1 Q2: Calibrate gene linkage map recombination frequencies 2.",
+        "options": [
+          "Linkage map 2",
+          "Methylation 2",
+          "Trisomy 2",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 2"
+      },
+      {
+        "question": "Inheritance DOK4 Act1 Q3: Calibrate gene linkage map recombination frequencies 3.",
+        "options": [
+          "Linkage map 3",
+          "Methylation 3",
+          "Trisomy 3",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 3"
+      },
+      {
+        "question": "Inheritance DOK4 Act1 Q4: Calibrate gene linkage map recombination frequencies 4.",
+        "options": [
+          "Linkage map 4",
+          "Methylation 4",
+          "Trisomy 4",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 4"
+      },
+      {
+        "question": "Inheritance DOK4 Act1 Q5: Calibrate gene linkage map recombination frequencies 5.",
+        "options": [
+          "Linkage map 5",
+          "Methylation 5",
+          "Trisomy 5",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 5"
+      },
+      {
+        "question": "Inheritance DOK4 Act1 Q6: Calibrate gene linkage map recombination frequencies 6.",
+        "options": [
+          "Linkage map 6",
+          "Methylation 6",
+          "Trisomy 6",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 6"
+      },
+      {
+        "question": "Inheritance DOK4 Act1 Q7: Calibrate gene linkage map recombination frequencies 7.",
+        "options": [
+          "Linkage map 7",
+          "Methylation 7",
+          "Trisomy 7",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 7"
+      },
+      {
+        "question": "Inheritance DOK4 Act1 Q8: Calibrate gene linkage map recombination frequencies 8.",
+        "options": [
+          "Linkage map 8",
+          "Methylation 8",
+          "Trisomy 8",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 8"
+      },
+      {
+        "question": "Inheritance DOK4 Act1 Q9: Calibrate gene linkage map recombination frequencies 9.",
+        "options": [
+          "Linkage map 9",
+          "Methylation 9",
+          "Trisomy 9",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK4 Act2 Q0: Calibrate gene linkage map recombination frequencies 0.",
+        "options": [
+          "Linkage map 0",
+          "Methylation 0",
+          "Trisomy 0",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 0"
+      },
+      {
+        "question": "Inheritance DOK4 Act2 Q1: Calibrate gene linkage map recombination frequencies 1.",
+        "options": [
+          "Linkage map 1",
+          "Methylation 1",
+          "Trisomy 1",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 1"
+      },
+      {
+        "question": "Inheritance DOK4 Act2 Q2: Calibrate gene linkage map recombination frequencies 2.",
+        "options": [
+          "Linkage map 2",
+          "Methylation 2",
+          "Trisomy 2",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 2"
+      },
+      {
+        "question": "Inheritance DOK4 Act2 Q3: Calibrate gene linkage map recombination frequencies 3.",
+        "options": [
+          "Linkage map 3",
+          "Methylation 3",
+          "Trisomy 3",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 3"
+      },
+      {
+        "question": "Inheritance DOK4 Act2 Q4: Calibrate gene linkage map recombination frequencies 4.",
+        "options": [
+          "Linkage map 4",
+          "Methylation 4",
+          "Trisomy 4",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 4"
+      },
+      {
+        "question": "Inheritance DOK4 Act2 Q5: Calibrate gene linkage map recombination frequencies 5.",
+        "options": [
+          "Linkage map 5",
+          "Methylation 5",
+          "Trisomy 5",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 5"
+      },
+      {
+        "question": "Inheritance DOK4 Act2 Q6: Calibrate gene linkage map recombination frequencies 6.",
+        "options": [
+          "Linkage map 6",
+          "Methylation 6",
+          "Trisomy 6",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 6"
+      },
+      {
+        "question": "Inheritance DOK4 Act2 Q7: Calibrate gene linkage map recombination frequencies 7.",
+        "options": [
+          "Linkage map 7",
+          "Methylation 7",
+          "Trisomy 7",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 7"
+      },
+      {
+        "question": "Inheritance DOK4 Act2 Q8: Calibrate gene linkage map recombination frequencies 8.",
+        "options": [
+          "Linkage map 8",
+          "Methylation 8",
+          "Trisomy 8",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 8"
+      },
+      {
+        "question": "Inheritance DOK4 Act2 Q9: Calibrate gene linkage map recombination frequencies 9.",
+        "options": [
+          "Linkage map 9",
+          "Methylation 9",
+          "Trisomy 9",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK4 Act3 Q0: Calibrate gene linkage map recombination frequencies 0.",
+        "options": [
+          "Linkage map 0",
+          "Methylation 0",
+          "Trisomy 0",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 0"
+      },
+      {
+        "question": "Inheritance DOK4 Act3 Q1: Calibrate gene linkage map recombination frequencies 1.",
+        "options": [
+          "Linkage map 1",
+          "Methylation 1",
+          "Trisomy 1",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 1"
+      },
+      {
+        "question": "Inheritance DOK4 Act3 Q2: Calibrate gene linkage map recombination frequencies 2.",
+        "options": [
+          "Linkage map 2",
+          "Methylation 2",
+          "Trisomy 2",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 2"
+      },
+      {
+        "question": "Inheritance DOK4 Act3 Q3: Calibrate gene linkage map recombination frequencies 3.",
+        "options": [
+          "Linkage map 3",
+          "Methylation 3",
+          "Trisomy 3",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 3"
+      },
+      {
+        "question": "Inheritance DOK4 Act3 Q4: Calibrate gene linkage map recombination frequencies 4.",
+        "options": [
+          "Linkage map 4",
+          "Methylation 4",
+          "Trisomy 4",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 4"
+      },
+      {
+        "question": "Inheritance DOK4 Act3 Q5: Calibrate gene linkage map recombination frequencies 5.",
+        "options": [
+          "Linkage map 5",
+          "Methylation 5",
+          "Trisomy 5",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 5"
+      },
+      {
+        "question": "Inheritance DOK4 Act3 Q6: Calibrate gene linkage map recombination frequencies 6.",
+        "options": [
+          "Linkage map 6",
+          "Methylation 6",
+          "Trisomy 6",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 6"
+      },
+      {
+        "question": "Inheritance DOK4 Act3 Q7: Calibrate gene linkage map recombination frequencies 7.",
+        "options": [
+          "Linkage map 7",
+          "Methylation 7",
+          "Trisomy 7",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 7"
+      },
+      {
+        "question": "Inheritance DOK4 Act3 Q8: Calibrate gene linkage map recombination frequencies 8.",
+        "options": [
+          "Linkage map 8",
+          "Methylation 8",
+          "Trisomy 8",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 8"
+      },
+      {
+        "question": "Inheritance DOK4 Act3 Q9: Calibrate gene linkage map recombination frequencies 9.",
+        "options": [
+          "Linkage map 9",
+          "Methylation 9",
+          "Trisomy 9",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK4 Act4 Q0: Calibrate gene linkage map recombination frequencies 0.",
+        "options": [
+          "Linkage map 0",
+          "Methylation 0",
+          "Trisomy 0",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 0"
+      },
+      {
+        "question": "Inheritance DOK4 Act4 Q1: Calibrate gene linkage map recombination frequencies 1.",
+        "options": [
+          "Linkage map 1",
+          "Methylation 1",
+          "Trisomy 1",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 1"
+      },
+      {
+        "question": "Inheritance DOK4 Act4 Q2: Calibrate gene linkage map recombination frequencies 2.",
+        "options": [
+          "Linkage map 2",
+          "Methylation 2",
+          "Trisomy 2",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 2"
+      },
+      {
+        "question": "Inheritance DOK4 Act4 Q3: Calibrate gene linkage map recombination frequencies 3.",
+        "options": [
+          "Linkage map 3",
+          "Methylation 3",
+          "Trisomy 3",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 3"
+      },
+      {
+        "question": "Inheritance DOK4 Act4 Q4: Calibrate gene linkage map recombination frequencies 4.",
+        "options": [
+          "Linkage map 4",
+          "Methylation 4",
+          "Trisomy 4",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 4"
+      },
+      {
+        "question": "Inheritance DOK4 Act4 Q5: Calibrate gene linkage map recombination frequencies 5.",
+        "options": [
+          "Linkage map 5",
+          "Methylation 5",
+          "Trisomy 5",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 5"
+      },
+      {
+        "question": "Inheritance DOK4 Act4 Q6: Calibrate gene linkage map recombination frequencies 6.",
+        "options": [
+          "Linkage map 6",
+          "Methylation 6",
+          "Trisomy 6",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 6"
+      },
+      {
+        "question": "Inheritance DOK4 Act4 Q7: Calibrate gene linkage map recombination frequencies 7.",
+        "options": [
+          "Linkage map 7",
+          "Methylation 7",
+          "Trisomy 7",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 7"
+      },
+      {
+        "question": "Inheritance DOK4 Act4 Q8: Calibrate gene linkage map recombination frequencies 8.",
+        "options": [
+          "Linkage map 8",
+          "Methylation 8",
+          "Trisomy 8",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 8"
+      },
+      {
+        "question": "Inheritance DOK4 Act4 Q9: Calibrate gene linkage map recombination frequencies 9.",
+        "options": [
+          "Linkage map 9",
+          "Methylation 9",
+          "Trisomy 9",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 9"
+      }
+    ],
+    [
+      {
+        "question": "Inheritance DOK4 Act5 Q0: Calibrate gene linkage map recombination frequencies 0.",
+        "options": [
+          "Linkage map 0",
+          "Methylation 0",
+          "Trisomy 0",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 0"
+      },
+      {
+        "question": "Inheritance DOK4 Act5 Q1: Calibrate gene linkage map recombination frequencies 1.",
+        "options": [
+          "Linkage map 1",
+          "Methylation 1",
+          "Trisomy 1",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 1"
+      },
+      {
+        "question": "Inheritance DOK4 Act5 Q2: Calibrate gene linkage map recombination frequencies 2.",
+        "options": [
+          "Linkage map 2",
+          "Methylation 2",
+          "Trisomy 2",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 2"
+      },
+      {
+        "question": "Inheritance DOK4 Act5 Q3: Calibrate gene linkage map recombination frequencies 3.",
+        "options": [
+          "Linkage map 3",
+          "Methylation 3",
+          "Trisomy 3",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 3"
+      },
+      {
+        "question": "Inheritance DOK4 Act5 Q4: Calibrate gene linkage map recombination frequencies 4.",
+        "options": [
+          "Linkage map 4",
+          "Methylation 4",
+          "Trisomy 4",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 4"
+      },
+      {
+        "question": "Inheritance DOK4 Act5 Q5: Calibrate gene linkage map recombination frequencies 5.",
+        "options": [
+          "Linkage map 5",
+          "Methylation 5",
+          "Trisomy 5",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 5"
+      },
+      {
+        "question": "Inheritance DOK4 Act5 Q6: Calibrate gene linkage map recombination frequencies 6.",
+        "options": [
+          "Linkage map 6",
+          "Methylation 6",
+          "Trisomy 6",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 6"
+      },
+      {
+        "question": "Inheritance DOK4 Act5 Q7: Calibrate gene linkage map recombination frequencies 7.",
+        "options": [
+          "Linkage map 7",
+          "Methylation 7",
+          "Trisomy 7",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 7"
+      },
+      {
+        "question": "Inheritance DOK4 Act5 Q8: Calibrate gene linkage map recombination frequencies 8.",
+        "options": [
+          "Linkage map 8",
+          "Methylation 8",
+          "Trisomy 8",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 8"
+      },
+      {
+        "question": "Inheritance DOK4 Act5 Q9: Calibrate gene linkage map recombination frequencies 9.",
+        "options": [
+          "Linkage map 9",
+          "Methylation 9",
+          "Trisomy 9",
+          "Gene drive"
+        ],
+        "answer": "Linkage map 9"
+      }
+    ]
+  ]
+}
+,
+  "OAS.B.LS3.2": {
+  "1": [
+    [
+      {
+        "question": "Variation DOK1 Act1 Q0: Match meiotic stage crossover events 0.",
+        "options": [
+          "Meiotic phase 0",
+          "Ploidy 0",
+          "Assortment 0",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 0"
+      },
+      {
+        "question": "Variation DOK1 Act1 Q1: Match meiotic stage crossover events 1.",
+        "options": [
+          "Meiotic phase 1",
+          "Ploidy 1",
+          "Assortment 1",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 1"
+      },
+      {
+        "question": "Variation DOK1 Act1 Q2: Match meiotic stage crossover events 2.",
+        "options": [
+          "Meiotic phase 2",
+          "Ploidy 2",
+          "Assortment 2",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 2"
+      },
+      {
+        "question": "Variation DOK1 Act1 Q3: Match meiotic stage crossover events 3.",
+        "options": [
+          "Meiotic phase 3",
+          "Ploidy 3",
+          "Assortment 3",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 3"
+      },
+      {
+        "question": "Variation DOK1 Act1 Q4: Match meiotic stage crossover events 4.",
+        "options": [
+          "Meiotic phase 4",
+          "Ploidy 4",
+          "Assortment 4",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 4"
+      },
+      {
+        "question": "Variation DOK1 Act1 Q5: Match meiotic stage crossover events 5.",
+        "options": [
+          "Meiotic phase 5",
+          "Ploidy 5",
+          "Assortment 5",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 5"
+      },
+      {
+        "question": "Variation DOK1 Act1 Q6: Match meiotic stage crossover events 6.",
+        "options": [
+          "Meiotic phase 6",
+          "Ploidy 6",
+          "Assortment 6",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 6"
+      },
+      {
+        "question": "Variation DOK1 Act1 Q7: Match meiotic stage crossover events 7.",
+        "options": [
+          "Meiotic phase 7",
+          "Ploidy 7",
+          "Assortment 7",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 7"
+      },
+      {
+        "question": "Variation DOK1 Act1 Q8: Match meiotic stage crossover events 8.",
+        "options": [
+          "Meiotic phase 8",
+          "Ploidy 8",
+          "Assortment 8",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 8"
+      },
+      {
+        "question": "Variation DOK1 Act1 Q9: Match meiotic stage crossover events 9.",
+        "options": [
+          "Meiotic phase 9",
+          "Ploidy 9",
+          "Assortment 9",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK1 Act2 Q0: Match meiotic stage crossover events 0.",
+        "options": [
+          "Meiotic phase 0",
+          "Ploidy 0",
+          "Assortment 0",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 0"
+      },
+      {
+        "question": "Variation DOK1 Act2 Q1: Match meiotic stage crossover events 1.",
+        "options": [
+          "Meiotic phase 1",
+          "Ploidy 1",
+          "Assortment 1",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 1"
+      },
+      {
+        "question": "Variation DOK1 Act2 Q2: Match meiotic stage crossover events 2.",
+        "options": [
+          "Meiotic phase 2",
+          "Ploidy 2",
+          "Assortment 2",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 2"
+      },
+      {
+        "question": "Variation DOK1 Act2 Q3: Match meiotic stage crossover events 3.",
+        "options": [
+          "Meiotic phase 3",
+          "Ploidy 3",
+          "Assortment 3",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 3"
+      },
+      {
+        "question": "Variation DOK1 Act2 Q4: Match meiotic stage crossover events 4.",
+        "options": [
+          "Meiotic phase 4",
+          "Ploidy 4",
+          "Assortment 4",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 4"
+      },
+      {
+        "question": "Variation DOK1 Act2 Q5: Match meiotic stage crossover events 5.",
+        "options": [
+          "Meiotic phase 5",
+          "Ploidy 5",
+          "Assortment 5",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 5"
+      },
+      {
+        "question": "Variation DOK1 Act2 Q6: Match meiotic stage crossover events 6.",
+        "options": [
+          "Meiotic phase 6",
+          "Ploidy 6",
+          "Assortment 6",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 6"
+      },
+      {
+        "question": "Variation DOK1 Act2 Q7: Match meiotic stage crossover events 7.",
+        "options": [
+          "Meiotic phase 7",
+          "Ploidy 7",
+          "Assortment 7",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 7"
+      },
+      {
+        "question": "Variation DOK1 Act2 Q8: Match meiotic stage crossover events 8.",
+        "options": [
+          "Meiotic phase 8",
+          "Ploidy 8",
+          "Assortment 8",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 8"
+      },
+      {
+        "question": "Variation DOK1 Act2 Q9: Match meiotic stage crossover events 9.",
+        "options": [
+          "Meiotic phase 9",
+          "Ploidy 9",
+          "Assortment 9",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK1 Act3 Q0: Match meiotic stage crossover events 0.",
+        "options": [
+          "Meiotic phase 0",
+          "Ploidy 0",
+          "Assortment 0",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 0"
+      },
+      {
+        "question": "Variation DOK1 Act3 Q1: Match meiotic stage crossover events 1.",
+        "options": [
+          "Meiotic phase 1",
+          "Ploidy 1",
+          "Assortment 1",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 1"
+      },
+      {
+        "question": "Variation DOK1 Act3 Q2: Match meiotic stage crossover events 2.",
+        "options": [
+          "Meiotic phase 2",
+          "Ploidy 2",
+          "Assortment 2",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 2"
+      },
+      {
+        "question": "Variation DOK1 Act3 Q3: Match meiotic stage crossover events 3.",
+        "options": [
+          "Meiotic phase 3",
+          "Ploidy 3",
+          "Assortment 3",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 3"
+      },
+      {
+        "question": "Variation DOK1 Act3 Q4: Match meiotic stage crossover events 4.",
+        "options": [
+          "Meiotic phase 4",
+          "Ploidy 4",
+          "Assortment 4",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 4"
+      },
+      {
+        "question": "Variation DOK1 Act3 Q5: Match meiotic stage crossover events 5.",
+        "options": [
+          "Meiotic phase 5",
+          "Ploidy 5",
+          "Assortment 5",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 5"
+      },
+      {
+        "question": "Variation DOK1 Act3 Q6: Match meiotic stage crossover events 6.",
+        "options": [
+          "Meiotic phase 6",
+          "Ploidy 6",
+          "Assortment 6",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 6"
+      },
+      {
+        "question": "Variation DOK1 Act3 Q7: Match meiotic stage crossover events 7.",
+        "options": [
+          "Meiotic phase 7",
+          "Ploidy 7",
+          "Assortment 7",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 7"
+      },
+      {
+        "question": "Variation DOK1 Act3 Q8: Match meiotic stage crossover events 8.",
+        "options": [
+          "Meiotic phase 8",
+          "Ploidy 8",
+          "Assortment 8",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 8"
+      },
+      {
+        "question": "Variation DOK1 Act3 Q9: Match meiotic stage crossover events 9.",
+        "options": [
+          "Meiotic phase 9",
+          "Ploidy 9",
+          "Assortment 9",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK1 Act4 Q0: Match meiotic stage crossover events 0.",
+        "options": [
+          "Meiotic phase 0",
+          "Ploidy 0",
+          "Assortment 0",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 0"
+      },
+      {
+        "question": "Variation DOK1 Act4 Q1: Match meiotic stage crossover events 1.",
+        "options": [
+          "Meiotic phase 1",
+          "Ploidy 1",
+          "Assortment 1",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 1"
+      },
+      {
+        "question": "Variation DOK1 Act4 Q2: Match meiotic stage crossover events 2.",
+        "options": [
+          "Meiotic phase 2",
+          "Ploidy 2",
+          "Assortment 2",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 2"
+      },
+      {
+        "question": "Variation DOK1 Act4 Q3: Match meiotic stage crossover events 3.",
+        "options": [
+          "Meiotic phase 3",
+          "Ploidy 3",
+          "Assortment 3",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 3"
+      },
+      {
+        "question": "Variation DOK1 Act4 Q4: Match meiotic stage crossover events 4.",
+        "options": [
+          "Meiotic phase 4",
+          "Ploidy 4",
+          "Assortment 4",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 4"
+      },
+      {
+        "question": "Variation DOK1 Act4 Q5: Match meiotic stage crossover events 5.",
+        "options": [
+          "Meiotic phase 5",
+          "Ploidy 5",
+          "Assortment 5",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 5"
+      },
+      {
+        "question": "Variation DOK1 Act4 Q6: Match meiotic stage crossover events 6.",
+        "options": [
+          "Meiotic phase 6",
+          "Ploidy 6",
+          "Assortment 6",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 6"
+      },
+      {
+        "question": "Variation DOK1 Act4 Q7: Match meiotic stage crossover events 7.",
+        "options": [
+          "Meiotic phase 7",
+          "Ploidy 7",
+          "Assortment 7",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 7"
+      },
+      {
+        "question": "Variation DOK1 Act4 Q8: Match meiotic stage crossover events 8.",
+        "options": [
+          "Meiotic phase 8",
+          "Ploidy 8",
+          "Assortment 8",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 8"
+      },
+      {
+        "question": "Variation DOK1 Act4 Q9: Match meiotic stage crossover events 9.",
+        "options": [
+          "Meiotic phase 9",
+          "Ploidy 9",
+          "Assortment 9",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK1 Act5 Q0: Match meiotic stage crossover events 0.",
+        "options": [
+          "Meiotic phase 0",
+          "Ploidy 0",
+          "Assortment 0",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 0"
+      },
+      {
+        "question": "Variation DOK1 Act5 Q1: Match meiotic stage crossover events 1.",
+        "options": [
+          "Meiotic phase 1",
+          "Ploidy 1",
+          "Assortment 1",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 1"
+      },
+      {
+        "question": "Variation DOK1 Act5 Q2: Match meiotic stage crossover events 2.",
+        "options": [
+          "Meiotic phase 2",
+          "Ploidy 2",
+          "Assortment 2",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 2"
+      },
+      {
+        "question": "Variation DOK1 Act5 Q3: Match meiotic stage crossover events 3.",
+        "options": [
+          "Meiotic phase 3",
+          "Ploidy 3",
+          "Assortment 3",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 3"
+      },
+      {
+        "question": "Variation DOK1 Act5 Q4: Match meiotic stage crossover events 4.",
+        "options": [
+          "Meiotic phase 4",
+          "Ploidy 4",
+          "Assortment 4",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 4"
+      },
+      {
+        "question": "Variation DOK1 Act5 Q5: Match meiotic stage crossover events 5.",
+        "options": [
+          "Meiotic phase 5",
+          "Ploidy 5",
+          "Assortment 5",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 5"
+      },
+      {
+        "question": "Variation DOK1 Act5 Q6: Match meiotic stage crossover events 6.",
+        "options": [
+          "Meiotic phase 6",
+          "Ploidy 6",
+          "Assortment 6",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 6"
+      },
+      {
+        "question": "Variation DOK1 Act5 Q7: Match meiotic stage crossover events 7.",
+        "options": [
+          "Meiotic phase 7",
+          "Ploidy 7",
+          "Assortment 7",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 7"
+      },
+      {
+        "question": "Variation DOK1 Act5 Q8: Match meiotic stage crossover events 8.",
+        "options": [
+          "Meiotic phase 8",
+          "Ploidy 8",
+          "Assortment 8",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 8"
+      },
+      {
+        "question": "Variation DOK1 Act5 Q9: Match meiotic stage crossover events 9.",
+        "options": [
+          "Meiotic phase 9",
+          "Ploidy 9",
+          "Assortment 9",
+          "Homologous"
+        ],
+        "answer": "Meiotic phase 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Variation DOK2 Act1 Q0: Classify mutation frameshift vs substitution examples 0.",
+        "options": [
+          "Mutation class 0",
+          "Nondisjunction 0",
+          "Aneuploidy 0",
+          "Translocation"
+        ],
+        "answer": "Mutation class 0"
+      },
+      {
+        "question": "Variation DOK2 Act1 Q1: Classify mutation frameshift vs substitution examples 1.",
+        "options": [
+          "Mutation class 1",
+          "Nondisjunction 1",
+          "Aneuploidy 1",
+          "Translocation"
+        ],
+        "answer": "Mutation class 1"
+      },
+      {
+        "question": "Variation DOK2 Act1 Q2: Classify mutation frameshift vs substitution examples 2.",
+        "options": [
+          "Mutation class 2",
+          "Nondisjunction 2",
+          "Aneuploidy 2",
+          "Translocation"
+        ],
+        "answer": "Mutation class 2"
+      },
+      {
+        "question": "Variation DOK2 Act1 Q3: Classify mutation frameshift vs substitution examples 3.",
+        "options": [
+          "Mutation class 3",
+          "Nondisjunction 3",
+          "Aneuploidy 3",
+          "Translocation"
+        ],
+        "answer": "Mutation class 3"
+      },
+      {
+        "question": "Variation DOK2 Act1 Q4: Classify mutation frameshift vs substitution examples 4.",
+        "options": [
+          "Mutation class 4",
+          "Nondisjunction 4",
+          "Aneuploidy 4",
+          "Translocation"
+        ],
+        "answer": "Mutation class 4"
+      },
+      {
+        "question": "Variation DOK2 Act1 Q5: Classify mutation frameshift vs substitution examples 5.",
+        "options": [
+          "Mutation class 5",
+          "Nondisjunction 5",
+          "Aneuploidy 5",
+          "Translocation"
+        ],
+        "answer": "Mutation class 5"
+      },
+      {
+        "question": "Variation DOK2 Act1 Q6: Classify mutation frameshift vs substitution examples 6.",
+        "options": [
+          "Mutation class 6",
+          "Nondisjunction 6",
+          "Aneuploidy 6",
+          "Translocation"
+        ],
+        "answer": "Mutation class 6"
+      },
+      {
+        "question": "Variation DOK2 Act1 Q7: Classify mutation frameshift vs substitution examples 7.",
+        "options": [
+          "Mutation class 7",
+          "Nondisjunction 7",
+          "Aneuploidy 7",
+          "Translocation"
+        ],
+        "answer": "Mutation class 7"
+      },
+      {
+        "question": "Variation DOK2 Act1 Q8: Classify mutation frameshift vs substitution examples 8.",
+        "options": [
+          "Mutation class 8",
+          "Nondisjunction 8",
+          "Aneuploidy 8",
+          "Translocation"
+        ],
+        "answer": "Mutation class 8"
+      },
+      {
+        "question": "Variation DOK2 Act1 Q9: Classify mutation frameshift vs substitution examples 9.",
+        "options": [
+          "Mutation class 9",
+          "Nondisjunction 9",
+          "Aneuploidy 9",
+          "Translocation"
+        ],
+        "answer": "Mutation class 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK2 Act2 Q0: Classify mutation frameshift vs substitution examples 0.",
+        "options": [
+          "Mutation class 0",
+          "Nondisjunction 0",
+          "Aneuploidy 0",
+          "Translocation"
+        ],
+        "answer": "Mutation class 0"
+      },
+      {
+        "question": "Variation DOK2 Act2 Q1: Classify mutation frameshift vs substitution examples 1.",
+        "options": [
+          "Mutation class 1",
+          "Nondisjunction 1",
+          "Aneuploidy 1",
+          "Translocation"
+        ],
+        "answer": "Mutation class 1"
+      },
+      {
+        "question": "Variation DOK2 Act2 Q2: Classify mutation frameshift vs substitution examples 2.",
+        "options": [
+          "Mutation class 2",
+          "Nondisjunction 2",
+          "Aneuploidy 2",
+          "Translocation"
+        ],
+        "answer": "Mutation class 2"
+      },
+      {
+        "question": "Variation DOK2 Act2 Q3: Classify mutation frameshift vs substitution examples 3.",
+        "options": [
+          "Mutation class 3",
+          "Nondisjunction 3",
+          "Aneuploidy 3",
+          "Translocation"
+        ],
+        "answer": "Mutation class 3"
+      },
+      {
+        "question": "Variation DOK2 Act2 Q4: Classify mutation frameshift vs substitution examples 4.",
+        "options": [
+          "Mutation class 4",
+          "Nondisjunction 4",
+          "Aneuploidy 4",
+          "Translocation"
+        ],
+        "answer": "Mutation class 4"
+      },
+      {
+        "question": "Variation DOK2 Act2 Q5: Classify mutation frameshift vs substitution examples 5.",
+        "options": [
+          "Mutation class 5",
+          "Nondisjunction 5",
+          "Aneuploidy 5",
+          "Translocation"
+        ],
+        "answer": "Mutation class 5"
+      },
+      {
+        "question": "Variation DOK2 Act2 Q6: Classify mutation frameshift vs substitution examples 6.",
+        "options": [
+          "Mutation class 6",
+          "Nondisjunction 6",
+          "Aneuploidy 6",
+          "Translocation"
+        ],
+        "answer": "Mutation class 6"
+      },
+      {
+        "question": "Variation DOK2 Act2 Q7: Classify mutation frameshift vs substitution examples 7.",
+        "options": [
+          "Mutation class 7",
+          "Nondisjunction 7",
+          "Aneuploidy 7",
+          "Translocation"
+        ],
+        "answer": "Mutation class 7"
+      },
+      {
+        "question": "Variation DOK2 Act2 Q8: Classify mutation frameshift vs substitution examples 8.",
+        "options": [
+          "Mutation class 8",
+          "Nondisjunction 8",
+          "Aneuploidy 8",
+          "Translocation"
+        ],
+        "answer": "Mutation class 8"
+      },
+      {
+        "question": "Variation DOK2 Act2 Q9: Classify mutation frameshift vs substitution examples 9.",
+        "options": [
+          "Mutation class 9",
+          "Nondisjunction 9",
+          "Aneuploidy 9",
+          "Translocation"
+        ],
+        "answer": "Mutation class 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK2 Act3 Q0: Classify mutation frameshift vs substitution examples 0.",
+        "options": [
+          "Mutation class 0",
+          "Nondisjunction 0",
+          "Aneuploidy 0",
+          "Translocation"
+        ],
+        "answer": "Mutation class 0"
+      },
+      {
+        "question": "Variation DOK2 Act3 Q1: Classify mutation frameshift vs substitution examples 1.",
+        "options": [
+          "Mutation class 1",
+          "Nondisjunction 1",
+          "Aneuploidy 1",
+          "Translocation"
+        ],
+        "answer": "Mutation class 1"
+      },
+      {
+        "question": "Variation DOK2 Act3 Q2: Classify mutation frameshift vs substitution examples 2.",
+        "options": [
+          "Mutation class 2",
+          "Nondisjunction 2",
+          "Aneuploidy 2",
+          "Translocation"
+        ],
+        "answer": "Mutation class 2"
+      },
+      {
+        "question": "Variation DOK2 Act3 Q3: Classify mutation frameshift vs substitution examples 3.",
+        "options": [
+          "Mutation class 3",
+          "Nondisjunction 3",
+          "Aneuploidy 3",
+          "Translocation"
+        ],
+        "answer": "Mutation class 3"
+      },
+      {
+        "question": "Variation DOK2 Act3 Q4: Classify mutation frameshift vs substitution examples 4.",
+        "options": [
+          "Mutation class 4",
+          "Nondisjunction 4",
+          "Aneuploidy 4",
+          "Translocation"
+        ],
+        "answer": "Mutation class 4"
+      },
+      {
+        "question": "Variation DOK2 Act3 Q5: Classify mutation frameshift vs substitution examples 5.",
+        "options": [
+          "Mutation class 5",
+          "Nondisjunction 5",
+          "Aneuploidy 5",
+          "Translocation"
+        ],
+        "answer": "Mutation class 5"
+      },
+      {
+        "question": "Variation DOK2 Act3 Q6: Classify mutation frameshift vs substitution examples 6.",
+        "options": [
+          "Mutation class 6",
+          "Nondisjunction 6",
+          "Aneuploidy 6",
+          "Translocation"
+        ],
+        "answer": "Mutation class 6"
+      },
+      {
+        "question": "Variation DOK2 Act3 Q7: Classify mutation frameshift vs substitution examples 7.",
+        "options": [
+          "Mutation class 7",
+          "Nondisjunction 7",
+          "Aneuploidy 7",
+          "Translocation"
+        ],
+        "answer": "Mutation class 7"
+      },
+      {
+        "question": "Variation DOK2 Act3 Q8: Classify mutation frameshift vs substitution examples 8.",
+        "options": [
+          "Mutation class 8",
+          "Nondisjunction 8",
+          "Aneuploidy 8",
+          "Translocation"
+        ],
+        "answer": "Mutation class 8"
+      },
+      {
+        "question": "Variation DOK2 Act3 Q9: Classify mutation frameshift vs substitution examples 9.",
+        "options": [
+          "Mutation class 9",
+          "Nondisjunction 9",
+          "Aneuploidy 9",
+          "Translocation"
+        ],
+        "answer": "Mutation class 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK2 Act4 Q0: Classify mutation frameshift vs substitution examples 0.",
+        "options": [
+          "Mutation class 0",
+          "Nondisjunction 0",
+          "Aneuploidy 0",
+          "Translocation"
+        ],
+        "answer": "Mutation class 0"
+      },
+      {
+        "question": "Variation DOK2 Act4 Q1: Classify mutation frameshift vs substitution examples 1.",
+        "options": [
+          "Mutation class 1",
+          "Nondisjunction 1",
+          "Aneuploidy 1",
+          "Translocation"
+        ],
+        "answer": "Mutation class 1"
+      },
+      {
+        "question": "Variation DOK2 Act4 Q2: Classify mutation frameshift vs substitution examples 2.",
+        "options": [
+          "Mutation class 2",
+          "Nondisjunction 2",
+          "Aneuploidy 2",
+          "Translocation"
+        ],
+        "answer": "Mutation class 2"
+      },
+      {
+        "question": "Variation DOK2 Act4 Q3: Classify mutation frameshift vs substitution examples 3.",
+        "options": [
+          "Mutation class 3",
+          "Nondisjunction 3",
+          "Aneuploidy 3",
+          "Translocation"
+        ],
+        "answer": "Mutation class 3"
+      },
+      {
+        "question": "Variation DOK2 Act4 Q4: Classify mutation frameshift vs substitution examples 4.",
+        "options": [
+          "Mutation class 4",
+          "Nondisjunction 4",
+          "Aneuploidy 4",
+          "Translocation"
+        ],
+        "answer": "Mutation class 4"
+      },
+      {
+        "question": "Variation DOK2 Act4 Q5: Classify mutation frameshift vs substitution examples 5.",
+        "options": [
+          "Mutation class 5",
+          "Nondisjunction 5",
+          "Aneuploidy 5",
+          "Translocation"
+        ],
+        "answer": "Mutation class 5"
+      },
+      {
+        "question": "Variation DOK2 Act4 Q6: Classify mutation frameshift vs substitution examples 6.",
+        "options": [
+          "Mutation class 6",
+          "Nondisjunction 6",
+          "Aneuploidy 6",
+          "Translocation"
+        ],
+        "answer": "Mutation class 6"
+      },
+      {
+        "question": "Variation DOK2 Act4 Q7: Classify mutation frameshift vs substitution examples 7.",
+        "options": [
+          "Mutation class 7",
+          "Nondisjunction 7",
+          "Aneuploidy 7",
+          "Translocation"
+        ],
+        "answer": "Mutation class 7"
+      },
+      {
+        "question": "Variation DOK2 Act4 Q8: Classify mutation frameshift vs substitution examples 8.",
+        "options": [
+          "Mutation class 8",
+          "Nondisjunction 8",
+          "Aneuploidy 8",
+          "Translocation"
+        ],
+        "answer": "Mutation class 8"
+      },
+      {
+        "question": "Variation DOK2 Act4 Q9: Classify mutation frameshift vs substitution examples 9.",
+        "options": [
+          "Mutation class 9",
+          "Nondisjunction 9",
+          "Aneuploidy 9",
+          "Translocation"
+        ],
+        "answer": "Mutation class 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK2 Act5 Q0: Classify mutation frameshift vs substitution examples 0.",
+        "options": [
+          "Mutation class 0",
+          "Nondisjunction 0",
+          "Aneuploidy 0",
+          "Translocation"
+        ],
+        "answer": "Mutation class 0"
+      },
+      {
+        "question": "Variation DOK2 Act5 Q1: Classify mutation frameshift vs substitution examples 1.",
+        "options": [
+          "Mutation class 1",
+          "Nondisjunction 1",
+          "Aneuploidy 1",
+          "Translocation"
+        ],
+        "answer": "Mutation class 1"
+      },
+      {
+        "question": "Variation DOK2 Act5 Q2: Classify mutation frameshift vs substitution examples 2.",
+        "options": [
+          "Mutation class 2",
+          "Nondisjunction 2",
+          "Aneuploidy 2",
+          "Translocation"
+        ],
+        "answer": "Mutation class 2"
+      },
+      {
+        "question": "Variation DOK2 Act5 Q3: Classify mutation frameshift vs substitution examples 3.",
+        "options": [
+          "Mutation class 3",
+          "Nondisjunction 3",
+          "Aneuploidy 3",
+          "Translocation"
+        ],
+        "answer": "Mutation class 3"
+      },
+      {
+        "question": "Variation DOK2 Act5 Q4: Classify mutation frameshift vs substitution examples 4.",
+        "options": [
+          "Mutation class 4",
+          "Nondisjunction 4",
+          "Aneuploidy 4",
+          "Translocation"
+        ],
+        "answer": "Mutation class 4"
+      },
+      {
+        "question": "Variation DOK2 Act5 Q5: Classify mutation frameshift vs substitution examples 5.",
+        "options": [
+          "Mutation class 5",
+          "Nondisjunction 5",
+          "Aneuploidy 5",
+          "Translocation"
+        ],
+        "answer": "Mutation class 5"
+      },
+      {
+        "question": "Variation DOK2 Act5 Q6: Classify mutation frameshift vs substitution examples 6.",
+        "options": [
+          "Mutation class 6",
+          "Nondisjunction 6",
+          "Aneuploidy 6",
+          "Translocation"
+        ],
+        "answer": "Mutation class 6"
+      },
+      {
+        "question": "Variation DOK2 Act5 Q7: Classify mutation frameshift vs substitution examples 7.",
+        "options": [
+          "Mutation class 7",
+          "Nondisjunction 7",
+          "Aneuploidy 7",
+          "Translocation"
+        ],
+        "answer": "Mutation class 7"
+      },
+      {
+        "question": "Variation DOK2 Act5 Q8: Classify mutation frameshift vs substitution examples 8.",
+        "options": [
+          "Mutation class 8",
+          "Nondisjunction 8",
+          "Aneuploidy 8",
+          "Translocation"
+        ],
+        "answer": "Mutation class 8"
+      },
+      {
+        "question": "Variation DOK2 Act5 Q9: Classify mutation frameshift vs substitution examples 9.",
+        "options": [
+          "Mutation class 9",
+          "Nondisjunction 9",
+          "Aneuploidy 9",
+          "Translocation"
+        ],
+        "answer": "Mutation class 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Variation DOK3 Act1 Q0: Simulate crossing over chiasmata counts 0.",
+        "options": [
+          "Chiasmata count 0",
+          "Assortment 0",
+          "Proofreading 0",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 0"
+      },
+      {
+        "question": "Variation DOK3 Act1 Q1: Simulate crossing over chiasmata counts 1.",
+        "options": [
+          "Chiasmata count 1",
+          "Assortment 1",
+          "Proofreading 1",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 1"
+      },
+      {
+        "question": "Variation DOK3 Act1 Q2: Simulate crossing over chiasmata counts 2.",
+        "options": [
+          "Chiasmata count 2",
+          "Assortment 2",
+          "Proofreading 2",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 2"
+      },
+      {
+        "question": "Variation DOK3 Act1 Q3: Simulate crossing over chiasmata counts 3.",
+        "options": [
+          "Chiasmata count 3",
+          "Assortment 3",
+          "Proofreading 3",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 3"
+      },
+      {
+        "question": "Variation DOK3 Act1 Q4: Simulate crossing over chiasmata counts 4.",
+        "options": [
+          "Chiasmata count 4",
+          "Assortment 4",
+          "Proofreading 4",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 4"
+      },
+      {
+        "question": "Variation DOK3 Act1 Q5: Simulate crossing over chiasmata counts 5.",
+        "options": [
+          "Chiasmata count 5",
+          "Assortment 5",
+          "Proofreading 5",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 5"
+      },
+      {
+        "question": "Variation DOK3 Act1 Q6: Simulate crossing over chiasmata counts 6.",
+        "options": [
+          "Chiasmata count 6",
+          "Assortment 6",
+          "Proofreading 6",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 6"
+      },
+      {
+        "question": "Variation DOK3 Act1 Q7: Simulate crossing over chiasmata counts 7.",
+        "options": [
+          "Chiasmata count 7",
+          "Assortment 7",
+          "Proofreading 7",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 7"
+      },
+      {
+        "question": "Variation DOK3 Act1 Q8: Simulate crossing over chiasmata counts 8.",
+        "options": [
+          "Chiasmata count 8",
+          "Assortment 8",
+          "Proofreading 8",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 8"
+      },
+      {
+        "question": "Variation DOK3 Act1 Q9: Simulate crossing over chiasmata counts 9.",
+        "options": [
+          "Chiasmata count 9",
+          "Assortment 9",
+          "Proofreading 9",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK3 Act2 Q0: Simulate crossing over chiasmata counts 0.",
+        "options": [
+          "Chiasmata count 0",
+          "Assortment 0",
+          "Proofreading 0",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 0"
+      },
+      {
+        "question": "Variation DOK3 Act2 Q1: Simulate crossing over chiasmata counts 1.",
+        "options": [
+          "Chiasmata count 1",
+          "Assortment 1",
+          "Proofreading 1",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 1"
+      },
+      {
+        "question": "Variation DOK3 Act2 Q2: Simulate crossing over chiasmata counts 2.",
+        "options": [
+          "Chiasmata count 2",
+          "Assortment 2",
+          "Proofreading 2",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 2"
+      },
+      {
+        "question": "Variation DOK3 Act2 Q3: Simulate crossing over chiasmata counts 3.",
+        "options": [
+          "Chiasmata count 3",
+          "Assortment 3",
+          "Proofreading 3",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 3"
+      },
+      {
+        "question": "Variation DOK3 Act2 Q4: Simulate crossing over chiasmata counts 4.",
+        "options": [
+          "Chiasmata count 4",
+          "Assortment 4",
+          "Proofreading 4",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 4"
+      },
+      {
+        "question": "Variation DOK3 Act2 Q5: Simulate crossing over chiasmata counts 5.",
+        "options": [
+          "Chiasmata count 5",
+          "Assortment 5",
+          "Proofreading 5",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 5"
+      },
+      {
+        "question": "Variation DOK3 Act2 Q6: Simulate crossing over chiasmata counts 6.",
+        "options": [
+          "Chiasmata count 6",
+          "Assortment 6",
+          "Proofreading 6",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 6"
+      },
+      {
+        "question": "Variation DOK3 Act2 Q7: Simulate crossing over chiasmata counts 7.",
+        "options": [
+          "Chiasmata count 7",
+          "Assortment 7",
+          "Proofreading 7",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 7"
+      },
+      {
+        "question": "Variation DOK3 Act2 Q8: Simulate crossing over chiasmata counts 8.",
+        "options": [
+          "Chiasmata count 8",
+          "Assortment 8",
+          "Proofreading 8",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 8"
+      },
+      {
+        "question": "Variation DOK3 Act2 Q9: Simulate crossing over chiasmata counts 9.",
+        "options": [
+          "Chiasmata count 9",
+          "Assortment 9",
+          "Proofreading 9",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK3 Act3 Q0: Simulate crossing over chiasmata counts 0.",
+        "options": [
+          "Chiasmata count 0",
+          "Assortment 0",
+          "Proofreading 0",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 0"
+      },
+      {
+        "question": "Variation DOK3 Act3 Q1: Simulate crossing over chiasmata counts 1.",
+        "options": [
+          "Chiasmata count 1",
+          "Assortment 1",
+          "Proofreading 1",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 1"
+      },
+      {
+        "question": "Variation DOK3 Act3 Q2: Simulate crossing over chiasmata counts 2.",
+        "options": [
+          "Chiasmata count 2",
+          "Assortment 2",
+          "Proofreading 2",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 2"
+      },
+      {
+        "question": "Variation DOK3 Act3 Q3: Simulate crossing over chiasmata counts 3.",
+        "options": [
+          "Chiasmata count 3",
+          "Assortment 3",
+          "Proofreading 3",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 3"
+      },
+      {
+        "question": "Variation DOK3 Act3 Q4: Simulate crossing over chiasmata counts 4.",
+        "options": [
+          "Chiasmata count 4",
+          "Assortment 4",
+          "Proofreading 4",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 4"
+      },
+      {
+        "question": "Variation DOK3 Act3 Q5: Simulate crossing over chiasmata counts 5.",
+        "options": [
+          "Chiasmata count 5",
+          "Assortment 5",
+          "Proofreading 5",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 5"
+      },
+      {
+        "question": "Variation DOK3 Act3 Q6: Simulate crossing over chiasmata counts 6.",
+        "options": [
+          "Chiasmata count 6",
+          "Assortment 6",
+          "Proofreading 6",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 6"
+      },
+      {
+        "question": "Variation DOK3 Act3 Q7: Simulate crossing over chiasmata counts 7.",
+        "options": [
+          "Chiasmata count 7",
+          "Assortment 7",
+          "Proofreading 7",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 7"
+      },
+      {
+        "question": "Variation DOK3 Act3 Q8: Simulate crossing over chiasmata counts 8.",
+        "options": [
+          "Chiasmata count 8",
+          "Assortment 8",
+          "Proofreading 8",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 8"
+      },
+      {
+        "question": "Variation DOK3 Act3 Q9: Simulate crossing over chiasmata counts 9.",
+        "options": [
+          "Chiasmata count 9",
+          "Assortment 9",
+          "Proofreading 9",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK3 Act4 Q0: Simulate crossing over chiasmata counts 0.",
+        "options": [
+          "Chiasmata count 0",
+          "Assortment 0",
+          "Proofreading 0",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 0"
+      },
+      {
+        "question": "Variation DOK3 Act4 Q1: Simulate crossing over chiasmata counts 1.",
+        "options": [
+          "Chiasmata count 1",
+          "Assortment 1",
+          "Proofreading 1",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 1"
+      },
+      {
+        "question": "Variation DOK3 Act4 Q2: Simulate crossing over chiasmata counts 2.",
+        "options": [
+          "Chiasmata count 2",
+          "Assortment 2",
+          "Proofreading 2",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 2"
+      },
+      {
+        "question": "Variation DOK3 Act4 Q3: Simulate crossing over chiasmata counts 3.",
+        "options": [
+          "Chiasmata count 3",
+          "Assortment 3",
+          "Proofreading 3",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 3"
+      },
+      {
+        "question": "Variation DOK3 Act4 Q4: Simulate crossing over chiasmata counts 4.",
+        "options": [
+          "Chiasmata count 4",
+          "Assortment 4",
+          "Proofreading 4",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 4"
+      },
+      {
+        "question": "Variation DOK3 Act4 Q5: Simulate crossing over chiasmata counts 5.",
+        "options": [
+          "Chiasmata count 5",
+          "Assortment 5",
+          "Proofreading 5",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 5"
+      },
+      {
+        "question": "Variation DOK3 Act4 Q6: Simulate crossing over chiasmata counts 6.",
+        "options": [
+          "Chiasmata count 6",
+          "Assortment 6",
+          "Proofreading 6",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 6"
+      },
+      {
+        "question": "Variation DOK3 Act4 Q7: Simulate crossing over chiasmata counts 7.",
+        "options": [
+          "Chiasmata count 7",
+          "Assortment 7",
+          "Proofreading 7",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 7"
+      },
+      {
+        "question": "Variation DOK3 Act4 Q8: Simulate crossing over chiasmata counts 8.",
+        "options": [
+          "Chiasmata count 8",
+          "Assortment 8",
+          "Proofreading 8",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 8"
+      },
+      {
+        "question": "Variation DOK3 Act4 Q9: Simulate crossing over chiasmata counts 9.",
+        "options": [
+          "Chiasmata count 9",
+          "Assortment 9",
+          "Proofreading 9",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK3 Act5 Q0: Simulate crossing over chiasmata counts 0.",
+        "options": [
+          "Chiasmata count 0",
+          "Assortment 0",
+          "Proofreading 0",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 0"
+      },
+      {
+        "question": "Variation DOK3 Act5 Q1: Simulate crossing over chiasmata counts 1.",
+        "options": [
+          "Chiasmata count 1",
+          "Assortment 1",
+          "Proofreading 1",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 1"
+      },
+      {
+        "question": "Variation DOK3 Act5 Q2: Simulate crossing over chiasmata counts 2.",
+        "options": [
+          "Chiasmata count 2",
+          "Assortment 2",
+          "Proofreading 2",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 2"
+      },
+      {
+        "question": "Variation DOK3 Act5 Q3: Simulate crossing over chiasmata counts 3.",
+        "options": [
+          "Chiasmata count 3",
+          "Assortment 3",
+          "Proofreading 3",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 3"
+      },
+      {
+        "question": "Variation DOK3 Act5 Q4: Simulate crossing over chiasmata counts 4.",
+        "options": [
+          "Chiasmata count 4",
+          "Assortment 4",
+          "Proofreading 4",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 4"
+      },
+      {
+        "question": "Variation DOK3 Act5 Q5: Simulate crossing over chiasmata counts 5.",
+        "options": [
+          "Chiasmata count 5",
+          "Assortment 5",
+          "Proofreading 5",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 5"
+      },
+      {
+        "question": "Variation DOK3 Act5 Q6: Simulate crossing over chiasmata counts 6.",
+        "options": [
+          "Chiasmata count 6",
+          "Assortment 6",
+          "Proofreading 6",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 6"
+      },
+      {
+        "question": "Variation DOK3 Act5 Q7: Simulate crossing over chiasmata counts 7.",
+        "options": [
+          "Chiasmata count 7",
+          "Assortment 7",
+          "Proofreading 7",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 7"
+      },
+      {
+        "question": "Variation DOK3 Act5 Q8: Simulate crossing over chiasmata counts 8.",
+        "options": [
+          "Chiasmata count 8",
+          "Assortment 8",
+          "Proofreading 8",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 8"
+      },
+      {
+        "question": "Variation DOK3 Act5 Q9: Simulate crossing over chiasmata counts 9.",
+        "options": [
+          "Chiasmata count 9",
+          "Assortment 9",
+          "Proofreading 9",
+          "Excision"
+        ],
+        "answer": "Chiasmata count 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Variation DOK4 Act1 Q0: Calibrate mutagen exposure and proofreading yields 0.",
+        "options": [
+          "Repair yield 0",
+          "Mitochondrial 0",
+          "Introns 0",
+          "Dosage"
+        ],
+        "answer": "Repair yield 0"
+      },
+      {
+        "question": "Variation DOK4 Act1 Q1: Calibrate mutagen exposure and proofreading yields 1.",
+        "options": [
+          "Repair yield 1",
+          "Mitochondrial 1",
+          "Introns 1",
+          "Dosage"
+        ],
+        "answer": "Repair yield 1"
+      },
+      {
+        "question": "Variation DOK4 Act1 Q2: Calibrate mutagen exposure and proofreading yields 2.",
+        "options": [
+          "Repair yield 2",
+          "Mitochondrial 2",
+          "Introns 2",
+          "Dosage"
+        ],
+        "answer": "Repair yield 2"
+      },
+      {
+        "question": "Variation DOK4 Act1 Q3: Calibrate mutagen exposure and proofreading yields 3.",
+        "options": [
+          "Repair yield 3",
+          "Mitochondrial 3",
+          "Introns 3",
+          "Dosage"
+        ],
+        "answer": "Repair yield 3"
+      },
+      {
+        "question": "Variation DOK4 Act1 Q4: Calibrate mutagen exposure and proofreading yields 4.",
+        "options": [
+          "Repair yield 4",
+          "Mitochondrial 4",
+          "Introns 4",
+          "Dosage"
+        ],
+        "answer": "Repair yield 4"
+      },
+      {
+        "question": "Variation DOK4 Act1 Q5: Calibrate mutagen exposure and proofreading yields 5.",
+        "options": [
+          "Repair yield 5",
+          "Mitochondrial 5",
+          "Introns 5",
+          "Dosage"
+        ],
+        "answer": "Repair yield 5"
+      },
+      {
+        "question": "Variation DOK4 Act1 Q6: Calibrate mutagen exposure and proofreading yields 6.",
+        "options": [
+          "Repair yield 6",
+          "Mitochondrial 6",
+          "Introns 6",
+          "Dosage"
+        ],
+        "answer": "Repair yield 6"
+      },
+      {
+        "question": "Variation DOK4 Act1 Q7: Calibrate mutagen exposure and proofreading yields 7.",
+        "options": [
+          "Repair yield 7",
+          "Mitochondrial 7",
+          "Introns 7",
+          "Dosage"
+        ],
+        "answer": "Repair yield 7"
+      },
+      {
+        "question": "Variation DOK4 Act1 Q8: Calibrate mutagen exposure and proofreading yields 8.",
+        "options": [
+          "Repair yield 8",
+          "Mitochondrial 8",
+          "Introns 8",
+          "Dosage"
+        ],
+        "answer": "Repair yield 8"
+      },
+      {
+        "question": "Variation DOK4 Act1 Q9: Calibrate mutagen exposure and proofreading yields 9.",
+        "options": [
+          "Repair yield 9",
+          "Mitochondrial 9",
+          "Introns 9",
+          "Dosage"
+        ],
+        "answer": "Repair yield 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK4 Act2 Q0: Calibrate mutagen exposure and proofreading yields 0.",
+        "options": [
+          "Repair yield 0",
+          "Mitochondrial 0",
+          "Introns 0",
+          "Dosage"
+        ],
+        "answer": "Repair yield 0"
+      },
+      {
+        "question": "Variation DOK4 Act2 Q1: Calibrate mutagen exposure and proofreading yields 1.",
+        "options": [
+          "Repair yield 1",
+          "Mitochondrial 1",
+          "Introns 1",
+          "Dosage"
+        ],
+        "answer": "Repair yield 1"
+      },
+      {
+        "question": "Variation DOK4 Act2 Q2: Calibrate mutagen exposure and proofreading yields 2.",
+        "options": [
+          "Repair yield 2",
+          "Mitochondrial 2",
+          "Introns 2",
+          "Dosage"
+        ],
+        "answer": "Repair yield 2"
+      },
+      {
+        "question": "Variation DOK4 Act2 Q3: Calibrate mutagen exposure and proofreading yields 3.",
+        "options": [
+          "Repair yield 3",
+          "Mitochondrial 3",
+          "Introns 3",
+          "Dosage"
+        ],
+        "answer": "Repair yield 3"
+      },
+      {
+        "question": "Variation DOK4 Act2 Q4: Calibrate mutagen exposure and proofreading yields 4.",
+        "options": [
+          "Repair yield 4",
+          "Mitochondrial 4",
+          "Introns 4",
+          "Dosage"
+        ],
+        "answer": "Repair yield 4"
+      },
+      {
+        "question": "Variation DOK4 Act2 Q5: Calibrate mutagen exposure and proofreading yields 5.",
+        "options": [
+          "Repair yield 5",
+          "Mitochondrial 5",
+          "Introns 5",
+          "Dosage"
+        ],
+        "answer": "Repair yield 5"
+      },
+      {
+        "question": "Variation DOK4 Act2 Q6: Calibrate mutagen exposure and proofreading yields 6.",
+        "options": [
+          "Repair yield 6",
+          "Mitochondrial 6",
+          "Introns 6",
+          "Dosage"
+        ],
+        "answer": "Repair yield 6"
+      },
+      {
+        "question": "Variation DOK4 Act2 Q7: Calibrate mutagen exposure and proofreading yields 7.",
+        "options": [
+          "Repair yield 7",
+          "Mitochondrial 7",
+          "Introns 7",
+          "Dosage"
+        ],
+        "answer": "Repair yield 7"
+      },
+      {
+        "question": "Variation DOK4 Act2 Q8: Calibrate mutagen exposure and proofreading yields 8.",
+        "options": [
+          "Repair yield 8",
+          "Mitochondrial 8",
+          "Introns 8",
+          "Dosage"
+        ],
+        "answer": "Repair yield 8"
+      },
+      {
+        "question": "Variation DOK4 Act2 Q9: Calibrate mutagen exposure and proofreading yields 9.",
+        "options": [
+          "Repair yield 9",
+          "Mitochondrial 9",
+          "Introns 9",
+          "Dosage"
+        ],
+        "answer": "Repair yield 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK4 Act3 Q0: Calibrate mutagen exposure and proofreading yields 0.",
+        "options": [
+          "Repair yield 0",
+          "Mitochondrial 0",
+          "Introns 0",
+          "Dosage"
+        ],
+        "answer": "Repair yield 0"
+      },
+      {
+        "question": "Variation DOK4 Act3 Q1: Calibrate mutagen exposure and proofreading yields 1.",
+        "options": [
+          "Repair yield 1",
+          "Mitochondrial 1",
+          "Introns 1",
+          "Dosage"
+        ],
+        "answer": "Repair yield 1"
+      },
+      {
+        "question": "Variation DOK4 Act3 Q2: Calibrate mutagen exposure and proofreading yields 2.",
+        "options": [
+          "Repair yield 2",
+          "Mitochondrial 2",
+          "Introns 2",
+          "Dosage"
+        ],
+        "answer": "Repair yield 2"
+      },
+      {
+        "question": "Variation DOK4 Act3 Q3: Calibrate mutagen exposure and proofreading yields 3.",
+        "options": [
+          "Repair yield 3",
+          "Mitochondrial 3",
+          "Introns 3",
+          "Dosage"
+        ],
+        "answer": "Repair yield 3"
+      },
+      {
+        "question": "Variation DOK4 Act3 Q4: Calibrate mutagen exposure and proofreading yields 4.",
+        "options": [
+          "Repair yield 4",
+          "Mitochondrial 4",
+          "Introns 4",
+          "Dosage"
+        ],
+        "answer": "Repair yield 4"
+      },
+      {
+        "question": "Variation DOK4 Act3 Q5: Calibrate mutagen exposure and proofreading yields 5.",
+        "options": [
+          "Repair yield 5",
+          "Mitochondrial 5",
+          "Introns 5",
+          "Dosage"
+        ],
+        "answer": "Repair yield 5"
+      },
+      {
+        "question": "Variation DOK4 Act3 Q6: Calibrate mutagen exposure and proofreading yields 6.",
+        "options": [
+          "Repair yield 6",
+          "Mitochondrial 6",
+          "Introns 6",
+          "Dosage"
+        ],
+        "answer": "Repair yield 6"
+      },
+      {
+        "question": "Variation DOK4 Act3 Q7: Calibrate mutagen exposure and proofreading yields 7.",
+        "options": [
+          "Repair yield 7",
+          "Mitochondrial 7",
+          "Introns 7",
+          "Dosage"
+        ],
+        "answer": "Repair yield 7"
+      },
+      {
+        "question": "Variation DOK4 Act3 Q8: Calibrate mutagen exposure and proofreading yields 8.",
+        "options": [
+          "Repair yield 8",
+          "Mitochondrial 8",
+          "Introns 8",
+          "Dosage"
+        ],
+        "answer": "Repair yield 8"
+      },
+      {
+        "question": "Variation DOK4 Act3 Q9: Calibrate mutagen exposure and proofreading yields 9.",
+        "options": [
+          "Repair yield 9",
+          "Mitochondrial 9",
+          "Introns 9",
+          "Dosage"
+        ],
+        "answer": "Repair yield 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK4 Act4 Q0: Calibrate mutagen exposure and proofreading yields 0.",
+        "options": [
+          "Repair yield 0",
+          "Mitochondrial 0",
+          "Introns 0",
+          "Dosage"
+        ],
+        "answer": "Repair yield 0"
+      },
+      {
+        "question": "Variation DOK4 Act4 Q1: Calibrate mutagen exposure and proofreading yields 1.",
+        "options": [
+          "Repair yield 1",
+          "Mitochondrial 1",
+          "Introns 1",
+          "Dosage"
+        ],
+        "answer": "Repair yield 1"
+      },
+      {
+        "question": "Variation DOK4 Act4 Q2: Calibrate mutagen exposure and proofreading yields 2.",
+        "options": [
+          "Repair yield 2",
+          "Mitochondrial 2",
+          "Introns 2",
+          "Dosage"
+        ],
+        "answer": "Repair yield 2"
+      },
+      {
+        "question": "Variation DOK4 Act4 Q3: Calibrate mutagen exposure and proofreading yields 3.",
+        "options": [
+          "Repair yield 3",
+          "Mitochondrial 3",
+          "Introns 3",
+          "Dosage"
+        ],
+        "answer": "Repair yield 3"
+      },
+      {
+        "question": "Variation DOK4 Act4 Q4: Calibrate mutagen exposure and proofreading yields 4.",
+        "options": [
+          "Repair yield 4",
+          "Mitochondrial 4",
+          "Introns 4",
+          "Dosage"
+        ],
+        "answer": "Repair yield 4"
+      },
+      {
+        "question": "Variation DOK4 Act4 Q5: Calibrate mutagen exposure and proofreading yields 5.",
+        "options": [
+          "Repair yield 5",
+          "Mitochondrial 5",
+          "Introns 5",
+          "Dosage"
+        ],
+        "answer": "Repair yield 5"
+      },
+      {
+        "question": "Variation DOK4 Act4 Q6: Calibrate mutagen exposure and proofreading yields 6.",
+        "options": [
+          "Repair yield 6",
+          "Mitochondrial 6",
+          "Introns 6",
+          "Dosage"
+        ],
+        "answer": "Repair yield 6"
+      },
+      {
+        "question": "Variation DOK4 Act4 Q7: Calibrate mutagen exposure and proofreading yields 7.",
+        "options": [
+          "Repair yield 7",
+          "Mitochondrial 7",
+          "Introns 7",
+          "Dosage"
+        ],
+        "answer": "Repair yield 7"
+      },
+      {
+        "question": "Variation DOK4 Act4 Q8: Calibrate mutagen exposure and proofreading yields 8.",
+        "options": [
+          "Repair yield 8",
+          "Mitochondrial 8",
+          "Introns 8",
+          "Dosage"
+        ],
+        "answer": "Repair yield 8"
+      },
+      {
+        "question": "Variation DOK4 Act4 Q9: Calibrate mutagen exposure and proofreading yields 9.",
+        "options": [
+          "Repair yield 9",
+          "Mitochondrial 9",
+          "Introns 9",
+          "Dosage"
+        ],
+        "answer": "Repair yield 9"
+      }
+    ],
+    [
+      {
+        "question": "Variation DOK4 Act5 Q0: Calibrate mutagen exposure and proofreading yields 0.",
+        "options": [
+          "Repair yield 0",
+          "Mitochondrial 0",
+          "Introns 0",
+          "Dosage"
+        ],
+        "answer": "Repair yield 0"
+      },
+      {
+        "question": "Variation DOK4 Act5 Q1: Calibrate mutagen exposure and proofreading yields 1.",
+        "options": [
+          "Repair yield 1",
+          "Mitochondrial 1",
+          "Introns 1",
+          "Dosage"
+        ],
+        "answer": "Repair yield 1"
+      },
+      {
+        "question": "Variation DOK4 Act5 Q2: Calibrate mutagen exposure and proofreading yields 2.",
+        "options": [
+          "Repair yield 2",
+          "Mitochondrial 2",
+          "Introns 2",
+          "Dosage"
+        ],
+        "answer": "Repair yield 2"
+      },
+      {
+        "question": "Variation DOK4 Act5 Q3: Calibrate mutagen exposure and proofreading yields 3.",
+        "options": [
+          "Repair yield 3",
+          "Mitochondrial 3",
+          "Introns 3",
+          "Dosage"
+        ],
+        "answer": "Repair yield 3"
+      },
+      {
+        "question": "Variation DOK4 Act5 Q4: Calibrate mutagen exposure and proofreading yields 4.",
+        "options": [
+          "Repair yield 4",
+          "Mitochondrial 4",
+          "Introns 4",
+          "Dosage"
+        ],
+        "answer": "Repair yield 4"
+      },
+      {
+        "question": "Variation DOK4 Act5 Q5: Calibrate mutagen exposure and proofreading yields 5.",
+        "options": [
+          "Repair yield 5",
+          "Mitochondrial 5",
+          "Introns 5",
+          "Dosage"
+        ],
+        "answer": "Repair yield 5"
+      },
+      {
+        "question": "Variation DOK4 Act5 Q6: Calibrate mutagen exposure and proofreading yields 6.",
+        "options": [
+          "Repair yield 6",
+          "Mitochondrial 6",
+          "Introns 6",
+          "Dosage"
+        ],
+        "answer": "Repair yield 6"
+      },
+      {
+        "question": "Variation DOK4 Act5 Q7: Calibrate mutagen exposure and proofreading yields 7.",
+        "options": [
+          "Repair yield 7",
+          "Mitochondrial 7",
+          "Introns 7",
+          "Dosage"
+        ],
+        "answer": "Repair yield 7"
+      },
+      {
+        "question": "Variation DOK4 Act5 Q8: Calibrate mutagen exposure and proofreading yields 8.",
+        "options": [
+          "Repair yield 8",
+          "Mitochondrial 8",
+          "Introns 8",
+          "Dosage"
+        ],
+        "answer": "Repair yield 8"
+      },
+      {
+        "question": "Variation DOK4 Act5 Q9: Calibrate mutagen exposure and proofreading yields 9.",
+        "options": [
+          "Repair yield 9",
+          "Mitochondrial 9",
+          "Introns 9",
+          "Dosage"
+        ],
+        "answer": "Repair yield 9"
+      }
+    ]
+  ]
+}
+,
+  "OAS.B.LS3.3": {
+  "1": [
+    [
+      {
+        "question": "Statistics DOK1 Act1 Q0: Match height and pea color distribution shapes 0.",
+        "options": [
+          "Distribution shape 0",
+          "Continuous 0",
+          "Standard deviation 0",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 0"
+      },
+      {
+        "question": "Statistics DOK1 Act1 Q1: Match height and pea color distribution shapes 1.",
+        "options": [
+          "Distribution shape 1",
+          "Continuous 1",
+          "Standard deviation 1",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 1"
+      },
+      {
+        "question": "Statistics DOK1 Act1 Q2: Match height and pea color distribution shapes 2.",
+        "options": [
+          "Distribution shape 2",
+          "Continuous 2",
+          "Standard deviation 2",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 2"
+      },
+      {
+        "question": "Statistics DOK1 Act1 Q3: Match height and pea color distribution shapes 3.",
+        "options": [
+          "Distribution shape 3",
+          "Continuous 3",
+          "Standard deviation 3",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 3"
+      },
+      {
+        "question": "Statistics DOK1 Act1 Q4: Match height and pea color distribution shapes 4.",
+        "options": [
+          "Distribution shape 4",
+          "Continuous 4",
+          "Standard deviation 4",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 4"
+      },
+      {
+        "question": "Statistics DOK1 Act1 Q5: Match height and pea color distribution shapes 5.",
+        "options": [
+          "Distribution shape 5",
+          "Continuous 5",
+          "Standard deviation 5",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 5"
+      },
+      {
+        "question": "Statistics DOK1 Act1 Q6: Match height and pea color distribution shapes 6.",
+        "options": [
+          "Distribution shape 6",
+          "Continuous 6",
+          "Standard deviation 6",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 6"
+      },
+      {
+        "question": "Statistics DOK1 Act1 Q7: Match height and pea color distribution shapes 7.",
+        "options": [
+          "Distribution shape 7",
+          "Continuous 7",
+          "Standard deviation 7",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 7"
+      },
+      {
+        "question": "Statistics DOK1 Act1 Q8: Match height and pea color distribution shapes 8.",
+        "options": [
+          "Distribution shape 8",
+          "Continuous 8",
+          "Standard deviation 8",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 8"
+      },
+      {
+        "question": "Statistics DOK1 Act1 Q9: Match height and pea color distribution shapes 9.",
+        "options": [
+          "Distribution shape 9",
+          "Continuous 9",
+          "Standard deviation 9",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK1 Act2 Q0: Match height and pea color distribution shapes 0.",
+        "options": [
+          "Distribution shape 0",
+          "Continuous 0",
+          "Standard deviation 0",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 0"
+      },
+      {
+        "question": "Statistics DOK1 Act2 Q1: Match height and pea color distribution shapes 1.",
+        "options": [
+          "Distribution shape 1",
+          "Continuous 1",
+          "Standard deviation 1",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 1"
+      },
+      {
+        "question": "Statistics DOK1 Act2 Q2: Match height and pea color distribution shapes 2.",
+        "options": [
+          "Distribution shape 2",
+          "Continuous 2",
+          "Standard deviation 2",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 2"
+      },
+      {
+        "question": "Statistics DOK1 Act2 Q3: Match height and pea color distribution shapes 3.",
+        "options": [
+          "Distribution shape 3",
+          "Continuous 3",
+          "Standard deviation 3",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 3"
+      },
+      {
+        "question": "Statistics DOK1 Act2 Q4: Match height and pea color distribution shapes 4.",
+        "options": [
+          "Distribution shape 4",
+          "Continuous 4",
+          "Standard deviation 4",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 4"
+      },
+      {
+        "question": "Statistics DOK1 Act2 Q5: Match height and pea color distribution shapes 5.",
+        "options": [
+          "Distribution shape 5",
+          "Continuous 5",
+          "Standard deviation 5",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 5"
+      },
+      {
+        "question": "Statistics DOK1 Act2 Q6: Match height and pea color distribution shapes 6.",
+        "options": [
+          "Distribution shape 6",
+          "Continuous 6",
+          "Standard deviation 6",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 6"
+      },
+      {
+        "question": "Statistics DOK1 Act2 Q7: Match height and pea color distribution shapes 7.",
+        "options": [
+          "Distribution shape 7",
+          "Continuous 7",
+          "Standard deviation 7",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 7"
+      },
+      {
+        "question": "Statistics DOK1 Act2 Q8: Match height and pea color distribution shapes 8.",
+        "options": [
+          "Distribution shape 8",
+          "Continuous 8",
+          "Standard deviation 8",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 8"
+      },
+      {
+        "question": "Statistics DOK1 Act2 Q9: Match height and pea color distribution shapes 9.",
+        "options": [
+          "Distribution shape 9",
+          "Continuous 9",
+          "Standard deviation 9",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK1 Act3 Q0: Match height and pea color distribution shapes 0.",
+        "options": [
+          "Distribution shape 0",
+          "Continuous 0",
+          "Standard deviation 0",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 0"
+      },
+      {
+        "question": "Statistics DOK1 Act3 Q1: Match height and pea color distribution shapes 1.",
+        "options": [
+          "Distribution shape 1",
+          "Continuous 1",
+          "Standard deviation 1",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 1"
+      },
+      {
+        "question": "Statistics DOK1 Act3 Q2: Match height and pea color distribution shapes 2.",
+        "options": [
+          "Distribution shape 2",
+          "Continuous 2",
+          "Standard deviation 2",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 2"
+      },
+      {
+        "question": "Statistics DOK1 Act3 Q3: Match height and pea color distribution shapes 3.",
+        "options": [
+          "Distribution shape 3",
+          "Continuous 3",
+          "Standard deviation 3",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 3"
+      },
+      {
+        "question": "Statistics DOK1 Act3 Q4: Match height and pea color distribution shapes 4.",
+        "options": [
+          "Distribution shape 4",
+          "Continuous 4",
+          "Standard deviation 4",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 4"
+      },
+      {
+        "question": "Statistics DOK1 Act3 Q5: Match height and pea color distribution shapes 5.",
+        "options": [
+          "Distribution shape 5",
+          "Continuous 5",
+          "Standard deviation 5",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 5"
+      },
+      {
+        "question": "Statistics DOK1 Act3 Q6: Match height and pea color distribution shapes 6.",
+        "options": [
+          "Distribution shape 6",
+          "Continuous 6",
+          "Standard deviation 6",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 6"
+      },
+      {
+        "question": "Statistics DOK1 Act3 Q7: Match height and pea color distribution shapes 7.",
+        "options": [
+          "Distribution shape 7",
+          "Continuous 7",
+          "Standard deviation 7",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 7"
+      },
+      {
+        "question": "Statistics DOK1 Act3 Q8: Match height and pea color distribution shapes 8.",
+        "options": [
+          "Distribution shape 8",
+          "Continuous 8",
+          "Standard deviation 8",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 8"
+      },
+      {
+        "question": "Statistics DOK1 Act3 Q9: Match height and pea color distribution shapes 9.",
+        "options": [
+          "Distribution shape 9",
+          "Continuous 9",
+          "Standard deviation 9",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK1 Act4 Q0: Match height and pea color distribution shapes 0.",
+        "options": [
+          "Distribution shape 0",
+          "Continuous 0",
+          "Standard deviation 0",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 0"
+      },
+      {
+        "question": "Statistics DOK1 Act4 Q1: Match height and pea color distribution shapes 1.",
+        "options": [
+          "Distribution shape 1",
+          "Continuous 1",
+          "Standard deviation 1",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 1"
+      },
+      {
+        "question": "Statistics DOK1 Act4 Q2: Match height and pea color distribution shapes 2.",
+        "options": [
+          "Distribution shape 2",
+          "Continuous 2",
+          "Standard deviation 2",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 2"
+      },
+      {
+        "question": "Statistics DOK1 Act4 Q3: Match height and pea color distribution shapes 3.",
+        "options": [
+          "Distribution shape 3",
+          "Continuous 3",
+          "Standard deviation 3",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 3"
+      },
+      {
+        "question": "Statistics DOK1 Act4 Q4: Match height and pea color distribution shapes 4.",
+        "options": [
+          "Distribution shape 4",
+          "Continuous 4",
+          "Standard deviation 4",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 4"
+      },
+      {
+        "question": "Statistics DOK1 Act4 Q5: Match height and pea color distribution shapes 5.",
+        "options": [
+          "Distribution shape 5",
+          "Continuous 5",
+          "Standard deviation 5",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 5"
+      },
+      {
+        "question": "Statistics DOK1 Act4 Q6: Match height and pea color distribution shapes 6.",
+        "options": [
+          "Distribution shape 6",
+          "Continuous 6",
+          "Standard deviation 6",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 6"
+      },
+      {
+        "question": "Statistics DOK1 Act4 Q7: Match height and pea color distribution shapes 7.",
+        "options": [
+          "Distribution shape 7",
+          "Continuous 7",
+          "Standard deviation 7",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 7"
+      },
+      {
+        "question": "Statistics DOK1 Act4 Q8: Match height and pea color distribution shapes 8.",
+        "options": [
+          "Distribution shape 8",
+          "Continuous 8",
+          "Standard deviation 8",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 8"
+      },
+      {
+        "question": "Statistics DOK1 Act4 Q9: Match height and pea color distribution shapes 9.",
+        "options": [
+          "Distribution shape 9",
+          "Continuous 9",
+          "Standard deviation 9",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK1 Act5 Q0: Match height and pea color distribution shapes 0.",
+        "options": [
+          "Distribution shape 0",
+          "Continuous 0",
+          "Standard deviation 0",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 0"
+      },
+      {
+        "question": "Statistics DOK1 Act5 Q1: Match height and pea color distribution shapes 1.",
+        "options": [
+          "Distribution shape 1",
+          "Continuous 1",
+          "Standard deviation 1",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 1"
+      },
+      {
+        "question": "Statistics DOK1 Act5 Q2: Match height and pea color distribution shapes 2.",
+        "options": [
+          "Distribution shape 2",
+          "Continuous 2",
+          "Standard deviation 2",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 2"
+      },
+      {
+        "question": "Statistics DOK1 Act5 Q3: Match height and pea color distribution shapes 3.",
+        "options": [
+          "Distribution shape 3",
+          "Continuous 3",
+          "Standard deviation 3",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 3"
+      },
+      {
+        "question": "Statistics DOK1 Act5 Q4: Match height and pea color distribution shapes 4.",
+        "options": [
+          "Distribution shape 4",
+          "Continuous 4",
+          "Standard deviation 4",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 4"
+      },
+      {
+        "question": "Statistics DOK1 Act5 Q5: Match height and pea color distribution shapes 5.",
+        "options": [
+          "Distribution shape 5",
+          "Continuous 5",
+          "Standard deviation 5",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 5"
+      },
+      {
+        "question": "Statistics DOK1 Act5 Q6: Match height and pea color distribution shapes 6.",
+        "options": [
+          "Distribution shape 6",
+          "Continuous 6",
+          "Standard deviation 6",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 6"
+      },
+      {
+        "question": "Statistics DOK1 Act5 Q7: Match height and pea color distribution shapes 7.",
+        "options": [
+          "Distribution shape 7",
+          "Continuous 7",
+          "Standard deviation 7",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 7"
+      },
+      {
+        "question": "Statistics DOK1 Act5 Q8: Match height and pea color distribution shapes 8.",
+        "options": [
+          "Distribution shape 8",
+          "Continuous 8",
+          "Standard deviation 8",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 8"
+      },
+      {
+        "question": "Statistics DOK1 Act5 Q9: Match height and pea color distribution shapes 9.",
+        "options": [
+          "Distribution shape 9",
+          "Continuous 9",
+          "Standard deviation 9",
+          "Assumptions"
+        ],
+        "answer": "Distribution shape 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Statistics DOK2 Act1 Q0: Classify stabilizing vs disruptive selection events 0.",
+        "options": [
+          "Selection type 0",
+          "Hardy-Weinberg 0",
+          "Drift 0",
+          "Founder"
+        ],
+        "answer": "Selection type 0"
+      },
+      {
+        "question": "Statistics DOK2 Act1 Q1: Classify stabilizing vs disruptive selection events 1.",
+        "options": [
+          "Selection type 1",
+          "Hardy-Weinberg 1",
+          "Drift 1",
+          "Founder"
+        ],
+        "answer": "Selection type 1"
+      },
+      {
+        "question": "Statistics DOK2 Act1 Q2: Classify stabilizing vs disruptive selection events 2.",
+        "options": [
+          "Selection type 2",
+          "Hardy-Weinberg 2",
+          "Drift 2",
+          "Founder"
+        ],
+        "answer": "Selection type 2"
+      },
+      {
+        "question": "Statistics DOK2 Act1 Q3: Classify stabilizing vs disruptive selection events 3.",
+        "options": [
+          "Selection type 3",
+          "Hardy-Weinberg 3",
+          "Drift 3",
+          "Founder"
+        ],
+        "answer": "Selection type 3"
+      },
+      {
+        "question": "Statistics DOK2 Act1 Q4: Classify stabilizing vs disruptive selection events 4.",
+        "options": [
+          "Selection type 4",
+          "Hardy-Weinberg 4",
+          "Drift 4",
+          "Founder"
+        ],
+        "answer": "Selection type 4"
+      },
+      {
+        "question": "Statistics DOK2 Act1 Q5: Classify stabilizing vs disruptive selection events 5.",
+        "options": [
+          "Selection type 5",
+          "Hardy-Weinberg 5",
+          "Drift 5",
+          "Founder"
+        ],
+        "answer": "Selection type 5"
+      },
+      {
+        "question": "Statistics DOK2 Act1 Q6: Classify stabilizing vs disruptive selection events 6.",
+        "options": [
+          "Selection type 6",
+          "Hardy-Weinberg 6",
+          "Drift 6",
+          "Founder"
+        ],
+        "answer": "Selection type 6"
+      },
+      {
+        "question": "Statistics DOK2 Act1 Q7: Classify stabilizing vs disruptive selection events 7.",
+        "options": [
+          "Selection type 7",
+          "Hardy-Weinberg 7",
+          "Drift 7",
+          "Founder"
+        ],
+        "answer": "Selection type 7"
+      },
+      {
+        "question": "Statistics DOK2 Act1 Q8: Classify stabilizing vs disruptive selection events 8.",
+        "options": [
+          "Selection type 8",
+          "Hardy-Weinberg 8",
+          "Drift 8",
+          "Founder"
+        ],
+        "answer": "Selection type 8"
+      },
+      {
+        "question": "Statistics DOK2 Act1 Q9: Classify stabilizing vs disruptive selection events 9.",
+        "options": [
+          "Selection type 9",
+          "Hardy-Weinberg 9",
+          "Drift 9",
+          "Founder"
+        ],
+        "answer": "Selection type 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK2 Act2 Q0: Classify stabilizing vs disruptive selection events 0.",
+        "options": [
+          "Selection type 0",
+          "Hardy-Weinberg 0",
+          "Drift 0",
+          "Founder"
+        ],
+        "answer": "Selection type 0"
+      },
+      {
+        "question": "Statistics DOK2 Act2 Q1: Classify stabilizing vs disruptive selection events 1.",
+        "options": [
+          "Selection type 1",
+          "Hardy-Weinberg 1",
+          "Drift 1",
+          "Founder"
+        ],
+        "answer": "Selection type 1"
+      },
+      {
+        "question": "Statistics DOK2 Act2 Q2: Classify stabilizing vs disruptive selection events 2.",
+        "options": [
+          "Selection type 2",
+          "Hardy-Weinberg 2",
+          "Drift 2",
+          "Founder"
+        ],
+        "answer": "Selection type 2"
+      },
+      {
+        "question": "Statistics DOK2 Act2 Q3: Classify stabilizing vs disruptive selection events 3.",
+        "options": [
+          "Selection type 3",
+          "Hardy-Weinberg 3",
+          "Drift 3",
+          "Founder"
+        ],
+        "answer": "Selection type 3"
+      },
+      {
+        "question": "Statistics DOK2 Act2 Q4: Classify stabilizing vs disruptive selection events 4.",
+        "options": [
+          "Selection type 4",
+          "Hardy-Weinberg 4",
+          "Drift 4",
+          "Founder"
+        ],
+        "answer": "Selection type 4"
+      },
+      {
+        "question": "Statistics DOK2 Act2 Q5: Classify stabilizing vs disruptive selection events 5.",
+        "options": [
+          "Selection type 5",
+          "Hardy-Weinberg 5",
+          "Drift 5",
+          "Founder"
+        ],
+        "answer": "Selection type 5"
+      },
+      {
+        "question": "Statistics DOK2 Act2 Q6: Classify stabilizing vs disruptive selection events 6.",
+        "options": [
+          "Selection type 6",
+          "Hardy-Weinberg 6",
+          "Drift 6",
+          "Founder"
+        ],
+        "answer": "Selection type 6"
+      },
+      {
+        "question": "Statistics DOK2 Act2 Q7: Classify stabilizing vs disruptive selection events 7.",
+        "options": [
+          "Selection type 7",
+          "Hardy-Weinberg 7",
+          "Drift 7",
+          "Founder"
+        ],
+        "answer": "Selection type 7"
+      },
+      {
+        "question": "Statistics DOK2 Act2 Q8: Classify stabilizing vs disruptive selection events 8.",
+        "options": [
+          "Selection type 8",
+          "Hardy-Weinberg 8",
+          "Drift 8",
+          "Founder"
+        ],
+        "answer": "Selection type 8"
+      },
+      {
+        "question": "Statistics DOK2 Act2 Q9: Classify stabilizing vs disruptive selection events 9.",
+        "options": [
+          "Selection type 9",
+          "Hardy-Weinberg 9",
+          "Drift 9",
+          "Founder"
+        ],
+        "answer": "Selection type 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK2 Act3 Q0: Classify stabilizing vs disruptive selection events 0.",
+        "options": [
+          "Selection type 0",
+          "Hardy-Weinberg 0",
+          "Drift 0",
+          "Founder"
+        ],
+        "answer": "Selection type 0"
+      },
+      {
+        "question": "Statistics DOK2 Act3 Q1: Classify stabilizing vs disruptive selection events 1.",
+        "options": [
+          "Selection type 1",
+          "Hardy-Weinberg 1",
+          "Drift 1",
+          "Founder"
+        ],
+        "answer": "Selection type 1"
+      },
+      {
+        "question": "Statistics DOK2 Act3 Q2: Classify stabilizing vs disruptive selection events 2.",
+        "options": [
+          "Selection type 2",
+          "Hardy-Weinberg 2",
+          "Drift 2",
+          "Founder"
+        ],
+        "answer": "Selection type 2"
+      },
+      {
+        "question": "Statistics DOK2 Act3 Q3: Classify stabilizing vs disruptive selection events 3.",
+        "options": [
+          "Selection type 3",
+          "Hardy-Weinberg 3",
+          "Drift 3",
+          "Founder"
+        ],
+        "answer": "Selection type 3"
+      },
+      {
+        "question": "Statistics DOK2 Act3 Q4: Classify stabilizing vs disruptive selection events 4.",
+        "options": [
+          "Selection type 4",
+          "Hardy-Weinberg 4",
+          "Drift 4",
+          "Founder"
+        ],
+        "answer": "Selection type 4"
+      },
+      {
+        "question": "Statistics DOK2 Act3 Q5: Classify stabilizing vs disruptive selection events 5.",
+        "options": [
+          "Selection type 5",
+          "Hardy-Weinberg 5",
+          "Drift 5",
+          "Founder"
+        ],
+        "answer": "Selection type 5"
+      },
+      {
+        "question": "Statistics DOK2 Act3 Q6: Classify stabilizing vs disruptive selection events 6.",
+        "options": [
+          "Selection type 6",
+          "Hardy-Weinberg 6",
+          "Drift 6",
+          "Founder"
+        ],
+        "answer": "Selection type 6"
+      },
+      {
+        "question": "Statistics DOK2 Act3 Q7: Classify stabilizing vs disruptive selection events 7.",
+        "options": [
+          "Selection type 7",
+          "Hardy-Weinberg 7",
+          "Drift 7",
+          "Founder"
+        ],
+        "answer": "Selection type 7"
+      },
+      {
+        "question": "Statistics DOK2 Act3 Q8: Classify stabilizing vs disruptive selection events 8.",
+        "options": [
+          "Selection type 8",
+          "Hardy-Weinberg 8",
+          "Drift 8",
+          "Founder"
+        ],
+        "answer": "Selection type 8"
+      },
+      {
+        "question": "Statistics DOK2 Act3 Q9: Classify stabilizing vs disruptive selection events 9.",
+        "options": [
+          "Selection type 9",
+          "Hardy-Weinberg 9",
+          "Drift 9",
+          "Founder"
+        ],
+        "answer": "Selection type 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK2 Act4 Q0: Classify stabilizing vs disruptive selection events 0.",
+        "options": [
+          "Selection type 0",
+          "Hardy-Weinberg 0",
+          "Drift 0",
+          "Founder"
+        ],
+        "answer": "Selection type 0"
+      },
+      {
+        "question": "Statistics DOK2 Act4 Q1: Classify stabilizing vs disruptive selection events 1.",
+        "options": [
+          "Selection type 1",
+          "Hardy-Weinberg 1",
+          "Drift 1",
+          "Founder"
+        ],
+        "answer": "Selection type 1"
+      },
+      {
+        "question": "Statistics DOK2 Act4 Q2: Classify stabilizing vs disruptive selection events 2.",
+        "options": [
+          "Selection type 2",
+          "Hardy-Weinberg 2",
+          "Drift 2",
+          "Founder"
+        ],
+        "answer": "Selection type 2"
+      },
+      {
+        "question": "Statistics DOK2 Act4 Q3: Classify stabilizing vs disruptive selection events 3.",
+        "options": [
+          "Selection type 3",
+          "Hardy-Weinberg 3",
+          "Drift 3",
+          "Founder"
+        ],
+        "answer": "Selection type 3"
+      },
+      {
+        "question": "Statistics DOK2 Act4 Q4: Classify stabilizing vs disruptive selection events 4.",
+        "options": [
+          "Selection type 4",
+          "Hardy-Weinberg 4",
+          "Drift 4",
+          "Founder"
+        ],
+        "answer": "Selection type 4"
+      },
+      {
+        "question": "Statistics DOK2 Act4 Q5: Classify stabilizing vs disruptive selection events 5.",
+        "options": [
+          "Selection type 5",
+          "Hardy-Weinberg 5",
+          "Drift 5",
+          "Founder"
+        ],
+        "answer": "Selection type 5"
+      },
+      {
+        "question": "Statistics DOK2 Act4 Q6: Classify stabilizing vs disruptive selection events 6.",
+        "options": [
+          "Selection type 6",
+          "Hardy-Weinberg 6",
+          "Drift 6",
+          "Founder"
+        ],
+        "answer": "Selection type 6"
+      },
+      {
+        "question": "Statistics DOK2 Act4 Q7: Classify stabilizing vs disruptive selection events 7.",
+        "options": [
+          "Selection type 7",
+          "Hardy-Weinberg 7",
+          "Drift 7",
+          "Founder"
+        ],
+        "answer": "Selection type 7"
+      },
+      {
+        "question": "Statistics DOK2 Act4 Q8: Classify stabilizing vs disruptive selection events 8.",
+        "options": [
+          "Selection type 8",
+          "Hardy-Weinberg 8",
+          "Drift 8",
+          "Founder"
+        ],
+        "answer": "Selection type 8"
+      },
+      {
+        "question": "Statistics DOK2 Act4 Q9: Classify stabilizing vs disruptive selection events 9.",
+        "options": [
+          "Selection type 9",
+          "Hardy-Weinberg 9",
+          "Drift 9",
+          "Founder"
+        ],
+        "answer": "Selection type 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK2 Act5 Q0: Classify stabilizing vs disruptive selection events 0.",
+        "options": [
+          "Selection type 0",
+          "Hardy-Weinberg 0",
+          "Drift 0",
+          "Founder"
+        ],
+        "answer": "Selection type 0"
+      },
+      {
+        "question": "Statistics DOK2 Act5 Q1: Classify stabilizing vs disruptive selection events 1.",
+        "options": [
+          "Selection type 1",
+          "Hardy-Weinberg 1",
+          "Drift 1",
+          "Founder"
+        ],
+        "answer": "Selection type 1"
+      },
+      {
+        "question": "Statistics DOK2 Act5 Q2: Classify stabilizing vs disruptive selection events 2.",
+        "options": [
+          "Selection type 2",
+          "Hardy-Weinberg 2",
+          "Drift 2",
+          "Founder"
+        ],
+        "answer": "Selection type 2"
+      },
+      {
+        "question": "Statistics DOK2 Act5 Q3: Classify stabilizing vs disruptive selection events 3.",
+        "options": [
+          "Selection type 3",
+          "Hardy-Weinberg 3",
+          "Drift 3",
+          "Founder"
+        ],
+        "answer": "Selection type 3"
+      },
+      {
+        "question": "Statistics DOK2 Act5 Q4: Classify stabilizing vs disruptive selection events 4.",
+        "options": [
+          "Selection type 4",
+          "Hardy-Weinberg 4",
+          "Drift 4",
+          "Founder"
+        ],
+        "answer": "Selection type 4"
+      },
+      {
+        "question": "Statistics DOK2 Act5 Q5: Classify stabilizing vs disruptive selection events 5.",
+        "options": [
+          "Selection type 5",
+          "Hardy-Weinberg 5",
+          "Drift 5",
+          "Founder"
+        ],
+        "answer": "Selection type 5"
+      },
+      {
+        "question": "Statistics DOK2 Act5 Q6: Classify stabilizing vs disruptive selection events 6.",
+        "options": [
+          "Selection type 6",
+          "Hardy-Weinberg 6",
+          "Drift 6",
+          "Founder"
+        ],
+        "answer": "Selection type 6"
+      },
+      {
+        "question": "Statistics DOK2 Act5 Q7: Classify stabilizing vs disruptive selection events 7.",
+        "options": [
+          "Selection type 7",
+          "Hardy-Weinberg 7",
+          "Drift 7",
+          "Founder"
+        ],
+        "answer": "Selection type 7"
+      },
+      {
+        "question": "Statistics DOK2 Act5 Q8: Classify stabilizing vs disruptive selection events 8.",
+        "options": [
+          "Selection type 8",
+          "Hardy-Weinberg 8",
+          "Drift 8",
+          "Founder"
+        ],
+        "answer": "Selection type 8"
+      },
+      {
+        "question": "Statistics DOK2 Act5 Q9: Classify stabilizing vs disruptive selection events 9.",
+        "options": [
+          "Selection type 9",
+          "Hardy-Weinberg 9",
+          "Drift 9",
+          "Founder"
+        ],
+        "answer": "Selection type 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Statistics DOK3 Act1 Q0: Solve allele frequencies using Hardy-Weinberg formulas 0.",
+        "options": [
+          "Hardy-Weinberg solve 0",
+          "Recessive 0",
+          "Dominant 0",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 0"
+      },
+      {
+        "question": "Statistics DOK3 Act1 Q1: Solve allele frequencies using Hardy-Weinberg formulas 1.",
+        "options": [
+          "Hardy-Weinberg solve 1",
+          "Recessive 1",
+          "Dominant 1",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 1"
+      },
+      {
+        "question": "Statistics DOK3 Act1 Q2: Solve allele frequencies using Hardy-Weinberg formulas 2.",
+        "options": [
+          "Hardy-Weinberg solve 2",
+          "Recessive 2",
+          "Dominant 2",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 2"
+      },
+      {
+        "question": "Statistics DOK3 Act1 Q3: Solve allele frequencies using Hardy-Weinberg formulas 3.",
+        "options": [
+          "Hardy-Weinberg solve 3",
+          "Recessive 3",
+          "Dominant 3",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 3"
+      },
+      {
+        "question": "Statistics DOK3 Act1 Q4: Solve allele frequencies using Hardy-Weinberg formulas 4.",
+        "options": [
+          "Hardy-Weinberg solve 4",
+          "Recessive 4",
+          "Dominant 4",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 4"
+      },
+      {
+        "question": "Statistics DOK3 Act1 Q5: Solve allele frequencies using Hardy-Weinberg formulas 5.",
+        "options": [
+          "Hardy-Weinberg solve 5",
+          "Recessive 5",
+          "Dominant 5",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 5"
+      },
+      {
+        "question": "Statistics DOK3 Act1 Q6: Solve allele frequencies using Hardy-Weinberg formulas 6.",
+        "options": [
+          "Hardy-Weinberg solve 6",
+          "Recessive 6",
+          "Dominant 6",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 6"
+      },
+      {
+        "question": "Statistics DOK3 Act1 Q7: Solve allele frequencies using Hardy-Weinberg formulas 7.",
+        "options": [
+          "Hardy-Weinberg solve 7",
+          "Recessive 7",
+          "Dominant 7",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 7"
+      },
+      {
+        "question": "Statistics DOK3 Act1 Q8: Solve allele frequencies using Hardy-Weinberg formulas 8.",
+        "options": [
+          "Hardy-Weinberg solve 8",
+          "Recessive 8",
+          "Dominant 8",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 8"
+      },
+      {
+        "question": "Statistics DOK3 Act1 Q9: Solve allele frequencies using Hardy-Weinberg formulas 9.",
+        "options": [
+          "Hardy-Weinberg solve 9",
+          "Recessive 9",
+          "Dominant 9",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK3 Act2 Q0: Solve allele frequencies using Hardy-Weinberg formulas 0.",
+        "options": [
+          "Hardy-Weinberg solve 0",
+          "Recessive 0",
+          "Dominant 0",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 0"
+      },
+      {
+        "question": "Statistics DOK3 Act2 Q1: Solve allele frequencies using Hardy-Weinberg formulas 1.",
+        "options": [
+          "Hardy-Weinberg solve 1",
+          "Recessive 1",
+          "Dominant 1",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 1"
+      },
+      {
+        "question": "Statistics DOK3 Act2 Q2: Solve allele frequencies using Hardy-Weinberg formulas 2.",
+        "options": [
+          "Hardy-Weinberg solve 2",
+          "Recessive 2",
+          "Dominant 2",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 2"
+      },
+      {
+        "question": "Statistics DOK3 Act2 Q3: Solve allele frequencies using Hardy-Weinberg formulas 3.",
+        "options": [
+          "Hardy-Weinberg solve 3",
+          "Recessive 3",
+          "Dominant 3",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 3"
+      },
+      {
+        "question": "Statistics DOK3 Act2 Q4: Solve allele frequencies using Hardy-Weinberg formulas 4.",
+        "options": [
+          "Hardy-Weinberg solve 4",
+          "Recessive 4",
+          "Dominant 4",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 4"
+      },
+      {
+        "question": "Statistics DOK3 Act2 Q5: Solve allele frequencies using Hardy-Weinberg formulas 5.",
+        "options": [
+          "Hardy-Weinberg solve 5",
+          "Recessive 5",
+          "Dominant 5",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 5"
+      },
+      {
+        "question": "Statistics DOK3 Act2 Q6: Solve allele frequencies using Hardy-Weinberg formulas 6.",
+        "options": [
+          "Hardy-Weinberg solve 6",
+          "Recessive 6",
+          "Dominant 6",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 6"
+      },
+      {
+        "question": "Statistics DOK3 Act2 Q7: Solve allele frequencies using Hardy-Weinberg formulas 7.",
+        "options": [
+          "Hardy-Weinberg solve 7",
+          "Recessive 7",
+          "Dominant 7",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 7"
+      },
+      {
+        "question": "Statistics DOK3 Act2 Q8: Solve allele frequencies using Hardy-Weinberg formulas 8.",
+        "options": [
+          "Hardy-Weinberg solve 8",
+          "Recessive 8",
+          "Dominant 8",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 8"
+      },
+      {
+        "question": "Statistics DOK3 Act2 Q9: Solve allele frequencies using Hardy-Weinberg formulas 9.",
+        "options": [
+          "Hardy-Weinberg solve 9",
+          "Recessive 9",
+          "Dominant 9",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK3 Act3 Q0: Solve allele frequencies using Hardy-Weinberg formulas 0.",
+        "options": [
+          "Hardy-Weinberg solve 0",
+          "Recessive 0",
+          "Dominant 0",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 0"
+      },
+      {
+        "question": "Statistics DOK3 Act3 Q1: Solve allele frequencies using Hardy-Weinberg formulas 1.",
+        "options": [
+          "Hardy-Weinberg solve 1",
+          "Recessive 1",
+          "Dominant 1",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 1"
+      },
+      {
+        "question": "Statistics DOK3 Act3 Q2: Solve allele frequencies using Hardy-Weinberg formulas 2.",
+        "options": [
+          "Hardy-Weinberg solve 2",
+          "Recessive 2",
+          "Dominant 2",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 2"
+      },
+      {
+        "question": "Statistics DOK3 Act3 Q3: Solve allele frequencies using Hardy-Weinberg formulas 3.",
+        "options": [
+          "Hardy-Weinberg solve 3",
+          "Recessive 3",
+          "Dominant 3",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 3"
+      },
+      {
+        "question": "Statistics DOK3 Act3 Q4: Solve allele frequencies using Hardy-Weinberg formulas 4.",
+        "options": [
+          "Hardy-Weinberg solve 4",
+          "Recessive 4",
+          "Dominant 4",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 4"
+      },
+      {
+        "question": "Statistics DOK3 Act3 Q5: Solve allele frequencies using Hardy-Weinberg formulas 5.",
+        "options": [
+          "Hardy-Weinberg solve 5",
+          "Recessive 5",
+          "Dominant 5",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 5"
+      },
+      {
+        "question": "Statistics DOK3 Act3 Q6: Solve allele frequencies using Hardy-Weinberg formulas 6.",
+        "options": [
+          "Hardy-Weinberg solve 6",
+          "Recessive 6",
+          "Dominant 6",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 6"
+      },
+      {
+        "question": "Statistics DOK3 Act3 Q7: Solve allele frequencies using Hardy-Weinberg formulas 7.",
+        "options": [
+          "Hardy-Weinberg solve 7",
+          "Recessive 7",
+          "Dominant 7",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 7"
+      },
+      {
+        "question": "Statistics DOK3 Act3 Q8: Solve allele frequencies using Hardy-Weinberg formulas 8.",
+        "options": [
+          "Hardy-Weinberg solve 8",
+          "Recessive 8",
+          "Dominant 8",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 8"
+      },
+      {
+        "question": "Statistics DOK3 Act3 Q9: Solve allele frequencies using Hardy-Weinberg formulas 9.",
+        "options": [
+          "Hardy-Weinberg solve 9",
+          "Recessive 9",
+          "Dominant 9",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK3 Act4 Q0: Solve allele frequencies using Hardy-Weinberg formulas 0.",
+        "options": [
+          "Hardy-Weinberg solve 0",
+          "Recessive 0",
+          "Dominant 0",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 0"
+      },
+      {
+        "question": "Statistics DOK3 Act4 Q1: Solve allele frequencies using Hardy-Weinberg formulas 1.",
+        "options": [
+          "Hardy-Weinberg solve 1",
+          "Recessive 1",
+          "Dominant 1",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 1"
+      },
+      {
+        "question": "Statistics DOK3 Act4 Q2: Solve allele frequencies using Hardy-Weinberg formulas 2.",
+        "options": [
+          "Hardy-Weinberg solve 2",
+          "Recessive 2",
+          "Dominant 2",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 2"
+      },
+      {
+        "question": "Statistics DOK3 Act4 Q3: Solve allele frequencies using Hardy-Weinberg formulas 3.",
+        "options": [
+          "Hardy-Weinberg solve 3",
+          "Recessive 3",
+          "Dominant 3",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 3"
+      },
+      {
+        "question": "Statistics DOK3 Act4 Q4: Solve allele frequencies using Hardy-Weinberg formulas 4.",
+        "options": [
+          "Hardy-Weinberg solve 4",
+          "Recessive 4",
+          "Dominant 4",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 4"
+      },
+      {
+        "question": "Statistics DOK3 Act4 Q5: Solve allele frequencies using Hardy-Weinberg formulas 5.",
+        "options": [
+          "Hardy-Weinberg solve 5",
+          "Recessive 5",
+          "Dominant 5",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 5"
+      },
+      {
+        "question": "Statistics DOK3 Act4 Q6: Solve allele frequencies using Hardy-Weinberg formulas 6.",
+        "options": [
+          "Hardy-Weinberg solve 6",
+          "Recessive 6",
+          "Dominant 6",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 6"
+      },
+      {
+        "question": "Statistics DOK3 Act4 Q7: Solve allele frequencies using Hardy-Weinberg formulas 7.",
+        "options": [
+          "Hardy-Weinberg solve 7",
+          "Recessive 7",
+          "Dominant 7",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 7"
+      },
+      {
+        "question": "Statistics DOK3 Act4 Q8: Solve allele frequencies using Hardy-Weinberg formulas 8.",
+        "options": [
+          "Hardy-Weinberg solve 8",
+          "Recessive 8",
+          "Dominant 8",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 8"
+      },
+      {
+        "question": "Statistics DOK3 Act4 Q9: Solve allele frequencies using Hardy-Weinberg formulas 9.",
+        "options": [
+          "Hardy-Weinberg solve 9",
+          "Recessive 9",
+          "Dominant 9",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK3 Act5 Q0: Solve allele frequencies using Hardy-Weinberg formulas 0.",
+        "options": [
+          "Hardy-Weinberg solve 0",
+          "Recessive 0",
+          "Dominant 0",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 0"
+      },
+      {
+        "question": "Statistics DOK3 Act5 Q1: Solve allele frequencies using Hardy-Weinberg formulas 1.",
+        "options": [
+          "Hardy-Weinberg solve 1",
+          "Recessive 1",
+          "Dominant 1",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 1"
+      },
+      {
+        "question": "Statistics DOK3 Act5 Q2: Solve allele frequencies using Hardy-Weinberg formulas 2.",
+        "options": [
+          "Hardy-Weinberg solve 2",
+          "Recessive 2",
+          "Dominant 2",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 2"
+      },
+      {
+        "question": "Statistics DOK3 Act5 Q3: Solve allele frequencies using Hardy-Weinberg formulas 3.",
+        "options": [
+          "Hardy-Weinberg solve 3",
+          "Recessive 3",
+          "Dominant 3",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 3"
+      },
+      {
+        "question": "Statistics DOK3 Act5 Q4: Solve allele frequencies using Hardy-Weinberg formulas 4.",
+        "options": [
+          "Hardy-Weinberg solve 4",
+          "Recessive 4",
+          "Dominant 4",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 4"
+      },
+      {
+        "question": "Statistics DOK3 Act5 Q5: Solve allele frequencies using Hardy-Weinberg formulas 5.",
+        "options": [
+          "Hardy-Weinberg solve 5",
+          "Recessive 5",
+          "Dominant 5",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 5"
+      },
+      {
+        "question": "Statistics DOK3 Act5 Q6: Solve allele frequencies using Hardy-Weinberg formulas 6.",
+        "options": [
+          "Hardy-Weinberg solve 6",
+          "Recessive 6",
+          "Dominant 6",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 6"
+      },
+      {
+        "question": "Statistics DOK3 Act5 Q7: Solve allele frequencies using Hardy-Weinberg formulas 7.",
+        "options": [
+          "Hardy-Weinberg solve 7",
+          "Recessive 7",
+          "Dominant 7",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 7"
+      },
+      {
+        "question": "Statistics DOK3 Act5 Q8: Solve allele frequencies using Hardy-Weinberg formulas 8.",
+        "options": [
+          "Hardy-Weinberg solve 8",
+          "Recessive 8",
+          "Dominant 8",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 8"
+      },
+      {
+        "question": "Statistics DOK3 Act5 Q9: Solve allele frequencies using Hardy-Weinberg formulas 9.",
+        "options": [
+          "Hardy-Weinberg solve 9",
+          "Recessive 9",
+          "Dominant 9",
+          "Heterozygous"
+        ],
+        "answer": "Hardy-Weinberg solve 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Statistics DOK4 Act1 Q0: Calibrate selective breeding sugar yield distributions 0.",
+        "options": [
+          "Selective breeder 0",
+          "Polymorphism 0",
+          "Heritability 0",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 0"
+      },
+      {
+        "question": "Statistics DOK4 Act1 Q1: Calibrate selective breeding sugar yield distributions 1.",
+        "options": [
+          "Selective breeder 1",
+          "Polymorphism 1",
+          "Heritability 1",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 1"
+      },
+      {
+        "question": "Statistics DOK4 Act1 Q2: Calibrate selective breeding sugar yield distributions 2.",
+        "options": [
+          "Selective breeder 2",
+          "Polymorphism 2",
+          "Heritability 2",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 2"
+      },
+      {
+        "question": "Statistics DOK4 Act1 Q3: Calibrate selective breeding sugar yield distributions 3.",
+        "options": [
+          "Selective breeder 3",
+          "Polymorphism 3",
+          "Heritability 3",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 3"
+      },
+      {
+        "question": "Statistics DOK4 Act1 Q4: Calibrate selective breeding sugar yield distributions 4.",
+        "options": [
+          "Selective breeder 4",
+          "Polymorphism 4",
+          "Heritability 4",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 4"
+      },
+      {
+        "question": "Statistics DOK4 Act1 Q5: Calibrate selective breeding sugar yield distributions 5.",
+        "options": [
+          "Selective breeder 5",
+          "Polymorphism 5",
+          "Heritability 5",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 5"
+      },
+      {
+        "question": "Statistics DOK4 Act1 Q6: Calibrate selective breeding sugar yield distributions 6.",
+        "options": [
+          "Selective breeder 6",
+          "Polymorphism 6",
+          "Heritability 6",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 6"
+      },
+      {
+        "question": "Statistics DOK4 Act1 Q7: Calibrate selective breeding sugar yield distributions 7.",
+        "options": [
+          "Selective breeder 7",
+          "Polymorphism 7",
+          "Heritability 7",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 7"
+      },
+      {
+        "question": "Statistics DOK4 Act1 Q8: Calibrate selective breeding sugar yield distributions 8.",
+        "options": [
+          "Selective breeder 8",
+          "Polymorphism 8",
+          "Heritability 8",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 8"
+      },
+      {
+        "question": "Statistics DOK4 Act1 Q9: Calibrate selective breeding sugar yield distributions 9.",
+        "options": [
+          "Selective breeder 9",
+          "Polymorphism 9",
+          "Heritability 9",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK4 Act2 Q0: Calibrate selective breeding sugar yield distributions 0.",
+        "options": [
+          "Selective breeder 0",
+          "Polymorphism 0",
+          "Heritability 0",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 0"
+      },
+      {
+        "question": "Statistics DOK4 Act2 Q1: Calibrate selective breeding sugar yield distributions 1.",
+        "options": [
+          "Selective breeder 1",
+          "Polymorphism 1",
+          "Heritability 1",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 1"
+      },
+      {
+        "question": "Statistics DOK4 Act2 Q2: Calibrate selective breeding sugar yield distributions 2.",
+        "options": [
+          "Selective breeder 2",
+          "Polymorphism 2",
+          "Heritability 2",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 2"
+      },
+      {
+        "question": "Statistics DOK4 Act2 Q3: Calibrate selective breeding sugar yield distributions 3.",
+        "options": [
+          "Selective breeder 3",
+          "Polymorphism 3",
+          "Heritability 3",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 3"
+      },
+      {
+        "question": "Statistics DOK4 Act2 Q4: Calibrate selective breeding sugar yield distributions 4.",
+        "options": [
+          "Selective breeder 4",
+          "Polymorphism 4",
+          "Heritability 4",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 4"
+      },
+      {
+        "question": "Statistics DOK4 Act2 Q5: Calibrate selective breeding sugar yield distributions 5.",
+        "options": [
+          "Selective breeder 5",
+          "Polymorphism 5",
+          "Heritability 5",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 5"
+      },
+      {
+        "question": "Statistics DOK4 Act2 Q6: Calibrate selective breeding sugar yield distributions 6.",
+        "options": [
+          "Selective breeder 6",
+          "Polymorphism 6",
+          "Heritability 6",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 6"
+      },
+      {
+        "question": "Statistics DOK4 Act2 Q7: Calibrate selective breeding sugar yield distributions 7.",
+        "options": [
+          "Selective breeder 7",
+          "Polymorphism 7",
+          "Heritability 7",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 7"
+      },
+      {
+        "question": "Statistics DOK4 Act2 Q8: Calibrate selective breeding sugar yield distributions 8.",
+        "options": [
+          "Selective breeder 8",
+          "Polymorphism 8",
+          "Heritability 8",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 8"
+      },
+      {
+        "question": "Statistics DOK4 Act2 Q9: Calibrate selective breeding sugar yield distributions 9.",
+        "options": [
+          "Selective breeder 9",
+          "Polymorphism 9",
+          "Heritability 9",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK4 Act3 Q0: Calibrate selective breeding sugar yield distributions 0.",
+        "options": [
+          "Selective breeder 0",
+          "Polymorphism 0",
+          "Heritability 0",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 0"
+      },
+      {
+        "question": "Statistics DOK4 Act3 Q1: Calibrate selective breeding sugar yield distributions 1.",
+        "options": [
+          "Selective breeder 1",
+          "Polymorphism 1",
+          "Heritability 1",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 1"
+      },
+      {
+        "question": "Statistics DOK4 Act3 Q2: Calibrate selective breeding sugar yield distributions 2.",
+        "options": [
+          "Selective breeder 2",
+          "Polymorphism 2",
+          "Heritability 2",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 2"
+      },
+      {
+        "question": "Statistics DOK4 Act3 Q3: Calibrate selective breeding sugar yield distributions 3.",
+        "options": [
+          "Selective breeder 3",
+          "Polymorphism 3",
+          "Heritability 3",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 3"
+      },
+      {
+        "question": "Statistics DOK4 Act3 Q4: Calibrate selective breeding sugar yield distributions 4.",
+        "options": [
+          "Selective breeder 4",
+          "Polymorphism 4",
+          "Heritability 4",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 4"
+      },
+      {
+        "question": "Statistics DOK4 Act3 Q5: Calibrate selective breeding sugar yield distributions 5.",
+        "options": [
+          "Selective breeder 5",
+          "Polymorphism 5",
+          "Heritability 5",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 5"
+      },
+      {
+        "question": "Statistics DOK4 Act3 Q6: Calibrate selective breeding sugar yield distributions 6.",
+        "options": [
+          "Selective breeder 6",
+          "Polymorphism 6",
+          "Heritability 6",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 6"
+      },
+      {
+        "question": "Statistics DOK4 Act3 Q7: Calibrate selective breeding sugar yield distributions 7.",
+        "options": [
+          "Selective breeder 7",
+          "Polymorphism 7",
+          "Heritability 7",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 7"
+      },
+      {
+        "question": "Statistics DOK4 Act3 Q8: Calibrate selective breeding sugar yield distributions 8.",
+        "options": [
+          "Selective breeder 8",
+          "Polymorphism 8",
+          "Heritability 8",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 8"
+      },
+      {
+        "question": "Statistics DOK4 Act3 Q9: Calibrate selective breeding sugar yield distributions 9.",
+        "options": [
+          "Selective breeder 9",
+          "Polymorphism 9",
+          "Heritability 9",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK4 Act4 Q0: Calibrate selective breeding sugar yield distributions 0.",
+        "options": [
+          "Selective breeder 0",
+          "Polymorphism 0",
+          "Heritability 0",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 0"
+      },
+      {
+        "question": "Statistics DOK4 Act4 Q1: Calibrate selective breeding sugar yield distributions 1.",
+        "options": [
+          "Selective breeder 1",
+          "Polymorphism 1",
+          "Heritability 1",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 1"
+      },
+      {
+        "question": "Statistics DOK4 Act4 Q2: Calibrate selective breeding sugar yield distributions 2.",
+        "options": [
+          "Selective breeder 2",
+          "Polymorphism 2",
+          "Heritability 2",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 2"
+      },
+      {
+        "question": "Statistics DOK4 Act4 Q3: Calibrate selective breeding sugar yield distributions 3.",
+        "options": [
+          "Selective breeder 3",
+          "Polymorphism 3",
+          "Heritability 3",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 3"
+      },
+      {
+        "question": "Statistics DOK4 Act4 Q4: Calibrate selective breeding sugar yield distributions 4.",
+        "options": [
+          "Selective breeder 4",
+          "Polymorphism 4",
+          "Heritability 4",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 4"
+      },
+      {
+        "question": "Statistics DOK4 Act4 Q5: Calibrate selective breeding sugar yield distributions 5.",
+        "options": [
+          "Selective breeder 5",
+          "Polymorphism 5",
+          "Heritability 5",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 5"
+      },
+      {
+        "question": "Statistics DOK4 Act4 Q6: Calibrate selective breeding sugar yield distributions 6.",
+        "options": [
+          "Selective breeder 6",
+          "Polymorphism 6",
+          "Heritability 6",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 6"
+      },
+      {
+        "question": "Statistics DOK4 Act4 Q7: Calibrate selective breeding sugar yield distributions 7.",
+        "options": [
+          "Selective breeder 7",
+          "Polymorphism 7",
+          "Heritability 7",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 7"
+      },
+      {
+        "question": "Statistics DOK4 Act4 Q8: Calibrate selective breeding sugar yield distributions 8.",
+        "options": [
+          "Selective breeder 8",
+          "Polymorphism 8",
+          "Heritability 8",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 8"
+      },
+      {
+        "question": "Statistics DOK4 Act4 Q9: Calibrate selective breeding sugar yield distributions 9.",
+        "options": [
+          "Selective breeder 9",
+          "Polymorphism 9",
+          "Heritability 9",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 9"
+      }
+    ],
+    [
+      {
+        "question": "Statistics DOK4 Act5 Q0: Calibrate selective breeding sugar yield distributions 0.",
+        "options": [
+          "Selective breeder 0",
+          "Polymorphism 0",
+          "Heritability 0",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 0"
+      },
+      {
+        "question": "Statistics DOK4 Act5 Q1: Calibrate selective breeding sugar yield distributions 1.",
+        "options": [
+          "Selective breeder 1",
+          "Polymorphism 1",
+          "Heritability 1",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 1"
+      },
+      {
+        "question": "Statistics DOK4 Act5 Q2: Calibrate selective breeding sugar yield distributions 2.",
+        "options": [
+          "Selective breeder 2",
+          "Polymorphism 2",
+          "Heritability 2",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 2"
+      },
+      {
+        "question": "Statistics DOK4 Act5 Q3: Calibrate selective breeding sugar yield distributions 3.",
+        "options": [
+          "Selective breeder 3",
+          "Polymorphism 3",
+          "Heritability 3",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 3"
+      },
+      {
+        "question": "Statistics DOK4 Act5 Q4: Calibrate selective breeding sugar yield distributions 4.",
+        "options": [
+          "Selective breeder 4",
+          "Polymorphism 4",
+          "Heritability 4",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 4"
+      },
+      {
+        "question": "Statistics DOK4 Act5 Q5: Calibrate selective breeding sugar yield distributions 5.",
+        "options": [
+          "Selective breeder 5",
+          "Polymorphism 5",
+          "Heritability 5",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 5"
+      },
+      {
+        "question": "Statistics DOK4 Act5 Q6: Calibrate selective breeding sugar yield distributions 6.",
+        "options": [
+          "Selective breeder 6",
+          "Polymorphism 6",
+          "Heritability 6",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 6"
+      },
+      {
+        "question": "Statistics DOK4 Act5 Q7: Calibrate selective breeding sugar yield distributions 7.",
+        "options": [
+          "Selective breeder 7",
+          "Polymorphism 7",
+          "Heritability 7",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 7"
+      },
+      {
+        "question": "Statistics DOK4 Act5 Q8: Calibrate selective breeding sugar yield distributions 8.",
+        "options": [
+          "Selective breeder 8",
+          "Polymorphism 8",
+          "Heritability 8",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 8"
+      },
+      {
+        "question": "Statistics DOK4 Act5 Q9: Calibrate selective breeding sugar yield distributions 9.",
+        "options": [
+          "Selective breeder 9",
+          "Polymorphism 9",
+          "Heritability 9",
+          "Frequency-dependent"
+        ],
+        "answer": "Selective breeder 9"
+      }
+    ]
+  ]
+}
 };
 
 const BIO_DOK2_ACT1_VARIANTS = [
@@ -27826,7 +36394,734 @@ export default function Home() {
         </div>
       );
     }
+  };\n
+  const renderLs28Workspaces = () => {
+    const key = `OAS.B.LS2.8_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const hunting = wsState.hunting || "";
+      const flocking = wsState.flocking || "";
+      const migration = wsState.migration || "";
+      const hibernation = wsState.hibernation || "";
+
+      const verifyGroup = () => {
+        const correct = hunting === "Social" && flocking === "Social" && migration === "Individual" && hibernation === "Individual";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls28", hunting, flocking, migration, hibernation, is_correct: correct }, "group_behavior_sorter", "OAS.B.LS2.8");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls28" }, "group_behavior_sorter", "OAS.B.LS2.8");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify each animal behavior as an Individual or Social Group behavior:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Cooperative hunting in wolf packs</label>
+              <select disabled={isCompleted} value={hunting} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, hunting: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select behavior...</option>
+                <option value="Individual">Individual Behavior</option>
+                <option value="Social">Social Group Behavior</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Visual flocking alignment in starlings</label>
+              <select disabled={isCompleted} value={flocking} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, flocking: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select behavior...</option>
+                <option value="Individual">Individual Behavior</option>
+                <option value="Social">Social Group Behavior</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Monarch butterfly migration direction</label>
+              <select disabled={isCompleted} value={migration} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, migration: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select behavior...</option>
+                <option value="Individual">Individual Behavior</option>
+                <option value="Social">Social Group Behavior</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">4. Hibernation of a black bear</label>
+              <select disabled={isCompleted} value={hibernation} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, hibernation: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select behavior...</option>
+                <option value="Individual">Individual Behavior</option>
+                <option value="Social">Social Group Behavior</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyGroup} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Behaviors Classified" : "Verify Behaviors"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const huntingValue = wsState.huntingValue || "";
+      const signalingValue = wsState.signalingValue || "";
+      const herdingValue = wsState.herdingValue || "";
+
+      const verifyBenefits = () => {
+        const correct = huntingValue == "Energy" && signalingValue == "Predation" && herdingValue == "Young";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls28", huntingValue, signalingValue, herdingValue, is_correct: correct }, "evolutionary_benefit", "OAS.B.LS2.8");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls28" }, "evolutionary_benefit", "OAS.B.LS2.8");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Match each social group behavior to its primary evolutionary survival advantage:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Pack Cooperative Hunting</label>
+              <select disabled={isCompleted} value={huntingValue} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, huntingValue: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select advantage...</option>
+                <option value="Energy">Higher per-capita net energy intake</option>
+                <option value="Predation">Lower per-capita predation risk</option>
+                <option value="Young">Protection of vulnerable young</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Herd Safety Signaling & Alarm Calls</label>
+              <select disabled={isCompleted} value={signalingValue} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, signalingValue: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select advantage...</option>
+                <option value="Energy">Higher per-capita net energy intake</option>
+                <option value="Predation">Lower per-capita predation risk</option>
+                <option value="Young">Protection of vulnerable young</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Herding Defensive Circle Formation</label>
+              <select disabled={isCompleted} value={herdingValue} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, herdingValue: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select advantage...</option>
+                <option value="Energy">Higher per-capita net energy intake</option>
+                <option value="Predation">Lower per-capita predation risk</option>
+                <option value="Young">Protection of vulnerable young</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyBenefits} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Advantages Verified" : "Verify Advantages"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const alignment = wsState.alignment || 10;
+      const cohesion = wsState.cohesion || 10;
+
+      const verifyFlocking = () => {
+        const correct = parseInt(alignment) === 50 && parseInt(cohesion) === 40;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls28", alignment, cohesion, is_correct: correct }, "flocking_density_sandbox", "OAS.B.LS2.8");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls28" }, "flocking_density_sandbox", "OAS.B.LS2.8");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate starling alignment weight and cohesion force to maximize murmurations safety factors. Targets: Alignment Weight = **50%**, Cohesion Force = **40%**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Alignment Weight</span>
+                <span className="text-indigo-400">{alignment}%</span>
+              </div>
+              <input type="range" min="10" max="100" step="10" disabled={isCompleted} value={alignment} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, alignment: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Cohesion Force</span>
+                <span className="text-rose-400">{cohesion}%</span>
+              </div>
+              <input type="range" min="10" max="100" step="10" disabled={isCompleted} value={cohesion} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, cohesion: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyFlocking} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Flocking Parameters Calibrated" : "Verify Flocking Sandbox"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const size = wsState.size || 2;
+      const radius = wsState.radius || 2;
+
+      const verifyForaging = () => {
+        const correct = parseInt(size) === 12 && parseInt(radius) === 8;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls28", size, radius, is_correct: correct }, "group_foraging_optimizer", "OAS.B.LS2.8");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls28" }, "group_foraging_optimizer", "OAS.B.LS2.8");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate pack size and scouting radius to optimize cooperative foraging efficiency. Targets: Group Size = **12 members**, Scouting Radius = **8 miles**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Group Size</span>
+                <span className="text-indigo-400">{size} members</span>
+              </div>
+              <input type="range" min="2" max="20" step="2" disabled={isCompleted} value={size} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, size: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Scouting Radius</span>
+                <span className="text-rose-400">{radius} miles</span>
+              </div>
+              <input type="range" min="2" max="14" step="1" disabled={isCompleted} value={radius} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, radius: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyForaging} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Foraging Efficiency Optimized" : "Calibrate Foraging"}</button>
+        </div>
+      );
+    }
   };
+
+  const renderLs31Workspaces = () => {
+    const key = `OAS.B.LS3.1_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const transcription = wsState.transcription || "";
+      const translation = wsState.translation || "";
+      const replication = wsState.replication || "";
+
+      const verifyFlow = () => {
+        const correct = transcription === "RNA" && translation === "Amino" && replication === "Copy";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls31", transcription, translation, replication, is_correct: correct }, "dna_to_protein_flow", "OAS.B.LS3.1");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls31" }, "dna_to_protein_flow", "OAS.B.LS3.1");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify molecular genetics flow steps to their descriptions:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Transcription</label>
+              <select disabled={isCompleted} value={transcription} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, transcription: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select description...</option>
+                <option value="RNA">Synthesizing RNA from a DNA template</option>
+                <option value="Amino">Building amino acid chains from mRNA codons</option>
+                <option value="Copy">Copying DNA genome prior to cell division</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Translation</label>
+              <select disabled={isCompleted} value={translation} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, translation: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select description...</option>
+                <option value="RNA">Synthesizing RNA from a DNA template</option>
+                <option value="Amino">Building amino acid chains from mRNA codons</option>
+                <option value="Copy">Copying DNA genome prior to cell division</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Replication</label>
+              <select disabled={isCompleted} value={replication} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, replication: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select description...</option>
+                <option value="RNA">Synthesizing RNA from a DNA template</option>
+                <option value="Amino">Building amino acid chains from mRNA codons</option>
+                <option value="Copy">Copying DNA genome prior to cell division</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyFlow} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Genetics Flow Verified" : "Verify Flow"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const monohybridF1 = wsState.monohybridF1 || "";
+      const monohybridF2 = wsState.monohybridF2 || "";
+      const dihybridF2 = wsState.dihybridF2 || "";
+
+      const verifyCrosses = () => {
+        const correct = monohybridF1 === "F1" && monohybridF2 === "F2" && dihybridF2 === "Dihybrid";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls31", monohybridF1, monohybridF2, dihybridF2, is_correct: correct }, "genotypic_sorter", "OAS.B.LS3.1");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls31" }, "genotypic_sorter", "OAS.B.LS3.1");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify each genetic cross event into its correct category:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Cross BB (Homozygous) x bb (Homozygous)</label>
+              <select disabled={isCompleted} value={monohybridF1} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, monohybridF1: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select cross...</option>
+                <option value="F1">F1 Monohybrid Cross (all Bb)</option>
+                <option value="F2">Monohybrid F2 Segregation (3:1 Phenotype)</option>
+                <option value="Dihybrid">Dihybrid F2 Assortment (9:3:3:1 Phenotype)</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Cross Bb (Heterozygous) x Bb (Heterozygous)</label>
+              <select disabled={isCompleted} value={monohybridF2} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, monohybridF2: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select cross...</option>
+                <option value="F1">F1 Monohybrid Cross (all Bb)</option>
+                <option value="F2">Monohybrid F2 Segregation (3:1 Phenotype)</option>
+                <option value="Dihybrid">Dihybrid F2 Assortment (9:3:3:1 Phenotype)</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Cross RrYy (Dihybrid) x RrYy (Dihybrid)</label>
+              <select disabled={isCompleted} value={dihybridF2} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, dihybridF2: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select cross...</option>
+                <option value="F1">F1 Monohybrid Cross (all Bb)</option>
+                <option value="F2">Monohybrid F2 Segregation (3:1 Phenotype)</option>
+                <option value="Dihybrid">Dihybrid F2 Assortment (9:3:3:1 Phenotype)</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyCrosses} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Crosses Verified" : "Verify Crosses"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const ratio = wsState.ratio || "";
+
+      const verifyRatio = () => {
+        const correct = ratio === "3_1";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls31", ratio, is_correct: correct }, "punnett_square", "OAS.B.LS3.1");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls31" }, "punnett_square", "OAS.B.LS3.1");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Predict phenotypic ratio of a cross between Bb (Heterozygous) x Bb (Heterozygous) where B is dominant and b is recessive:</p>
+          <div className="bg-zinc-950 p-4 rounded-xl border border-zinc-850 font-mono text-xs text-zinc-400 space-y-2">
+            <p>Monohybrid Cross: Bb x Bb</p>
+            <p>Offspring Genotypes: 1 BB, 2 Bb, 1 bb</p>
+          </div>
+          <div className="flex flex-col gap-1">
+            <label className="text-[10px] text-zinc-500 font-bold uppercase">Select Phenotypic Ratio</label>
+            <select disabled={isCompleted} value={ratio} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, ratio: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+              <option value="">Select ratio...</option>
+              <option value="1_1">1:1 (Dominant:Recessive)</option>
+              <option value="3_1">3:1 (Dominant:Recessive)</option>
+              <option value="9_3_3_1">9:3:3:1 (Dihybrid Phenotype)</option>
+            </select>
+          </div>
+          <button onClick={verifyRatio} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Phenotypic Ratio Verified" : "Verify Ratio"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const recombAB = wsState.recombAB || 5;
+      const recombBC = wsState.recombBC || 5;
+
+      const verifyLinkage = () => {
+        const correct = parseInt(recombAB) === 15 && parseInt(recombBC) === 10;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls31", recombAB, recombBC, is_correct: correct }, "gene_linkage_map", "OAS.B.LS3.1");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls31" }, "gene_linkage_map", "OAS.B.LS3.1");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate gene recombination frequencies to construct a linear chromosomal map. Targets: Recombination A-B = **15%**, Recombination B-C = **10%**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Recombination Frequency A-B</span>
+                <span className="text-indigo-400">{recombAB}% (15% target)</span>
+              </div>
+              <input type="range" min="5" max="30" step="5" disabled={isCompleted} value={recombAB} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, recombAB: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Recombination Frequency B-C</span>
+                <span className="text-rose-400">{recombBC}% (10% target)</span>
+              </div>
+              <input type="range" min="5" max="25" step="5" disabled={isCompleted} value={recombBC} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, recombBC: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyLinkage} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Chromosome Map Verified" : "Tune Map Frequencies"}</button>
+        </div>
+      );
+    }
+  };
+
+  const renderLs32Workspaces = () => {
+    const key = `OAS.B.LS3.2_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const crossover = wsState.crossover || "";
+      const sisterSeparate = wsState.sisterSeparate || "";
+      const homologousSeparate = wsState.homologousSeparate || "";
+
+      const verifyMeiosis = () => {
+        const correct = crossover === "ProphaseI" && sisterSeparate === "AnaphaseII" && homologousSeparate === "AnaphaseI";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls32", crossover, sisterSeparate, homologousSeparate, is_correct: correct }, "meiosis_stage_match", "OAS.B.LS3.2");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls32" }, "meiosis_stage_match", "OAS.B.LS3.2");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Match each genetic variation event in meiosis to its correct developmental stage phase:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Homologous chromosomes align & cross over</label>
+              <select disabled={isCompleted} value={crossover} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, crossover: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select phase...</option>
+                <option value="ProphaseI">Prophase I</option>
+                <option value="AnaphaseI">Anaphase I</option>
+                <option value="AnaphaseII">Anaphase II</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Sister chromatids separate to poles</label>
+              <select disabled={isCompleted} value={sisterSeparate} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, sisterSeparate: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select phase...</option>
+                <option value="ProphaseI">Prophase I</option>
+                <option value="AnaphaseI">Anaphase I</option>
+                <option value="AnaphaseII">Anaphase II</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Homologous pairs separate to poles</label>
+              <select disabled={isCompleted} value={homologousSeparate} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, homologousSeparate: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select phase...</option>
+                <option value="ProphaseI">Prophase I</option>
+                <option value="AnaphaseI">Anaphase I</option>
+                <option value="AnaphaseII">Anaphase II</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyMeiosis} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Meiosis Stages Verified" : "Verify Meiosis Stages"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const frameshift = wsState.frameshift || "";
+      const nonsense = wsState.nonsense || "";
+      const silent = wsState.silent || "";
+
+      const verifyMutations = () => {
+        const correct = frameshift === "Frameshift" && nonsense === "Nonsense" && silent === "Silent";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls32", frameshift, nonsense, silent, is_correct: correct }, "mutation_type_match", "OAS.B.LS3.2");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls32" }, "mutation_type_match", "OAS.B.LS3.2");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify each mutation event into its correct mutation category class:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Insertion of single base shifting reading frame</label>
+              <select disabled={isCompleted} value={frameshift} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, frameshift: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select mutation type...</option>
+                <option value="Frameshift">Frameshift Mutation</option>
+                <option value="Nonsense">Nonsense Mutation</option>
+                <option value="Silent">Silent Mutation</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. C to T transition changing codon to Stop</label>
+              <select disabled={isCompleted} value={nonsense} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, nonsense: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select mutation type...</option>
+                <option value="Frameshift">Frameshift Mutation</option>
+                <option value="Nonsense">Nonsense Mutation</option>
+                <option value="Silent">Silent Mutation</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Substitution changing codon but keeping same amino acid</label>
+              <select disabled={isCompleted} value={silent} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, silent: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select mutation type...</option>
+                <option value="Frameshift">Frameshift Mutation</option>
+                <option value="Nonsense">Nonsense Mutation</option>
+                <option value="Silent">Silent Mutation</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyMutations} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Mutations Verified" : "Verify Mutations"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const chiasmata = wsState.chiasmata || 1;
+      const spindle = wsState.spindle || 10;
+
+      const verifyCrossing = () => {
+        const correct = parseInt(chiasmata) === 2 && parseInt(spindle) === 70;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls32", chiasmata, spindle, is_correct: correct }, "crossing_over_sandbox", "OAS.B.LS3.2");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls32" }, "crossing_over_sandbox", "OAS.B.LS3.2");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate meiotic crossing over parameters to secure normal chromosomal swaps. Targets: Chiasmata Count = **2 chiasmata**, Spindle Tension = **70%**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Chiasmata Count</span>
+                <span className="text-indigo-400">{chiasmata} chiasmata</span>
+              </div>
+              <input type="range" min="1" max="5" step="1" disabled={isCompleted} value={chiasmata} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, chiasmata: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Meiotic Spindle Tension</span>
+                <span className="text-rose-400">{spindle}%</span>
+              </div>
+              <input type="range" min="10" max="100" step="10" disabled={isCompleted} value={spindle} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, spindle: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyCrossing} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Crossing Over Calibrated" : "Verify Crossing Over"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const dosage = wsState.dosage || 1;
+      const repair = wsState.repair || 50;
+
+      const verifySurvival = () => {
+        const correct = parseInt(dosage) === 5 && parseInt(repair) === 90;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls32", dosage, repair, is_correct: correct }, "mutation_survival_optimizer", "OAS.B.LS3.2");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls32" }, "mutation_survival_optimizer", "OAS.B.LS3.2");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate mutagen dosage and DNA repair enzyme levels to balance cellular survival. Targets: Mutagen Dosage = **5 rads**, DNA Repair Efficiency = **90%**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Mutagen Dosage</span>
+                <span className="text-indigo-400">{dosage} rads</span>
+              </div>
+              <input type="range" min="1" max="10" step="1" disabled={isCompleted} value={dosage} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, dosage: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>DNA Repair Efficiency</span>
+                <span className="text-rose-400">{repair}%</span>
+              </div>
+              <input type="range" min="50" max="100" step="10" disabled={isCompleted} value={repair} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, repair: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifySurvival} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Mutation Survival Balanced" : "Verify Survival Planner"}</button>
+        </div>
+      );
+    }
+  };
+
+  const renderLs33Workspaces = () => {
+    const key = `OAS.B.LS3.3_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const height = wsState.height || "";
+      const peaColor = wsState.peaColor || "";
+      const directional = wsState.directional || "";
+
+      const verifyDistributions = () => {
+        const correct = height === "Normal" && peaColor === "Bimodal" && directional === "Skewed";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls33", height, peaColor, directional, is_correct: correct }, "distribution_types_match", "OAS.B.LS3.3");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls33" }, "distribution_types_match", "OAS.B.LS3.3");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Match each trait inheritance type to its characteristic statistical distribution curve:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Human height / Polygenic inheritance</label>
+              <select disabled={isCompleted} value={height} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, height: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select curve...</option>
+                <option value="Normal">Normal Distribution (Bell Curve)</option>
+                <option value="Bimodal">Bimodal / Discrete Distribution</option>
+                <option value="Skewed">Skewed Distribution</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Pea seed color / Single-gene dominant</label>
+              <select disabled={isCompleted} value={peaColor} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, peaColor: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select curve...</option>
+                <option value="Normal">Normal Distribution</option>
+                <option value="Bimodal">Bimodal / Discrete Distribution</option>
+                <option value="Skewed">Skewed Distribution</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Direct directional selection impact</label>
+              <select disabled={isCompleted} value={directional} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, directional: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select curve...</option>
+                <option value="Normal">Normal Distribution</option>
+                <option value="Bimodal">Bimodal / Discrete Distribution</option>
+                <option value="Skewed">Skewed Distribution</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyDistributions} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Distributions Verified" : "Verify Distributions"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const disruptive = wsState.disruptive || "";
+      const directional = wsState.directional || "";
+      const stabilizing = wsState.stabilizing || "";
+
+      const verifySelection = () => {
+        const correct = disruptive === "Disruptive" && directional === "Directional" && stabilizing === "Stabilizing";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls33", disruptive, directional, stabilizing, is_correct: correct }, "selection_type_match", "OAS.B.LS3.3");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls33" }, "selection_type_match", "OAS.B.LS3.3");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify each natural selection description into its selection type category:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Extremes favored, intermediates selected against</label>
+              <select disabled={isCompleted} value={disruptive} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, disruptive: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select selection type...</option>
+                <option value="Disruptive">Disruptive Selection</option>
+                <option value="Directional">Directional Selection</option>
+                <option value="Stabilizing">Stabilizing Selection</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. One extreme favored, shifting mean value</label>
+              <select disabled={isCompleted} value={directional} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, directional: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select selection type...</option>
+                <option value="Disruptive">Disruptive Selection</option>
+                <option value="Directional">Directional Selection</option>
+                <option value="Stabilizing">Stabilizing Selection</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Intermediates favored, narrowing variance range</label>
+              <select disabled={isCompleted} value={stabilizing} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, stabilizing: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select selection type...</option>
+                <option value="Disruptive">Disruptive Selection</option>
+                <option value="Directional">Directional Selection</option>
+                <option value="Stabilizing">Stabilizing Selection</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifySelection} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Selection Types Verified" : "Verify Selection Types"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const alleleQ = wsState.alleleQ || "";
+
+      const verifyHardy = () => {
+        const correct = alleleQ === "0_30";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls33", alleleQ, is_correct: correct }, "hardy_weinberg_calculator", "OAS.B.LS3.3");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls33" }, "hardy_weinberg_calculator", "OAS.B.LS3.3");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Solve for allele frequency q in a population in Hardy-Weinberg equilibrium with homozygous recessive phenotype frequency q² = 0.09:</p>
+          <div className="bg-zinc-950 p-4 rounded-xl border border-zinc-850 font-mono text-xs text-zinc-400 space-y-2">
+            <p>Formula: p² + 2pq + q² = 1.0</p>
+            <p>Given Recessive Phenotype Frequency (q²) = 0.09</p>
+            <p>Allele Frequency (q) = √0.09</p>
+          </div>
+          <div className="flex flex-col gap-1">
+            <label className="text-[10px] text-zinc-500 font-bold uppercase">Select Allele Frequency q</label>
+            <select disabled={isCompleted} value={alleleQ} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, alleleQ: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+              <option value="">Select frequency...</option>
+              <option value="0.09">q = 0.09</option>
+              <option value="0.30">q = 0.30</option>
+              <option value="0.70">q = 0.70</option>
+            </select>
+          </div>
+          <button onClick={verifyHardy} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Hardy-Weinberg Solved" : "Verify Hardy-Weinberg"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const pFreq = wsState.pFreq || 50;
+      const selectionCoeff = wsState.selectionCoeff || 0;
+
+      const verifyHwTuner = () => {
+        const correct = parseInt(pFreq) === 70 && parseInt(selectionCoeff) === 20;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls33", pFreq, selectionCoeff, is_correct: correct }, "hardy_weinberg_tuner", "OAS.B.LS3.3");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls33" }, "hardy_weinberg_tuner", "OAS.B.LS3.3");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate allele frequencies and selection factors to shift phenotypic distribution. Targets: Initial p Allele Frequency = **70%**, Selection Coefficient against q = **20%**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Initial p Allele Frequency</span>
+                <span className="text-indigo-400">{pFreq}%</span>
+              </div>
+              <input type="range" min="10" max="90" step="10" disabled={isCompleted} value={pFreq} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, pFreq: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Selection Coefficient against q</span>
+                <span className="text-rose-400">{selectionCoeff}%</span>
+              </div>
+              <input type="range" min="0" max="100" step="10" disabled={isCompleted} value={selectionCoeff} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, selectionCoeff: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyHwTuner} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Hardy-Weinberg Tuned" : "Verify Tuner"}</button>
+        </div>
+      );
+    }
+  };
+\n
 
 
 
@@ -28583,6 +37878,10 @@ export default function Home() {
                           <option value="OAS.B.LS2.4">OAS B.LS2.4: Ecosystem Energy Flow</option>
                           <option value="OAS.B.LS2.5">OAS B.LS2.5: Carbon Cycling Spheres</option>
                           <option value="OAS.B.LS2.6">OAS B.LS2.6: Ecosystem Stability Evaluation</option>
+                          <option value="OAS.B.LS2.8">OAS B.LS2.8: Group Behavior Evidence</option>
+                          <option value="OAS.B.LS3.1">OAS B.LS3.1: Genetics Inheritable Traits</option>
+                          <option value="OAS.B.LS3.2">OAS B.LS3.2: Genetic Variation Viable Errors</option>
+                          <option value="OAS.B.LS3.3">OAS B.LS3.3: Statistics of Trait Distribution</option>
                           <option value="OAS.B.PS1.1">OAS B.PS1.1: Matter & Interactions</option>
                         </select>
                       </div>
@@ -30566,8 +39865,8 @@ export default function Home() {
                           </div>
                         )}
                       </div>
-                    ) : (selectedStandard === "OAS.B.LS1.2" || selectedStandard === "OAS.B.LS1.3" || selectedStandard === "OAS.B.LS1.4" || selectedStandard === "OAS.B.LS1.5" || selectedStandard === "OAS.B.LS1.6" || selectedStandard === "OAS.B.LS1.7" || selectedStandard === "OAS.B.LS2.1" || selectedStandard === "OAS.B.LS2.2" || selectedStandard === "OAS.B.LS2.3" || selectedStandard === "OAS.B.LS2.4" || selectedStandard === "OAS.B.LS2.5" || selectedStandard === "OAS.B.LS2.6") ? (
-                      /* DOK Workspaces for B.LS1.2 to B.LS2.6 */
+                    ) : (selectedStandard === "OAS.B.LS1.2" || selectedStandard === "OAS.B.LS1.3" || selectedStandard === "OAS.B.LS1.4" || selectedStandard === "OAS.B.LS1.5" || selectedStandard === "OAS.B.LS1.6" || selectedStandard === "OAS.B.LS1.7" || selectedStandard === "OAS.B.LS2.1" || selectedStandard === "OAS.B.LS2.2" || selectedStandard === "OAS.B.LS2.3" || selectedStandard === "OAS.B.LS2.4" || selectedStandard === "OAS.B.LS2.5" || selectedStandard === "OAS.B.LS2.6" || selectedStandard === "OAS.B.LS2.8" || selectedStandard === "OAS.B.LS3.1" || selectedStandard === "OAS.B.LS3.2" || selectedStandard === "OAS.B.LS3.3") ? (
+                      /* DOK Workspaces for B.LS1.2 to B.LS3.3 */
                       <div className="space-y-6 animate-fadeIn">
                         <div>
                           <span className="text-xs font-bold uppercase tracking-wider text-indigo-400">Active Workspace</span>
@@ -30635,6 +39934,18 @@ export default function Home() {
  
                             {/* Render B.LS2.6 Workspaces */}
                             {selectedStandard === "OAS.B.LS2.6" && renderLs26Workspaces()}
+ 
+                            {/* Render B.LS2.8 Workspaces */}
+                            {selectedStandard === "OAS.B.LS2.8" && renderLs28Workspaces()}
+ 
+                            {/* Render B.LS3.1 Workspaces */}
+                            {selectedStandard === "OAS.B.LS3.1" && renderLs31Workspaces()}
+ 
+                            {/* Render B.LS3.2 Workspaces */}
+                            {selectedStandard === "OAS.B.LS3.2" && renderLs32Workspaces()}
+ 
+                            {/* Render B.LS3.3 Workspaces */}
+                            {selectedStandard === "OAS.B.LS3.3" && renderLs33Workspaces()}
                           </div>
                         )}
                       </div>
@@ -33090,6 +42401,150 @@ export default function Home() {
                           <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
                             <span>Ecosystem Stability & Disturbance Resilience:</span>
                             <span className="text-white font-bold">{parentReportData.bkt_stability_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS2.8) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS2.8</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_behavior_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_behavior_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_behavior_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_behavior_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_behavior_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Group Behavior & Cooperative Dynamics:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_behavior_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS3.1) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS3.1</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_inheritance_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_inheritance_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_inheritance_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_inheritance_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_inheritance_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Genetics Inheritable Traits mapping:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_inheritance_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS3.2) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS3.2</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_variation_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_variation_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_variation_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_variation_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_variation_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Genetic Variation & Meiotic Replication Errors:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_variation_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS3.3) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS3.3</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_statistics_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_statistics_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_statistics_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_statistics_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_statistics_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Statistics of Trait Frequency Distribution:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_statistics_mastery ?? "15.0"}%</span>
                           </div>
                         </div>
                       </div>
