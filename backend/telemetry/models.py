@@ -240,7 +240,43 @@ class StudentBKTState(models.Model):
     statistics_p_guess = models.FloatField(default=0.20)
     statistics_p_slip = models.FloatField(default=0.10)
     statistics_p_transit = models.FloatField(default=0.15)
-    
+
+    # Skill: Common Ancestry Evidence (OAS B.LS4.1)
+    ancestry_p_know = models.FloatField(default=0.15)
+    ancestry_p_guess = models.FloatField(default=0.20)
+    ancestry_p_slip = models.FloatField(default=0.10)
+    ancestry_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Natural Selection Drivers (OAS B.LS4.2)
+    drivers_p_know = models.FloatField(default=0.15)
+    drivers_p_guess = models.FloatField(default=0.20)
+    drivers_p_slip = models.FloatField(default=0.10)
+    drivers_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Advantageous Traits Frequency (OAS B.LS4.3)
+    advantage_p_know = models.FloatField(default=0.15)
+    advantage_p_guess = models.FloatField(default=0.20)
+    advantage_p_slip = models.FloatField(default=0.10)
+    advantage_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Natural Selection Adaptation (OAS B.LS4.4)
+    adaptation_p_know = models.FloatField(default=0.15)
+    adaptation_p_guess = models.FloatField(default=0.20)
+    adaptation_p_slip = models.FloatField(default=0.10)
+    adaptation_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Environmental Shifts & Extinction (OAS B.LS4.5)
+    extinction_p_know = models.FloatField(default=0.15)
+    extinction_p_guess = models.FloatField(default=0.20)
+    extinction_p_slip = models.FloatField(default=0.10)
+    extinction_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Chemical Reactions & Electron States (OAS PS.PS1.2)
+    reactions_p_know = models.FloatField(default=0.15)
+    reactions_p_guess = models.FloatField(default=0.20)
+    reactions_p_slip = models.FloatField(default=0.10)
+    reactions_p_transit = models.FloatField(default=0.15)
+
     last_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):

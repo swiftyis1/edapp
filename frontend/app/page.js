@@ -1622,6 +1622,552 @@ const ACTIVITIES_DATABASE = {
     }
   ]
 }
+,
+  "OAS.B.LS4.1": {
+  "1": [
+    {
+      "name": "Anatomical Sorter",
+      "description": "Classify bone configurations as homologous (common ancestry) or analogous structures."
+    },
+    {
+      "name": "Taxon Fossil Match",
+      "description": "Match key transitional fossil forms to their chronological periods."
+    },
+    {
+      "name": "Embryological Match",
+      "description": "Identify shared embryological characteristics like pharyngeal slits across vertebrate phyla."
+    },
+    {
+      "name": "Biochemical Homology Match",
+      "description": "Analyze amino acid sequence alignment similarity for cytochrome c proteins."
+    },
+    {
+      "name": "Vestigial Structures Match",
+      "description": "Match pelvic bones in whales and appendix in humans to vestigial remnants."
+    }
+  ],
+  "2": [
+    {
+      "name": "Evolutionary Evidence Match",
+      "description": "Match fossil transitions, amino acids, and vestigial structures to evidence definitions."
+    },
+    {
+      "name": "Cladogenesis Classifier",
+      "description": "Differentiate shared ancestral traits (symplesiomorphies) from derived traits."
+    },
+    {
+      "name": "Biogeographical Pattern Match",
+      "description": "Explain how continental drift explains flightless ratite bird distributions."
+    },
+    {
+      "name": "Molecular Clock Calculator",
+      "description": "Estimate species divergence times based on nucleotide substitution counts."
+    },
+    {
+      "name": "Homoplasy Sorter",
+      "description": "Identify homoplasious traits arising from convergent evolution vs. ancestral inheritance."
+    }
+  ],
+  "3": [
+    {
+      "name": "Phylogenetic Tree Sandbox",
+      "description": "Calibrate evolutionary tree distances and bifurcation branch angles."
+    },
+    {
+      "name": "Parsimony Cladogram Sandbox",
+      "description": "Construct the most parsimonious phylogenetic tree using a character trait matrix."
+    },
+    {
+      "name": "DNA Alignment Sandbox",
+      "description": "Align homologous DNA sequences to identify insertions, deletions, and point mutations."
+    },
+    {
+      "name": "Fossil Stratigraphy Model",
+      "description": "Sequence fossil strata layers to construct an index fossil index chronology."
+    },
+    {
+      "name": "Anatomical Vector Sandbox",
+      "description": "Map forelimb bone coordinates to identify bone scaling ratios across mammal taxa."
+    }
+  ],
+  "4": [
+    {
+      "name": "Cladogram Optimizer",
+      "description": "Calibrate species counts and outgroup distances to resolve phylogenetic trees."
+    },
+    {
+      "name": "Maximum Likelihood Model",
+      "description": "Tune transition-transversion ratios to optimize gene tree probability models."
+    },
+    {
+      "name": "Ancestral State Reconstructor",
+      "description": "Reconstruct fossil gene configurations using terminal node trait profiles."
+    },
+    {
+      "name": "Biogeographical Plate Tectonics",
+      "description": "Model marsupial dispersion pathways as Gondwanan land bridges severed."
+    },
+    {
+      "name": "Vestigial Atavism Sandbox",
+      "description": "Tune gene activation switches to simulate hindlimb growth in cetaceans."
+    }
+  ]
+}
+,
+  "OAS.B.LS4.2": {
+  "1": [
+    {
+      "name": "Four Drivers Match",
+      "description": "Match Darwin's postulates of overproduction, variation, struggle, and survival."
+    },
+    {
+      "name": "Darwinian Fitness Recall",
+      "description": "Identify fitness as reproductive success relative to other genotypes."
+    },
+    {
+      "name": "Heritability Requirements",
+      "description": "Distinguish inheritable somatic changes from non-heritable mutations."
+    },
+    {
+      "name": "Overproduction Thresholds",
+      "description": "Identify Malthusian population growth factors exceeding resource replenishment rates."
+    },
+    {
+      "name": "Phenotypic Variation Recall",
+      "description": "Recall how mutations and crossing-over drive physical trait variation."
+    }
+  ],
+  "2": [
+    {
+      "name": "Limiting Resource Sorter",
+      "description": "Classify limiting factors as density-dependent or density-independent factors."
+    },
+    {
+      "name": "Differential Survival Sorter",
+      "description": "Differentiate survival selection from sexual selection and fecundity selection."
+    },
+    {
+      "name": "Selective Pressure Matcher",
+      "description": "Identify abiotic (temperature, salinity) vs. biotic (predators, competitors) pressures."
+    },
+    {
+      "name": "Intraspecific Competition Sorter",
+      "description": "Contrast intraspecific mate competition against interspecific resource competition."
+    },
+    {
+      "name": "Fecundity Index Match",
+      "description": "Match clutch size and egg survival traits to overall maternal fitness indexes."
+    }
+  ],
+  "3": [
+    {
+      "name": "Population Growth Simulator",
+      "description": "Calibrate carrying capacities and per-capita growth rates to model resources."
+    },
+    {
+      "name": "Selective Coeff Sandbox",
+      "description": "Simulate allele elimination speeds under variable selection strengths."
+    },
+    {
+      "name": "Predation Pressure Simulator",
+      "description": "Observe prey population morphology shifts as visual hunting rates intensify."
+    },
+    {
+      "name": "Resource Depletion Model",
+      "description": "Track population collapse parameters as food reserves fall below metabolic minimums."
+    },
+    {
+      "name": "Niche Breadth Sandbox",
+      "description": "Model resource partitioning parameters as two competing species overlap."
+    }
+  ],
+  "4": [
+    {
+      "name": "Resource Competition Tuner",
+      "description": "Calibrate Species A and B consumption rates to model resource partitioning."
+    },
+    {
+      "name": "Lotka-Volterra Predator Model",
+      "description": "Calibrate predator attack rates and prey birth rates to maintain oscillations."
+    },
+    {
+      "name": "Multi-Resource Forager Tuner",
+      "description": "Optimize diet choice switches as primary seed energy yields fluctuate."
+    },
+    {
+      "name": "Density-Dependent Mortality",
+      "description": "Calibrate disease pathogen transmission values to model epidemic crashes."
+    },
+    {
+      "name": "Interspecific Competitive Exclusion",
+      "description": "Optimize refuge space sizes to prevent secondary competitor extinction."
+    }
+  ]
+}
+,
+  "OAS.B.LS4.3": {
+  "1": [
+    {
+      "name": "Selective Pressure Match",
+      "description": "Match antibiotic usage, soot, and predators to phenotypic selection outcomes."
+    },
+    {
+      "name": "Melanism Historical Recall",
+      "description": "Identify selection for dark peppered moths in soot-covered forests."
+    },
+    {
+      "name": "Antibiotic Resistance Recall",
+      "description": "Identify selection for plasmid-borne resistance alleles under antibiotic use."
+    },
+    {
+      "name": "Pesticide Selection Recall",
+      "description": "Identify selection for detoxifying enzymes in agricultural insect populations."
+    },
+    {
+      "name": "Malaria Selection Recall",
+      "description": "Explain how malaria prevalence maintains sickle-cell allele frequencies."
+    }
+  ],
+  "2": [
+    {
+      "name": "Trait Advantage Sorter",
+      "description": "Classify selection effects as positive, negative, or genetic drift shifts."
+    },
+    {
+      "name": "Relative Fitness Sorter",
+      "description": "Calculate relative fitness (w) values from raw survival counts."
+    },
+    {
+      "name": "Selection Coefficients Model",
+      "description": "Explain selection coefficient (s) relationships to relative fitness (w = 1 - s)."
+    },
+    {
+      "name": "Heterozygote Advantage Model",
+      "description": "Explain overdominance and balancing selection dynamics."
+    },
+    {
+      "name": "Frequency-Dependent Selection",
+      "description": "Differentiate positive frequency-dependent from negative frequency-dependent selection."
+    }
+  ],
+  "3": [
+    {
+      "name": "Allele Frequency Calculator",
+      "description": "Predict next-generation allele frequencies under custom selection coefficients."
+    },
+    {
+      "name": "Genotypic Fitness Solver",
+      "description": "Solve next-generation genotypic ratios after selective mortality filters."
+    },
+    {
+      "name": "Genetic Bottleneck Simulator",
+      "description": "Track rare allele loss rates during random population bottleneck contractions."
+    },
+    {
+      "name": "Overdominance Balancing Solver",
+      "description": "Calculate equilibrium allele frequencies given homozygous selection coefficients."
+    },
+    {
+      "name": "Directional Selection Solver",
+      "description": "Solve for the number of generations needed to double a dominant trait."
+    }
+  ],
+  "4": [
+    {
+      "name": "Advantageous Drift Tuner",
+      "description": "Calibrate advantageous allele rates and bottleneck sizes to model traits."
+    },
+    {
+      "name": "Breeder Selection Optimizer",
+      "description": "Optimize selection differentials to maximize sheep wool density distributions."
+    },
+    {
+      "name": "Deleterious Mutation Purging",
+      "description": "Calibrate inbreeding coefficients to model the removal of recessive lethals."
+    },
+    {
+      "name": "Somatic Selection Optimizer",
+      "description": "Optimize chemotherapy dosages to avoid select-resistant cancer lineages."
+    },
+    {
+      "name": "Gene Flow Selection Balance",
+      "description": "Calibrate immigration rates to balance localized predator selection."
+    }
+  ]
+}
+,
+  "OAS.B.LS4.4": {
+  "1": [
+    {
+      "name": "Adaptation Types Match",
+      "description": "Match physiological, behavioral, and structural adaptations to their definitions."
+    },
+    {
+      "name": "Structural Adaptations Recall",
+      "description": "Identify physical structures (cacti spines, bird wings) as adaptations."
+    },
+    {
+      "name": "Physiological Adaptations Recall",
+      "description": "Identify biochemical traits (antifreeze proteins, venom) as adaptations."
+    },
+    {
+      "name": "Behavioral Adaptations Recall",
+      "description": "Identify behavioral actions (migration, warning postures) as adaptations."
+    },
+    {
+      "name": "Adaptive Radiation Recall",
+      "description": "Recall how finches radiated into multiple ecological niches."
+    }
+  ],
+  "2": [
+    {
+      "name": "Speciation Type Match",
+      "description": "Classify speciation events as allopatric, sympatric, or parapatric speciation."
+    },
+    {
+      "name": "Prezygotic Isolation Sorter",
+      "description": "Differentiate behavioral, temporal, and mechanical prezygotic isolation."
+    },
+    {
+      "name": "Postzygotic Isolation Sorter",
+      "description": "Differentiate hybrid inviability from hybrid sterility and hybrid breakdown."
+    },
+    {
+      "name": "Coevolutionary Arms Race Match",
+      "description": "Match predator-prey reciprocal adaptions (toxic newt vs. resistant garter snake)."
+    },
+    {
+      "name": "Convergent Evolution Match",
+      "description": "Identify equivalent adaptions arising independently in similar environments."
+    }
+  ],
+  "3": [
+    {
+      "name": "Adaptive Radiation Solver",
+      "description": "Identify ecological drivers like food niches that fuel finch beak speciation."
+    },
+    {
+      "name": "Speciation Rate Sandbox",
+      "description": "Simulate allopatric divergence speeds under varied geographic barrier sizes."
+    },
+    {
+      "name": "Hybrid Zone Climax Sandbox",
+      "description": "Model hybrid zone stability, reinforcement, or fusion outcomes."
+    },
+    {
+      "name": "Coevolutionary Attack Sandbox",
+      "description": "Simulate predator toxicity levels as prey toxin production increases."
+    },
+    {
+      "name": "Convergent Trait Calculator",
+      "description": "Measure skeletal morphology overlap in placental vs. marsupial moles."
+    }
+  ],
+  "4": [
+    {
+      "name": "Adaptive Landscape Tuner",
+      "description": "Calibrate fitness peak elevations and phenotypic variance widths."
+    },
+    {
+      "name": "Sympatric Speciation Tuner",
+      "description": "Calibrate assortative mating coefficients to trigger sympatric speciation."
+    },
+    {
+      "name": "Prezygotic Barrier Builder",
+      "description": "Optimize pheromone difference ratios to prevent interspecies cross-mating."
+    },
+    {
+      "name": "Adaptive Peak Jumping Tuner",
+      "description": "Calibrate mutation size and genetic drift to shift populations to higher peaks."
+    },
+    {
+      "name": "Host Shift Speciation Tuner",
+      "description": "Optimize fruit preference selection variables to isolate fly populations."
+    }
+  ]
+}
+,
+  "OAS.B.LS4.5": {
+  "1": [
+    {
+      "name": "Stressor Matching",
+      "description": "Match environmental shift stressors like habitat loss, climate change, pollution, invasive species to extinction risk level."
+    },
+    {
+      "name": "Ecological Drivers Recall",
+      "description": "Recall that rapid environmental shifts exceed evolutionary rates leading to species extinction."
+    },
+    {
+      "name": "Biomass Loss Match",
+      "description": "Match historical mass extinction event descriptions to their timeline periods."
+    },
+    {
+      "name": "Species Range Sorter",
+      "description": "Classify geographic range sizes as high, medium, or low extinction vulnerability buffers."
+    },
+    {
+      "name": "Invasive Stress Recall",
+      "description": "Identify how invasive predators drive localized endemic prey extinctions."
+    }
+  ],
+  "2": [
+    {
+      "name": "Environmental Shift Sorter",
+      "description": "Classify environmental shift factors as abiotic (temperature, drought) or biotic (disease, competition)."
+    },
+    {
+      "name": "Extinction Severity Match",
+      "description": "Match historical extinction rates to background extinction rates."
+    },
+    {
+      "name": "Habitat Fragmentation Sorter",
+      "description": "Contrast corridor connection benefits against isolated patch vulnerability."
+    },
+    {
+      "name": "Gene Flow Shift Classifier",
+      "description": "Classify high vs low gene flow impacts on population adaptation rate under selective pressure."
+    },
+    {
+      "name": "Trophic Cascade Risk Sorter",
+      "description": "Sort species extinction consequences by direct, indirect, or neutral food web impacts."
+    }
+  ],
+  "3": [
+    {
+      "name": "Trait Survival Simulator",
+      "description": "Calibrate population initial trait value and environmental shift rate to simulate survival probability."
+    },
+    {
+      "name": "Adaptation Time Solver",
+      "description": "Solve for the minimum generations required for a trait distribution to shift and survive a temperature increase."
+    },
+    {
+      "name": "Inbreeding Depression Model",
+      "description": "Track population crash risk as homozygous recessive lethal alleles accumulate in small refuges."
+    },
+    {
+      "name": "Genetic Diversity Calculator",
+      "description": "Calculate heterozygosity decline rate given bottleneck population sizes."
+    },
+    {
+      "name": "Competitive Displacement Solver",
+      "description": "Predict carrying capacity shifts as a dominant competitor invades the niche."
+    }
+  ],
+  "4": [
+    {
+      "name": "Extinction Risk Planner",
+      "description": "Calibrate conservation resource allocation and threat mitigation indices to minimize species extinction risk."
+    },
+    {
+      "name": "Ecosystem Corridor Designer",
+      "description": "Optimize corridor widths and crossing frequencies to sustain gene flow across fragmented landscapes."
+    },
+    {
+      "name": "Multi-Threat Viability Tuner",
+      "description": "Optimize population viability values under combined climate warming and poaching mortality pressures."
+    },
+    {
+      "name": "Assisted Migration Planner",
+      "description": "Calibrate relocation counts and temperature offset targets to establish self-sustaining populations."
+    },
+    {
+      "name": "Genetic Rescue Tuner",
+      "description": "Calibrate outbreeding immigration rates to purge deleterious mutations without outbreeding depression."
+    }
+  ]
+}
+,
+  "OAS.PS.PS1.2": {
+  "1": [
+    {
+      "name": "Electron Configuration Match",
+      "description": "Match elements like Sodium, Chlorine, Oxygen, Neon to their valence electron count / configuration descriptions."
+    },
+    {
+      "name": "Reaction Class Recall",
+      "description": "Differentiate synthesis, decomposition, combustion, and single displacement reactions."
+    },
+    {
+      "name": "Bonding Type Match",
+      "description": "Associate ionic, covalent, and metallic bonding with electron sharing, transfer, or delocalization."
+    },
+    {
+      "name": "Valence Shell Recall",
+      "description": "Identify the octet rule as the driver for electron sharing and transfer in reactions."
+    },
+    {
+      "name": "Product/Reactant Match",
+      "description": "Match standard chemical equation components to reactant, product, catalyst, or state definitions."
+    }
+  ],
+  "2": [
+    {
+      "name": "Reaction Class Sorter",
+      "description": "Classify chemical reactions like Synthesis, Decomposition, Combustion, Single Replacement."
+    },
+    {
+      "name": "Electron Transfer Sorter",
+      "description": "Classify elements as electron donors (metals) or electron acceptors (nonmetals)."
+    },
+    {
+      "name": "Bond Energy Match",
+      "description": "Match bond types (single, double, triple covalent) to their relative bond strengths and lengths."
+    },
+    {
+      "name": "Oxidation State Sorter",
+      "description": "Classify redox reaction elements as oxidized (electron loss) or reduced (electron gain)."
+    },
+    {
+      "name": "Electronegativity Sorter",
+      "description": "Classify bonds as nonpolar covalent, polar covalent, or ionic based on delta EN values."
+    }
+  ],
+  "3": [
+    {
+      "name": "Balancing Equation Solver",
+      "description": "Balance a chemical equation by selecting coefficient multipliers, e.g. a H2 + b O2 -> c H2O."
+    },
+    {
+      "name": "Stoichiometry Solver",
+      "description": "Calculate product moles produced given limiting reactant starting masses."
+    },
+    {
+      "name": "Net Ionic Equation Solver",
+      "description": "Deduce net ionic equations by identifying and removing spectator ions."
+    },
+    {
+      "name": "Gibbs Free Energy Solver",
+      "description": "Solve for reaction spontaneity (Delta G = Delta H - T Delta S) and classify as exergonic or endergonic."
+    },
+    {
+      "name": "Activation Energy Solver",
+      "description": "Solve for catalyst impact on forward and reverse reaction activation energy barriers."
+    }
+  ],
+  "4": [
+    {
+      "name": "Reaction Energy Landscape Tuner",
+      "description": "Calibrate activation energy and net energy change to optimize chemical reaction yield."
+    },
+    {
+      "name": "Haber-Bosch Yield Optimizer",
+      "description": "Optimize temperature, pressure, and catalyst type to maximize ammonia production yield."
+    },
+    {
+      "name": "Redox Battery Cell Optimizer",
+      "description": "Calibrate anode and cathode standard electrode potentials to maximize output battery voltage."
+    },
+    {
+      "name": "Acid-Base Buffer Tuner",
+      "description": "Optimize weak acid and conjugate base concentrations to maintain constant pH under additions."
+    },
+    {
+      "name": "Combustion Efficiency Optimizer",
+      "description": "Calibrate air-to-fuel ratios to maximize energy yield while minimizing carbon monoxide emissions."
+    }
+  ]
+}
 };
 
 const BIO_DOK1_ACT1_VARIANTS = [
@@ -31779,6 +32325,12312 @@ const DOK_QUIZ_BANKS = {
     ]
   ]
 }
+,
+  "OAS.B.LS4.1": {
+  "1": [
+    [
+      {
+        "question": "Ancestry DOK1 Act1 Q0: Classify bone configurations as homologous structures 0.",
+        "options": [
+          "Homology class 0",
+          "Analogous 0",
+          "Structures 0",
+          "Taxon"
+        ],
+        "answer": "Homology class 0"
+      },
+      {
+        "question": "Ancestry DOK1 Act1 Q1: Classify bone configurations as homologous structures 1.",
+        "options": [
+          "Homology class 1",
+          "Analogous 1",
+          "Structures 1",
+          "Taxon"
+        ],
+        "answer": "Homology class 1"
+      },
+      {
+        "question": "Ancestry DOK1 Act1 Q2: Classify bone configurations as homologous structures 2.",
+        "options": [
+          "Homology class 2",
+          "Analogous 2",
+          "Structures 2",
+          "Taxon"
+        ],
+        "answer": "Homology class 2"
+      },
+      {
+        "question": "Ancestry DOK1 Act1 Q3: Classify bone configurations as homologous structures 3.",
+        "options": [
+          "Homology class 3",
+          "Analogous 3",
+          "Structures 3",
+          "Taxon"
+        ],
+        "answer": "Homology class 3"
+      },
+      {
+        "question": "Ancestry DOK1 Act1 Q4: Classify bone configurations as homologous structures 4.",
+        "options": [
+          "Homology class 4",
+          "Analogous 4",
+          "Structures 4",
+          "Taxon"
+        ],
+        "answer": "Homology class 4"
+      },
+      {
+        "question": "Ancestry DOK1 Act1 Q5: Classify bone configurations as homologous structures 5.",
+        "options": [
+          "Homology class 5",
+          "Analogous 5",
+          "Structures 5",
+          "Taxon"
+        ],
+        "answer": "Homology class 5"
+      },
+      {
+        "question": "Ancestry DOK1 Act1 Q6: Classify bone configurations as homologous structures 6.",
+        "options": [
+          "Homology class 6",
+          "Analogous 6",
+          "Structures 6",
+          "Taxon"
+        ],
+        "answer": "Homology class 6"
+      },
+      {
+        "question": "Ancestry DOK1 Act1 Q7: Classify bone configurations as homologous structures 7.",
+        "options": [
+          "Homology class 7",
+          "Analogous 7",
+          "Structures 7",
+          "Taxon"
+        ],
+        "answer": "Homology class 7"
+      },
+      {
+        "question": "Ancestry DOK1 Act1 Q8: Classify bone configurations as homologous structures 8.",
+        "options": [
+          "Homology class 8",
+          "Analogous 8",
+          "Structures 8",
+          "Taxon"
+        ],
+        "answer": "Homology class 8"
+      },
+      {
+        "question": "Ancestry DOK1 Act1 Q9: Classify bone configurations as homologous structures 9.",
+        "options": [
+          "Homology class 9",
+          "Analogous 9",
+          "Structures 9",
+          "Taxon"
+        ],
+        "answer": "Homology class 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK1 Act2 Q0: Classify bone configurations as homologous structures 0.",
+        "options": [
+          "Homology class 0",
+          "Analogous 0",
+          "Structures 0",
+          "Taxon"
+        ],
+        "answer": "Homology class 0"
+      },
+      {
+        "question": "Ancestry DOK1 Act2 Q1: Classify bone configurations as homologous structures 1.",
+        "options": [
+          "Homology class 1",
+          "Analogous 1",
+          "Structures 1",
+          "Taxon"
+        ],
+        "answer": "Homology class 1"
+      },
+      {
+        "question": "Ancestry DOK1 Act2 Q2: Classify bone configurations as homologous structures 2.",
+        "options": [
+          "Homology class 2",
+          "Analogous 2",
+          "Structures 2",
+          "Taxon"
+        ],
+        "answer": "Homology class 2"
+      },
+      {
+        "question": "Ancestry DOK1 Act2 Q3: Classify bone configurations as homologous structures 3.",
+        "options": [
+          "Homology class 3",
+          "Analogous 3",
+          "Structures 3",
+          "Taxon"
+        ],
+        "answer": "Homology class 3"
+      },
+      {
+        "question": "Ancestry DOK1 Act2 Q4: Classify bone configurations as homologous structures 4.",
+        "options": [
+          "Homology class 4",
+          "Analogous 4",
+          "Structures 4",
+          "Taxon"
+        ],
+        "answer": "Homology class 4"
+      },
+      {
+        "question": "Ancestry DOK1 Act2 Q5: Classify bone configurations as homologous structures 5.",
+        "options": [
+          "Homology class 5",
+          "Analogous 5",
+          "Structures 5",
+          "Taxon"
+        ],
+        "answer": "Homology class 5"
+      },
+      {
+        "question": "Ancestry DOK1 Act2 Q6: Classify bone configurations as homologous structures 6.",
+        "options": [
+          "Homology class 6",
+          "Analogous 6",
+          "Structures 6",
+          "Taxon"
+        ],
+        "answer": "Homology class 6"
+      },
+      {
+        "question": "Ancestry DOK1 Act2 Q7: Classify bone configurations as homologous structures 7.",
+        "options": [
+          "Homology class 7",
+          "Analogous 7",
+          "Structures 7",
+          "Taxon"
+        ],
+        "answer": "Homology class 7"
+      },
+      {
+        "question": "Ancestry DOK1 Act2 Q8: Classify bone configurations as homologous structures 8.",
+        "options": [
+          "Homology class 8",
+          "Analogous 8",
+          "Structures 8",
+          "Taxon"
+        ],
+        "answer": "Homology class 8"
+      },
+      {
+        "question": "Ancestry DOK1 Act2 Q9: Classify bone configurations as homologous structures 9.",
+        "options": [
+          "Homology class 9",
+          "Analogous 9",
+          "Structures 9",
+          "Taxon"
+        ],
+        "answer": "Homology class 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK1 Act3 Q0: Classify bone configurations as homologous structures 0.",
+        "options": [
+          "Homology class 0",
+          "Analogous 0",
+          "Structures 0",
+          "Taxon"
+        ],
+        "answer": "Homology class 0"
+      },
+      {
+        "question": "Ancestry DOK1 Act3 Q1: Classify bone configurations as homologous structures 1.",
+        "options": [
+          "Homology class 1",
+          "Analogous 1",
+          "Structures 1",
+          "Taxon"
+        ],
+        "answer": "Homology class 1"
+      },
+      {
+        "question": "Ancestry DOK1 Act3 Q2: Classify bone configurations as homologous structures 2.",
+        "options": [
+          "Homology class 2",
+          "Analogous 2",
+          "Structures 2",
+          "Taxon"
+        ],
+        "answer": "Homology class 2"
+      },
+      {
+        "question": "Ancestry DOK1 Act3 Q3: Classify bone configurations as homologous structures 3.",
+        "options": [
+          "Homology class 3",
+          "Analogous 3",
+          "Structures 3",
+          "Taxon"
+        ],
+        "answer": "Homology class 3"
+      },
+      {
+        "question": "Ancestry DOK1 Act3 Q4: Classify bone configurations as homologous structures 4.",
+        "options": [
+          "Homology class 4",
+          "Analogous 4",
+          "Structures 4",
+          "Taxon"
+        ],
+        "answer": "Homology class 4"
+      },
+      {
+        "question": "Ancestry DOK1 Act3 Q5: Classify bone configurations as homologous structures 5.",
+        "options": [
+          "Homology class 5",
+          "Analogous 5",
+          "Structures 5",
+          "Taxon"
+        ],
+        "answer": "Homology class 5"
+      },
+      {
+        "question": "Ancestry DOK1 Act3 Q6: Classify bone configurations as homologous structures 6.",
+        "options": [
+          "Homology class 6",
+          "Analogous 6",
+          "Structures 6",
+          "Taxon"
+        ],
+        "answer": "Homology class 6"
+      },
+      {
+        "question": "Ancestry DOK1 Act3 Q7: Classify bone configurations as homologous structures 7.",
+        "options": [
+          "Homology class 7",
+          "Analogous 7",
+          "Structures 7",
+          "Taxon"
+        ],
+        "answer": "Homology class 7"
+      },
+      {
+        "question": "Ancestry DOK1 Act3 Q8: Classify bone configurations as homologous structures 8.",
+        "options": [
+          "Homology class 8",
+          "Analogous 8",
+          "Structures 8",
+          "Taxon"
+        ],
+        "answer": "Homology class 8"
+      },
+      {
+        "question": "Ancestry DOK1 Act3 Q9: Classify bone configurations as homologous structures 9.",
+        "options": [
+          "Homology class 9",
+          "Analogous 9",
+          "Structures 9",
+          "Taxon"
+        ],
+        "answer": "Homology class 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK1 Act4 Q0: Classify bone configurations as homologous structures 0.",
+        "options": [
+          "Homology class 0",
+          "Analogous 0",
+          "Structures 0",
+          "Taxon"
+        ],
+        "answer": "Homology class 0"
+      },
+      {
+        "question": "Ancestry DOK1 Act4 Q1: Classify bone configurations as homologous structures 1.",
+        "options": [
+          "Homology class 1",
+          "Analogous 1",
+          "Structures 1",
+          "Taxon"
+        ],
+        "answer": "Homology class 1"
+      },
+      {
+        "question": "Ancestry DOK1 Act4 Q2: Classify bone configurations as homologous structures 2.",
+        "options": [
+          "Homology class 2",
+          "Analogous 2",
+          "Structures 2",
+          "Taxon"
+        ],
+        "answer": "Homology class 2"
+      },
+      {
+        "question": "Ancestry DOK1 Act4 Q3: Classify bone configurations as homologous structures 3.",
+        "options": [
+          "Homology class 3",
+          "Analogous 3",
+          "Structures 3",
+          "Taxon"
+        ],
+        "answer": "Homology class 3"
+      },
+      {
+        "question": "Ancestry DOK1 Act4 Q4: Classify bone configurations as homologous structures 4.",
+        "options": [
+          "Homology class 4",
+          "Analogous 4",
+          "Structures 4",
+          "Taxon"
+        ],
+        "answer": "Homology class 4"
+      },
+      {
+        "question": "Ancestry DOK1 Act4 Q5: Classify bone configurations as homologous structures 5.",
+        "options": [
+          "Homology class 5",
+          "Analogous 5",
+          "Structures 5",
+          "Taxon"
+        ],
+        "answer": "Homology class 5"
+      },
+      {
+        "question": "Ancestry DOK1 Act4 Q6: Classify bone configurations as homologous structures 6.",
+        "options": [
+          "Homology class 6",
+          "Analogous 6",
+          "Structures 6",
+          "Taxon"
+        ],
+        "answer": "Homology class 6"
+      },
+      {
+        "question": "Ancestry DOK1 Act4 Q7: Classify bone configurations as homologous structures 7.",
+        "options": [
+          "Homology class 7",
+          "Analogous 7",
+          "Structures 7",
+          "Taxon"
+        ],
+        "answer": "Homology class 7"
+      },
+      {
+        "question": "Ancestry DOK1 Act4 Q8: Classify bone configurations as homologous structures 8.",
+        "options": [
+          "Homology class 8",
+          "Analogous 8",
+          "Structures 8",
+          "Taxon"
+        ],
+        "answer": "Homology class 8"
+      },
+      {
+        "question": "Ancestry DOK1 Act4 Q9: Classify bone configurations as homologous structures 9.",
+        "options": [
+          "Homology class 9",
+          "Analogous 9",
+          "Structures 9",
+          "Taxon"
+        ],
+        "answer": "Homology class 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK1 Act5 Q0: Classify bone configurations as homologous structures 0.",
+        "options": [
+          "Homology class 0",
+          "Analogous 0",
+          "Structures 0",
+          "Taxon"
+        ],
+        "answer": "Homology class 0"
+      },
+      {
+        "question": "Ancestry DOK1 Act5 Q1: Classify bone configurations as homologous structures 1.",
+        "options": [
+          "Homology class 1",
+          "Analogous 1",
+          "Structures 1",
+          "Taxon"
+        ],
+        "answer": "Homology class 1"
+      },
+      {
+        "question": "Ancestry DOK1 Act5 Q2: Classify bone configurations as homologous structures 2.",
+        "options": [
+          "Homology class 2",
+          "Analogous 2",
+          "Structures 2",
+          "Taxon"
+        ],
+        "answer": "Homology class 2"
+      },
+      {
+        "question": "Ancestry DOK1 Act5 Q3: Classify bone configurations as homologous structures 3.",
+        "options": [
+          "Homology class 3",
+          "Analogous 3",
+          "Structures 3",
+          "Taxon"
+        ],
+        "answer": "Homology class 3"
+      },
+      {
+        "question": "Ancestry DOK1 Act5 Q4: Classify bone configurations as homologous structures 4.",
+        "options": [
+          "Homology class 4",
+          "Analogous 4",
+          "Structures 4",
+          "Taxon"
+        ],
+        "answer": "Homology class 4"
+      },
+      {
+        "question": "Ancestry DOK1 Act5 Q5: Classify bone configurations as homologous structures 5.",
+        "options": [
+          "Homology class 5",
+          "Analogous 5",
+          "Structures 5",
+          "Taxon"
+        ],
+        "answer": "Homology class 5"
+      },
+      {
+        "question": "Ancestry DOK1 Act5 Q6: Classify bone configurations as homologous structures 6.",
+        "options": [
+          "Homology class 6",
+          "Analogous 6",
+          "Structures 6",
+          "Taxon"
+        ],
+        "answer": "Homology class 6"
+      },
+      {
+        "question": "Ancestry DOK1 Act5 Q7: Classify bone configurations as homologous structures 7.",
+        "options": [
+          "Homology class 7",
+          "Analogous 7",
+          "Structures 7",
+          "Taxon"
+        ],
+        "answer": "Homology class 7"
+      },
+      {
+        "question": "Ancestry DOK1 Act5 Q8: Classify bone configurations as homologous structures 8.",
+        "options": [
+          "Homology class 8",
+          "Analogous 8",
+          "Structures 8",
+          "Taxon"
+        ],
+        "answer": "Homology class 8"
+      },
+      {
+        "question": "Ancestry DOK1 Act5 Q9: Classify bone configurations as homologous structures 9.",
+        "options": [
+          "Homology class 9",
+          "Analogous 9",
+          "Structures 9",
+          "Taxon"
+        ],
+        "answer": "Homology class 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Ancestry DOK2 Act1 Q0: Match transitional fossil forms to definitions 0.",
+        "options": [
+          "Fossil match 0",
+          "Derived 0",
+          "Clock 0",
+          "Divergence"
+        ],
+        "answer": "Fossil match 0"
+      },
+      {
+        "question": "Ancestry DOK2 Act1 Q1: Match transitional fossil forms to definitions 1.",
+        "options": [
+          "Fossil match 1",
+          "Derived 1",
+          "Clock 1",
+          "Divergence"
+        ],
+        "answer": "Fossil match 1"
+      },
+      {
+        "question": "Ancestry DOK2 Act1 Q2: Match transitional fossil forms to definitions 2.",
+        "options": [
+          "Fossil match 2",
+          "Derived 2",
+          "Clock 2",
+          "Divergence"
+        ],
+        "answer": "Fossil match 2"
+      },
+      {
+        "question": "Ancestry DOK2 Act1 Q3: Match transitional fossil forms to definitions 3.",
+        "options": [
+          "Fossil match 3",
+          "Derived 3",
+          "Clock 3",
+          "Divergence"
+        ],
+        "answer": "Fossil match 3"
+      },
+      {
+        "question": "Ancestry DOK2 Act1 Q4: Match transitional fossil forms to definitions 4.",
+        "options": [
+          "Fossil match 4",
+          "Derived 4",
+          "Clock 4",
+          "Divergence"
+        ],
+        "answer": "Fossil match 4"
+      },
+      {
+        "question": "Ancestry DOK2 Act1 Q5: Match transitional fossil forms to definitions 5.",
+        "options": [
+          "Fossil match 5",
+          "Derived 5",
+          "Clock 5",
+          "Divergence"
+        ],
+        "answer": "Fossil match 5"
+      },
+      {
+        "question": "Ancestry DOK2 Act1 Q6: Match transitional fossil forms to definitions 6.",
+        "options": [
+          "Fossil match 6",
+          "Derived 6",
+          "Clock 6",
+          "Divergence"
+        ],
+        "answer": "Fossil match 6"
+      },
+      {
+        "question": "Ancestry DOK2 Act1 Q7: Match transitional fossil forms to definitions 7.",
+        "options": [
+          "Fossil match 7",
+          "Derived 7",
+          "Clock 7",
+          "Divergence"
+        ],
+        "answer": "Fossil match 7"
+      },
+      {
+        "question": "Ancestry DOK2 Act1 Q8: Match transitional fossil forms to definitions 8.",
+        "options": [
+          "Fossil match 8",
+          "Derived 8",
+          "Clock 8",
+          "Divergence"
+        ],
+        "answer": "Fossil match 8"
+      },
+      {
+        "question": "Ancestry DOK2 Act1 Q9: Match transitional fossil forms to definitions 9.",
+        "options": [
+          "Fossil match 9",
+          "Derived 9",
+          "Clock 9",
+          "Divergence"
+        ],
+        "answer": "Fossil match 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK2 Act2 Q0: Match transitional fossil forms to definitions 0.",
+        "options": [
+          "Fossil match 0",
+          "Derived 0",
+          "Clock 0",
+          "Divergence"
+        ],
+        "answer": "Fossil match 0"
+      },
+      {
+        "question": "Ancestry DOK2 Act2 Q1: Match transitional fossil forms to definitions 1.",
+        "options": [
+          "Fossil match 1",
+          "Derived 1",
+          "Clock 1",
+          "Divergence"
+        ],
+        "answer": "Fossil match 1"
+      },
+      {
+        "question": "Ancestry DOK2 Act2 Q2: Match transitional fossil forms to definitions 2.",
+        "options": [
+          "Fossil match 2",
+          "Derived 2",
+          "Clock 2",
+          "Divergence"
+        ],
+        "answer": "Fossil match 2"
+      },
+      {
+        "question": "Ancestry DOK2 Act2 Q3: Match transitional fossil forms to definitions 3.",
+        "options": [
+          "Fossil match 3",
+          "Derived 3",
+          "Clock 3",
+          "Divergence"
+        ],
+        "answer": "Fossil match 3"
+      },
+      {
+        "question": "Ancestry DOK2 Act2 Q4: Match transitional fossil forms to definitions 4.",
+        "options": [
+          "Fossil match 4",
+          "Derived 4",
+          "Clock 4",
+          "Divergence"
+        ],
+        "answer": "Fossil match 4"
+      },
+      {
+        "question": "Ancestry DOK2 Act2 Q5: Match transitional fossil forms to definitions 5.",
+        "options": [
+          "Fossil match 5",
+          "Derived 5",
+          "Clock 5",
+          "Divergence"
+        ],
+        "answer": "Fossil match 5"
+      },
+      {
+        "question": "Ancestry DOK2 Act2 Q6: Match transitional fossil forms to definitions 6.",
+        "options": [
+          "Fossil match 6",
+          "Derived 6",
+          "Clock 6",
+          "Divergence"
+        ],
+        "answer": "Fossil match 6"
+      },
+      {
+        "question": "Ancestry DOK2 Act2 Q7: Match transitional fossil forms to definitions 7.",
+        "options": [
+          "Fossil match 7",
+          "Derived 7",
+          "Clock 7",
+          "Divergence"
+        ],
+        "answer": "Fossil match 7"
+      },
+      {
+        "question": "Ancestry DOK2 Act2 Q8: Match transitional fossil forms to definitions 8.",
+        "options": [
+          "Fossil match 8",
+          "Derived 8",
+          "Clock 8",
+          "Divergence"
+        ],
+        "answer": "Fossil match 8"
+      },
+      {
+        "question": "Ancestry DOK2 Act2 Q9: Match transitional fossil forms to definitions 9.",
+        "options": [
+          "Fossil match 9",
+          "Derived 9",
+          "Clock 9",
+          "Divergence"
+        ],
+        "answer": "Fossil match 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK2 Act3 Q0: Match transitional fossil forms to definitions 0.",
+        "options": [
+          "Fossil match 0",
+          "Derived 0",
+          "Clock 0",
+          "Divergence"
+        ],
+        "answer": "Fossil match 0"
+      },
+      {
+        "question": "Ancestry DOK2 Act3 Q1: Match transitional fossil forms to definitions 1.",
+        "options": [
+          "Fossil match 1",
+          "Derived 1",
+          "Clock 1",
+          "Divergence"
+        ],
+        "answer": "Fossil match 1"
+      },
+      {
+        "question": "Ancestry DOK2 Act3 Q2: Match transitional fossil forms to definitions 2.",
+        "options": [
+          "Fossil match 2",
+          "Derived 2",
+          "Clock 2",
+          "Divergence"
+        ],
+        "answer": "Fossil match 2"
+      },
+      {
+        "question": "Ancestry DOK2 Act3 Q3: Match transitional fossil forms to definitions 3.",
+        "options": [
+          "Fossil match 3",
+          "Derived 3",
+          "Clock 3",
+          "Divergence"
+        ],
+        "answer": "Fossil match 3"
+      },
+      {
+        "question": "Ancestry DOK2 Act3 Q4: Match transitional fossil forms to definitions 4.",
+        "options": [
+          "Fossil match 4",
+          "Derived 4",
+          "Clock 4",
+          "Divergence"
+        ],
+        "answer": "Fossil match 4"
+      },
+      {
+        "question": "Ancestry DOK2 Act3 Q5: Match transitional fossil forms to definitions 5.",
+        "options": [
+          "Fossil match 5",
+          "Derived 5",
+          "Clock 5",
+          "Divergence"
+        ],
+        "answer": "Fossil match 5"
+      },
+      {
+        "question": "Ancestry DOK2 Act3 Q6: Match transitional fossil forms to definitions 6.",
+        "options": [
+          "Fossil match 6",
+          "Derived 6",
+          "Clock 6",
+          "Divergence"
+        ],
+        "answer": "Fossil match 6"
+      },
+      {
+        "question": "Ancestry DOK2 Act3 Q7: Match transitional fossil forms to definitions 7.",
+        "options": [
+          "Fossil match 7",
+          "Derived 7",
+          "Clock 7",
+          "Divergence"
+        ],
+        "answer": "Fossil match 7"
+      },
+      {
+        "question": "Ancestry DOK2 Act3 Q8: Match transitional fossil forms to definitions 8.",
+        "options": [
+          "Fossil match 8",
+          "Derived 8",
+          "Clock 8",
+          "Divergence"
+        ],
+        "answer": "Fossil match 8"
+      },
+      {
+        "question": "Ancestry DOK2 Act3 Q9: Match transitional fossil forms to definitions 9.",
+        "options": [
+          "Fossil match 9",
+          "Derived 9",
+          "Clock 9",
+          "Divergence"
+        ],
+        "answer": "Fossil match 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK2 Act4 Q0: Match transitional fossil forms to definitions 0.",
+        "options": [
+          "Fossil match 0",
+          "Derived 0",
+          "Clock 0",
+          "Divergence"
+        ],
+        "answer": "Fossil match 0"
+      },
+      {
+        "question": "Ancestry DOK2 Act4 Q1: Match transitional fossil forms to definitions 1.",
+        "options": [
+          "Fossil match 1",
+          "Derived 1",
+          "Clock 1",
+          "Divergence"
+        ],
+        "answer": "Fossil match 1"
+      },
+      {
+        "question": "Ancestry DOK2 Act4 Q2: Match transitional fossil forms to definitions 2.",
+        "options": [
+          "Fossil match 2",
+          "Derived 2",
+          "Clock 2",
+          "Divergence"
+        ],
+        "answer": "Fossil match 2"
+      },
+      {
+        "question": "Ancestry DOK2 Act4 Q3: Match transitional fossil forms to definitions 3.",
+        "options": [
+          "Fossil match 3",
+          "Derived 3",
+          "Clock 3",
+          "Divergence"
+        ],
+        "answer": "Fossil match 3"
+      },
+      {
+        "question": "Ancestry DOK2 Act4 Q4: Match transitional fossil forms to definitions 4.",
+        "options": [
+          "Fossil match 4",
+          "Derived 4",
+          "Clock 4",
+          "Divergence"
+        ],
+        "answer": "Fossil match 4"
+      },
+      {
+        "question": "Ancestry DOK2 Act4 Q5: Match transitional fossil forms to definitions 5.",
+        "options": [
+          "Fossil match 5",
+          "Derived 5",
+          "Clock 5",
+          "Divergence"
+        ],
+        "answer": "Fossil match 5"
+      },
+      {
+        "question": "Ancestry DOK2 Act4 Q6: Match transitional fossil forms to definitions 6.",
+        "options": [
+          "Fossil match 6",
+          "Derived 6",
+          "Clock 6",
+          "Divergence"
+        ],
+        "answer": "Fossil match 6"
+      },
+      {
+        "question": "Ancestry DOK2 Act4 Q7: Match transitional fossil forms to definitions 7.",
+        "options": [
+          "Fossil match 7",
+          "Derived 7",
+          "Clock 7",
+          "Divergence"
+        ],
+        "answer": "Fossil match 7"
+      },
+      {
+        "question": "Ancestry DOK2 Act4 Q8: Match transitional fossil forms to definitions 8.",
+        "options": [
+          "Fossil match 8",
+          "Derived 8",
+          "Clock 8",
+          "Divergence"
+        ],
+        "answer": "Fossil match 8"
+      },
+      {
+        "question": "Ancestry DOK2 Act4 Q9: Match transitional fossil forms to definitions 9.",
+        "options": [
+          "Fossil match 9",
+          "Derived 9",
+          "Clock 9",
+          "Divergence"
+        ],
+        "answer": "Fossil match 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK2 Act5 Q0: Match transitional fossil forms to definitions 0.",
+        "options": [
+          "Fossil match 0",
+          "Derived 0",
+          "Clock 0",
+          "Divergence"
+        ],
+        "answer": "Fossil match 0"
+      },
+      {
+        "question": "Ancestry DOK2 Act5 Q1: Match transitional fossil forms to definitions 1.",
+        "options": [
+          "Fossil match 1",
+          "Derived 1",
+          "Clock 1",
+          "Divergence"
+        ],
+        "answer": "Fossil match 1"
+      },
+      {
+        "question": "Ancestry DOK2 Act5 Q2: Match transitional fossil forms to definitions 2.",
+        "options": [
+          "Fossil match 2",
+          "Derived 2",
+          "Clock 2",
+          "Divergence"
+        ],
+        "answer": "Fossil match 2"
+      },
+      {
+        "question": "Ancestry DOK2 Act5 Q3: Match transitional fossil forms to definitions 3.",
+        "options": [
+          "Fossil match 3",
+          "Derived 3",
+          "Clock 3",
+          "Divergence"
+        ],
+        "answer": "Fossil match 3"
+      },
+      {
+        "question": "Ancestry DOK2 Act5 Q4: Match transitional fossil forms to definitions 4.",
+        "options": [
+          "Fossil match 4",
+          "Derived 4",
+          "Clock 4",
+          "Divergence"
+        ],
+        "answer": "Fossil match 4"
+      },
+      {
+        "question": "Ancestry DOK2 Act5 Q5: Match transitional fossil forms to definitions 5.",
+        "options": [
+          "Fossil match 5",
+          "Derived 5",
+          "Clock 5",
+          "Divergence"
+        ],
+        "answer": "Fossil match 5"
+      },
+      {
+        "question": "Ancestry DOK2 Act5 Q6: Match transitional fossil forms to definitions 6.",
+        "options": [
+          "Fossil match 6",
+          "Derived 6",
+          "Clock 6",
+          "Divergence"
+        ],
+        "answer": "Fossil match 6"
+      },
+      {
+        "question": "Ancestry DOK2 Act5 Q7: Match transitional fossil forms to definitions 7.",
+        "options": [
+          "Fossil match 7",
+          "Derived 7",
+          "Clock 7",
+          "Divergence"
+        ],
+        "answer": "Fossil match 7"
+      },
+      {
+        "question": "Ancestry DOK2 Act5 Q8: Match transitional fossil forms to definitions 8.",
+        "options": [
+          "Fossil match 8",
+          "Derived 8",
+          "Clock 8",
+          "Divergence"
+        ],
+        "answer": "Fossil match 8"
+      },
+      {
+        "question": "Ancestry DOK2 Act5 Q9: Match transitional fossil forms to definitions 9.",
+        "options": [
+          "Fossil match 9",
+          "Derived 9",
+          "Clock 9",
+          "Divergence"
+        ],
+        "answer": "Fossil match 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Ancestry DOK3 Act1 Q0: Calibrate phylogenetic tree branch bifurcation angles 0.",
+        "options": [
+          "Branch angle 0",
+          "Phylogeny 0",
+          "Parsimony 0",
+          "Sequence"
+        ],
+        "answer": "Branch angle 0"
+      },
+      {
+        "question": "Ancestry DOK3 Act1 Q1: Calibrate phylogenetic tree branch bifurcation angles 1.",
+        "options": [
+          "Branch angle 1",
+          "Phylogeny 1",
+          "Parsimony 1",
+          "Sequence"
+        ],
+        "answer": "Branch angle 1"
+      },
+      {
+        "question": "Ancestry DOK3 Act1 Q2: Calibrate phylogenetic tree branch bifurcation angles 2.",
+        "options": [
+          "Branch angle 2",
+          "Phylogeny 2",
+          "Parsimony 2",
+          "Sequence"
+        ],
+        "answer": "Branch angle 2"
+      },
+      {
+        "question": "Ancestry DOK3 Act1 Q3: Calibrate phylogenetic tree branch bifurcation angles 3.",
+        "options": [
+          "Branch angle 3",
+          "Phylogeny 3",
+          "Parsimony 3",
+          "Sequence"
+        ],
+        "answer": "Branch angle 3"
+      },
+      {
+        "question": "Ancestry DOK3 Act1 Q4: Calibrate phylogenetic tree branch bifurcation angles 4.",
+        "options": [
+          "Branch angle 4",
+          "Phylogeny 4",
+          "Parsimony 4",
+          "Sequence"
+        ],
+        "answer": "Branch angle 4"
+      },
+      {
+        "question": "Ancestry DOK3 Act1 Q5: Calibrate phylogenetic tree branch bifurcation angles 5.",
+        "options": [
+          "Branch angle 5",
+          "Phylogeny 5",
+          "Parsimony 5",
+          "Sequence"
+        ],
+        "answer": "Branch angle 5"
+      },
+      {
+        "question": "Ancestry DOK3 Act1 Q6: Calibrate phylogenetic tree branch bifurcation angles 6.",
+        "options": [
+          "Branch angle 6",
+          "Phylogeny 6",
+          "Parsimony 6",
+          "Sequence"
+        ],
+        "answer": "Branch angle 6"
+      },
+      {
+        "question": "Ancestry DOK3 Act1 Q7: Calibrate phylogenetic tree branch bifurcation angles 7.",
+        "options": [
+          "Branch angle 7",
+          "Phylogeny 7",
+          "Parsimony 7",
+          "Sequence"
+        ],
+        "answer": "Branch angle 7"
+      },
+      {
+        "question": "Ancestry DOK3 Act1 Q8: Calibrate phylogenetic tree branch bifurcation angles 8.",
+        "options": [
+          "Branch angle 8",
+          "Phylogeny 8",
+          "Parsimony 8",
+          "Sequence"
+        ],
+        "answer": "Branch angle 8"
+      },
+      {
+        "question": "Ancestry DOK3 Act1 Q9: Calibrate phylogenetic tree branch bifurcation angles 9.",
+        "options": [
+          "Branch angle 9",
+          "Phylogeny 9",
+          "Parsimony 9",
+          "Sequence"
+        ],
+        "answer": "Branch angle 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK3 Act2 Q0: Calibrate phylogenetic tree branch bifurcation angles 0.",
+        "options": [
+          "Branch angle 0",
+          "Phylogeny 0",
+          "Parsimony 0",
+          "Sequence"
+        ],
+        "answer": "Branch angle 0"
+      },
+      {
+        "question": "Ancestry DOK3 Act2 Q1: Calibrate phylogenetic tree branch bifurcation angles 1.",
+        "options": [
+          "Branch angle 1",
+          "Phylogeny 1",
+          "Parsimony 1",
+          "Sequence"
+        ],
+        "answer": "Branch angle 1"
+      },
+      {
+        "question": "Ancestry DOK3 Act2 Q2: Calibrate phylogenetic tree branch bifurcation angles 2.",
+        "options": [
+          "Branch angle 2",
+          "Phylogeny 2",
+          "Parsimony 2",
+          "Sequence"
+        ],
+        "answer": "Branch angle 2"
+      },
+      {
+        "question": "Ancestry DOK3 Act2 Q3: Calibrate phylogenetic tree branch bifurcation angles 3.",
+        "options": [
+          "Branch angle 3",
+          "Phylogeny 3",
+          "Parsimony 3",
+          "Sequence"
+        ],
+        "answer": "Branch angle 3"
+      },
+      {
+        "question": "Ancestry DOK3 Act2 Q4: Calibrate phylogenetic tree branch bifurcation angles 4.",
+        "options": [
+          "Branch angle 4",
+          "Phylogeny 4",
+          "Parsimony 4",
+          "Sequence"
+        ],
+        "answer": "Branch angle 4"
+      },
+      {
+        "question": "Ancestry DOK3 Act2 Q5: Calibrate phylogenetic tree branch bifurcation angles 5.",
+        "options": [
+          "Branch angle 5",
+          "Phylogeny 5",
+          "Parsimony 5",
+          "Sequence"
+        ],
+        "answer": "Branch angle 5"
+      },
+      {
+        "question": "Ancestry DOK3 Act2 Q6: Calibrate phylogenetic tree branch bifurcation angles 6.",
+        "options": [
+          "Branch angle 6",
+          "Phylogeny 6",
+          "Parsimony 6",
+          "Sequence"
+        ],
+        "answer": "Branch angle 6"
+      },
+      {
+        "question": "Ancestry DOK3 Act2 Q7: Calibrate phylogenetic tree branch bifurcation angles 7.",
+        "options": [
+          "Branch angle 7",
+          "Phylogeny 7",
+          "Parsimony 7",
+          "Sequence"
+        ],
+        "answer": "Branch angle 7"
+      },
+      {
+        "question": "Ancestry DOK3 Act2 Q8: Calibrate phylogenetic tree branch bifurcation angles 8.",
+        "options": [
+          "Branch angle 8",
+          "Phylogeny 8",
+          "Parsimony 8",
+          "Sequence"
+        ],
+        "answer": "Branch angle 8"
+      },
+      {
+        "question": "Ancestry DOK3 Act2 Q9: Calibrate phylogenetic tree branch bifurcation angles 9.",
+        "options": [
+          "Branch angle 9",
+          "Phylogeny 9",
+          "Parsimony 9",
+          "Sequence"
+        ],
+        "answer": "Branch angle 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK3 Act3 Q0: Calibrate phylogenetic tree branch bifurcation angles 0.",
+        "options": [
+          "Branch angle 0",
+          "Phylogeny 0",
+          "Parsimony 0",
+          "Sequence"
+        ],
+        "answer": "Branch angle 0"
+      },
+      {
+        "question": "Ancestry DOK3 Act3 Q1: Calibrate phylogenetic tree branch bifurcation angles 1.",
+        "options": [
+          "Branch angle 1",
+          "Phylogeny 1",
+          "Parsimony 1",
+          "Sequence"
+        ],
+        "answer": "Branch angle 1"
+      },
+      {
+        "question": "Ancestry DOK3 Act3 Q2: Calibrate phylogenetic tree branch bifurcation angles 2.",
+        "options": [
+          "Branch angle 2",
+          "Phylogeny 2",
+          "Parsimony 2",
+          "Sequence"
+        ],
+        "answer": "Branch angle 2"
+      },
+      {
+        "question": "Ancestry DOK3 Act3 Q3: Calibrate phylogenetic tree branch bifurcation angles 3.",
+        "options": [
+          "Branch angle 3",
+          "Phylogeny 3",
+          "Parsimony 3",
+          "Sequence"
+        ],
+        "answer": "Branch angle 3"
+      },
+      {
+        "question": "Ancestry DOK3 Act3 Q4: Calibrate phylogenetic tree branch bifurcation angles 4.",
+        "options": [
+          "Branch angle 4",
+          "Phylogeny 4",
+          "Parsimony 4",
+          "Sequence"
+        ],
+        "answer": "Branch angle 4"
+      },
+      {
+        "question": "Ancestry DOK3 Act3 Q5: Calibrate phylogenetic tree branch bifurcation angles 5.",
+        "options": [
+          "Branch angle 5",
+          "Phylogeny 5",
+          "Parsimony 5",
+          "Sequence"
+        ],
+        "answer": "Branch angle 5"
+      },
+      {
+        "question": "Ancestry DOK3 Act3 Q6: Calibrate phylogenetic tree branch bifurcation angles 6.",
+        "options": [
+          "Branch angle 6",
+          "Phylogeny 6",
+          "Parsimony 6",
+          "Sequence"
+        ],
+        "answer": "Branch angle 6"
+      },
+      {
+        "question": "Ancestry DOK3 Act3 Q7: Calibrate phylogenetic tree branch bifurcation angles 7.",
+        "options": [
+          "Branch angle 7",
+          "Phylogeny 7",
+          "Parsimony 7",
+          "Sequence"
+        ],
+        "answer": "Branch angle 7"
+      },
+      {
+        "question": "Ancestry DOK3 Act3 Q8: Calibrate phylogenetic tree branch bifurcation angles 8.",
+        "options": [
+          "Branch angle 8",
+          "Phylogeny 8",
+          "Parsimony 8",
+          "Sequence"
+        ],
+        "answer": "Branch angle 8"
+      },
+      {
+        "question": "Ancestry DOK3 Act3 Q9: Calibrate phylogenetic tree branch bifurcation angles 9.",
+        "options": [
+          "Branch angle 9",
+          "Phylogeny 9",
+          "Parsimony 9",
+          "Sequence"
+        ],
+        "answer": "Branch angle 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK3 Act4 Q0: Calibrate phylogenetic tree branch bifurcation angles 0.",
+        "options": [
+          "Branch angle 0",
+          "Phylogeny 0",
+          "Parsimony 0",
+          "Sequence"
+        ],
+        "answer": "Branch angle 0"
+      },
+      {
+        "question": "Ancestry DOK3 Act4 Q1: Calibrate phylogenetic tree branch bifurcation angles 1.",
+        "options": [
+          "Branch angle 1",
+          "Phylogeny 1",
+          "Parsimony 1",
+          "Sequence"
+        ],
+        "answer": "Branch angle 1"
+      },
+      {
+        "question": "Ancestry DOK3 Act4 Q2: Calibrate phylogenetic tree branch bifurcation angles 2.",
+        "options": [
+          "Branch angle 2",
+          "Phylogeny 2",
+          "Parsimony 2",
+          "Sequence"
+        ],
+        "answer": "Branch angle 2"
+      },
+      {
+        "question": "Ancestry DOK3 Act4 Q3: Calibrate phylogenetic tree branch bifurcation angles 3.",
+        "options": [
+          "Branch angle 3",
+          "Phylogeny 3",
+          "Parsimony 3",
+          "Sequence"
+        ],
+        "answer": "Branch angle 3"
+      },
+      {
+        "question": "Ancestry DOK3 Act4 Q4: Calibrate phylogenetic tree branch bifurcation angles 4.",
+        "options": [
+          "Branch angle 4",
+          "Phylogeny 4",
+          "Parsimony 4",
+          "Sequence"
+        ],
+        "answer": "Branch angle 4"
+      },
+      {
+        "question": "Ancestry DOK3 Act4 Q5: Calibrate phylogenetic tree branch bifurcation angles 5.",
+        "options": [
+          "Branch angle 5",
+          "Phylogeny 5",
+          "Parsimony 5",
+          "Sequence"
+        ],
+        "answer": "Branch angle 5"
+      },
+      {
+        "question": "Ancestry DOK3 Act4 Q6: Calibrate phylogenetic tree branch bifurcation angles 6.",
+        "options": [
+          "Branch angle 6",
+          "Phylogeny 6",
+          "Parsimony 6",
+          "Sequence"
+        ],
+        "answer": "Branch angle 6"
+      },
+      {
+        "question": "Ancestry DOK3 Act4 Q7: Calibrate phylogenetic tree branch bifurcation angles 7.",
+        "options": [
+          "Branch angle 7",
+          "Phylogeny 7",
+          "Parsimony 7",
+          "Sequence"
+        ],
+        "answer": "Branch angle 7"
+      },
+      {
+        "question": "Ancestry DOK3 Act4 Q8: Calibrate phylogenetic tree branch bifurcation angles 8.",
+        "options": [
+          "Branch angle 8",
+          "Phylogeny 8",
+          "Parsimony 8",
+          "Sequence"
+        ],
+        "answer": "Branch angle 8"
+      },
+      {
+        "question": "Ancestry DOK3 Act4 Q9: Calibrate phylogenetic tree branch bifurcation angles 9.",
+        "options": [
+          "Branch angle 9",
+          "Phylogeny 9",
+          "Parsimony 9",
+          "Sequence"
+        ],
+        "answer": "Branch angle 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK3 Act5 Q0: Calibrate phylogenetic tree branch bifurcation angles 0.",
+        "options": [
+          "Branch angle 0",
+          "Phylogeny 0",
+          "Parsimony 0",
+          "Sequence"
+        ],
+        "answer": "Branch angle 0"
+      },
+      {
+        "question": "Ancestry DOK3 Act5 Q1: Calibrate phylogenetic tree branch bifurcation angles 1.",
+        "options": [
+          "Branch angle 1",
+          "Phylogeny 1",
+          "Parsimony 1",
+          "Sequence"
+        ],
+        "answer": "Branch angle 1"
+      },
+      {
+        "question": "Ancestry DOK3 Act5 Q2: Calibrate phylogenetic tree branch bifurcation angles 2.",
+        "options": [
+          "Branch angle 2",
+          "Phylogeny 2",
+          "Parsimony 2",
+          "Sequence"
+        ],
+        "answer": "Branch angle 2"
+      },
+      {
+        "question": "Ancestry DOK3 Act5 Q3: Calibrate phylogenetic tree branch bifurcation angles 3.",
+        "options": [
+          "Branch angle 3",
+          "Phylogeny 3",
+          "Parsimony 3",
+          "Sequence"
+        ],
+        "answer": "Branch angle 3"
+      },
+      {
+        "question": "Ancestry DOK3 Act5 Q4: Calibrate phylogenetic tree branch bifurcation angles 4.",
+        "options": [
+          "Branch angle 4",
+          "Phylogeny 4",
+          "Parsimony 4",
+          "Sequence"
+        ],
+        "answer": "Branch angle 4"
+      },
+      {
+        "question": "Ancestry DOK3 Act5 Q5: Calibrate phylogenetic tree branch bifurcation angles 5.",
+        "options": [
+          "Branch angle 5",
+          "Phylogeny 5",
+          "Parsimony 5",
+          "Sequence"
+        ],
+        "answer": "Branch angle 5"
+      },
+      {
+        "question": "Ancestry DOK3 Act5 Q6: Calibrate phylogenetic tree branch bifurcation angles 6.",
+        "options": [
+          "Branch angle 6",
+          "Phylogeny 6",
+          "Parsimony 6",
+          "Sequence"
+        ],
+        "answer": "Branch angle 6"
+      },
+      {
+        "question": "Ancestry DOK3 Act5 Q7: Calibrate phylogenetic tree branch bifurcation angles 7.",
+        "options": [
+          "Branch angle 7",
+          "Phylogeny 7",
+          "Parsimony 7",
+          "Sequence"
+        ],
+        "answer": "Branch angle 7"
+      },
+      {
+        "question": "Ancestry DOK3 Act5 Q8: Calibrate phylogenetic tree branch bifurcation angles 8.",
+        "options": [
+          "Branch angle 8",
+          "Phylogeny 8",
+          "Parsimony 8",
+          "Sequence"
+        ],
+        "answer": "Branch angle 8"
+      },
+      {
+        "question": "Ancestry DOK3 Act5 Q9: Calibrate phylogenetic tree branch bifurcation angles 9.",
+        "options": [
+          "Branch angle 9",
+          "Phylogeny 9",
+          "Parsimony 9",
+          "Sequence"
+        ],
+        "answer": "Branch angle 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Ancestry DOK4 Act1 Q0: Optimize cladogram species count and outgroup values 0.",
+        "options": [
+          "Cladogram solver 0",
+          "Likelihood 0",
+          "Atavism 0",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 0"
+      },
+      {
+        "question": "Ancestry DOK4 Act1 Q1: Optimize cladogram species count and outgroup values 1.",
+        "options": [
+          "Cladogram solver 1",
+          "Likelihood 1",
+          "Atavism 1",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 1"
+      },
+      {
+        "question": "Ancestry DOK4 Act1 Q2: Optimize cladogram species count and outgroup values 2.",
+        "options": [
+          "Cladogram solver 2",
+          "Likelihood 2",
+          "Atavism 2",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 2"
+      },
+      {
+        "question": "Ancestry DOK4 Act1 Q3: Optimize cladogram species count and outgroup values 3.",
+        "options": [
+          "Cladogram solver 3",
+          "Likelihood 3",
+          "Atavism 3",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 3"
+      },
+      {
+        "question": "Ancestry DOK4 Act1 Q4: Optimize cladogram species count and outgroup values 4.",
+        "options": [
+          "Cladogram solver 4",
+          "Likelihood 4",
+          "Atavism 4",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 4"
+      },
+      {
+        "question": "Ancestry DOK4 Act1 Q5: Optimize cladogram species count and outgroup values 5.",
+        "options": [
+          "Cladogram solver 5",
+          "Likelihood 5",
+          "Atavism 5",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 5"
+      },
+      {
+        "question": "Ancestry DOK4 Act1 Q6: Optimize cladogram species count and outgroup values 6.",
+        "options": [
+          "Cladogram solver 6",
+          "Likelihood 6",
+          "Atavism 6",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 6"
+      },
+      {
+        "question": "Ancestry DOK4 Act1 Q7: Optimize cladogram species count and outgroup values 7.",
+        "options": [
+          "Cladogram solver 7",
+          "Likelihood 7",
+          "Atavism 7",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 7"
+      },
+      {
+        "question": "Ancestry DOK4 Act1 Q8: Optimize cladogram species count and outgroup values 8.",
+        "options": [
+          "Cladogram solver 8",
+          "Likelihood 8",
+          "Atavism 8",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 8"
+      },
+      {
+        "question": "Ancestry DOK4 Act1 Q9: Optimize cladogram species count and outgroup values 9.",
+        "options": [
+          "Cladogram solver 9",
+          "Likelihood 9",
+          "Atavism 9",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK4 Act2 Q0: Optimize cladogram species count and outgroup values 0.",
+        "options": [
+          "Cladogram solver 0",
+          "Likelihood 0",
+          "Atavism 0",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 0"
+      },
+      {
+        "question": "Ancestry DOK4 Act2 Q1: Optimize cladogram species count and outgroup values 1.",
+        "options": [
+          "Cladogram solver 1",
+          "Likelihood 1",
+          "Atavism 1",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 1"
+      },
+      {
+        "question": "Ancestry DOK4 Act2 Q2: Optimize cladogram species count and outgroup values 2.",
+        "options": [
+          "Cladogram solver 2",
+          "Likelihood 2",
+          "Atavism 2",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 2"
+      },
+      {
+        "question": "Ancestry DOK4 Act2 Q3: Optimize cladogram species count and outgroup values 3.",
+        "options": [
+          "Cladogram solver 3",
+          "Likelihood 3",
+          "Atavism 3",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 3"
+      },
+      {
+        "question": "Ancestry DOK4 Act2 Q4: Optimize cladogram species count and outgroup values 4.",
+        "options": [
+          "Cladogram solver 4",
+          "Likelihood 4",
+          "Atavism 4",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 4"
+      },
+      {
+        "question": "Ancestry DOK4 Act2 Q5: Optimize cladogram species count and outgroup values 5.",
+        "options": [
+          "Cladogram solver 5",
+          "Likelihood 5",
+          "Atavism 5",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 5"
+      },
+      {
+        "question": "Ancestry DOK4 Act2 Q6: Optimize cladogram species count and outgroup values 6.",
+        "options": [
+          "Cladogram solver 6",
+          "Likelihood 6",
+          "Atavism 6",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 6"
+      },
+      {
+        "question": "Ancestry DOK4 Act2 Q7: Optimize cladogram species count and outgroup values 7.",
+        "options": [
+          "Cladogram solver 7",
+          "Likelihood 7",
+          "Atavism 7",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 7"
+      },
+      {
+        "question": "Ancestry DOK4 Act2 Q8: Optimize cladogram species count and outgroup values 8.",
+        "options": [
+          "Cladogram solver 8",
+          "Likelihood 8",
+          "Atavism 8",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 8"
+      },
+      {
+        "question": "Ancestry DOK4 Act2 Q9: Optimize cladogram species count and outgroup values 9.",
+        "options": [
+          "Cladogram solver 9",
+          "Likelihood 9",
+          "Atavism 9",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK4 Act3 Q0: Optimize cladogram species count and outgroup values 0.",
+        "options": [
+          "Cladogram solver 0",
+          "Likelihood 0",
+          "Atavism 0",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 0"
+      },
+      {
+        "question": "Ancestry DOK4 Act3 Q1: Optimize cladogram species count and outgroup values 1.",
+        "options": [
+          "Cladogram solver 1",
+          "Likelihood 1",
+          "Atavism 1",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 1"
+      },
+      {
+        "question": "Ancestry DOK4 Act3 Q2: Optimize cladogram species count and outgroup values 2.",
+        "options": [
+          "Cladogram solver 2",
+          "Likelihood 2",
+          "Atavism 2",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 2"
+      },
+      {
+        "question": "Ancestry DOK4 Act3 Q3: Optimize cladogram species count and outgroup values 3.",
+        "options": [
+          "Cladogram solver 3",
+          "Likelihood 3",
+          "Atavism 3",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 3"
+      },
+      {
+        "question": "Ancestry DOK4 Act3 Q4: Optimize cladogram species count and outgroup values 4.",
+        "options": [
+          "Cladogram solver 4",
+          "Likelihood 4",
+          "Atavism 4",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 4"
+      },
+      {
+        "question": "Ancestry DOK4 Act3 Q5: Optimize cladogram species count and outgroup values 5.",
+        "options": [
+          "Cladogram solver 5",
+          "Likelihood 5",
+          "Atavism 5",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 5"
+      },
+      {
+        "question": "Ancestry DOK4 Act3 Q6: Optimize cladogram species count and outgroup values 6.",
+        "options": [
+          "Cladogram solver 6",
+          "Likelihood 6",
+          "Atavism 6",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 6"
+      },
+      {
+        "question": "Ancestry DOK4 Act3 Q7: Optimize cladogram species count and outgroup values 7.",
+        "options": [
+          "Cladogram solver 7",
+          "Likelihood 7",
+          "Atavism 7",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 7"
+      },
+      {
+        "question": "Ancestry DOK4 Act3 Q8: Optimize cladogram species count and outgroup values 8.",
+        "options": [
+          "Cladogram solver 8",
+          "Likelihood 8",
+          "Atavism 8",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 8"
+      },
+      {
+        "question": "Ancestry DOK4 Act3 Q9: Optimize cladogram species count and outgroup values 9.",
+        "options": [
+          "Cladogram solver 9",
+          "Likelihood 9",
+          "Atavism 9",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK4 Act4 Q0: Optimize cladogram species count and outgroup values 0.",
+        "options": [
+          "Cladogram solver 0",
+          "Likelihood 0",
+          "Atavism 0",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 0"
+      },
+      {
+        "question": "Ancestry DOK4 Act4 Q1: Optimize cladogram species count and outgroup values 1.",
+        "options": [
+          "Cladogram solver 1",
+          "Likelihood 1",
+          "Atavism 1",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 1"
+      },
+      {
+        "question": "Ancestry DOK4 Act4 Q2: Optimize cladogram species count and outgroup values 2.",
+        "options": [
+          "Cladogram solver 2",
+          "Likelihood 2",
+          "Atavism 2",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 2"
+      },
+      {
+        "question": "Ancestry DOK4 Act4 Q3: Optimize cladogram species count and outgroup values 3.",
+        "options": [
+          "Cladogram solver 3",
+          "Likelihood 3",
+          "Atavism 3",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 3"
+      },
+      {
+        "question": "Ancestry DOK4 Act4 Q4: Optimize cladogram species count and outgroup values 4.",
+        "options": [
+          "Cladogram solver 4",
+          "Likelihood 4",
+          "Atavism 4",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 4"
+      },
+      {
+        "question": "Ancestry DOK4 Act4 Q5: Optimize cladogram species count and outgroup values 5.",
+        "options": [
+          "Cladogram solver 5",
+          "Likelihood 5",
+          "Atavism 5",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 5"
+      },
+      {
+        "question": "Ancestry DOK4 Act4 Q6: Optimize cladogram species count and outgroup values 6.",
+        "options": [
+          "Cladogram solver 6",
+          "Likelihood 6",
+          "Atavism 6",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 6"
+      },
+      {
+        "question": "Ancestry DOK4 Act4 Q7: Optimize cladogram species count and outgroup values 7.",
+        "options": [
+          "Cladogram solver 7",
+          "Likelihood 7",
+          "Atavism 7",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 7"
+      },
+      {
+        "question": "Ancestry DOK4 Act4 Q8: Optimize cladogram species count and outgroup values 8.",
+        "options": [
+          "Cladogram solver 8",
+          "Likelihood 8",
+          "Atavism 8",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 8"
+      },
+      {
+        "question": "Ancestry DOK4 Act4 Q9: Optimize cladogram species count and outgroup values 9.",
+        "options": [
+          "Cladogram solver 9",
+          "Likelihood 9",
+          "Atavism 9",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 9"
+      }
+    ],
+    [
+      {
+        "question": "Ancestry DOK4 Act5 Q0: Optimize cladogram species count and outgroup values 0.",
+        "options": [
+          "Cladogram solver 0",
+          "Likelihood 0",
+          "Atavism 0",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 0"
+      },
+      {
+        "question": "Ancestry DOK4 Act5 Q1: Optimize cladogram species count and outgroup values 1.",
+        "options": [
+          "Cladogram solver 1",
+          "Likelihood 1",
+          "Atavism 1",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 1"
+      },
+      {
+        "question": "Ancestry DOK4 Act5 Q2: Optimize cladogram species count and outgroup values 2.",
+        "options": [
+          "Cladogram solver 2",
+          "Likelihood 2",
+          "Atavism 2",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 2"
+      },
+      {
+        "question": "Ancestry DOK4 Act5 Q3: Optimize cladogram species count and outgroup values 3.",
+        "options": [
+          "Cladogram solver 3",
+          "Likelihood 3",
+          "Atavism 3",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 3"
+      },
+      {
+        "question": "Ancestry DOK4 Act5 Q4: Optimize cladogram species count and outgroup values 4.",
+        "options": [
+          "Cladogram solver 4",
+          "Likelihood 4",
+          "Atavism 4",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 4"
+      },
+      {
+        "question": "Ancestry DOK4 Act5 Q5: Optimize cladogram species count and outgroup values 5.",
+        "options": [
+          "Cladogram solver 5",
+          "Likelihood 5",
+          "Atavism 5",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 5"
+      },
+      {
+        "question": "Ancestry DOK4 Act5 Q6: Optimize cladogram species count and outgroup values 6.",
+        "options": [
+          "Cladogram solver 6",
+          "Likelihood 6",
+          "Atavism 6",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 6"
+      },
+      {
+        "question": "Ancestry DOK4 Act5 Q7: Optimize cladogram species count and outgroup values 7.",
+        "options": [
+          "Cladogram solver 7",
+          "Likelihood 7",
+          "Atavism 7",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 7"
+      },
+      {
+        "question": "Ancestry DOK4 Act5 Q8: Optimize cladogram species count and outgroup values 8.",
+        "options": [
+          "Cladogram solver 8",
+          "Likelihood 8",
+          "Atavism 8",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 8"
+      },
+      {
+        "question": "Ancestry DOK4 Act5 Q9: Optimize cladogram species count and outgroup values 9.",
+        "options": [
+          "Cladogram solver 9",
+          "Likelihood 9",
+          "Atavism 9",
+          "Gondwana"
+        ],
+        "answer": "Cladogram solver 9"
+      }
+    ]
+  ]
+}
+,
+  "OAS.B.LS4.2": {
+  "1": [
+    [
+      {
+        "question": "Drivers DOK1 Act1 Q0: Match Darwin's differential survival postulates 0.",
+        "options": [
+          "Survival postulate 0",
+          "Fitness 0",
+          "Malthusian 0",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 0"
+      },
+      {
+        "question": "Drivers DOK1 Act1 Q1: Match Darwin's differential survival postulates 1.",
+        "options": [
+          "Survival postulate 1",
+          "Fitness 1",
+          "Malthusian 1",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 1"
+      },
+      {
+        "question": "Drivers DOK1 Act1 Q2: Match Darwin's differential survival postulates 2.",
+        "options": [
+          "Survival postulate 2",
+          "Fitness 2",
+          "Malthusian 2",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 2"
+      },
+      {
+        "question": "Drivers DOK1 Act1 Q3: Match Darwin's differential survival postulates 3.",
+        "options": [
+          "Survival postulate 3",
+          "Fitness 3",
+          "Malthusian 3",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 3"
+      },
+      {
+        "question": "Drivers DOK1 Act1 Q4: Match Darwin's differential survival postulates 4.",
+        "options": [
+          "Survival postulate 4",
+          "Fitness 4",
+          "Malthusian 4",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 4"
+      },
+      {
+        "question": "Drivers DOK1 Act1 Q5: Match Darwin's differential survival postulates 5.",
+        "options": [
+          "Survival postulate 5",
+          "Fitness 5",
+          "Malthusian 5",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 5"
+      },
+      {
+        "question": "Drivers DOK1 Act1 Q6: Match Darwin's differential survival postulates 6.",
+        "options": [
+          "Survival postulate 6",
+          "Fitness 6",
+          "Malthusian 6",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 6"
+      },
+      {
+        "question": "Drivers DOK1 Act1 Q7: Match Darwin's differential survival postulates 7.",
+        "options": [
+          "Survival postulate 7",
+          "Fitness 7",
+          "Malthusian 7",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 7"
+      },
+      {
+        "question": "Drivers DOK1 Act1 Q8: Match Darwin's differential survival postulates 8.",
+        "options": [
+          "Survival postulate 8",
+          "Fitness 8",
+          "Malthusian 8",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 8"
+      },
+      {
+        "question": "Drivers DOK1 Act1 Q9: Match Darwin's differential survival postulates 9.",
+        "options": [
+          "Survival postulate 9",
+          "Fitness 9",
+          "Malthusian 9",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK1 Act2 Q0: Match Darwin's differential survival postulates 0.",
+        "options": [
+          "Survival postulate 0",
+          "Fitness 0",
+          "Malthusian 0",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 0"
+      },
+      {
+        "question": "Drivers DOK1 Act2 Q1: Match Darwin's differential survival postulates 1.",
+        "options": [
+          "Survival postulate 1",
+          "Fitness 1",
+          "Malthusian 1",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 1"
+      },
+      {
+        "question": "Drivers DOK1 Act2 Q2: Match Darwin's differential survival postulates 2.",
+        "options": [
+          "Survival postulate 2",
+          "Fitness 2",
+          "Malthusian 2",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 2"
+      },
+      {
+        "question": "Drivers DOK1 Act2 Q3: Match Darwin's differential survival postulates 3.",
+        "options": [
+          "Survival postulate 3",
+          "Fitness 3",
+          "Malthusian 3",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 3"
+      },
+      {
+        "question": "Drivers DOK1 Act2 Q4: Match Darwin's differential survival postulates 4.",
+        "options": [
+          "Survival postulate 4",
+          "Fitness 4",
+          "Malthusian 4",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 4"
+      },
+      {
+        "question": "Drivers DOK1 Act2 Q5: Match Darwin's differential survival postulates 5.",
+        "options": [
+          "Survival postulate 5",
+          "Fitness 5",
+          "Malthusian 5",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 5"
+      },
+      {
+        "question": "Drivers DOK1 Act2 Q6: Match Darwin's differential survival postulates 6.",
+        "options": [
+          "Survival postulate 6",
+          "Fitness 6",
+          "Malthusian 6",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 6"
+      },
+      {
+        "question": "Drivers DOK1 Act2 Q7: Match Darwin's differential survival postulates 7.",
+        "options": [
+          "Survival postulate 7",
+          "Fitness 7",
+          "Malthusian 7",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 7"
+      },
+      {
+        "question": "Drivers DOK1 Act2 Q8: Match Darwin's differential survival postulates 8.",
+        "options": [
+          "Survival postulate 8",
+          "Fitness 8",
+          "Malthusian 8",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 8"
+      },
+      {
+        "question": "Drivers DOK1 Act2 Q9: Match Darwin's differential survival postulates 9.",
+        "options": [
+          "Survival postulate 9",
+          "Fitness 9",
+          "Malthusian 9",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK1 Act3 Q0: Match Darwin's differential survival postulates 0.",
+        "options": [
+          "Survival postulate 0",
+          "Fitness 0",
+          "Malthusian 0",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 0"
+      },
+      {
+        "question": "Drivers DOK1 Act3 Q1: Match Darwin's differential survival postulates 1.",
+        "options": [
+          "Survival postulate 1",
+          "Fitness 1",
+          "Malthusian 1",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 1"
+      },
+      {
+        "question": "Drivers DOK1 Act3 Q2: Match Darwin's differential survival postulates 2.",
+        "options": [
+          "Survival postulate 2",
+          "Fitness 2",
+          "Malthusian 2",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 2"
+      },
+      {
+        "question": "Drivers DOK1 Act3 Q3: Match Darwin's differential survival postulates 3.",
+        "options": [
+          "Survival postulate 3",
+          "Fitness 3",
+          "Malthusian 3",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 3"
+      },
+      {
+        "question": "Drivers DOK1 Act3 Q4: Match Darwin's differential survival postulates 4.",
+        "options": [
+          "Survival postulate 4",
+          "Fitness 4",
+          "Malthusian 4",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 4"
+      },
+      {
+        "question": "Drivers DOK1 Act3 Q5: Match Darwin's differential survival postulates 5.",
+        "options": [
+          "Survival postulate 5",
+          "Fitness 5",
+          "Malthusian 5",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 5"
+      },
+      {
+        "question": "Drivers DOK1 Act3 Q6: Match Darwin's differential survival postulates 6.",
+        "options": [
+          "Survival postulate 6",
+          "Fitness 6",
+          "Malthusian 6",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 6"
+      },
+      {
+        "question": "Drivers DOK1 Act3 Q7: Match Darwin's differential survival postulates 7.",
+        "options": [
+          "Survival postulate 7",
+          "Fitness 7",
+          "Malthusian 7",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 7"
+      },
+      {
+        "question": "Drivers DOK1 Act3 Q8: Match Darwin's differential survival postulates 8.",
+        "options": [
+          "Survival postulate 8",
+          "Fitness 8",
+          "Malthusian 8",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 8"
+      },
+      {
+        "question": "Drivers DOK1 Act3 Q9: Match Darwin's differential survival postulates 9.",
+        "options": [
+          "Survival postulate 9",
+          "Fitness 9",
+          "Malthusian 9",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK1 Act4 Q0: Match Darwin's differential survival postulates 0.",
+        "options": [
+          "Survival postulate 0",
+          "Fitness 0",
+          "Malthusian 0",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 0"
+      },
+      {
+        "question": "Drivers DOK1 Act4 Q1: Match Darwin's differential survival postulates 1.",
+        "options": [
+          "Survival postulate 1",
+          "Fitness 1",
+          "Malthusian 1",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 1"
+      },
+      {
+        "question": "Drivers DOK1 Act4 Q2: Match Darwin's differential survival postulates 2.",
+        "options": [
+          "Survival postulate 2",
+          "Fitness 2",
+          "Malthusian 2",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 2"
+      },
+      {
+        "question": "Drivers DOK1 Act4 Q3: Match Darwin's differential survival postulates 3.",
+        "options": [
+          "Survival postulate 3",
+          "Fitness 3",
+          "Malthusian 3",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 3"
+      },
+      {
+        "question": "Drivers DOK1 Act4 Q4: Match Darwin's differential survival postulates 4.",
+        "options": [
+          "Survival postulate 4",
+          "Fitness 4",
+          "Malthusian 4",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 4"
+      },
+      {
+        "question": "Drivers DOK1 Act4 Q5: Match Darwin's differential survival postulates 5.",
+        "options": [
+          "Survival postulate 5",
+          "Fitness 5",
+          "Malthusian 5",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 5"
+      },
+      {
+        "question": "Drivers DOK1 Act4 Q6: Match Darwin's differential survival postulates 6.",
+        "options": [
+          "Survival postulate 6",
+          "Fitness 6",
+          "Malthusian 6",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 6"
+      },
+      {
+        "question": "Drivers DOK1 Act4 Q7: Match Darwin's differential survival postulates 7.",
+        "options": [
+          "Survival postulate 7",
+          "Fitness 7",
+          "Malthusian 7",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 7"
+      },
+      {
+        "question": "Drivers DOK1 Act4 Q8: Match Darwin's differential survival postulates 8.",
+        "options": [
+          "Survival postulate 8",
+          "Fitness 8",
+          "Malthusian 8",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 8"
+      },
+      {
+        "question": "Drivers DOK1 Act4 Q9: Match Darwin's differential survival postulates 9.",
+        "options": [
+          "Survival postulate 9",
+          "Fitness 9",
+          "Malthusian 9",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK1 Act5 Q0: Match Darwin's differential survival postulates 0.",
+        "options": [
+          "Survival postulate 0",
+          "Fitness 0",
+          "Malthusian 0",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 0"
+      },
+      {
+        "question": "Drivers DOK1 Act5 Q1: Match Darwin's differential survival postulates 1.",
+        "options": [
+          "Survival postulate 1",
+          "Fitness 1",
+          "Malthusian 1",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 1"
+      },
+      {
+        "question": "Drivers DOK1 Act5 Q2: Match Darwin's differential survival postulates 2.",
+        "options": [
+          "Survival postulate 2",
+          "Fitness 2",
+          "Malthusian 2",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 2"
+      },
+      {
+        "question": "Drivers DOK1 Act5 Q3: Match Darwin's differential survival postulates 3.",
+        "options": [
+          "Survival postulate 3",
+          "Fitness 3",
+          "Malthusian 3",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 3"
+      },
+      {
+        "question": "Drivers DOK1 Act5 Q4: Match Darwin's differential survival postulates 4.",
+        "options": [
+          "Survival postulate 4",
+          "Fitness 4",
+          "Malthusian 4",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 4"
+      },
+      {
+        "question": "Drivers DOK1 Act5 Q5: Match Darwin's differential survival postulates 5.",
+        "options": [
+          "Survival postulate 5",
+          "Fitness 5",
+          "Malthusian 5",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 5"
+      },
+      {
+        "question": "Drivers DOK1 Act5 Q6: Match Darwin's differential survival postulates 6.",
+        "options": [
+          "Survival postulate 6",
+          "Fitness 6",
+          "Malthusian 6",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 6"
+      },
+      {
+        "question": "Drivers DOK1 Act5 Q7: Match Darwin's differential survival postulates 7.",
+        "options": [
+          "Survival postulate 7",
+          "Fitness 7",
+          "Malthusian 7",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 7"
+      },
+      {
+        "question": "Drivers DOK1 Act5 Q8: Match Darwin's differential survival postulates 8.",
+        "options": [
+          "Survival postulate 8",
+          "Fitness 8",
+          "Malthusian 8",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 8"
+      },
+      {
+        "question": "Drivers DOK1 Act5 Q9: Match Darwin's differential survival postulates 9.",
+        "options": [
+          "Survival postulate 9",
+          "Fitness 9",
+          "Malthusian 9",
+          "Heritability"
+        ],
+        "answer": "Survival postulate 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Drivers DOK2 Act1 Q0: Classify limiting factors density dependent vs independent 0.",
+        "options": [
+          "Limiting factor 0",
+          "Differential 0",
+          "Biotic 0",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 0"
+      },
+      {
+        "question": "Drivers DOK2 Act1 Q1: Classify limiting factors density dependent vs independent 1.",
+        "options": [
+          "Limiting factor 1",
+          "Differential 1",
+          "Biotic 1",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 1"
+      },
+      {
+        "question": "Drivers DOK2 Act1 Q2: Classify limiting factors density dependent vs independent 2.",
+        "options": [
+          "Limiting factor 2",
+          "Differential 2",
+          "Biotic 2",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 2"
+      },
+      {
+        "question": "Drivers DOK2 Act1 Q3: Classify limiting factors density dependent vs independent 3.",
+        "options": [
+          "Limiting factor 3",
+          "Differential 3",
+          "Biotic 3",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 3"
+      },
+      {
+        "question": "Drivers DOK2 Act1 Q4: Classify limiting factors density dependent vs independent 4.",
+        "options": [
+          "Limiting factor 4",
+          "Differential 4",
+          "Biotic 4",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 4"
+      },
+      {
+        "question": "Drivers DOK2 Act1 Q5: Classify limiting factors density dependent vs independent 5.",
+        "options": [
+          "Limiting factor 5",
+          "Differential 5",
+          "Biotic 5",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 5"
+      },
+      {
+        "question": "Drivers DOK2 Act1 Q6: Classify limiting factors density dependent vs independent 6.",
+        "options": [
+          "Limiting factor 6",
+          "Differential 6",
+          "Biotic 6",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 6"
+      },
+      {
+        "question": "Drivers DOK2 Act1 Q7: Classify limiting factors density dependent vs independent 7.",
+        "options": [
+          "Limiting factor 7",
+          "Differential 7",
+          "Biotic 7",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 7"
+      },
+      {
+        "question": "Drivers DOK2 Act1 Q8: Classify limiting factors density dependent vs independent 8.",
+        "options": [
+          "Limiting factor 8",
+          "Differential 8",
+          "Biotic 8",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 8"
+      },
+      {
+        "question": "Drivers DOK2 Act1 Q9: Classify limiting factors density dependent vs independent 9.",
+        "options": [
+          "Limiting factor 9",
+          "Differential 9",
+          "Biotic 9",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK2 Act2 Q0: Classify limiting factors density dependent vs independent 0.",
+        "options": [
+          "Limiting factor 0",
+          "Differential 0",
+          "Biotic 0",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 0"
+      },
+      {
+        "question": "Drivers DOK2 Act2 Q1: Classify limiting factors density dependent vs independent 1.",
+        "options": [
+          "Limiting factor 1",
+          "Differential 1",
+          "Biotic 1",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 1"
+      },
+      {
+        "question": "Drivers DOK2 Act2 Q2: Classify limiting factors density dependent vs independent 2.",
+        "options": [
+          "Limiting factor 2",
+          "Differential 2",
+          "Biotic 2",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 2"
+      },
+      {
+        "question": "Drivers DOK2 Act2 Q3: Classify limiting factors density dependent vs independent 3.",
+        "options": [
+          "Limiting factor 3",
+          "Differential 3",
+          "Biotic 3",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 3"
+      },
+      {
+        "question": "Drivers DOK2 Act2 Q4: Classify limiting factors density dependent vs independent 4.",
+        "options": [
+          "Limiting factor 4",
+          "Differential 4",
+          "Biotic 4",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 4"
+      },
+      {
+        "question": "Drivers DOK2 Act2 Q5: Classify limiting factors density dependent vs independent 5.",
+        "options": [
+          "Limiting factor 5",
+          "Differential 5",
+          "Biotic 5",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 5"
+      },
+      {
+        "question": "Drivers DOK2 Act2 Q6: Classify limiting factors density dependent vs independent 6.",
+        "options": [
+          "Limiting factor 6",
+          "Differential 6",
+          "Biotic 6",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 6"
+      },
+      {
+        "question": "Drivers DOK2 Act2 Q7: Classify limiting factors density dependent vs independent 7.",
+        "options": [
+          "Limiting factor 7",
+          "Differential 7",
+          "Biotic 7",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 7"
+      },
+      {
+        "question": "Drivers DOK2 Act2 Q8: Classify limiting factors density dependent vs independent 8.",
+        "options": [
+          "Limiting factor 8",
+          "Differential 8",
+          "Biotic 8",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 8"
+      },
+      {
+        "question": "Drivers DOK2 Act2 Q9: Classify limiting factors density dependent vs independent 9.",
+        "options": [
+          "Limiting factor 9",
+          "Differential 9",
+          "Biotic 9",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK2 Act3 Q0: Classify limiting factors density dependent vs independent 0.",
+        "options": [
+          "Limiting factor 0",
+          "Differential 0",
+          "Biotic 0",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 0"
+      },
+      {
+        "question": "Drivers DOK2 Act3 Q1: Classify limiting factors density dependent vs independent 1.",
+        "options": [
+          "Limiting factor 1",
+          "Differential 1",
+          "Biotic 1",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 1"
+      },
+      {
+        "question": "Drivers DOK2 Act3 Q2: Classify limiting factors density dependent vs independent 2.",
+        "options": [
+          "Limiting factor 2",
+          "Differential 2",
+          "Biotic 2",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 2"
+      },
+      {
+        "question": "Drivers DOK2 Act3 Q3: Classify limiting factors density dependent vs independent 3.",
+        "options": [
+          "Limiting factor 3",
+          "Differential 3",
+          "Biotic 3",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 3"
+      },
+      {
+        "question": "Drivers DOK2 Act3 Q4: Classify limiting factors density dependent vs independent 4.",
+        "options": [
+          "Limiting factor 4",
+          "Differential 4",
+          "Biotic 4",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 4"
+      },
+      {
+        "question": "Drivers DOK2 Act3 Q5: Classify limiting factors density dependent vs independent 5.",
+        "options": [
+          "Limiting factor 5",
+          "Differential 5",
+          "Biotic 5",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 5"
+      },
+      {
+        "question": "Drivers DOK2 Act3 Q6: Classify limiting factors density dependent vs independent 6.",
+        "options": [
+          "Limiting factor 6",
+          "Differential 6",
+          "Biotic 6",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 6"
+      },
+      {
+        "question": "Drivers DOK2 Act3 Q7: Classify limiting factors density dependent vs independent 7.",
+        "options": [
+          "Limiting factor 7",
+          "Differential 7",
+          "Biotic 7",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 7"
+      },
+      {
+        "question": "Drivers DOK2 Act3 Q8: Classify limiting factors density dependent vs independent 8.",
+        "options": [
+          "Limiting factor 8",
+          "Differential 8",
+          "Biotic 8",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 8"
+      },
+      {
+        "question": "Drivers DOK2 Act3 Q9: Classify limiting factors density dependent vs independent 9.",
+        "options": [
+          "Limiting factor 9",
+          "Differential 9",
+          "Biotic 9",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK2 Act4 Q0: Classify limiting factors density dependent vs independent 0.",
+        "options": [
+          "Limiting factor 0",
+          "Differential 0",
+          "Biotic 0",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 0"
+      },
+      {
+        "question": "Drivers DOK2 Act4 Q1: Classify limiting factors density dependent vs independent 1.",
+        "options": [
+          "Limiting factor 1",
+          "Differential 1",
+          "Biotic 1",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 1"
+      },
+      {
+        "question": "Drivers DOK2 Act4 Q2: Classify limiting factors density dependent vs independent 2.",
+        "options": [
+          "Limiting factor 2",
+          "Differential 2",
+          "Biotic 2",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 2"
+      },
+      {
+        "question": "Drivers DOK2 Act4 Q3: Classify limiting factors density dependent vs independent 3.",
+        "options": [
+          "Limiting factor 3",
+          "Differential 3",
+          "Biotic 3",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 3"
+      },
+      {
+        "question": "Drivers DOK2 Act4 Q4: Classify limiting factors density dependent vs independent 4.",
+        "options": [
+          "Limiting factor 4",
+          "Differential 4",
+          "Biotic 4",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 4"
+      },
+      {
+        "question": "Drivers DOK2 Act4 Q5: Classify limiting factors density dependent vs independent 5.",
+        "options": [
+          "Limiting factor 5",
+          "Differential 5",
+          "Biotic 5",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 5"
+      },
+      {
+        "question": "Drivers DOK2 Act4 Q6: Classify limiting factors density dependent vs independent 6.",
+        "options": [
+          "Limiting factor 6",
+          "Differential 6",
+          "Biotic 6",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 6"
+      },
+      {
+        "question": "Drivers DOK2 Act4 Q7: Classify limiting factors density dependent vs independent 7.",
+        "options": [
+          "Limiting factor 7",
+          "Differential 7",
+          "Biotic 7",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 7"
+      },
+      {
+        "question": "Drivers DOK2 Act4 Q8: Classify limiting factors density dependent vs independent 8.",
+        "options": [
+          "Limiting factor 8",
+          "Differential 8",
+          "Biotic 8",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 8"
+      },
+      {
+        "question": "Drivers DOK2 Act4 Q9: Classify limiting factors density dependent vs independent 9.",
+        "options": [
+          "Limiting factor 9",
+          "Differential 9",
+          "Biotic 9",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK2 Act5 Q0: Classify limiting factors density dependent vs independent 0.",
+        "options": [
+          "Limiting factor 0",
+          "Differential 0",
+          "Biotic 0",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 0"
+      },
+      {
+        "question": "Drivers DOK2 Act5 Q1: Classify limiting factors density dependent vs independent 1.",
+        "options": [
+          "Limiting factor 1",
+          "Differential 1",
+          "Biotic 1",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 1"
+      },
+      {
+        "question": "Drivers DOK2 Act5 Q2: Classify limiting factors density dependent vs independent 2.",
+        "options": [
+          "Limiting factor 2",
+          "Differential 2",
+          "Biotic 2",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 2"
+      },
+      {
+        "question": "Drivers DOK2 Act5 Q3: Classify limiting factors density dependent vs independent 3.",
+        "options": [
+          "Limiting factor 3",
+          "Differential 3",
+          "Biotic 3",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 3"
+      },
+      {
+        "question": "Drivers DOK2 Act5 Q4: Classify limiting factors density dependent vs independent 4.",
+        "options": [
+          "Limiting factor 4",
+          "Differential 4",
+          "Biotic 4",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 4"
+      },
+      {
+        "question": "Drivers DOK2 Act5 Q5: Classify limiting factors density dependent vs independent 5.",
+        "options": [
+          "Limiting factor 5",
+          "Differential 5",
+          "Biotic 5",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 5"
+      },
+      {
+        "question": "Drivers DOK2 Act5 Q6: Classify limiting factors density dependent vs independent 6.",
+        "options": [
+          "Limiting factor 6",
+          "Differential 6",
+          "Biotic 6",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 6"
+      },
+      {
+        "question": "Drivers DOK2 Act5 Q7: Classify limiting factors density dependent vs independent 7.",
+        "options": [
+          "Limiting factor 7",
+          "Differential 7",
+          "Biotic 7",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 7"
+      },
+      {
+        "question": "Drivers DOK2 Act5 Q8: Classify limiting factors density dependent vs independent 8.",
+        "options": [
+          "Limiting factor 8",
+          "Differential 8",
+          "Biotic 8",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 8"
+      },
+      {
+        "question": "Drivers DOK2 Act5 Q9: Classify limiting factors density dependent vs independent 9.",
+        "options": [
+          "Limiting factor 9",
+          "Differential 9",
+          "Biotic 9",
+          "Intraspecific"
+        ],
+        "answer": "Limiting factor 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Drivers DOK3 Act1 Q0: Predict carrying capacity growth rate outputs 0.",
+        "options": [
+          "Carrying capacity 0",
+          "Mortality 0",
+          "Depletion 0",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 0"
+      },
+      {
+        "question": "Drivers DOK3 Act1 Q1: Predict carrying capacity growth rate outputs 1.",
+        "options": [
+          "Carrying capacity 1",
+          "Mortality 1",
+          "Depletion 1",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 1"
+      },
+      {
+        "question": "Drivers DOK3 Act1 Q2: Predict carrying capacity growth rate outputs 2.",
+        "options": [
+          "Carrying capacity 2",
+          "Mortality 2",
+          "Depletion 2",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 2"
+      },
+      {
+        "question": "Drivers DOK3 Act1 Q3: Predict carrying capacity growth rate outputs 3.",
+        "options": [
+          "Carrying capacity 3",
+          "Mortality 3",
+          "Depletion 3",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 3"
+      },
+      {
+        "question": "Drivers DOK3 Act1 Q4: Predict carrying capacity growth rate outputs 4.",
+        "options": [
+          "Carrying capacity 4",
+          "Mortality 4",
+          "Depletion 4",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 4"
+      },
+      {
+        "question": "Drivers DOK3 Act1 Q5: Predict carrying capacity growth rate outputs 5.",
+        "options": [
+          "Carrying capacity 5",
+          "Mortality 5",
+          "Depletion 5",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 5"
+      },
+      {
+        "question": "Drivers DOK3 Act1 Q6: Predict carrying capacity growth rate outputs 6.",
+        "options": [
+          "Carrying capacity 6",
+          "Mortality 6",
+          "Depletion 6",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 6"
+      },
+      {
+        "question": "Drivers DOK3 Act1 Q7: Predict carrying capacity growth rate outputs 7.",
+        "options": [
+          "Carrying capacity 7",
+          "Mortality 7",
+          "Depletion 7",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 7"
+      },
+      {
+        "question": "Drivers DOK3 Act1 Q8: Predict carrying capacity growth rate outputs 8.",
+        "options": [
+          "Carrying capacity 8",
+          "Mortality 8",
+          "Depletion 8",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 8"
+      },
+      {
+        "question": "Drivers DOK3 Act1 Q9: Predict carrying capacity growth rate outputs 9.",
+        "options": [
+          "Carrying capacity 9",
+          "Mortality 9",
+          "Depletion 9",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK3 Act2 Q0: Predict carrying capacity growth rate outputs 0.",
+        "options": [
+          "Carrying capacity 0",
+          "Mortality 0",
+          "Depletion 0",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 0"
+      },
+      {
+        "question": "Drivers DOK3 Act2 Q1: Predict carrying capacity growth rate outputs 1.",
+        "options": [
+          "Carrying capacity 1",
+          "Mortality 1",
+          "Depletion 1",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 1"
+      },
+      {
+        "question": "Drivers DOK3 Act2 Q2: Predict carrying capacity growth rate outputs 2.",
+        "options": [
+          "Carrying capacity 2",
+          "Mortality 2",
+          "Depletion 2",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 2"
+      },
+      {
+        "question": "Drivers DOK3 Act2 Q3: Predict carrying capacity growth rate outputs 3.",
+        "options": [
+          "Carrying capacity 3",
+          "Mortality 3",
+          "Depletion 3",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 3"
+      },
+      {
+        "question": "Drivers DOK3 Act2 Q4: Predict carrying capacity growth rate outputs 4.",
+        "options": [
+          "Carrying capacity 4",
+          "Mortality 4",
+          "Depletion 4",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 4"
+      },
+      {
+        "question": "Drivers DOK3 Act2 Q5: Predict carrying capacity growth rate outputs 5.",
+        "options": [
+          "Carrying capacity 5",
+          "Mortality 5",
+          "Depletion 5",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 5"
+      },
+      {
+        "question": "Drivers DOK3 Act2 Q6: Predict carrying capacity growth rate outputs 6.",
+        "options": [
+          "Carrying capacity 6",
+          "Mortality 6",
+          "Depletion 6",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 6"
+      },
+      {
+        "question": "Drivers DOK3 Act2 Q7: Predict carrying capacity growth rate outputs 7.",
+        "options": [
+          "Carrying capacity 7",
+          "Mortality 7",
+          "Depletion 7",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 7"
+      },
+      {
+        "question": "Drivers DOK3 Act2 Q8: Predict carrying capacity growth rate outputs 8.",
+        "options": [
+          "Carrying capacity 8",
+          "Mortality 8",
+          "Depletion 8",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 8"
+      },
+      {
+        "question": "Drivers DOK3 Act2 Q9: Predict carrying capacity growth rate outputs 9.",
+        "options": [
+          "Carrying capacity 9",
+          "Mortality 9",
+          "Depletion 9",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK3 Act3 Q0: Predict carrying capacity growth rate outputs 0.",
+        "options": [
+          "Carrying capacity 0",
+          "Mortality 0",
+          "Depletion 0",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 0"
+      },
+      {
+        "question": "Drivers DOK3 Act3 Q1: Predict carrying capacity growth rate outputs 1.",
+        "options": [
+          "Carrying capacity 1",
+          "Mortality 1",
+          "Depletion 1",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 1"
+      },
+      {
+        "question": "Drivers DOK3 Act3 Q2: Predict carrying capacity growth rate outputs 2.",
+        "options": [
+          "Carrying capacity 2",
+          "Mortality 2",
+          "Depletion 2",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 2"
+      },
+      {
+        "question": "Drivers DOK3 Act3 Q3: Predict carrying capacity growth rate outputs 3.",
+        "options": [
+          "Carrying capacity 3",
+          "Mortality 3",
+          "Depletion 3",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 3"
+      },
+      {
+        "question": "Drivers DOK3 Act3 Q4: Predict carrying capacity growth rate outputs 4.",
+        "options": [
+          "Carrying capacity 4",
+          "Mortality 4",
+          "Depletion 4",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 4"
+      },
+      {
+        "question": "Drivers DOK3 Act3 Q5: Predict carrying capacity growth rate outputs 5.",
+        "options": [
+          "Carrying capacity 5",
+          "Mortality 5",
+          "Depletion 5",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 5"
+      },
+      {
+        "question": "Drivers DOK3 Act3 Q6: Predict carrying capacity growth rate outputs 6.",
+        "options": [
+          "Carrying capacity 6",
+          "Mortality 6",
+          "Depletion 6",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 6"
+      },
+      {
+        "question": "Drivers DOK3 Act3 Q7: Predict carrying capacity growth rate outputs 7.",
+        "options": [
+          "Carrying capacity 7",
+          "Mortality 7",
+          "Depletion 7",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 7"
+      },
+      {
+        "question": "Drivers DOK3 Act3 Q8: Predict carrying capacity growth rate outputs 8.",
+        "options": [
+          "Carrying capacity 8",
+          "Mortality 8",
+          "Depletion 8",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 8"
+      },
+      {
+        "question": "Drivers DOK3 Act3 Q9: Predict carrying capacity growth rate outputs 9.",
+        "options": [
+          "Carrying capacity 9",
+          "Mortality 9",
+          "Depletion 9",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK3 Act4 Q0: Predict carrying capacity growth rate outputs 0.",
+        "options": [
+          "Carrying capacity 0",
+          "Mortality 0",
+          "Depletion 0",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 0"
+      },
+      {
+        "question": "Drivers DOK3 Act4 Q1: Predict carrying capacity growth rate outputs 1.",
+        "options": [
+          "Carrying capacity 1",
+          "Mortality 1",
+          "Depletion 1",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 1"
+      },
+      {
+        "question": "Drivers DOK3 Act4 Q2: Predict carrying capacity growth rate outputs 2.",
+        "options": [
+          "Carrying capacity 2",
+          "Mortality 2",
+          "Depletion 2",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 2"
+      },
+      {
+        "question": "Drivers DOK3 Act4 Q3: Predict carrying capacity growth rate outputs 3.",
+        "options": [
+          "Carrying capacity 3",
+          "Mortality 3",
+          "Depletion 3",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 3"
+      },
+      {
+        "question": "Drivers DOK3 Act4 Q4: Predict carrying capacity growth rate outputs 4.",
+        "options": [
+          "Carrying capacity 4",
+          "Mortality 4",
+          "Depletion 4",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 4"
+      },
+      {
+        "question": "Drivers DOK3 Act4 Q5: Predict carrying capacity growth rate outputs 5.",
+        "options": [
+          "Carrying capacity 5",
+          "Mortality 5",
+          "Depletion 5",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 5"
+      },
+      {
+        "question": "Drivers DOK3 Act4 Q6: Predict carrying capacity growth rate outputs 6.",
+        "options": [
+          "Carrying capacity 6",
+          "Mortality 6",
+          "Depletion 6",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 6"
+      },
+      {
+        "question": "Drivers DOK3 Act4 Q7: Predict carrying capacity growth rate outputs 7.",
+        "options": [
+          "Carrying capacity 7",
+          "Mortality 7",
+          "Depletion 7",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 7"
+      },
+      {
+        "question": "Drivers DOK3 Act4 Q8: Predict carrying capacity growth rate outputs 8.",
+        "options": [
+          "Carrying capacity 8",
+          "Mortality 8",
+          "Depletion 8",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 8"
+      },
+      {
+        "question": "Drivers DOK3 Act4 Q9: Predict carrying capacity growth rate outputs 9.",
+        "options": [
+          "Carrying capacity 9",
+          "Mortality 9",
+          "Depletion 9",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK3 Act5 Q0: Predict carrying capacity growth rate outputs 0.",
+        "options": [
+          "Carrying capacity 0",
+          "Mortality 0",
+          "Depletion 0",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 0"
+      },
+      {
+        "question": "Drivers DOK3 Act5 Q1: Predict carrying capacity growth rate outputs 1.",
+        "options": [
+          "Carrying capacity 1",
+          "Mortality 1",
+          "Depletion 1",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 1"
+      },
+      {
+        "question": "Drivers DOK3 Act5 Q2: Predict carrying capacity growth rate outputs 2.",
+        "options": [
+          "Carrying capacity 2",
+          "Mortality 2",
+          "Depletion 2",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 2"
+      },
+      {
+        "question": "Drivers DOK3 Act5 Q3: Predict carrying capacity growth rate outputs 3.",
+        "options": [
+          "Carrying capacity 3",
+          "Mortality 3",
+          "Depletion 3",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 3"
+      },
+      {
+        "question": "Drivers DOK3 Act5 Q4: Predict carrying capacity growth rate outputs 4.",
+        "options": [
+          "Carrying capacity 4",
+          "Mortality 4",
+          "Depletion 4",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 4"
+      },
+      {
+        "question": "Drivers DOK3 Act5 Q5: Predict carrying capacity growth rate outputs 5.",
+        "options": [
+          "Carrying capacity 5",
+          "Mortality 5",
+          "Depletion 5",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 5"
+      },
+      {
+        "question": "Drivers DOK3 Act5 Q6: Predict carrying capacity growth rate outputs 6.",
+        "options": [
+          "Carrying capacity 6",
+          "Mortality 6",
+          "Depletion 6",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 6"
+      },
+      {
+        "question": "Drivers DOK3 Act5 Q7: Predict carrying capacity growth rate outputs 7.",
+        "options": [
+          "Carrying capacity 7",
+          "Mortality 7",
+          "Depletion 7",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 7"
+      },
+      {
+        "question": "Drivers DOK3 Act5 Q8: Predict carrying capacity growth rate outputs 8.",
+        "options": [
+          "Carrying capacity 8",
+          "Mortality 8",
+          "Depletion 8",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 8"
+      },
+      {
+        "question": "Drivers DOK3 Act5 Q9: Predict carrying capacity growth rate outputs 9.",
+        "options": [
+          "Carrying capacity 9",
+          "Mortality 9",
+          "Depletion 9",
+          "Pathogen"
+        ],
+        "answer": "Carrying capacity 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Drivers DOK4 Act1 Q0: Calibrate resource competition partitioning consumption rates 0.",
+        "options": [
+          "Competition tuner 0",
+          "Oscillations 0",
+          "Forager 0",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 0"
+      },
+      {
+        "question": "Drivers DOK4 Act1 Q1: Calibrate resource competition partitioning consumption rates 1.",
+        "options": [
+          "Competition tuner 1",
+          "Oscillations 1",
+          "Forager 1",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 1"
+      },
+      {
+        "question": "Drivers DOK4 Act1 Q2: Calibrate resource competition partitioning consumption rates 2.",
+        "options": [
+          "Competition tuner 2",
+          "Oscillations 2",
+          "Forager 2",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 2"
+      },
+      {
+        "question": "Drivers DOK4 Act1 Q3: Calibrate resource competition partitioning consumption rates 3.",
+        "options": [
+          "Competition tuner 3",
+          "Oscillations 3",
+          "Forager 3",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 3"
+      },
+      {
+        "question": "Drivers DOK4 Act1 Q4: Calibrate resource competition partitioning consumption rates 4.",
+        "options": [
+          "Competition tuner 4",
+          "Oscillations 4",
+          "Forager 4",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 4"
+      },
+      {
+        "question": "Drivers DOK4 Act1 Q5: Calibrate resource competition partitioning consumption rates 5.",
+        "options": [
+          "Competition tuner 5",
+          "Oscillations 5",
+          "Forager 5",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 5"
+      },
+      {
+        "question": "Drivers DOK4 Act1 Q6: Calibrate resource competition partitioning consumption rates 6.",
+        "options": [
+          "Competition tuner 6",
+          "Oscillations 6",
+          "Forager 6",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 6"
+      },
+      {
+        "question": "Drivers DOK4 Act1 Q7: Calibrate resource competition partitioning consumption rates 7.",
+        "options": [
+          "Competition tuner 7",
+          "Oscillations 7",
+          "Forager 7",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 7"
+      },
+      {
+        "question": "Drivers DOK4 Act1 Q8: Calibrate resource competition partitioning consumption rates 8.",
+        "options": [
+          "Competition tuner 8",
+          "Oscillations 8",
+          "Forager 8",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 8"
+      },
+      {
+        "question": "Drivers DOK4 Act1 Q9: Calibrate resource competition partitioning consumption rates 9.",
+        "options": [
+          "Competition tuner 9",
+          "Oscillations 9",
+          "Forager 9",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK4 Act2 Q0: Calibrate resource competition partitioning consumption rates 0.",
+        "options": [
+          "Competition tuner 0",
+          "Oscillations 0",
+          "Forager 0",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 0"
+      },
+      {
+        "question": "Drivers DOK4 Act2 Q1: Calibrate resource competition partitioning consumption rates 1.",
+        "options": [
+          "Competition tuner 1",
+          "Oscillations 1",
+          "Forager 1",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 1"
+      },
+      {
+        "question": "Drivers DOK4 Act2 Q2: Calibrate resource competition partitioning consumption rates 2.",
+        "options": [
+          "Competition tuner 2",
+          "Oscillations 2",
+          "Forager 2",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 2"
+      },
+      {
+        "question": "Drivers DOK4 Act2 Q3: Calibrate resource competition partitioning consumption rates 3.",
+        "options": [
+          "Competition tuner 3",
+          "Oscillations 3",
+          "Forager 3",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 3"
+      },
+      {
+        "question": "Drivers DOK4 Act2 Q4: Calibrate resource competition partitioning consumption rates 4.",
+        "options": [
+          "Competition tuner 4",
+          "Oscillations 4",
+          "Forager 4",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 4"
+      },
+      {
+        "question": "Drivers DOK4 Act2 Q5: Calibrate resource competition partitioning consumption rates 5.",
+        "options": [
+          "Competition tuner 5",
+          "Oscillations 5",
+          "Forager 5",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 5"
+      },
+      {
+        "question": "Drivers DOK4 Act2 Q6: Calibrate resource competition partitioning consumption rates 6.",
+        "options": [
+          "Competition tuner 6",
+          "Oscillations 6",
+          "Forager 6",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 6"
+      },
+      {
+        "question": "Drivers DOK4 Act2 Q7: Calibrate resource competition partitioning consumption rates 7.",
+        "options": [
+          "Competition tuner 7",
+          "Oscillations 7",
+          "Forager 7",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 7"
+      },
+      {
+        "question": "Drivers DOK4 Act2 Q8: Calibrate resource competition partitioning consumption rates 8.",
+        "options": [
+          "Competition tuner 8",
+          "Oscillations 8",
+          "Forager 8",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 8"
+      },
+      {
+        "question": "Drivers DOK4 Act2 Q9: Calibrate resource competition partitioning consumption rates 9.",
+        "options": [
+          "Competition tuner 9",
+          "Oscillations 9",
+          "Forager 9",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK4 Act3 Q0: Calibrate resource competition partitioning consumption rates 0.",
+        "options": [
+          "Competition tuner 0",
+          "Oscillations 0",
+          "Forager 0",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 0"
+      },
+      {
+        "question": "Drivers DOK4 Act3 Q1: Calibrate resource competition partitioning consumption rates 1.",
+        "options": [
+          "Competition tuner 1",
+          "Oscillations 1",
+          "Forager 1",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 1"
+      },
+      {
+        "question": "Drivers DOK4 Act3 Q2: Calibrate resource competition partitioning consumption rates 2.",
+        "options": [
+          "Competition tuner 2",
+          "Oscillations 2",
+          "Forager 2",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 2"
+      },
+      {
+        "question": "Drivers DOK4 Act3 Q3: Calibrate resource competition partitioning consumption rates 3.",
+        "options": [
+          "Competition tuner 3",
+          "Oscillations 3",
+          "Forager 3",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 3"
+      },
+      {
+        "question": "Drivers DOK4 Act3 Q4: Calibrate resource competition partitioning consumption rates 4.",
+        "options": [
+          "Competition tuner 4",
+          "Oscillations 4",
+          "Forager 4",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 4"
+      },
+      {
+        "question": "Drivers DOK4 Act3 Q5: Calibrate resource competition partitioning consumption rates 5.",
+        "options": [
+          "Competition tuner 5",
+          "Oscillations 5",
+          "Forager 5",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 5"
+      },
+      {
+        "question": "Drivers DOK4 Act3 Q6: Calibrate resource competition partitioning consumption rates 6.",
+        "options": [
+          "Competition tuner 6",
+          "Oscillations 6",
+          "Forager 6",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 6"
+      },
+      {
+        "question": "Drivers DOK4 Act3 Q7: Calibrate resource competition partitioning consumption rates 7.",
+        "options": [
+          "Competition tuner 7",
+          "Oscillations 7",
+          "Forager 7",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 7"
+      },
+      {
+        "question": "Drivers DOK4 Act3 Q8: Calibrate resource competition partitioning consumption rates 8.",
+        "options": [
+          "Competition tuner 8",
+          "Oscillations 8",
+          "Forager 8",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 8"
+      },
+      {
+        "question": "Drivers DOK4 Act3 Q9: Calibrate resource competition partitioning consumption rates 9.",
+        "options": [
+          "Competition tuner 9",
+          "Oscillations 9",
+          "Forager 9",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK4 Act4 Q0: Calibrate resource competition partitioning consumption rates 0.",
+        "options": [
+          "Competition tuner 0",
+          "Oscillations 0",
+          "Forager 0",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 0"
+      },
+      {
+        "question": "Drivers DOK4 Act4 Q1: Calibrate resource competition partitioning consumption rates 1.",
+        "options": [
+          "Competition tuner 1",
+          "Oscillations 1",
+          "Forager 1",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 1"
+      },
+      {
+        "question": "Drivers DOK4 Act4 Q2: Calibrate resource competition partitioning consumption rates 2.",
+        "options": [
+          "Competition tuner 2",
+          "Oscillations 2",
+          "Forager 2",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 2"
+      },
+      {
+        "question": "Drivers DOK4 Act4 Q3: Calibrate resource competition partitioning consumption rates 3.",
+        "options": [
+          "Competition tuner 3",
+          "Oscillations 3",
+          "Forager 3",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 3"
+      },
+      {
+        "question": "Drivers DOK4 Act4 Q4: Calibrate resource competition partitioning consumption rates 4.",
+        "options": [
+          "Competition tuner 4",
+          "Oscillations 4",
+          "Forager 4",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 4"
+      },
+      {
+        "question": "Drivers DOK4 Act4 Q5: Calibrate resource competition partitioning consumption rates 5.",
+        "options": [
+          "Competition tuner 5",
+          "Oscillations 5",
+          "Forager 5",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 5"
+      },
+      {
+        "question": "Drivers DOK4 Act4 Q6: Calibrate resource competition partitioning consumption rates 6.",
+        "options": [
+          "Competition tuner 6",
+          "Oscillations 6",
+          "Forager 6",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 6"
+      },
+      {
+        "question": "Drivers DOK4 Act4 Q7: Calibrate resource competition partitioning consumption rates 7.",
+        "options": [
+          "Competition tuner 7",
+          "Oscillations 7",
+          "Forager 7",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 7"
+      },
+      {
+        "question": "Drivers DOK4 Act4 Q8: Calibrate resource competition partitioning consumption rates 8.",
+        "options": [
+          "Competition tuner 8",
+          "Oscillations 8",
+          "Forager 8",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 8"
+      },
+      {
+        "question": "Drivers DOK4 Act4 Q9: Calibrate resource competition partitioning consumption rates 9.",
+        "options": [
+          "Competition tuner 9",
+          "Oscillations 9",
+          "Forager 9",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 9"
+      }
+    ],
+    [
+      {
+        "question": "Drivers DOK4 Act5 Q0: Calibrate resource competition partitioning consumption rates 0.",
+        "options": [
+          "Competition tuner 0",
+          "Oscillations 0",
+          "Forager 0",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 0"
+      },
+      {
+        "question": "Drivers DOK4 Act5 Q1: Calibrate resource competition partitioning consumption rates 1.",
+        "options": [
+          "Competition tuner 1",
+          "Oscillations 1",
+          "Forager 1",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 1"
+      },
+      {
+        "question": "Drivers DOK4 Act5 Q2: Calibrate resource competition partitioning consumption rates 2.",
+        "options": [
+          "Competition tuner 2",
+          "Oscillations 2",
+          "Forager 2",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 2"
+      },
+      {
+        "question": "Drivers DOK4 Act5 Q3: Calibrate resource competition partitioning consumption rates 3.",
+        "options": [
+          "Competition tuner 3",
+          "Oscillations 3",
+          "Forager 3",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 3"
+      },
+      {
+        "question": "Drivers DOK4 Act5 Q4: Calibrate resource competition partitioning consumption rates 4.",
+        "options": [
+          "Competition tuner 4",
+          "Oscillations 4",
+          "Forager 4",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 4"
+      },
+      {
+        "question": "Drivers DOK4 Act5 Q5: Calibrate resource competition partitioning consumption rates 5.",
+        "options": [
+          "Competition tuner 5",
+          "Oscillations 5",
+          "Forager 5",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 5"
+      },
+      {
+        "question": "Drivers DOK4 Act5 Q6: Calibrate resource competition partitioning consumption rates 6.",
+        "options": [
+          "Competition tuner 6",
+          "Oscillations 6",
+          "Forager 6",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 6"
+      },
+      {
+        "question": "Drivers DOK4 Act5 Q7: Calibrate resource competition partitioning consumption rates 7.",
+        "options": [
+          "Competition tuner 7",
+          "Oscillations 7",
+          "Forager 7",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 7"
+      },
+      {
+        "question": "Drivers DOK4 Act5 Q8: Calibrate resource competition partitioning consumption rates 8.",
+        "options": [
+          "Competition tuner 8",
+          "Oscillations 8",
+          "Forager 8",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 8"
+      },
+      {
+        "question": "Drivers DOK4 Act5 Q9: Calibrate resource competition partitioning consumption rates 9.",
+        "options": [
+          "Competition tuner 9",
+          "Oscillations 9",
+          "Forager 9",
+          "Exclusion"
+        ],
+        "answer": "Competition tuner 9"
+      }
+    ]
+  ]
+}
+,
+  "OAS.B.LS4.3": {
+  "1": [
+    [
+      {
+        "question": "Advantage DOK1 Act1 Q0: Match antibiotic usage selection phenotypes 0.",
+        "options": [
+          "Resistance allele 0",
+          "Melanism 0",
+          "Malaria 0",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 0"
+      },
+      {
+        "question": "Advantage DOK1 Act1 Q1: Match antibiotic usage selection phenotypes 1.",
+        "options": [
+          "Resistance allele 1",
+          "Melanism 1",
+          "Malaria 1",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 1"
+      },
+      {
+        "question": "Advantage DOK1 Act1 Q2: Match antibiotic usage selection phenotypes 2.",
+        "options": [
+          "Resistance allele 2",
+          "Melanism 2",
+          "Malaria 2",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 2"
+      },
+      {
+        "question": "Advantage DOK1 Act1 Q3: Match antibiotic usage selection phenotypes 3.",
+        "options": [
+          "Resistance allele 3",
+          "Melanism 3",
+          "Malaria 3",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 3"
+      },
+      {
+        "question": "Advantage DOK1 Act1 Q4: Match antibiotic usage selection phenotypes 4.",
+        "options": [
+          "Resistance allele 4",
+          "Melanism 4",
+          "Malaria 4",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 4"
+      },
+      {
+        "question": "Advantage DOK1 Act1 Q5: Match antibiotic usage selection phenotypes 5.",
+        "options": [
+          "Resistance allele 5",
+          "Melanism 5",
+          "Malaria 5",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 5"
+      },
+      {
+        "question": "Advantage DOK1 Act1 Q6: Match antibiotic usage selection phenotypes 6.",
+        "options": [
+          "Resistance allele 6",
+          "Melanism 6",
+          "Malaria 6",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 6"
+      },
+      {
+        "question": "Advantage DOK1 Act1 Q7: Match antibiotic usage selection phenotypes 7.",
+        "options": [
+          "Resistance allele 7",
+          "Melanism 7",
+          "Malaria 7",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 7"
+      },
+      {
+        "question": "Advantage DOK1 Act1 Q8: Match antibiotic usage selection phenotypes 8.",
+        "options": [
+          "Resistance allele 8",
+          "Melanism 8",
+          "Malaria 8",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 8"
+      },
+      {
+        "question": "Advantage DOK1 Act1 Q9: Match antibiotic usage selection phenotypes 9.",
+        "options": [
+          "Resistance allele 9",
+          "Melanism 9",
+          "Malaria 9",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK1 Act2 Q0: Match antibiotic usage selection phenotypes 0.",
+        "options": [
+          "Resistance allele 0",
+          "Melanism 0",
+          "Malaria 0",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 0"
+      },
+      {
+        "question": "Advantage DOK1 Act2 Q1: Match antibiotic usage selection phenotypes 1.",
+        "options": [
+          "Resistance allele 1",
+          "Melanism 1",
+          "Malaria 1",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 1"
+      },
+      {
+        "question": "Advantage DOK1 Act2 Q2: Match antibiotic usage selection phenotypes 2.",
+        "options": [
+          "Resistance allele 2",
+          "Melanism 2",
+          "Malaria 2",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 2"
+      },
+      {
+        "question": "Advantage DOK1 Act2 Q3: Match antibiotic usage selection phenotypes 3.",
+        "options": [
+          "Resistance allele 3",
+          "Melanism 3",
+          "Malaria 3",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 3"
+      },
+      {
+        "question": "Advantage DOK1 Act2 Q4: Match antibiotic usage selection phenotypes 4.",
+        "options": [
+          "Resistance allele 4",
+          "Melanism 4",
+          "Malaria 4",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 4"
+      },
+      {
+        "question": "Advantage DOK1 Act2 Q5: Match antibiotic usage selection phenotypes 5.",
+        "options": [
+          "Resistance allele 5",
+          "Melanism 5",
+          "Malaria 5",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 5"
+      },
+      {
+        "question": "Advantage DOK1 Act2 Q6: Match antibiotic usage selection phenotypes 6.",
+        "options": [
+          "Resistance allele 6",
+          "Melanism 6",
+          "Malaria 6",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 6"
+      },
+      {
+        "question": "Advantage DOK1 Act2 Q7: Match antibiotic usage selection phenotypes 7.",
+        "options": [
+          "Resistance allele 7",
+          "Melanism 7",
+          "Malaria 7",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 7"
+      },
+      {
+        "question": "Advantage DOK1 Act2 Q8: Match antibiotic usage selection phenotypes 8.",
+        "options": [
+          "Resistance allele 8",
+          "Melanism 8",
+          "Malaria 8",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 8"
+      },
+      {
+        "question": "Advantage DOK1 Act2 Q9: Match antibiotic usage selection phenotypes 9.",
+        "options": [
+          "Resistance allele 9",
+          "Melanism 9",
+          "Malaria 9",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK1 Act3 Q0: Match antibiotic usage selection phenotypes 0.",
+        "options": [
+          "Resistance allele 0",
+          "Melanism 0",
+          "Malaria 0",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 0"
+      },
+      {
+        "question": "Advantage DOK1 Act3 Q1: Match antibiotic usage selection phenotypes 1.",
+        "options": [
+          "Resistance allele 1",
+          "Melanism 1",
+          "Malaria 1",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 1"
+      },
+      {
+        "question": "Advantage DOK1 Act3 Q2: Match antibiotic usage selection phenotypes 2.",
+        "options": [
+          "Resistance allele 2",
+          "Melanism 2",
+          "Malaria 2",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 2"
+      },
+      {
+        "question": "Advantage DOK1 Act3 Q3: Match antibiotic usage selection phenotypes 3.",
+        "options": [
+          "Resistance allele 3",
+          "Melanism 3",
+          "Malaria 3",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 3"
+      },
+      {
+        "question": "Advantage DOK1 Act3 Q4: Match antibiotic usage selection phenotypes 4.",
+        "options": [
+          "Resistance allele 4",
+          "Melanism 4",
+          "Malaria 4",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 4"
+      },
+      {
+        "question": "Advantage DOK1 Act3 Q5: Match antibiotic usage selection phenotypes 5.",
+        "options": [
+          "Resistance allele 5",
+          "Melanism 5",
+          "Malaria 5",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 5"
+      },
+      {
+        "question": "Advantage DOK1 Act3 Q6: Match antibiotic usage selection phenotypes 6.",
+        "options": [
+          "Resistance allele 6",
+          "Melanism 6",
+          "Malaria 6",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 6"
+      },
+      {
+        "question": "Advantage DOK1 Act3 Q7: Match antibiotic usage selection phenotypes 7.",
+        "options": [
+          "Resistance allele 7",
+          "Melanism 7",
+          "Malaria 7",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 7"
+      },
+      {
+        "question": "Advantage DOK1 Act3 Q8: Match antibiotic usage selection phenotypes 8.",
+        "options": [
+          "Resistance allele 8",
+          "Melanism 8",
+          "Malaria 8",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 8"
+      },
+      {
+        "question": "Advantage DOK1 Act3 Q9: Match antibiotic usage selection phenotypes 9.",
+        "options": [
+          "Resistance allele 9",
+          "Melanism 9",
+          "Malaria 9",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK1 Act4 Q0: Match antibiotic usage selection phenotypes 0.",
+        "options": [
+          "Resistance allele 0",
+          "Melanism 0",
+          "Malaria 0",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 0"
+      },
+      {
+        "question": "Advantage DOK1 Act4 Q1: Match antibiotic usage selection phenotypes 1.",
+        "options": [
+          "Resistance allele 1",
+          "Melanism 1",
+          "Malaria 1",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 1"
+      },
+      {
+        "question": "Advantage DOK1 Act4 Q2: Match antibiotic usage selection phenotypes 2.",
+        "options": [
+          "Resistance allele 2",
+          "Melanism 2",
+          "Malaria 2",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 2"
+      },
+      {
+        "question": "Advantage DOK1 Act4 Q3: Match antibiotic usage selection phenotypes 3.",
+        "options": [
+          "Resistance allele 3",
+          "Melanism 3",
+          "Malaria 3",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 3"
+      },
+      {
+        "question": "Advantage DOK1 Act4 Q4: Match antibiotic usage selection phenotypes 4.",
+        "options": [
+          "Resistance allele 4",
+          "Melanism 4",
+          "Malaria 4",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 4"
+      },
+      {
+        "question": "Advantage DOK1 Act4 Q5: Match antibiotic usage selection phenotypes 5.",
+        "options": [
+          "Resistance allele 5",
+          "Melanism 5",
+          "Malaria 5",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 5"
+      },
+      {
+        "question": "Advantage DOK1 Act4 Q6: Match antibiotic usage selection phenotypes 6.",
+        "options": [
+          "Resistance allele 6",
+          "Melanism 6",
+          "Malaria 6",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 6"
+      },
+      {
+        "question": "Advantage DOK1 Act4 Q7: Match antibiotic usage selection phenotypes 7.",
+        "options": [
+          "Resistance allele 7",
+          "Melanism 7",
+          "Malaria 7",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 7"
+      },
+      {
+        "question": "Advantage DOK1 Act4 Q8: Match antibiotic usage selection phenotypes 8.",
+        "options": [
+          "Resistance allele 8",
+          "Melanism 8",
+          "Malaria 8",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 8"
+      },
+      {
+        "question": "Advantage DOK1 Act4 Q9: Match antibiotic usage selection phenotypes 9.",
+        "options": [
+          "Resistance allele 9",
+          "Melanism 9",
+          "Malaria 9",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK1 Act5 Q0: Match antibiotic usage selection phenotypes 0.",
+        "options": [
+          "Resistance allele 0",
+          "Melanism 0",
+          "Malaria 0",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 0"
+      },
+      {
+        "question": "Advantage DOK1 Act5 Q1: Match antibiotic usage selection phenotypes 1.",
+        "options": [
+          "Resistance allele 1",
+          "Melanism 1",
+          "Malaria 1",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 1"
+      },
+      {
+        "question": "Advantage DOK1 Act5 Q2: Match antibiotic usage selection phenotypes 2.",
+        "options": [
+          "Resistance allele 2",
+          "Melanism 2",
+          "Malaria 2",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 2"
+      },
+      {
+        "question": "Advantage DOK1 Act5 Q3: Match antibiotic usage selection phenotypes 3.",
+        "options": [
+          "Resistance allele 3",
+          "Melanism 3",
+          "Malaria 3",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 3"
+      },
+      {
+        "question": "Advantage DOK1 Act5 Q4: Match antibiotic usage selection phenotypes 4.",
+        "options": [
+          "Resistance allele 4",
+          "Melanism 4",
+          "Malaria 4",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 4"
+      },
+      {
+        "question": "Advantage DOK1 Act5 Q5: Match antibiotic usage selection phenotypes 5.",
+        "options": [
+          "Resistance allele 5",
+          "Melanism 5",
+          "Malaria 5",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 5"
+      },
+      {
+        "question": "Advantage DOK1 Act5 Q6: Match antibiotic usage selection phenotypes 6.",
+        "options": [
+          "Resistance allele 6",
+          "Melanism 6",
+          "Malaria 6",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 6"
+      },
+      {
+        "question": "Advantage DOK1 Act5 Q7: Match antibiotic usage selection phenotypes 7.",
+        "options": [
+          "Resistance allele 7",
+          "Melanism 7",
+          "Malaria 7",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 7"
+      },
+      {
+        "question": "Advantage DOK1 Act5 Q8: Match antibiotic usage selection phenotypes 8.",
+        "options": [
+          "Resistance allele 8",
+          "Melanism 8",
+          "Malaria 8",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 8"
+      },
+      {
+        "question": "Advantage DOK1 Act5 Q9: Match antibiotic usage selection phenotypes 9.",
+        "options": [
+          "Resistance allele 9",
+          "Melanism 9",
+          "Malaria 9",
+          "Pesticide"
+        ],
+        "answer": "Resistance allele 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Advantage DOK2 Act1 Q0: Classify relative fitness selective coefficients 0.",
+        "options": [
+          "Fitness value 0",
+          "Overdominance 0",
+          "Balancing 0",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 0"
+      },
+      {
+        "question": "Advantage DOK2 Act1 Q1: Classify relative fitness selective coefficients 1.",
+        "options": [
+          "Fitness value 1",
+          "Overdominance 1",
+          "Balancing 1",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 1"
+      },
+      {
+        "question": "Advantage DOK2 Act1 Q2: Classify relative fitness selective coefficients 2.",
+        "options": [
+          "Fitness value 2",
+          "Overdominance 2",
+          "Balancing 2",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 2"
+      },
+      {
+        "question": "Advantage DOK2 Act1 Q3: Classify relative fitness selective coefficients 3.",
+        "options": [
+          "Fitness value 3",
+          "Overdominance 3",
+          "Balancing 3",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 3"
+      },
+      {
+        "question": "Advantage DOK2 Act1 Q4: Classify relative fitness selective coefficients 4.",
+        "options": [
+          "Fitness value 4",
+          "Overdominance 4",
+          "Balancing 4",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 4"
+      },
+      {
+        "question": "Advantage DOK2 Act1 Q5: Classify relative fitness selective coefficients 5.",
+        "options": [
+          "Fitness value 5",
+          "Overdominance 5",
+          "Balancing 5",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 5"
+      },
+      {
+        "question": "Advantage DOK2 Act1 Q6: Classify relative fitness selective coefficients 6.",
+        "options": [
+          "Fitness value 6",
+          "Overdominance 6",
+          "Balancing 6",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 6"
+      },
+      {
+        "question": "Advantage DOK2 Act1 Q7: Classify relative fitness selective coefficients 7.",
+        "options": [
+          "Fitness value 7",
+          "Overdominance 7",
+          "Balancing 7",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 7"
+      },
+      {
+        "question": "Advantage DOK2 Act1 Q8: Classify relative fitness selective coefficients 8.",
+        "options": [
+          "Fitness value 8",
+          "Overdominance 8",
+          "Balancing 8",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 8"
+      },
+      {
+        "question": "Advantage DOK2 Act1 Q9: Classify relative fitness selective coefficients 9.",
+        "options": [
+          "Fitness value 9",
+          "Overdominance 9",
+          "Balancing 9",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK2 Act2 Q0: Classify relative fitness selective coefficients 0.",
+        "options": [
+          "Fitness value 0",
+          "Overdominance 0",
+          "Balancing 0",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 0"
+      },
+      {
+        "question": "Advantage DOK2 Act2 Q1: Classify relative fitness selective coefficients 1.",
+        "options": [
+          "Fitness value 1",
+          "Overdominance 1",
+          "Balancing 1",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 1"
+      },
+      {
+        "question": "Advantage DOK2 Act2 Q2: Classify relative fitness selective coefficients 2.",
+        "options": [
+          "Fitness value 2",
+          "Overdominance 2",
+          "Balancing 2",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 2"
+      },
+      {
+        "question": "Advantage DOK2 Act2 Q3: Classify relative fitness selective coefficients 3.",
+        "options": [
+          "Fitness value 3",
+          "Overdominance 3",
+          "Balancing 3",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 3"
+      },
+      {
+        "question": "Advantage DOK2 Act2 Q4: Classify relative fitness selective coefficients 4.",
+        "options": [
+          "Fitness value 4",
+          "Overdominance 4",
+          "Balancing 4",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 4"
+      },
+      {
+        "question": "Advantage DOK2 Act2 Q5: Classify relative fitness selective coefficients 5.",
+        "options": [
+          "Fitness value 5",
+          "Overdominance 5",
+          "Balancing 5",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 5"
+      },
+      {
+        "question": "Advantage DOK2 Act2 Q6: Classify relative fitness selective coefficients 6.",
+        "options": [
+          "Fitness value 6",
+          "Overdominance 6",
+          "Balancing 6",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 6"
+      },
+      {
+        "question": "Advantage DOK2 Act2 Q7: Classify relative fitness selective coefficients 7.",
+        "options": [
+          "Fitness value 7",
+          "Overdominance 7",
+          "Balancing 7",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 7"
+      },
+      {
+        "question": "Advantage DOK2 Act2 Q8: Classify relative fitness selective coefficients 8.",
+        "options": [
+          "Fitness value 8",
+          "Overdominance 8",
+          "Balancing 8",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 8"
+      },
+      {
+        "question": "Advantage DOK2 Act2 Q9: Classify relative fitness selective coefficients 9.",
+        "options": [
+          "Fitness value 9",
+          "Overdominance 9",
+          "Balancing 9",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK2 Act3 Q0: Classify relative fitness selective coefficients 0.",
+        "options": [
+          "Fitness value 0",
+          "Overdominance 0",
+          "Balancing 0",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 0"
+      },
+      {
+        "question": "Advantage DOK2 Act3 Q1: Classify relative fitness selective coefficients 1.",
+        "options": [
+          "Fitness value 1",
+          "Overdominance 1",
+          "Balancing 1",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 1"
+      },
+      {
+        "question": "Advantage DOK2 Act3 Q2: Classify relative fitness selective coefficients 2.",
+        "options": [
+          "Fitness value 2",
+          "Overdominance 2",
+          "Balancing 2",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 2"
+      },
+      {
+        "question": "Advantage DOK2 Act3 Q3: Classify relative fitness selective coefficients 3.",
+        "options": [
+          "Fitness value 3",
+          "Overdominance 3",
+          "Balancing 3",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 3"
+      },
+      {
+        "question": "Advantage DOK2 Act3 Q4: Classify relative fitness selective coefficients 4.",
+        "options": [
+          "Fitness value 4",
+          "Overdominance 4",
+          "Balancing 4",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 4"
+      },
+      {
+        "question": "Advantage DOK2 Act3 Q5: Classify relative fitness selective coefficients 5.",
+        "options": [
+          "Fitness value 5",
+          "Overdominance 5",
+          "Balancing 5",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 5"
+      },
+      {
+        "question": "Advantage DOK2 Act3 Q6: Classify relative fitness selective coefficients 6.",
+        "options": [
+          "Fitness value 6",
+          "Overdominance 6",
+          "Balancing 6",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 6"
+      },
+      {
+        "question": "Advantage DOK2 Act3 Q7: Classify relative fitness selective coefficients 7.",
+        "options": [
+          "Fitness value 7",
+          "Overdominance 7",
+          "Balancing 7",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 7"
+      },
+      {
+        "question": "Advantage DOK2 Act3 Q8: Classify relative fitness selective coefficients 8.",
+        "options": [
+          "Fitness value 8",
+          "Overdominance 8",
+          "Balancing 8",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 8"
+      },
+      {
+        "question": "Advantage DOK2 Act3 Q9: Classify relative fitness selective coefficients 9.",
+        "options": [
+          "Fitness value 9",
+          "Overdominance 9",
+          "Balancing 9",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK2 Act4 Q0: Classify relative fitness selective coefficients 0.",
+        "options": [
+          "Fitness value 0",
+          "Overdominance 0",
+          "Balancing 0",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 0"
+      },
+      {
+        "question": "Advantage DOK2 Act4 Q1: Classify relative fitness selective coefficients 1.",
+        "options": [
+          "Fitness value 1",
+          "Overdominance 1",
+          "Balancing 1",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 1"
+      },
+      {
+        "question": "Advantage DOK2 Act4 Q2: Classify relative fitness selective coefficients 2.",
+        "options": [
+          "Fitness value 2",
+          "Overdominance 2",
+          "Balancing 2",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 2"
+      },
+      {
+        "question": "Advantage DOK2 Act4 Q3: Classify relative fitness selective coefficients 3.",
+        "options": [
+          "Fitness value 3",
+          "Overdominance 3",
+          "Balancing 3",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 3"
+      },
+      {
+        "question": "Advantage DOK2 Act4 Q4: Classify relative fitness selective coefficients 4.",
+        "options": [
+          "Fitness value 4",
+          "Overdominance 4",
+          "Balancing 4",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 4"
+      },
+      {
+        "question": "Advantage DOK2 Act4 Q5: Classify relative fitness selective coefficients 5.",
+        "options": [
+          "Fitness value 5",
+          "Overdominance 5",
+          "Balancing 5",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 5"
+      },
+      {
+        "question": "Advantage DOK2 Act4 Q6: Classify relative fitness selective coefficients 6.",
+        "options": [
+          "Fitness value 6",
+          "Overdominance 6",
+          "Balancing 6",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 6"
+      },
+      {
+        "question": "Advantage DOK2 Act4 Q7: Classify relative fitness selective coefficients 7.",
+        "options": [
+          "Fitness value 7",
+          "Overdominance 7",
+          "Balancing 7",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 7"
+      },
+      {
+        "question": "Advantage DOK2 Act4 Q8: Classify relative fitness selective coefficients 8.",
+        "options": [
+          "Fitness value 8",
+          "Overdominance 8",
+          "Balancing 8",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 8"
+      },
+      {
+        "question": "Advantage DOK2 Act4 Q9: Classify relative fitness selective coefficients 9.",
+        "options": [
+          "Fitness value 9",
+          "Overdominance 9",
+          "Balancing 9",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK2 Act5 Q0: Classify relative fitness selective coefficients 0.",
+        "options": [
+          "Fitness value 0",
+          "Overdominance 0",
+          "Balancing 0",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 0"
+      },
+      {
+        "question": "Advantage DOK2 Act5 Q1: Classify relative fitness selective coefficients 1.",
+        "options": [
+          "Fitness value 1",
+          "Overdominance 1",
+          "Balancing 1",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 1"
+      },
+      {
+        "question": "Advantage DOK2 Act5 Q2: Classify relative fitness selective coefficients 2.",
+        "options": [
+          "Fitness value 2",
+          "Overdominance 2",
+          "Balancing 2",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 2"
+      },
+      {
+        "question": "Advantage DOK2 Act5 Q3: Classify relative fitness selective coefficients 3.",
+        "options": [
+          "Fitness value 3",
+          "Overdominance 3",
+          "Balancing 3",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 3"
+      },
+      {
+        "question": "Advantage DOK2 Act5 Q4: Classify relative fitness selective coefficients 4.",
+        "options": [
+          "Fitness value 4",
+          "Overdominance 4",
+          "Balancing 4",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 4"
+      },
+      {
+        "question": "Advantage DOK2 Act5 Q5: Classify relative fitness selective coefficients 5.",
+        "options": [
+          "Fitness value 5",
+          "Overdominance 5",
+          "Balancing 5",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 5"
+      },
+      {
+        "question": "Advantage DOK2 Act5 Q6: Classify relative fitness selective coefficients 6.",
+        "options": [
+          "Fitness value 6",
+          "Overdominance 6",
+          "Balancing 6",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 6"
+      },
+      {
+        "question": "Advantage DOK2 Act5 Q7: Classify relative fitness selective coefficients 7.",
+        "options": [
+          "Fitness value 7",
+          "Overdominance 7",
+          "Balancing 7",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 7"
+      },
+      {
+        "question": "Advantage DOK2 Act5 Q8: Classify relative fitness selective coefficients 8.",
+        "options": [
+          "Fitness value 8",
+          "Overdominance 8",
+          "Balancing 8",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 8"
+      },
+      {
+        "question": "Advantage DOK2 Act5 Q9: Classify relative fitness selective coefficients 9.",
+        "options": [
+          "Fitness value 9",
+          "Overdominance 9",
+          "Balancing 9",
+          "Frequency-dependent"
+        ],
+        "answer": "Fitness value 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Advantage DOK3 Act1 Q0: Predict next generation allele frequencies under selection 0.",
+        "options": [
+          "Allele frequency 0",
+          "Genotypic 0",
+          "Bottleneck 0",
+          "Generations"
+        ],
+        "answer": "Allele frequency 0"
+      },
+      {
+        "question": "Advantage DOK3 Act1 Q1: Predict next generation allele frequencies under selection 1.",
+        "options": [
+          "Allele frequency 1",
+          "Genotypic 1",
+          "Bottleneck 1",
+          "Generations"
+        ],
+        "answer": "Allele frequency 1"
+      },
+      {
+        "question": "Advantage DOK3 Act1 Q2: Predict next generation allele frequencies under selection 2.",
+        "options": [
+          "Allele frequency 2",
+          "Genotypic 2",
+          "Bottleneck 2",
+          "Generations"
+        ],
+        "answer": "Allele frequency 2"
+      },
+      {
+        "question": "Advantage DOK3 Act1 Q3: Predict next generation allele frequencies under selection 3.",
+        "options": [
+          "Allele frequency 3",
+          "Genotypic 3",
+          "Bottleneck 3",
+          "Generations"
+        ],
+        "answer": "Allele frequency 3"
+      },
+      {
+        "question": "Advantage DOK3 Act1 Q4: Predict next generation allele frequencies under selection 4.",
+        "options": [
+          "Allele frequency 4",
+          "Genotypic 4",
+          "Bottleneck 4",
+          "Generations"
+        ],
+        "answer": "Allele frequency 4"
+      },
+      {
+        "question": "Advantage DOK3 Act1 Q5: Predict next generation allele frequencies under selection 5.",
+        "options": [
+          "Allele frequency 5",
+          "Genotypic 5",
+          "Bottleneck 5",
+          "Generations"
+        ],
+        "answer": "Allele frequency 5"
+      },
+      {
+        "question": "Advantage DOK3 Act1 Q6: Predict next generation allele frequencies under selection 6.",
+        "options": [
+          "Allele frequency 6",
+          "Genotypic 6",
+          "Bottleneck 6",
+          "Generations"
+        ],
+        "answer": "Allele frequency 6"
+      },
+      {
+        "question": "Advantage DOK3 Act1 Q7: Predict next generation allele frequencies under selection 7.",
+        "options": [
+          "Allele frequency 7",
+          "Genotypic 7",
+          "Bottleneck 7",
+          "Generations"
+        ],
+        "answer": "Allele frequency 7"
+      },
+      {
+        "question": "Advantage DOK3 Act1 Q8: Predict next generation allele frequencies under selection 8.",
+        "options": [
+          "Allele frequency 8",
+          "Genotypic 8",
+          "Bottleneck 8",
+          "Generations"
+        ],
+        "answer": "Allele frequency 8"
+      },
+      {
+        "question": "Advantage DOK3 Act1 Q9: Predict next generation allele frequencies under selection 9.",
+        "options": [
+          "Allele frequency 9",
+          "Genotypic 9",
+          "Bottleneck 9",
+          "Generations"
+        ],
+        "answer": "Allele frequency 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK3 Act2 Q0: Predict next generation allele frequencies under selection 0.",
+        "options": [
+          "Allele frequency 0",
+          "Genotypic 0",
+          "Bottleneck 0",
+          "Generations"
+        ],
+        "answer": "Allele frequency 0"
+      },
+      {
+        "question": "Advantage DOK3 Act2 Q1: Predict next generation allele frequencies under selection 1.",
+        "options": [
+          "Allele frequency 1",
+          "Genotypic 1",
+          "Bottleneck 1",
+          "Generations"
+        ],
+        "answer": "Allele frequency 1"
+      },
+      {
+        "question": "Advantage DOK3 Act2 Q2: Predict next generation allele frequencies under selection 2.",
+        "options": [
+          "Allele frequency 2",
+          "Genotypic 2",
+          "Bottleneck 2",
+          "Generations"
+        ],
+        "answer": "Allele frequency 2"
+      },
+      {
+        "question": "Advantage DOK3 Act2 Q3: Predict next generation allele frequencies under selection 3.",
+        "options": [
+          "Allele frequency 3",
+          "Genotypic 3",
+          "Bottleneck 3",
+          "Generations"
+        ],
+        "answer": "Allele frequency 3"
+      },
+      {
+        "question": "Advantage DOK3 Act2 Q4: Predict next generation allele frequencies under selection 4.",
+        "options": [
+          "Allele frequency 4",
+          "Genotypic 4",
+          "Bottleneck 4",
+          "Generations"
+        ],
+        "answer": "Allele frequency 4"
+      },
+      {
+        "question": "Advantage DOK3 Act2 Q5: Predict next generation allele frequencies under selection 5.",
+        "options": [
+          "Allele frequency 5",
+          "Genotypic 5",
+          "Bottleneck 5",
+          "Generations"
+        ],
+        "answer": "Allele frequency 5"
+      },
+      {
+        "question": "Advantage DOK3 Act2 Q6: Predict next generation allele frequencies under selection 6.",
+        "options": [
+          "Allele frequency 6",
+          "Genotypic 6",
+          "Bottleneck 6",
+          "Generations"
+        ],
+        "answer": "Allele frequency 6"
+      },
+      {
+        "question": "Advantage DOK3 Act2 Q7: Predict next generation allele frequencies under selection 7.",
+        "options": [
+          "Allele frequency 7",
+          "Genotypic 7",
+          "Bottleneck 7",
+          "Generations"
+        ],
+        "answer": "Allele frequency 7"
+      },
+      {
+        "question": "Advantage DOK3 Act2 Q8: Predict next generation allele frequencies under selection 8.",
+        "options": [
+          "Allele frequency 8",
+          "Genotypic 8",
+          "Bottleneck 8",
+          "Generations"
+        ],
+        "answer": "Allele frequency 8"
+      },
+      {
+        "question": "Advantage DOK3 Act2 Q9: Predict next generation allele frequencies under selection 9.",
+        "options": [
+          "Allele frequency 9",
+          "Genotypic 9",
+          "Bottleneck 9",
+          "Generations"
+        ],
+        "answer": "Allele frequency 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK3 Act3 Q0: Predict next generation allele frequencies under selection 0.",
+        "options": [
+          "Allele frequency 0",
+          "Genotypic 0",
+          "Bottleneck 0",
+          "Generations"
+        ],
+        "answer": "Allele frequency 0"
+      },
+      {
+        "question": "Advantage DOK3 Act3 Q1: Predict next generation allele frequencies under selection 1.",
+        "options": [
+          "Allele frequency 1",
+          "Genotypic 1",
+          "Bottleneck 1",
+          "Generations"
+        ],
+        "answer": "Allele frequency 1"
+      },
+      {
+        "question": "Advantage DOK3 Act3 Q2: Predict next generation allele frequencies under selection 2.",
+        "options": [
+          "Allele frequency 2",
+          "Genotypic 2",
+          "Bottleneck 2",
+          "Generations"
+        ],
+        "answer": "Allele frequency 2"
+      },
+      {
+        "question": "Advantage DOK3 Act3 Q3: Predict next generation allele frequencies under selection 3.",
+        "options": [
+          "Allele frequency 3",
+          "Genotypic 3",
+          "Bottleneck 3",
+          "Generations"
+        ],
+        "answer": "Allele frequency 3"
+      },
+      {
+        "question": "Advantage DOK3 Act3 Q4: Predict next generation allele frequencies under selection 4.",
+        "options": [
+          "Allele frequency 4",
+          "Genotypic 4",
+          "Bottleneck 4",
+          "Generations"
+        ],
+        "answer": "Allele frequency 4"
+      },
+      {
+        "question": "Advantage DOK3 Act3 Q5: Predict next generation allele frequencies under selection 5.",
+        "options": [
+          "Allele frequency 5",
+          "Genotypic 5",
+          "Bottleneck 5",
+          "Generations"
+        ],
+        "answer": "Allele frequency 5"
+      },
+      {
+        "question": "Advantage DOK3 Act3 Q6: Predict next generation allele frequencies under selection 6.",
+        "options": [
+          "Allele frequency 6",
+          "Genotypic 6",
+          "Bottleneck 6",
+          "Generations"
+        ],
+        "answer": "Allele frequency 6"
+      },
+      {
+        "question": "Advantage DOK3 Act3 Q7: Predict next generation allele frequencies under selection 7.",
+        "options": [
+          "Allele frequency 7",
+          "Genotypic 7",
+          "Bottleneck 7",
+          "Generations"
+        ],
+        "answer": "Allele frequency 7"
+      },
+      {
+        "question": "Advantage DOK3 Act3 Q8: Predict next generation allele frequencies under selection 8.",
+        "options": [
+          "Allele frequency 8",
+          "Genotypic 8",
+          "Bottleneck 8",
+          "Generations"
+        ],
+        "answer": "Allele frequency 8"
+      },
+      {
+        "question": "Advantage DOK3 Act3 Q9: Predict next generation allele frequencies under selection 9.",
+        "options": [
+          "Allele frequency 9",
+          "Genotypic 9",
+          "Bottleneck 9",
+          "Generations"
+        ],
+        "answer": "Allele frequency 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK3 Act4 Q0: Predict next generation allele frequencies under selection 0.",
+        "options": [
+          "Allele frequency 0",
+          "Genotypic 0",
+          "Bottleneck 0",
+          "Generations"
+        ],
+        "answer": "Allele frequency 0"
+      },
+      {
+        "question": "Advantage DOK3 Act4 Q1: Predict next generation allele frequencies under selection 1.",
+        "options": [
+          "Allele frequency 1",
+          "Genotypic 1",
+          "Bottleneck 1",
+          "Generations"
+        ],
+        "answer": "Allele frequency 1"
+      },
+      {
+        "question": "Advantage DOK3 Act4 Q2: Predict next generation allele frequencies under selection 2.",
+        "options": [
+          "Allele frequency 2",
+          "Genotypic 2",
+          "Bottleneck 2",
+          "Generations"
+        ],
+        "answer": "Allele frequency 2"
+      },
+      {
+        "question": "Advantage DOK3 Act4 Q3: Predict next generation allele frequencies under selection 3.",
+        "options": [
+          "Allele frequency 3",
+          "Genotypic 3",
+          "Bottleneck 3",
+          "Generations"
+        ],
+        "answer": "Allele frequency 3"
+      },
+      {
+        "question": "Advantage DOK3 Act4 Q4: Predict next generation allele frequencies under selection 4.",
+        "options": [
+          "Allele frequency 4",
+          "Genotypic 4",
+          "Bottleneck 4",
+          "Generations"
+        ],
+        "answer": "Allele frequency 4"
+      },
+      {
+        "question": "Advantage DOK3 Act4 Q5: Predict next generation allele frequencies under selection 5.",
+        "options": [
+          "Allele frequency 5",
+          "Genotypic 5",
+          "Bottleneck 5",
+          "Generations"
+        ],
+        "answer": "Allele frequency 5"
+      },
+      {
+        "question": "Advantage DOK3 Act4 Q6: Predict next generation allele frequencies under selection 6.",
+        "options": [
+          "Allele frequency 6",
+          "Genotypic 6",
+          "Bottleneck 6",
+          "Generations"
+        ],
+        "answer": "Allele frequency 6"
+      },
+      {
+        "question": "Advantage DOK3 Act4 Q7: Predict next generation allele frequencies under selection 7.",
+        "options": [
+          "Allele frequency 7",
+          "Genotypic 7",
+          "Bottleneck 7",
+          "Generations"
+        ],
+        "answer": "Allele frequency 7"
+      },
+      {
+        "question": "Advantage DOK3 Act4 Q8: Predict next generation allele frequencies under selection 8.",
+        "options": [
+          "Allele frequency 8",
+          "Genotypic 8",
+          "Bottleneck 8",
+          "Generations"
+        ],
+        "answer": "Allele frequency 8"
+      },
+      {
+        "question": "Advantage DOK3 Act4 Q9: Predict next generation allele frequencies under selection 9.",
+        "options": [
+          "Allele frequency 9",
+          "Genotypic 9",
+          "Bottleneck 9",
+          "Generations"
+        ],
+        "answer": "Allele frequency 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK3 Act5 Q0: Predict next generation allele frequencies under selection 0.",
+        "options": [
+          "Allele frequency 0",
+          "Genotypic 0",
+          "Bottleneck 0",
+          "Generations"
+        ],
+        "answer": "Allele frequency 0"
+      },
+      {
+        "question": "Advantage DOK3 Act5 Q1: Predict next generation allele frequencies under selection 1.",
+        "options": [
+          "Allele frequency 1",
+          "Genotypic 1",
+          "Bottleneck 1",
+          "Generations"
+        ],
+        "answer": "Allele frequency 1"
+      },
+      {
+        "question": "Advantage DOK3 Act5 Q2: Predict next generation allele frequencies under selection 2.",
+        "options": [
+          "Allele frequency 2",
+          "Genotypic 2",
+          "Bottleneck 2",
+          "Generations"
+        ],
+        "answer": "Allele frequency 2"
+      },
+      {
+        "question": "Advantage DOK3 Act5 Q3: Predict next generation allele frequencies under selection 3.",
+        "options": [
+          "Allele frequency 3",
+          "Genotypic 3",
+          "Bottleneck 3",
+          "Generations"
+        ],
+        "answer": "Allele frequency 3"
+      },
+      {
+        "question": "Advantage DOK3 Act5 Q4: Predict next generation allele frequencies under selection 4.",
+        "options": [
+          "Allele frequency 4",
+          "Genotypic 4",
+          "Bottleneck 4",
+          "Generations"
+        ],
+        "answer": "Allele frequency 4"
+      },
+      {
+        "question": "Advantage DOK3 Act5 Q5: Predict next generation allele frequencies under selection 5.",
+        "options": [
+          "Allele frequency 5",
+          "Genotypic 5",
+          "Bottleneck 5",
+          "Generations"
+        ],
+        "answer": "Allele frequency 5"
+      },
+      {
+        "question": "Advantage DOK3 Act5 Q6: Predict next generation allele frequencies under selection 6.",
+        "options": [
+          "Allele frequency 6",
+          "Genotypic 6",
+          "Bottleneck 6",
+          "Generations"
+        ],
+        "answer": "Allele frequency 6"
+      },
+      {
+        "question": "Advantage DOK3 Act5 Q7: Predict next generation allele frequencies under selection 7.",
+        "options": [
+          "Allele frequency 7",
+          "Genotypic 7",
+          "Bottleneck 7",
+          "Generations"
+        ],
+        "answer": "Allele frequency 7"
+      },
+      {
+        "question": "Advantage DOK3 Act5 Q8: Predict next generation allele frequencies under selection 8.",
+        "options": [
+          "Allele frequency 8",
+          "Genotypic 8",
+          "Bottleneck 8",
+          "Generations"
+        ],
+        "answer": "Allele frequency 8"
+      },
+      {
+        "question": "Advantage DOK3 Act5 Q9: Predict next generation allele frequencies under selection 9.",
+        "options": [
+          "Allele frequency 9",
+          "Genotypic 9",
+          "Bottleneck 9",
+          "Generations"
+        ],
+        "answer": "Allele frequency 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Advantage DOK4 Act1 Q0: Calibrate advantageous allele rates and bottleneck values 0.",
+        "options": [
+          "Drift tuner 0",
+          "Breeder 0",
+          "Inbreeding 0",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 0"
+      },
+      {
+        "question": "Advantage DOK4 Act1 Q1: Calibrate advantageous allele rates and bottleneck values 1.",
+        "options": [
+          "Drift tuner 1",
+          "Breeder 1",
+          "Inbreeding 1",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 1"
+      },
+      {
+        "question": "Advantage DOK4 Act1 Q2: Calibrate advantageous allele rates and bottleneck values 2.",
+        "options": [
+          "Drift tuner 2",
+          "Breeder 2",
+          "Inbreeding 2",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 2"
+      },
+      {
+        "question": "Advantage DOK4 Act1 Q3: Calibrate advantageous allele rates and bottleneck values 3.",
+        "options": [
+          "Drift tuner 3",
+          "Breeder 3",
+          "Inbreeding 3",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 3"
+      },
+      {
+        "question": "Advantage DOK4 Act1 Q4: Calibrate advantageous allele rates and bottleneck values 4.",
+        "options": [
+          "Drift tuner 4",
+          "Breeder 4",
+          "Inbreeding 4",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 4"
+      },
+      {
+        "question": "Advantage DOK4 Act1 Q5: Calibrate advantageous allele rates and bottleneck values 5.",
+        "options": [
+          "Drift tuner 5",
+          "Breeder 5",
+          "Inbreeding 5",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 5"
+      },
+      {
+        "question": "Advantage DOK4 Act1 Q6: Calibrate advantageous allele rates and bottleneck values 6.",
+        "options": [
+          "Drift tuner 6",
+          "Breeder 6",
+          "Inbreeding 6",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 6"
+      },
+      {
+        "question": "Advantage DOK4 Act1 Q7: Calibrate advantageous allele rates and bottleneck values 7.",
+        "options": [
+          "Drift tuner 7",
+          "Breeder 7",
+          "Inbreeding 7",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 7"
+      },
+      {
+        "question": "Advantage DOK4 Act1 Q8: Calibrate advantageous allele rates and bottleneck values 8.",
+        "options": [
+          "Drift tuner 8",
+          "Breeder 8",
+          "Inbreeding 8",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 8"
+      },
+      {
+        "question": "Advantage DOK4 Act1 Q9: Calibrate advantageous allele rates and bottleneck values 9.",
+        "options": [
+          "Drift tuner 9",
+          "Breeder 9",
+          "Inbreeding 9",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK4 Act2 Q0: Calibrate advantageous allele rates and bottleneck values 0.",
+        "options": [
+          "Drift tuner 0",
+          "Breeder 0",
+          "Inbreeding 0",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 0"
+      },
+      {
+        "question": "Advantage DOK4 Act2 Q1: Calibrate advantageous allele rates and bottleneck values 1.",
+        "options": [
+          "Drift tuner 1",
+          "Breeder 1",
+          "Inbreeding 1",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 1"
+      },
+      {
+        "question": "Advantage DOK4 Act2 Q2: Calibrate advantageous allele rates and bottleneck values 2.",
+        "options": [
+          "Drift tuner 2",
+          "Breeder 2",
+          "Inbreeding 2",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 2"
+      },
+      {
+        "question": "Advantage DOK4 Act2 Q3: Calibrate advantageous allele rates and bottleneck values 3.",
+        "options": [
+          "Drift tuner 3",
+          "Breeder 3",
+          "Inbreeding 3",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 3"
+      },
+      {
+        "question": "Advantage DOK4 Act2 Q4: Calibrate advantageous allele rates and bottleneck values 4.",
+        "options": [
+          "Drift tuner 4",
+          "Breeder 4",
+          "Inbreeding 4",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 4"
+      },
+      {
+        "question": "Advantage DOK4 Act2 Q5: Calibrate advantageous allele rates and bottleneck values 5.",
+        "options": [
+          "Drift tuner 5",
+          "Breeder 5",
+          "Inbreeding 5",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 5"
+      },
+      {
+        "question": "Advantage DOK4 Act2 Q6: Calibrate advantageous allele rates and bottleneck values 6.",
+        "options": [
+          "Drift tuner 6",
+          "Breeder 6",
+          "Inbreeding 6",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 6"
+      },
+      {
+        "question": "Advantage DOK4 Act2 Q7: Calibrate advantageous allele rates and bottleneck values 7.",
+        "options": [
+          "Drift tuner 7",
+          "Breeder 7",
+          "Inbreeding 7",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 7"
+      },
+      {
+        "question": "Advantage DOK4 Act2 Q8: Calibrate advantageous allele rates and bottleneck values 8.",
+        "options": [
+          "Drift tuner 8",
+          "Breeder 8",
+          "Inbreeding 8",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 8"
+      },
+      {
+        "question": "Advantage DOK4 Act2 Q9: Calibrate advantageous allele rates and bottleneck values 9.",
+        "options": [
+          "Drift tuner 9",
+          "Breeder 9",
+          "Inbreeding 9",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK4 Act3 Q0: Calibrate advantageous allele rates and bottleneck values 0.",
+        "options": [
+          "Drift tuner 0",
+          "Breeder 0",
+          "Inbreeding 0",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 0"
+      },
+      {
+        "question": "Advantage DOK4 Act3 Q1: Calibrate advantageous allele rates and bottleneck values 1.",
+        "options": [
+          "Drift tuner 1",
+          "Breeder 1",
+          "Inbreeding 1",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 1"
+      },
+      {
+        "question": "Advantage DOK4 Act3 Q2: Calibrate advantageous allele rates and bottleneck values 2.",
+        "options": [
+          "Drift tuner 2",
+          "Breeder 2",
+          "Inbreeding 2",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 2"
+      },
+      {
+        "question": "Advantage DOK4 Act3 Q3: Calibrate advantageous allele rates and bottleneck values 3.",
+        "options": [
+          "Drift tuner 3",
+          "Breeder 3",
+          "Inbreeding 3",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 3"
+      },
+      {
+        "question": "Advantage DOK4 Act3 Q4: Calibrate advantageous allele rates and bottleneck values 4.",
+        "options": [
+          "Drift tuner 4",
+          "Breeder 4",
+          "Inbreeding 4",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 4"
+      },
+      {
+        "question": "Advantage DOK4 Act3 Q5: Calibrate advantageous allele rates and bottleneck values 5.",
+        "options": [
+          "Drift tuner 5",
+          "Breeder 5",
+          "Inbreeding 5",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 5"
+      },
+      {
+        "question": "Advantage DOK4 Act3 Q6: Calibrate advantageous allele rates and bottleneck values 6.",
+        "options": [
+          "Drift tuner 6",
+          "Breeder 6",
+          "Inbreeding 6",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 6"
+      },
+      {
+        "question": "Advantage DOK4 Act3 Q7: Calibrate advantageous allele rates and bottleneck values 7.",
+        "options": [
+          "Drift tuner 7",
+          "Breeder 7",
+          "Inbreeding 7",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 7"
+      },
+      {
+        "question": "Advantage DOK4 Act3 Q8: Calibrate advantageous allele rates and bottleneck values 8.",
+        "options": [
+          "Drift tuner 8",
+          "Breeder 8",
+          "Inbreeding 8",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 8"
+      },
+      {
+        "question": "Advantage DOK4 Act3 Q9: Calibrate advantageous allele rates and bottleneck values 9.",
+        "options": [
+          "Drift tuner 9",
+          "Breeder 9",
+          "Inbreeding 9",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK4 Act4 Q0: Calibrate advantageous allele rates and bottleneck values 0.",
+        "options": [
+          "Drift tuner 0",
+          "Breeder 0",
+          "Inbreeding 0",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 0"
+      },
+      {
+        "question": "Advantage DOK4 Act4 Q1: Calibrate advantageous allele rates and bottleneck values 1.",
+        "options": [
+          "Drift tuner 1",
+          "Breeder 1",
+          "Inbreeding 1",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 1"
+      },
+      {
+        "question": "Advantage DOK4 Act4 Q2: Calibrate advantageous allele rates and bottleneck values 2.",
+        "options": [
+          "Drift tuner 2",
+          "Breeder 2",
+          "Inbreeding 2",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 2"
+      },
+      {
+        "question": "Advantage DOK4 Act4 Q3: Calibrate advantageous allele rates and bottleneck values 3.",
+        "options": [
+          "Drift tuner 3",
+          "Breeder 3",
+          "Inbreeding 3",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 3"
+      },
+      {
+        "question": "Advantage DOK4 Act4 Q4: Calibrate advantageous allele rates and bottleneck values 4.",
+        "options": [
+          "Drift tuner 4",
+          "Breeder 4",
+          "Inbreeding 4",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 4"
+      },
+      {
+        "question": "Advantage DOK4 Act4 Q5: Calibrate advantageous allele rates and bottleneck values 5.",
+        "options": [
+          "Drift tuner 5",
+          "Breeder 5",
+          "Inbreeding 5",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 5"
+      },
+      {
+        "question": "Advantage DOK4 Act4 Q6: Calibrate advantageous allele rates and bottleneck values 6.",
+        "options": [
+          "Drift tuner 6",
+          "Breeder 6",
+          "Inbreeding 6",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 6"
+      },
+      {
+        "question": "Advantage DOK4 Act4 Q7: Calibrate advantageous allele rates and bottleneck values 7.",
+        "options": [
+          "Drift tuner 7",
+          "Breeder 7",
+          "Inbreeding 7",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 7"
+      },
+      {
+        "question": "Advantage DOK4 Act4 Q8: Calibrate advantageous allele rates and bottleneck values 8.",
+        "options": [
+          "Drift tuner 8",
+          "Breeder 8",
+          "Inbreeding 8",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 8"
+      },
+      {
+        "question": "Advantage DOK4 Act4 Q9: Calibrate advantageous allele rates and bottleneck values 9.",
+        "options": [
+          "Drift tuner 9",
+          "Breeder 9",
+          "Inbreeding 9",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 9"
+      }
+    ],
+    [
+      {
+        "question": "Advantage DOK4 Act5 Q0: Calibrate advantageous allele rates and bottleneck values 0.",
+        "options": [
+          "Drift tuner 0",
+          "Breeder 0",
+          "Inbreeding 0",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 0"
+      },
+      {
+        "question": "Advantage DOK4 Act5 Q1: Calibrate advantageous allele rates and bottleneck values 1.",
+        "options": [
+          "Drift tuner 1",
+          "Breeder 1",
+          "Inbreeding 1",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 1"
+      },
+      {
+        "question": "Advantage DOK4 Act5 Q2: Calibrate advantageous allele rates and bottleneck values 2.",
+        "options": [
+          "Drift tuner 2",
+          "Breeder 2",
+          "Inbreeding 2",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 2"
+      },
+      {
+        "question": "Advantage DOK4 Act5 Q3: Calibrate advantageous allele rates and bottleneck values 3.",
+        "options": [
+          "Drift tuner 3",
+          "Breeder 3",
+          "Inbreeding 3",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 3"
+      },
+      {
+        "question": "Advantage DOK4 Act5 Q4: Calibrate advantageous allele rates and bottleneck values 4.",
+        "options": [
+          "Drift tuner 4",
+          "Breeder 4",
+          "Inbreeding 4",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 4"
+      },
+      {
+        "question": "Advantage DOK4 Act5 Q5: Calibrate advantageous allele rates and bottleneck values 5.",
+        "options": [
+          "Drift tuner 5",
+          "Breeder 5",
+          "Inbreeding 5",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 5"
+      },
+      {
+        "question": "Advantage DOK4 Act5 Q6: Calibrate advantageous allele rates and bottleneck values 6.",
+        "options": [
+          "Drift tuner 6",
+          "Breeder 6",
+          "Inbreeding 6",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 6"
+      },
+      {
+        "question": "Advantage DOK4 Act5 Q7: Calibrate advantageous allele rates and bottleneck values 7.",
+        "options": [
+          "Drift tuner 7",
+          "Breeder 7",
+          "Inbreeding 7",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 7"
+      },
+      {
+        "question": "Advantage DOK4 Act5 Q8: Calibrate advantageous allele rates and bottleneck values 8.",
+        "options": [
+          "Drift tuner 8",
+          "Breeder 8",
+          "Inbreeding 8",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 8"
+      },
+      {
+        "question": "Advantage DOK4 Act5 Q9: Calibrate advantageous allele rates and bottleneck values 9.",
+        "options": [
+          "Drift tuner 9",
+          "Breeder 9",
+          "Inbreeding 9",
+          "Chemotherapy"
+        ],
+        "answer": "Drift tuner 9"
+      }
+    ]
+  ]
+}
+,
+  "OAS.B.LS4.4": {
+  "1": [
+    [
+      {
+        "question": "Adaptation DOK1 Act1 Q0: Match physiological behavioral structural adaptations 0.",
+        "options": [
+          "Adaptation class 0",
+          "Structural 0",
+          "Radiation 0",
+          "Niches"
+        ],
+        "answer": "Adaptation class 0"
+      },
+      {
+        "question": "Adaptation DOK1 Act1 Q1: Match physiological behavioral structural adaptations 1.",
+        "options": [
+          "Adaptation class 1",
+          "Structural 1",
+          "Radiation 1",
+          "Niches"
+        ],
+        "answer": "Adaptation class 1"
+      },
+      {
+        "question": "Adaptation DOK1 Act1 Q2: Match physiological behavioral structural adaptations 2.",
+        "options": [
+          "Adaptation class 2",
+          "Structural 2",
+          "Radiation 2",
+          "Niches"
+        ],
+        "answer": "Adaptation class 2"
+      },
+      {
+        "question": "Adaptation DOK1 Act1 Q3: Match physiological behavioral structural adaptations 3.",
+        "options": [
+          "Adaptation class 3",
+          "Structural 3",
+          "Radiation 3",
+          "Niches"
+        ],
+        "answer": "Adaptation class 3"
+      },
+      {
+        "question": "Adaptation DOK1 Act1 Q4: Match physiological behavioral structural adaptations 4.",
+        "options": [
+          "Adaptation class 4",
+          "Structural 4",
+          "Radiation 4",
+          "Niches"
+        ],
+        "answer": "Adaptation class 4"
+      },
+      {
+        "question": "Adaptation DOK1 Act1 Q5: Match physiological behavioral structural adaptations 5.",
+        "options": [
+          "Adaptation class 5",
+          "Structural 5",
+          "Radiation 5",
+          "Niches"
+        ],
+        "answer": "Adaptation class 5"
+      },
+      {
+        "question": "Adaptation DOK1 Act1 Q6: Match physiological behavioral structural adaptations 6.",
+        "options": [
+          "Adaptation class 6",
+          "Structural 6",
+          "Radiation 6",
+          "Niches"
+        ],
+        "answer": "Adaptation class 6"
+      },
+      {
+        "question": "Adaptation DOK1 Act1 Q7: Match physiological behavioral structural adaptations 7.",
+        "options": [
+          "Adaptation class 7",
+          "Structural 7",
+          "Radiation 7",
+          "Niches"
+        ],
+        "answer": "Adaptation class 7"
+      },
+      {
+        "question": "Adaptation DOK1 Act1 Q8: Match physiological behavioral structural adaptations 8.",
+        "options": [
+          "Adaptation class 8",
+          "Structural 8",
+          "Radiation 8",
+          "Niches"
+        ],
+        "answer": "Adaptation class 8"
+      },
+      {
+        "question": "Adaptation DOK1 Act1 Q9: Match physiological behavioral structural adaptations 9.",
+        "options": [
+          "Adaptation class 9",
+          "Structural 9",
+          "Radiation 9",
+          "Niches"
+        ],
+        "answer": "Adaptation class 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK1 Act2 Q0: Match physiological behavioral structural adaptations 0.",
+        "options": [
+          "Adaptation class 0",
+          "Structural 0",
+          "Radiation 0",
+          "Niches"
+        ],
+        "answer": "Adaptation class 0"
+      },
+      {
+        "question": "Adaptation DOK1 Act2 Q1: Match physiological behavioral structural adaptations 1.",
+        "options": [
+          "Adaptation class 1",
+          "Structural 1",
+          "Radiation 1",
+          "Niches"
+        ],
+        "answer": "Adaptation class 1"
+      },
+      {
+        "question": "Adaptation DOK1 Act2 Q2: Match physiological behavioral structural adaptations 2.",
+        "options": [
+          "Adaptation class 2",
+          "Structural 2",
+          "Radiation 2",
+          "Niches"
+        ],
+        "answer": "Adaptation class 2"
+      },
+      {
+        "question": "Adaptation DOK1 Act2 Q3: Match physiological behavioral structural adaptations 3.",
+        "options": [
+          "Adaptation class 3",
+          "Structural 3",
+          "Radiation 3",
+          "Niches"
+        ],
+        "answer": "Adaptation class 3"
+      },
+      {
+        "question": "Adaptation DOK1 Act2 Q4: Match physiological behavioral structural adaptations 4.",
+        "options": [
+          "Adaptation class 4",
+          "Structural 4",
+          "Radiation 4",
+          "Niches"
+        ],
+        "answer": "Adaptation class 4"
+      },
+      {
+        "question": "Adaptation DOK1 Act2 Q5: Match physiological behavioral structural adaptations 5.",
+        "options": [
+          "Adaptation class 5",
+          "Structural 5",
+          "Radiation 5",
+          "Niches"
+        ],
+        "answer": "Adaptation class 5"
+      },
+      {
+        "question": "Adaptation DOK1 Act2 Q6: Match physiological behavioral structural adaptations 6.",
+        "options": [
+          "Adaptation class 6",
+          "Structural 6",
+          "Radiation 6",
+          "Niches"
+        ],
+        "answer": "Adaptation class 6"
+      },
+      {
+        "question": "Adaptation DOK1 Act2 Q7: Match physiological behavioral structural adaptations 7.",
+        "options": [
+          "Adaptation class 7",
+          "Structural 7",
+          "Radiation 7",
+          "Niches"
+        ],
+        "answer": "Adaptation class 7"
+      },
+      {
+        "question": "Adaptation DOK1 Act2 Q8: Match physiological behavioral structural adaptations 8.",
+        "options": [
+          "Adaptation class 8",
+          "Structural 8",
+          "Radiation 8",
+          "Niches"
+        ],
+        "answer": "Adaptation class 8"
+      },
+      {
+        "question": "Adaptation DOK1 Act2 Q9: Match physiological behavioral structural adaptations 9.",
+        "options": [
+          "Adaptation class 9",
+          "Structural 9",
+          "Radiation 9",
+          "Niches"
+        ],
+        "answer": "Adaptation class 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK1 Act3 Q0: Match physiological behavioral structural adaptations 0.",
+        "options": [
+          "Adaptation class 0",
+          "Structural 0",
+          "Radiation 0",
+          "Niches"
+        ],
+        "answer": "Adaptation class 0"
+      },
+      {
+        "question": "Adaptation DOK1 Act3 Q1: Match physiological behavioral structural adaptations 1.",
+        "options": [
+          "Adaptation class 1",
+          "Structural 1",
+          "Radiation 1",
+          "Niches"
+        ],
+        "answer": "Adaptation class 1"
+      },
+      {
+        "question": "Adaptation DOK1 Act3 Q2: Match physiological behavioral structural adaptations 2.",
+        "options": [
+          "Adaptation class 2",
+          "Structural 2",
+          "Radiation 2",
+          "Niches"
+        ],
+        "answer": "Adaptation class 2"
+      },
+      {
+        "question": "Adaptation DOK1 Act3 Q3: Match physiological behavioral structural adaptations 3.",
+        "options": [
+          "Adaptation class 3",
+          "Structural 3",
+          "Radiation 3",
+          "Niches"
+        ],
+        "answer": "Adaptation class 3"
+      },
+      {
+        "question": "Adaptation DOK1 Act3 Q4: Match physiological behavioral structural adaptations 4.",
+        "options": [
+          "Adaptation class 4",
+          "Structural 4",
+          "Radiation 4",
+          "Niches"
+        ],
+        "answer": "Adaptation class 4"
+      },
+      {
+        "question": "Adaptation DOK1 Act3 Q5: Match physiological behavioral structural adaptations 5.",
+        "options": [
+          "Adaptation class 5",
+          "Structural 5",
+          "Radiation 5",
+          "Niches"
+        ],
+        "answer": "Adaptation class 5"
+      },
+      {
+        "question": "Adaptation DOK1 Act3 Q6: Match physiological behavioral structural adaptations 6.",
+        "options": [
+          "Adaptation class 6",
+          "Structural 6",
+          "Radiation 6",
+          "Niches"
+        ],
+        "answer": "Adaptation class 6"
+      },
+      {
+        "question": "Adaptation DOK1 Act3 Q7: Match physiological behavioral structural adaptations 7.",
+        "options": [
+          "Adaptation class 7",
+          "Structural 7",
+          "Radiation 7",
+          "Niches"
+        ],
+        "answer": "Adaptation class 7"
+      },
+      {
+        "question": "Adaptation DOK1 Act3 Q8: Match physiological behavioral structural adaptations 8.",
+        "options": [
+          "Adaptation class 8",
+          "Structural 8",
+          "Radiation 8",
+          "Niches"
+        ],
+        "answer": "Adaptation class 8"
+      },
+      {
+        "question": "Adaptation DOK1 Act3 Q9: Match physiological behavioral structural adaptations 9.",
+        "options": [
+          "Adaptation class 9",
+          "Structural 9",
+          "Radiation 9",
+          "Niches"
+        ],
+        "answer": "Adaptation class 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK1 Act4 Q0: Match physiological behavioral structural adaptations 0.",
+        "options": [
+          "Adaptation class 0",
+          "Structural 0",
+          "Radiation 0",
+          "Niches"
+        ],
+        "answer": "Adaptation class 0"
+      },
+      {
+        "question": "Adaptation DOK1 Act4 Q1: Match physiological behavioral structural adaptations 1.",
+        "options": [
+          "Adaptation class 1",
+          "Structural 1",
+          "Radiation 1",
+          "Niches"
+        ],
+        "answer": "Adaptation class 1"
+      },
+      {
+        "question": "Adaptation DOK1 Act4 Q2: Match physiological behavioral structural adaptations 2.",
+        "options": [
+          "Adaptation class 2",
+          "Structural 2",
+          "Radiation 2",
+          "Niches"
+        ],
+        "answer": "Adaptation class 2"
+      },
+      {
+        "question": "Adaptation DOK1 Act4 Q3: Match physiological behavioral structural adaptations 3.",
+        "options": [
+          "Adaptation class 3",
+          "Structural 3",
+          "Radiation 3",
+          "Niches"
+        ],
+        "answer": "Adaptation class 3"
+      },
+      {
+        "question": "Adaptation DOK1 Act4 Q4: Match physiological behavioral structural adaptations 4.",
+        "options": [
+          "Adaptation class 4",
+          "Structural 4",
+          "Radiation 4",
+          "Niches"
+        ],
+        "answer": "Adaptation class 4"
+      },
+      {
+        "question": "Adaptation DOK1 Act4 Q5: Match physiological behavioral structural adaptations 5.",
+        "options": [
+          "Adaptation class 5",
+          "Structural 5",
+          "Radiation 5",
+          "Niches"
+        ],
+        "answer": "Adaptation class 5"
+      },
+      {
+        "question": "Adaptation DOK1 Act4 Q6: Match physiological behavioral structural adaptations 6.",
+        "options": [
+          "Adaptation class 6",
+          "Structural 6",
+          "Radiation 6",
+          "Niches"
+        ],
+        "answer": "Adaptation class 6"
+      },
+      {
+        "question": "Adaptation DOK1 Act4 Q7: Match physiological behavioral structural adaptations 7.",
+        "options": [
+          "Adaptation class 7",
+          "Structural 7",
+          "Radiation 7",
+          "Niches"
+        ],
+        "answer": "Adaptation class 7"
+      },
+      {
+        "question": "Adaptation DOK1 Act4 Q8: Match physiological behavioral structural adaptations 8.",
+        "options": [
+          "Adaptation class 8",
+          "Structural 8",
+          "Radiation 8",
+          "Niches"
+        ],
+        "answer": "Adaptation class 8"
+      },
+      {
+        "question": "Adaptation DOK1 Act4 Q9: Match physiological behavioral structural adaptations 9.",
+        "options": [
+          "Adaptation class 9",
+          "Structural 9",
+          "Radiation 9",
+          "Niches"
+        ],
+        "answer": "Adaptation class 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK1 Act5 Q0: Match physiological behavioral structural adaptations 0.",
+        "options": [
+          "Adaptation class 0",
+          "Structural 0",
+          "Radiation 0",
+          "Niches"
+        ],
+        "answer": "Adaptation class 0"
+      },
+      {
+        "question": "Adaptation DOK1 Act5 Q1: Match physiological behavioral structural adaptations 1.",
+        "options": [
+          "Adaptation class 1",
+          "Structural 1",
+          "Radiation 1",
+          "Niches"
+        ],
+        "answer": "Adaptation class 1"
+      },
+      {
+        "question": "Adaptation DOK1 Act5 Q2: Match physiological behavioral structural adaptations 2.",
+        "options": [
+          "Adaptation class 2",
+          "Structural 2",
+          "Radiation 2",
+          "Niches"
+        ],
+        "answer": "Adaptation class 2"
+      },
+      {
+        "question": "Adaptation DOK1 Act5 Q3: Match physiological behavioral structural adaptations 3.",
+        "options": [
+          "Adaptation class 3",
+          "Structural 3",
+          "Radiation 3",
+          "Niches"
+        ],
+        "answer": "Adaptation class 3"
+      },
+      {
+        "question": "Adaptation DOK1 Act5 Q4: Match physiological behavioral structural adaptations 4.",
+        "options": [
+          "Adaptation class 4",
+          "Structural 4",
+          "Radiation 4",
+          "Niches"
+        ],
+        "answer": "Adaptation class 4"
+      },
+      {
+        "question": "Adaptation DOK1 Act5 Q5: Match physiological behavioral structural adaptations 5.",
+        "options": [
+          "Adaptation class 5",
+          "Structural 5",
+          "Radiation 5",
+          "Niches"
+        ],
+        "answer": "Adaptation class 5"
+      },
+      {
+        "question": "Adaptation DOK1 Act5 Q6: Match physiological behavioral structural adaptations 6.",
+        "options": [
+          "Adaptation class 6",
+          "Structural 6",
+          "Radiation 6",
+          "Niches"
+        ],
+        "answer": "Adaptation class 6"
+      },
+      {
+        "question": "Adaptation DOK1 Act5 Q7: Match physiological behavioral structural adaptations 7.",
+        "options": [
+          "Adaptation class 7",
+          "Structural 7",
+          "Radiation 7",
+          "Niches"
+        ],
+        "answer": "Adaptation class 7"
+      },
+      {
+        "question": "Adaptation DOK1 Act5 Q8: Match physiological behavioral structural adaptations 8.",
+        "options": [
+          "Adaptation class 8",
+          "Structural 8",
+          "Radiation 8",
+          "Niches"
+        ],
+        "answer": "Adaptation class 8"
+      },
+      {
+        "question": "Adaptation DOK1 Act5 Q9: Match physiological behavioral structural adaptations 9.",
+        "options": [
+          "Adaptation class 9",
+          "Structural 9",
+          "Radiation 9",
+          "Niches"
+        ],
+        "answer": "Adaptation class 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Adaptation DOK2 Act1 Q0: Classify allopatric sympatric speciation events 0.",
+        "options": [
+          "Speciation class 0",
+          "Prezygotic 0",
+          "Postzygotic 0",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 0"
+      },
+      {
+        "question": "Adaptation DOK2 Act1 Q1: Classify allopatric sympatric speciation events 1.",
+        "options": [
+          "Speciation class 1",
+          "Prezygotic 1",
+          "Postzygotic 1",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 1"
+      },
+      {
+        "question": "Adaptation DOK2 Act1 Q2: Classify allopatric sympatric speciation events 2.",
+        "options": [
+          "Speciation class 2",
+          "Prezygotic 2",
+          "Postzygotic 2",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 2"
+      },
+      {
+        "question": "Adaptation DOK2 Act1 Q3: Classify allopatric sympatric speciation events 3.",
+        "options": [
+          "Speciation class 3",
+          "Prezygotic 3",
+          "Postzygotic 3",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 3"
+      },
+      {
+        "question": "Adaptation DOK2 Act1 Q4: Classify allopatric sympatric speciation events 4.",
+        "options": [
+          "Speciation class 4",
+          "Prezygotic 4",
+          "Postzygotic 4",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 4"
+      },
+      {
+        "question": "Adaptation DOK2 Act1 Q5: Classify allopatric sympatric speciation events 5.",
+        "options": [
+          "Speciation class 5",
+          "Prezygotic 5",
+          "Postzygotic 5",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 5"
+      },
+      {
+        "question": "Adaptation DOK2 Act1 Q6: Classify allopatric sympatric speciation events 6.",
+        "options": [
+          "Speciation class 6",
+          "Prezygotic 6",
+          "Postzygotic 6",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 6"
+      },
+      {
+        "question": "Adaptation DOK2 Act1 Q7: Classify allopatric sympatric speciation events 7.",
+        "options": [
+          "Speciation class 7",
+          "Prezygotic 7",
+          "Postzygotic 7",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 7"
+      },
+      {
+        "question": "Adaptation DOK2 Act1 Q8: Classify allopatric sympatric speciation events 8.",
+        "options": [
+          "Speciation class 8",
+          "Prezygotic 8",
+          "Postzygotic 8",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 8"
+      },
+      {
+        "question": "Adaptation DOK2 Act1 Q9: Classify allopatric sympatric speciation events 9.",
+        "options": [
+          "Speciation class 9",
+          "Prezygotic 9",
+          "Postzygotic 9",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK2 Act2 Q0: Classify allopatric sympatric speciation events 0.",
+        "options": [
+          "Speciation class 0",
+          "Prezygotic 0",
+          "Postzygotic 0",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 0"
+      },
+      {
+        "question": "Adaptation DOK2 Act2 Q1: Classify allopatric sympatric speciation events 1.",
+        "options": [
+          "Speciation class 1",
+          "Prezygotic 1",
+          "Postzygotic 1",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 1"
+      },
+      {
+        "question": "Adaptation DOK2 Act2 Q2: Classify allopatric sympatric speciation events 2.",
+        "options": [
+          "Speciation class 2",
+          "Prezygotic 2",
+          "Postzygotic 2",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 2"
+      },
+      {
+        "question": "Adaptation DOK2 Act2 Q3: Classify allopatric sympatric speciation events 3.",
+        "options": [
+          "Speciation class 3",
+          "Prezygotic 3",
+          "Postzygotic 3",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 3"
+      },
+      {
+        "question": "Adaptation DOK2 Act2 Q4: Classify allopatric sympatric speciation events 4.",
+        "options": [
+          "Speciation class 4",
+          "Prezygotic 4",
+          "Postzygotic 4",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 4"
+      },
+      {
+        "question": "Adaptation DOK2 Act2 Q5: Classify allopatric sympatric speciation events 5.",
+        "options": [
+          "Speciation class 5",
+          "Prezygotic 5",
+          "Postzygotic 5",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 5"
+      },
+      {
+        "question": "Adaptation DOK2 Act2 Q6: Classify allopatric sympatric speciation events 6.",
+        "options": [
+          "Speciation class 6",
+          "Prezygotic 6",
+          "Postzygotic 6",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 6"
+      },
+      {
+        "question": "Adaptation DOK2 Act2 Q7: Classify allopatric sympatric speciation events 7.",
+        "options": [
+          "Speciation class 7",
+          "Prezygotic 7",
+          "Postzygotic 7",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 7"
+      },
+      {
+        "question": "Adaptation DOK2 Act2 Q8: Classify allopatric sympatric speciation events 8.",
+        "options": [
+          "Speciation class 8",
+          "Prezygotic 8",
+          "Postzygotic 8",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 8"
+      },
+      {
+        "question": "Adaptation DOK2 Act2 Q9: Classify allopatric sympatric speciation events 9.",
+        "options": [
+          "Speciation class 9",
+          "Prezygotic 9",
+          "Postzygotic 9",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK2 Act3 Q0: Classify allopatric sympatric speciation events 0.",
+        "options": [
+          "Speciation class 0",
+          "Prezygotic 0",
+          "Postzygotic 0",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 0"
+      },
+      {
+        "question": "Adaptation DOK2 Act3 Q1: Classify allopatric sympatric speciation events 1.",
+        "options": [
+          "Speciation class 1",
+          "Prezygotic 1",
+          "Postzygotic 1",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 1"
+      },
+      {
+        "question": "Adaptation DOK2 Act3 Q2: Classify allopatric sympatric speciation events 2.",
+        "options": [
+          "Speciation class 2",
+          "Prezygotic 2",
+          "Postzygotic 2",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 2"
+      },
+      {
+        "question": "Adaptation DOK2 Act3 Q3: Classify allopatric sympatric speciation events 3.",
+        "options": [
+          "Speciation class 3",
+          "Prezygotic 3",
+          "Postzygotic 3",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 3"
+      },
+      {
+        "question": "Adaptation DOK2 Act3 Q4: Classify allopatric sympatric speciation events 4.",
+        "options": [
+          "Speciation class 4",
+          "Prezygotic 4",
+          "Postzygotic 4",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 4"
+      },
+      {
+        "question": "Adaptation DOK2 Act3 Q5: Classify allopatric sympatric speciation events 5.",
+        "options": [
+          "Speciation class 5",
+          "Prezygotic 5",
+          "Postzygotic 5",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 5"
+      },
+      {
+        "question": "Adaptation DOK2 Act3 Q6: Classify allopatric sympatric speciation events 6.",
+        "options": [
+          "Speciation class 6",
+          "Prezygotic 6",
+          "Postzygotic 6",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 6"
+      },
+      {
+        "question": "Adaptation DOK2 Act3 Q7: Classify allopatric sympatric speciation events 7.",
+        "options": [
+          "Speciation class 7",
+          "Prezygotic 7",
+          "Postzygotic 7",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 7"
+      },
+      {
+        "question": "Adaptation DOK2 Act3 Q8: Classify allopatric sympatric speciation events 8.",
+        "options": [
+          "Speciation class 8",
+          "Prezygotic 8",
+          "Postzygotic 8",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 8"
+      },
+      {
+        "question": "Adaptation DOK2 Act3 Q9: Classify allopatric sympatric speciation events 9.",
+        "options": [
+          "Speciation class 9",
+          "Prezygotic 9",
+          "Postzygotic 9",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK2 Act4 Q0: Classify allopatric sympatric speciation events 0.",
+        "options": [
+          "Speciation class 0",
+          "Prezygotic 0",
+          "Postzygotic 0",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 0"
+      },
+      {
+        "question": "Adaptation DOK2 Act4 Q1: Classify allopatric sympatric speciation events 1.",
+        "options": [
+          "Speciation class 1",
+          "Prezygotic 1",
+          "Postzygotic 1",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 1"
+      },
+      {
+        "question": "Adaptation DOK2 Act4 Q2: Classify allopatric sympatric speciation events 2.",
+        "options": [
+          "Speciation class 2",
+          "Prezygotic 2",
+          "Postzygotic 2",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 2"
+      },
+      {
+        "question": "Adaptation DOK2 Act4 Q3: Classify allopatric sympatric speciation events 3.",
+        "options": [
+          "Speciation class 3",
+          "Prezygotic 3",
+          "Postzygotic 3",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 3"
+      },
+      {
+        "question": "Adaptation DOK2 Act4 Q4: Classify allopatric sympatric speciation events 4.",
+        "options": [
+          "Speciation class 4",
+          "Prezygotic 4",
+          "Postzygotic 4",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 4"
+      },
+      {
+        "question": "Adaptation DOK2 Act4 Q5: Classify allopatric sympatric speciation events 5.",
+        "options": [
+          "Speciation class 5",
+          "Prezygotic 5",
+          "Postzygotic 5",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 5"
+      },
+      {
+        "question": "Adaptation DOK2 Act4 Q6: Classify allopatric sympatric speciation events 6.",
+        "options": [
+          "Speciation class 6",
+          "Prezygotic 6",
+          "Postzygotic 6",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 6"
+      },
+      {
+        "question": "Adaptation DOK2 Act4 Q7: Classify allopatric sympatric speciation events 7.",
+        "options": [
+          "Speciation class 7",
+          "Prezygotic 7",
+          "Postzygotic 7",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 7"
+      },
+      {
+        "question": "Adaptation DOK2 Act4 Q8: Classify allopatric sympatric speciation events 8.",
+        "options": [
+          "Speciation class 8",
+          "Prezygotic 8",
+          "Postzygotic 8",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 8"
+      },
+      {
+        "question": "Adaptation DOK2 Act4 Q9: Classify allopatric sympatric speciation events 9.",
+        "options": [
+          "Speciation class 9",
+          "Prezygotic 9",
+          "Postzygotic 9",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK2 Act5 Q0: Classify allopatric sympatric speciation events 0.",
+        "options": [
+          "Speciation class 0",
+          "Prezygotic 0",
+          "Postzygotic 0",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 0"
+      },
+      {
+        "question": "Adaptation DOK2 Act5 Q1: Classify allopatric sympatric speciation events 1.",
+        "options": [
+          "Speciation class 1",
+          "Prezygotic 1",
+          "Postzygotic 1",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 1"
+      },
+      {
+        "question": "Adaptation DOK2 Act5 Q2: Classify allopatric sympatric speciation events 2.",
+        "options": [
+          "Speciation class 2",
+          "Prezygotic 2",
+          "Postzygotic 2",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 2"
+      },
+      {
+        "question": "Adaptation DOK2 Act5 Q3: Classify allopatric sympatric speciation events 3.",
+        "options": [
+          "Speciation class 3",
+          "Prezygotic 3",
+          "Postzygotic 3",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 3"
+      },
+      {
+        "question": "Adaptation DOK2 Act5 Q4: Classify allopatric sympatric speciation events 4.",
+        "options": [
+          "Speciation class 4",
+          "Prezygotic 4",
+          "Postzygotic 4",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 4"
+      },
+      {
+        "question": "Adaptation DOK2 Act5 Q5: Classify allopatric sympatric speciation events 5.",
+        "options": [
+          "Speciation class 5",
+          "Prezygotic 5",
+          "Postzygotic 5",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 5"
+      },
+      {
+        "question": "Adaptation DOK2 Act5 Q6: Classify allopatric sympatric speciation events 6.",
+        "options": [
+          "Speciation class 6",
+          "Prezygotic 6",
+          "Postzygotic 6",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 6"
+      },
+      {
+        "question": "Adaptation DOK2 Act5 Q7: Classify allopatric sympatric speciation events 7.",
+        "options": [
+          "Speciation class 7",
+          "Prezygotic 7",
+          "Postzygotic 7",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 7"
+      },
+      {
+        "question": "Adaptation DOK2 Act5 Q8: Classify allopatric sympatric speciation events 8.",
+        "options": [
+          "Speciation class 8",
+          "Prezygotic 8",
+          "Postzygotic 8",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 8"
+      },
+      {
+        "question": "Adaptation DOK2 Act5 Q9: Classify allopatric sympatric speciation events 9.",
+        "options": [
+          "Speciation class 9",
+          "Prezygotic 9",
+          "Postzygotic 9",
+          "Coevolutionary"
+        ],
+        "answer": "Speciation class 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Adaptation DOK3 Act1 Q0: Solve finch beak adaptive radiations ecological drivers 0.",
+        "options": [
+          "Beak driver 0",
+          "Isolation 0",
+          "Hybrid 0",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 0"
+      },
+      {
+        "question": "Adaptation DOK3 Act1 Q1: Solve finch beak adaptive radiations ecological drivers 1.",
+        "options": [
+          "Beak driver 1",
+          "Isolation 1",
+          "Hybrid 1",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 1"
+      },
+      {
+        "question": "Adaptation DOK3 Act1 Q2: Solve finch beak adaptive radiations ecological drivers 2.",
+        "options": [
+          "Beak driver 2",
+          "Isolation 2",
+          "Hybrid 2",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 2"
+      },
+      {
+        "question": "Adaptation DOK3 Act1 Q3: Solve finch beak adaptive radiations ecological drivers 3.",
+        "options": [
+          "Beak driver 3",
+          "Isolation 3",
+          "Hybrid 3",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 3"
+      },
+      {
+        "question": "Adaptation DOK3 Act1 Q4: Solve finch beak adaptive radiations ecological drivers 4.",
+        "options": [
+          "Beak driver 4",
+          "Isolation 4",
+          "Hybrid 4",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 4"
+      },
+      {
+        "question": "Adaptation DOK3 Act1 Q5: Solve finch beak adaptive radiations ecological drivers 5.",
+        "options": [
+          "Beak driver 5",
+          "Isolation 5",
+          "Hybrid 5",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 5"
+      },
+      {
+        "question": "Adaptation DOK3 Act1 Q6: Solve finch beak adaptive radiations ecological drivers 6.",
+        "options": [
+          "Beak driver 6",
+          "Isolation 6",
+          "Hybrid 6",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 6"
+      },
+      {
+        "question": "Adaptation DOK3 Act1 Q7: Solve finch beak adaptive radiations ecological drivers 7.",
+        "options": [
+          "Beak driver 7",
+          "Isolation 7",
+          "Hybrid 7",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 7"
+      },
+      {
+        "question": "Adaptation DOK3 Act1 Q8: Solve finch beak adaptive radiations ecological drivers 8.",
+        "options": [
+          "Beak driver 8",
+          "Isolation 8",
+          "Hybrid 8",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 8"
+      },
+      {
+        "question": "Adaptation DOK3 Act1 Q9: Solve finch beak adaptive radiations ecological drivers 9.",
+        "options": [
+          "Beak driver 9",
+          "Isolation 9",
+          "Hybrid 9",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK3 Act2 Q0: Solve finch beak adaptive radiations ecological drivers 0.",
+        "options": [
+          "Beak driver 0",
+          "Isolation 0",
+          "Hybrid 0",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 0"
+      },
+      {
+        "question": "Adaptation DOK3 Act2 Q1: Solve finch beak adaptive radiations ecological drivers 1.",
+        "options": [
+          "Beak driver 1",
+          "Isolation 1",
+          "Hybrid 1",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 1"
+      },
+      {
+        "question": "Adaptation DOK3 Act2 Q2: Solve finch beak adaptive radiations ecological drivers 2.",
+        "options": [
+          "Beak driver 2",
+          "Isolation 2",
+          "Hybrid 2",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 2"
+      },
+      {
+        "question": "Adaptation DOK3 Act2 Q3: Solve finch beak adaptive radiations ecological drivers 3.",
+        "options": [
+          "Beak driver 3",
+          "Isolation 3",
+          "Hybrid 3",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 3"
+      },
+      {
+        "question": "Adaptation DOK3 Act2 Q4: Solve finch beak adaptive radiations ecological drivers 4.",
+        "options": [
+          "Beak driver 4",
+          "Isolation 4",
+          "Hybrid 4",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 4"
+      },
+      {
+        "question": "Adaptation DOK3 Act2 Q5: Solve finch beak adaptive radiations ecological drivers 5.",
+        "options": [
+          "Beak driver 5",
+          "Isolation 5",
+          "Hybrid 5",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 5"
+      },
+      {
+        "question": "Adaptation DOK3 Act2 Q6: Solve finch beak adaptive radiations ecological drivers 6.",
+        "options": [
+          "Beak driver 6",
+          "Isolation 6",
+          "Hybrid 6",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 6"
+      },
+      {
+        "question": "Adaptation DOK3 Act2 Q7: Solve finch beak adaptive radiations ecological drivers 7.",
+        "options": [
+          "Beak driver 7",
+          "Isolation 7",
+          "Hybrid 7",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 7"
+      },
+      {
+        "question": "Adaptation DOK3 Act2 Q8: Solve finch beak adaptive radiations ecological drivers 8.",
+        "options": [
+          "Beak driver 8",
+          "Isolation 8",
+          "Hybrid 8",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 8"
+      },
+      {
+        "question": "Adaptation DOK3 Act2 Q9: Solve finch beak adaptive radiations ecological drivers 9.",
+        "options": [
+          "Beak driver 9",
+          "Isolation 9",
+          "Hybrid 9",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK3 Act3 Q0: Solve finch beak adaptive radiations ecological drivers 0.",
+        "options": [
+          "Beak driver 0",
+          "Isolation 0",
+          "Hybrid 0",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 0"
+      },
+      {
+        "question": "Adaptation DOK3 Act3 Q1: Solve finch beak adaptive radiations ecological drivers 1.",
+        "options": [
+          "Beak driver 1",
+          "Isolation 1",
+          "Hybrid 1",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 1"
+      },
+      {
+        "question": "Adaptation DOK3 Act3 Q2: Solve finch beak adaptive radiations ecological drivers 2.",
+        "options": [
+          "Beak driver 2",
+          "Isolation 2",
+          "Hybrid 2",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 2"
+      },
+      {
+        "question": "Adaptation DOK3 Act3 Q3: Solve finch beak adaptive radiations ecological drivers 3.",
+        "options": [
+          "Beak driver 3",
+          "Isolation 3",
+          "Hybrid 3",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 3"
+      },
+      {
+        "question": "Adaptation DOK3 Act3 Q4: Solve finch beak adaptive radiations ecological drivers 4.",
+        "options": [
+          "Beak driver 4",
+          "Isolation 4",
+          "Hybrid 4",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 4"
+      },
+      {
+        "question": "Adaptation DOK3 Act3 Q5: Solve finch beak adaptive radiations ecological drivers 5.",
+        "options": [
+          "Beak driver 5",
+          "Isolation 5",
+          "Hybrid 5",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 5"
+      },
+      {
+        "question": "Adaptation DOK3 Act3 Q6: Solve finch beak adaptive radiations ecological drivers 6.",
+        "options": [
+          "Beak driver 6",
+          "Isolation 6",
+          "Hybrid 6",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 6"
+      },
+      {
+        "question": "Adaptation DOK3 Act3 Q7: Solve finch beak adaptive radiations ecological drivers 7.",
+        "options": [
+          "Beak driver 7",
+          "Isolation 7",
+          "Hybrid 7",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 7"
+      },
+      {
+        "question": "Adaptation DOK3 Act3 Q8: Solve finch beak adaptive radiations ecological drivers 8.",
+        "options": [
+          "Beak driver 8",
+          "Isolation 8",
+          "Hybrid 8",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 8"
+      },
+      {
+        "question": "Adaptation DOK3 Act3 Q9: Solve finch beak adaptive radiations ecological drivers 9.",
+        "options": [
+          "Beak driver 9",
+          "Isolation 9",
+          "Hybrid 9",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK3 Act4 Q0: Solve finch beak adaptive radiations ecological drivers 0.",
+        "options": [
+          "Beak driver 0",
+          "Isolation 0",
+          "Hybrid 0",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 0"
+      },
+      {
+        "question": "Adaptation DOK3 Act4 Q1: Solve finch beak adaptive radiations ecological drivers 1.",
+        "options": [
+          "Beak driver 1",
+          "Isolation 1",
+          "Hybrid 1",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 1"
+      },
+      {
+        "question": "Adaptation DOK3 Act4 Q2: Solve finch beak adaptive radiations ecological drivers 2.",
+        "options": [
+          "Beak driver 2",
+          "Isolation 2",
+          "Hybrid 2",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 2"
+      },
+      {
+        "question": "Adaptation DOK3 Act4 Q3: Solve finch beak adaptive radiations ecological drivers 3.",
+        "options": [
+          "Beak driver 3",
+          "Isolation 3",
+          "Hybrid 3",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 3"
+      },
+      {
+        "question": "Adaptation DOK3 Act4 Q4: Solve finch beak adaptive radiations ecological drivers 4.",
+        "options": [
+          "Beak driver 4",
+          "Isolation 4",
+          "Hybrid 4",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 4"
+      },
+      {
+        "question": "Adaptation DOK3 Act4 Q5: Solve finch beak adaptive radiations ecological drivers 5.",
+        "options": [
+          "Beak driver 5",
+          "Isolation 5",
+          "Hybrid 5",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 5"
+      },
+      {
+        "question": "Adaptation DOK3 Act4 Q6: Solve finch beak adaptive radiations ecological drivers 6.",
+        "options": [
+          "Beak driver 6",
+          "Isolation 6",
+          "Hybrid 6",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 6"
+      },
+      {
+        "question": "Adaptation DOK3 Act4 Q7: Solve finch beak adaptive radiations ecological drivers 7.",
+        "options": [
+          "Beak driver 7",
+          "Isolation 7",
+          "Hybrid 7",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 7"
+      },
+      {
+        "question": "Adaptation DOK3 Act4 Q8: Solve finch beak adaptive radiations ecological drivers 8.",
+        "options": [
+          "Beak driver 8",
+          "Isolation 8",
+          "Hybrid 8",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 8"
+      },
+      {
+        "question": "Adaptation DOK3 Act4 Q9: Solve finch beak adaptive radiations ecological drivers 9.",
+        "options": [
+          "Beak driver 9",
+          "Isolation 9",
+          "Hybrid 9",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK3 Act5 Q0: Solve finch beak adaptive radiations ecological drivers 0.",
+        "options": [
+          "Beak driver 0",
+          "Isolation 0",
+          "Hybrid 0",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 0"
+      },
+      {
+        "question": "Adaptation DOK3 Act5 Q1: Solve finch beak adaptive radiations ecological drivers 1.",
+        "options": [
+          "Beak driver 1",
+          "Isolation 1",
+          "Hybrid 1",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 1"
+      },
+      {
+        "question": "Adaptation DOK3 Act5 Q2: Solve finch beak adaptive radiations ecological drivers 2.",
+        "options": [
+          "Beak driver 2",
+          "Isolation 2",
+          "Hybrid 2",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 2"
+      },
+      {
+        "question": "Adaptation DOK3 Act5 Q3: Solve finch beak adaptive radiations ecological drivers 3.",
+        "options": [
+          "Beak driver 3",
+          "Isolation 3",
+          "Hybrid 3",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 3"
+      },
+      {
+        "question": "Adaptation DOK3 Act5 Q4: Solve finch beak adaptive radiations ecological drivers 4.",
+        "options": [
+          "Beak driver 4",
+          "Isolation 4",
+          "Hybrid 4",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 4"
+      },
+      {
+        "question": "Adaptation DOK3 Act5 Q5: Solve finch beak adaptive radiations ecological drivers 5.",
+        "options": [
+          "Beak driver 5",
+          "Isolation 5",
+          "Hybrid 5",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 5"
+      },
+      {
+        "question": "Adaptation DOK3 Act5 Q6: Solve finch beak adaptive radiations ecological drivers 6.",
+        "options": [
+          "Beak driver 6",
+          "Isolation 6",
+          "Hybrid 6",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 6"
+      },
+      {
+        "question": "Adaptation DOK3 Act5 Q7: Solve finch beak adaptive radiations ecological drivers 7.",
+        "options": [
+          "Beak driver 7",
+          "Isolation 7",
+          "Hybrid 7",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 7"
+      },
+      {
+        "question": "Adaptation DOK3 Act5 Q8: Solve finch beak adaptive radiations ecological drivers 8.",
+        "options": [
+          "Beak driver 8",
+          "Isolation 8",
+          "Hybrid 8",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 8"
+      },
+      {
+        "question": "Adaptation DOK3 Act5 Q9: Solve finch beak adaptive radiations ecological drivers 9.",
+        "options": [
+          "Beak driver 9",
+          "Isolation 9",
+          "Hybrid 9",
+          "Toxicity"
+        ],
+        "answer": "Beak driver 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Adaptation DOK4 Act1 Q0: Calibrate fitness peaks and phenotypic variance landscapes 0.",
+        "options": [
+          "Landscape tuner 0",
+          "Assortative 0",
+          "Pheromone 0",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 0"
+      },
+      {
+        "question": "Adaptation DOK4 Act1 Q1: Calibrate fitness peaks and phenotypic variance landscapes 1.",
+        "options": [
+          "Landscape tuner 1",
+          "Assortative 1",
+          "Pheromone 1",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 1"
+      },
+      {
+        "question": "Adaptation DOK4 Act1 Q2: Calibrate fitness peaks and phenotypic variance landscapes 2.",
+        "options": [
+          "Landscape tuner 2",
+          "Assortative 2",
+          "Pheromone 2",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 2"
+      },
+      {
+        "question": "Adaptation DOK4 Act1 Q3: Calibrate fitness peaks and phenotypic variance landscapes 3.",
+        "options": [
+          "Landscape tuner 3",
+          "Assortative 3",
+          "Pheromone 3",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 3"
+      },
+      {
+        "question": "Adaptation DOK4 Act1 Q4: Calibrate fitness peaks and phenotypic variance landscapes 4.",
+        "options": [
+          "Landscape tuner 4",
+          "Assortative 4",
+          "Pheromone 4",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 4"
+      },
+      {
+        "question": "Adaptation DOK4 Act1 Q5: Calibrate fitness peaks and phenotypic variance landscapes 5.",
+        "options": [
+          "Landscape tuner 5",
+          "Assortative 5",
+          "Pheromone 5",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 5"
+      },
+      {
+        "question": "Adaptation DOK4 Act1 Q6: Calibrate fitness peaks and phenotypic variance landscapes 6.",
+        "options": [
+          "Landscape tuner 6",
+          "Assortative 6",
+          "Pheromone 6",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 6"
+      },
+      {
+        "question": "Adaptation DOK4 Act1 Q7: Calibrate fitness peaks and phenotypic variance landscapes 7.",
+        "options": [
+          "Landscape tuner 7",
+          "Assortative 7",
+          "Pheromone 7",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 7"
+      },
+      {
+        "question": "Adaptation DOK4 Act1 Q8: Calibrate fitness peaks and phenotypic variance landscapes 8.",
+        "options": [
+          "Landscape tuner 8",
+          "Assortative 8",
+          "Pheromone 8",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 8"
+      },
+      {
+        "question": "Adaptation DOK4 Act1 Q9: Calibrate fitness peaks and phenotypic variance landscapes 9.",
+        "options": [
+          "Landscape tuner 9",
+          "Assortative 9",
+          "Pheromone 9",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK4 Act2 Q0: Calibrate fitness peaks and phenotypic variance landscapes 0.",
+        "options": [
+          "Landscape tuner 0",
+          "Assortative 0",
+          "Pheromone 0",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 0"
+      },
+      {
+        "question": "Adaptation DOK4 Act2 Q1: Calibrate fitness peaks and phenotypic variance landscapes 1.",
+        "options": [
+          "Landscape tuner 1",
+          "Assortative 1",
+          "Pheromone 1",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 1"
+      },
+      {
+        "question": "Adaptation DOK4 Act2 Q2: Calibrate fitness peaks and phenotypic variance landscapes 2.",
+        "options": [
+          "Landscape tuner 2",
+          "Assortative 2",
+          "Pheromone 2",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 2"
+      },
+      {
+        "question": "Adaptation DOK4 Act2 Q3: Calibrate fitness peaks and phenotypic variance landscapes 3.",
+        "options": [
+          "Landscape tuner 3",
+          "Assortative 3",
+          "Pheromone 3",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 3"
+      },
+      {
+        "question": "Adaptation DOK4 Act2 Q4: Calibrate fitness peaks and phenotypic variance landscapes 4.",
+        "options": [
+          "Landscape tuner 4",
+          "Assortative 4",
+          "Pheromone 4",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 4"
+      },
+      {
+        "question": "Adaptation DOK4 Act2 Q5: Calibrate fitness peaks and phenotypic variance landscapes 5.",
+        "options": [
+          "Landscape tuner 5",
+          "Assortative 5",
+          "Pheromone 5",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 5"
+      },
+      {
+        "question": "Adaptation DOK4 Act2 Q6: Calibrate fitness peaks and phenotypic variance landscapes 6.",
+        "options": [
+          "Landscape tuner 6",
+          "Assortative 6",
+          "Pheromone 6",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 6"
+      },
+      {
+        "question": "Adaptation DOK4 Act2 Q7: Calibrate fitness peaks and phenotypic variance landscapes 7.",
+        "options": [
+          "Landscape tuner 7",
+          "Assortative 7",
+          "Pheromone 7",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 7"
+      },
+      {
+        "question": "Adaptation DOK4 Act2 Q8: Calibrate fitness peaks and phenotypic variance landscapes 8.",
+        "options": [
+          "Landscape tuner 8",
+          "Assortative 8",
+          "Pheromone 8",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 8"
+      },
+      {
+        "question": "Adaptation DOK4 Act2 Q9: Calibrate fitness peaks and phenotypic variance landscapes 9.",
+        "options": [
+          "Landscape tuner 9",
+          "Assortative 9",
+          "Pheromone 9",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK4 Act3 Q0: Calibrate fitness peaks and phenotypic variance landscapes 0.",
+        "options": [
+          "Landscape tuner 0",
+          "Assortative 0",
+          "Pheromone 0",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 0"
+      },
+      {
+        "question": "Adaptation DOK4 Act3 Q1: Calibrate fitness peaks and phenotypic variance landscapes 1.",
+        "options": [
+          "Landscape tuner 1",
+          "Assortative 1",
+          "Pheromone 1",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 1"
+      },
+      {
+        "question": "Adaptation DOK4 Act3 Q2: Calibrate fitness peaks and phenotypic variance landscapes 2.",
+        "options": [
+          "Landscape tuner 2",
+          "Assortative 2",
+          "Pheromone 2",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 2"
+      },
+      {
+        "question": "Adaptation DOK4 Act3 Q3: Calibrate fitness peaks and phenotypic variance landscapes 3.",
+        "options": [
+          "Landscape tuner 3",
+          "Assortative 3",
+          "Pheromone 3",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 3"
+      },
+      {
+        "question": "Adaptation DOK4 Act3 Q4: Calibrate fitness peaks and phenotypic variance landscapes 4.",
+        "options": [
+          "Landscape tuner 4",
+          "Assortative 4",
+          "Pheromone 4",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 4"
+      },
+      {
+        "question": "Adaptation DOK4 Act3 Q5: Calibrate fitness peaks and phenotypic variance landscapes 5.",
+        "options": [
+          "Landscape tuner 5",
+          "Assortative 5",
+          "Pheromone 5",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 5"
+      },
+      {
+        "question": "Adaptation DOK4 Act3 Q6: Calibrate fitness peaks and phenotypic variance landscapes 6.",
+        "options": [
+          "Landscape tuner 6",
+          "Assortative 6",
+          "Pheromone 6",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 6"
+      },
+      {
+        "question": "Adaptation DOK4 Act3 Q7: Calibrate fitness peaks and phenotypic variance landscapes 7.",
+        "options": [
+          "Landscape tuner 7",
+          "Assortative 7",
+          "Pheromone 7",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 7"
+      },
+      {
+        "question": "Adaptation DOK4 Act3 Q8: Calibrate fitness peaks and phenotypic variance landscapes 8.",
+        "options": [
+          "Landscape tuner 8",
+          "Assortative 8",
+          "Pheromone 8",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 8"
+      },
+      {
+        "question": "Adaptation DOK4 Act3 Q9: Calibrate fitness peaks and phenotypic variance landscapes 9.",
+        "options": [
+          "Landscape tuner 9",
+          "Assortative 9",
+          "Pheromone 9",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK4 Act4 Q0: Calibrate fitness peaks and phenotypic variance landscapes 0.",
+        "options": [
+          "Landscape tuner 0",
+          "Assortative 0",
+          "Pheromone 0",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 0"
+      },
+      {
+        "question": "Adaptation DOK4 Act4 Q1: Calibrate fitness peaks and phenotypic variance landscapes 1.",
+        "options": [
+          "Landscape tuner 1",
+          "Assortative 1",
+          "Pheromone 1",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 1"
+      },
+      {
+        "question": "Adaptation DOK4 Act4 Q2: Calibrate fitness peaks and phenotypic variance landscapes 2.",
+        "options": [
+          "Landscape tuner 2",
+          "Assortative 2",
+          "Pheromone 2",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 2"
+      },
+      {
+        "question": "Adaptation DOK4 Act4 Q3: Calibrate fitness peaks and phenotypic variance landscapes 3.",
+        "options": [
+          "Landscape tuner 3",
+          "Assortative 3",
+          "Pheromone 3",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 3"
+      },
+      {
+        "question": "Adaptation DOK4 Act4 Q4: Calibrate fitness peaks and phenotypic variance landscapes 4.",
+        "options": [
+          "Landscape tuner 4",
+          "Assortative 4",
+          "Pheromone 4",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 4"
+      },
+      {
+        "question": "Adaptation DOK4 Act4 Q5: Calibrate fitness peaks and phenotypic variance landscapes 5.",
+        "options": [
+          "Landscape tuner 5",
+          "Assortative 5",
+          "Pheromone 5",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 5"
+      },
+      {
+        "question": "Adaptation DOK4 Act4 Q6: Calibrate fitness peaks and phenotypic variance landscapes 6.",
+        "options": [
+          "Landscape tuner 6",
+          "Assortative 6",
+          "Pheromone 6",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 6"
+      },
+      {
+        "question": "Adaptation DOK4 Act4 Q7: Calibrate fitness peaks and phenotypic variance landscapes 7.",
+        "options": [
+          "Landscape tuner 7",
+          "Assortative 7",
+          "Pheromone 7",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 7"
+      },
+      {
+        "question": "Adaptation DOK4 Act4 Q8: Calibrate fitness peaks and phenotypic variance landscapes 8.",
+        "options": [
+          "Landscape tuner 8",
+          "Assortative 8",
+          "Pheromone 8",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 8"
+      },
+      {
+        "question": "Adaptation DOK4 Act4 Q9: Calibrate fitness peaks and phenotypic variance landscapes 9.",
+        "options": [
+          "Landscape tuner 9",
+          "Assortative 9",
+          "Pheromone 9",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 9"
+      }
+    ],
+    [
+      {
+        "question": "Adaptation DOK4 Act5 Q0: Calibrate fitness peaks and phenotypic variance landscapes 0.",
+        "options": [
+          "Landscape tuner 0",
+          "Assortative 0",
+          "Pheromone 0",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 0"
+      },
+      {
+        "question": "Adaptation DOK4 Act5 Q1: Calibrate fitness peaks and phenotypic variance landscapes 1.",
+        "options": [
+          "Landscape tuner 1",
+          "Assortative 1",
+          "Pheromone 1",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 1"
+      },
+      {
+        "question": "Adaptation DOK4 Act5 Q2: Calibrate fitness peaks and phenotypic variance landscapes 2.",
+        "options": [
+          "Landscape tuner 2",
+          "Assortative 2",
+          "Pheromone 2",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 2"
+      },
+      {
+        "question": "Adaptation DOK4 Act5 Q3: Calibrate fitness peaks and phenotypic variance landscapes 3.",
+        "options": [
+          "Landscape tuner 3",
+          "Assortative 3",
+          "Pheromone 3",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 3"
+      },
+      {
+        "question": "Adaptation DOK4 Act5 Q4: Calibrate fitness peaks and phenotypic variance landscapes 4.",
+        "options": [
+          "Landscape tuner 4",
+          "Assortative 4",
+          "Pheromone 4",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 4"
+      },
+      {
+        "question": "Adaptation DOK4 Act5 Q5: Calibrate fitness peaks and phenotypic variance landscapes 5.",
+        "options": [
+          "Landscape tuner 5",
+          "Assortative 5",
+          "Pheromone 5",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 5"
+      },
+      {
+        "question": "Adaptation DOK4 Act5 Q6: Calibrate fitness peaks and phenotypic variance landscapes 6.",
+        "options": [
+          "Landscape tuner 6",
+          "Assortative 6",
+          "Pheromone 6",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 6"
+      },
+      {
+        "question": "Adaptation DOK4 Act5 Q7: Calibrate fitness peaks and phenotypic variance landscapes 7.",
+        "options": [
+          "Landscape tuner 7",
+          "Assortative 7",
+          "Pheromone 7",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 7"
+      },
+      {
+        "question": "Adaptation DOK4 Act5 Q8: Calibrate fitness peaks and phenotypic variance landscapes 8.",
+        "options": [
+          "Landscape tuner 8",
+          "Assortative 8",
+          "Pheromone 8",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 8"
+      },
+      {
+        "question": "Adaptation DOK4 Act5 Q9: Calibrate fitness peaks and phenotypic variance landscapes 9.",
+        "options": [
+          "Landscape tuner 9",
+          "Assortative 9",
+          "Pheromone 9",
+          "Fruit"
+        ],
+        "answer": "Landscape tuner 9"
+      }
+    ]
+  ]
+}
+,
+  "OAS.B.LS4.5": {
+  "1": [
+    [
+      {
+        "question": "Extinction DOK1 Act1 Q0: Identify the primary driver of extinction risk in 0.",
+        "options": [
+          "Extinction driver 0",
+          "Neutral factor 0",
+          "Climate 0",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 0"
+      },
+      {
+        "question": "Extinction DOK1 Act1 Q1: Identify the primary driver of extinction risk in 1.",
+        "options": [
+          "Extinction driver 1",
+          "Neutral factor 1",
+          "Climate 1",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 1"
+      },
+      {
+        "question": "Extinction DOK1 Act1 Q2: Identify the primary driver of extinction risk in 2.",
+        "options": [
+          "Extinction driver 2",
+          "Neutral factor 2",
+          "Climate 2",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 2"
+      },
+      {
+        "question": "Extinction DOK1 Act1 Q3: Identify the primary driver of extinction risk in 3.",
+        "options": [
+          "Extinction driver 3",
+          "Neutral factor 3",
+          "Climate 3",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 3"
+      },
+      {
+        "question": "Extinction DOK1 Act1 Q4: Identify the primary driver of extinction risk in 4.",
+        "options": [
+          "Extinction driver 4",
+          "Neutral factor 4",
+          "Climate 4",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 4"
+      },
+      {
+        "question": "Extinction DOK1 Act1 Q5: Identify the primary driver of extinction risk in 5.",
+        "options": [
+          "Extinction driver 5",
+          "Neutral factor 5",
+          "Climate 5",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 5"
+      },
+      {
+        "question": "Extinction DOK1 Act1 Q6: Identify the primary driver of extinction risk in 6.",
+        "options": [
+          "Extinction driver 6",
+          "Neutral factor 6",
+          "Climate 6",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 6"
+      },
+      {
+        "question": "Extinction DOK1 Act1 Q7: Identify the primary driver of extinction risk in 7.",
+        "options": [
+          "Extinction driver 7",
+          "Neutral factor 7",
+          "Climate 7",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 7"
+      },
+      {
+        "question": "Extinction DOK1 Act1 Q8: Identify the primary driver of extinction risk in 8.",
+        "options": [
+          "Extinction driver 8",
+          "Neutral factor 8",
+          "Climate 8",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 8"
+      },
+      {
+        "question": "Extinction DOK1 Act1 Q9: Identify the primary driver of extinction risk in 9.",
+        "options": [
+          "Extinction driver 9",
+          "Neutral factor 9",
+          "Climate 9",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK1 Act2 Q0: Identify the primary driver of extinction risk in 0.",
+        "options": [
+          "Extinction driver 0",
+          "Neutral factor 0",
+          "Climate 0",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 0"
+      },
+      {
+        "question": "Extinction DOK1 Act2 Q1: Identify the primary driver of extinction risk in 1.",
+        "options": [
+          "Extinction driver 1",
+          "Neutral factor 1",
+          "Climate 1",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 1"
+      },
+      {
+        "question": "Extinction DOK1 Act2 Q2: Identify the primary driver of extinction risk in 2.",
+        "options": [
+          "Extinction driver 2",
+          "Neutral factor 2",
+          "Climate 2",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 2"
+      },
+      {
+        "question": "Extinction DOK1 Act2 Q3: Identify the primary driver of extinction risk in 3.",
+        "options": [
+          "Extinction driver 3",
+          "Neutral factor 3",
+          "Climate 3",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 3"
+      },
+      {
+        "question": "Extinction DOK1 Act2 Q4: Identify the primary driver of extinction risk in 4.",
+        "options": [
+          "Extinction driver 4",
+          "Neutral factor 4",
+          "Climate 4",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 4"
+      },
+      {
+        "question": "Extinction DOK1 Act2 Q5: Identify the primary driver of extinction risk in 5.",
+        "options": [
+          "Extinction driver 5",
+          "Neutral factor 5",
+          "Climate 5",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 5"
+      },
+      {
+        "question": "Extinction DOK1 Act2 Q6: Identify the primary driver of extinction risk in 6.",
+        "options": [
+          "Extinction driver 6",
+          "Neutral factor 6",
+          "Climate 6",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 6"
+      },
+      {
+        "question": "Extinction DOK1 Act2 Q7: Identify the primary driver of extinction risk in 7.",
+        "options": [
+          "Extinction driver 7",
+          "Neutral factor 7",
+          "Climate 7",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 7"
+      },
+      {
+        "question": "Extinction DOK1 Act2 Q8: Identify the primary driver of extinction risk in 8.",
+        "options": [
+          "Extinction driver 8",
+          "Neutral factor 8",
+          "Climate 8",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 8"
+      },
+      {
+        "question": "Extinction DOK1 Act2 Q9: Identify the primary driver of extinction risk in 9.",
+        "options": [
+          "Extinction driver 9",
+          "Neutral factor 9",
+          "Climate 9",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK1 Act3 Q0: Identify the primary driver of extinction risk in 0.",
+        "options": [
+          "Extinction driver 0",
+          "Neutral factor 0",
+          "Climate 0",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 0"
+      },
+      {
+        "question": "Extinction DOK1 Act3 Q1: Identify the primary driver of extinction risk in 1.",
+        "options": [
+          "Extinction driver 1",
+          "Neutral factor 1",
+          "Climate 1",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 1"
+      },
+      {
+        "question": "Extinction DOK1 Act3 Q2: Identify the primary driver of extinction risk in 2.",
+        "options": [
+          "Extinction driver 2",
+          "Neutral factor 2",
+          "Climate 2",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 2"
+      },
+      {
+        "question": "Extinction DOK1 Act3 Q3: Identify the primary driver of extinction risk in 3.",
+        "options": [
+          "Extinction driver 3",
+          "Neutral factor 3",
+          "Climate 3",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 3"
+      },
+      {
+        "question": "Extinction DOK1 Act3 Q4: Identify the primary driver of extinction risk in 4.",
+        "options": [
+          "Extinction driver 4",
+          "Neutral factor 4",
+          "Climate 4",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 4"
+      },
+      {
+        "question": "Extinction DOK1 Act3 Q5: Identify the primary driver of extinction risk in 5.",
+        "options": [
+          "Extinction driver 5",
+          "Neutral factor 5",
+          "Climate 5",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 5"
+      },
+      {
+        "question": "Extinction DOK1 Act3 Q6: Identify the primary driver of extinction risk in 6.",
+        "options": [
+          "Extinction driver 6",
+          "Neutral factor 6",
+          "Climate 6",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 6"
+      },
+      {
+        "question": "Extinction DOK1 Act3 Q7: Identify the primary driver of extinction risk in 7.",
+        "options": [
+          "Extinction driver 7",
+          "Neutral factor 7",
+          "Climate 7",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 7"
+      },
+      {
+        "question": "Extinction DOK1 Act3 Q8: Identify the primary driver of extinction risk in 8.",
+        "options": [
+          "Extinction driver 8",
+          "Neutral factor 8",
+          "Climate 8",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 8"
+      },
+      {
+        "question": "Extinction DOK1 Act3 Q9: Identify the primary driver of extinction risk in 9.",
+        "options": [
+          "Extinction driver 9",
+          "Neutral factor 9",
+          "Climate 9",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK1 Act4 Q0: Identify the primary driver of extinction risk in 0.",
+        "options": [
+          "Extinction driver 0",
+          "Neutral factor 0",
+          "Climate 0",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 0"
+      },
+      {
+        "question": "Extinction DOK1 Act4 Q1: Identify the primary driver of extinction risk in 1.",
+        "options": [
+          "Extinction driver 1",
+          "Neutral factor 1",
+          "Climate 1",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 1"
+      },
+      {
+        "question": "Extinction DOK1 Act4 Q2: Identify the primary driver of extinction risk in 2.",
+        "options": [
+          "Extinction driver 2",
+          "Neutral factor 2",
+          "Climate 2",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 2"
+      },
+      {
+        "question": "Extinction DOK1 Act4 Q3: Identify the primary driver of extinction risk in 3.",
+        "options": [
+          "Extinction driver 3",
+          "Neutral factor 3",
+          "Climate 3",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 3"
+      },
+      {
+        "question": "Extinction DOK1 Act4 Q4: Identify the primary driver of extinction risk in 4.",
+        "options": [
+          "Extinction driver 4",
+          "Neutral factor 4",
+          "Climate 4",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 4"
+      },
+      {
+        "question": "Extinction DOK1 Act4 Q5: Identify the primary driver of extinction risk in 5.",
+        "options": [
+          "Extinction driver 5",
+          "Neutral factor 5",
+          "Climate 5",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 5"
+      },
+      {
+        "question": "Extinction DOK1 Act4 Q6: Identify the primary driver of extinction risk in 6.",
+        "options": [
+          "Extinction driver 6",
+          "Neutral factor 6",
+          "Climate 6",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 6"
+      },
+      {
+        "question": "Extinction DOK1 Act4 Q7: Identify the primary driver of extinction risk in 7.",
+        "options": [
+          "Extinction driver 7",
+          "Neutral factor 7",
+          "Climate 7",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 7"
+      },
+      {
+        "question": "Extinction DOK1 Act4 Q8: Identify the primary driver of extinction risk in 8.",
+        "options": [
+          "Extinction driver 8",
+          "Neutral factor 8",
+          "Climate 8",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 8"
+      },
+      {
+        "question": "Extinction DOK1 Act4 Q9: Identify the primary driver of extinction risk in 9.",
+        "options": [
+          "Extinction driver 9",
+          "Neutral factor 9",
+          "Climate 9",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK1 Act5 Q0: Identify the primary driver of extinction risk in 0.",
+        "options": [
+          "Extinction driver 0",
+          "Neutral factor 0",
+          "Climate 0",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 0"
+      },
+      {
+        "question": "Extinction DOK1 Act5 Q1: Identify the primary driver of extinction risk in 1.",
+        "options": [
+          "Extinction driver 1",
+          "Neutral factor 1",
+          "Climate 1",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 1"
+      },
+      {
+        "question": "Extinction DOK1 Act5 Q2: Identify the primary driver of extinction risk in 2.",
+        "options": [
+          "Extinction driver 2",
+          "Neutral factor 2",
+          "Climate 2",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 2"
+      },
+      {
+        "question": "Extinction DOK1 Act5 Q3: Identify the primary driver of extinction risk in 3.",
+        "options": [
+          "Extinction driver 3",
+          "Neutral factor 3",
+          "Climate 3",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 3"
+      },
+      {
+        "question": "Extinction DOK1 Act5 Q4: Identify the primary driver of extinction risk in 4.",
+        "options": [
+          "Extinction driver 4",
+          "Neutral factor 4",
+          "Climate 4",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 4"
+      },
+      {
+        "question": "Extinction DOK1 Act5 Q5: Identify the primary driver of extinction risk in 5.",
+        "options": [
+          "Extinction driver 5",
+          "Neutral factor 5",
+          "Climate 5",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 5"
+      },
+      {
+        "question": "Extinction DOK1 Act5 Q6: Identify the primary driver of extinction risk in 6.",
+        "options": [
+          "Extinction driver 6",
+          "Neutral factor 6",
+          "Climate 6",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 6"
+      },
+      {
+        "question": "Extinction DOK1 Act5 Q7: Identify the primary driver of extinction risk in 7.",
+        "options": [
+          "Extinction driver 7",
+          "Neutral factor 7",
+          "Climate 7",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 7"
+      },
+      {
+        "question": "Extinction DOK1 Act5 Q8: Identify the primary driver of extinction risk in 8.",
+        "options": [
+          "Extinction driver 8",
+          "Neutral factor 8",
+          "Climate 8",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 8"
+      },
+      {
+        "question": "Extinction DOK1 Act5 Q9: Identify the primary driver of extinction risk in 9.",
+        "options": [
+          "Extinction driver 9",
+          "Neutral factor 9",
+          "Climate 9",
+          "Niche shift"
+        ],
+        "answer": "Extinction driver 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Extinction DOK2 Act1 Q0: Classify environmental shift factors 0.",
+        "options": [
+          "Shift factor 0",
+          "Adaptive 0",
+          "Geographic 0",
+          "Demographic"
+        ],
+        "answer": "Shift factor 0"
+      },
+      {
+        "question": "Extinction DOK2 Act1 Q1: Classify environmental shift factors 1.",
+        "options": [
+          "Shift factor 1",
+          "Adaptive 1",
+          "Geographic 1",
+          "Demographic"
+        ],
+        "answer": "Shift factor 1"
+      },
+      {
+        "question": "Extinction DOK2 Act1 Q2: Classify environmental shift factors 2.",
+        "options": [
+          "Shift factor 2",
+          "Adaptive 2",
+          "Geographic 2",
+          "Demographic"
+        ],
+        "answer": "Shift factor 2"
+      },
+      {
+        "question": "Extinction DOK2 Act1 Q3: Classify environmental shift factors 3.",
+        "options": [
+          "Shift factor 3",
+          "Adaptive 3",
+          "Geographic 3",
+          "Demographic"
+        ],
+        "answer": "Shift factor 3"
+      },
+      {
+        "question": "Extinction DOK2 Act1 Q4: Classify environmental shift factors 4.",
+        "options": [
+          "Shift factor 4",
+          "Adaptive 4",
+          "Geographic 4",
+          "Demographic"
+        ],
+        "answer": "Shift factor 4"
+      },
+      {
+        "question": "Extinction DOK2 Act1 Q5: Classify environmental shift factors 5.",
+        "options": [
+          "Shift factor 5",
+          "Adaptive 5",
+          "Geographic 5",
+          "Demographic"
+        ],
+        "answer": "Shift factor 5"
+      },
+      {
+        "question": "Extinction DOK2 Act1 Q6: Classify environmental shift factors 6.",
+        "options": [
+          "Shift factor 6",
+          "Adaptive 6",
+          "Geographic 6",
+          "Demographic"
+        ],
+        "answer": "Shift factor 6"
+      },
+      {
+        "question": "Extinction DOK2 Act1 Q7: Classify environmental shift factors 7.",
+        "options": [
+          "Shift factor 7",
+          "Adaptive 7",
+          "Geographic 7",
+          "Demographic"
+        ],
+        "answer": "Shift factor 7"
+      },
+      {
+        "question": "Extinction DOK2 Act1 Q8: Classify environmental shift factors 8.",
+        "options": [
+          "Shift factor 8",
+          "Adaptive 8",
+          "Geographic 8",
+          "Demographic"
+        ],
+        "answer": "Shift factor 8"
+      },
+      {
+        "question": "Extinction DOK2 Act1 Q9: Classify environmental shift factors 9.",
+        "options": [
+          "Shift factor 9",
+          "Adaptive 9",
+          "Geographic 9",
+          "Demographic"
+        ],
+        "answer": "Shift factor 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK2 Act2 Q0: Classify environmental shift factors 0.",
+        "options": [
+          "Shift factor 0",
+          "Adaptive 0",
+          "Geographic 0",
+          "Demographic"
+        ],
+        "answer": "Shift factor 0"
+      },
+      {
+        "question": "Extinction DOK2 Act2 Q1: Classify environmental shift factors 1.",
+        "options": [
+          "Shift factor 1",
+          "Adaptive 1",
+          "Geographic 1",
+          "Demographic"
+        ],
+        "answer": "Shift factor 1"
+      },
+      {
+        "question": "Extinction DOK2 Act2 Q2: Classify environmental shift factors 2.",
+        "options": [
+          "Shift factor 2",
+          "Adaptive 2",
+          "Geographic 2",
+          "Demographic"
+        ],
+        "answer": "Shift factor 2"
+      },
+      {
+        "question": "Extinction DOK2 Act2 Q3: Classify environmental shift factors 3.",
+        "options": [
+          "Shift factor 3",
+          "Adaptive 3",
+          "Geographic 3",
+          "Demographic"
+        ],
+        "answer": "Shift factor 3"
+      },
+      {
+        "question": "Extinction DOK2 Act2 Q4: Classify environmental shift factors 4.",
+        "options": [
+          "Shift factor 4",
+          "Adaptive 4",
+          "Geographic 4",
+          "Demographic"
+        ],
+        "answer": "Shift factor 4"
+      },
+      {
+        "question": "Extinction DOK2 Act2 Q5: Classify environmental shift factors 5.",
+        "options": [
+          "Shift factor 5",
+          "Adaptive 5",
+          "Geographic 5",
+          "Demographic"
+        ],
+        "answer": "Shift factor 5"
+      },
+      {
+        "question": "Extinction DOK2 Act2 Q6: Classify environmental shift factors 6.",
+        "options": [
+          "Shift factor 6",
+          "Adaptive 6",
+          "Geographic 6",
+          "Demographic"
+        ],
+        "answer": "Shift factor 6"
+      },
+      {
+        "question": "Extinction DOK2 Act2 Q7: Classify environmental shift factors 7.",
+        "options": [
+          "Shift factor 7",
+          "Adaptive 7",
+          "Geographic 7",
+          "Demographic"
+        ],
+        "answer": "Shift factor 7"
+      },
+      {
+        "question": "Extinction DOK2 Act2 Q8: Classify environmental shift factors 8.",
+        "options": [
+          "Shift factor 8",
+          "Adaptive 8",
+          "Geographic 8",
+          "Demographic"
+        ],
+        "answer": "Shift factor 8"
+      },
+      {
+        "question": "Extinction DOK2 Act2 Q9: Classify environmental shift factors 9.",
+        "options": [
+          "Shift factor 9",
+          "Adaptive 9",
+          "Geographic 9",
+          "Demographic"
+        ],
+        "answer": "Shift factor 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK2 Act3 Q0: Classify environmental shift factors 0.",
+        "options": [
+          "Shift factor 0",
+          "Adaptive 0",
+          "Geographic 0",
+          "Demographic"
+        ],
+        "answer": "Shift factor 0"
+      },
+      {
+        "question": "Extinction DOK2 Act3 Q1: Classify environmental shift factors 1.",
+        "options": [
+          "Shift factor 1",
+          "Adaptive 1",
+          "Geographic 1",
+          "Demographic"
+        ],
+        "answer": "Shift factor 1"
+      },
+      {
+        "question": "Extinction DOK2 Act3 Q2: Classify environmental shift factors 2.",
+        "options": [
+          "Shift factor 2",
+          "Adaptive 2",
+          "Geographic 2",
+          "Demographic"
+        ],
+        "answer": "Shift factor 2"
+      },
+      {
+        "question": "Extinction DOK2 Act3 Q3: Classify environmental shift factors 3.",
+        "options": [
+          "Shift factor 3",
+          "Adaptive 3",
+          "Geographic 3",
+          "Demographic"
+        ],
+        "answer": "Shift factor 3"
+      },
+      {
+        "question": "Extinction DOK2 Act3 Q4: Classify environmental shift factors 4.",
+        "options": [
+          "Shift factor 4",
+          "Adaptive 4",
+          "Geographic 4",
+          "Demographic"
+        ],
+        "answer": "Shift factor 4"
+      },
+      {
+        "question": "Extinction DOK2 Act3 Q5: Classify environmental shift factors 5.",
+        "options": [
+          "Shift factor 5",
+          "Adaptive 5",
+          "Geographic 5",
+          "Demographic"
+        ],
+        "answer": "Shift factor 5"
+      },
+      {
+        "question": "Extinction DOK2 Act3 Q6: Classify environmental shift factors 6.",
+        "options": [
+          "Shift factor 6",
+          "Adaptive 6",
+          "Geographic 6",
+          "Demographic"
+        ],
+        "answer": "Shift factor 6"
+      },
+      {
+        "question": "Extinction DOK2 Act3 Q7: Classify environmental shift factors 7.",
+        "options": [
+          "Shift factor 7",
+          "Adaptive 7",
+          "Geographic 7",
+          "Demographic"
+        ],
+        "answer": "Shift factor 7"
+      },
+      {
+        "question": "Extinction DOK2 Act3 Q8: Classify environmental shift factors 8.",
+        "options": [
+          "Shift factor 8",
+          "Adaptive 8",
+          "Geographic 8",
+          "Demographic"
+        ],
+        "answer": "Shift factor 8"
+      },
+      {
+        "question": "Extinction DOK2 Act3 Q9: Classify environmental shift factors 9.",
+        "options": [
+          "Shift factor 9",
+          "Adaptive 9",
+          "Geographic 9",
+          "Demographic"
+        ],
+        "answer": "Shift factor 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK2 Act4 Q0: Classify environmental shift factors 0.",
+        "options": [
+          "Shift factor 0",
+          "Adaptive 0",
+          "Geographic 0",
+          "Demographic"
+        ],
+        "answer": "Shift factor 0"
+      },
+      {
+        "question": "Extinction DOK2 Act4 Q1: Classify environmental shift factors 1.",
+        "options": [
+          "Shift factor 1",
+          "Adaptive 1",
+          "Geographic 1",
+          "Demographic"
+        ],
+        "answer": "Shift factor 1"
+      },
+      {
+        "question": "Extinction DOK2 Act4 Q2: Classify environmental shift factors 2.",
+        "options": [
+          "Shift factor 2",
+          "Adaptive 2",
+          "Geographic 2",
+          "Demographic"
+        ],
+        "answer": "Shift factor 2"
+      },
+      {
+        "question": "Extinction DOK2 Act4 Q3: Classify environmental shift factors 3.",
+        "options": [
+          "Shift factor 3",
+          "Adaptive 3",
+          "Geographic 3",
+          "Demographic"
+        ],
+        "answer": "Shift factor 3"
+      },
+      {
+        "question": "Extinction DOK2 Act4 Q4: Classify environmental shift factors 4.",
+        "options": [
+          "Shift factor 4",
+          "Adaptive 4",
+          "Geographic 4",
+          "Demographic"
+        ],
+        "answer": "Shift factor 4"
+      },
+      {
+        "question": "Extinction DOK2 Act4 Q5: Classify environmental shift factors 5.",
+        "options": [
+          "Shift factor 5",
+          "Adaptive 5",
+          "Geographic 5",
+          "Demographic"
+        ],
+        "answer": "Shift factor 5"
+      },
+      {
+        "question": "Extinction DOK2 Act4 Q6: Classify environmental shift factors 6.",
+        "options": [
+          "Shift factor 6",
+          "Adaptive 6",
+          "Geographic 6",
+          "Demographic"
+        ],
+        "answer": "Shift factor 6"
+      },
+      {
+        "question": "Extinction DOK2 Act4 Q7: Classify environmental shift factors 7.",
+        "options": [
+          "Shift factor 7",
+          "Adaptive 7",
+          "Geographic 7",
+          "Demographic"
+        ],
+        "answer": "Shift factor 7"
+      },
+      {
+        "question": "Extinction DOK2 Act4 Q8: Classify environmental shift factors 8.",
+        "options": [
+          "Shift factor 8",
+          "Adaptive 8",
+          "Geographic 8",
+          "Demographic"
+        ],
+        "answer": "Shift factor 8"
+      },
+      {
+        "question": "Extinction DOK2 Act4 Q9: Classify environmental shift factors 9.",
+        "options": [
+          "Shift factor 9",
+          "Adaptive 9",
+          "Geographic 9",
+          "Demographic"
+        ],
+        "answer": "Shift factor 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK2 Act5 Q0: Classify environmental shift factors 0.",
+        "options": [
+          "Shift factor 0",
+          "Adaptive 0",
+          "Geographic 0",
+          "Demographic"
+        ],
+        "answer": "Shift factor 0"
+      },
+      {
+        "question": "Extinction DOK2 Act5 Q1: Classify environmental shift factors 1.",
+        "options": [
+          "Shift factor 1",
+          "Adaptive 1",
+          "Geographic 1",
+          "Demographic"
+        ],
+        "answer": "Shift factor 1"
+      },
+      {
+        "question": "Extinction DOK2 Act5 Q2: Classify environmental shift factors 2.",
+        "options": [
+          "Shift factor 2",
+          "Adaptive 2",
+          "Geographic 2",
+          "Demographic"
+        ],
+        "answer": "Shift factor 2"
+      },
+      {
+        "question": "Extinction DOK2 Act5 Q3: Classify environmental shift factors 3.",
+        "options": [
+          "Shift factor 3",
+          "Adaptive 3",
+          "Geographic 3",
+          "Demographic"
+        ],
+        "answer": "Shift factor 3"
+      },
+      {
+        "question": "Extinction DOK2 Act5 Q4: Classify environmental shift factors 4.",
+        "options": [
+          "Shift factor 4",
+          "Adaptive 4",
+          "Geographic 4",
+          "Demographic"
+        ],
+        "answer": "Shift factor 4"
+      },
+      {
+        "question": "Extinction DOK2 Act5 Q5: Classify environmental shift factors 5.",
+        "options": [
+          "Shift factor 5",
+          "Adaptive 5",
+          "Geographic 5",
+          "Demographic"
+        ],
+        "answer": "Shift factor 5"
+      },
+      {
+        "question": "Extinction DOK2 Act5 Q6: Classify environmental shift factors 6.",
+        "options": [
+          "Shift factor 6",
+          "Adaptive 6",
+          "Geographic 6",
+          "Demographic"
+        ],
+        "answer": "Shift factor 6"
+      },
+      {
+        "question": "Extinction DOK2 Act5 Q7: Classify environmental shift factors 7.",
+        "options": [
+          "Shift factor 7",
+          "Adaptive 7",
+          "Geographic 7",
+          "Demographic"
+        ],
+        "answer": "Shift factor 7"
+      },
+      {
+        "question": "Extinction DOK2 Act5 Q8: Classify environmental shift factors 8.",
+        "options": [
+          "Shift factor 8",
+          "Adaptive 8",
+          "Geographic 8",
+          "Demographic"
+        ],
+        "answer": "Shift factor 8"
+      },
+      {
+        "question": "Extinction DOK2 Act5 Q9: Classify environmental shift factors 9.",
+        "options": [
+          "Shift factor 9",
+          "Adaptive 9",
+          "Geographic 9",
+          "Demographic"
+        ],
+        "answer": "Shift factor 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Extinction DOK3 Act1 Q0: Calibrate trait survival simulator values 0.",
+        "options": [
+          "Survival rate 0",
+          "Diversity 0",
+          "Corridor 0",
+          "Purging"
+        ],
+        "answer": "Survival rate 0"
+      },
+      {
+        "question": "Extinction DOK3 Act1 Q1: Calibrate trait survival simulator values 1.",
+        "options": [
+          "Survival rate 1",
+          "Diversity 1",
+          "Corridor 1",
+          "Purging"
+        ],
+        "answer": "Survival rate 1"
+      },
+      {
+        "question": "Extinction DOK3 Act1 Q2: Calibrate trait survival simulator values 2.",
+        "options": [
+          "Survival rate 2",
+          "Diversity 2",
+          "Corridor 2",
+          "Purging"
+        ],
+        "answer": "Survival rate 2"
+      },
+      {
+        "question": "Extinction DOK3 Act1 Q3: Calibrate trait survival simulator values 3.",
+        "options": [
+          "Survival rate 3",
+          "Diversity 3",
+          "Corridor 3",
+          "Purging"
+        ],
+        "answer": "Survival rate 3"
+      },
+      {
+        "question": "Extinction DOK3 Act1 Q4: Calibrate trait survival simulator values 4.",
+        "options": [
+          "Survival rate 4",
+          "Diversity 4",
+          "Corridor 4",
+          "Purging"
+        ],
+        "answer": "Survival rate 4"
+      },
+      {
+        "question": "Extinction DOK3 Act1 Q5: Calibrate trait survival simulator values 5.",
+        "options": [
+          "Survival rate 5",
+          "Diversity 5",
+          "Corridor 5",
+          "Purging"
+        ],
+        "answer": "Survival rate 5"
+      },
+      {
+        "question": "Extinction DOK3 Act1 Q6: Calibrate trait survival simulator values 6.",
+        "options": [
+          "Survival rate 6",
+          "Diversity 6",
+          "Corridor 6",
+          "Purging"
+        ],
+        "answer": "Survival rate 6"
+      },
+      {
+        "question": "Extinction DOK3 Act1 Q7: Calibrate trait survival simulator values 7.",
+        "options": [
+          "Survival rate 7",
+          "Diversity 7",
+          "Corridor 7",
+          "Purging"
+        ],
+        "answer": "Survival rate 7"
+      },
+      {
+        "question": "Extinction DOK3 Act1 Q8: Calibrate trait survival simulator values 8.",
+        "options": [
+          "Survival rate 8",
+          "Diversity 8",
+          "Corridor 8",
+          "Purging"
+        ],
+        "answer": "Survival rate 8"
+      },
+      {
+        "question": "Extinction DOK3 Act1 Q9: Calibrate trait survival simulator values 9.",
+        "options": [
+          "Survival rate 9",
+          "Diversity 9",
+          "Corridor 9",
+          "Purging"
+        ],
+        "answer": "Survival rate 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK3 Act2 Q0: Calibrate trait survival simulator values 0.",
+        "options": [
+          "Survival rate 0",
+          "Diversity 0",
+          "Corridor 0",
+          "Purging"
+        ],
+        "answer": "Survival rate 0"
+      },
+      {
+        "question": "Extinction DOK3 Act2 Q1: Calibrate trait survival simulator values 1.",
+        "options": [
+          "Survival rate 1",
+          "Diversity 1",
+          "Corridor 1",
+          "Purging"
+        ],
+        "answer": "Survival rate 1"
+      },
+      {
+        "question": "Extinction DOK3 Act2 Q2: Calibrate trait survival simulator values 2.",
+        "options": [
+          "Survival rate 2",
+          "Diversity 2",
+          "Corridor 2",
+          "Purging"
+        ],
+        "answer": "Survival rate 2"
+      },
+      {
+        "question": "Extinction DOK3 Act2 Q3: Calibrate trait survival simulator values 3.",
+        "options": [
+          "Survival rate 3",
+          "Diversity 3",
+          "Corridor 3",
+          "Purging"
+        ],
+        "answer": "Survival rate 3"
+      },
+      {
+        "question": "Extinction DOK3 Act2 Q4: Calibrate trait survival simulator values 4.",
+        "options": [
+          "Survival rate 4",
+          "Diversity 4",
+          "Corridor 4",
+          "Purging"
+        ],
+        "answer": "Survival rate 4"
+      },
+      {
+        "question": "Extinction DOK3 Act2 Q5: Calibrate trait survival simulator values 5.",
+        "options": [
+          "Survival rate 5",
+          "Diversity 5",
+          "Corridor 5",
+          "Purging"
+        ],
+        "answer": "Survival rate 5"
+      },
+      {
+        "question": "Extinction DOK3 Act2 Q6: Calibrate trait survival simulator values 6.",
+        "options": [
+          "Survival rate 6",
+          "Diversity 6",
+          "Corridor 6",
+          "Purging"
+        ],
+        "answer": "Survival rate 6"
+      },
+      {
+        "question": "Extinction DOK3 Act2 Q7: Calibrate trait survival simulator values 7.",
+        "options": [
+          "Survival rate 7",
+          "Diversity 7",
+          "Corridor 7",
+          "Purging"
+        ],
+        "answer": "Survival rate 7"
+      },
+      {
+        "question": "Extinction DOK3 Act2 Q8: Calibrate trait survival simulator values 8.",
+        "options": [
+          "Survival rate 8",
+          "Diversity 8",
+          "Corridor 8",
+          "Purging"
+        ],
+        "answer": "Survival rate 8"
+      },
+      {
+        "question": "Extinction DOK3 Act2 Q9: Calibrate trait survival simulator values 9.",
+        "options": [
+          "Survival rate 9",
+          "Diversity 9",
+          "Corridor 9",
+          "Purging"
+        ],
+        "answer": "Survival rate 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK3 Act3 Q0: Calibrate trait survival simulator values 0.",
+        "options": [
+          "Survival rate 0",
+          "Diversity 0",
+          "Corridor 0",
+          "Purging"
+        ],
+        "answer": "Survival rate 0"
+      },
+      {
+        "question": "Extinction DOK3 Act3 Q1: Calibrate trait survival simulator values 1.",
+        "options": [
+          "Survival rate 1",
+          "Diversity 1",
+          "Corridor 1",
+          "Purging"
+        ],
+        "answer": "Survival rate 1"
+      },
+      {
+        "question": "Extinction DOK3 Act3 Q2: Calibrate trait survival simulator values 2.",
+        "options": [
+          "Survival rate 2",
+          "Diversity 2",
+          "Corridor 2",
+          "Purging"
+        ],
+        "answer": "Survival rate 2"
+      },
+      {
+        "question": "Extinction DOK3 Act3 Q3: Calibrate trait survival simulator values 3.",
+        "options": [
+          "Survival rate 3",
+          "Diversity 3",
+          "Corridor 3",
+          "Purging"
+        ],
+        "answer": "Survival rate 3"
+      },
+      {
+        "question": "Extinction DOK3 Act3 Q4: Calibrate trait survival simulator values 4.",
+        "options": [
+          "Survival rate 4",
+          "Diversity 4",
+          "Corridor 4",
+          "Purging"
+        ],
+        "answer": "Survival rate 4"
+      },
+      {
+        "question": "Extinction DOK3 Act3 Q5: Calibrate trait survival simulator values 5.",
+        "options": [
+          "Survival rate 5",
+          "Diversity 5",
+          "Corridor 5",
+          "Purging"
+        ],
+        "answer": "Survival rate 5"
+      },
+      {
+        "question": "Extinction DOK3 Act3 Q6: Calibrate trait survival simulator values 6.",
+        "options": [
+          "Survival rate 6",
+          "Diversity 6",
+          "Corridor 6",
+          "Purging"
+        ],
+        "answer": "Survival rate 6"
+      },
+      {
+        "question": "Extinction DOK3 Act3 Q7: Calibrate trait survival simulator values 7.",
+        "options": [
+          "Survival rate 7",
+          "Diversity 7",
+          "Corridor 7",
+          "Purging"
+        ],
+        "answer": "Survival rate 7"
+      },
+      {
+        "question": "Extinction DOK3 Act3 Q8: Calibrate trait survival simulator values 8.",
+        "options": [
+          "Survival rate 8",
+          "Diversity 8",
+          "Corridor 8",
+          "Purging"
+        ],
+        "answer": "Survival rate 8"
+      },
+      {
+        "question": "Extinction DOK3 Act3 Q9: Calibrate trait survival simulator values 9.",
+        "options": [
+          "Survival rate 9",
+          "Diversity 9",
+          "Corridor 9",
+          "Purging"
+        ],
+        "answer": "Survival rate 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK3 Act4 Q0: Calibrate trait survival simulator values 0.",
+        "options": [
+          "Survival rate 0",
+          "Diversity 0",
+          "Corridor 0",
+          "Purging"
+        ],
+        "answer": "Survival rate 0"
+      },
+      {
+        "question": "Extinction DOK3 Act4 Q1: Calibrate trait survival simulator values 1.",
+        "options": [
+          "Survival rate 1",
+          "Diversity 1",
+          "Corridor 1",
+          "Purging"
+        ],
+        "answer": "Survival rate 1"
+      },
+      {
+        "question": "Extinction DOK3 Act4 Q2: Calibrate trait survival simulator values 2.",
+        "options": [
+          "Survival rate 2",
+          "Diversity 2",
+          "Corridor 2",
+          "Purging"
+        ],
+        "answer": "Survival rate 2"
+      },
+      {
+        "question": "Extinction DOK3 Act4 Q3: Calibrate trait survival simulator values 3.",
+        "options": [
+          "Survival rate 3",
+          "Diversity 3",
+          "Corridor 3",
+          "Purging"
+        ],
+        "answer": "Survival rate 3"
+      },
+      {
+        "question": "Extinction DOK3 Act4 Q4: Calibrate trait survival simulator values 4.",
+        "options": [
+          "Survival rate 4",
+          "Diversity 4",
+          "Corridor 4",
+          "Purging"
+        ],
+        "answer": "Survival rate 4"
+      },
+      {
+        "question": "Extinction DOK3 Act4 Q5: Calibrate trait survival simulator values 5.",
+        "options": [
+          "Survival rate 5",
+          "Diversity 5",
+          "Corridor 5",
+          "Purging"
+        ],
+        "answer": "Survival rate 5"
+      },
+      {
+        "question": "Extinction DOK3 Act4 Q6: Calibrate trait survival simulator values 6.",
+        "options": [
+          "Survival rate 6",
+          "Diversity 6",
+          "Corridor 6",
+          "Purging"
+        ],
+        "answer": "Survival rate 6"
+      },
+      {
+        "question": "Extinction DOK3 Act4 Q7: Calibrate trait survival simulator values 7.",
+        "options": [
+          "Survival rate 7",
+          "Diversity 7",
+          "Corridor 7",
+          "Purging"
+        ],
+        "answer": "Survival rate 7"
+      },
+      {
+        "question": "Extinction DOK3 Act4 Q8: Calibrate trait survival simulator values 8.",
+        "options": [
+          "Survival rate 8",
+          "Diversity 8",
+          "Corridor 8",
+          "Purging"
+        ],
+        "answer": "Survival rate 8"
+      },
+      {
+        "question": "Extinction DOK3 Act4 Q9: Calibrate trait survival simulator values 9.",
+        "options": [
+          "Survival rate 9",
+          "Diversity 9",
+          "Corridor 9",
+          "Purging"
+        ],
+        "answer": "Survival rate 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK3 Act5 Q0: Calibrate trait survival simulator values 0.",
+        "options": [
+          "Survival rate 0",
+          "Diversity 0",
+          "Corridor 0",
+          "Purging"
+        ],
+        "answer": "Survival rate 0"
+      },
+      {
+        "question": "Extinction DOK3 Act5 Q1: Calibrate trait survival simulator values 1.",
+        "options": [
+          "Survival rate 1",
+          "Diversity 1",
+          "Corridor 1",
+          "Purging"
+        ],
+        "answer": "Survival rate 1"
+      },
+      {
+        "question": "Extinction DOK3 Act5 Q2: Calibrate trait survival simulator values 2.",
+        "options": [
+          "Survival rate 2",
+          "Diversity 2",
+          "Corridor 2",
+          "Purging"
+        ],
+        "answer": "Survival rate 2"
+      },
+      {
+        "question": "Extinction DOK3 Act5 Q3: Calibrate trait survival simulator values 3.",
+        "options": [
+          "Survival rate 3",
+          "Diversity 3",
+          "Corridor 3",
+          "Purging"
+        ],
+        "answer": "Survival rate 3"
+      },
+      {
+        "question": "Extinction DOK3 Act5 Q4: Calibrate trait survival simulator values 4.",
+        "options": [
+          "Survival rate 4",
+          "Diversity 4",
+          "Corridor 4",
+          "Purging"
+        ],
+        "answer": "Survival rate 4"
+      },
+      {
+        "question": "Extinction DOK3 Act5 Q5: Calibrate trait survival simulator values 5.",
+        "options": [
+          "Survival rate 5",
+          "Diversity 5",
+          "Corridor 5",
+          "Purging"
+        ],
+        "answer": "Survival rate 5"
+      },
+      {
+        "question": "Extinction DOK3 Act5 Q6: Calibrate trait survival simulator values 6.",
+        "options": [
+          "Survival rate 6",
+          "Diversity 6",
+          "Corridor 6",
+          "Purging"
+        ],
+        "answer": "Survival rate 6"
+      },
+      {
+        "question": "Extinction DOK3 Act5 Q7: Calibrate trait survival simulator values 7.",
+        "options": [
+          "Survival rate 7",
+          "Diversity 7",
+          "Corridor 7",
+          "Purging"
+        ],
+        "answer": "Survival rate 7"
+      },
+      {
+        "question": "Extinction DOK3 Act5 Q8: Calibrate trait survival simulator values 8.",
+        "options": [
+          "Survival rate 8",
+          "Diversity 8",
+          "Corridor 8",
+          "Purging"
+        ],
+        "answer": "Survival rate 8"
+      },
+      {
+        "question": "Extinction DOK3 Act5 Q9: Calibrate trait survival simulator values 9.",
+        "options": [
+          "Survival rate 9",
+          "Diversity 9",
+          "Corridor 9",
+          "Purging"
+        ],
+        "answer": "Survival rate 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Extinction DOK4 Act1 Q0: Optimize conservation resource allocation model 0.",
+        "options": [
+          "Mitigation planner 0",
+          "Assisted migration 0",
+          "Rescue 0",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 0"
+      },
+      {
+        "question": "Extinction DOK4 Act1 Q1: Optimize conservation resource allocation model 1.",
+        "options": [
+          "Mitigation planner 1",
+          "Assisted migration 1",
+          "Rescue 1",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 1"
+      },
+      {
+        "question": "Extinction DOK4 Act1 Q2: Optimize conservation resource allocation model 2.",
+        "options": [
+          "Mitigation planner 2",
+          "Assisted migration 2",
+          "Rescue 2",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 2"
+      },
+      {
+        "question": "Extinction DOK4 Act1 Q3: Optimize conservation resource allocation model 3.",
+        "options": [
+          "Mitigation planner 3",
+          "Assisted migration 3",
+          "Rescue 3",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 3"
+      },
+      {
+        "question": "Extinction DOK4 Act1 Q4: Optimize conservation resource allocation model 4.",
+        "options": [
+          "Mitigation planner 4",
+          "Assisted migration 4",
+          "Rescue 4",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 4"
+      },
+      {
+        "question": "Extinction DOK4 Act1 Q5: Optimize conservation resource allocation model 5.",
+        "options": [
+          "Mitigation planner 5",
+          "Assisted migration 5",
+          "Rescue 5",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 5"
+      },
+      {
+        "question": "Extinction DOK4 Act1 Q6: Optimize conservation resource allocation model 6.",
+        "options": [
+          "Mitigation planner 6",
+          "Assisted migration 6",
+          "Rescue 6",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 6"
+      },
+      {
+        "question": "Extinction DOK4 Act1 Q7: Optimize conservation resource allocation model 7.",
+        "options": [
+          "Mitigation planner 7",
+          "Assisted migration 7",
+          "Rescue 7",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 7"
+      },
+      {
+        "question": "Extinction DOK4 Act1 Q8: Optimize conservation resource allocation model 8.",
+        "options": [
+          "Mitigation planner 8",
+          "Assisted migration 8",
+          "Rescue 8",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 8"
+      },
+      {
+        "question": "Extinction DOK4 Act1 Q9: Optimize conservation resource allocation model 9.",
+        "options": [
+          "Mitigation planner 9",
+          "Assisted migration 9",
+          "Rescue 9",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK4 Act2 Q0: Optimize conservation resource allocation model 0.",
+        "options": [
+          "Mitigation planner 0",
+          "Assisted migration 0",
+          "Rescue 0",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 0"
+      },
+      {
+        "question": "Extinction DOK4 Act2 Q1: Optimize conservation resource allocation model 1.",
+        "options": [
+          "Mitigation planner 1",
+          "Assisted migration 1",
+          "Rescue 1",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 1"
+      },
+      {
+        "question": "Extinction DOK4 Act2 Q2: Optimize conservation resource allocation model 2.",
+        "options": [
+          "Mitigation planner 2",
+          "Assisted migration 2",
+          "Rescue 2",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 2"
+      },
+      {
+        "question": "Extinction DOK4 Act2 Q3: Optimize conservation resource allocation model 3.",
+        "options": [
+          "Mitigation planner 3",
+          "Assisted migration 3",
+          "Rescue 3",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 3"
+      },
+      {
+        "question": "Extinction DOK4 Act2 Q4: Optimize conservation resource allocation model 4.",
+        "options": [
+          "Mitigation planner 4",
+          "Assisted migration 4",
+          "Rescue 4",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 4"
+      },
+      {
+        "question": "Extinction DOK4 Act2 Q5: Optimize conservation resource allocation model 5.",
+        "options": [
+          "Mitigation planner 5",
+          "Assisted migration 5",
+          "Rescue 5",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 5"
+      },
+      {
+        "question": "Extinction DOK4 Act2 Q6: Optimize conservation resource allocation model 6.",
+        "options": [
+          "Mitigation planner 6",
+          "Assisted migration 6",
+          "Rescue 6",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 6"
+      },
+      {
+        "question": "Extinction DOK4 Act2 Q7: Optimize conservation resource allocation model 7.",
+        "options": [
+          "Mitigation planner 7",
+          "Assisted migration 7",
+          "Rescue 7",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 7"
+      },
+      {
+        "question": "Extinction DOK4 Act2 Q8: Optimize conservation resource allocation model 8.",
+        "options": [
+          "Mitigation planner 8",
+          "Assisted migration 8",
+          "Rescue 8",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 8"
+      },
+      {
+        "question": "Extinction DOK4 Act2 Q9: Optimize conservation resource allocation model 9.",
+        "options": [
+          "Mitigation planner 9",
+          "Assisted migration 9",
+          "Rescue 9",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK4 Act3 Q0: Optimize conservation resource allocation model 0.",
+        "options": [
+          "Mitigation planner 0",
+          "Assisted migration 0",
+          "Rescue 0",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 0"
+      },
+      {
+        "question": "Extinction DOK4 Act3 Q1: Optimize conservation resource allocation model 1.",
+        "options": [
+          "Mitigation planner 1",
+          "Assisted migration 1",
+          "Rescue 1",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 1"
+      },
+      {
+        "question": "Extinction DOK4 Act3 Q2: Optimize conservation resource allocation model 2.",
+        "options": [
+          "Mitigation planner 2",
+          "Assisted migration 2",
+          "Rescue 2",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 2"
+      },
+      {
+        "question": "Extinction DOK4 Act3 Q3: Optimize conservation resource allocation model 3.",
+        "options": [
+          "Mitigation planner 3",
+          "Assisted migration 3",
+          "Rescue 3",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 3"
+      },
+      {
+        "question": "Extinction DOK4 Act3 Q4: Optimize conservation resource allocation model 4.",
+        "options": [
+          "Mitigation planner 4",
+          "Assisted migration 4",
+          "Rescue 4",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 4"
+      },
+      {
+        "question": "Extinction DOK4 Act3 Q5: Optimize conservation resource allocation model 5.",
+        "options": [
+          "Mitigation planner 5",
+          "Assisted migration 5",
+          "Rescue 5",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 5"
+      },
+      {
+        "question": "Extinction DOK4 Act3 Q6: Optimize conservation resource allocation model 6.",
+        "options": [
+          "Mitigation planner 6",
+          "Assisted migration 6",
+          "Rescue 6",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 6"
+      },
+      {
+        "question": "Extinction DOK4 Act3 Q7: Optimize conservation resource allocation model 7.",
+        "options": [
+          "Mitigation planner 7",
+          "Assisted migration 7",
+          "Rescue 7",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 7"
+      },
+      {
+        "question": "Extinction DOK4 Act3 Q8: Optimize conservation resource allocation model 8.",
+        "options": [
+          "Mitigation planner 8",
+          "Assisted migration 8",
+          "Rescue 8",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 8"
+      },
+      {
+        "question": "Extinction DOK4 Act3 Q9: Optimize conservation resource allocation model 9.",
+        "options": [
+          "Mitigation planner 9",
+          "Assisted migration 9",
+          "Rescue 9",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK4 Act4 Q0: Optimize conservation resource allocation model 0.",
+        "options": [
+          "Mitigation planner 0",
+          "Assisted migration 0",
+          "Rescue 0",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 0"
+      },
+      {
+        "question": "Extinction DOK4 Act4 Q1: Optimize conservation resource allocation model 1.",
+        "options": [
+          "Mitigation planner 1",
+          "Assisted migration 1",
+          "Rescue 1",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 1"
+      },
+      {
+        "question": "Extinction DOK4 Act4 Q2: Optimize conservation resource allocation model 2.",
+        "options": [
+          "Mitigation planner 2",
+          "Assisted migration 2",
+          "Rescue 2",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 2"
+      },
+      {
+        "question": "Extinction DOK4 Act4 Q3: Optimize conservation resource allocation model 3.",
+        "options": [
+          "Mitigation planner 3",
+          "Assisted migration 3",
+          "Rescue 3",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 3"
+      },
+      {
+        "question": "Extinction DOK4 Act4 Q4: Optimize conservation resource allocation model 4.",
+        "options": [
+          "Mitigation planner 4",
+          "Assisted migration 4",
+          "Rescue 4",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 4"
+      },
+      {
+        "question": "Extinction DOK4 Act4 Q5: Optimize conservation resource allocation model 5.",
+        "options": [
+          "Mitigation planner 5",
+          "Assisted migration 5",
+          "Rescue 5",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 5"
+      },
+      {
+        "question": "Extinction DOK4 Act4 Q6: Optimize conservation resource allocation model 6.",
+        "options": [
+          "Mitigation planner 6",
+          "Assisted migration 6",
+          "Rescue 6",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 6"
+      },
+      {
+        "question": "Extinction DOK4 Act4 Q7: Optimize conservation resource allocation model 7.",
+        "options": [
+          "Mitigation planner 7",
+          "Assisted migration 7",
+          "Rescue 7",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 7"
+      },
+      {
+        "question": "Extinction DOK4 Act4 Q8: Optimize conservation resource allocation model 8.",
+        "options": [
+          "Mitigation planner 8",
+          "Assisted migration 8",
+          "Rescue 8",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 8"
+      },
+      {
+        "question": "Extinction DOK4 Act4 Q9: Optimize conservation resource allocation model 9.",
+        "options": [
+          "Mitigation planner 9",
+          "Assisted migration 9",
+          "Rescue 9",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 9"
+      }
+    ],
+    [
+      {
+        "question": "Extinction DOK4 Act5 Q0: Optimize conservation resource allocation model 0.",
+        "options": [
+          "Mitigation planner 0",
+          "Assisted migration 0",
+          "Rescue 0",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 0"
+      },
+      {
+        "question": "Extinction DOK4 Act5 Q1: Optimize conservation resource allocation model 1.",
+        "options": [
+          "Mitigation planner 1",
+          "Assisted migration 1",
+          "Rescue 1",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 1"
+      },
+      {
+        "question": "Extinction DOK4 Act5 Q2: Optimize conservation resource allocation model 2.",
+        "options": [
+          "Mitigation planner 2",
+          "Assisted migration 2",
+          "Rescue 2",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 2"
+      },
+      {
+        "question": "Extinction DOK4 Act5 Q3: Optimize conservation resource allocation model 3.",
+        "options": [
+          "Mitigation planner 3",
+          "Assisted migration 3",
+          "Rescue 3",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 3"
+      },
+      {
+        "question": "Extinction DOK4 Act5 Q4: Optimize conservation resource allocation model 4.",
+        "options": [
+          "Mitigation planner 4",
+          "Assisted migration 4",
+          "Rescue 4",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 4"
+      },
+      {
+        "question": "Extinction DOK4 Act5 Q5: Optimize conservation resource allocation model 5.",
+        "options": [
+          "Mitigation planner 5",
+          "Assisted migration 5",
+          "Rescue 5",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 5"
+      },
+      {
+        "question": "Extinction DOK4 Act5 Q6: Optimize conservation resource allocation model 6.",
+        "options": [
+          "Mitigation planner 6",
+          "Assisted migration 6",
+          "Rescue 6",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 6"
+      },
+      {
+        "question": "Extinction DOK4 Act5 Q7: Optimize conservation resource allocation model 7.",
+        "options": [
+          "Mitigation planner 7",
+          "Assisted migration 7",
+          "Rescue 7",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 7"
+      },
+      {
+        "question": "Extinction DOK4 Act5 Q8: Optimize conservation resource allocation model 8.",
+        "options": [
+          "Mitigation planner 8",
+          "Assisted migration 8",
+          "Rescue 8",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 8"
+      },
+      {
+        "question": "Extinction DOK4 Act5 Q9: Optimize conservation resource allocation model 9.",
+        "options": [
+          "Mitigation planner 9",
+          "Assisted migration 9",
+          "Rescue 9",
+          "Corridor width"
+        ],
+        "answer": "Mitigation planner 9"
+      }
+    ]
+  ]
+}
+,
+  "OAS.PS.PS1.2": {
+  "1": [
+    [
+      {
+        "question": "Reactions DOK1 Act1 Q0: Match element chemical electron configuration 0.",
+        "options": [
+          "Valence electron count 0",
+          "Orbital 0",
+          "Bond type 0",
+          "Octet"
+        ],
+        "answer": "Valence electron count 0"
+      },
+      {
+        "question": "Reactions DOK1 Act1 Q1: Match element chemical electron configuration 1.",
+        "options": [
+          "Valence electron count 1",
+          "Orbital 1",
+          "Bond type 1",
+          "Octet"
+        ],
+        "answer": "Valence electron count 1"
+      },
+      {
+        "question": "Reactions DOK1 Act1 Q2: Match element chemical electron configuration 2.",
+        "options": [
+          "Valence electron count 2",
+          "Orbital 2",
+          "Bond type 2",
+          "Octet"
+        ],
+        "answer": "Valence electron count 2"
+      },
+      {
+        "question": "Reactions DOK1 Act1 Q3: Match element chemical electron configuration 3.",
+        "options": [
+          "Valence electron count 3",
+          "Orbital 3",
+          "Bond type 3",
+          "Octet"
+        ],
+        "answer": "Valence electron count 3"
+      },
+      {
+        "question": "Reactions DOK1 Act1 Q4: Match element chemical electron configuration 4.",
+        "options": [
+          "Valence electron count 4",
+          "Orbital 4",
+          "Bond type 4",
+          "Octet"
+        ],
+        "answer": "Valence electron count 4"
+      },
+      {
+        "question": "Reactions DOK1 Act1 Q5: Match element chemical electron configuration 5.",
+        "options": [
+          "Valence electron count 5",
+          "Orbital 5",
+          "Bond type 5",
+          "Octet"
+        ],
+        "answer": "Valence electron count 5"
+      },
+      {
+        "question": "Reactions DOK1 Act1 Q6: Match element chemical electron configuration 6.",
+        "options": [
+          "Valence electron count 6",
+          "Orbital 6",
+          "Bond type 6",
+          "Octet"
+        ],
+        "answer": "Valence electron count 6"
+      },
+      {
+        "question": "Reactions DOK1 Act1 Q7: Match element chemical electron configuration 7.",
+        "options": [
+          "Valence electron count 7",
+          "Orbital 7",
+          "Bond type 7",
+          "Octet"
+        ],
+        "answer": "Valence electron count 7"
+      },
+      {
+        "question": "Reactions DOK1 Act1 Q8: Match element chemical electron configuration 8.",
+        "options": [
+          "Valence electron count 8",
+          "Orbital 8",
+          "Bond type 8",
+          "Octet"
+        ],
+        "answer": "Valence electron count 8"
+      },
+      {
+        "question": "Reactions DOK1 Act1 Q9: Match element chemical electron configuration 9.",
+        "options": [
+          "Valence electron count 9",
+          "Orbital 9",
+          "Bond type 9",
+          "Octet"
+        ],
+        "answer": "Valence electron count 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK1 Act2 Q0: Match element chemical electron configuration 0.",
+        "options": [
+          "Valence electron count 0",
+          "Orbital 0",
+          "Bond type 0",
+          "Octet"
+        ],
+        "answer": "Valence electron count 0"
+      },
+      {
+        "question": "Reactions DOK1 Act2 Q1: Match element chemical electron configuration 1.",
+        "options": [
+          "Valence electron count 1",
+          "Orbital 1",
+          "Bond type 1",
+          "Octet"
+        ],
+        "answer": "Valence electron count 1"
+      },
+      {
+        "question": "Reactions DOK1 Act2 Q2: Match element chemical electron configuration 2.",
+        "options": [
+          "Valence electron count 2",
+          "Orbital 2",
+          "Bond type 2",
+          "Octet"
+        ],
+        "answer": "Valence electron count 2"
+      },
+      {
+        "question": "Reactions DOK1 Act2 Q3: Match element chemical electron configuration 3.",
+        "options": [
+          "Valence electron count 3",
+          "Orbital 3",
+          "Bond type 3",
+          "Octet"
+        ],
+        "answer": "Valence electron count 3"
+      },
+      {
+        "question": "Reactions DOK1 Act2 Q4: Match element chemical electron configuration 4.",
+        "options": [
+          "Valence electron count 4",
+          "Orbital 4",
+          "Bond type 4",
+          "Octet"
+        ],
+        "answer": "Valence electron count 4"
+      },
+      {
+        "question": "Reactions DOK1 Act2 Q5: Match element chemical electron configuration 5.",
+        "options": [
+          "Valence electron count 5",
+          "Orbital 5",
+          "Bond type 5",
+          "Octet"
+        ],
+        "answer": "Valence electron count 5"
+      },
+      {
+        "question": "Reactions DOK1 Act2 Q6: Match element chemical electron configuration 6.",
+        "options": [
+          "Valence electron count 6",
+          "Orbital 6",
+          "Bond type 6",
+          "Octet"
+        ],
+        "answer": "Valence electron count 6"
+      },
+      {
+        "question": "Reactions DOK1 Act2 Q7: Match element chemical electron configuration 7.",
+        "options": [
+          "Valence electron count 7",
+          "Orbital 7",
+          "Bond type 7",
+          "Octet"
+        ],
+        "answer": "Valence electron count 7"
+      },
+      {
+        "question": "Reactions DOK1 Act2 Q8: Match element chemical electron configuration 8.",
+        "options": [
+          "Valence electron count 8",
+          "Orbital 8",
+          "Bond type 8",
+          "Octet"
+        ],
+        "answer": "Valence electron count 8"
+      },
+      {
+        "question": "Reactions DOK1 Act2 Q9: Match element chemical electron configuration 9.",
+        "options": [
+          "Valence electron count 9",
+          "Orbital 9",
+          "Bond type 9",
+          "Octet"
+        ],
+        "answer": "Valence electron count 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK1 Act3 Q0: Match element chemical electron configuration 0.",
+        "options": [
+          "Valence electron count 0",
+          "Orbital 0",
+          "Bond type 0",
+          "Octet"
+        ],
+        "answer": "Valence electron count 0"
+      },
+      {
+        "question": "Reactions DOK1 Act3 Q1: Match element chemical electron configuration 1.",
+        "options": [
+          "Valence electron count 1",
+          "Orbital 1",
+          "Bond type 1",
+          "Octet"
+        ],
+        "answer": "Valence electron count 1"
+      },
+      {
+        "question": "Reactions DOK1 Act3 Q2: Match element chemical electron configuration 2.",
+        "options": [
+          "Valence electron count 2",
+          "Orbital 2",
+          "Bond type 2",
+          "Octet"
+        ],
+        "answer": "Valence electron count 2"
+      },
+      {
+        "question": "Reactions DOK1 Act3 Q3: Match element chemical electron configuration 3.",
+        "options": [
+          "Valence electron count 3",
+          "Orbital 3",
+          "Bond type 3",
+          "Octet"
+        ],
+        "answer": "Valence electron count 3"
+      },
+      {
+        "question": "Reactions DOK1 Act3 Q4: Match element chemical electron configuration 4.",
+        "options": [
+          "Valence electron count 4",
+          "Orbital 4",
+          "Bond type 4",
+          "Octet"
+        ],
+        "answer": "Valence electron count 4"
+      },
+      {
+        "question": "Reactions DOK1 Act3 Q5: Match element chemical electron configuration 5.",
+        "options": [
+          "Valence electron count 5",
+          "Orbital 5",
+          "Bond type 5",
+          "Octet"
+        ],
+        "answer": "Valence electron count 5"
+      },
+      {
+        "question": "Reactions DOK1 Act3 Q6: Match element chemical electron configuration 6.",
+        "options": [
+          "Valence electron count 6",
+          "Orbital 6",
+          "Bond type 6",
+          "Octet"
+        ],
+        "answer": "Valence electron count 6"
+      },
+      {
+        "question": "Reactions DOK1 Act3 Q7: Match element chemical electron configuration 7.",
+        "options": [
+          "Valence electron count 7",
+          "Orbital 7",
+          "Bond type 7",
+          "Octet"
+        ],
+        "answer": "Valence electron count 7"
+      },
+      {
+        "question": "Reactions DOK1 Act3 Q8: Match element chemical electron configuration 8.",
+        "options": [
+          "Valence electron count 8",
+          "Orbital 8",
+          "Bond type 8",
+          "Octet"
+        ],
+        "answer": "Valence electron count 8"
+      },
+      {
+        "question": "Reactions DOK1 Act3 Q9: Match element chemical electron configuration 9.",
+        "options": [
+          "Valence electron count 9",
+          "Orbital 9",
+          "Bond type 9",
+          "Octet"
+        ],
+        "answer": "Valence electron count 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK1 Act4 Q0: Match element chemical electron configuration 0.",
+        "options": [
+          "Valence electron count 0",
+          "Orbital 0",
+          "Bond type 0",
+          "Octet"
+        ],
+        "answer": "Valence electron count 0"
+      },
+      {
+        "question": "Reactions DOK1 Act4 Q1: Match element chemical electron configuration 1.",
+        "options": [
+          "Valence electron count 1",
+          "Orbital 1",
+          "Bond type 1",
+          "Octet"
+        ],
+        "answer": "Valence electron count 1"
+      },
+      {
+        "question": "Reactions DOK1 Act4 Q2: Match element chemical electron configuration 2.",
+        "options": [
+          "Valence electron count 2",
+          "Orbital 2",
+          "Bond type 2",
+          "Octet"
+        ],
+        "answer": "Valence electron count 2"
+      },
+      {
+        "question": "Reactions DOK1 Act4 Q3: Match element chemical electron configuration 3.",
+        "options": [
+          "Valence electron count 3",
+          "Orbital 3",
+          "Bond type 3",
+          "Octet"
+        ],
+        "answer": "Valence electron count 3"
+      },
+      {
+        "question": "Reactions DOK1 Act4 Q4: Match element chemical electron configuration 4.",
+        "options": [
+          "Valence electron count 4",
+          "Orbital 4",
+          "Bond type 4",
+          "Octet"
+        ],
+        "answer": "Valence electron count 4"
+      },
+      {
+        "question": "Reactions DOK1 Act4 Q5: Match element chemical electron configuration 5.",
+        "options": [
+          "Valence electron count 5",
+          "Orbital 5",
+          "Bond type 5",
+          "Octet"
+        ],
+        "answer": "Valence electron count 5"
+      },
+      {
+        "question": "Reactions DOK1 Act4 Q6: Match element chemical electron configuration 6.",
+        "options": [
+          "Valence electron count 6",
+          "Orbital 6",
+          "Bond type 6",
+          "Octet"
+        ],
+        "answer": "Valence electron count 6"
+      },
+      {
+        "question": "Reactions DOK1 Act4 Q7: Match element chemical electron configuration 7.",
+        "options": [
+          "Valence electron count 7",
+          "Orbital 7",
+          "Bond type 7",
+          "Octet"
+        ],
+        "answer": "Valence electron count 7"
+      },
+      {
+        "question": "Reactions DOK1 Act4 Q8: Match element chemical electron configuration 8.",
+        "options": [
+          "Valence electron count 8",
+          "Orbital 8",
+          "Bond type 8",
+          "Octet"
+        ],
+        "answer": "Valence electron count 8"
+      },
+      {
+        "question": "Reactions DOK1 Act4 Q9: Match element chemical electron configuration 9.",
+        "options": [
+          "Valence electron count 9",
+          "Orbital 9",
+          "Bond type 9",
+          "Octet"
+        ],
+        "answer": "Valence electron count 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK1 Act5 Q0: Match element chemical electron configuration 0.",
+        "options": [
+          "Valence electron count 0",
+          "Orbital 0",
+          "Bond type 0",
+          "Octet"
+        ],
+        "answer": "Valence electron count 0"
+      },
+      {
+        "question": "Reactions DOK1 Act5 Q1: Match element chemical electron configuration 1.",
+        "options": [
+          "Valence electron count 1",
+          "Orbital 1",
+          "Bond type 1",
+          "Octet"
+        ],
+        "answer": "Valence electron count 1"
+      },
+      {
+        "question": "Reactions DOK1 Act5 Q2: Match element chemical electron configuration 2.",
+        "options": [
+          "Valence electron count 2",
+          "Orbital 2",
+          "Bond type 2",
+          "Octet"
+        ],
+        "answer": "Valence electron count 2"
+      },
+      {
+        "question": "Reactions DOK1 Act5 Q3: Match element chemical electron configuration 3.",
+        "options": [
+          "Valence electron count 3",
+          "Orbital 3",
+          "Bond type 3",
+          "Octet"
+        ],
+        "answer": "Valence electron count 3"
+      },
+      {
+        "question": "Reactions DOK1 Act5 Q4: Match element chemical electron configuration 4.",
+        "options": [
+          "Valence electron count 4",
+          "Orbital 4",
+          "Bond type 4",
+          "Octet"
+        ],
+        "answer": "Valence electron count 4"
+      },
+      {
+        "question": "Reactions DOK1 Act5 Q5: Match element chemical electron configuration 5.",
+        "options": [
+          "Valence electron count 5",
+          "Orbital 5",
+          "Bond type 5",
+          "Octet"
+        ],
+        "answer": "Valence electron count 5"
+      },
+      {
+        "question": "Reactions DOK1 Act5 Q6: Match element chemical electron configuration 6.",
+        "options": [
+          "Valence electron count 6",
+          "Orbital 6",
+          "Bond type 6",
+          "Octet"
+        ],
+        "answer": "Valence electron count 6"
+      },
+      {
+        "question": "Reactions DOK1 Act5 Q7: Match element chemical electron configuration 7.",
+        "options": [
+          "Valence electron count 7",
+          "Orbital 7",
+          "Bond type 7",
+          "Octet"
+        ],
+        "answer": "Valence electron count 7"
+      },
+      {
+        "question": "Reactions DOK1 Act5 Q8: Match element chemical electron configuration 8.",
+        "options": [
+          "Valence electron count 8",
+          "Orbital 8",
+          "Bond type 8",
+          "Octet"
+        ],
+        "answer": "Valence electron count 8"
+      },
+      {
+        "question": "Reactions DOK1 Act5 Q9: Match element chemical electron configuration 9.",
+        "options": [
+          "Valence electron count 9",
+          "Orbital 9",
+          "Bond type 9",
+          "Octet"
+        ],
+        "answer": "Valence electron count 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Reactions DOK2 Act1 Q0: Classify the chemical reaction types 0.",
+        "options": [
+          "Reaction type 0",
+          "Redox 0",
+          "State 0",
+          "Energy"
+        ],
+        "answer": "Reaction type 0"
+      },
+      {
+        "question": "Reactions DOK2 Act1 Q1: Classify the chemical reaction types 1.",
+        "options": [
+          "Reaction type 1",
+          "Redox 1",
+          "State 1",
+          "Energy"
+        ],
+        "answer": "Reaction type 1"
+      },
+      {
+        "question": "Reactions DOK2 Act1 Q2: Classify the chemical reaction types 2.",
+        "options": [
+          "Reaction type 2",
+          "Redox 2",
+          "State 2",
+          "Energy"
+        ],
+        "answer": "Reaction type 2"
+      },
+      {
+        "question": "Reactions DOK2 Act1 Q3: Classify the chemical reaction types 3.",
+        "options": [
+          "Reaction type 3",
+          "Redox 3",
+          "State 3",
+          "Energy"
+        ],
+        "answer": "Reaction type 3"
+      },
+      {
+        "question": "Reactions DOK2 Act1 Q4: Classify the chemical reaction types 4.",
+        "options": [
+          "Reaction type 4",
+          "Redox 4",
+          "State 4",
+          "Energy"
+        ],
+        "answer": "Reaction type 4"
+      },
+      {
+        "question": "Reactions DOK2 Act1 Q5: Classify the chemical reaction types 5.",
+        "options": [
+          "Reaction type 5",
+          "Redox 5",
+          "State 5",
+          "Energy"
+        ],
+        "answer": "Reaction type 5"
+      },
+      {
+        "question": "Reactions DOK2 Act1 Q6: Classify the chemical reaction types 6.",
+        "options": [
+          "Reaction type 6",
+          "Redox 6",
+          "State 6",
+          "Energy"
+        ],
+        "answer": "Reaction type 6"
+      },
+      {
+        "question": "Reactions DOK2 Act1 Q7: Classify the chemical reaction types 7.",
+        "options": [
+          "Reaction type 7",
+          "Redox 7",
+          "State 7",
+          "Energy"
+        ],
+        "answer": "Reaction type 7"
+      },
+      {
+        "question": "Reactions DOK2 Act1 Q8: Classify the chemical reaction types 8.",
+        "options": [
+          "Reaction type 8",
+          "Redox 8",
+          "State 8",
+          "Energy"
+        ],
+        "answer": "Reaction type 8"
+      },
+      {
+        "question": "Reactions DOK2 Act1 Q9: Classify the chemical reaction types 9.",
+        "options": [
+          "Reaction type 9",
+          "Redox 9",
+          "State 9",
+          "Energy"
+        ],
+        "answer": "Reaction type 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK2 Act2 Q0: Classify the chemical reaction types 0.",
+        "options": [
+          "Reaction type 0",
+          "Redox 0",
+          "State 0",
+          "Energy"
+        ],
+        "answer": "Reaction type 0"
+      },
+      {
+        "question": "Reactions DOK2 Act2 Q1: Classify the chemical reaction types 1.",
+        "options": [
+          "Reaction type 1",
+          "Redox 1",
+          "State 1",
+          "Energy"
+        ],
+        "answer": "Reaction type 1"
+      },
+      {
+        "question": "Reactions DOK2 Act2 Q2: Classify the chemical reaction types 2.",
+        "options": [
+          "Reaction type 2",
+          "Redox 2",
+          "State 2",
+          "Energy"
+        ],
+        "answer": "Reaction type 2"
+      },
+      {
+        "question": "Reactions DOK2 Act2 Q3: Classify the chemical reaction types 3.",
+        "options": [
+          "Reaction type 3",
+          "Redox 3",
+          "State 3",
+          "Energy"
+        ],
+        "answer": "Reaction type 3"
+      },
+      {
+        "question": "Reactions DOK2 Act2 Q4: Classify the chemical reaction types 4.",
+        "options": [
+          "Reaction type 4",
+          "Redox 4",
+          "State 4",
+          "Energy"
+        ],
+        "answer": "Reaction type 4"
+      },
+      {
+        "question": "Reactions DOK2 Act2 Q5: Classify the chemical reaction types 5.",
+        "options": [
+          "Reaction type 5",
+          "Redox 5",
+          "State 5",
+          "Energy"
+        ],
+        "answer": "Reaction type 5"
+      },
+      {
+        "question": "Reactions DOK2 Act2 Q6: Classify the chemical reaction types 6.",
+        "options": [
+          "Reaction type 6",
+          "Redox 6",
+          "State 6",
+          "Energy"
+        ],
+        "answer": "Reaction type 6"
+      },
+      {
+        "question": "Reactions DOK2 Act2 Q7: Classify the chemical reaction types 7.",
+        "options": [
+          "Reaction type 7",
+          "Redox 7",
+          "State 7",
+          "Energy"
+        ],
+        "answer": "Reaction type 7"
+      },
+      {
+        "question": "Reactions DOK2 Act2 Q8: Classify the chemical reaction types 8.",
+        "options": [
+          "Reaction type 8",
+          "Redox 8",
+          "State 8",
+          "Energy"
+        ],
+        "answer": "Reaction type 8"
+      },
+      {
+        "question": "Reactions DOK2 Act2 Q9: Classify the chemical reaction types 9.",
+        "options": [
+          "Reaction type 9",
+          "Redox 9",
+          "State 9",
+          "Energy"
+        ],
+        "answer": "Reaction type 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK2 Act3 Q0: Classify the chemical reaction types 0.",
+        "options": [
+          "Reaction type 0",
+          "Redox 0",
+          "State 0",
+          "Energy"
+        ],
+        "answer": "Reaction type 0"
+      },
+      {
+        "question": "Reactions DOK2 Act3 Q1: Classify the chemical reaction types 1.",
+        "options": [
+          "Reaction type 1",
+          "Redox 1",
+          "State 1",
+          "Energy"
+        ],
+        "answer": "Reaction type 1"
+      },
+      {
+        "question": "Reactions DOK2 Act3 Q2: Classify the chemical reaction types 2.",
+        "options": [
+          "Reaction type 2",
+          "Redox 2",
+          "State 2",
+          "Energy"
+        ],
+        "answer": "Reaction type 2"
+      },
+      {
+        "question": "Reactions DOK2 Act3 Q3: Classify the chemical reaction types 3.",
+        "options": [
+          "Reaction type 3",
+          "Redox 3",
+          "State 3",
+          "Energy"
+        ],
+        "answer": "Reaction type 3"
+      },
+      {
+        "question": "Reactions DOK2 Act3 Q4: Classify the chemical reaction types 4.",
+        "options": [
+          "Reaction type 4",
+          "Redox 4",
+          "State 4",
+          "Energy"
+        ],
+        "answer": "Reaction type 4"
+      },
+      {
+        "question": "Reactions DOK2 Act3 Q5: Classify the chemical reaction types 5.",
+        "options": [
+          "Reaction type 5",
+          "Redox 5",
+          "State 5",
+          "Energy"
+        ],
+        "answer": "Reaction type 5"
+      },
+      {
+        "question": "Reactions DOK2 Act3 Q6: Classify the chemical reaction types 6.",
+        "options": [
+          "Reaction type 6",
+          "Redox 6",
+          "State 6",
+          "Energy"
+        ],
+        "answer": "Reaction type 6"
+      },
+      {
+        "question": "Reactions DOK2 Act3 Q7: Classify the chemical reaction types 7.",
+        "options": [
+          "Reaction type 7",
+          "Redox 7",
+          "State 7",
+          "Energy"
+        ],
+        "answer": "Reaction type 7"
+      },
+      {
+        "question": "Reactions DOK2 Act3 Q8: Classify the chemical reaction types 8.",
+        "options": [
+          "Reaction type 8",
+          "Redox 8",
+          "State 8",
+          "Energy"
+        ],
+        "answer": "Reaction type 8"
+      },
+      {
+        "question": "Reactions DOK2 Act3 Q9: Classify the chemical reaction types 9.",
+        "options": [
+          "Reaction type 9",
+          "Redox 9",
+          "State 9",
+          "Energy"
+        ],
+        "answer": "Reaction type 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK2 Act4 Q0: Classify the chemical reaction types 0.",
+        "options": [
+          "Reaction type 0",
+          "Redox 0",
+          "State 0",
+          "Energy"
+        ],
+        "answer": "Reaction type 0"
+      },
+      {
+        "question": "Reactions DOK2 Act4 Q1: Classify the chemical reaction types 1.",
+        "options": [
+          "Reaction type 1",
+          "Redox 1",
+          "State 1",
+          "Energy"
+        ],
+        "answer": "Reaction type 1"
+      },
+      {
+        "question": "Reactions DOK2 Act4 Q2: Classify the chemical reaction types 2.",
+        "options": [
+          "Reaction type 2",
+          "Redox 2",
+          "State 2",
+          "Energy"
+        ],
+        "answer": "Reaction type 2"
+      },
+      {
+        "question": "Reactions DOK2 Act4 Q3: Classify the chemical reaction types 3.",
+        "options": [
+          "Reaction type 3",
+          "Redox 3",
+          "State 3",
+          "Energy"
+        ],
+        "answer": "Reaction type 3"
+      },
+      {
+        "question": "Reactions DOK2 Act4 Q4: Classify the chemical reaction types 4.",
+        "options": [
+          "Reaction type 4",
+          "Redox 4",
+          "State 4",
+          "Energy"
+        ],
+        "answer": "Reaction type 4"
+      },
+      {
+        "question": "Reactions DOK2 Act4 Q5: Classify the chemical reaction types 5.",
+        "options": [
+          "Reaction type 5",
+          "Redox 5",
+          "State 5",
+          "Energy"
+        ],
+        "answer": "Reaction type 5"
+      },
+      {
+        "question": "Reactions DOK2 Act4 Q6: Classify the chemical reaction types 6.",
+        "options": [
+          "Reaction type 6",
+          "Redox 6",
+          "State 6",
+          "Energy"
+        ],
+        "answer": "Reaction type 6"
+      },
+      {
+        "question": "Reactions DOK2 Act4 Q7: Classify the chemical reaction types 7.",
+        "options": [
+          "Reaction type 7",
+          "Redox 7",
+          "State 7",
+          "Energy"
+        ],
+        "answer": "Reaction type 7"
+      },
+      {
+        "question": "Reactions DOK2 Act4 Q8: Classify the chemical reaction types 8.",
+        "options": [
+          "Reaction type 8",
+          "Redox 8",
+          "State 8",
+          "Energy"
+        ],
+        "answer": "Reaction type 8"
+      },
+      {
+        "question": "Reactions DOK2 Act4 Q9: Classify the chemical reaction types 9.",
+        "options": [
+          "Reaction type 9",
+          "Redox 9",
+          "State 9",
+          "Energy"
+        ],
+        "answer": "Reaction type 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK2 Act5 Q0: Classify the chemical reaction types 0.",
+        "options": [
+          "Reaction type 0",
+          "Redox 0",
+          "State 0",
+          "Energy"
+        ],
+        "answer": "Reaction type 0"
+      },
+      {
+        "question": "Reactions DOK2 Act5 Q1: Classify the chemical reaction types 1.",
+        "options": [
+          "Reaction type 1",
+          "Redox 1",
+          "State 1",
+          "Energy"
+        ],
+        "answer": "Reaction type 1"
+      },
+      {
+        "question": "Reactions DOK2 Act5 Q2: Classify the chemical reaction types 2.",
+        "options": [
+          "Reaction type 2",
+          "Redox 2",
+          "State 2",
+          "Energy"
+        ],
+        "answer": "Reaction type 2"
+      },
+      {
+        "question": "Reactions DOK2 Act5 Q3: Classify the chemical reaction types 3.",
+        "options": [
+          "Reaction type 3",
+          "Redox 3",
+          "State 3",
+          "Energy"
+        ],
+        "answer": "Reaction type 3"
+      },
+      {
+        "question": "Reactions DOK2 Act5 Q4: Classify the chemical reaction types 4.",
+        "options": [
+          "Reaction type 4",
+          "Redox 4",
+          "State 4",
+          "Energy"
+        ],
+        "answer": "Reaction type 4"
+      },
+      {
+        "question": "Reactions DOK2 Act5 Q5: Classify the chemical reaction types 5.",
+        "options": [
+          "Reaction type 5",
+          "Redox 5",
+          "State 5",
+          "Energy"
+        ],
+        "answer": "Reaction type 5"
+      },
+      {
+        "question": "Reactions DOK2 Act5 Q6: Classify the chemical reaction types 6.",
+        "options": [
+          "Reaction type 6",
+          "Redox 6",
+          "State 6",
+          "Energy"
+        ],
+        "answer": "Reaction type 6"
+      },
+      {
+        "question": "Reactions DOK2 Act5 Q7: Classify the chemical reaction types 7.",
+        "options": [
+          "Reaction type 7",
+          "Redox 7",
+          "State 7",
+          "Energy"
+        ],
+        "answer": "Reaction type 7"
+      },
+      {
+        "question": "Reactions DOK2 Act5 Q8: Classify the chemical reaction types 8.",
+        "options": [
+          "Reaction type 8",
+          "Redox 8",
+          "State 8",
+          "Energy"
+        ],
+        "answer": "Reaction type 8"
+      },
+      {
+        "question": "Reactions DOK2 Act5 Q9: Classify the chemical reaction types 9.",
+        "options": [
+          "Reaction type 9",
+          "Redox 9",
+          "State 9",
+          "Energy"
+        ],
+        "answer": "Reaction type 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Reactions DOK3 Act1 Q0: Balance the chemical equations coefficient 0.",
+        "options": [
+          "Balanced coefficient 0",
+          "Stoichiometry 0",
+          "Gibbs 0",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 0"
+      },
+      {
+        "question": "Reactions DOK3 Act1 Q1: Balance the chemical equations coefficient 1.",
+        "options": [
+          "Balanced coefficient 1",
+          "Stoichiometry 1",
+          "Gibbs 1",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 1"
+      },
+      {
+        "question": "Reactions DOK3 Act1 Q2: Balance the chemical equations coefficient 2.",
+        "options": [
+          "Balanced coefficient 2",
+          "Stoichiometry 2",
+          "Gibbs 2",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 2"
+      },
+      {
+        "question": "Reactions DOK3 Act1 Q3: Balance the chemical equations coefficient 3.",
+        "options": [
+          "Balanced coefficient 3",
+          "Stoichiometry 3",
+          "Gibbs 3",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 3"
+      },
+      {
+        "question": "Reactions DOK3 Act1 Q4: Balance the chemical equations coefficient 4.",
+        "options": [
+          "Balanced coefficient 4",
+          "Stoichiometry 4",
+          "Gibbs 4",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 4"
+      },
+      {
+        "question": "Reactions DOK3 Act1 Q5: Balance the chemical equations coefficient 5.",
+        "options": [
+          "Balanced coefficient 5",
+          "Stoichiometry 5",
+          "Gibbs 5",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 5"
+      },
+      {
+        "question": "Reactions DOK3 Act1 Q6: Balance the chemical equations coefficient 6.",
+        "options": [
+          "Balanced coefficient 6",
+          "Stoichiometry 6",
+          "Gibbs 6",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 6"
+      },
+      {
+        "question": "Reactions DOK3 Act1 Q7: Balance the chemical equations coefficient 7.",
+        "options": [
+          "Balanced coefficient 7",
+          "Stoichiometry 7",
+          "Gibbs 7",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 7"
+      },
+      {
+        "question": "Reactions DOK3 Act1 Q8: Balance the chemical equations coefficient 8.",
+        "options": [
+          "Balanced coefficient 8",
+          "Stoichiometry 8",
+          "Gibbs 8",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 8"
+      },
+      {
+        "question": "Reactions DOK3 Act1 Q9: Balance the chemical equations coefficient 9.",
+        "options": [
+          "Balanced coefficient 9",
+          "Stoichiometry 9",
+          "Gibbs 9",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK3 Act2 Q0: Balance the chemical equations coefficient 0.",
+        "options": [
+          "Balanced coefficient 0",
+          "Stoichiometry 0",
+          "Gibbs 0",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 0"
+      },
+      {
+        "question": "Reactions DOK3 Act2 Q1: Balance the chemical equations coefficient 1.",
+        "options": [
+          "Balanced coefficient 1",
+          "Stoichiometry 1",
+          "Gibbs 1",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 1"
+      },
+      {
+        "question": "Reactions DOK3 Act2 Q2: Balance the chemical equations coefficient 2.",
+        "options": [
+          "Balanced coefficient 2",
+          "Stoichiometry 2",
+          "Gibbs 2",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 2"
+      },
+      {
+        "question": "Reactions DOK3 Act2 Q3: Balance the chemical equations coefficient 3.",
+        "options": [
+          "Balanced coefficient 3",
+          "Stoichiometry 3",
+          "Gibbs 3",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 3"
+      },
+      {
+        "question": "Reactions DOK3 Act2 Q4: Balance the chemical equations coefficient 4.",
+        "options": [
+          "Balanced coefficient 4",
+          "Stoichiometry 4",
+          "Gibbs 4",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 4"
+      },
+      {
+        "question": "Reactions DOK3 Act2 Q5: Balance the chemical equations coefficient 5.",
+        "options": [
+          "Balanced coefficient 5",
+          "Stoichiometry 5",
+          "Gibbs 5",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 5"
+      },
+      {
+        "question": "Reactions DOK3 Act2 Q6: Balance the chemical equations coefficient 6.",
+        "options": [
+          "Balanced coefficient 6",
+          "Stoichiometry 6",
+          "Gibbs 6",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 6"
+      },
+      {
+        "question": "Reactions DOK3 Act2 Q7: Balance the chemical equations coefficient 7.",
+        "options": [
+          "Balanced coefficient 7",
+          "Stoichiometry 7",
+          "Gibbs 7",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 7"
+      },
+      {
+        "question": "Reactions DOK3 Act2 Q8: Balance the chemical equations coefficient 8.",
+        "options": [
+          "Balanced coefficient 8",
+          "Stoichiometry 8",
+          "Gibbs 8",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 8"
+      },
+      {
+        "question": "Reactions DOK3 Act2 Q9: Balance the chemical equations coefficient 9.",
+        "options": [
+          "Balanced coefficient 9",
+          "Stoichiometry 9",
+          "Gibbs 9",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK3 Act3 Q0: Balance the chemical equations coefficient 0.",
+        "options": [
+          "Balanced coefficient 0",
+          "Stoichiometry 0",
+          "Gibbs 0",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 0"
+      },
+      {
+        "question": "Reactions DOK3 Act3 Q1: Balance the chemical equations coefficient 1.",
+        "options": [
+          "Balanced coefficient 1",
+          "Stoichiometry 1",
+          "Gibbs 1",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 1"
+      },
+      {
+        "question": "Reactions DOK3 Act3 Q2: Balance the chemical equations coefficient 2.",
+        "options": [
+          "Balanced coefficient 2",
+          "Stoichiometry 2",
+          "Gibbs 2",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 2"
+      },
+      {
+        "question": "Reactions DOK3 Act3 Q3: Balance the chemical equations coefficient 3.",
+        "options": [
+          "Balanced coefficient 3",
+          "Stoichiometry 3",
+          "Gibbs 3",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 3"
+      },
+      {
+        "question": "Reactions DOK3 Act3 Q4: Balance the chemical equations coefficient 4.",
+        "options": [
+          "Balanced coefficient 4",
+          "Stoichiometry 4",
+          "Gibbs 4",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 4"
+      },
+      {
+        "question": "Reactions DOK3 Act3 Q5: Balance the chemical equations coefficient 5.",
+        "options": [
+          "Balanced coefficient 5",
+          "Stoichiometry 5",
+          "Gibbs 5",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 5"
+      },
+      {
+        "question": "Reactions DOK3 Act3 Q6: Balance the chemical equations coefficient 6.",
+        "options": [
+          "Balanced coefficient 6",
+          "Stoichiometry 6",
+          "Gibbs 6",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 6"
+      },
+      {
+        "question": "Reactions DOK3 Act3 Q7: Balance the chemical equations coefficient 7.",
+        "options": [
+          "Balanced coefficient 7",
+          "Stoichiometry 7",
+          "Gibbs 7",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 7"
+      },
+      {
+        "question": "Reactions DOK3 Act3 Q8: Balance the chemical equations coefficient 8.",
+        "options": [
+          "Balanced coefficient 8",
+          "Stoichiometry 8",
+          "Gibbs 8",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 8"
+      },
+      {
+        "question": "Reactions DOK3 Act3 Q9: Balance the chemical equations coefficient 9.",
+        "options": [
+          "Balanced coefficient 9",
+          "Stoichiometry 9",
+          "Gibbs 9",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK3 Act4 Q0: Balance the chemical equations coefficient 0.",
+        "options": [
+          "Balanced coefficient 0",
+          "Stoichiometry 0",
+          "Gibbs 0",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 0"
+      },
+      {
+        "question": "Reactions DOK3 Act4 Q1: Balance the chemical equations coefficient 1.",
+        "options": [
+          "Balanced coefficient 1",
+          "Stoichiometry 1",
+          "Gibbs 1",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 1"
+      },
+      {
+        "question": "Reactions DOK3 Act4 Q2: Balance the chemical equations coefficient 2.",
+        "options": [
+          "Balanced coefficient 2",
+          "Stoichiometry 2",
+          "Gibbs 2",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 2"
+      },
+      {
+        "question": "Reactions DOK3 Act4 Q3: Balance the chemical equations coefficient 3.",
+        "options": [
+          "Balanced coefficient 3",
+          "Stoichiometry 3",
+          "Gibbs 3",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 3"
+      },
+      {
+        "question": "Reactions DOK3 Act4 Q4: Balance the chemical equations coefficient 4.",
+        "options": [
+          "Balanced coefficient 4",
+          "Stoichiometry 4",
+          "Gibbs 4",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 4"
+      },
+      {
+        "question": "Reactions DOK3 Act4 Q5: Balance the chemical equations coefficient 5.",
+        "options": [
+          "Balanced coefficient 5",
+          "Stoichiometry 5",
+          "Gibbs 5",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 5"
+      },
+      {
+        "question": "Reactions DOK3 Act4 Q6: Balance the chemical equations coefficient 6.",
+        "options": [
+          "Balanced coefficient 6",
+          "Stoichiometry 6",
+          "Gibbs 6",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 6"
+      },
+      {
+        "question": "Reactions DOK3 Act4 Q7: Balance the chemical equations coefficient 7.",
+        "options": [
+          "Balanced coefficient 7",
+          "Stoichiometry 7",
+          "Gibbs 7",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 7"
+      },
+      {
+        "question": "Reactions DOK3 Act4 Q8: Balance the chemical equations coefficient 8.",
+        "options": [
+          "Balanced coefficient 8",
+          "Stoichiometry 8",
+          "Gibbs 8",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 8"
+      },
+      {
+        "question": "Reactions DOK3 Act4 Q9: Balance the chemical equations coefficient 9.",
+        "options": [
+          "Balanced coefficient 9",
+          "Stoichiometry 9",
+          "Gibbs 9",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK3 Act5 Q0: Balance the chemical equations coefficient 0.",
+        "options": [
+          "Balanced coefficient 0",
+          "Stoichiometry 0",
+          "Gibbs 0",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 0"
+      },
+      {
+        "question": "Reactions DOK3 Act5 Q1: Balance the chemical equations coefficient 1.",
+        "options": [
+          "Balanced coefficient 1",
+          "Stoichiometry 1",
+          "Gibbs 1",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 1"
+      },
+      {
+        "question": "Reactions DOK3 Act5 Q2: Balance the chemical equations coefficient 2.",
+        "options": [
+          "Balanced coefficient 2",
+          "Stoichiometry 2",
+          "Gibbs 2",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 2"
+      },
+      {
+        "question": "Reactions DOK3 Act5 Q3: Balance the chemical equations coefficient 3.",
+        "options": [
+          "Balanced coefficient 3",
+          "Stoichiometry 3",
+          "Gibbs 3",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 3"
+      },
+      {
+        "question": "Reactions DOK3 Act5 Q4: Balance the chemical equations coefficient 4.",
+        "options": [
+          "Balanced coefficient 4",
+          "Stoichiometry 4",
+          "Gibbs 4",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 4"
+      },
+      {
+        "question": "Reactions DOK3 Act5 Q5: Balance the chemical equations coefficient 5.",
+        "options": [
+          "Balanced coefficient 5",
+          "Stoichiometry 5",
+          "Gibbs 5",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 5"
+      },
+      {
+        "question": "Reactions DOK3 Act5 Q6: Balance the chemical equations coefficient 6.",
+        "options": [
+          "Balanced coefficient 6",
+          "Stoichiometry 6",
+          "Gibbs 6",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 6"
+      },
+      {
+        "question": "Reactions DOK3 Act5 Q7: Balance the chemical equations coefficient 7.",
+        "options": [
+          "Balanced coefficient 7",
+          "Stoichiometry 7",
+          "Gibbs 7",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 7"
+      },
+      {
+        "question": "Reactions DOK3 Act5 Q8: Balance the chemical equations coefficient 8.",
+        "options": [
+          "Balanced coefficient 8",
+          "Stoichiometry 8",
+          "Gibbs 8",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 8"
+      },
+      {
+        "question": "Reactions DOK3 Act5 Q9: Balance the chemical equations coefficient 9.",
+        "options": [
+          "Balanced coefficient 9",
+          "Stoichiometry 9",
+          "Gibbs 9",
+          "Spontaneity"
+        ],
+        "answer": "Balanced coefficient 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Reactions DOK4 Act1 Q0: Calibrate reaction energy activation tuner 0.",
+        "options": [
+          "Energy landscape 0",
+          "Yield optimizer 0",
+          "Redox battery 0",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 0"
+      },
+      {
+        "question": "Reactions DOK4 Act1 Q1: Calibrate reaction energy activation tuner 1.",
+        "options": [
+          "Energy landscape 1",
+          "Yield optimizer 1",
+          "Redox battery 1",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 1"
+      },
+      {
+        "question": "Reactions DOK4 Act1 Q2: Calibrate reaction energy activation tuner 2.",
+        "options": [
+          "Energy landscape 2",
+          "Yield optimizer 2",
+          "Redox battery 2",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 2"
+      },
+      {
+        "question": "Reactions DOK4 Act1 Q3: Calibrate reaction energy activation tuner 3.",
+        "options": [
+          "Energy landscape 3",
+          "Yield optimizer 3",
+          "Redox battery 3",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 3"
+      },
+      {
+        "question": "Reactions DOK4 Act1 Q4: Calibrate reaction energy activation tuner 4.",
+        "options": [
+          "Energy landscape 4",
+          "Yield optimizer 4",
+          "Redox battery 4",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 4"
+      },
+      {
+        "question": "Reactions DOK4 Act1 Q5: Calibrate reaction energy activation tuner 5.",
+        "options": [
+          "Energy landscape 5",
+          "Yield optimizer 5",
+          "Redox battery 5",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 5"
+      },
+      {
+        "question": "Reactions DOK4 Act1 Q6: Calibrate reaction energy activation tuner 6.",
+        "options": [
+          "Energy landscape 6",
+          "Yield optimizer 6",
+          "Redox battery 6",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 6"
+      },
+      {
+        "question": "Reactions DOK4 Act1 Q7: Calibrate reaction energy activation tuner 7.",
+        "options": [
+          "Energy landscape 7",
+          "Yield optimizer 7",
+          "Redox battery 7",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 7"
+      },
+      {
+        "question": "Reactions DOK4 Act1 Q8: Calibrate reaction energy activation tuner 8.",
+        "options": [
+          "Energy landscape 8",
+          "Yield optimizer 8",
+          "Redox battery 8",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 8"
+      },
+      {
+        "question": "Reactions DOK4 Act1 Q9: Calibrate reaction energy activation tuner 9.",
+        "options": [
+          "Energy landscape 9",
+          "Yield optimizer 9",
+          "Redox battery 9",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK4 Act2 Q0: Calibrate reaction energy activation tuner 0.",
+        "options": [
+          "Energy landscape 0",
+          "Yield optimizer 0",
+          "Redox battery 0",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 0"
+      },
+      {
+        "question": "Reactions DOK4 Act2 Q1: Calibrate reaction energy activation tuner 1.",
+        "options": [
+          "Energy landscape 1",
+          "Yield optimizer 1",
+          "Redox battery 1",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 1"
+      },
+      {
+        "question": "Reactions DOK4 Act2 Q2: Calibrate reaction energy activation tuner 2.",
+        "options": [
+          "Energy landscape 2",
+          "Yield optimizer 2",
+          "Redox battery 2",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 2"
+      },
+      {
+        "question": "Reactions DOK4 Act2 Q3: Calibrate reaction energy activation tuner 3.",
+        "options": [
+          "Energy landscape 3",
+          "Yield optimizer 3",
+          "Redox battery 3",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 3"
+      },
+      {
+        "question": "Reactions DOK4 Act2 Q4: Calibrate reaction energy activation tuner 4.",
+        "options": [
+          "Energy landscape 4",
+          "Yield optimizer 4",
+          "Redox battery 4",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 4"
+      },
+      {
+        "question": "Reactions DOK4 Act2 Q5: Calibrate reaction energy activation tuner 5.",
+        "options": [
+          "Energy landscape 5",
+          "Yield optimizer 5",
+          "Redox battery 5",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 5"
+      },
+      {
+        "question": "Reactions DOK4 Act2 Q6: Calibrate reaction energy activation tuner 6.",
+        "options": [
+          "Energy landscape 6",
+          "Yield optimizer 6",
+          "Redox battery 6",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 6"
+      },
+      {
+        "question": "Reactions DOK4 Act2 Q7: Calibrate reaction energy activation tuner 7.",
+        "options": [
+          "Energy landscape 7",
+          "Yield optimizer 7",
+          "Redox battery 7",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 7"
+      },
+      {
+        "question": "Reactions DOK4 Act2 Q8: Calibrate reaction energy activation tuner 8.",
+        "options": [
+          "Energy landscape 8",
+          "Yield optimizer 8",
+          "Redox battery 8",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 8"
+      },
+      {
+        "question": "Reactions DOK4 Act2 Q9: Calibrate reaction energy activation tuner 9.",
+        "options": [
+          "Energy landscape 9",
+          "Yield optimizer 9",
+          "Redox battery 9",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK4 Act3 Q0: Calibrate reaction energy activation tuner 0.",
+        "options": [
+          "Energy landscape 0",
+          "Yield optimizer 0",
+          "Redox battery 0",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 0"
+      },
+      {
+        "question": "Reactions DOK4 Act3 Q1: Calibrate reaction energy activation tuner 1.",
+        "options": [
+          "Energy landscape 1",
+          "Yield optimizer 1",
+          "Redox battery 1",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 1"
+      },
+      {
+        "question": "Reactions DOK4 Act3 Q2: Calibrate reaction energy activation tuner 2.",
+        "options": [
+          "Energy landscape 2",
+          "Yield optimizer 2",
+          "Redox battery 2",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 2"
+      },
+      {
+        "question": "Reactions DOK4 Act3 Q3: Calibrate reaction energy activation tuner 3.",
+        "options": [
+          "Energy landscape 3",
+          "Yield optimizer 3",
+          "Redox battery 3",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 3"
+      },
+      {
+        "question": "Reactions DOK4 Act3 Q4: Calibrate reaction energy activation tuner 4.",
+        "options": [
+          "Energy landscape 4",
+          "Yield optimizer 4",
+          "Redox battery 4",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 4"
+      },
+      {
+        "question": "Reactions DOK4 Act3 Q5: Calibrate reaction energy activation tuner 5.",
+        "options": [
+          "Energy landscape 5",
+          "Yield optimizer 5",
+          "Redox battery 5",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 5"
+      },
+      {
+        "question": "Reactions DOK4 Act3 Q6: Calibrate reaction energy activation tuner 6.",
+        "options": [
+          "Energy landscape 6",
+          "Yield optimizer 6",
+          "Redox battery 6",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 6"
+      },
+      {
+        "question": "Reactions DOK4 Act3 Q7: Calibrate reaction energy activation tuner 7.",
+        "options": [
+          "Energy landscape 7",
+          "Yield optimizer 7",
+          "Redox battery 7",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 7"
+      },
+      {
+        "question": "Reactions DOK4 Act3 Q8: Calibrate reaction energy activation tuner 8.",
+        "options": [
+          "Energy landscape 8",
+          "Yield optimizer 8",
+          "Redox battery 8",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 8"
+      },
+      {
+        "question": "Reactions DOK4 Act3 Q9: Calibrate reaction energy activation tuner 9.",
+        "options": [
+          "Energy landscape 9",
+          "Yield optimizer 9",
+          "Redox battery 9",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK4 Act4 Q0: Calibrate reaction energy activation tuner 0.",
+        "options": [
+          "Energy landscape 0",
+          "Yield optimizer 0",
+          "Redox battery 0",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 0"
+      },
+      {
+        "question": "Reactions DOK4 Act4 Q1: Calibrate reaction energy activation tuner 1.",
+        "options": [
+          "Energy landscape 1",
+          "Yield optimizer 1",
+          "Redox battery 1",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 1"
+      },
+      {
+        "question": "Reactions DOK4 Act4 Q2: Calibrate reaction energy activation tuner 2.",
+        "options": [
+          "Energy landscape 2",
+          "Yield optimizer 2",
+          "Redox battery 2",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 2"
+      },
+      {
+        "question": "Reactions DOK4 Act4 Q3: Calibrate reaction energy activation tuner 3.",
+        "options": [
+          "Energy landscape 3",
+          "Yield optimizer 3",
+          "Redox battery 3",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 3"
+      },
+      {
+        "question": "Reactions DOK4 Act4 Q4: Calibrate reaction energy activation tuner 4.",
+        "options": [
+          "Energy landscape 4",
+          "Yield optimizer 4",
+          "Redox battery 4",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 4"
+      },
+      {
+        "question": "Reactions DOK4 Act4 Q5: Calibrate reaction energy activation tuner 5.",
+        "options": [
+          "Energy landscape 5",
+          "Yield optimizer 5",
+          "Redox battery 5",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 5"
+      },
+      {
+        "question": "Reactions DOK4 Act4 Q6: Calibrate reaction energy activation tuner 6.",
+        "options": [
+          "Energy landscape 6",
+          "Yield optimizer 6",
+          "Redox battery 6",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 6"
+      },
+      {
+        "question": "Reactions DOK4 Act4 Q7: Calibrate reaction energy activation tuner 7.",
+        "options": [
+          "Energy landscape 7",
+          "Yield optimizer 7",
+          "Redox battery 7",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 7"
+      },
+      {
+        "question": "Reactions DOK4 Act4 Q8: Calibrate reaction energy activation tuner 8.",
+        "options": [
+          "Energy landscape 8",
+          "Yield optimizer 8",
+          "Redox battery 8",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 8"
+      },
+      {
+        "question": "Reactions DOK4 Act4 Q9: Calibrate reaction energy activation tuner 9.",
+        "options": [
+          "Energy landscape 9",
+          "Yield optimizer 9",
+          "Redox battery 9",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 9"
+      }
+    ],
+    [
+      {
+        "question": "Reactions DOK4 Act5 Q0: Calibrate reaction energy activation tuner 0.",
+        "options": [
+          "Energy landscape 0",
+          "Yield optimizer 0",
+          "Redox battery 0",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 0"
+      },
+      {
+        "question": "Reactions DOK4 Act5 Q1: Calibrate reaction energy activation tuner 1.",
+        "options": [
+          "Energy landscape 1",
+          "Yield optimizer 1",
+          "Redox battery 1",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 1"
+      },
+      {
+        "question": "Reactions DOK4 Act5 Q2: Calibrate reaction energy activation tuner 2.",
+        "options": [
+          "Energy landscape 2",
+          "Yield optimizer 2",
+          "Redox battery 2",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 2"
+      },
+      {
+        "question": "Reactions DOK4 Act5 Q3: Calibrate reaction energy activation tuner 3.",
+        "options": [
+          "Energy landscape 3",
+          "Yield optimizer 3",
+          "Redox battery 3",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 3"
+      },
+      {
+        "question": "Reactions DOK4 Act5 Q4: Calibrate reaction energy activation tuner 4.",
+        "options": [
+          "Energy landscape 4",
+          "Yield optimizer 4",
+          "Redox battery 4",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 4"
+      },
+      {
+        "question": "Reactions DOK4 Act5 Q5: Calibrate reaction energy activation tuner 5.",
+        "options": [
+          "Energy landscape 5",
+          "Yield optimizer 5",
+          "Redox battery 5",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 5"
+      },
+      {
+        "question": "Reactions DOK4 Act5 Q6: Calibrate reaction energy activation tuner 6.",
+        "options": [
+          "Energy landscape 6",
+          "Yield optimizer 6",
+          "Redox battery 6",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 6"
+      },
+      {
+        "question": "Reactions DOK4 Act5 Q7: Calibrate reaction energy activation tuner 7.",
+        "options": [
+          "Energy landscape 7",
+          "Yield optimizer 7",
+          "Redox battery 7",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 7"
+      },
+      {
+        "question": "Reactions DOK4 Act5 Q8: Calibrate reaction energy activation tuner 8.",
+        "options": [
+          "Energy landscape 8",
+          "Yield optimizer 8",
+          "Redox battery 8",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 8"
+      },
+      {
+        "question": "Reactions DOK4 Act5 Q9: Calibrate reaction energy activation tuner 9.",
+        "options": [
+          "Energy landscape 9",
+          "Yield optimizer 9",
+          "Redox battery 9",
+          "Buffer"
+        ],
+        "answer": "Energy landscape 9"
+      }
+    ]
+  ]
+}
 };
 
 const BIO_DOK2_ACT1_VARIANTS = [
@@ -31823,6 +44675,33 @@ const BIO_DOK2_ACT1_VARIANTS = [
     description: "Reconstruct the original DNA template sequence from a given mRNA strand."
   }
 ];
+
+const STANDARD_NAMES = {
+  "OAS.B.LS1.1": "DNA & Proteins (B.LS1.1)",
+  "OAS.B.LS1.2": "Multicellular Systems (B.LS1.2)",
+  "OAS.B.LS1.3": "Homeostasis Regulation (B.LS1.3)",
+  "OAS.B.LS1.4": "Cell Division & Differentiation (B.LS1.4)",
+  "OAS.B.LS1.5": "Photosynthesis Energy (B.LS1.5)",
+  "OAS.B.LS1.6": "Macromolecule Synthesis (B.LS1.6)",
+  "OAS.B.LS1.7": "Cellular Respiration (B.LS1.7)",
+  "OAS.B.LS2.1": "Carrying Capacity Factors (B.LS2.1)",
+  "OAS.B.LS2.2": "Biodiversity Factors (B.LS2.2)",
+  "OAS.B.LS2.3": "Cycling of Matter (B.LS2.3)",
+  "OAS.B.LS2.4": "Ecosystem Energy Flow (B.LS2.4)",
+  "OAS.B.LS2.5": "Carbon Cycling Spheres (B.LS2.5)",
+  "OAS.B.LS2.6": "Ecosystem Stability Evaluation (B.LS2.6)",
+  "OAS.B.LS2.8": "Group Behavior Evidence (B.LS2.8)",
+  "OAS.B.LS3.1": "Genetics Inheritable Traits (B.LS3.1)",
+  "OAS.B.LS3.2": "Genetic Variation Viable Errors (B.LS3.2)",
+  "OAS.B.LS3.3": "Statistics of Trait Distribution (B.LS3.3)",
+  "OAS.B.LS4.1": "Common Ancestry Evidence (B.LS4.1)",
+  "OAS.B.LS4.2": "Natural Selection Drivers (B.LS4.2)",
+  "OAS.B.LS4.3": "Advantageous Traits Frequency (B.LS4.3)",
+  "OAS.B.LS4.4": "Natural Selection Adaptation (B.LS4.4)",
+  "OAS.B.LS4.5": "Environmental Shifts & Extinction (B.LS4.5)",
+  "OAS.B.PS1.1": "Chemical Bonding (B.PS1.1)",
+  "OAS.PS.PS1.2": "Chemical Reactions & Electron States (PS.PS1.2)"
+};
 
 export default function Home() {
   // App Role View: 'student' (DNA Sandbox) vs 'teacher' vs 'admin' vs 'parent'
@@ -33889,7 +46768,7 @@ export default function Home() {
       "charlie_smith,285",
       "daniela_garcia,240",
       "erik_johnson,200"
-    ].join("\n");
+    ].join("");
 
     const blob = new Blob([csvContent], { type: "text/csv" });
     const formData = new FormData();
@@ -35271,6 +48150,181 @@ export default function Home() {
         }
       };
 
+return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify the glycolysis pathway components:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Glucose molecule starting state</label>
+              <select disabled={isCompleted} value={glucose} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, glucose: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select role...</option>
+                <option value="Reactant">Reactant (Starting Substrate)</option>
+                <option value="Carrier Product">Carrier Product</option>
+                <option value="Energy Output">Energy Output</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Cytosolic NADH molecule</label>
+              <select disabled={isCompleted} value={nadh} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, nadh: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select role...</option>
+                <option value="Reactant">Reactant</option>
+                <option value="Carrier Product">Carrier Product (Reduced Electron Carrier)</option>
+                <option value="Energy Output">Energy Output</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Net 2 ATP yield</label>
+              <select disabled={isCompleted} value={atp} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, atp: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select role...</option>
+                <option value="Reactant">Reactant</option>
+                <option value="Carrier Product">Carrier Product</option>
+                <option value="Energy Output">Energy Output (Direct Cellular Energy)</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyGlycolysis} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Glycolysis Inputs/Outputs Verified" : "Verify Inputs/Outputs"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const defaultOrder = ["Acetyl-CoA", "Citrate", "Alpha-Ketoglutarate", "Oxaloacetate"];
+      const currentOrder = wsState.order || ["Citrate", "Acetyl-CoA", "Oxaloacetate", "Alpha-Ketoglutarate"];
+
+      const moveItem = (index, direction) => {
+        if (isCompleted) return;
+        const newOrder = [...currentOrder];
+        const nextIndex = index + direction;
+        if (nextIndex < 0 || nextIndex >= newOrder.length) return;
+        [newOrder[index], newOrder[nextIndex]] = [newOrder[nextIndex], newOrder[index]];
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, order: newOrder } }));
+      };
+
+      const verifyKrebs = () => {
+        const correct = JSON.stringify(currentOrder) === JSON.stringify(defaultOrder);
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls17", order: currentOrder, is_correct: correct }, "krebs_tracker", "OAS.B.LS1.7");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls17" }, "krebs_tracker", "OAS.B.LS1.7");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Arrange the Krebs Cycle intermediates in order of carbon counts (2C to 6C to 5C to 4C):</p>
+          <div className="space-y-2">
+            {currentOrder.map((component, idx) => (
+              <div key={component} className="flex justify-between items-center bg-zinc-900 border border-zinc-800 rounded-xl p-3">
+                <span className="text-xs font-mono font-bold text-white">{idx + 1}. {component}</span>
+                <div className="flex gap-1">
+                  <button onClick={() => moveItem(idx, -1)} disabled={isCompleted || idx === 0} className="p-1 text-xs bg-zinc-950 hover:bg-zinc-850 border border-zinc-850 rounded text-zinc-400 disabled:opacity-30">▲</button>
+                  <button onClick={() => moveItem(idx, 1)} disabled={isCompleted || idx === currentOrder.length - 1} className="p-1 text-xs bg-zinc-950 hover:bg-zinc-850 border border-zinc-850 rounded text-zinc-400 disabled:opacity-30">▼</button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button onClick={verifyKrebs} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Krebs Tracker Verified" : "Verify Flow"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const rotenone = wsState.rotenone || "";
+      const cyanide = wsState.cyanide || "";
+      const dnp = wsState.dnp || "";
+
+      const verifyPoisons = () => {
+        const correct = rotenone === "Complex I" && cyanide === "Complex IV" && dnp === "Proton Uncoupler";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act2_workspace_ls17", rotenone, cyanide, dnp, is_correct: correct }, "mitochondrial_poisons", "OAS.B.LS1.7");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act2_workspace_ls17" }, "mitochondrial_poisons", "OAS.B.LS1.7");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Match each chemical blocker to its correct target pathway site:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Rotenone (Insecticide)</label>
+              <select disabled={isCompleted} value={rotenone} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, rotenone: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select target...</option>
+                <option value="Complex I">Complex I (NADH Dehydrogenase)</option>
+                <option value="Complex IV">Complex IV (Cytochrome Oxidase)</option>
+                <option value="Proton Uncoupler">Proton Uncoupler (Inner membrane leakage)</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Cyanide / Carbon Monoxide</label>
+              <select disabled={isCompleted} value={cyanide} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, cyanide: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select target...</option>
+                <option value="Complex I">Complex I (NADH Dehydrogenase)</option>
+                <option value="Complex IV">Complex IV (Cytochrome Oxidase)</option>
+                <option value="Proton Uncoupler">Proton Uncoupler (Inner membrane leakage)</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. DNP (2,4-Dinitrophenol)</label>
+              <select disabled={isCompleted} value={dnp} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, dnp: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select target...</option>
+                <option value="Complex I">Complex I (NADH Dehydrogenase)</option>
+                <option value="Complex IV">Complex IV (Cytochrome Oxidase)</option>
+                <option value="Proton Uncoupler">Proton Uncoupler (Inner membrane leakage)</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyPoisons} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Blocker Targets Verified" : "Verify Targets"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const feed = wsState.feed || 10;
+      const oxygen = wsState.oxygen || 50;
+      const temp = wsState.temp || 20;
+
+      const verifyFlux = () => {
+        const correct = parseInt(feed) === 50 && parseInt(oxygen) === 0 && parseInt(temp) === 30;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act4_workspace_ls17", feed, oxygen, temp, is_correct: correct }, "metabolic_flux", "OAS.B.LS1.7");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act4_workspace_ls17" }, "metabolic_flux", "OAS.B.LS1.7");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate parameters to redirect carbon flux into yeast ethanol biofuel yield. Target Glucose Feed = **50 g/L**, Oxygen Aeration = **0%**, Temperature = **30 °C**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Glucose Feed Rate</span>
+                <span className="text-indigo-400">{feed} g/L</span>
+              </div>
+              <input type="range" min="10" max="100" step="10" disabled={isCompleted} value={feed} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, feed: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Oxygen Aeration Rate</span>
+                <span className="text-rose-400">{oxygen}%</span>
+              </div>
+              <input type="range" min="0" max="100" step="10" disabled={isCompleted} value={oxygen} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, oxygen: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Reactor Temperature</span>
+                <span className="text-amber-400">{temp} °C</span>
+              </div>
+              <input type="range" min="15" max="45" step="5" disabled={isCompleted} value={temp} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, temp: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-amber-500" />
+            </div>
+          </div>
+          <button onClick={verifyFlux} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Yeast Metabolic Flux Tuned" : "Tune Metabolic Flux"}</button>
+        </div>
+      );
+    }
+  };
+
   const renderLs21Workspaces = () => {
     const key = `OAS.B.LS2.1_${selectedDok}_${selectedActivityIndex}`;
     const wsState = dokWorkspaces[`${key}_state`] || {};
@@ -35605,6 +48659,31 @@ export default function Home() {
           logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act3_workspace_ls22" }, "disturbance_resilience", "OAS.B.LS2.2");
         }
       };
+
+return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate community biodiversity parameters to maximize ecosystem resilience against wildfire disturbances. Targets: Richness = **15**, Evenness = **100%**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Species Richness</span>
+                <span className="text-indigo-400">{richness} species</span>
+              </div>
+              <input type="range" min="5" max="25" step="5" disabled={isCompleted} value={richness} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, richness: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Species Evenness</span>
+                <span className="text-rose-400">{evenness}%</span>
+              </div>
+              <input type="range" min="20" max="100" step="10" disabled={isCompleted} value={evenness} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, evenness: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyResilience} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Ecosystem Resilience Optimized" : "Tune Resilience Parameters"}</button>
+        </div>
+      );
+    }
+  };
 
   const renderLs23Workspaces = () => {
     const key = `OAS.B.LS2.3_${selectedDok}_${selectedActivityIndex}`;
@@ -36394,7 +49473,7 @@ export default function Home() {
         </div>
       );
     }
-  };\n
+  };
   const renderLs28Workspaces = () => {
     const key = `OAS.B.LS2.8_${selectedDok}_${selectedActivityIndex}`;
     const wsState = dokWorkspaces[`${key}_state`] || {};
@@ -37121,212 +50200,1166 @@ export default function Home() {
       );
     }
   };
-\n
 
+  const renderLs41Workspaces = () => {
+    const key = `OAS.B.LS4.1_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
 
+    if (selectedDok === 1) {
+      const arm = wsState.arm || "";
+      const flipper = wsState.flipper || "";
+      const insect = wsState.insect || "";
+      const bat = wsState.bat || "";
 
-      return (
-        <div className="space-y-6 max-w-md mx-auto">
-          <p className="text-xs text-zinc-400 text-center">Calibrate community biodiversity parameters to maximize ecosystem resilience against wildfire disturbances. Targets: Richness = **15**, Evenness = **100%**:</p>
-          <div className="space-y-4">
-            <div className="space-y-1">
-              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
-                <span>Species Richness</span>
-                <span className="text-indigo-400">{richness} species</span>
-              </div>
-              <input type="range" min="5" max="25" step="5" disabled={isCompleted} value={richness} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, richness: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
-            </div>
-            <div className="space-y-1">
-              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
-                <span>Species Evenness</span>
-                <span className="text-rose-400">{evenness}%</span>
-              </div>
-              <input type="range" min="20" max="100" step="10" disabled={isCompleted} value={evenness} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, evenness: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
-            </div>
-          </div>
-          <button onClick={verifyResilience} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Ecosystem Resilience Optimized" : "Tune Resilience Parameters"}</button>
-        </div>
-      );
-    }
-  };
-
-
+      const verifyAnatomy = () => {
+        const correct = arm === "Homologous" && flipper === "Homologous" && insect === "Analogous" && bat === "Homologous";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls41", arm, flipper, insect, bat, is_correct: correct }, "anatomical_sorter", "OAS.B.LS4.1");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls41" }, "anatomical_sorter", "OAS.B.LS4.1");
+        }
+      };
 
       return (
         <div className="space-y-4 max-w-md mx-auto">
-          <p className="text-xs text-zinc-400 text-center">Classify the glycolysis pathway components:</p>
+          <p className="text-xs text-zinc-400 text-center">Classify each anatomical structure as Homologous (shared ancestry) or Analogous (convergent adaptation):</p>
           <div className="space-y-3">
             <div className="flex flex-col gap-1">
-              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Glucose molecule starting state</label>
-              <select disabled={isCompleted} value={glucose} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, glucose: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
-                <option value="">Select role...</option>
-                <option value="Reactant">Reactant (Starting Substrate)</option>
-                <option value="Carrier Product">Carrier Product</option>
-                <option value="Energy Output">Energy Output</option>
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Human arm skeletal layout</label>
+              <select disabled={isCompleted} value={arm} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, arm: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select structure type...</option>
+                <option value="Homologous">Homologous Structure</option>
+                <option value="Analogous">Analogous Structure</option>
               </select>
             </div>
             <div className="flex flex-col gap-1">
-              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Cytosolic NADH molecule</label>
-              <select disabled={isCompleted} value={nadh} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, nadh: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
-                <option value="">Select role...</option>
-                <option value="Reactant">Reactant</option>
-                <option value="Carrier Product">Carrier Product (Reduced Electron Carrier)</option>
-                <option value="Energy Output">Energy Output</option>
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Whale flipper skeletal layout</label>
+              <select disabled={isCompleted} value={flipper} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, flipper: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select structure type...</option>
+                <option value="Homologous">Homologous Structure</option>
+                <option value="Analogous">Analogous Structure</option>
               </select>
             </div>
             <div className="flex flex-col gap-1">
-              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Net 2 ATP yield</label>
-              <select disabled={isCompleted} value={atp} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, atp: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
-                <option value="">Select role...</option>
-                <option value="Reactant">Reactant</option>
-                <option value="Carrier Product">Carrier Product</option>
-                <option value="Energy Output">Energy Output (Direct Cellular Energy)</option>
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Insect wing vs. bird wing</label>
+              <select disabled={isCompleted} value={insect} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, insect: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select structure type...</option>
+                <option value="Homologous">Homologous Structure</option>
+                <option value="Analogous">Analogous Structure</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">4. Bat wing skeletal layout</label>
+              <select disabled={isCompleted} value={bat} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, bat: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select structure type...</option>
+                <option value="Homologous">Homologous Structure</option>
+                <option value="Analogous">Analogous Structure</option>
               </select>
             </div>
           </div>
-          <button onClick={verifyGlycolysis} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Glycolysis Inputs/Outputs Verified" : "Verify Inputs/Outputs"}</button>
+          <button onClick={verifyAnatomy} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Structures Classified" : "Verify Structures"}</button>
         </div>
       );
     }
 
     if (selectedDok === 2) {
-      const defaultOrder = ["Acetyl-CoA", "Citrate", "Alpha-Ketoglutarate", "Oxaloacetate"];
-      const currentOrder = wsState.order || ["Citrate", "Acetyl-CoA", "Oxaloacetate", "Alpha-Ketoglutarate"];
+      const fossil = wsState.fossil || "";
+      const protein = wsState.protein || "";
+      const vestigial = wsState.vestigial || "";
 
-      const moveItem = (index, direction) => {
-        if (isCompleted) return;
-        const newOrder = [...currentOrder];
-        const nextIndex = index + direction;
-        if (nextIndex < 0 || nextIndex >= newOrder.length) return;
-        [newOrder[index], newOrder[nextIndex]] = [newOrder[nextIndex], newOrder[index]];
-        setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, order: newOrder } }));
-      };
-
-      const verifyKrebs = () => {
-        const correct = JSON.stringify(currentOrder) === JSON.stringify(defaultOrder);
+      const verifyEvidence = () => {
+        const correct = fossil === "Fossil" && protein === "Protein" && vestigial === "Vestigial";
         setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
-        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls17", order: currentOrder, is_correct: correct }, "krebs_tracker", "OAS.B.LS1.7");
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls41", fossil, protein, vestigial, is_correct: correct }, "evolutionary_evidence", "OAS.B.LS4.1");
         if (correct) {
-          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls17" }, "krebs_tracker", "OAS.B.LS1.7");
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls41" }, "evolutionary_evidence", "OAS.B.LS4.1");
         }
       };
 
       return (
         <div className="space-y-4 max-w-md mx-auto">
-          <p className="text-xs text-zinc-400 text-center">Arrange the Krebs Cycle intermediates in order of carbon counts (2C to 6C to 5C to 4C):</p>
-          <div className="space-y-2">
-            {currentOrder.map((component, idx) => (
-              <div key={component} className="flex justify-between items-center bg-zinc-900 border border-zinc-800 rounded-xl p-3">
-                <span className="text-xs font-mono font-bold text-white">{idx + 1}. {component}</span>
-                <div className="flex gap-1">
-                  <button onClick={() => moveItem(idx, -1)} disabled={isCompleted || idx === 0} className="p-1 text-xs bg-zinc-950 hover:bg-zinc-850 border border-zinc-850 rounded text-zinc-400 disabled:opacity-30">▲</button>
-                  <button onClick={() => moveItem(idx, 1)} disabled={isCompleted || idx === currentOrder.length - 1} className="p-1 text-xs bg-zinc-950 hover:bg-zinc-850 border border-zinc-850 rounded text-zinc-400 disabled:opacity-30">▼</button>
-                </div>
-              </div>
-            ))}
+          <p className="text-xs text-zinc-400 text-center">Match each evolutionary line of evidence to its correct description definition:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Fossil record transition sequences</label>
+              <select disabled={isCompleted} value={fossil} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, fossil: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select definition...</option>
+                <option value="Fossil">Chronological sequencing of skeletal forms</option>
+                <option value="Protein">Biochemical comparison of shared proteins</option>
+                <option value="Vestigial">Evolutionary remnants of ancestral lifestyles</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Amino acid sequence similarity</label>
+              <select disabled={isCompleted} value={protein} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, protein: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select definition...</option>
+                <option value="Fossil">Chronological sequencing of skeletal forms</option>
+                <option value="Protein">Biochemical comparison of shared proteins</option>
+                <option value="Vestigial">Evolutionary remnants of ancestral lifestyles</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Vestigial structures (e.g. whale pelvis)</label>
+              <select disabled={isCompleted} value={vestigial} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, vestigial: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select definition...</option>
+                <option value="Fossil">Chronological sequencing of skeletal forms</option>
+                <option value="Protein">Biochemical comparison of shared proteins</option>
+                <option value="Vestigial">Evolutionary remnants of ancestral lifestyles</option>
+              </select>
+            </div>
           </div>
-          <button onClick={verifyKrebs} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Krebs Tracker Verified" : "Verify Flow"}</button>
+          <button onClick={verifyEvidence} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Evidence Matched" : "Verify Evidence"}</button>
         </div>
       );
     }
 
     if (selectedDok === 3) {
-      const rotenone = wsState.rotenone || "";
-      const cyanide = wsState.cyanide || "";
-      const dnp = wsState.dnp || "";
+      const distance = wsState.distance || 10;
+      const angle = wsState.angle || 10;
 
-      const verifyPoisons = () => {
-        const correct = rotenone === "Complex I" && cyanide === "Complex IV" && dnp === "Proton Uncoupler";
+      const verifyTree = () => {
+        const correct = parseInt(distance) === 40 && parseInt(angle) === 30;
         setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
-        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act2_workspace_ls17", rotenone, cyanide, dnp, is_correct: correct }, "mitochondrial_poisons", "OAS.B.LS1.7");
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls41", distance, angle, is_correct: correct }, "phylogenetic_tree_sandbox", "OAS.B.LS4.1");
         if (correct) {
-          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act2_workspace_ls17" }, "mitochondrial_poisons", "OAS.B.LS1.7");
-        }
-      };
-
-      return (
-        <div className="space-y-4 max-w-md mx-auto">
-          <p className="text-xs text-zinc-400 text-center">Match each chemical blocker to its correct target pathway site:</p>
-          <div className="space-y-3">
-            <div className="flex flex-col gap-1">
-              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Rotenone (Insecticide)</label>
-              <select disabled={isCompleted} value={rotenone} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, rotenone: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
-                <option value="">Select target...</option>
-                <option value="Complex I">Complex I (NADH Dehydrogenase)</option>
-                <option value="Complex IV">Complex IV (Cytochrome Oxidase)</option>
-                <option value="Proton Uncoupler">Proton Uncoupler (Inner membrane leakage)</option>
-              </select>
-            </div>
-            <div className="flex flex-col gap-1">
-              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Cyanide / Carbon Monoxide</label>
-              <select disabled={isCompleted} value={cyanide} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, cyanide: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
-                <option value="">Select target...</option>
-                <option value="Complex I">Complex I (NADH Dehydrogenase)</option>
-                <option value="Complex IV">Complex IV (Cytochrome Oxidase)</option>
-                <option value="Proton Uncoupler">Proton Uncoupler (Inner membrane leakage)</option>
-              </select>
-            </div>
-            <div className="flex flex-col gap-1">
-              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. DNP (2,4-Dinitrophenol)</label>
-              <select disabled={isCompleted} value={dnp} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, dnp: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
-                <option value="">Select target...</option>
-                <option value="Complex I">Complex I (NADH Dehydrogenase)</option>
-                <option value="Complex IV">Complex IV (Cytochrome Oxidase)</option>
-                <option value="Proton Uncoupler">Proton Uncoupler (Inner membrane leakage)</option>
-              </select>
-            </div>
-          </div>
-          <button onClick={verifyPoisons} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Blocker Targets Verified" : "Verify Targets"}</button>
-        </div>
-      );
-    }
-
-    if (selectedDok === 4) {
-      const feed = wsState.feed || 10;
-      const oxygen = wsState.oxygen || 50;
-      const temp = wsState.temp || 20;
-
-      const verifyFlux = () => {
-        const correct = parseInt(feed) === 50 && parseInt(oxygen) === 0 && parseInt(temp) === 30;
-        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
-        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act4_workspace_ls17", feed, oxygen, temp, is_correct: correct }, "metabolic_flux", "OAS.B.LS1.7");
-        if (correct) {
-          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act4_workspace_ls17" }, "metabolic_flux", "OAS.B.LS1.7");
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls41" }, "phylogenetic_tree_sandbox", "OAS.B.LS4.1");
         }
       };
 
       return (
         <div className="space-y-6 max-w-md mx-auto">
-          <p className="text-xs text-zinc-400 text-center">Calibrate parameters to redirect carbon flux into yeast ethanol biofuel yield. Target Glucose Feed = **50 g/L**, Oxygen Aeration = **0%**, Temperature = **30 °C**:</p>
+          <p className="text-xs text-zinc-400 text-center">Calibrate root node distance and bifurcation branch angles to align common ancestor positions. Targets: Root Distance = **40 Mya**, Bifurcation Angle = **30 degrees**:</p>
           <div className="space-y-4">
             <div className="space-y-1">
               <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
-                <span>Glucose Feed Rate</span>
-                <span className="text-indigo-400">{feed} g/L</span>
+                <span>Root Evolutionary Distance</span>
+                <span className="text-indigo-400">{distance} Mya</span>
               </div>
-              <input type="range" min="10" max="100" step="10" disabled={isCompleted} value={feed} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, feed: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+              <input type="range" min="10" max="100" step="10" disabled={isCompleted} value={distance} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, distance: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
             </div>
             <div className="space-y-1">
               <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
-                <span>Oxygen Aeration Rate</span>
-                <span className="text-rose-400">{oxygen}%</span>
+                <span>Node Bifurcation Angle</span>
+                <span className="text-rose-400">{angle}°</span>
               </div>
-              <input type="range" min="0" max="100" step="10" disabled={isCompleted} value={oxygen} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, oxygen: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
-            </div>
-            <div className="space-y-1">
-              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
-                <span>Reactor Temperature</span>
-                <span className="text-amber-400">{temp} °C</span>
-              </div>
-              <input type="range" min="15" max="45" step="5" disabled={isCompleted} value={temp} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, temp: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-amber-500" />
+              <input type="range" min="10" max="90" step="10" disabled={isCompleted} value={angle} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, angle: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
             </div>
           </div>
-          <button onClick={verifyFlux} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Yeast Metabolic Flux Tuned" : "Tune Metabolic Flux"}</button>
+          <button onClick={verifyTree} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Tree Sandbox Calibrated" : "Verify Cladogram Sandbox"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const species = wsState.species || 3;
+      const index = wsState.index || 2;
+
+      const verifyOptimizer = () => {
+        const correct = parseInt(species) === 6 && parseInt(index) === 8;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls41", species, index, is_correct: correct }, "cladogram_optimizer", "OAS.B.LS4.1");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls41" }, "cladogram_optimizer", "OAS.B.LS4.1");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate terminal species counts and outgroup distances to resolve cladogram topology. Targets: Species Count = **6 species**, Outgroup Distance Index = **8**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Species Count</span>
+                <span className="text-indigo-400">{species} species</span>
+              </div>
+              <input type="range" min="3" max="9" step="1" disabled={isCompleted} value={species} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, species: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Outgroup Distance Index</span>
+                <span className="text-rose-400">{index} index</span>
+              </div>
+              <input type="range" min="2" max="14" step="2" disabled={isCompleted} value={index} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, index: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyOptimizer} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Cladogram Optimized" : "Optimize Cladogram"}</button>
         </div>
       );
     }
   };
 
+  const renderLs42Workspaces = () => {
+    const key = `OAS.B.LS4.2_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const overproduction = wsState.overproduction || "";
+      const variation = wsState.variation || "";
+      const differential = wsState.differential || "";
+      const struggle = wsState.struggle || "";
+
+      const verifyDrivers = () => {
+        const correct = overproduction === "Overproduction" && variation === "Variation" && differential === "Differential" && struggle === "Struggle";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls42", overproduction, variation, differential, struggle, is_correct: correct }, "four_drivers_match", "OAS.B.LS4.2");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls42" }, "four_drivers_match", "OAS.B.LS4.2");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Match Darwin's four evolutionary drivers / postulates to their correct biological descriptions:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Overproduction of offspring</label>
+              <select disabled={isCompleted} value={overproduction} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, overproduction: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select description...</option>
+                <option value="Overproduction">Populations produce more young than can survive</option>
+                <option value="Variation">Organisms differ in traits passed down genetically</option>
+                <option value="Differential">Individuals with favored traits leave more offspring</option>
+                <option value="Struggle">Individuals compete for limited food/mates</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Heritable variation</label>
+              <select disabled={isCompleted} value={variation} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, variation: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select description...</option>
+                <option value="Overproduction">Populations produce more young than can survive</option>
+                <option value="Variation">Organisms differ in traits passed down genetically</option>
+                <option value="Differential">Individuals with favored traits leave more offspring</option>
+                <option value="Struggle">Individuals compete for limited food/mates</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Differential survival & reproduction</label>
+              <select disabled={isCompleted} value={differential} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, differential: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select description...</option>
+                <option value="Overproduction">Populations produce more young than can survive</option>
+                <option value="Variation">Organisms differ in traits passed down genetically</option>
+                <option value="Differential">Individuals with favored traits leave more offspring</option>
+                <option value="Struggle">Individuals compete for limited food/mates</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">4. Struggle for existence</label>
+              <select disabled={isCompleted} value={struggle} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, struggle: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select description...</option>
+                <option value="Overproduction">Populations produce more young than can survive</option>
+                <option value="Variation">Organisms differ in traits passed down genetically</option>
+                <option value="Differential">Individuals with favored traits leave more offspring</option>
+                <option value="Struggle">Individuals compete for limited food/mates</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyDrivers} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Darwinian Drivers Verified" : "Verify Darwinian Drivers"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const drought = wsState.drought || "";
+      const foodScarcity = wsState.foodScarcity || "";
+      const pathogens = wsState.pathogens || "";
+
+      const verifyLimiting = () => {
+        const correct = drought === "Independent" && foodScarcity === "Dependent" && pathogens === "Dependent";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls42", drought, foodScarcity, pathogens, is_correct: correct }, "limiting_resource_sorter", "OAS.B.LS4.2");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls42" }, "limiting_resource_sorter", "OAS.B.LS4.2");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify each carrying capacity limiting factor as Density-Dependent or Density-Independent:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Severe winter freeze / Prolonged drought</label>
+              <select disabled={isCompleted} value={drought} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, drought: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select factor class...</option>
+                <option value="Dependent">Density-Dependent Factor</option>
+                <option value="Independent">Density-Independent Factor</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Scarcity of primary food prey populations</label>
+              <select disabled={isCompleted} value={foodScarcity} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, foodScarcity: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select factor class...</option>
+                <option value="Dependent">Density-Dependent Factor</option>
+                <option value="Independent">Density-Independent Factor</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Rapid spread of infectious viral pathogens</label>
+              <select disabled={isCompleted} value={pathogens} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, pathogens: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select factor class...</option>
+                <option value="Dependent">Density-Dependent Factor</option>
+                <option value="Independent">Density-Independent Factor</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyLimiting} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Limiting Factors Classified" : "Verify Limiting Factors"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const capK = wsState.capK || 100;
+      const rateR = wsState.rateR || 10;
+
+      const verifyGrowth = () => {
+        const correct = parseInt(capK) === 500 && parseInt(rateR) === 80;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls42", capK, rateR, is_correct: correct }, "population_growth_simulator", "OAS.B.LS4.2");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls42" }, "population_growth_simulator", "OAS.B.LS4.2");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate Carrying Capacity (K) and growth rate parameters to balance species growth. Targets: Carrying Capacity = **500 units**, Growth Rate = **80%**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Carrying Capacity (K)</span>
+                <span className="text-indigo-400">{capK} units</span>
+              </div>
+              <input type="range" min="100" max="1000" step="100" disabled={isCompleted} value={capK} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, capK: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Growth Rate (r)</span>
+                <span className="text-rose-400">{rateR}%</span>
+              </div>
+              <input type="range" min="10" max="100" step="10" disabled={isCompleted} value={rateR} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, rateR: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyGrowth} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Growth Curve Balanced" : "Verify Growth Sandbox"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const rateA = wsState.rateA || 2;
+      const rateB = wsState.rateB || 2;
+
+      const verifyCompetition = () => {
+        const correct = parseInt(rateA) === 10 && parseInt(rateB) === 12;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls42", rateA, rateB, is_correct: correct }, "resource_competition_tuner", "OAS.B.LS4.2");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls42" }, "resource_competition_tuner", "OAS.B.LS4.2");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate consumption rates to balance coexistence between two competing seed eaters. Targets: Species A = **10 units/day**, Species B = **12 units/day**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Species A Consumption</span>
+                <span className="text-indigo-400">{rateA} units/day</span>
+              </div>
+              <input type="range" min="2" max="20" step="2" disabled={isCompleted} value={rateA} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, rateA: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Species B Consumption</span>
+                <span className="text-rose-400">{rateB} units/day</span>
+              </div>
+              <input type="range" min="2" max="20" step="2" disabled={isCompleted} value={rateB} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, rateB: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyCompetition} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Competition Calibrated" : "Verify Competition Tuner"}</button>
+        </div>
+      );
+    }
+  };
+
+  const renderLs43Workspaces = () => {
+    const key = `OAS.B.LS4.3_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const antibiotic = wsState.antibiotic || "";
+      const soot = wsState.soot || "";
+      const predators = wsState.predators || "";
+
+      const verifyPressures = () => {
+        const correct = antibiotic === "Antibiotic" && soot === "Soot" && predators === "Predators";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls43", antibiotic, soot, predators, is_correct: correct }, "selective_pressure_match", "OAS.B.LS4.3");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls43" }, "selective_pressure_match", "OAS.B.LS4.3");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Match each environmental selective pressure to its observed adaptation phenotype:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Antibiotic chemical presence in media</label>
+              <select disabled={isCompleted} value={antibiotic} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, antibiotic: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select phenotype...</option>
+                <option value="Antibiotic">Selection for resistant bacterial strains</option>
+                <option value="Soot">Selection for melanic/dark moth phenotypes</option>
+                <option value="Predators">Selection for camouflage color patterns</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Industrial soot coverage on tree trunks</label>
+              <select disabled={isCompleted} value={soot} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, soot: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select phenotype...</option>
+                <option value="Antibiotic">Selection for resistant bacterial strains</option>
+                <option value="Soot">Selection for melanic/dark moth phenotypes</option>
+                <option value="Predators">Selection for camouflage color patterns</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. High density of visual bird predators</label>
+              <select disabled={isCompleted} value={predators} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, predators: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select phenotype...</option>
+                <option value="Antibiotic">Selection for resistant bacterial strains</option>
+                <option value="Soot">Selection for melanic/dark moth phenotypes</option>
+                <option value="Predators">Selection for camouflage color patterns</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyPressures} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Pressures Verified" : "Verify Pressures"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const sickleCell = wsState.sickleCell || "";
+      const lethal = wsState.lethal || "";
+      const synonymous = wsState.synonymous || "";
+
+      const verifyAdvantage = () => {
+        const correct = sickleCell === "Positive" && lethal === "Negative" && synonymous === "Drift";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls43", sickleCell, lethal, synonymous, is_correct: correct }, "trait_advantage_sorter", "OAS.B.LS4.3");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls43" }, "trait_advantage_sorter", "OAS.B.LS4.3");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify each mutation's selective advantage impact category:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Sickle-cell heterozygote advantage in malaria zones</label>
+              <select disabled={isCompleted} value={sickleCell} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, sickleCell: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select impact...</option>
+                <option value="Positive">Positive Selection (Favored Allele)</option>
+                <option value="Negative">Negative Selection (Purged Mutation)</option>
+                <option value="Drift">Genetic Drift (Neutral Variant)</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Lethal recessive metabolic enzyme block mutation</label>
+              <select disabled={isCompleted} value={lethal} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, lethal: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select impact...</option>
+                <option value="Positive">Positive Selection (Favored Allele)</option>
+                <option value="Negative">Negative Selection (Purged Mutation)</option>
+                <option value="Drift">Genetic Drift (Neutral Variant)</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Synonymous nucleotide switch in third codon position</label>
+              <select disabled={isCompleted} value={synonymous} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, synonymous: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select impact...</option>
+                <option value="Positive">Positive Selection (Favored Allele)</option>
+                <option value="Negative">Negative Selection (Purged Mutation)</option>
+                <option value="Drift">Genetic Drift (Neutral Variant)</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyAdvantage} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Advantages Classified" : "Verify Advantages"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const frequency = wsState.frequency || "";
+
+      const verifyFreq = () => {
+        const correct = frequency === "0_55";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls43", frequency, is_correct: correct }, "allele_frequency_calculator", "OAS.B.LS4.3");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls43" }, "allele_frequency_calculator", "OAS.B.LS4.3");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Predict the next-generation allele frequency p after applying a selection coefficient s = 0.20 against homozygous recessive individuals q²:</p>
+          <div className="bg-zinc-950 p-4 rounded-xl border border-zinc-850 font-mono text-xs text-zinc-400 space-y-2">
+            <p>Initial: p = 0.50, q = 0.50</p>
+            <p>Selection Coefficient (s) = 0.20 against qq</p>
+            <p>qq fitness = 1 - 0.20 = 0.80</p>
+          </div>
+          <div className="flex flex-col gap-1">
+            <label className="text-[10px] text-zinc-500 font-bold uppercase">Select Predicted p Frequency</label>
+            <select disabled={isCompleted} value={frequency} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, frequency: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+              <option value="">Select frequency...</option>
+              <option value="0.45">p = 0.45 (Decreased)</option>
+              <option value="0.50">p = 0.50 (Unchanged)</option>
+              <option value="0.55">p = 0.55 (Increased)</option>
+            </select>
+          </div>
+          <button onClick={verifyFreq} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Frequency Calculated" : "Verify Frequency"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const initialRate = wsState.initialRate || 10;
+      const sizeIndex = wsState.sizeIndex || 10;
+
+      const verifyDrift = () => {
+        const correct = parseInt(initialRate) === 30 && parseInt(sizeIndex) === 100;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls43", initialRate, sizeIndex, is_correct: correct }, "advantageous_drift_tuner", "OAS.B.LS4.3");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls43" }, "advantageous_drift_tuner", "OAS.B.LS4.3");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate initial advantageous allele rate and population bottleneck limits. Targets: Allele Rate = **30%**, Bottleneck Size = **100 individuals**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Advantageous Allele Initial Rate</span>
+                <span className="text-indigo-400">{initialRate}%</span>
+              </div>
+              <input type="range" min="10" max="90" step="10" disabled={isCompleted} value={initialRate} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, initialRate: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Population Bottleneck Size</span>
+                <span className="text-rose-400">{sizeIndex} individuals</span>
+              </div>
+              <input type="range" min="50" max="250" step="50" disabled={isCompleted} value={sizeIndex} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, sizeIndex: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyDrift} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Drift Model Optimized" : "Calibrate Drift Model"}</button>
+        </div>
+      );
+    }
+  };
+
+  const renderLs44Workspaces = () => {
+    const key = `OAS.B.LS4.4_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const kidney = wsState.kidney || "";
+      const courtship = wsState.courtship || "";
+      const neck = wsState.neck || "";
+
+      const verifyAdaptations = () => {
+        const correct = kidney === "Physiological" && courtship === "Behavioral" && neck === "Structural";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls44", kidney, courtship, neck, is_correct: correct }, "adaptation_types_match", "OAS.B.LS4.4");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls44" }, "adaptation_types_match", "OAS.B.LS4.4");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Categorize each organism adaptation into its correct adaptation class type:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Desert camel water storage efficiency / kidney function</label>
+              <select disabled={isCompleted} value={kidney} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, kidney: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select category...</option>
+                <option value="Structural">Morphological / Structural Adaptation</option>
+                <option value="Physiological">Physiological Adaptation</option>
+                <option value="Behavioral">Behavioral Adaptation</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Complex courtship mating songs & dances in birds</label>
+              <select disabled={isCompleted} value={courtship} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, courtship: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select category...</option>
+                <option value="Structural">Morphological / Structural Adaptation</option>
+                <option value="Physiological">Physiological Adaptation</option>
+                <option value="Behavioral">Behavioral Adaptation</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Elongated cervical neck vertebrae of a giraffe</label>
+              <select disabled={isCompleted} value={neck} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, neck: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select category...</option>
+                <option value="Structural">Morphological / Structural Adaptation</option>
+                <option value="Physiological">Physiological Adaptation</option>
+                <option value="Behavioral">Behavioral Adaptation</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyAdaptations} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Adaptations Categorized" : "Verify Adaptations"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const geographic = wsState.geographic || "";
+      const genetic = wsState.genetic || "";
+      const hybridZones = wsState.hybridZones || "";
+
+      const verifySpeciation = () => {
+        const correct = geographic === "Allopatric" && genetic === "Sympatric" && hybridZones === "Parapatric";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls44", geographic, genetic, hybridZones, is_correct: correct }, "speciation_type_match", "OAS.B.LS4.4");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls44" }, "speciation_type_match", "OAS.B.LS4.4");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify each speciation scenario description into its correct speciation mode category:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Geographic canyon splitting a squirrel population</label>
+              <select disabled={isCompleted} value={geographic} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, geographic: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select speciation type...</option>
+                <option value="Allopatric">Allopatric Speciation</option>
+                <option value="Sympatric">Sympatric Speciation</option>
+                <option value="Parapatric">Parapatric Speciation</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Plant polyploidy isolating chromosome lines in same field</label>
+              <select disabled={isCompleted} value={genetic} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, genetic: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select speciation type...</option>
+                <option value="Allopatric">Allopatric Speciation</option>
+                <option value="Sympatric">Sympatric Speciation</option>
+                <option value="Parapatric">Parapatric Speciation</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Adjacent overlapping territories forming distinct hybrid contact bands</label>
+              <select disabled={isCompleted} value={hybridZones} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, hybridZones: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select speciation type...</option>
+                <option value="Allopatric">Allopatric Speciation</option>
+                <option value="Sympatric">Sympatric Speciation</option>
+                <option value="Parapatric">Parapatric Speciation</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifySpeciation} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Speciation Modes Verified" : "Verify Speciation Modes"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const radiationDriver = wsState.radiationDriver || "";
+
+      const verifyRadiation = () => {
+        const correct = radiationDriver === "Niche";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls44", radiationDriver, is_correct: correct }, "adaptive_radiation_solver", "OAS.B.LS4.4");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls44" }, "adaptive_radiation_solver", "OAS.B.LS4.4");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Identify the primary ecological selective driver fueling beak shape adaptive radiation among Galapagos finches:</p>
+          <div className="bg-zinc-950 p-4 rounded-xl border border-zinc-850 font-mono text-xs text-zinc-400 space-y-2">
+            <p>Phenotypic divergences: Seed cracking, insect picking, nectar drinking</p>
+          </div>
+          <div className="flex flex-col gap-1">
+            <label className="text-[10px] text-zinc-500 font-bold uppercase">Select Adaptive Radiation Driver</label>
+            <select disabled={isCompleted} value={radiationDriver} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, radiationDriver: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+              <option value="">Select driver...</option>
+              <option value="Predators">Predator avoidance shifts</option>
+              <option value="Niche">Food niche specialization (seeds, insects, nectar)</option>
+              <option value="Geography">Pure geographic distance isolation</option>
+            </select>
+          </div>
+          <button onClick={verifyRadiation} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Radiation Driver Verified" : "Verify Radiation Driver"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const peak = wsState.peak || 50;
+      const widthIndex = wsState.widthIndex || 20;
+
+      const verifyLandscape = () => {
+        const correct = parseInt(peak) === 90 && parseInt(widthIndex) === 10;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls44", peak, widthIndex, is_correct: correct }, "adaptive_landscape_tuner", "OAS.B.LS4.4");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls44" }, "adaptive_landscape_tuner", "OAS.B.LS4.4");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate the adaptive landscape fitness peak elevation and variance widths. Targets: Peak Elevation = **90%**, Variance Width = **10%**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Fitness Peak Elevation</span>
+                <span className="text-indigo-400">{peak}%</span>
+              </div>
+              <input type="range" min="10" max="100" step="10" disabled={isCompleted} value={peak} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, peak: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Phenotypic Variance Width</span>
+                <span className="text-rose-400">{widthIndex}%</span>
+              </div>
+              <input type="range" min="10" max="50" step="10" disabled={isCompleted} value={widthIndex} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, widthIndex: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyLandscape} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Landscape Calibrated" : "Verify Adaptive Landscape"}</button>
+        </div>
+      );
+    }
+  };
+
+
+
+      
+  const renderLs45Workspaces = () => {
+    const key = `OAS.B.LS4.5_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const habitatLoss = wsState.habitatLoss || "";
+      const climateChange = wsState.climateChange || "";
+      const overexploitation = wsState.overexploitation || "";
+      const invasiveSpecies = wsState.invasiveSpecies || "";
+
+      const verifyStressors = () => {
+        const correct = habitatLoss === "Extreme" && climateChange === "High" && overexploitation === "Moderate" && invasiveSpecies === "Low";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls45", habitatLoss, climateChange, overexploitation, invasiveSpecies, is_correct: correct }, "stressor_matching", "OAS.B.LS4.5");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls45" }, "stressor_matching", "OAS.B.LS4.5");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Match each environmental shift stressor to its mapped extinction risk severity level:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Complete Habitat Loss / Deforestation</label>
+              <select disabled={isCompleted} value={habitatLoss} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, habitatLoss: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select risk...</option>
+                <option value="Extreme">Extreme Risk (Direct Extirpation)</option>
+                <option value="High">High Risk</option>
+                <option value="Moderate">Moderate Risk</option>
+                <option value="Low">Low Risk</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Decadal Climate Change Shifts</label>
+              <select disabled={isCompleted} value={climateChange} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, climateChange: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select risk...</option>
+                <option value="Extreme">Extreme Risk</option>
+                <option value="High">High Risk (Requires Range Shift)</option>
+                <option value="Moderate">Moderate Risk</option>
+                <option value="Low">Low Risk</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Localized Overexploitation</label>
+              <select disabled={isCompleted} value={overexploitation} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, overexploitation: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select risk...</option>
+                <option value="Extreme">Extreme Risk</option>
+                <option value="High">High Risk</option>
+                <option value="Moderate">Moderate Risk (Targeted Harvesting)</option>
+                <option value="Low">Low Risk</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">4. Background Invasive Species Pressure</label>
+              <select disabled={isCompleted} value={invasiveSpecies} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, invasiveSpecies: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select risk...</option>
+                <option value="Extreme">Extreme Risk</option>
+                <option value="High">High Risk</option>
+                <option value="Moderate">Moderate Risk</option>
+                <option value="Low">Low Risk (Localized Competition)</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyStressors} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Stressors Mapped" : "Verify Stressors"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const drought = wsState.drought || "";
+      const predators = wsState.predators || "";
+      const disease = wsState.disease || "";
+      const wildfire = wsState.wildfire || "";
+
+      const verifyShiftFactors = () => {
+        const correct = drought === "Abiotic" && predators === "Biotic" && disease === "Biotic" && wildfire === "Abiotic";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls45", drought, predators, disease, wildfire, is_correct: correct }, "shift_sorter", "OAS.B.LS4.5");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls45" }, "shift_sorter", "OAS.B.LS4.5");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify environmental shift drivers as either Abiotic (physical/chemical) or Biotic (biological):</p>
+          <div className="space-y-3">
+            <div className="flex justify-between items-center bg-zinc-900 p-2.5 rounded border border-zinc-800">
+              <span className="text-xs text-white font-mono">1. Decadal Drought Frequency</span>
+              <select disabled={isCompleted} value={drought} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, drought: e.target.value } }))} className="bg-zinc-950 border border-zinc-800 rounded p-1 text-xs text-white">
+                <option value="">Select...</option>
+                <option value="Abiotic">Abiotic</option>
+                <option value="Biotic">Biotic</option>
+              </select>
+            </div>
+            <div className="flex justify-between items-center bg-zinc-900 p-2.5 rounded border border-zinc-800">
+              <span className="text-xs text-white font-mono">2. Invasive Predator Colonization</span>
+              <select disabled={isCompleted} value={predators} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, predators: e.target.value } }))} className="bg-zinc-950 border border-zinc-800 rounded p-1 text-xs text-white">
+                <option value="">Select...</option>
+                <option value="Abiotic">Abiotic</option>
+                <option value="Biotic">Biotic</option>
+              </select>
+            </div>
+            <div className="flex justify-between items-center bg-zinc-900 p-2.5 rounded border border-zinc-800">
+              <span className="text-xs text-white font-mono">3. Fungal Pathogen Epidemic</span>
+              <select disabled={isCompleted} value={disease} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, disease: e.target.value } }))} className="bg-zinc-950 border border-zinc-800 rounded p-1 text-xs text-white">
+                <option value="">Select...</option>
+                <option value="Abiotic">Abiotic</option>
+                <option value="Biotic">Biotic</option>
+              </select>
+            </div>
+            <div className="flex justify-between items-center bg-zinc-900 p-2.5 rounded border border-zinc-800">
+              <span className="text-xs text-white font-mono">4. Increased Wildfire Frequency</span>
+              <select disabled={isCompleted} value={wildfire} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, wildfire: e.target.value } }))} className="bg-zinc-950 border border-zinc-800 rounded p-1 text-xs text-white">
+                <option value="">Select...</option>
+                <option value="Abiotic">Abiotic</option>
+                <option value="Biotic">Biotic</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyShiftFactors} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Factors Sorted" : "Verify Factors"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const traitValue = wsState.traitValue || 20;
+      const shiftRate = wsState.shiftRate || 2;
+
+      const verifySimulation = () => {
+        const correct = parseInt(traitValue) === 40 && parseInt(shiftRate) === 4;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls45", traitValue, shiftRate, is_correct: correct }, "adaptation_simulator", "OAS.B.LS4.5");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls45" }, "adaptation_simulator", "OAS.B.LS4.5");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate initial population trait values and temperature shift rates to maximize survival probability. Targets: Initial Trait Value = **40**, Temperature Shift Rate = **4°C/decade**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Initial Trait Value</span>
+                <span className="text-indigo-400">{traitValue}</span>
+              </div>
+              <input type="range" min="10" max="50" step="10" disabled={isCompleted} value={traitValue} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, traitValue: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Temperature Shift Rate</span>
+                <span className="text-rose-400">{shiftRate} °C/decade</span>
+              </div>
+              <input type="range" min="1" max="5" step="1" disabled={isCompleted} value={shiftRate} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, shiftRate: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifySimulation} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Simulation Optimally Tuned" : "Run Adaptive Simulation"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const funding = wsState.funding || 2;
+      const corridors = wsState.corridors || 1;
+
+      const verifyPlanner = () => {
+        const correct = parseInt(funding) === 8 && parseInt(corridors) === 4;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls45", funding, corridors, is_correct: correct }, "extinction_planner", "OAS.B.LS4.5");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls45" }, "extinction_planner", "OAS.B.LS4.5");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Optimize conservation corridor counts and funding levels to buffer fragmented habitat populations. Targets: Conservation Funding = **$8M**, Corridor Connections = **4**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Conservation Funding</span>
+                <span className="text-indigo-400">${funding}M</span>
+              </div>
+              <input type="range" min="2" max="10" step="2" disabled={isCompleted} value={funding} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, funding: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Corridor Connections</span>
+                <span className="text-rose-400">{corridors} zones</span>
+              </div>
+              <input type="range" min="1" max="5" step="1" disabled={isCompleted} value={corridors} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, corridors: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyPlanner} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Viability Plan Approved" : "Evaluate Conservation Plan"}</button>
+        </div>
+      );
+    }
+  };
+
+  const renderPs12Workspaces = () => {
+    const key = `OAS.PS.PS1.2_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const sodium = wsState.sodium || "";
+      const chlorine = wsState.chlorine || "";
+      const oxygen = wsState.oxygen || "";
+      const neon = wsState.neon || "";
+
+      const verifyConfigurations = () => {
+        const correct = sodium === "1" && chlorine === "7" && oxygen === "6" && neon === "8";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ps12", sodium, chlorine, oxygen, neon, is_correct: correct }, "electron_match", "OAS.PS.PS1.2");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ps12" }, "electron_match", "OAS.PS.PS1.2");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Match each element to its correct outer valence shell electron configuration:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Sodium (Na)</label>
+              <select disabled={isCompleted} value={sodium} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, sodium: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select electrons...</option>
+                <option value="1">1 Valence Electron (Group 1 Metal)</option>
+                <option value="6">6 Valence Electrons</option>
+                <option value="7">7 Valence Electrons</option>
+                <option value="8">8 Valence Electrons</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Chlorine (Cl)</label>
+              <select disabled={isCompleted} value={chlorine} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, chlorine: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select electrons...</option>
+                <option value="1">1 Valence Electron</option>
+                <option value="6">6 Valence Electrons</option>
+                <option value="7">7 Valence Electrons (Group 17 Halogen)</option>
+                <option value="8">8 Valence Electrons</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Oxygen (O)</label>
+              <select disabled={isCompleted} value={oxygen} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, oxygen: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select electrons...</option>
+                <option value="1">1 Valence Electron</option>
+                <option value="6">6 Valence Electrons (Group 16 Nonmetal)</option>
+                <option value="7">7 Valence Electrons</option>
+                <option value="8">8 Valence Electrons</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">4. Neon (Ne)</label>
+              <select disabled={isCompleted} value={neon} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, neon: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select electrons...</option>
+                <option value="1">1 Valence Electron</option>
+                <option value="6">6 Valence Electrons</option>
+                <option value="7">7 Valence Electrons</option>
+                <option value="8">8 Valence Electrons (Complete Octet)</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyConfigurations} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Valence Configurations Mapped" : "Verify Configurations"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const rxn1 = wsState.rxn1 || "";
+      const rxn2 = wsState.rxn2 || "";
+      const rxn3 = wsState.rxn3 || "";
+      const rxn4 = wsState.rxn4 || "";
+
+      const verifyReactions = () => {
+        const correct = rxn1 === "Synthesis" && rxn2 === "Decomposition" && rxn3 === "Combustion" && rxn4 === "Replacement";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ps12", rxn1, rxn2, rxn3, rxn4, is_correct: correct }, "reaction_sorter", "OAS.PS.PS1.2");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ps12" }, "reaction_sorter", "OAS.PS.PS1.2");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify each reaction into its correct chemical reaction category:</p>
+          <div className="space-y-3">
+            <div className="flex justify-between items-center bg-zinc-900 p-2.5 rounded border border-zinc-800">
+              <span className="text-xs text-white font-mono">1. 2H₂ + O₂ → 2H₂O</span>
+              <select disabled={isCompleted} value={rxn1} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, rxn1: e.target.value } }))} className="bg-zinc-950 border border-zinc-800 rounded p-1 text-xs text-white">
+                <option value="">Select...</option>
+                <option value="Synthesis">Synthesis</option>
+                <option value="Decomposition">Decomposition</option>
+                <option value="Combustion">Combustion</option>
+                <option value="Replacement">Replacement</option>
+              </select>
+            </div>
+            <div className="flex justify-between items-center bg-zinc-900 p-2.5 rounded border border-zinc-800">
+              <span className="text-xs text-white font-mono">2. CaCO₃ → CaO + CO₂</span>
+              <select disabled={isCompleted} value={rxn2} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, rxn2: e.target.value } }))} className="bg-zinc-950 border border-zinc-800 rounded p-1 text-xs text-white">
+                <option value="">Select...</option>
+                <option value="Synthesis">Synthesis</option>
+                <option value="Decomposition">Decomposition</option>
+                <option value="Combustion">Combustion</option>
+                <option value="Replacement">Replacement</option>
+              </select>
+            </div>
+            <div className="flex justify-between items-center bg-zinc-900 p-2.5 rounded border border-zinc-800">
+              <span className="text-xs text-white font-mono">3. CH₄ + 2O₂ → CO₂ + 2H₂O</span>
+              <select disabled={isCompleted} value={rxn3} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, rxn3: e.target.value } }))} className="bg-zinc-950 border border-zinc-800 rounded p-1 text-xs text-white">
+                <option value="">Select...</option>
+                <option value="Synthesis">Synthesis</option>
+                <option value="Decomposition">Decomposition</option>
+                <option value="Combustion">Combustion</option>
+                <option value="Replacement">Replacement</option>
+              </select>
+            </div>
+            <div className="flex justify-between items-center bg-zinc-900 p-2.5 rounded border border-zinc-800">
+              <span className="text-xs text-white font-mono">4. Zn + 2HCl → ZnCl₂ + H₂</span>
+              <select disabled={isCompleted} value={rxn4} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, rxn4: e.target.value } }))} className="bg-zinc-950 border border-zinc-800 rounded p-1 text-xs text-white">
+                <option value="">Select...</option>
+                <option value="Synthesis">Synthesis</option>
+                <option value="Decomposition">Decomposition</option>
+                <option value="Combustion">Combustion</option>
+                <option value="Replacement">Replacement</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyReactions} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Reactions Classified" : "Verify Reactions"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const coeffA = wsState.coeffA || 1;
+      const coeffB = wsState.coeffB || 1;
+      const coeffC = wsState.coeffC || 1;
+
+      const verifyEquation = () => {
+        const correct = parseInt(coeffA) === 1 && parseInt(coeffB) === 3 && parseInt(coeffC) === 2;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ps12", coeffA, coeffB, coeffC, is_correct: correct }, "equation_balancer", "OAS.PS.PS1.2");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ps12" }, "equation_balancer", "OAS.PS.PS1.2");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Balance the chemical equation for synthesis of ammonia: **a N₂ + b H₂ → c NH₃**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Reactant N2 Coefficient (a)</span>
+                <span className="text-indigo-400">{coeffA}</span>
+              </div>
+              <input type="range" min="1" max="4" step="1" disabled={isCompleted} value={coeffA} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, coeffA: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Reactant H2 Coefficient (b)</span>
+                <span className="text-indigo-400">{coeffB}</span>
+              </div>
+              <input type="range" min="1" max="4" step="1" disabled={isCompleted} value={coeffB} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, coeffB: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Product NH3 Coefficient (c)</span>
+                <span className="text-rose-400">{coeffC}</span>
+              </div>
+              <input type="range" min="1" max="4" step="1" disabled={isCompleted} value={coeffC} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, coeffC: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyEquation} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Equation Balanced" : "Verify Equation Balancing"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const ea = wsState.ea || 60;
+      const deltaH = wsState.deltaH || 0;
+
+      const verifyEnergy = () => {
+        const correct = parseInt(ea) === 40 && parseInt(deltaH) === -60;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ps12", ea, deltaH, is_correct: correct }, "energy_landscape", "OAS.PS.PS1.2");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ps12" }, "energy_landscape", "OAS.PS.PS1.2");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate the reaction energy coordinates to optimize synthetic output yield. Targets: Activation Energy (Ea) = **40 kJ**, Net Reaction Energy (ΔH) = **-60 kJ** (Exothermic):</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Activation Energy (Ea)</span>
+                <span className="text-indigo-400">{ea} kJ</span>
+              </div>
+              <input type="range" min="10" max="100" step="10" disabled={isCompleted} value={ea} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, ea: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Net Reaction Energy (ΔH)</span>
+                <span className="text-rose-400">{deltaH} kJ</span>
+              </div>
+              <input type="range" min="-100" max="100" step="20" disabled={isCompleted} value={deltaH} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, deltaH: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyEnergy} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Reaction Energy Landscape Optimized" : "Tuner Energy Landscape"}</button>
+        </div>
+      );
+    }
+  };
 
 
   if (!isMounted) {
@@ -37546,7 +51579,7 @@ export default function Home() {
             <h1 className="text-xl font-bold tracking-tight bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
               Swift Science
             </h1>
-            <p className="text-xs text-zinc-500">Grade 11 OAS Biology Simulator</p>
+            <p className="text-xs text-zinc-500">Grade 11 OAS Biology & Physical Science Simulator</p>
           </div>
         </div>
 
@@ -37882,7 +51915,13 @@ export default function Home() {
                           <option value="OAS.B.LS3.1">OAS B.LS3.1: Genetics Inheritable Traits</option>
                           <option value="OAS.B.LS3.2">OAS B.LS3.2: Genetic Variation Viable Errors</option>
                           <option value="OAS.B.LS3.3">OAS B.LS3.3: Statistics of Trait Distribution</option>
+                          <option value="OAS.B.LS4.1">OAS B.LS4.1: Common Ancestry Evidence</option>
+                          <option value="OAS.B.LS4.2">OAS B.LS4.2: Natural Selection Drivers</option>
+                          <option value="OAS.B.LS4.3">OAS B.LS4.3: Advantageous Traits Frequency</option>
+                          <option value="OAS.B.LS4.4">OAS B.LS4.4: Natural Selection Adaptation</option>
+                          <option value="OAS.B.LS4.5">OAS B.LS4.5: Species Extinction & Environmental Shifts</option>
                           <option value="OAS.B.PS1.1">OAS B.PS1.1: Matter & Interactions</option>
+                          <option value="OAS.PS.PS1.2">OAS PS.PS1.2: Electron States & Chemical Reactions</option>
                         </select>
                       </div>
                     </div>
@@ -38664,11 +52703,7 @@ export default function Home() {
                         <h2 className="text-2xl font-bold mt-1 text-white">
                           {selectedStandard === "OAS.B.LS1.1" 
                             ? (selectedDok === 1 && selectedActivityIndex === 0 ? "DNA Transcription (B.LS1.1)" : "Protein Synthesis Workspace (B.LS1.1)")
-                            : selectedStandard === "OAS.B.LS1.2" 
-                              ? "Multicellular Systems (B.LS1.2)"
-                              : selectedStandard === "OAS.B.LS1.3" 
-                                ? "Homeostasis Regulation (B.LS1.3)"
-                                : "Chemical Bonding (B.PS1.1)"}
+                            : (STANDARD_NAMES[selectedStandard] || "Chemical Bonding (B.PS1.1)")}
                         </h2>
                       </div>
 
@@ -39865,8 +53900,8 @@ export default function Home() {
                           </div>
                         )}
                       </div>
-                    ) : (selectedStandard === "OAS.B.LS1.2" || selectedStandard === "OAS.B.LS1.3" || selectedStandard === "OAS.B.LS1.4" || selectedStandard === "OAS.B.LS1.5" || selectedStandard === "OAS.B.LS1.6" || selectedStandard === "OAS.B.LS1.7" || selectedStandard === "OAS.B.LS2.1" || selectedStandard === "OAS.B.LS2.2" || selectedStandard === "OAS.B.LS2.3" || selectedStandard === "OAS.B.LS2.4" || selectedStandard === "OAS.B.LS2.5" || selectedStandard === "OAS.B.LS2.6" || selectedStandard === "OAS.B.LS2.8" || selectedStandard === "OAS.B.LS3.1" || selectedStandard === "OAS.B.LS3.2" || selectedStandard === "OAS.B.LS3.3") ? (
-                      /* DOK Workspaces for B.LS1.2 to B.LS3.3 */
+                    ) : (selectedStandard !== "OAS.B.LS1.1" && selectedStandard !== "OAS.B.PS1.1") ? (
+                      /* DOK Workspaces for B.LS1.2 to B.LS4.4 */
                       <div className="space-y-6 animate-fadeIn">
                         <div>
                           <span className="text-xs font-bold uppercase tracking-wider text-indigo-400">Active Workspace</span>
@@ -39946,6 +53981,24 @@ export default function Home() {
  
                             {/* Render B.LS3.3 Workspaces */}
                             {selectedStandard === "OAS.B.LS3.3" && renderLs33Workspaces()}
+ 
+                            {/* Render B.LS4.1 Workspaces */}
+                            {selectedStandard === "OAS.B.LS4.1" && renderLs41Workspaces()}
+ 
+                            {/* Render B.LS4.2 Workspaces */}
+                            {selectedStandard === "OAS.B.LS4.2" && renderLs42Workspaces()}
+ 
+                            {/* Render B.LS4.3 Workspaces */}
+                            {selectedStandard === "OAS.B.LS4.3" && renderLs43Workspaces()}
+ 
+                            {/* Render B.LS4.4 Workspaces */}
+                            {selectedStandard === "OAS.B.LS4.4" && renderLs44Workspaces()}
+ 
+                             {/* Render B.LS4.5 Workspaces */}
+                             {selectedStandard === "OAS.B.LS4.5" && renderLs45Workspaces()}
+ 
+                             {/* Render PS.PS1.2 Workspaces */}
+                             {selectedStandard === "OAS.PS.PS1.2" && renderPs12Workspaces()}
                           </div>
                         )}
                       </div>
@@ -41057,7 +55110,7 @@ export default function Home() {
               </div>
 
               {/* Quick Metrics Summary */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
                 <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
                   <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Total Roster</span>
                   <div className="text-2xl font-bold text-white mt-1">{teacherReportData.length} Students</div>
@@ -41076,6 +55129,30 @@ export default function Home() {
                     {teacherReportData.length > 0
                       ? `${(teacherReportData.reduce((acc, curr) => acc + (curr.avg_time_per_base || 0), 0) / teacherReportData.length).toFixed(2)}s / base`
                       : "0.00s / base"}
+                  </div>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Class Avg OPI (Overall)</span>
+                  <div className="text-2xl font-bold text-white mt-1">
+                    {teacherReportData.length > 0
+                      ? Math.round(teacherReportData.reduce((acc, curr) => acc + (curr.opi_score || 0), 0) / teacherReportData.length)
+                      : "0"}
+                  </div>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Class Avg LS OPI</span>
+                  <div className="text-2xl font-bold text-indigo-400 mt-1">
+                    {teacherReportData.length > 0
+                      ? Math.round(teacherReportData.reduce((acc, curr) => acc + (curr.ls_opi_score || 0), 0) / teacherReportData.length)
+                      : "0"}
+                  </div>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Class Avg PS OPI</span>
+                  <div className="text-2xl font-bold text-rose-400 mt-1">
+                    {teacherReportData.length > 0
+                      ? Math.round(teacherReportData.reduce((acc, curr) => acc + (curr.ps_opi_score || 0), 0) / teacherReportData.length)
+                      : "0"}
                   </div>
                 </div>
                 <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
@@ -41099,8 +55176,10 @@ export default function Home() {
                     <thead className="text-xs text-zinc-500 uppercase border-b border-zinc-850">
                       <tr>
                         <th className="py-3">Student Name</th>
-                        <th className="py-3">OPI Performance Band</th>
-                        <th className="py-3">Predicted OPI Score</th>
+                        <th className="py-3">OPI Band</th>
+                        <th className="py-3">Overall OPI</th>
+                        <th className="py-3">LS OPI</th>
+                        <th className="py-3">PS OPI</th>
                         <th className="py-3">BKT LS1.1 (Life Sci)</th>
                         <th className="py-3">BKT PS1.1 (Phys Sci)</th>
                         <th className="py-3">Accuracy (%)</th>
@@ -41150,6 +55229,12 @@ export default function Home() {
                               </td>
                               <td className="py-3.5 font-bold font-mono text-white">
                                 {student.opi_score > 0 ? student.opi_score : "—"}
+                              </td>
+                              <td className="py-3.5 font-bold font-mono text-indigo-400">
+                                {student.ls_opi_score > 0 ? student.ls_opi_score : "—"}
+                              </td>
+                              <td className="py-3.5 font-bold font-mono text-rose-400">
+                                {student.ps_opi_score > 0 ? student.ps_opi_score : "—"}
                               </td>
                               <td className="py-3.5 font-bold font-mono text-indigo-400">
                                 {student.bkt_mastery ?? "17.5"}%
@@ -41357,6 +55442,28 @@ export default function Home() {
                   <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">District Avg Accuracy</span>
                   <div className="text-2xl font-bold text-white mt-1">
                     {adminKpisData ? `${adminKpisData.overall_avg_accuracy}%` : "82.5%"}
+                  </div>
+                </div>
+              </div>
+
+              {/* District OPI Averages Row */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">District Avg Overall OPI</span>
+                  <div className="text-2xl font-bold text-white mt-1">
+                    {adminKpisData ? adminKpisData.overall_opi_avg : "295.4"}
+                  </div>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">District Avg Life Science OPI</span>
+                  <div className="text-2xl font-bold text-indigo-400 mt-1">
+                    {adminKpisData ? adminKpisData.ls_opi_avg : "292.1"}
+                  </div>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">District Avg Physical Science OPI</span>
+                  <div className="text-2xl font-bold text-rose-400 mt-1">
+                    {adminKpisData ? adminKpisData.ps_opi_avg : "298.5"}
                   </div>
                 </div>
               </div>
@@ -42545,6 +56652,222 @@ export default function Home() {
                           <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
                             <span>Statistics of Trait Frequency Distribution:</span>
                             <span className="text-white font-bold">{parentReportData.bkt_statistics_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS4.1) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS4.1</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_ancestry_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_ancestry_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_ancestry_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_ancestry_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_ancestry_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Common Ancestry & Comparative Anatomical Evidence:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_ancestry_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS4.2) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS4.2</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_drivers_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_drivers_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_drivers_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_drivers_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_drivers_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Natural Selection Competition & Proliferation Drivers:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_drivers_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS4.3) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS4.3</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_advantage_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_advantage_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_advantage_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_advantage_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_advantage_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Advantageous Allele & Trait Frequencies:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_advantage_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS4.4) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS4.4</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_adaptation_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_adaptation_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_adaptation_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_adaptation_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_adaptation_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Natural Selection Adaptation & Speciation:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_adaptation_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS4.5) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS4.5</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_extinction_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_extinction_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_extinction_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_extinction_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_extinction_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Species Extinction & Environmental Shifts:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_extinction_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Physical Sciences - PS.PS1.2) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: PS.PS1.2</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_reactions_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_reactions_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_reactions_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_reactions_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_reactions_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Electron States & Chemical Reactions:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_reactions_mastery ?? "15.0"}%</span>
                           </div>
                         </div>
                       </div>

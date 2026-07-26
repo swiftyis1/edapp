@@ -313,6 +313,96 @@ def update_bkt_state_for_event(student, event_type, is_correct):
             
         state.statistics_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
 
+    elif event_type == 'ancestry_check':
+        p_know = state.ancestry_p_know
+        p_guess = state.ancestry_p_guess
+        p_slip = state.ancestry_p_slip
+        p_transit = state.ancestry_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.ancestry_p_slip = max(0.02, state.ancestry_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.ancestry_p_slip = min(0.30, state.ancestry_p_slip + 0.01)
+            
+        state.ancestry_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'drivers_check':
+        p_know = state.drivers_p_know
+        p_guess = state.drivers_p_guess
+        p_slip = state.drivers_p_slip
+        p_transit = state.drivers_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.drivers_p_slip = max(0.02, state.drivers_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.drivers_p_slip = min(0.30, state.drivers_p_slip + 0.01)
+            
+        state.drivers_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'advantage_check':
+        p_know = state.advantage_p_know
+        p_guess = state.advantage_p_guess
+        p_slip = state.advantage_p_slip
+        p_transit = state.advantage_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.advantage_p_slip = max(0.02, state.advantage_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.advantage_p_slip = min(0.30, state.advantage_p_slip + 0.01)
+            
+        state.advantage_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'adaptation_check':
+        p_know = state.adaptation_p_know
+        p_guess = state.adaptation_p_guess
+        p_slip = state.adaptation_p_slip
+        p_transit = state.adaptation_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.adaptation_p_slip = max(0.02, state.adaptation_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.adaptation_p_slip = min(0.30, state.adaptation_p_slip + 0.01)
+            
+        state.adaptation_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'extinction_check':
+        p_know = state.extinction_p_know
+        p_guess = state.extinction_p_guess
+        p_slip = state.extinction_p_slip
+        p_transit = state.extinction_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.extinction_p_slip = max(0.02, state.extinction_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.extinction_p_slip = min(0.30, state.extinction_p_slip + 0.01)
+            
+        state.extinction_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'reactions_check':
+        p_know = state.reactions_p_know
+        p_guess = state.reactions_p_guess
+        p_slip = state.reactions_p_slip
+        p_transit = state.reactions_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.reactions_p_slip = max(0.02, state.reactions_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.reactions_p_slip = min(0.30, state.reactions_p_slip + 0.01)
+            
+        state.reactions_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
     state.save()
 
     # Append to BKT History for temporal growth charting
@@ -424,6 +514,42 @@ def update_bkt_state_for_event(student, event_type, is_correct):
             student=student,
             construct_tag='OAS.B.LS3.3',
             p_know=state.statistics_p_know
+        )
+    elif event_type == 'ancestry_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS4.1',
+            p_know=state.ancestry_p_know
+        )
+    elif event_type == 'drivers_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS4.2',
+            p_know=state.drivers_p_know
+        )
+    elif event_type == 'advantage_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS4.3',
+            p_know=state.advantage_p_know
+        )
+    elif event_type == 'adaptation_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS4.4',
+            p_know=state.adaptation_p_know
+        )
+    elif event_type == 'extinction_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS4.5',
+            p_know=state.extinction_p_know
+        )
+    elif event_type == 'reactions_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.PS.PS1.2',
+            p_know=state.reactions_p_know
         )
 
     return state

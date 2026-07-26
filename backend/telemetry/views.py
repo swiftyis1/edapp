@@ -127,6 +127,18 @@ def telemetry_receive(request):
                 actual_event_type = 'variation_check'
             elif construct_tag == 'OAS.B.LS3.3':
                 actual_event_type = 'statistics_check'
+            elif construct_tag == 'OAS.B.LS4.1':
+                actual_event_type = 'ancestry_check'
+            elif construct_tag == 'OAS.B.LS4.2':
+                actual_event_type = 'drivers_check'
+            elif construct_tag == 'OAS.B.LS4.3':
+                actual_event_type = 'advantage_check'
+            elif construct_tag == 'OAS.B.LS4.4':
+                actual_event_type = 'adaptation_check'
+            elif construct_tag == 'OAS.B.LS4.5':
+                actual_event_type = 'extinction_check'
+            elif construct_tag == 'OAS.PS.PS1.2':
+                actual_event_type = 'reactions_check'
             elif event_type in ['dok1_activity_check', 'dok2_activity_check', 'dok3_activity_check', 'dok4_activity_check']:
                 activity_id = payload.get('activity_id', '')
                 if activity_id in [
@@ -200,6 +212,43 @@ def telemetry_receive(request):
     )
 
 
+def get_opi_for_events(events, total_events_all):
+    action_types = ['pair_base', 'codon_match_attempt', 'octet_rule_check', 'mutation_check', 'dok1_activity_check', 'dok2_activity_check', 'dok3_activity_check', 'dok4_activity_check']
+    action_events = events.filter(event_type__in=action_types)
+    total_actions = action_events.count()
+    if total_actions == 0:
+        return {
+            "opi_score": 250, # default starting
+            "performance_band": "Basic",
+            "status_flag": "Needs Support",
+            "color_class": "text-amber-400 bg-amber-500/10 border-amber-500/20"
+        }
+    
+    errors = 0
+    for ev in action_events:
+        is_correct = ev.payload.get('is_correct')
+        if is_correct is False:
+            errors += 1
+            
+    accuracy = round(((total_actions - errors) / total_actions) * 100, 1)
+    
+    complete_events = total_events_all.filter(event_type='session_complete')
+    durations = []
+    for ce in complete_events:
+        dur = ce.payload.get('duration_seconds')
+        if dur is not None:
+            durations.append(float(dur))
+            
+    if not durations:
+        avg_time_per_base = 3.0
+    else:
+        avg_duration = sum(durations) / len(durations)
+        avg_time_per_base = round(avg_duration / 9.0, 2)
+        
+    from .scoring import calculate_opi_score
+    return calculate_opi_score(accuracy, avg_time_per_base)
+
+
 @api_view(['GET'])
 def teacher_report(request):
     """
@@ -226,24 +275,21 @@ def teacher_report(request):
         events = TelemetryEvent.objects.filter(student=student)
         
         # Calculate statistics
-        pair_events = events.filter(event_type='pair_base')
-        total_actions = pair_events.count()
+        action_types = ['pair_base', 'codon_match_attempt', 'octet_rule_check', 'mutation_check', 'dok1_activity_check', 'dok2_activity_check', 'dok3_activity_check', 'dok4_activity_check']
+        action_events = events.filter(event_type__in=action_types)
+        total_actions = action_events.count()
         
-        # Count errors
         errors = 0
-        for ev in pair_events:
+        for ev in action_events:
             is_correct = ev.payload.get('is_correct')
             if is_correct is False:
                 errors += 1
                 
-        # Accuracy percentage
         if total_actions > 0:
             accuracy = round(((total_actions - errors) / total_actions) * 100, 1)
         else:
             accuracy = 100.0
 
-        # Calculate speed (avg time per base pair)
-        # We check session_complete events first
         complete_events = events.filter(event_type='session_complete')
         durations = []
         for ce in complete_events:
@@ -251,33 +297,37 @@ def teacher_report(request):
             if dur is not None:
                 durations.append(float(dur))
                 
-        # If no complete event duration, compute using session timestamps
-        if not durations:
-            sessions = Session.objects.filter(student=student)
-            for sess in sessions:
-                sess_pairs = pair_events.filter(session=sess).order_by('timestamp')
-                if sess_pairs.count() >= 2:
-                    t_start = sess_pairs.first().timestamp
-                    t_end = sess_pairs.last().timestamp
-                    durations.append((t_end - t_start).total_seconds())
-
         if durations:
             avg_duration = sum(durations) / len(durations)
-            avg_time_per_base = round(avg_duration / 9.0, 2) # DNA Template is 9 bases
+            avg_time_per_base = round(avg_duration / 9.0, 2)
         else:
             avg_time_per_base = 0.0
+
+        # Calculate Overall, LS, and PS OPIs
+        overall_opi_res = get_opi_for_events(events, events)
+        ls_events = events.filter(construct_tag__startswith='OAS.B.LS')
+        ls_opi_res = get_opi_for_events(ls_events, events)
+        ps_events = events.filter(construct_tag__startswith='OAS.B.PS') | events.filter(construct_tag__startswith='OAS.PS.PS')
+        ps_opi_res = get_opi_for_events(ps_events, events)
 
         if total_actions == 0:
             opi_score = 0
             performance_band = "N/A"
             status_flag = "No Data"
             color_class = "text-zinc-500 bg-zinc-800/40 border-zinc-700/30"
+            ls_opi_score = 0
+            ls_performance_band = "N/A"
+            ps_opi_score = 0
+            ps_performance_band = "N/A"
         else:
-            opi_res = calculate_opi_score(accuracy, avg_time_per_base)
-            opi_score = opi_res["opi_score"]
-            performance_band = opi_res["performance_band"]
-            status_flag = opi_res["status_flag"]
-            color_class = opi_res["color_class"]
+            opi_score = overall_opi_res["opi_score"]
+            performance_band = overall_opi_res["performance_band"]
+            status_flag = overall_opi_res["status_flag"]
+            color_class = overall_opi_res["color_class"]
+            ls_opi_score = ls_opi_res["opi_score"]
+            ls_performance_band = ls_opi_res["performance_band"]
+            ps_opi_score = ps_opi_res["opi_score"]
+            ps_performance_band = ps_opi_res["performance_band"]
 
         # Fetch student BKT state
         from .models import StudentBKTState
@@ -301,6 +351,12 @@ def teacher_report(request):
             bkt_inheritance_mastery = round(bkt_state.inheritance_p_know * 100, 1)
             bkt_variation_mastery = round(bkt_state.variation_p_know * 100, 1)
             bkt_statistics_mastery = round(bkt_state.statistics_p_know * 100, 1)
+            bkt_ancestry_mastery = round(bkt_state.ancestry_p_know * 100, 1)
+            bkt_drivers_mastery = round(bkt_state.drivers_p_know * 100, 1)
+            bkt_advantage_mastery = round(bkt_state.advantage_p_know * 100, 1)
+            bkt_adaptation_mastery = round(bkt_state.adaptation_p_know * 100, 1)
+            bkt_extinction_mastery = round(bkt_state.extinction_p_know * 100, 1)
+            bkt_reactions_mastery = round(bkt_state.reactions_p_know * 100, 1)
         else:
             bkt_mastery = 15.0
             bkt_bonding_mastery = 15.0
@@ -320,6 +376,12 @@ def teacher_report(request):
             bkt_inheritance_mastery = 15.0
             bkt_variation_mastery = 15.0
             bkt_statistics_mastery = 15.0
+            bkt_ancestry_mastery = 15.0
+            bkt_drivers_mastery = 15.0
+            bkt_advantage_mastery = 15.0
+            bkt_adaptation_mastery = 15.0
+            bkt_extinction_mastery = 15.0
+            bkt_reactions_mastery = 15.0
 
         report_data.append({
             "id": str(student.id),
@@ -332,6 +394,10 @@ def teacher_report(request):
             "performance_band": performance_band,
             "status_flag": status_flag,
             "color_class": color_class,
+            "ls_opi_score": ls_opi_score,
+            "ls_performance_band": ls_performance_band,
+            "ps_opi_score": ps_opi_score,
+            "ps_performance_band": ps_performance_band,
             "bkt_mastery": bkt_mastery,
             "bkt_bonding_mastery": bkt_bonding_mastery,
             "bkt_hierarchy_mastery": bkt_hierarchy_mastery,
@@ -349,7 +415,13 @@ def teacher_report(request):
             "bkt_behavior_mastery": bkt_behavior_mastery,
             "bkt_inheritance_mastery": bkt_inheritance_mastery,
             "bkt_variation_mastery": bkt_variation_mastery,
-            "bkt_statistics_mastery": bkt_statistics_mastery
+            "bkt_statistics_mastery": bkt_statistics_mastery,
+            "bkt_ancestry_mastery": bkt_ancestry_mastery,
+            "bkt_drivers_mastery": bkt_drivers_mastery,
+            "bkt_advantage_mastery": bkt_advantage_mastery,
+            "bkt_adaptation_mastery": bkt_adaptation_mastery,
+            "bkt_extinction_mastery": bkt_extinction_mastery,
+            "bkt_reactions_mastery": bkt_reactions_mastery
         })
 
     cache.set(cache_key, report_data, 300)
@@ -554,11 +626,26 @@ def admin_kpis(request):
     students_with_data = 0
     proficient_count = 0
     
+    total_opi = 0
+    total_ls_opi = 0
+    total_ps_opi = 0
+    
     for student in students:
         events = TelemetryEvent.objects.filter(student=student)
         pair_events = events.filter(event_type='pair_base')
         total_actions = pair_events.count()
         
+        if events.exists():
+            overall_res = get_opi_for_events(events, events)
+            ls_events = events.filter(construct_tag__startswith='OAS.B.LS')
+            ls_res = get_opi_for_events(ls_events, events)
+            ps_events = events.filter(construct_tag__startswith='OAS.B.PS') | events.filter(construct_tag__startswith='OAS.PS.PS')
+            ps_res = get_opi_for_events(ps_events, events)
+            
+            total_opi += overall_res["opi_score"]
+            total_ls_opi += ls_res["opi_score"]
+            total_ps_opi += ps_res["opi_score"]
+            
         if total_actions > 0:
             correct_pairs = pair_events.filter(payload__is_correct=True).count()
             accuracy = round((correct_pairs / total_actions) * 100, 1)
@@ -584,7 +671,10 @@ def admin_kpis(request):
         "overall_avg_accuracy": overall_avg_accuracy,
         "overall_proficiency_rate": overall_proficiency_rate,
         "total_seats_allocated": sum(c.seat_limit for c in campuses),
-        "total_seats_active": sum(c.students_active for c in campuses)
+        "total_seats_active": sum(c.students_active for c in campuses),
+        "overall_opi_avg": round(total_opi / students_with_data, 1) if students_with_data > 0 else 295.4,
+        "ls_opi_avg": round(total_ls_opi / students_with_data, 1) if students_with_data > 0 else 292.1,
+        "ps_opi_avg": round(total_ps_opi / students_with_data, 1) if students_with_data > 0 else 298.5
     }, status=status.HTTP_200_OK)
 
 
@@ -872,6 +962,12 @@ def parent_report(request):
         bkt_inheritance_mastery = round(bkt_state.inheritance_p_know * 100, 1)
         bkt_variation_mastery = round(bkt_state.variation_p_know * 100, 1)
         bkt_statistics_mastery = round(bkt_state.statistics_p_know * 100, 1)
+        bkt_ancestry_mastery = round(bkt_state.ancestry_p_know * 100, 1)
+        bkt_drivers_mastery = round(bkt_state.drivers_p_know * 100, 1)
+        bkt_advantage_mastery = round(bkt_state.advantage_p_know * 100, 1)
+        bkt_adaptation_mastery = round(bkt_state.adaptation_p_know * 100, 1)
+        bkt_extinction_mastery = round(bkt_state.extinction_p_know * 100, 1)
+        bkt_reactions_mastery = round(bkt_state.reactions_p_know * 100, 1)
     else:
         bkt_transcription = 20.0
         bkt_translation = 15.0
@@ -894,6 +990,12 @@ def parent_report(request):
         bkt_inheritance_mastery = 15.0
         bkt_variation_mastery = 15.0
         bkt_statistics_mastery = 15.0
+        bkt_ancestry_mastery = 15.0
+        bkt_drivers_mastery = 15.0
+        bkt_advantage_mastery = 15.0
+        bkt_adaptation_mastery = 15.0
+        bkt_extinction_mastery = 15.0
+        bkt_reactions_mastery = 15.0
 
     # Retrieve temporal BKT history milestones
     history_qs = StudentBKTHistory.objects.filter(student=student).order_by('timestamp')
@@ -942,6 +1044,12 @@ def parent_report(request):
         "bkt_inheritance_mastery": bkt_inheritance_mastery,
         "bkt_variation_mastery": bkt_variation_mastery,
         "bkt_statistics_mastery": bkt_statistics_mastery,
+        "bkt_ancestry_mastery": bkt_ancestry_mastery,
+        "bkt_drivers_mastery": bkt_drivers_mastery,
+        "bkt_advantage_mastery": bkt_advantage_mastery,
+        "bkt_adaptation_mastery": bkt_adaptation_mastery,
+        "bkt_extinction_mastery": bkt_extinction_mastery,
+        "bkt_reactions_mastery": bkt_reactions_mastery,
         "bkt_history": bkt_history_list
     }, status=status.HTTP_200_OK)
 
