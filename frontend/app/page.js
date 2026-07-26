@@ -894,6 +894,370 @@ const ACTIVITIES_DATABASE = {
     }
   ]
 }
+,
+  "OAS.B.LS2.3": {
+  "1": [
+    {
+      "name": "Matter Cycle Match",
+      "description": "Match key elements (Carbon, Nitrogen, Phosphorus, Water) to their major cycling pathways."
+    },
+    {
+      "name": "Biogeochemical Terms",
+      "description": "Identify terms like nitrogen fixation, mineralization, assimilation, and precipitation."
+    },
+    {
+      "name": "Abiotic Cycle Reservoirs",
+      "description": "Distinguish between atmospheric, sedimentary, and hydrologic nutrient pools."
+    },
+    {
+      "name": "Photosynthesis/Respiration Loop",
+      "description": "Trace the direct reciprocal loop of oxygen and carbon dioxide between organisms."
+    },
+    {
+      "name": "Decomposer Nutrient Release",
+      "description": "Explain how fungi and bacteria recycle organic matter back into abiotic soil layers."
+    }
+  ],
+  "2": [
+    {
+      "name": "Aerobic vs. Anaerobic Processes",
+      "description": "Classify processes as requiring oxygen (aerobic) or occurring in anoxic conditions (anaerobic)."
+    },
+    {
+      "name": "Denitrification Sorter",
+      "description": "Identify anaerobic bacteria roles converting nitrates to nitrogen gas in saturated soils."
+    },
+    {
+      "name": "Methanogenesis Sandbox",
+      "description": "Model carbon matter decay under anaerobic conditions yielding methane gas."
+    },
+    {
+      "name": "Nitrification Sorter",
+      "description": "Track the aerobic bacterial pathway converting ammonium into nitrites and nitrates."
+    },
+    {
+      "name": "Fermentation Flux Classifier",
+      "description": "Contrast aerobic cellular respiration ATP yield against anaerobic fermentation outputs."
+    }
+  ],
+  "3": [
+    {
+      "name": "Matter Flux Simulator",
+      "description": "Adjust environmental parameters like temperature and moisture to optimize soil nitrogen flux."
+    },
+    {
+      "name": "Aquifer Depletion Predictor",
+      "description": "Predict regional water table levels under intensive agricultural irrigation drawdowns."
+    },
+    {
+      "name": "Deforestation Soil runoff",
+      "description": "Analyze soil nutrient depletion curves following clear-cutting disturbances."
+    },
+    {
+      "name": "Combustion Carbon Transfer",
+      "description": "Measure carbon mass transfer rates from geosphere storage into atmospheric gas."
+    },
+    {
+      "name": "Acid Deposition Flux",
+      "description": "Model atmospheric sulfur dioxide conversion and its deposition rates into freshwater lakes."
+    }
+  ],
+  "4": [
+    {
+      "name": "Eutrophication Tuner",
+      "description": "Calibrate agricultural fertilizer runoff and dissolved oxygen targets to prevent fish kills."
+    },
+    {
+      "name": "Global Nitrogen Budget Model",
+      "description": "Calibrate Haber-Bosch chemical synthesis vs. biological nitrogen fixation limits."
+    },
+    {
+      "name": "Landfill Decomposition Optimizer",
+      "description": "Optimize moisture and aeration levels to accelerate organic waste degradation."
+    },
+    {
+      "name": "Sewer Treatment Flux Tuner",
+      "description": "Calibrate primary, secondary (aerobic), and tertiary (anaerobic) water purification stages."
+    },
+    {
+      "name": "Peat Bog Carbon Sequestration",
+      "description": "Model anaerobic, acidic bog conditions that prevent decay and accumulate peat coal precursors."
+    }
+  ]
+}
+,
+  "OAS.B.LS2.4": {
+  "1": [
+    {
+      "name": "Trophic Level Sorter",
+      "description": "Classify organisms as primary producers, primary consumers, secondary consumers, or tertiary consumers."
+    },
+    {
+      "name": "Autotroph vs. Heterotroph",
+      "description": "Distinguish carbon fixation (photosynthesis/chemosynthesis) from ingestion pathways."
+    },
+    {
+      "name": "Detritivore Food Chains",
+      "description": "Identify decomposer and detritivore placements in woodland energy webs."
+    },
+    {
+      "name": "Trophic Level Energy Units",
+      "description": "Recall basic units of energy (Joules, Calories) and biomass (grams/m2) used in pyramids."
+    },
+    {
+      "name": "Apex Predator Identification",
+      "description": "Classify trophic levels containing top predators with zero natural enemies."
+    }
+  ],
+  "2": [
+    {
+      "name": "Energy 10% Rule Sorter",
+      "description": "Arrange energy transfer levels showing a 90% thermodynamic loss at each stage."
+    },
+    {
+      "name": "Thermodynamics in Ecosystems",
+      "description": "Explain how the Second Law of Thermodynamics dictates biomass pyramid shape."
+    },
+    {
+      "name": "Bioaccumulation Sorter",
+      "description": "Track the increasing concentration of heavy metals (mercury) in higher trophic levels."
+    },
+    {
+      "name": "Food Web Connectivity Maps",
+      "description": "Trace trophic links and calculate food web connectance indexes."
+    },
+    {
+      "name": "Photosynthetic Efficiency Sorter",
+      "description": "Estimate net primary productivity (NPP) as solar energy minus respiration."
+    }
+  ],
+  "3": [
+    {
+      "name": "Trophic Biomass Matcher",
+      "description": "Match producer and consumer species to their respective biomass turnovers in terrestrial vs. marine ecosystems."
+    },
+    {
+      "name": "Herbivory Simulation Sandbox",
+      "description": "Determine vegetation recovery rates under varied deer population grazing pressures."
+    },
+    {
+      "name": "Trophic Cascade Biomass Shift",
+      "description": "Predict ecosystem-wide biomass shifts following predator extirpations."
+    },
+    {
+      "name": "NPP Latitude Gradient Models",
+      "description": "Predict net primary productivity levels based on global sunlight and moisture bands."
+    },
+    {
+      "name": "Keystone Predator Biomass Regulator",
+      "description": "Model how starfish predation maintains intertidal mussel and barnacle balances."
+    }
+  ],
+  "4": [
+    {
+      "name": "Ecosystem Efficiency Tuner",
+      "description": "Calibrate solar insolation and ecological transfer efficiencies to support apex predators."
+    },
+    {
+      "name": "Agricultural Trophic Footprints",
+      "description": "Calculate land area requirements to support human diets rich in beef vs. grains."
+    },
+    {
+      "name": "Invasive Herbivore Trophic Shock",
+      "description": "Model ecosystem carrying capacity collapses following the introduction of rabbits."
+    },
+    {
+      "name": "Hydrothermal Vent Energy Webs",
+      "description": "Tune chemosynthetic sulfur-oxidizing bacteria yield to feed giant tube worms."
+    },
+    {
+      "name": "Ecosystem Carrying Capacity Cap",
+      "description": "Calculate theoretical upper limits of consumer biomass dictated by primary productivity."
+    }
+  ]
+}
+,
+  "OAS.B.LS2.5": {
+  "1": [
+    {
+      "name": "Carbon Reservoirs Sorter",
+      "description": "Classify carbon pools as belonging to Atmosphere, Geosphere, Biosphere, or Hydrosphere."
+    },
+    {
+      "name": "Carbonate Buffer Chemistry",
+      "description": "Identify bicarbonate and carbonic acid ions regulating ocean acidity levels."
+    },
+    {
+      "name": "Fossil Fuel Hydrocarbons",
+      "description": "Distinguish between sedimentary coal, petroleum, and natural gas organic reservoirs."
+    },
+    {
+      "name": "Short-term vs. Long-term Carbon",
+      "description": "Differentiate biological cycling (seconds) from geological sedimentation (millions of years)."
+    },
+    {
+      "name": "Atmospheric CO2 Baselines",
+      "description": "Recall current global atmospheric carbon dioxide ppm standards."
+    }
+  ],
+  "2": [
+    {
+      "name": "Carbon Process Match",
+      "description": "Classify carbon pathways shifting carbon between spheres (combustion, respiration, weathering)."
+    },
+    {
+      "name": "Photosynthesis Carbon Sink",
+      "description": "Model carbon dioxide extraction from atmosphere into plant carbohydrate cellulose."
+    },
+    {
+      "name": "Ocean Acidification Pathway",
+      "description": "Trace chemical reactions converting dissolved CO2 into carbonic acid and proton excess."
+    },
+    {
+      "name": "Silicate Rock Weathering",
+      "description": "Track geological carbon sequestration via rain carbonic acid reacting with minerals."
+    },
+    {
+      "name": "Volcanic Outgassing Rates",
+      "description": "Measure carbon outgassing rates from subducted ocean plate limestones."
+    }
+  ],
+  "3": [
+    {
+      "name": "Carbon Flux Simulator",
+      "description": "Calibrate fossil fuel emissions and ocean carbon sinks to track net atmospheric changes."
+    },
+    {
+      "name": "Permafrost Thaw Carbon Release",
+      "description": "Model greenhouse gas feedback loops as warming melts tundra soils."
+    },
+    {
+      "name": "Marine Carbon Pump Sandbox",
+      "description": "Predict deep-sea carbon burial rates as marine snow scales up."
+    },
+    {
+      "name": "Deforestation Carbon Spikes",
+      "description": "Calculate forest soil carbon emissions after large-scale canopy burns."
+    },
+    {
+      "name": "Coral Calcification Inhibitors",
+      "description": "Model carbonate ion depletion effects on calcium shell development."
+    }
+  ],
+  "4": [
+    {
+      "name": "Global Temperature Optimizer",
+      "description": "Calibrate CO2 levels and global albedo indices to stabilize temperature anomalies."
+    },
+    {
+      "name": "CCS Sequestration Engineer",
+      "description": "Design geological Carbon Capture & Sequestration (CCS) storage flow rates."
+    },
+    {
+      "name": "Industrial Carbon Tax Tuner",
+      "description": "Calibrate carbon tax credits to incentivize industrial transitions to renewables."
+    },
+    {
+      "name": "Ocean Iron Fertilization Model",
+      "description": "Calibrate iron dust application rates to induce phytoplankton blooms."
+    },
+    {
+      "name": "Ice-Albedo Feedback Simulator",
+      "description": "Model runaway warming loops as retreating sea ice lowers Earth's albedo."
+    }
+  ]
+}
+,
+  "OAS.B.LS2.6": {
+  "1": [
+    {
+      "name": "Stability Factors Sorter",
+      "description": "Match Resistance, Resilience, and Dynamic Equilibrium definitions."
+    },
+    {
+      "name": "Feedback Loop Classification",
+      "description": "Classify stabilizing loops (negative feedback) vs. destabilizing loops (positive feedback)."
+    },
+    {
+      "name": "Ecosystem Disturbance Scale",
+      "description": "Identify micro-disturbances (tree fall) vs. macro-disturbances (glaciation)."
+    },
+    {
+      "name": "Climax Community Attributes",
+      "description": "Recall traits of climax forests: high biodiversity, shade-tolerant trees, complex webs."
+    },
+    {
+      "name": "Ecological Disturbance Sorter",
+      "description": "Differentiate natural (volcano, flood) vs. anthropogenic (overgrazing, mining) disruptions."
+    }
+  ],
+  "2": [
+    {
+      "name": "Succession Colonizer Match",
+      "description": "Match Lichens/Mosses, Grasses/Shrubs, Oak/Hickory to primary vs. secondary succession stages."
+    },
+    {
+      "name": "Tolerant vs. Pioneer Species",
+      "description": "Contrast r-selected pioneer grass colonizers against shade-tolerant climax saplings."
+    },
+    {
+      "name": "Forest Fire Patch Mosaic",
+      "description": "Model landscape diversity improvements from moderate, localized wildfire events."
+    },
+    {
+      "name": "Alternative Stable States",
+      "description": "Track tipping point transitions from kelp forests to urchin barrens."
+    },
+    {
+      "name": "Intermediate Disturbance Principle",
+      "description": "Contrast biodiversity levels under low, moderate, and extreme disturbance frequencies."
+    }
+  ],
+  "3": [
+    {
+      "name": "Disturbance Severity Sandbox",
+      "description": "Calibrate fire frequencies and severity factors to observe recovery successions."
+    },
+    {
+      "name": "Ecosystem Services Resiliency",
+      "description": "Predict ecosystem soil retention recovery curves after canopy clearings."
+    },
+    {
+      "name": "Urban Heat Island Mitigator",
+      "description": "Model temperature reductions as green roof area and canopy coverage are scaled up."
+    },
+    {
+      "name": "Wetland Runoff Buffer Sandbox",
+      "description": "Analyze phosphorus absorption efficiency of wetlands under intense flood flows."
+    },
+    {
+      "name": "Overgrazing Grassland Recovery",
+      "description": "Determine herd rotation schedules to prevent grassland desertification."
+    }
+  ],
+  "4": [
+    {
+      "name": "Ecosystem Recovery Planner",
+      "description": "Calibrate reforestation planting density and soil nitrogen levels to restore logged land."
+    },
+    {
+      "name": "Trophic Re-Wilding Coordinator",
+      "description": "Determine gray wolf reintroduction quotas to restore riparian willow and beaver count."
+    },
+    {
+      "name": "Coral Reef Bleaching Buffer",
+      "description": "Design marine protected area cooling flow channels to buffer warm anomalies."
+    },
+    {
+      "name": "Wildfire Fuel Mitigation Model",
+      "description": "Calibrate controlled burn intervals to reduce accumulated dry forest floor litter."
+    },
+    {
+      "name": "Agricultural Monoculture Buffer",
+      "description": "Design wildflower corridors to protect crop pollination resilience during drought."
+    }
+  ]
+}
 };
 
 const BIO_DOK1_ACT1_VARIANTS = [
@@ -14643,6 +15007,8210 @@ const DOK_QUIZ_BANKS = {
     ]
   ]
 }
+,
+  "OAS.B.LS2.3": {
+  "1": [
+    [
+      {
+        "question": "Matter DOK1 Act1 Q0: What biogeochemical cycle contains chemical element variant 0?",
+        "options": [
+          "Cycle element 0",
+          "Nitrogen 0",
+          "Carbon 0",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 0"
+      },
+      {
+        "question": "Matter DOK1 Act1 Q1: What biogeochemical cycle contains chemical element variant 1?",
+        "options": [
+          "Cycle element 1",
+          "Nitrogen 1",
+          "Carbon 1",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 1"
+      },
+      {
+        "question": "Matter DOK1 Act1 Q2: What biogeochemical cycle contains chemical element variant 2?",
+        "options": [
+          "Cycle element 2",
+          "Nitrogen 2",
+          "Carbon 2",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 2"
+      },
+      {
+        "question": "Matter DOK1 Act1 Q3: What biogeochemical cycle contains chemical element variant 3?",
+        "options": [
+          "Cycle element 3",
+          "Nitrogen 3",
+          "Carbon 3",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 3"
+      },
+      {
+        "question": "Matter DOK1 Act1 Q4: What biogeochemical cycle contains chemical element variant 4?",
+        "options": [
+          "Cycle element 4",
+          "Nitrogen 4",
+          "Carbon 4",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 4"
+      },
+      {
+        "question": "Matter DOK1 Act1 Q5: What biogeochemical cycle contains chemical element variant 5?",
+        "options": [
+          "Cycle element 5",
+          "Nitrogen 5",
+          "Carbon 5",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 5"
+      },
+      {
+        "question": "Matter DOK1 Act1 Q6: What biogeochemical cycle contains chemical element variant 6?",
+        "options": [
+          "Cycle element 6",
+          "Nitrogen 6",
+          "Carbon 6",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 6"
+      },
+      {
+        "question": "Matter DOK1 Act1 Q7: What biogeochemical cycle contains chemical element variant 7?",
+        "options": [
+          "Cycle element 7",
+          "Nitrogen 7",
+          "Carbon 7",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 7"
+      },
+      {
+        "question": "Matter DOK1 Act1 Q8: What biogeochemical cycle contains chemical element variant 8?",
+        "options": [
+          "Cycle element 8",
+          "Nitrogen 8",
+          "Carbon 8",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 8"
+      },
+      {
+        "question": "Matter DOK1 Act1 Q9: What biogeochemical cycle contains chemical element variant 9?",
+        "options": [
+          "Cycle element 9",
+          "Nitrogen 9",
+          "Carbon 9",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK1 Act2 Q0: What biogeochemical cycle contains chemical element variant 0?",
+        "options": [
+          "Cycle element 0",
+          "Nitrogen 0",
+          "Carbon 0",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 0"
+      },
+      {
+        "question": "Matter DOK1 Act2 Q1: What biogeochemical cycle contains chemical element variant 1?",
+        "options": [
+          "Cycle element 1",
+          "Nitrogen 1",
+          "Carbon 1",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 1"
+      },
+      {
+        "question": "Matter DOK1 Act2 Q2: What biogeochemical cycle contains chemical element variant 2?",
+        "options": [
+          "Cycle element 2",
+          "Nitrogen 2",
+          "Carbon 2",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 2"
+      },
+      {
+        "question": "Matter DOK1 Act2 Q3: What biogeochemical cycle contains chemical element variant 3?",
+        "options": [
+          "Cycle element 3",
+          "Nitrogen 3",
+          "Carbon 3",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 3"
+      },
+      {
+        "question": "Matter DOK1 Act2 Q4: What biogeochemical cycle contains chemical element variant 4?",
+        "options": [
+          "Cycle element 4",
+          "Nitrogen 4",
+          "Carbon 4",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 4"
+      },
+      {
+        "question": "Matter DOK1 Act2 Q5: What biogeochemical cycle contains chemical element variant 5?",
+        "options": [
+          "Cycle element 5",
+          "Nitrogen 5",
+          "Carbon 5",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 5"
+      },
+      {
+        "question": "Matter DOK1 Act2 Q6: What biogeochemical cycle contains chemical element variant 6?",
+        "options": [
+          "Cycle element 6",
+          "Nitrogen 6",
+          "Carbon 6",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 6"
+      },
+      {
+        "question": "Matter DOK1 Act2 Q7: What biogeochemical cycle contains chemical element variant 7?",
+        "options": [
+          "Cycle element 7",
+          "Nitrogen 7",
+          "Carbon 7",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 7"
+      },
+      {
+        "question": "Matter DOK1 Act2 Q8: What biogeochemical cycle contains chemical element variant 8?",
+        "options": [
+          "Cycle element 8",
+          "Nitrogen 8",
+          "Carbon 8",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 8"
+      },
+      {
+        "question": "Matter DOK1 Act2 Q9: What biogeochemical cycle contains chemical element variant 9?",
+        "options": [
+          "Cycle element 9",
+          "Nitrogen 9",
+          "Carbon 9",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK1 Act3 Q0: What biogeochemical cycle contains chemical element variant 0?",
+        "options": [
+          "Cycle element 0",
+          "Nitrogen 0",
+          "Carbon 0",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 0"
+      },
+      {
+        "question": "Matter DOK1 Act3 Q1: What biogeochemical cycle contains chemical element variant 1?",
+        "options": [
+          "Cycle element 1",
+          "Nitrogen 1",
+          "Carbon 1",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 1"
+      },
+      {
+        "question": "Matter DOK1 Act3 Q2: What biogeochemical cycle contains chemical element variant 2?",
+        "options": [
+          "Cycle element 2",
+          "Nitrogen 2",
+          "Carbon 2",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 2"
+      },
+      {
+        "question": "Matter DOK1 Act3 Q3: What biogeochemical cycle contains chemical element variant 3?",
+        "options": [
+          "Cycle element 3",
+          "Nitrogen 3",
+          "Carbon 3",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 3"
+      },
+      {
+        "question": "Matter DOK1 Act3 Q4: What biogeochemical cycle contains chemical element variant 4?",
+        "options": [
+          "Cycle element 4",
+          "Nitrogen 4",
+          "Carbon 4",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 4"
+      },
+      {
+        "question": "Matter DOK1 Act3 Q5: What biogeochemical cycle contains chemical element variant 5?",
+        "options": [
+          "Cycle element 5",
+          "Nitrogen 5",
+          "Carbon 5",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 5"
+      },
+      {
+        "question": "Matter DOK1 Act3 Q6: What biogeochemical cycle contains chemical element variant 6?",
+        "options": [
+          "Cycle element 6",
+          "Nitrogen 6",
+          "Carbon 6",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 6"
+      },
+      {
+        "question": "Matter DOK1 Act3 Q7: What biogeochemical cycle contains chemical element variant 7?",
+        "options": [
+          "Cycle element 7",
+          "Nitrogen 7",
+          "Carbon 7",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 7"
+      },
+      {
+        "question": "Matter DOK1 Act3 Q8: What biogeochemical cycle contains chemical element variant 8?",
+        "options": [
+          "Cycle element 8",
+          "Nitrogen 8",
+          "Carbon 8",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 8"
+      },
+      {
+        "question": "Matter DOK1 Act3 Q9: What biogeochemical cycle contains chemical element variant 9?",
+        "options": [
+          "Cycle element 9",
+          "Nitrogen 9",
+          "Carbon 9",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK1 Act4 Q0: What biogeochemical cycle contains chemical element variant 0?",
+        "options": [
+          "Cycle element 0",
+          "Nitrogen 0",
+          "Carbon 0",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 0"
+      },
+      {
+        "question": "Matter DOK1 Act4 Q1: What biogeochemical cycle contains chemical element variant 1?",
+        "options": [
+          "Cycle element 1",
+          "Nitrogen 1",
+          "Carbon 1",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 1"
+      },
+      {
+        "question": "Matter DOK1 Act4 Q2: What biogeochemical cycle contains chemical element variant 2?",
+        "options": [
+          "Cycle element 2",
+          "Nitrogen 2",
+          "Carbon 2",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 2"
+      },
+      {
+        "question": "Matter DOK1 Act4 Q3: What biogeochemical cycle contains chemical element variant 3?",
+        "options": [
+          "Cycle element 3",
+          "Nitrogen 3",
+          "Carbon 3",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 3"
+      },
+      {
+        "question": "Matter DOK1 Act4 Q4: What biogeochemical cycle contains chemical element variant 4?",
+        "options": [
+          "Cycle element 4",
+          "Nitrogen 4",
+          "Carbon 4",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 4"
+      },
+      {
+        "question": "Matter DOK1 Act4 Q5: What biogeochemical cycle contains chemical element variant 5?",
+        "options": [
+          "Cycle element 5",
+          "Nitrogen 5",
+          "Carbon 5",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 5"
+      },
+      {
+        "question": "Matter DOK1 Act4 Q6: What biogeochemical cycle contains chemical element variant 6?",
+        "options": [
+          "Cycle element 6",
+          "Nitrogen 6",
+          "Carbon 6",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 6"
+      },
+      {
+        "question": "Matter DOK1 Act4 Q7: What biogeochemical cycle contains chemical element variant 7?",
+        "options": [
+          "Cycle element 7",
+          "Nitrogen 7",
+          "Carbon 7",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 7"
+      },
+      {
+        "question": "Matter DOK1 Act4 Q8: What biogeochemical cycle contains chemical element variant 8?",
+        "options": [
+          "Cycle element 8",
+          "Nitrogen 8",
+          "Carbon 8",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 8"
+      },
+      {
+        "question": "Matter DOK1 Act4 Q9: What biogeochemical cycle contains chemical element variant 9?",
+        "options": [
+          "Cycle element 9",
+          "Nitrogen 9",
+          "Carbon 9",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK1 Act5 Q0: What biogeochemical cycle contains chemical element variant 0?",
+        "options": [
+          "Cycle element 0",
+          "Nitrogen 0",
+          "Carbon 0",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 0"
+      },
+      {
+        "question": "Matter DOK1 Act5 Q1: What biogeochemical cycle contains chemical element variant 1?",
+        "options": [
+          "Cycle element 1",
+          "Nitrogen 1",
+          "Carbon 1",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 1"
+      },
+      {
+        "question": "Matter DOK1 Act5 Q2: What biogeochemical cycle contains chemical element variant 2?",
+        "options": [
+          "Cycle element 2",
+          "Nitrogen 2",
+          "Carbon 2",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 2"
+      },
+      {
+        "question": "Matter DOK1 Act5 Q3: What biogeochemical cycle contains chemical element variant 3?",
+        "options": [
+          "Cycle element 3",
+          "Nitrogen 3",
+          "Carbon 3",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 3"
+      },
+      {
+        "question": "Matter DOK1 Act5 Q4: What biogeochemical cycle contains chemical element variant 4?",
+        "options": [
+          "Cycle element 4",
+          "Nitrogen 4",
+          "Carbon 4",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 4"
+      },
+      {
+        "question": "Matter DOK1 Act5 Q5: What biogeochemical cycle contains chemical element variant 5?",
+        "options": [
+          "Cycle element 5",
+          "Nitrogen 5",
+          "Carbon 5",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 5"
+      },
+      {
+        "question": "Matter DOK1 Act5 Q6: What biogeochemical cycle contains chemical element variant 6?",
+        "options": [
+          "Cycle element 6",
+          "Nitrogen 6",
+          "Carbon 6",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 6"
+      },
+      {
+        "question": "Matter DOK1 Act5 Q7: What biogeochemical cycle contains chemical element variant 7?",
+        "options": [
+          "Cycle element 7",
+          "Nitrogen 7",
+          "Carbon 7",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 7"
+      },
+      {
+        "question": "Matter DOK1 Act5 Q8: What biogeochemical cycle contains chemical element variant 8?",
+        "options": [
+          "Cycle element 8",
+          "Nitrogen 8",
+          "Carbon 8",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 8"
+      },
+      {
+        "question": "Matter DOK1 Act5 Q9: What biogeochemical cycle contains chemical element variant 9?",
+        "options": [
+          "Cycle element 9",
+          "Nitrogen 9",
+          "Carbon 9",
+          "Phosphorus"
+        ],
+        "answer": "Cycle element 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Matter DOK2 Act1 Q0: Classify aerobic vs anaerobic process variant 0.",
+        "options": [
+          "Process type 0",
+          "Aerobic 0",
+          "Anaerobic 0",
+          "Fermentation"
+        ],
+        "answer": "Process type 0"
+      },
+      {
+        "question": "Matter DOK2 Act1 Q1: Classify aerobic vs anaerobic process variant 1.",
+        "options": [
+          "Process type 1",
+          "Aerobic 1",
+          "Anaerobic 1",
+          "Fermentation"
+        ],
+        "answer": "Process type 1"
+      },
+      {
+        "question": "Matter DOK2 Act1 Q2: Classify aerobic vs anaerobic process variant 2.",
+        "options": [
+          "Process type 2",
+          "Aerobic 2",
+          "Anaerobic 2",
+          "Fermentation"
+        ],
+        "answer": "Process type 2"
+      },
+      {
+        "question": "Matter DOK2 Act1 Q3: Classify aerobic vs anaerobic process variant 3.",
+        "options": [
+          "Process type 3",
+          "Aerobic 3",
+          "Anaerobic 3",
+          "Fermentation"
+        ],
+        "answer": "Process type 3"
+      },
+      {
+        "question": "Matter DOK2 Act1 Q4: Classify aerobic vs anaerobic process variant 4.",
+        "options": [
+          "Process type 4",
+          "Aerobic 4",
+          "Anaerobic 4",
+          "Fermentation"
+        ],
+        "answer": "Process type 4"
+      },
+      {
+        "question": "Matter DOK2 Act1 Q5: Classify aerobic vs anaerobic process variant 5.",
+        "options": [
+          "Process type 5",
+          "Aerobic 5",
+          "Anaerobic 5",
+          "Fermentation"
+        ],
+        "answer": "Process type 5"
+      },
+      {
+        "question": "Matter DOK2 Act1 Q6: Classify aerobic vs anaerobic process variant 6.",
+        "options": [
+          "Process type 6",
+          "Aerobic 6",
+          "Anaerobic 6",
+          "Fermentation"
+        ],
+        "answer": "Process type 6"
+      },
+      {
+        "question": "Matter DOK2 Act1 Q7: Classify aerobic vs anaerobic process variant 7.",
+        "options": [
+          "Process type 7",
+          "Aerobic 7",
+          "Anaerobic 7",
+          "Fermentation"
+        ],
+        "answer": "Process type 7"
+      },
+      {
+        "question": "Matter DOK2 Act1 Q8: Classify aerobic vs anaerobic process variant 8.",
+        "options": [
+          "Process type 8",
+          "Aerobic 8",
+          "Anaerobic 8",
+          "Fermentation"
+        ],
+        "answer": "Process type 8"
+      },
+      {
+        "question": "Matter DOK2 Act1 Q9: Classify aerobic vs anaerobic process variant 9.",
+        "options": [
+          "Process type 9",
+          "Aerobic 9",
+          "Anaerobic 9",
+          "Fermentation"
+        ],
+        "answer": "Process type 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK2 Act2 Q0: Classify aerobic vs anaerobic process variant 0.",
+        "options": [
+          "Process type 0",
+          "Aerobic 0",
+          "Anaerobic 0",
+          "Fermentation"
+        ],
+        "answer": "Process type 0"
+      },
+      {
+        "question": "Matter DOK2 Act2 Q1: Classify aerobic vs anaerobic process variant 1.",
+        "options": [
+          "Process type 1",
+          "Aerobic 1",
+          "Anaerobic 1",
+          "Fermentation"
+        ],
+        "answer": "Process type 1"
+      },
+      {
+        "question": "Matter DOK2 Act2 Q2: Classify aerobic vs anaerobic process variant 2.",
+        "options": [
+          "Process type 2",
+          "Aerobic 2",
+          "Anaerobic 2",
+          "Fermentation"
+        ],
+        "answer": "Process type 2"
+      },
+      {
+        "question": "Matter DOK2 Act2 Q3: Classify aerobic vs anaerobic process variant 3.",
+        "options": [
+          "Process type 3",
+          "Aerobic 3",
+          "Anaerobic 3",
+          "Fermentation"
+        ],
+        "answer": "Process type 3"
+      },
+      {
+        "question": "Matter DOK2 Act2 Q4: Classify aerobic vs anaerobic process variant 4.",
+        "options": [
+          "Process type 4",
+          "Aerobic 4",
+          "Anaerobic 4",
+          "Fermentation"
+        ],
+        "answer": "Process type 4"
+      },
+      {
+        "question": "Matter DOK2 Act2 Q5: Classify aerobic vs anaerobic process variant 5.",
+        "options": [
+          "Process type 5",
+          "Aerobic 5",
+          "Anaerobic 5",
+          "Fermentation"
+        ],
+        "answer": "Process type 5"
+      },
+      {
+        "question": "Matter DOK2 Act2 Q6: Classify aerobic vs anaerobic process variant 6.",
+        "options": [
+          "Process type 6",
+          "Aerobic 6",
+          "Anaerobic 6",
+          "Fermentation"
+        ],
+        "answer": "Process type 6"
+      },
+      {
+        "question": "Matter DOK2 Act2 Q7: Classify aerobic vs anaerobic process variant 7.",
+        "options": [
+          "Process type 7",
+          "Aerobic 7",
+          "Anaerobic 7",
+          "Fermentation"
+        ],
+        "answer": "Process type 7"
+      },
+      {
+        "question": "Matter DOK2 Act2 Q8: Classify aerobic vs anaerobic process variant 8.",
+        "options": [
+          "Process type 8",
+          "Aerobic 8",
+          "Anaerobic 8",
+          "Fermentation"
+        ],
+        "answer": "Process type 8"
+      },
+      {
+        "question": "Matter DOK2 Act2 Q9: Classify aerobic vs anaerobic process variant 9.",
+        "options": [
+          "Process type 9",
+          "Aerobic 9",
+          "Anaerobic 9",
+          "Fermentation"
+        ],
+        "answer": "Process type 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK2 Act3 Q0: Classify aerobic vs anaerobic process variant 0.",
+        "options": [
+          "Process type 0",
+          "Aerobic 0",
+          "Anaerobic 0",
+          "Fermentation"
+        ],
+        "answer": "Process type 0"
+      },
+      {
+        "question": "Matter DOK2 Act3 Q1: Classify aerobic vs anaerobic process variant 1.",
+        "options": [
+          "Process type 1",
+          "Aerobic 1",
+          "Anaerobic 1",
+          "Fermentation"
+        ],
+        "answer": "Process type 1"
+      },
+      {
+        "question": "Matter DOK2 Act3 Q2: Classify aerobic vs anaerobic process variant 2.",
+        "options": [
+          "Process type 2",
+          "Aerobic 2",
+          "Anaerobic 2",
+          "Fermentation"
+        ],
+        "answer": "Process type 2"
+      },
+      {
+        "question": "Matter DOK2 Act3 Q3: Classify aerobic vs anaerobic process variant 3.",
+        "options": [
+          "Process type 3",
+          "Aerobic 3",
+          "Anaerobic 3",
+          "Fermentation"
+        ],
+        "answer": "Process type 3"
+      },
+      {
+        "question": "Matter DOK2 Act3 Q4: Classify aerobic vs anaerobic process variant 4.",
+        "options": [
+          "Process type 4",
+          "Aerobic 4",
+          "Anaerobic 4",
+          "Fermentation"
+        ],
+        "answer": "Process type 4"
+      },
+      {
+        "question": "Matter DOK2 Act3 Q5: Classify aerobic vs anaerobic process variant 5.",
+        "options": [
+          "Process type 5",
+          "Aerobic 5",
+          "Anaerobic 5",
+          "Fermentation"
+        ],
+        "answer": "Process type 5"
+      },
+      {
+        "question": "Matter DOK2 Act3 Q6: Classify aerobic vs anaerobic process variant 6.",
+        "options": [
+          "Process type 6",
+          "Aerobic 6",
+          "Anaerobic 6",
+          "Fermentation"
+        ],
+        "answer": "Process type 6"
+      },
+      {
+        "question": "Matter DOK2 Act3 Q7: Classify aerobic vs anaerobic process variant 7.",
+        "options": [
+          "Process type 7",
+          "Aerobic 7",
+          "Anaerobic 7",
+          "Fermentation"
+        ],
+        "answer": "Process type 7"
+      },
+      {
+        "question": "Matter DOK2 Act3 Q8: Classify aerobic vs anaerobic process variant 8.",
+        "options": [
+          "Process type 8",
+          "Aerobic 8",
+          "Anaerobic 8",
+          "Fermentation"
+        ],
+        "answer": "Process type 8"
+      },
+      {
+        "question": "Matter DOK2 Act3 Q9: Classify aerobic vs anaerobic process variant 9.",
+        "options": [
+          "Process type 9",
+          "Aerobic 9",
+          "Anaerobic 9",
+          "Fermentation"
+        ],
+        "answer": "Process type 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK2 Act4 Q0: Classify aerobic vs anaerobic process variant 0.",
+        "options": [
+          "Process type 0",
+          "Aerobic 0",
+          "Anaerobic 0",
+          "Fermentation"
+        ],
+        "answer": "Process type 0"
+      },
+      {
+        "question": "Matter DOK2 Act4 Q1: Classify aerobic vs anaerobic process variant 1.",
+        "options": [
+          "Process type 1",
+          "Aerobic 1",
+          "Anaerobic 1",
+          "Fermentation"
+        ],
+        "answer": "Process type 1"
+      },
+      {
+        "question": "Matter DOK2 Act4 Q2: Classify aerobic vs anaerobic process variant 2.",
+        "options": [
+          "Process type 2",
+          "Aerobic 2",
+          "Anaerobic 2",
+          "Fermentation"
+        ],
+        "answer": "Process type 2"
+      },
+      {
+        "question": "Matter DOK2 Act4 Q3: Classify aerobic vs anaerobic process variant 3.",
+        "options": [
+          "Process type 3",
+          "Aerobic 3",
+          "Anaerobic 3",
+          "Fermentation"
+        ],
+        "answer": "Process type 3"
+      },
+      {
+        "question": "Matter DOK2 Act4 Q4: Classify aerobic vs anaerobic process variant 4.",
+        "options": [
+          "Process type 4",
+          "Aerobic 4",
+          "Anaerobic 4",
+          "Fermentation"
+        ],
+        "answer": "Process type 4"
+      },
+      {
+        "question": "Matter DOK2 Act4 Q5: Classify aerobic vs anaerobic process variant 5.",
+        "options": [
+          "Process type 5",
+          "Aerobic 5",
+          "Anaerobic 5",
+          "Fermentation"
+        ],
+        "answer": "Process type 5"
+      },
+      {
+        "question": "Matter DOK2 Act4 Q6: Classify aerobic vs anaerobic process variant 6.",
+        "options": [
+          "Process type 6",
+          "Aerobic 6",
+          "Anaerobic 6",
+          "Fermentation"
+        ],
+        "answer": "Process type 6"
+      },
+      {
+        "question": "Matter DOK2 Act4 Q7: Classify aerobic vs anaerobic process variant 7.",
+        "options": [
+          "Process type 7",
+          "Aerobic 7",
+          "Anaerobic 7",
+          "Fermentation"
+        ],
+        "answer": "Process type 7"
+      },
+      {
+        "question": "Matter DOK2 Act4 Q8: Classify aerobic vs anaerobic process variant 8.",
+        "options": [
+          "Process type 8",
+          "Aerobic 8",
+          "Anaerobic 8",
+          "Fermentation"
+        ],
+        "answer": "Process type 8"
+      },
+      {
+        "question": "Matter DOK2 Act4 Q9: Classify aerobic vs anaerobic process variant 9.",
+        "options": [
+          "Process type 9",
+          "Aerobic 9",
+          "Anaerobic 9",
+          "Fermentation"
+        ],
+        "answer": "Process type 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK2 Act5 Q0: Classify aerobic vs anaerobic process variant 0.",
+        "options": [
+          "Process type 0",
+          "Aerobic 0",
+          "Anaerobic 0",
+          "Fermentation"
+        ],
+        "answer": "Process type 0"
+      },
+      {
+        "question": "Matter DOK2 Act5 Q1: Classify aerobic vs anaerobic process variant 1.",
+        "options": [
+          "Process type 1",
+          "Aerobic 1",
+          "Anaerobic 1",
+          "Fermentation"
+        ],
+        "answer": "Process type 1"
+      },
+      {
+        "question": "Matter DOK2 Act5 Q2: Classify aerobic vs anaerobic process variant 2.",
+        "options": [
+          "Process type 2",
+          "Aerobic 2",
+          "Anaerobic 2",
+          "Fermentation"
+        ],
+        "answer": "Process type 2"
+      },
+      {
+        "question": "Matter DOK2 Act5 Q3: Classify aerobic vs anaerobic process variant 3.",
+        "options": [
+          "Process type 3",
+          "Aerobic 3",
+          "Anaerobic 3",
+          "Fermentation"
+        ],
+        "answer": "Process type 3"
+      },
+      {
+        "question": "Matter DOK2 Act5 Q4: Classify aerobic vs anaerobic process variant 4.",
+        "options": [
+          "Process type 4",
+          "Aerobic 4",
+          "Anaerobic 4",
+          "Fermentation"
+        ],
+        "answer": "Process type 4"
+      },
+      {
+        "question": "Matter DOK2 Act5 Q5: Classify aerobic vs anaerobic process variant 5.",
+        "options": [
+          "Process type 5",
+          "Aerobic 5",
+          "Anaerobic 5",
+          "Fermentation"
+        ],
+        "answer": "Process type 5"
+      },
+      {
+        "question": "Matter DOK2 Act5 Q6: Classify aerobic vs anaerobic process variant 6.",
+        "options": [
+          "Process type 6",
+          "Aerobic 6",
+          "Anaerobic 6",
+          "Fermentation"
+        ],
+        "answer": "Process type 6"
+      },
+      {
+        "question": "Matter DOK2 Act5 Q7: Classify aerobic vs anaerobic process variant 7.",
+        "options": [
+          "Process type 7",
+          "Aerobic 7",
+          "Anaerobic 7",
+          "Fermentation"
+        ],
+        "answer": "Process type 7"
+      },
+      {
+        "question": "Matter DOK2 Act5 Q8: Classify aerobic vs anaerobic process variant 8.",
+        "options": [
+          "Process type 8",
+          "Aerobic 8",
+          "Anaerobic 8",
+          "Fermentation"
+        ],
+        "answer": "Process type 8"
+      },
+      {
+        "question": "Matter DOK2 Act5 Q9: Classify aerobic vs anaerobic process variant 9.",
+        "options": [
+          "Process type 9",
+          "Aerobic 9",
+          "Anaerobic 9",
+          "Fermentation"
+        ],
+        "answer": "Process type 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Matter DOK3 Act1 Q0: Predict matter cycling rates under parameters 0.",
+        "options": [
+          "Cycling rate 0",
+          "Flux 0",
+          "Parameter 0",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 0"
+      },
+      {
+        "question": "Matter DOK3 Act1 Q1: Predict matter cycling rates under parameters 1.",
+        "options": [
+          "Cycling rate 1",
+          "Flux 1",
+          "Parameter 1",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 1"
+      },
+      {
+        "question": "Matter DOK3 Act1 Q2: Predict matter cycling rates under parameters 2.",
+        "options": [
+          "Cycling rate 2",
+          "Flux 2",
+          "Parameter 2",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 2"
+      },
+      {
+        "question": "Matter DOK3 Act1 Q3: Predict matter cycling rates under parameters 3.",
+        "options": [
+          "Cycling rate 3",
+          "Flux 3",
+          "Parameter 3",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 3"
+      },
+      {
+        "question": "Matter DOK3 Act1 Q4: Predict matter cycling rates under parameters 4.",
+        "options": [
+          "Cycling rate 4",
+          "Flux 4",
+          "Parameter 4",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 4"
+      },
+      {
+        "question": "Matter DOK3 Act1 Q5: Predict matter cycling rates under parameters 5.",
+        "options": [
+          "Cycling rate 5",
+          "Flux 5",
+          "Parameter 5",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 5"
+      },
+      {
+        "question": "Matter DOK3 Act1 Q6: Predict matter cycling rates under parameters 6.",
+        "options": [
+          "Cycling rate 6",
+          "Flux 6",
+          "Parameter 6",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 6"
+      },
+      {
+        "question": "Matter DOK3 Act1 Q7: Predict matter cycling rates under parameters 7.",
+        "options": [
+          "Cycling rate 7",
+          "Flux 7",
+          "Parameter 7",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 7"
+      },
+      {
+        "question": "Matter DOK3 Act1 Q8: Predict matter cycling rates under parameters 8.",
+        "options": [
+          "Cycling rate 8",
+          "Flux 8",
+          "Parameter 8",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 8"
+      },
+      {
+        "question": "Matter DOK3 Act1 Q9: Predict matter cycling rates under parameters 9.",
+        "options": [
+          "Cycling rate 9",
+          "Flux 9",
+          "Parameter 9",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK3 Act2 Q0: Predict matter cycling rates under parameters 0.",
+        "options": [
+          "Cycling rate 0",
+          "Flux 0",
+          "Parameter 0",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 0"
+      },
+      {
+        "question": "Matter DOK3 Act2 Q1: Predict matter cycling rates under parameters 1.",
+        "options": [
+          "Cycling rate 1",
+          "Flux 1",
+          "Parameter 1",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 1"
+      },
+      {
+        "question": "Matter DOK3 Act2 Q2: Predict matter cycling rates under parameters 2.",
+        "options": [
+          "Cycling rate 2",
+          "Flux 2",
+          "Parameter 2",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 2"
+      },
+      {
+        "question": "Matter DOK3 Act2 Q3: Predict matter cycling rates under parameters 3.",
+        "options": [
+          "Cycling rate 3",
+          "Flux 3",
+          "Parameter 3",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 3"
+      },
+      {
+        "question": "Matter DOK3 Act2 Q4: Predict matter cycling rates under parameters 4.",
+        "options": [
+          "Cycling rate 4",
+          "Flux 4",
+          "Parameter 4",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 4"
+      },
+      {
+        "question": "Matter DOK3 Act2 Q5: Predict matter cycling rates under parameters 5.",
+        "options": [
+          "Cycling rate 5",
+          "Flux 5",
+          "Parameter 5",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 5"
+      },
+      {
+        "question": "Matter DOK3 Act2 Q6: Predict matter cycling rates under parameters 6.",
+        "options": [
+          "Cycling rate 6",
+          "Flux 6",
+          "Parameter 6",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 6"
+      },
+      {
+        "question": "Matter DOK3 Act2 Q7: Predict matter cycling rates under parameters 7.",
+        "options": [
+          "Cycling rate 7",
+          "Flux 7",
+          "Parameter 7",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 7"
+      },
+      {
+        "question": "Matter DOK3 Act2 Q8: Predict matter cycling rates under parameters 8.",
+        "options": [
+          "Cycling rate 8",
+          "Flux 8",
+          "Parameter 8",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 8"
+      },
+      {
+        "question": "Matter DOK3 Act2 Q9: Predict matter cycling rates under parameters 9.",
+        "options": [
+          "Cycling rate 9",
+          "Flux 9",
+          "Parameter 9",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK3 Act3 Q0: Predict matter cycling rates under parameters 0.",
+        "options": [
+          "Cycling rate 0",
+          "Flux 0",
+          "Parameter 0",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 0"
+      },
+      {
+        "question": "Matter DOK3 Act3 Q1: Predict matter cycling rates under parameters 1.",
+        "options": [
+          "Cycling rate 1",
+          "Flux 1",
+          "Parameter 1",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 1"
+      },
+      {
+        "question": "Matter DOK3 Act3 Q2: Predict matter cycling rates under parameters 2.",
+        "options": [
+          "Cycling rate 2",
+          "Flux 2",
+          "Parameter 2",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 2"
+      },
+      {
+        "question": "Matter DOK3 Act3 Q3: Predict matter cycling rates under parameters 3.",
+        "options": [
+          "Cycling rate 3",
+          "Flux 3",
+          "Parameter 3",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 3"
+      },
+      {
+        "question": "Matter DOK3 Act3 Q4: Predict matter cycling rates under parameters 4.",
+        "options": [
+          "Cycling rate 4",
+          "Flux 4",
+          "Parameter 4",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 4"
+      },
+      {
+        "question": "Matter DOK3 Act3 Q5: Predict matter cycling rates under parameters 5.",
+        "options": [
+          "Cycling rate 5",
+          "Flux 5",
+          "Parameter 5",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 5"
+      },
+      {
+        "question": "Matter DOK3 Act3 Q6: Predict matter cycling rates under parameters 6.",
+        "options": [
+          "Cycling rate 6",
+          "Flux 6",
+          "Parameter 6",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 6"
+      },
+      {
+        "question": "Matter DOK3 Act3 Q7: Predict matter cycling rates under parameters 7.",
+        "options": [
+          "Cycling rate 7",
+          "Flux 7",
+          "Parameter 7",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 7"
+      },
+      {
+        "question": "Matter DOK3 Act3 Q8: Predict matter cycling rates under parameters 8.",
+        "options": [
+          "Cycling rate 8",
+          "Flux 8",
+          "Parameter 8",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 8"
+      },
+      {
+        "question": "Matter DOK3 Act3 Q9: Predict matter cycling rates under parameters 9.",
+        "options": [
+          "Cycling rate 9",
+          "Flux 9",
+          "Parameter 9",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK3 Act4 Q0: Predict matter cycling rates under parameters 0.",
+        "options": [
+          "Cycling rate 0",
+          "Flux 0",
+          "Parameter 0",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 0"
+      },
+      {
+        "question": "Matter DOK3 Act4 Q1: Predict matter cycling rates under parameters 1.",
+        "options": [
+          "Cycling rate 1",
+          "Flux 1",
+          "Parameter 1",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 1"
+      },
+      {
+        "question": "Matter DOK3 Act4 Q2: Predict matter cycling rates under parameters 2.",
+        "options": [
+          "Cycling rate 2",
+          "Flux 2",
+          "Parameter 2",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 2"
+      },
+      {
+        "question": "Matter DOK3 Act4 Q3: Predict matter cycling rates under parameters 3.",
+        "options": [
+          "Cycling rate 3",
+          "Flux 3",
+          "Parameter 3",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 3"
+      },
+      {
+        "question": "Matter DOK3 Act4 Q4: Predict matter cycling rates under parameters 4.",
+        "options": [
+          "Cycling rate 4",
+          "Flux 4",
+          "Parameter 4",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 4"
+      },
+      {
+        "question": "Matter DOK3 Act4 Q5: Predict matter cycling rates under parameters 5.",
+        "options": [
+          "Cycling rate 5",
+          "Flux 5",
+          "Parameter 5",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 5"
+      },
+      {
+        "question": "Matter DOK3 Act4 Q6: Predict matter cycling rates under parameters 6.",
+        "options": [
+          "Cycling rate 6",
+          "Flux 6",
+          "Parameter 6",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 6"
+      },
+      {
+        "question": "Matter DOK3 Act4 Q7: Predict matter cycling rates under parameters 7.",
+        "options": [
+          "Cycling rate 7",
+          "Flux 7",
+          "Parameter 7",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 7"
+      },
+      {
+        "question": "Matter DOK3 Act4 Q8: Predict matter cycling rates under parameters 8.",
+        "options": [
+          "Cycling rate 8",
+          "Flux 8",
+          "Parameter 8",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 8"
+      },
+      {
+        "question": "Matter DOK3 Act4 Q9: Predict matter cycling rates under parameters 9.",
+        "options": [
+          "Cycling rate 9",
+          "Flux 9",
+          "Parameter 9",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK3 Act5 Q0: Predict matter cycling rates under parameters 0.",
+        "options": [
+          "Cycling rate 0",
+          "Flux 0",
+          "Parameter 0",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 0"
+      },
+      {
+        "question": "Matter DOK3 Act5 Q1: Predict matter cycling rates under parameters 1.",
+        "options": [
+          "Cycling rate 1",
+          "Flux 1",
+          "Parameter 1",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 1"
+      },
+      {
+        "question": "Matter DOK3 Act5 Q2: Predict matter cycling rates under parameters 2.",
+        "options": [
+          "Cycling rate 2",
+          "Flux 2",
+          "Parameter 2",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 2"
+      },
+      {
+        "question": "Matter DOK3 Act5 Q3: Predict matter cycling rates under parameters 3.",
+        "options": [
+          "Cycling rate 3",
+          "Flux 3",
+          "Parameter 3",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 3"
+      },
+      {
+        "question": "Matter DOK3 Act5 Q4: Predict matter cycling rates under parameters 4.",
+        "options": [
+          "Cycling rate 4",
+          "Flux 4",
+          "Parameter 4",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 4"
+      },
+      {
+        "question": "Matter DOK3 Act5 Q5: Predict matter cycling rates under parameters 5.",
+        "options": [
+          "Cycling rate 5",
+          "Flux 5",
+          "Parameter 5",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 5"
+      },
+      {
+        "question": "Matter DOK3 Act5 Q6: Predict matter cycling rates under parameters 6.",
+        "options": [
+          "Cycling rate 6",
+          "Flux 6",
+          "Parameter 6",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 6"
+      },
+      {
+        "question": "Matter DOK3 Act5 Q7: Predict matter cycling rates under parameters 7.",
+        "options": [
+          "Cycling rate 7",
+          "Flux 7",
+          "Parameter 7",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 7"
+      },
+      {
+        "question": "Matter DOK3 Act5 Q8: Predict matter cycling rates under parameters 8.",
+        "options": [
+          "Cycling rate 8",
+          "Flux 8",
+          "Parameter 8",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 8"
+      },
+      {
+        "question": "Matter DOK3 Act5 Q9: Predict matter cycling rates under parameters 9.",
+        "options": [
+          "Cycling rate 9",
+          "Flux 9",
+          "Parameter 9",
+          "Runoff"
+        ],
+        "answer": "Cycling rate 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Matter DOK4 Act1 Q0: Optimize nitrification or denitrification coefficients 0.",
+        "options": [
+          "Matter optimizer 0",
+          "Rate 0",
+          "Nitrification 0",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 0"
+      },
+      {
+        "question": "Matter DOK4 Act1 Q1: Optimize nitrification or denitrification coefficients 1.",
+        "options": [
+          "Matter optimizer 1",
+          "Rate 1",
+          "Nitrification 1",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 1"
+      },
+      {
+        "question": "Matter DOK4 Act1 Q2: Optimize nitrification or denitrification coefficients 2.",
+        "options": [
+          "Matter optimizer 2",
+          "Rate 2",
+          "Nitrification 2",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 2"
+      },
+      {
+        "question": "Matter DOK4 Act1 Q3: Optimize nitrification or denitrification coefficients 3.",
+        "options": [
+          "Matter optimizer 3",
+          "Rate 3",
+          "Nitrification 3",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 3"
+      },
+      {
+        "question": "Matter DOK4 Act1 Q4: Optimize nitrification or denitrification coefficients 4.",
+        "options": [
+          "Matter optimizer 4",
+          "Rate 4",
+          "Nitrification 4",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 4"
+      },
+      {
+        "question": "Matter DOK4 Act1 Q5: Optimize nitrification or denitrification coefficients 5.",
+        "options": [
+          "Matter optimizer 5",
+          "Rate 5",
+          "Nitrification 5",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 5"
+      },
+      {
+        "question": "Matter DOK4 Act1 Q6: Optimize nitrification or denitrification coefficients 6.",
+        "options": [
+          "Matter optimizer 6",
+          "Rate 6",
+          "Nitrification 6",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 6"
+      },
+      {
+        "question": "Matter DOK4 Act1 Q7: Optimize nitrification or denitrification coefficients 7.",
+        "options": [
+          "Matter optimizer 7",
+          "Rate 7",
+          "Nitrification 7",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 7"
+      },
+      {
+        "question": "Matter DOK4 Act1 Q8: Optimize nitrification or denitrification coefficients 8.",
+        "options": [
+          "Matter optimizer 8",
+          "Rate 8",
+          "Nitrification 8",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 8"
+      },
+      {
+        "question": "Matter DOK4 Act1 Q9: Optimize nitrification or denitrification coefficients 9.",
+        "options": [
+          "Matter optimizer 9",
+          "Rate 9",
+          "Nitrification 9",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK4 Act2 Q0: Optimize nitrification or denitrification coefficients 0.",
+        "options": [
+          "Matter optimizer 0",
+          "Rate 0",
+          "Nitrification 0",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 0"
+      },
+      {
+        "question": "Matter DOK4 Act2 Q1: Optimize nitrification or denitrification coefficients 1.",
+        "options": [
+          "Matter optimizer 1",
+          "Rate 1",
+          "Nitrification 1",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 1"
+      },
+      {
+        "question": "Matter DOK4 Act2 Q2: Optimize nitrification or denitrification coefficients 2.",
+        "options": [
+          "Matter optimizer 2",
+          "Rate 2",
+          "Nitrification 2",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 2"
+      },
+      {
+        "question": "Matter DOK4 Act2 Q3: Optimize nitrification or denitrification coefficients 3.",
+        "options": [
+          "Matter optimizer 3",
+          "Rate 3",
+          "Nitrification 3",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 3"
+      },
+      {
+        "question": "Matter DOK4 Act2 Q4: Optimize nitrification or denitrification coefficients 4.",
+        "options": [
+          "Matter optimizer 4",
+          "Rate 4",
+          "Nitrification 4",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 4"
+      },
+      {
+        "question": "Matter DOK4 Act2 Q5: Optimize nitrification or denitrification coefficients 5.",
+        "options": [
+          "Matter optimizer 5",
+          "Rate 5",
+          "Nitrification 5",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 5"
+      },
+      {
+        "question": "Matter DOK4 Act2 Q6: Optimize nitrification or denitrification coefficients 6.",
+        "options": [
+          "Matter optimizer 6",
+          "Rate 6",
+          "Nitrification 6",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 6"
+      },
+      {
+        "question": "Matter DOK4 Act2 Q7: Optimize nitrification or denitrification coefficients 7.",
+        "options": [
+          "Matter optimizer 7",
+          "Rate 7",
+          "Nitrification 7",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 7"
+      },
+      {
+        "question": "Matter DOK4 Act2 Q8: Optimize nitrification or denitrification coefficients 8.",
+        "options": [
+          "Matter optimizer 8",
+          "Rate 8",
+          "Nitrification 8",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 8"
+      },
+      {
+        "question": "Matter DOK4 Act2 Q9: Optimize nitrification or denitrification coefficients 9.",
+        "options": [
+          "Matter optimizer 9",
+          "Rate 9",
+          "Nitrification 9",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK4 Act3 Q0: Optimize nitrification or denitrification coefficients 0.",
+        "options": [
+          "Matter optimizer 0",
+          "Rate 0",
+          "Nitrification 0",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 0"
+      },
+      {
+        "question": "Matter DOK4 Act3 Q1: Optimize nitrification or denitrification coefficients 1.",
+        "options": [
+          "Matter optimizer 1",
+          "Rate 1",
+          "Nitrification 1",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 1"
+      },
+      {
+        "question": "Matter DOK4 Act3 Q2: Optimize nitrification or denitrification coefficients 2.",
+        "options": [
+          "Matter optimizer 2",
+          "Rate 2",
+          "Nitrification 2",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 2"
+      },
+      {
+        "question": "Matter DOK4 Act3 Q3: Optimize nitrification or denitrification coefficients 3.",
+        "options": [
+          "Matter optimizer 3",
+          "Rate 3",
+          "Nitrification 3",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 3"
+      },
+      {
+        "question": "Matter DOK4 Act3 Q4: Optimize nitrification or denitrification coefficients 4.",
+        "options": [
+          "Matter optimizer 4",
+          "Rate 4",
+          "Nitrification 4",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 4"
+      },
+      {
+        "question": "Matter DOK4 Act3 Q5: Optimize nitrification or denitrification coefficients 5.",
+        "options": [
+          "Matter optimizer 5",
+          "Rate 5",
+          "Nitrification 5",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 5"
+      },
+      {
+        "question": "Matter DOK4 Act3 Q6: Optimize nitrification or denitrification coefficients 6.",
+        "options": [
+          "Matter optimizer 6",
+          "Rate 6",
+          "Nitrification 6",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 6"
+      },
+      {
+        "question": "Matter DOK4 Act3 Q7: Optimize nitrification or denitrification coefficients 7.",
+        "options": [
+          "Matter optimizer 7",
+          "Rate 7",
+          "Nitrification 7",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 7"
+      },
+      {
+        "question": "Matter DOK4 Act3 Q8: Optimize nitrification or denitrification coefficients 8.",
+        "options": [
+          "Matter optimizer 8",
+          "Rate 8",
+          "Nitrification 8",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 8"
+      },
+      {
+        "question": "Matter DOK4 Act3 Q9: Optimize nitrification or denitrification coefficients 9.",
+        "options": [
+          "Matter optimizer 9",
+          "Rate 9",
+          "Nitrification 9",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK4 Act4 Q0: Optimize nitrification or denitrification coefficients 0.",
+        "options": [
+          "Matter optimizer 0",
+          "Rate 0",
+          "Nitrification 0",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 0"
+      },
+      {
+        "question": "Matter DOK4 Act4 Q1: Optimize nitrification or denitrification coefficients 1.",
+        "options": [
+          "Matter optimizer 1",
+          "Rate 1",
+          "Nitrification 1",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 1"
+      },
+      {
+        "question": "Matter DOK4 Act4 Q2: Optimize nitrification or denitrification coefficients 2.",
+        "options": [
+          "Matter optimizer 2",
+          "Rate 2",
+          "Nitrification 2",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 2"
+      },
+      {
+        "question": "Matter DOK4 Act4 Q3: Optimize nitrification or denitrification coefficients 3.",
+        "options": [
+          "Matter optimizer 3",
+          "Rate 3",
+          "Nitrification 3",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 3"
+      },
+      {
+        "question": "Matter DOK4 Act4 Q4: Optimize nitrification or denitrification coefficients 4.",
+        "options": [
+          "Matter optimizer 4",
+          "Rate 4",
+          "Nitrification 4",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 4"
+      },
+      {
+        "question": "Matter DOK4 Act4 Q5: Optimize nitrification or denitrification coefficients 5.",
+        "options": [
+          "Matter optimizer 5",
+          "Rate 5",
+          "Nitrification 5",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 5"
+      },
+      {
+        "question": "Matter DOK4 Act4 Q6: Optimize nitrification or denitrification coefficients 6.",
+        "options": [
+          "Matter optimizer 6",
+          "Rate 6",
+          "Nitrification 6",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 6"
+      },
+      {
+        "question": "Matter DOK4 Act4 Q7: Optimize nitrification or denitrification coefficients 7.",
+        "options": [
+          "Matter optimizer 7",
+          "Rate 7",
+          "Nitrification 7",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 7"
+      },
+      {
+        "question": "Matter DOK4 Act4 Q8: Optimize nitrification or denitrification coefficients 8.",
+        "options": [
+          "Matter optimizer 8",
+          "Rate 8",
+          "Nitrification 8",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 8"
+      },
+      {
+        "question": "Matter DOK4 Act4 Q9: Optimize nitrification or denitrification coefficients 9.",
+        "options": [
+          "Matter optimizer 9",
+          "Rate 9",
+          "Nitrification 9",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 9"
+      }
+    ],
+    [
+      {
+        "question": "Matter DOK4 Act5 Q0: Optimize nitrification or denitrification coefficients 0.",
+        "options": [
+          "Matter optimizer 0",
+          "Rate 0",
+          "Nitrification 0",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 0"
+      },
+      {
+        "question": "Matter DOK4 Act5 Q1: Optimize nitrification or denitrification coefficients 1.",
+        "options": [
+          "Matter optimizer 1",
+          "Rate 1",
+          "Nitrification 1",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 1"
+      },
+      {
+        "question": "Matter DOK4 Act5 Q2: Optimize nitrification or denitrification coefficients 2.",
+        "options": [
+          "Matter optimizer 2",
+          "Rate 2",
+          "Nitrification 2",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 2"
+      },
+      {
+        "question": "Matter DOK4 Act5 Q3: Optimize nitrification or denitrification coefficients 3.",
+        "options": [
+          "Matter optimizer 3",
+          "Rate 3",
+          "Nitrification 3",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 3"
+      },
+      {
+        "question": "Matter DOK4 Act5 Q4: Optimize nitrification or denitrification coefficients 4.",
+        "options": [
+          "Matter optimizer 4",
+          "Rate 4",
+          "Nitrification 4",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 4"
+      },
+      {
+        "question": "Matter DOK4 Act5 Q5: Optimize nitrification or denitrification coefficients 5.",
+        "options": [
+          "Matter optimizer 5",
+          "Rate 5",
+          "Nitrification 5",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 5"
+      },
+      {
+        "question": "Matter DOK4 Act5 Q6: Optimize nitrification or denitrification coefficients 6.",
+        "options": [
+          "Matter optimizer 6",
+          "Rate 6",
+          "Nitrification 6",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 6"
+      },
+      {
+        "question": "Matter DOK4 Act5 Q7: Optimize nitrification or denitrification coefficients 7.",
+        "options": [
+          "Matter optimizer 7",
+          "Rate 7",
+          "Nitrification 7",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 7"
+      },
+      {
+        "question": "Matter DOK4 Act5 Q8: Optimize nitrification or denitrification coefficients 8.",
+        "options": [
+          "Matter optimizer 8",
+          "Rate 8",
+          "Nitrification 8",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 8"
+      },
+      {
+        "question": "Matter DOK4 Act5 Q9: Optimize nitrification or denitrification coefficients 9.",
+        "options": [
+          "Matter optimizer 9",
+          "Rate 9",
+          "Nitrification 9",
+          "Denitrification"
+        ],
+        "answer": "Matter optimizer 9"
+      }
+    ]
+  ]
+}
+,
+  "OAS.B.LS2.4": {
+  "1": [
+    [
+      {
+        "question": "Energy DOK1 Act1 Q0: Classify trophic level role variant 0.",
+        "options": [
+          "Trophic role 0",
+          "Producer 0",
+          "Consumer 0",
+          "Apex"
+        ],
+        "answer": "Trophic role 0"
+      },
+      {
+        "question": "Energy DOK1 Act1 Q1: Classify trophic level role variant 1.",
+        "options": [
+          "Trophic role 1",
+          "Producer 1",
+          "Consumer 1",
+          "Apex"
+        ],
+        "answer": "Trophic role 1"
+      },
+      {
+        "question": "Energy DOK1 Act1 Q2: Classify trophic level role variant 2.",
+        "options": [
+          "Trophic role 2",
+          "Producer 2",
+          "Consumer 2",
+          "Apex"
+        ],
+        "answer": "Trophic role 2"
+      },
+      {
+        "question": "Energy DOK1 Act1 Q3: Classify trophic level role variant 3.",
+        "options": [
+          "Trophic role 3",
+          "Producer 3",
+          "Consumer 3",
+          "Apex"
+        ],
+        "answer": "Trophic role 3"
+      },
+      {
+        "question": "Energy DOK1 Act1 Q4: Classify trophic level role variant 4.",
+        "options": [
+          "Trophic role 4",
+          "Producer 4",
+          "Consumer 4",
+          "Apex"
+        ],
+        "answer": "Trophic role 4"
+      },
+      {
+        "question": "Energy DOK1 Act1 Q5: Classify trophic level role variant 5.",
+        "options": [
+          "Trophic role 5",
+          "Producer 5",
+          "Consumer 5",
+          "Apex"
+        ],
+        "answer": "Trophic role 5"
+      },
+      {
+        "question": "Energy DOK1 Act1 Q6: Classify trophic level role variant 6.",
+        "options": [
+          "Trophic role 6",
+          "Producer 6",
+          "Consumer 6",
+          "Apex"
+        ],
+        "answer": "Trophic role 6"
+      },
+      {
+        "question": "Energy DOK1 Act1 Q7: Classify trophic level role variant 7.",
+        "options": [
+          "Trophic role 7",
+          "Producer 7",
+          "Consumer 7",
+          "Apex"
+        ],
+        "answer": "Trophic role 7"
+      },
+      {
+        "question": "Energy DOK1 Act1 Q8: Classify trophic level role variant 8.",
+        "options": [
+          "Trophic role 8",
+          "Producer 8",
+          "Consumer 8",
+          "Apex"
+        ],
+        "answer": "Trophic role 8"
+      },
+      {
+        "question": "Energy DOK1 Act1 Q9: Classify trophic level role variant 9.",
+        "options": [
+          "Trophic role 9",
+          "Producer 9",
+          "Consumer 9",
+          "Apex"
+        ],
+        "answer": "Trophic role 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK1 Act2 Q0: Classify trophic level role variant 0.",
+        "options": [
+          "Trophic role 0",
+          "Producer 0",
+          "Consumer 0",
+          "Apex"
+        ],
+        "answer": "Trophic role 0"
+      },
+      {
+        "question": "Energy DOK1 Act2 Q1: Classify trophic level role variant 1.",
+        "options": [
+          "Trophic role 1",
+          "Producer 1",
+          "Consumer 1",
+          "Apex"
+        ],
+        "answer": "Trophic role 1"
+      },
+      {
+        "question": "Energy DOK1 Act2 Q2: Classify trophic level role variant 2.",
+        "options": [
+          "Trophic role 2",
+          "Producer 2",
+          "Consumer 2",
+          "Apex"
+        ],
+        "answer": "Trophic role 2"
+      },
+      {
+        "question": "Energy DOK1 Act2 Q3: Classify trophic level role variant 3.",
+        "options": [
+          "Trophic role 3",
+          "Producer 3",
+          "Consumer 3",
+          "Apex"
+        ],
+        "answer": "Trophic role 3"
+      },
+      {
+        "question": "Energy DOK1 Act2 Q4: Classify trophic level role variant 4.",
+        "options": [
+          "Trophic role 4",
+          "Producer 4",
+          "Consumer 4",
+          "Apex"
+        ],
+        "answer": "Trophic role 4"
+      },
+      {
+        "question": "Energy DOK1 Act2 Q5: Classify trophic level role variant 5.",
+        "options": [
+          "Trophic role 5",
+          "Producer 5",
+          "Consumer 5",
+          "Apex"
+        ],
+        "answer": "Trophic role 5"
+      },
+      {
+        "question": "Energy DOK1 Act2 Q6: Classify trophic level role variant 6.",
+        "options": [
+          "Trophic role 6",
+          "Producer 6",
+          "Consumer 6",
+          "Apex"
+        ],
+        "answer": "Trophic role 6"
+      },
+      {
+        "question": "Energy DOK1 Act2 Q7: Classify trophic level role variant 7.",
+        "options": [
+          "Trophic role 7",
+          "Producer 7",
+          "Consumer 7",
+          "Apex"
+        ],
+        "answer": "Trophic role 7"
+      },
+      {
+        "question": "Energy DOK1 Act2 Q8: Classify trophic level role variant 8.",
+        "options": [
+          "Trophic role 8",
+          "Producer 8",
+          "Consumer 8",
+          "Apex"
+        ],
+        "answer": "Trophic role 8"
+      },
+      {
+        "question": "Energy DOK1 Act2 Q9: Classify trophic level role variant 9.",
+        "options": [
+          "Trophic role 9",
+          "Producer 9",
+          "Consumer 9",
+          "Apex"
+        ],
+        "answer": "Trophic role 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK1 Act3 Q0: Classify trophic level role variant 0.",
+        "options": [
+          "Trophic role 0",
+          "Producer 0",
+          "Consumer 0",
+          "Apex"
+        ],
+        "answer": "Trophic role 0"
+      },
+      {
+        "question": "Energy DOK1 Act3 Q1: Classify trophic level role variant 1.",
+        "options": [
+          "Trophic role 1",
+          "Producer 1",
+          "Consumer 1",
+          "Apex"
+        ],
+        "answer": "Trophic role 1"
+      },
+      {
+        "question": "Energy DOK1 Act3 Q2: Classify trophic level role variant 2.",
+        "options": [
+          "Trophic role 2",
+          "Producer 2",
+          "Consumer 2",
+          "Apex"
+        ],
+        "answer": "Trophic role 2"
+      },
+      {
+        "question": "Energy DOK1 Act3 Q3: Classify trophic level role variant 3.",
+        "options": [
+          "Trophic role 3",
+          "Producer 3",
+          "Consumer 3",
+          "Apex"
+        ],
+        "answer": "Trophic role 3"
+      },
+      {
+        "question": "Energy DOK1 Act3 Q4: Classify trophic level role variant 4.",
+        "options": [
+          "Trophic role 4",
+          "Producer 4",
+          "Consumer 4",
+          "Apex"
+        ],
+        "answer": "Trophic role 4"
+      },
+      {
+        "question": "Energy DOK1 Act3 Q5: Classify trophic level role variant 5.",
+        "options": [
+          "Trophic role 5",
+          "Producer 5",
+          "Consumer 5",
+          "Apex"
+        ],
+        "answer": "Trophic role 5"
+      },
+      {
+        "question": "Energy DOK1 Act3 Q6: Classify trophic level role variant 6.",
+        "options": [
+          "Trophic role 6",
+          "Producer 6",
+          "Consumer 6",
+          "Apex"
+        ],
+        "answer": "Trophic role 6"
+      },
+      {
+        "question": "Energy DOK1 Act3 Q7: Classify trophic level role variant 7.",
+        "options": [
+          "Trophic role 7",
+          "Producer 7",
+          "Consumer 7",
+          "Apex"
+        ],
+        "answer": "Trophic role 7"
+      },
+      {
+        "question": "Energy DOK1 Act3 Q8: Classify trophic level role variant 8.",
+        "options": [
+          "Trophic role 8",
+          "Producer 8",
+          "Consumer 8",
+          "Apex"
+        ],
+        "answer": "Trophic role 8"
+      },
+      {
+        "question": "Energy DOK1 Act3 Q9: Classify trophic level role variant 9.",
+        "options": [
+          "Trophic role 9",
+          "Producer 9",
+          "Consumer 9",
+          "Apex"
+        ],
+        "answer": "Trophic role 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK1 Act4 Q0: Classify trophic level role variant 0.",
+        "options": [
+          "Trophic role 0",
+          "Producer 0",
+          "Consumer 0",
+          "Apex"
+        ],
+        "answer": "Trophic role 0"
+      },
+      {
+        "question": "Energy DOK1 Act4 Q1: Classify trophic level role variant 1.",
+        "options": [
+          "Trophic role 1",
+          "Producer 1",
+          "Consumer 1",
+          "Apex"
+        ],
+        "answer": "Trophic role 1"
+      },
+      {
+        "question": "Energy DOK1 Act4 Q2: Classify trophic level role variant 2.",
+        "options": [
+          "Trophic role 2",
+          "Producer 2",
+          "Consumer 2",
+          "Apex"
+        ],
+        "answer": "Trophic role 2"
+      },
+      {
+        "question": "Energy DOK1 Act4 Q3: Classify trophic level role variant 3.",
+        "options": [
+          "Trophic role 3",
+          "Producer 3",
+          "Consumer 3",
+          "Apex"
+        ],
+        "answer": "Trophic role 3"
+      },
+      {
+        "question": "Energy DOK1 Act4 Q4: Classify trophic level role variant 4.",
+        "options": [
+          "Trophic role 4",
+          "Producer 4",
+          "Consumer 4",
+          "Apex"
+        ],
+        "answer": "Trophic role 4"
+      },
+      {
+        "question": "Energy DOK1 Act4 Q5: Classify trophic level role variant 5.",
+        "options": [
+          "Trophic role 5",
+          "Producer 5",
+          "Consumer 5",
+          "Apex"
+        ],
+        "answer": "Trophic role 5"
+      },
+      {
+        "question": "Energy DOK1 Act4 Q6: Classify trophic level role variant 6.",
+        "options": [
+          "Trophic role 6",
+          "Producer 6",
+          "Consumer 6",
+          "Apex"
+        ],
+        "answer": "Trophic role 6"
+      },
+      {
+        "question": "Energy DOK1 Act4 Q7: Classify trophic level role variant 7.",
+        "options": [
+          "Trophic role 7",
+          "Producer 7",
+          "Consumer 7",
+          "Apex"
+        ],
+        "answer": "Trophic role 7"
+      },
+      {
+        "question": "Energy DOK1 Act4 Q8: Classify trophic level role variant 8.",
+        "options": [
+          "Trophic role 8",
+          "Producer 8",
+          "Consumer 8",
+          "Apex"
+        ],
+        "answer": "Trophic role 8"
+      },
+      {
+        "question": "Energy DOK1 Act4 Q9: Classify trophic level role variant 9.",
+        "options": [
+          "Trophic role 9",
+          "Producer 9",
+          "Consumer 9",
+          "Apex"
+        ],
+        "answer": "Trophic role 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK1 Act5 Q0: Classify trophic level role variant 0.",
+        "options": [
+          "Trophic role 0",
+          "Producer 0",
+          "Consumer 0",
+          "Apex"
+        ],
+        "answer": "Trophic role 0"
+      },
+      {
+        "question": "Energy DOK1 Act5 Q1: Classify trophic level role variant 1.",
+        "options": [
+          "Trophic role 1",
+          "Producer 1",
+          "Consumer 1",
+          "Apex"
+        ],
+        "answer": "Trophic role 1"
+      },
+      {
+        "question": "Energy DOK1 Act5 Q2: Classify trophic level role variant 2.",
+        "options": [
+          "Trophic role 2",
+          "Producer 2",
+          "Consumer 2",
+          "Apex"
+        ],
+        "answer": "Trophic role 2"
+      },
+      {
+        "question": "Energy DOK1 Act5 Q3: Classify trophic level role variant 3.",
+        "options": [
+          "Trophic role 3",
+          "Producer 3",
+          "Consumer 3",
+          "Apex"
+        ],
+        "answer": "Trophic role 3"
+      },
+      {
+        "question": "Energy DOK1 Act5 Q4: Classify trophic level role variant 4.",
+        "options": [
+          "Trophic role 4",
+          "Producer 4",
+          "Consumer 4",
+          "Apex"
+        ],
+        "answer": "Trophic role 4"
+      },
+      {
+        "question": "Energy DOK1 Act5 Q5: Classify trophic level role variant 5.",
+        "options": [
+          "Trophic role 5",
+          "Producer 5",
+          "Consumer 5",
+          "Apex"
+        ],
+        "answer": "Trophic role 5"
+      },
+      {
+        "question": "Energy DOK1 Act5 Q6: Classify trophic level role variant 6.",
+        "options": [
+          "Trophic role 6",
+          "Producer 6",
+          "Consumer 6",
+          "Apex"
+        ],
+        "answer": "Trophic role 6"
+      },
+      {
+        "question": "Energy DOK1 Act5 Q7: Classify trophic level role variant 7.",
+        "options": [
+          "Trophic role 7",
+          "Producer 7",
+          "Consumer 7",
+          "Apex"
+        ],
+        "answer": "Trophic role 7"
+      },
+      {
+        "question": "Energy DOK1 Act5 Q8: Classify trophic level role variant 8.",
+        "options": [
+          "Trophic role 8",
+          "Producer 8",
+          "Consumer 8",
+          "Apex"
+        ],
+        "answer": "Trophic role 8"
+      },
+      {
+        "question": "Energy DOK1 Act5 Q9: Classify trophic level role variant 9.",
+        "options": [
+          "Trophic role 9",
+          "Producer 9",
+          "Consumer 9",
+          "Apex"
+        ],
+        "answer": "Trophic role 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Energy DOK2 Act1 Q0: Model thermodynamic loss using 10% rule level 0.",
+        "options": [
+          "Energy remaining 0",
+          "Rule 0",
+          "Thermodynamics 0",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 0"
+      },
+      {
+        "question": "Energy DOK2 Act1 Q1: Model thermodynamic loss using 10% rule level 1.",
+        "options": [
+          "Energy remaining 1",
+          "Rule 1",
+          "Thermodynamics 1",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 1"
+      },
+      {
+        "question": "Energy DOK2 Act1 Q2: Model thermodynamic loss using 10% rule level 2.",
+        "options": [
+          "Energy remaining 2",
+          "Rule 2",
+          "Thermodynamics 2",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 2"
+      },
+      {
+        "question": "Energy DOK2 Act1 Q3: Model thermodynamic loss using 10% rule level 3.",
+        "options": [
+          "Energy remaining 3",
+          "Rule 3",
+          "Thermodynamics 3",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 3"
+      },
+      {
+        "question": "Energy DOK2 Act1 Q4: Model thermodynamic loss using 10% rule level 4.",
+        "options": [
+          "Energy remaining 4",
+          "Rule 4",
+          "Thermodynamics 4",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 4"
+      },
+      {
+        "question": "Energy DOK2 Act1 Q5: Model thermodynamic loss using 10% rule level 5.",
+        "options": [
+          "Energy remaining 5",
+          "Rule 5",
+          "Thermodynamics 5",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 5"
+      },
+      {
+        "question": "Energy DOK2 Act1 Q6: Model thermodynamic loss using 10% rule level 6.",
+        "options": [
+          "Energy remaining 6",
+          "Rule 6",
+          "Thermodynamics 6",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 6"
+      },
+      {
+        "question": "Energy DOK2 Act1 Q7: Model thermodynamic loss using 10% rule level 7.",
+        "options": [
+          "Energy remaining 7",
+          "Rule 7",
+          "Thermodynamics 7",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 7"
+      },
+      {
+        "question": "Energy DOK2 Act1 Q8: Model thermodynamic loss using 10% rule level 8.",
+        "options": [
+          "Energy remaining 8",
+          "Rule 8",
+          "Thermodynamics 8",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 8"
+      },
+      {
+        "question": "Energy DOK2 Act1 Q9: Model thermodynamic loss using 10% rule level 9.",
+        "options": [
+          "Energy remaining 9",
+          "Rule 9",
+          "Thermodynamics 9",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK2 Act2 Q0: Model thermodynamic loss using 10% rule level 0.",
+        "options": [
+          "Energy remaining 0",
+          "Rule 0",
+          "Thermodynamics 0",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 0"
+      },
+      {
+        "question": "Energy DOK2 Act2 Q1: Model thermodynamic loss using 10% rule level 1.",
+        "options": [
+          "Energy remaining 1",
+          "Rule 1",
+          "Thermodynamics 1",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 1"
+      },
+      {
+        "question": "Energy DOK2 Act2 Q2: Model thermodynamic loss using 10% rule level 2.",
+        "options": [
+          "Energy remaining 2",
+          "Rule 2",
+          "Thermodynamics 2",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 2"
+      },
+      {
+        "question": "Energy DOK2 Act2 Q3: Model thermodynamic loss using 10% rule level 3.",
+        "options": [
+          "Energy remaining 3",
+          "Rule 3",
+          "Thermodynamics 3",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 3"
+      },
+      {
+        "question": "Energy DOK2 Act2 Q4: Model thermodynamic loss using 10% rule level 4.",
+        "options": [
+          "Energy remaining 4",
+          "Rule 4",
+          "Thermodynamics 4",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 4"
+      },
+      {
+        "question": "Energy DOK2 Act2 Q5: Model thermodynamic loss using 10% rule level 5.",
+        "options": [
+          "Energy remaining 5",
+          "Rule 5",
+          "Thermodynamics 5",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 5"
+      },
+      {
+        "question": "Energy DOK2 Act2 Q6: Model thermodynamic loss using 10% rule level 6.",
+        "options": [
+          "Energy remaining 6",
+          "Rule 6",
+          "Thermodynamics 6",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 6"
+      },
+      {
+        "question": "Energy DOK2 Act2 Q7: Model thermodynamic loss using 10% rule level 7.",
+        "options": [
+          "Energy remaining 7",
+          "Rule 7",
+          "Thermodynamics 7",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 7"
+      },
+      {
+        "question": "Energy DOK2 Act2 Q8: Model thermodynamic loss using 10% rule level 8.",
+        "options": [
+          "Energy remaining 8",
+          "Rule 8",
+          "Thermodynamics 8",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 8"
+      },
+      {
+        "question": "Energy DOK2 Act2 Q9: Model thermodynamic loss using 10% rule level 9.",
+        "options": [
+          "Energy remaining 9",
+          "Rule 9",
+          "Thermodynamics 9",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK2 Act3 Q0: Model thermodynamic loss using 10% rule level 0.",
+        "options": [
+          "Energy remaining 0",
+          "Rule 0",
+          "Thermodynamics 0",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 0"
+      },
+      {
+        "question": "Energy DOK2 Act3 Q1: Model thermodynamic loss using 10% rule level 1.",
+        "options": [
+          "Energy remaining 1",
+          "Rule 1",
+          "Thermodynamics 1",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 1"
+      },
+      {
+        "question": "Energy DOK2 Act3 Q2: Model thermodynamic loss using 10% rule level 2.",
+        "options": [
+          "Energy remaining 2",
+          "Rule 2",
+          "Thermodynamics 2",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 2"
+      },
+      {
+        "question": "Energy DOK2 Act3 Q3: Model thermodynamic loss using 10% rule level 3.",
+        "options": [
+          "Energy remaining 3",
+          "Rule 3",
+          "Thermodynamics 3",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 3"
+      },
+      {
+        "question": "Energy DOK2 Act3 Q4: Model thermodynamic loss using 10% rule level 4.",
+        "options": [
+          "Energy remaining 4",
+          "Rule 4",
+          "Thermodynamics 4",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 4"
+      },
+      {
+        "question": "Energy DOK2 Act3 Q5: Model thermodynamic loss using 10% rule level 5.",
+        "options": [
+          "Energy remaining 5",
+          "Rule 5",
+          "Thermodynamics 5",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 5"
+      },
+      {
+        "question": "Energy DOK2 Act3 Q6: Model thermodynamic loss using 10% rule level 6.",
+        "options": [
+          "Energy remaining 6",
+          "Rule 6",
+          "Thermodynamics 6",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 6"
+      },
+      {
+        "question": "Energy DOK2 Act3 Q7: Model thermodynamic loss using 10% rule level 7.",
+        "options": [
+          "Energy remaining 7",
+          "Rule 7",
+          "Thermodynamics 7",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 7"
+      },
+      {
+        "question": "Energy DOK2 Act3 Q8: Model thermodynamic loss using 10% rule level 8.",
+        "options": [
+          "Energy remaining 8",
+          "Rule 8",
+          "Thermodynamics 8",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 8"
+      },
+      {
+        "question": "Energy DOK2 Act3 Q9: Model thermodynamic loss using 10% rule level 9.",
+        "options": [
+          "Energy remaining 9",
+          "Rule 9",
+          "Thermodynamics 9",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK2 Act4 Q0: Model thermodynamic loss using 10% rule level 0.",
+        "options": [
+          "Energy remaining 0",
+          "Rule 0",
+          "Thermodynamics 0",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 0"
+      },
+      {
+        "question": "Energy DOK2 Act4 Q1: Model thermodynamic loss using 10% rule level 1.",
+        "options": [
+          "Energy remaining 1",
+          "Rule 1",
+          "Thermodynamics 1",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 1"
+      },
+      {
+        "question": "Energy DOK2 Act4 Q2: Model thermodynamic loss using 10% rule level 2.",
+        "options": [
+          "Energy remaining 2",
+          "Rule 2",
+          "Thermodynamics 2",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 2"
+      },
+      {
+        "question": "Energy DOK2 Act4 Q3: Model thermodynamic loss using 10% rule level 3.",
+        "options": [
+          "Energy remaining 3",
+          "Rule 3",
+          "Thermodynamics 3",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 3"
+      },
+      {
+        "question": "Energy DOK2 Act4 Q4: Model thermodynamic loss using 10% rule level 4.",
+        "options": [
+          "Energy remaining 4",
+          "Rule 4",
+          "Thermodynamics 4",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 4"
+      },
+      {
+        "question": "Energy DOK2 Act4 Q5: Model thermodynamic loss using 10% rule level 5.",
+        "options": [
+          "Energy remaining 5",
+          "Rule 5",
+          "Thermodynamics 5",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 5"
+      },
+      {
+        "question": "Energy DOK2 Act4 Q6: Model thermodynamic loss using 10% rule level 6.",
+        "options": [
+          "Energy remaining 6",
+          "Rule 6",
+          "Thermodynamics 6",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 6"
+      },
+      {
+        "question": "Energy DOK2 Act4 Q7: Model thermodynamic loss using 10% rule level 7.",
+        "options": [
+          "Energy remaining 7",
+          "Rule 7",
+          "Thermodynamics 7",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 7"
+      },
+      {
+        "question": "Energy DOK2 Act4 Q8: Model thermodynamic loss using 10% rule level 8.",
+        "options": [
+          "Energy remaining 8",
+          "Rule 8",
+          "Thermodynamics 8",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 8"
+      },
+      {
+        "question": "Energy DOK2 Act4 Q9: Model thermodynamic loss using 10% rule level 9.",
+        "options": [
+          "Energy remaining 9",
+          "Rule 9",
+          "Thermodynamics 9",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK2 Act5 Q0: Model thermodynamic loss using 10% rule level 0.",
+        "options": [
+          "Energy remaining 0",
+          "Rule 0",
+          "Thermodynamics 0",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 0"
+      },
+      {
+        "question": "Energy DOK2 Act5 Q1: Model thermodynamic loss using 10% rule level 1.",
+        "options": [
+          "Energy remaining 1",
+          "Rule 1",
+          "Thermodynamics 1",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 1"
+      },
+      {
+        "question": "Energy DOK2 Act5 Q2: Model thermodynamic loss using 10% rule level 2.",
+        "options": [
+          "Energy remaining 2",
+          "Rule 2",
+          "Thermodynamics 2",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 2"
+      },
+      {
+        "question": "Energy DOK2 Act5 Q3: Model thermodynamic loss using 10% rule level 3.",
+        "options": [
+          "Energy remaining 3",
+          "Rule 3",
+          "Thermodynamics 3",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 3"
+      },
+      {
+        "question": "Energy DOK2 Act5 Q4: Model thermodynamic loss using 10% rule level 4.",
+        "options": [
+          "Energy remaining 4",
+          "Rule 4",
+          "Thermodynamics 4",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 4"
+      },
+      {
+        "question": "Energy DOK2 Act5 Q5: Model thermodynamic loss using 10% rule level 5.",
+        "options": [
+          "Energy remaining 5",
+          "Rule 5",
+          "Thermodynamics 5",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 5"
+      },
+      {
+        "question": "Energy DOK2 Act5 Q6: Model thermodynamic loss using 10% rule level 6.",
+        "options": [
+          "Energy remaining 6",
+          "Rule 6",
+          "Thermodynamics 6",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 6"
+      },
+      {
+        "question": "Energy DOK2 Act5 Q7: Model thermodynamic loss using 10% rule level 7.",
+        "options": [
+          "Energy remaining 7",
+          "Rule 7",
+          "Thermodynamics 7",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 7"
+      },
+      {
+        "question": "Energy DOK2 Act5 Q8: Model thermodynamic loss using 10% rule level 8.",
+        "options": [
+          "Energy remaining 8",
+          "Rule 8",
+          "Thermodynamics 8",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 8"
+      },
+      {
+        "question": "Energy DOK2 Act5 Q9: Model thermodynamic loss using 10% rule level 9.",
+        "options": [
+          "Energy remaining 9",
+          "Rule 9",
+          "Thermodynamics 9",
+          "10% rule"
+        ],
+        "answer": "Energy remaining 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Energy DOK3 Act1 Q0: Estimate trophic biomass levels under predation 0.",
+        "options": [
+          "Biomass density 0",
+          "Yield 0",
+          "Turnover 0",
+          "Regulator"
+        ],
+        "answer": "Biomass density 0"
+      },
+      {
+        "question": "Energy DOK3 Act1 Q1: Estimate trophic biomass levels under predation 1.",
+        "options": [
+          "Biomass density 1",
+          "Yield 1",
+          "Turnover 1",
+          "Regulator"
+        ],
+        "answer": "Biomass density 1"
+      },
+      {
+        "question": "Energy DOK3 Act1 Q2: Estimate trophic biomass levels under predation 2.",
+        "options": [
+          "Biomass density 2",
+          "Yield 2",
+          "Turnover 2",
+          "Regulator"
+        ],
+        "answer": "Biomass density 2"
+      },
+      {
+        "question": "Energy DOK3 Act1 Q3: Estimate trophic biomass levels under predation 3.",
+        "options": [
+          "Biomass density 3",
+          "Yield 3",
+          "Turnover 3",
+          "Regulator"
+        ],
+        "answer": "Biomass density 3"
+      },
+      {
+        "question": "Energy DOK3 Act1 Q4: Estimate trophic biomass levels under predation 4.",
+        "options": [
+          "Biomass density 4",
+          "Yield 4",
+          "Turnover 4",
+          "Regulator"
+        ],
+        "answer": "Biomass density 4"
+      },
+      {
+        "question": "Energy DOK3 Act1 Q5: Estimate trophic biomass levels under predation 5.",
+        "options": [
+          "Biomass density 5",
+          "Yield 5",
+          "Turnover 5",
+          "Regulator"
+        ],
+        "answer": "Biomass density 5"
+      },
+      {
+        "question": "Energy DOK3 Act1 Q6: Estimate trophic biomass levels under predation 6.",
+        "options": [
+          "Biomass density 6",
+          "Yield 6",
+          "Turnover 6",
+          "Regulator"
+        ],
+        "answer": "Biomass density 6"
+      },
+      {
+        "question": "Energy DOK3 Act1 Q7: Estimate trophic biomass levels under predation 7.",
+        "options": [
+          "Biomass density 7",
+          "Yield 7",
+          "Turnover 7",
+          "Regulator"
+        ],
+        "answer": "Biomass density 7"
+      },
+      {
+        "question": "Energy DOK3 Act1 Q8: Estimate trophic biomass levels under predation 8.",
+        "options": [
+          "Biomass density 8",
+          "Yield 8",
+          "Turnover 8",
+          "Regulator"
+        ],
+        "answer": "Biomass density 8"
+      },
+      {
+        "question": "Energy DOK3 Act1 Q9: Estimate trophic biomass levels under predation 9.",
+        "options": [
+          "Biomass density 9",
+          "Yield 9",
+          "Turnover 9",
+          "Regulator"
+        ],
+        "answer": "Biomass density 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK3 Act2 Q0: Estimate trophic biomass levels under predation 0.",
+        "options": [
+          "Biomass density 0",
+          "Yield 0",
+          "Turnover 0",
+          "Regulator"
+        ],
+        "answer": "Biomass density 0"
+      },
+      {
+        "question": "Energy DOK3 Act2 Q1: Estimate trophic biomass levels under predation 1.",
+        "options": [
+          "Biomass density 1",
+          "Yield 1",
+          "Turnover 1",
+          "Regulator"
+        ],
+        "answer": "Biomass density 1"
+      },
+      {
+        "question": "Energy DOK3 Act2 Q2: Estimate trophic biomass levels under predation 2.",
+        "options": [
+          "Biomass density 2",
+          "Yield 2",
+          "Turnover 2",
+          "Regulator"
+        ],
+        "answer": "Biomass density 2"
+      },
+      {
+        "question": "Energy DOK3 Act2 Q3: Estimate trophic biomass levels under predation 3.",
+        "options": [
+          "Biomass density 3",
+          "Yield 3",
+          "Turnover 3",
+          "Regulator"
+        ],
+        "answer": "Biomass density 3"
+      },
+      {
+        "question": "Energy DOK3 Act2 Q4: Estimate trophic biomass levels under predation 4.",
+        "options": [
+          "Biomass density 4",
+          "Yield 4",
+          "Turnover 4",
+          "Regulator"
+        ],
+        "answer": "Biomass density 4"
+      },
+      {
+        "question": "Energy DOK3 Act2 Q5: Estimate trophic biomass levels under predation 5.",
+        "options": [
+          "Biomass density 5",
+          "Yield 5",
+          "Turnover 5",
+          "Regulator"
+        ],
+        "answer": "Biomass density 5"
+      },
+      {
+        "question": "Energy DOK3 Act2 Q6: Estimate trophic biomass levels under predation 6.",
+        "options": [
+          "Biomass density 6",
+          "Yield 6",
+          "Turnover 6",
+          "Regulator"
+        ],
+        "answer": "Biomass density 6"
+      },
+      {
+        "question": "Energy DOK3 Act2 Q7: Estimate trophic biomass levels under predation 7.",
+        "options": [
+          "Biomass density 7",
+          "Yield 7",
+          "Turnover 7",
+          "Regulator"
+        ],
+        "answer": "Biomass density 7"
+      },
+      {
+        "question": "Energy DOK3 Act2 Q8: Estimate trophic biomass levels under predation 8.",
+        "options": [
+          "Biomass density 8",
+          "Yield 8",
+          "Turnover 8",
+          "Regulator"
+        ],
+        "answer": "Biomass density 8"
+      },
+      {
+        "question": "Energy DOK3 Act2 Q9: Estimate trophic biomass levels under predation 9.",
+        "options": [
+          "Biomass density 9",
+          "Yield 9",
+          "Turnover 9",
+          "Regulator"
+        ],
+        "answer": "Biomass density 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK3 Act3 Q0: Estimate trophic biomass levels under predation 0.",
+        "options": [
+          "Biomass density 0",
+          "Yield 0",
+          "Turnover 0",
+          "Regulator"
+        ],
+        "answer": "Biomass density 0"
+      },
+      {
+        "question": "Energy DOK3 Act3 Q1: Estimate trophic biomass levels under predation 1.",
+        "options": [
+          "Biomass density 1",
+          "Yield 1",
+          "Turnover 1",
+          "Regulator"
+        ],
+        "answer": "Biomass density 1"
+      },
+      {
+        "question": "Energy DOK3 Act3 Q2: Estimate trophic biomass levels under predation 2.",
+        "options": [
+          "Biomass density 2",
+          "Yield 2",
+          "Turnover 2",
+          "Regulator"
+        ],
+        "answer": "Biomass density 2"
+      },
+      {
+        "question": "Energy DOK3 Act3 Q3: Estimate trophic biomass levels under predation 3.",
+        "options": [
+          "Biomass density 3",
+          "Yield 3",
+          "Turnover 3",
+          "Regulator"
+        ],
+        "answer": "Biomass density 3"
+      },
+      {
+        "question": "Energy DOK3 Act3 Q4: Estimate trophic biomass levels under predation 4.",
+        "options": [
+          "Biomass density 4",
+          "Yield 4",
+          "Turnover 4",
+          "Regulator"
+        ],
+        "answer": "Biomass density 4"
+      },
+      {
+        "question": "Energy DOK3 Act3 Q5: Estimate trophic biomass levels under predation 5.",
+        "options": [
+          "Biomass density 5",
+          "Yield 5",
+          "Turnover 5",
+          "Regulator"
+        ],
+        "answer": "Biomass density 5"
+      },
+      {
+        "question": "Energy DOK3 Act3 Q6: Estimate trophic biomass levels under predation 6.",
+        "options": [
+          "Biomass density 6",
+          "Yield 6",
+          "Turnover 6",
+          "Regulator"
+        ],
+        "answer": "Biomass density 6"
+      },
+      {
+        "question": "Energy DOK3 Act3 Q7: Estimate trophic biomass levels under predation 7.",
+        "options": [
+          "Biomass density 7",
+          "Yield 7",
+          "Turnover 7",
+          "Regulator"
+        ],
+        "answer": "Biomass density 7"
+      },
+      {
+        "question": "Energy DOK3 Act3 Q8: Estimate trophic biomass levels under predation 8.",
+        "options": [
+          "Biomass density 8",
+          "Yield 8",
+          "Turnover 8",
+          "Regulator"
+        ],
+        "answer": "Biomass density 8"
+      },
+      {
+        "question": "Energy DOK3 Act3 Q9: Estimate trophic biomass levels under predation 9.",
+        "options": [
+          "Biomass density 9",
+          "Yield 9",
+          "Turnover 9",
+          "Regulator"
+        ],
+        "answer": "Biomass density 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK3 Act4 Q0: Estimate trophic biomass levels under predation 0.",
+        "options": [
+          "Biomass density 0",
+          "Yield 0",
+          "Turnover 0",
+          "Regulator"
+        ],
+        "answer": "Biomass density 0"
+      },
+      {
+        "question": "Energy DOK3 Act4 Q1: Estimate trophic biomass levels under predation 1.",
+        "options": [
+          "Biomass density 1",
+          "Yield 1",
+          "Turnover 1",
+          "Regulator"
+        ],
+        "answer": "Biomass density 1"
+      },
+      {
+        "question": "Energy DOK3 Act4 Q2: Estimate trophic biomass levels under predation 2.",
+        "options": [
+          "Biomass density 2",
+          "Yield 2",
+          "Turnover 2",
+          "Regulator"
+        ],
+        "answer": "Biomass density 2"
+      },
+      {
+        "question": "Energy DOK3 Act4 Q3: Estimate trophic biomass levels under predation 3.",
+        "options": [
+          "Biomass density 3",
+          "Yield 3",
+          "Turnover 3",
+          "Regulator"
+        ],
+        "answer": "Biomass density 3"
+      },
+      {
+        "question": "Energy DOK3 Act4 Q4: Estimate trophic biomass levels under predation 4.",
+        "options": [
+          "Biomass density 4",
+          "Yield 4",
+          "Turnover 4",
+          "Regulator"
+        ],
+        "answer": "Biomass density 4"
+      },
+      {
+        "question": "Energy DOK3 Act4 Q5: Estimate trophic biomass levels under predation 5.",
+        "options": [
+          "Biomass density 5",
+          "Yield 5",
+          "Turnover 5",
+          "Regulator"
+        ],
+        "answer": "Biomass density 5"
+      },
+      {
+        "question": "Energy DOK3 Act4 Q6: Estimate trophic biomass levels under predation 6.",
+        "options": [
+          "Biomass density 6",
+          "Yield 6",
+          "Turnover 6",
+          "Regulator"
+        ],
+        "answer": "Biomass density 6"
+      },
+      {
+        "question": "Energy DOK3 Act4 Q7: Estimate trophic biomass levels under predation 7.",
+        "options": [
+          "Biomass density 7",
+          "Yield 7",
+          "Turnover 7",
+          "Regulator"
+        ],
+        "answer": "Biomass density 7"
+      },
+      {
+        "question": "Energy DOK3 Act4 Q8: Estimate trophic biomass levels under predation 8.",
+        "options": [
+          "Biomass density 8",
+          "Yield 8",
+          "Turnover 8",
+          "Regulator"
+        ],
+        "answer": "Biomass density 8"
+      },
+      {
+        "question": "Energy DOK3 Act4 Q9: Estimate trophic biomass levels under predation 9.",
+        "options": [
+          "Biomass density 9",
+          "Yield 9",
+          "Turnover 9",
+          "Regulator"
+        ],
+        "answer": "Biomass density 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK3 Act5 Q0: Estimate trophic biomass levels under predation 0.",
+        "options": [
+          "Biomass density 0",
+          "Yield 0",
+          "Turnover 0",
+          "Regulator"
+        ],
+        "answer": "Biomass density 0"
+      },
+      {
+        "question": "Energy DOK3 Act5 Q1: Estimate trophic biomass levels under predation 1.",
+        "options": [
+          "Biomass density 1",
+          "Yield 1",
+          "Turnover 1",
+          "Regulator"
+        ],
+        "answer": "Biomass density 1"
+      },
+      {
+        "question": "Energy DOK3 Act5 Q2: Estimate trophic biomass levels under predation 2.",
+        "options": [
+          "Biomass density 2",
+          "Yield 2",
+          "Turnover 2",
+          "Regulator"
+        ],
+        "answer": "Biomass density 2"
+      },
+      {
+        "question": "Energy DOK3 Act5 Q3: Estimate trophic biomass levels under predation 3.",
+        "options": [
+          "Biomass density 3",
+          "Yield 3",
+          "Turnover 3",
+          "Regulator"
+        ],
+        "answer": "Biomass density 3"
+      },
+      {
+        "question": "Energy DOK3 Act5 Q4: Estimate trophic biomass levels under predation 4.",
+        "options": [
+          "Biomass density 4",
+          "Yield 4",
+          "Turnover 4",
+          "Regulator"
+        ],
+        "answer": "Biomass density 4"
+      },
+      {
+        "question": "Energy DOK3 Act5 Q5: Estimate trophic biomass levels under predation 5.",
+        "options": [
+          "Biomass density 5",
+          "Yield 5",
+          "Turnover 5",
+          "Regulator"
+        ],
+        "answer": "Biomass density 5"
+      },
+      {
+        "question": "Energy DOK3 Act5 Q6: Estimate trophic biomass levels under predation 6.",
+        "options": [
+          "Biomass density 6",
+          "Yield 6",
+          "Turnover 6",
+          "Regulator"
+        ],
+        "answer": "Biomass density 6"
+      },
+      {
+        "question": "Energy DOK3 Act5 Q7: Estimate trophic biomass levels under predation 7.",
+        "options": [
+          "Biomass density 7",
+          "Yield 7",
+          "Turnover 7",
+          "Regulator"
+        ],
+        "answer": "Biomass density 7"
+      },
+      {
+        "question": "Energy DOK3 Act5 Q8: Estimate trophic biomass levels under predation 8.",
+        "options": [
+          "Biomass density 8",
+          "Yield 8",
+          "Turnover 8",
+          "Regulator"
+        ],
+        "answer": "Biomass density 8"
+      },
+      {
+        "question": "Energy DOK3 Act5 Q9: Estimate trophic biomass levels under predation 9.",
+        "options": [
+          "Biomass density 9",
+          "Yield 9",
+          "Turnover 9",
+          "Regulator"
+        ],
+        "answer": "Biomass density 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Energy DOK4 Act1 Q0: Calibrate solar insolation and trophic efficiencies 0.",
+        "options": [
+          "Ecosystem efficiency 0",
+          "Solar 0",
+          "Insolation 0",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 0"
+      },
+      {
+        "question": "Energy DOK4 Act1 Q1: Calibrate solar insolation and trophic efficiencies 1.",
+        "options": [
+          "Ecosystem efficiency 1",
+          "Solar 1",
+          "Insolation 1",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 1"
+      },
+      {
+        "question": "Energy DOK4 Act1 Q2: Calibrate solar insolation and trophic efficiencies 2.",
+        "options": [
+          "Ecosystem efficiency 2",
+          "Solar 2",
+          "Insolation 2",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 2"
+      },
+      {
+        "question": "Energy DOK4 Act1 Q3: Calibrate solar insolation and trophic efficiencies 3.",
+        "options": [
+          "Ecosystem efficiency 3",
+          "Solar 3",
+          "Insolation 3",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 3"
+      },
+      {
+        "question": "Energy DOK4 Act1 Q4: Calibrate solar insolation and trophic efficiencies 4.",
+        "options": [
+          "Ecosystem efficiency 4",
+          "Solar 4",
+          "Insolation 4",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 4"
+      },
+      {
+        "question": "Energy DOK4 Act1 Q5: Calibrate solar insolation and trophic efficiencies 5.",
+        "options": [
+          "Ecosystem efficiency 5",
+          "Solar 5",
+          "Insolation 5",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 5"
+      },
+      {
+        "question": "Energy DOK4 Act1 Q6: Calibrate solar insolation and trophic efficiencies 6.",
+        "options": [
+          "Ecosystem efficiency 6",
+          "Solar 6",
+          "Insolation 6",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 6"
+      },
+      {
+        "question": "Energy DOK4 Act1 Q7: Calibrate solar insolation and trophic efficiencies 7.",
+        "options": [
+          "Ecosystem efficiency 7",
+          "Solar 7",
+          "Insolation 7",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 7"
+      },
+      {
+        "question": "Energy DOK4 Act1 Q8: Calibrate solar insolation and trophic efficiencies 8.",
+        "options": [
+          "Ecosystem efficiency 8",
+          "Solar 8",
+          "Insolation 8",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 8"
+      },
+      {
+        "question": "Energy DOK4 Act1 Q9: Calibrate solar insolation and trophic efficiencies 9.",
+        "options": [
+          "Ecosystem efficiency 9",
+          "Solar 9",
+          "Insolation 9",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK4 Act2 Q0: Calibrate solar insolation and trophic efficiencies 0.",
+        "options": [
+          "Ecosystem efficiency 0",
+          "Solar 0",
+          "Insolation 0",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 0"
+      },
+      {
+        "question": "Energy DOK4 Act2 Q1: Calibrate solar insolation and trophic efficiencies 1.",
+        "options": [
+          "Ecosystem efficiency 1",
+          "Solar 1",
+          "Insolation 1",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 1"
+      },
+      {
+        "question": "Energy DOK4 Act2 Q2: Calibrate solar insolation and trophic efficiencies 2.",
+        "options": [
+          "Ecosystem efficiency 2",
+          "Solar 2",
+          "Insolation 2",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 2"
+      },
+      {
+        "question": "Energy DOK4 Act2 Q3: Calibrate solar insolation and trophic efficiencies 3.",
+        "options": [
+          "Ecosystem efficiency 3",
+          "Solar 3",
+          "Insolation 3",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 3"
+      },
+      {
+        "question": "Energy DOK4 Act2 Q4: Calibrate solar insolation and trophic efficiencies 4.",
+        "options": [
+          "Ecosystem efficiency 4",
+          "Solar 4",
+          "Insolation 4",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 4"
+      },
+      {
+        "question": "Energy DOK4 Act2 Q5: Calibrate solar insolation and trophic efficiencies 5.",
+        "options": [
+          "Ecosystem efficiency 5",
+          "Solar 5",
+          "Insolation 5",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 5"
+      },
+      {
+        "question": "Energy DOK4 Act2 Q6: Calibrate solar insolation and trophic efficiencies 6.",
+        "options": [
+          "Ecosystem efficiency 6",
+          "Solar 6",
+          "Insolation 6",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 6"
+      },
+      {
+        "question": "Energy DOK4 Act2 Q7: Calibrate solar insolation and trophic efficiencies 7.",
+        "options": [
+          "Ecosystem efficiency 7",
+          "Solar 7",
+          "Insolation 7",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 7"
+      },
+      {
+        "question": "Energy DOK4 Act2 Q8: Calibrate solar insolation and trophic efficiencies 8.",
+        "options": [
+          "Ecosystem efficiency 8",
+          "Solar 8",
+          "Insolation 8",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 8"
+      },
+      {
+        "question": "Energy DOK4 Act2 Q9: Calibrate solar insolation and trophic efficiencies 9.",
+        "options": [
+          "Ecosystem efficiency 9",
+          "Solar 9",
+          "Insolation 9",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK4 Act3 Q0: Calibrate solar insolation and trophic efficiencies 0.",
+        "options": [
+          "Ecosystem efficiency 0",
+          "Solar 0",
+          "Insolation 0",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 0"
+      },
+      {
+        "question": "Energy DOK4 Act3 Q1: Calibrate solar insolation and trophic efficiencies 1.",
+        "options": [
+          "Ecosystem efficiency 1",
+          "Solar 1",
+          "Insolation 1",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 1"
+      },
+      {
+        "question": "Energy DOK4 Act3 Q2: Calibrate solar insolation and trophic efficiencies 2.",
+        "options": [
+          "Ecosystem efficiency 2",
+          "Solar 2",
+          "Insolation 2",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 2"
+      },
+      {
+        "question": "Energy DOK4 Act3 Q3: Calibrate solar insolation and trophic efficiencies 3.",
+        "options": [
+          "Ecosystem efficiency 3",
+          "Solar 3",
+          "Insolation 3",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 3"
+      },
+      {
+        "question": "Energy DOK4 Act3 Q4: Calibrate solar insolation and trophic efficiencies 4.",
+        "options": [
+          "Ecosystem efficiency 4",
+          "Solar 4",
+          "Insolation 4",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 4"
+      },
+      {
+        "question": "Energy DOK4 Act3 Q5: Calibrate solar insolation and trophic efficiencies 5.",
+        "options": [
+          "Ecosystem efficiency 5",
+          "Solar 5",
+          "Insolation 5",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 5"
+      },
+      {
+        "question": "Energy DOK4 Act3 Q6: Calibrate solar insolation and trophic efficiencies 6.",
+        "options": [
+          "Ecosystem efficiency 6",
+          "Solar 6",
+          "Insolation 6",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 6"
+      },
+      {
+        "question": "Energy DOK4 Act3 Q7: Calibrate solar insolation and trophic efficiencies 7.",
+        "options": [
+          "Ecosystem efficiency 7",
+          "Solar 7",
+          "Insolation 7",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 7"
+      },
+      {
+        "question": "Energy DOK4 Act3 Q8: Calibrate solar insolation and trophic efficiencies 8.",
+        "options": [
+          "Ecosystem efficiency 8",
+          "Solar 8",
+          "Insolation 8",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 8"
+      },
+      {
+        "question": "Energy DOK4 Act3 Q9: Calibrate solar insolation and trophic efficiencies 9.",
+        "options": [
+          "Ecosystem efficiency 9",
+          "Solar 9",
+          "Insolation 9",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK4 Act4 Q0: Calibrate solar insolation and trophic efficiencies 0.",
+        "options": [
+          "Ecosystem efficiency 0",
+          "Solar 0",
+          "Insolation 0",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 0"
+      },
+      {
+        "question": "Energy DOK4 Act4 Q1: Calibrate solar insolation and trophic efficiencies 1.",
+        "options": [
+          "Ecosystem efficiency 1",
+          "Solar 1",
+          "Insolation 1",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 1"
+      },
+      {
+        "question": "Energy DOK4 Act4 Q2: Calibrate solar insolation and trophic efficiencies 2.",
+        "options": [
+          "Ecosystem efficiency 2",
+          "Solar 2",
+          "Insolation 2",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 2"
+      },
+      {
+        "question": "Energy DOK4 Act4 Q3: Calibrate solar insolation and trophic efficiencies 3.",
+        "options": [
+          "Ecosystem efficiency 3",
+          "Solar 3",
+          "Insolation 3",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 3"
+      },
+      {
+        "question": "Energy DOK4 Act4 Q4: Calibrate solar insolation and trophic efficiencies 4.",
+        "options": [
+          "Ecosystem efficiency 4",
+          "Solar 4",
+          "Insolation 4",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 4"
+      },
+      {
+        "question": "Energy DOK4 Act4 Q5: Calibrate solar insolation and trophic efficiencies 5.",
+        "options": [
+          "Ecosystem efficiency 5",
+          "Solar 5",
+          "Insolation 5",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 5"
+      },
+      {
+        "question": "Energy DOK4 Act4 Q6: Calibrate solar insolation and trophic efficiencies 6.",
+        "options": [
+          "Ecosystem efficiency 6",
+          "Solar 6",
+          "Insolation 6",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 6"
+      },
+      {
+        "question": "Energy DOK4 Act4 Q7: Calibrate solar insolation and trophic efficiencies 7.",
+        "options": [
+          "Ecosystem efficiency 7",
+          "Solar 7",
+          "Insolation 7",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 7"
+      },
+      {
+        "question": "Energy DOK4 Act4 Q8: Calibrate solar insolation and trophic efficiencies 8.",
+        "options": [
+          "Ecosystem efficiency 8",
+          "Solar 8",
+          "Insolation 8",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 8"
+      },
+      {
+        "question": "Energy DOK4 Act4 Q9: Calibrate solar insolation and trophic efficiencies 9.",
+        "options": [
+          "Ecosystem efficiency 9",
+          "Solar 9",
+          "Insolation 9",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 9"
+      }
+    ],
+    [
+      {
+        "question": "Energy DOK4 Act5 Q0: Calibrate solar insolation and trophic efficiencies 0.",
+        "options": [
+          "Ecosystem efficiency 0",
+          "Solar 0",
+          "Insolation 0",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 0"
+      },
+      {
+        "question": "Energy DOK4 Act5 Q1: Calibrate solar insolation and trophic efficiencies 1.",
+        "options": [
+          "Ecosystem efficiency 1",
+          "Solar 1",
+          "Insolation 1",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 1"
+      },
+      {
+        "question": "Energy DOK4 Act5 Q2: Calibrate solar insolation and trophic efficiencies 2.",
+        "options": [
+          "Ecosystem efficiency 2",
+          "Solar 2",
+          "Insolation 2",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 2"
+      },
+      {
+        "question": "Energy DOK4 Act5 Q3: Calibrate solar insolation and trophic efficiencies 3.",
+        "options": [
+          "Ecosystem efficiency 3",
+          "Solar 3",
+          "Insolation 3",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 3"
+      },
+      {
+        "question": "Energy DOK4 Act5 Q4: Calibrate solar insolation and trophic efficiencies 4.",
+        "options": [
+          "Ecosystem efficiency 4",
+          "Solar 4",
+          "Insolation 4",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 4"
+      },
+      {
+        "question": "Energy DOK4 Act5 Q5: Calibrate solar insolation and trophic efficiencies 5.",
+        "options": [
+          "Ecosystem efficiency 5",
+          "Solar 5",
+          "Insolation 5",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 5"
+      },
+      {
+        "question": "Energy DOK4 Act5 Q6: Calibrate solar insolation and trophic efficiencies 6.",
+        "options": [
+          "Ecosystem efficiency 6",
+          "Solar 6",
+          "Insolation 6",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 6"
+      },
+      {
+        "question": "Energy DOK4 Act5 Q7: Calibrate solar insolation and trophic efficiencies 7.",
+        "options": [
+          "Ecosystem efficiency 7",
+          "Solar 7",
+          "Insolation 7",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 7"
+      },
+      {
+        "question": "Energy DOK4 Act5 Q8: Calibrate solar insolation and trophic efficiencies 8.",
+        "options": [
+          "Ecosystem efficiency 8",
+          "Solar 8",
+          "Insolation 8",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 8"
+      },
+      {
+        "question": "Energy DOK4 Act5 Q9: Calibrate solar insolation and trophic efficiencies 9.",
+        "options": [
+          "Ecosystem efficiency 9",
+          "Solar 9",
+          "Insolation 9",
+          "Ecological transfer"
+        ],
+        "answer": "Ecosystem efficiency 9"
+      }
+    ]
+  ]
+}
+,
+  "OAS.B.LS2.5": {
+  "1": [
+    [
+      {
+        "question": "Carbon DOK1 Act1 Q0: Identify carbon sphere reservoir variant 0.",
+        "options": [
+          "Sphere pool 0",
+          "Atmosphere 0",
+          "Biosphere 0",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 0"
+      },
+      {
+        "question": "Carbon DOK1 Act1 Q1: Identify carbon sphere reservoir variant 1.",
+        "options": [
+          "Sphere pool 1",
+          "Atmosphere 1",
+          "Biosphere 1",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 1"
+      },
+      {
+        "question": "Carbon DOK1 Act1 Q2: Identify carbon sphere reservoir variant 2.",
+        "options": [
+          "Sphere pool 2",
+          "Atmosphere 2",
+          "Biosphere 2",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 2"
+      },
+      {
+        "question": "Carbon DOK1 Act1 Q3: Identify carbon sphere reservoir variant 3.",
+        "options": [
+          "Sphere pool 3",
+          "Atmosphere 3",
+          "Biosphere 3",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 3"
+      },
+      {
+        "question": "Carbon DOK1 Act1 Q4: Identify carbon sphere reservoir variant 4.",
+        "options": [
+          "Sphere pool 4",
+          "Atmosphere 4",
+          "Biosphere 4",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 4"
+      },
+      {
+        "question": "Carbon DOK1 Act1 Q5: Identify carbon sphere reservoir variant 5.",
+        "options": [
+          "Sphere pool 5",
+          "Atmosphere 5",
+          "Biosphere 5",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 5"
+      },
+      {
+        "question": "Carbon DOK1 Act1 Q6: Identify carbon sphere reservoir variant 6.",
+        "options": [
+          "Sphere pool 6",
+          "Atmosphere 6",
+          "Biosphere 6",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 6"
+      },
+      {
+        "question": "Carbon DOK1 Act1 Q7: Identify carbon sphere reservoir variant 7.",
+        "options": [
+          "Sphere pool 7",
+          "Atmosphere 7",
+          "Biosphere 7",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 7"
+      },
+      {
+        "question": "Carbon DOK1 Act1 Q8: Identify carbon sphere reservoir variant 8.",
+        "options": [
+          "Sphere pool 8",
+          "Atmosphere 8",
+          "Biosphere 8",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 8"
+      },
+      {
+        "question": "Carbon DOK1 Act1 Q9: Identify carbon sphere reservoir variant 9.",
+        "options": [
+          "Sphere pool 9",
+          "Atmosphere 9",
+          "Biosphere 9",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK1 Act2 Q0: Identify carbon sphere reservoir variant 0.",
+        "options": [
+          "Sphere pool 0",
+          "Atmosphere 0",
+          "Biosphere 0",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 0"
+      },
+      {
+        "question": "Carbon DOK1 Act2 Q1: Identify carbon sphere reservoir variant 1.",
+        "options": [
+          "Sphere pool 1",
+          "Atmosphere 1",
+          "Biosphere 1",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 1"
+      },
+      {
+        "question": "Carbon DOK1 Act2 Q2: Identify carbon sphere reservoir variant 2.",
+        "options": [
+          "Sphere pool 2",
+          "Atmosphere 2",
+          "Biosphere 2",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 2"
+      },
+      {
+        "question": "Carbon DOK1 Act2 Q3: Identify carbon sphere reservoir variant 3.",
+        "options": [
+          "Sphere pool 3",
+          "Atmosphere 3",
+          "Biosphere 3",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 3"
+      },
+      {
+        "question": "Carbon DOK1 Act2 Q4: Identify carbon sphere reservoir variant 4.",
+        "options": [
+          "Sphere pool 4",
+          "Atmosphere 4",
+          "Biosphere 4",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 4"
+      },
+      {
+        "question": "Carbon DOK1 Act2 Q5: Identify carbon sphere reservoir variant 5.",
+        "options": [
+          "Sphere pool 5",
+          "Atmosphere 5",
+          "Biosphere 5",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 5"
+      },
+      {
+        "question": "Carbon DOK1 Act2 Q6: Identify carbon sphere reservoir variant 6.",
+        "options": [
+          "Sphere pool 6",
+          "Atmosphere 6",
+          "Biosphere 6",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 6"
+      },
+      {
+        "question": "Carbon DOK1 Act2 Q7: Identify carbon sphere reservoir variant 7.",
+        "options": [
+          "Sphere pool 7",
+          "Atmosphere 7",
+          "Biosphere 7",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 7"
+      },
+      {
+        "question": "Carbon DOK1 Act2 Q8: Identify carbon sphere reservoir variant 8.",
+        "options": [
+          "Sphere pool 8",
+          "Atmosphere 8",
+          "Biosphere 8",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 8"
+      },
+      {
+        "question": "Carbon DOK1 Act2 Q9: Identify carbon sphere reservoir variant 9.",
+        "options": [
+          "Sphere pool 9",
+          "Atmosphere 9",
+          "Biosphere 9",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK1 Act3 Q0: Identify carbon sphere reservoir variant 0.",
+        "options": [
+          "Sphere pool 0",
+          "Atmosphere 0",
+          "Biosphere 0",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 0"
+      },
+      {
+        "question": "Carbon DOK1 Act3 Q1: Identify carbon sphere reservoir variant 1.",
+        "options": [
+          "Sphere pool 1",
+          "Atmosphere 1",
+          "Biosphere 1",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 1"
+      },
+      {
+        "question": "Carbon DOK1 Act3 Q2: Identify carbon sphere reservoir variant 2.",
+        "options": [
+          "Sphere pool 2",
+          "Atmosphere 2",
+          "Biosphere 2",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 2"
+      },
+      {
+        "question": "Carbon DOK1 Act3 Q3: Identify carbon sphere reservoir variant 3.",
+        "options": [
+          "Sphere pool 3",
+          "Atmosphere 3",
+          "Biosphere 3",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 3"
+      },
+      {
+        "question": "Carbon DOK1 Act3 Q4: Identify carbon sphere reservoir variant 4.",
+        "options": [
+          "Sphere pool 4",
+          "Atmosphere 4",
+          "Biosphere 4",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 4"
+      },
+      {
+        "question": "Carbon DOK1 Act3 Q5: Identify carbon sphere reservoir variant 5.",
+        "options": [
+          "Sphere pool 5",
+          "Atmosphere 5",
+          "Biosphere 5",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 5"
+      },
+      {
+        "question": "Carbon DOK1 Act3 Q6: Identify carbon sphere reservoir variant 6.",
+        "options": [
+          "Sphere pool 6",
+          "Atmosphere 6",
+          "Biosphere 6",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 6"
+      },
+      {
+        "question": "Carbon DOK1 Act3 Q7: Identify carbon sphere reservoir variant 7.",
+        "options": [
+          "Sphere pool 7",
+          "Atmosphere 7",
+          "Biosphere 7",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 7"
+      },
+      {
+        "question": "Carbon DOK1 Act3 Q8: Identify carbon sphere reservoir variant 8.",
+        "options": [
+          "Sphere pool 8",
+          "Atmosphere 8",
+          "Biosphere 8",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 8"
+      },
+      {
+        "question": "Carbon DOK1 Act3 Q9: Identify carbon sphere reservoir variant 9.",
+        "options": [
+          "Sphere pool 9",
+          "Atmosphere 9",
+          "Biosphere 9",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK1 Act4 Q0: Identify carbon sphere reservoir variant 0.",
+        "options": [
+          "Sphere pool 0",
+          "Atmosphere 0",
+          "Biosphere 0",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 0"
+      },
+      {
+        "question": "Carbon DOK1 Act4 Q1: Identify carbon sphere reservoir variant 1.",
+        "options": [
+          "Sphere pool 1",
+          "Atmosphere 1",
+          "Biosphere 1",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 1"
+      },
+      {
+        "question": "Carbon DOK1 Act4 Q2: Identify carbon sphere reservoir variant 2.",
+        "options": [
+          "Sphere pool 2",
+          "Atmosphere 2",
+          "Biosphere 2",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 2"
+      },
+      {
+        "question": "Carbon DOK1 Act4 Q3: Identify carbon sphere reservoir variant 3.",
+        "options": [
+          "Sphere pool 3",
+          "Atmosphere 3",
+          "Biosphere 3",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 3"
+      },
+      {
+        "question": "Carbon DOK1 Act4 Q4: Identify carbon sphere reservoir variant 4.",
+        "options": [
+          "Sphere pool 4",
+          "Atmosphere 4",
+          "Biosphere 4",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 4"
+      },
+      {
+        "question": "Carbon DOK1 Act4 Q5: Identify carbon sphere reservoir variant 5.",
+        "options": [
+          "Sphere pool 5",
+          "Atmosphere 5",
+          "Biosphere 5",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 5"
+      },
+      {
+        "question": "Carbon DOK1 Act4 Q6: Identify carbon sphere reservoir variant 6.",
+        "options": [
+          "Sphere pool 6",
+          "Atmosphere 6",
+          "Biosphere 6",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 6"
+      },
+      {
+        "question": "Carbon DOK1 Act4 Q7: Identify carbon sphere reservoir variant 7.",
+        "options": [
+          "Sphere pool 7",
+          "Atmosphere 7",
+          "Biosphere 7",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 7"
+      },
+      {
+        "question": "Carbon DOK1 Act4 Q8: Identify carbon sphere reservoir variant 8.",
+        "options": [
+          "Sphere pool 8",
+          "Atmosphere 8",
+          "Biosphere 8",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 8"
+      },
+      {
+        "question": "Carbon DOK1 Act4 Q9: Identify carbon sphere reservoir variant 9.",
+        "options": [
+          "Sphere pool 9",
+          "Atmosphere 9",
+          "Biosphere 9",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK1 Act5 Q0: Identify carbon sphere reservoir variant 0.",
+        "options": [
+          "Sphere pool 0",
+          "Atmosphere 0",
+          "Biosphere 0",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 0"
+      },
+      {
+        "question": "Carbon DOK1 Act5 Q1: Identify carbon sphere reservoir variant 1.",
+        "options": [
+          "Sphere pool 1",
+          "Atmosphere 1",
+          "Biosphere 1",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 1"
+      },
+      {
+        "question": "Carbon DOK1 Act5 Q2: Identify carbon sphere reservoir variant 2.",
+        "options": [
+          "Sphere pool 2",
+          "Atmosphere 2",
+          "Biosphere 2",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 2"
+      },
+      {
+        "question": "Carbon DOK1 Act5 Q3: Identify carbon sphere reservoir variant 3.",
+        "options": [
+          "Sphere pool 3",
+          "Atmosphere 3",
+          "Biosphere 3",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 3"
+      },
+      {
+        "question": "Carbon DOK1 Act5 Q4: Identify carbon sphere reservoir variant 4.",
+        "options": [
+          "Sphere pool 4",
+          "Atmosphere 4",
+          "Biosphere 4",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 4"
+      },
+      {
+        "question": "Carbon DOK1 Act5 Q5: Identify carbon sphere reservoir variant 5.",
+        "options": [
+          "Sphere pool 5",
+          "Atmosphere 5",
+          "Biosphere 5",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 5"
+      },
+      {
+        "question": "Carbon DOK1 Act5 Q6: Identify carbon sphere reservoir variant 6.",
+        "options": [
+          "Sphere pool 6",
+          "Atmosphere 6",
+          "Biosphere 6",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 6"
+      },
+      {
+        "question": "Carbon DOK1 Act5 Q7: Identify carbon sphere reservoir variant 7.",
+        "options": [
+          "Sphere pool 7",
+          "Atmosphere 7",
+          "Biosphere 7",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 7"
+      },
+      {
+        "question": "Carbon DOK1 Act5 Q8: Identify carbon sphere reservoir variant 8.",
+        "options": [
+          "Sphere pool 8",
+          "Atmosphere 8",
+          "Biosphere 8",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 8"
+      },
+      {
+        "question": "Carbon DOK1 Act5 Q9: Identify carbon sphere reservoir variant 9.",
+        "options": [
+          "Sphere pool 9",
+          "Atmosphere 9",
+          "Biosphere 9",
+          "Geosphere"
+        ],
+        "answer": "Sphere pool 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Carbon DOK2 Act1 Q0: Track carbon process changing spheres 0.",
+        "options": [
+          "Carbon process 0",
+          "Combustion 0",
+          "Outgassing 0",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 0"
+      },
+      {
+        "question": "Carbon DOK2 Act1 Q1: Track carbon process changing spheres 1.",
+        "options": [
+          "Carbon process 1",
+          "Combustion 1",
+          "Outgassing 1",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 1"
+      },
+      {
+        "question": "Carbon DOK2 Act1 Q2: Track carbon process changing spheres 2.",
+        "options": [
+          "Carbon process 2",
+          "Combustion 2",
+          "Outgassing 2",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 2"
+      },
+      {
+        "question": "Carbon DOK2 Act1 Q3: Track carbon process changing spheres 3.",
+        "options": [
+          "Carbon process 3",
+          "Combustion 3",
+          "Outgassing 3",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 3"
+      },
+      {
+        "question": "Carbon DOK2 Act1 Q4: Track carbon process changing spheres 4.",
+        "options": [
+          "Carbon process 4",
+          "Combustion 4",
+          "Outgassing 4",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 4"
+      },
+      {
+        "question": "Carbon DOK2 Act1 Q5: Track carbon process changing spheres 5.",
+        "options": [
+          "Carbon process 5",
+          "Combustion 5",
+          "Outgassing 5",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 5"
+      },
+      {
+        "question": "Carbon DOK2 Act1 Q6: Track carbon process changing spheres 6.",
+        "options": [
+          "Carbon process 6",
+          "Combustion 6",
+          "Outgassing 6",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 6"
+      },
+      {
+        "question": "Carbon DOK2 Act1 Q7: Track carbon process changing spheres 7.",
+        "options": [
+          "Carbon process 7",
+          "Combustion 7",
+          "Outgassing 7",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 7"
+      },
+      {
+        "question": "Carbon DOK2 Act1 Q8: Track carbon process changing spheres 8.",
+        "options": [
+          "Carbon process 8",
+          "Combustion 8",
+          "Outgassing 8",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 8"
+      },
+      {
+        "question": "Carbon DOK2 Act1 Q9: Track carbon process changing spheres 9.",
+        "options": [
+          "Carbon process 9",
+          "Combustion 9",
+          "Outgassing 9",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK2 Act2 Q0: Track carbon process changing spheres 0.",
+        "options": [
+          "Carbon process 0",
+          "Combustion 0",
+          "Outgassing 0",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 0"
+      },
+      {
+        "question": "Carbon DOK2 Act2 Q1: Track carbon process changing spheres 1.",
+        "options": [
+          "Carbon process 1",
+          "Combustion 1",
+          "Outgassing 1",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 1"
+      },
+      {
+        "question": "Carbon DOK2 Act2 Q2: Track carbon process changing spheres 2.",
+        "options": [
+          "Carbon process 2",
+          "Combustion 2",
+          "Outgassing 2",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 2"
+      },
+      {
+        "question": "Carbon DOK2 Act2 Q3: Track carbon process changing spheres 3.",
+        "options": [
+          "Carbon process 3",
+          "Combustion 3",
+          "Outgassing 3",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 3"
+      },
+      {
+        "question": "Carbon DOK2 Act2 Q4: Track carbon process changing spheres 4.",
+        "options": [
+          "Carbon process 4",
+          "Combustion 4",
+          "Outgassing 4",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 4"
+      },
+      {
+        "question": "Carbon DOK2 Act2 Q5: Track carbon process changing spheres 5.",
+        "options": [
+          "Carbon process 5",
+          "Combustion 5",
+          "Outgassing 5",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 5"
+      },
+      {
+        "question": "Carbon DOK2 Act2 Q6: Track carbon process changing spheres 6.",
+        "options": [
+          "Carbon process 6",
+          "Combustion 6",
+          "Outgassing 6",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 6"
+      },
+      {
+        "question": "Carbon DOK2 Act2 Q7: Track carbon process changing spheres 7.",
+        "options": [
+          "Carbon process 7",
+          "Combustion 7",
+          "Outgassing 7",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 7"
+      },
+      {
+        "question": "Carbon DOK2 Act2 Q8: Track carbon process changing spheres 8.",
+        "options": [
+          "Carbon process 8",
+          "Combustion 8",
+          "Outgassing 8",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 8"
+      },
+      {
+        "question": "Carbon DOK2 Act2 Q9: Track carbon process changing spheres 9.",
+        "options": [
+          "Carbon process 9",
+          "Combustion 9",
+          "Outgassing 9",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK2 Act3 Q0: Track carbon process changing spheres 0.",
+        "options": [
+          "Carbon process 0",
+          "Combustion 0",
+          "Outgassing 0",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 0"
+      },
+      {
+        "question": "Carbon DOK2 Act3 Q1: Track carbon process changing spheres 1.",
+        "options": [
+          "Carbon process 1",
+          "Combustion 1",
+          "Outgassing 1",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 1"
+      },
+      {
+        "question": "Carbon DOK2 Act3 Q2: Track carbon process changing spheres 2.",
+        "options": [
+          "Carbon process 2",
+          "Combustion 2",
+          "Outgassing 2",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 2"
+      },
+      {
+        "question": "Carbon DOK2 Act3 Q3: Track carbon process changing spheres 3.",
+        "options": [
+          "Carbon process 3",
+          "Combustion 3",
+          "Outgassing 3",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 3"
+      },
+      {
+        "question": "Carbon DOK2 Act3 Q4: Track carbon process changing spheres 4.",
+        "options": [
+          "Carbon process 4",
+          "Combustion 4",
+          "Outgassing 4",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 4"
+      },
+      {
+        "question": "Carbon DOK2 Act3 Q5: Track carbon process changing spheres 5.",
+        "options": [
+          "Carbon process 5",
+          "Combustion 5",
+          "Outgassing 5",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 5"
+      },
+      {
+        "question": "Carbon DOK2 Act3 Q6: Track carbon process changing spheres 6.",
+        "options": [
+          "Carbon process 6",
+          "Combustion 6",
+          "Outgassing 6",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 6"
+      },
+      {
+        "question": "Carbon DOK2 Act3 Q7: Track carbon process changing spheres 7.",
+        "options": [
+          "Carbon process 7",
+          "Combustion 7",
+          "Outgassing 7",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 7"
+      },
+      {
+        "question": "Carbon DOK2 Act3 Q8: Track carbon process changing spheres 8.",
+        "options": [
+          "Carbon process 8",
+          "Combustion 8",
+          "Outgassing 8",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 8"
+      },
+      {
+        "question": "Carbon DOK2 Act3 Q9: Track carbon process changing spheres 9.",
+        "options": [
+          "Carbon process 9",
+          "Combustion 9",
+          "Outgassing 9",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK2 Act4 Q0: Track carbon process changing spheres 0.",
+        "options": [
+          "Carbon process 0",
+          "Combustion 0",
+          "Outgassing 0",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 0"
+      },
+      {
+        "question": "Carbon DOK2 Act4 Q1: Track carbon process changing spheres 1.",
+        "options": [
+          "Carbon process 1",
+          "Combustion 1",
+          "Outgassing 1",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 1"
+      },
+      {
+        "question": "Carbon DOK2 Act4 Q2: Track carbon process changing spheres 2.",
+        "options": [
+          "Carbon process 2",
+          "Combustion 2",
+          "Outgassing 2",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 2"
+      },
+      {
+        "question": "Carbon DOK2 Act4 Q3: Track carbon process changing spheres 3.",
+        "options": [
+          "Carbon process 3",
+          "Combustion 3",
+          "Outgassing 3",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 3"
+      },
+      {
+        "question": "Carbon DOK2 Act4 Q4: Track carbon process changing spheres 4.",
+        "options": [
+          "Carbon process 4",
+          "Combustion 4",
+          "Outgassing 4",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 4"
+      },
+      {
+        "question": "Carbon DOK2 Act4 Q5: Track carbon process changing spheres 5.",
+        "options": [
+          "Carbon process 5",
+          "Combustion 5",
+          "Outgassing 5",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 5"
+      },
+      {
+        "question": "Carbon DOK2 Act4 Q6: Track carbon process changing spheres 6.",
+        "options": [
+          "Carbon process 6",
+          "Combustion 6",
+          "Outgassing 6",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 6"
+      },
+      {
+        "question": "Carbon DOK2 Act4 Q7: Track carbon process changing spheres 7.",
+        "options": [
+          "Carbon process 7",
+          "Combustion 7",
+          "Outgassing 7",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 7"
+      },
+      {
+        "question": "Carbon DOK2 Act4 Q8: Track carbon process changing spheres 8.",
+        "options": [
+          "Carbon process 8",
+          "Combustion 8",
+          "Outgassing 8",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 8"
+      },
+      {
+        "question": "Carbon DOK2 Act4 Q9: Track carbon process changing spheres 9.",
+        "options": [
+          "Carbon process 9",
+          "Combustion 9",
+          "Outgassing 9",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK2 Act5 Q0: Track carbon process changing spheres 0.",
+        "options": [
+          "Carbon process 0",
+          "Combustion 0",
+          "Outgassing 0",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 0"
+      },
+      {
+        "question": "Carbon DOK2 Act5 Q1: Track carbon process changing spheres 1.",
+        "options": [
+          "Carbon process 1",
+          "Combustion 1",
+          "Outgassing 1",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 1"
+      },
+      {
+        "question": "Carbon DOK2 Act5 Q2: Track carbon process changing spheres 2.",
+        "options": [
+          "Carbon process 2",
+          "Combustion 2",
+          "Outgassing 2",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 2"
+      },
+      {
+        "question": "Carbon DOK2 Act5 Q3: Track carbon process changing spheres 3.",
+        "options": [
+          "Carbon process 3",
+          "Combustion 3",
+          "Outgassing 3",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 3"
+      },
+      {
+        "question": "Carbon DOK2 Act5 Q4: Track carbon process changing spheres 4.",
+        "options": [
+          "Carbon process 4",
+          "Combustion 4",
+          "Outgassing 4",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 4"
+      },
+      {
+        "question": "Carbon DOK2 Act5 Q5: Track carbon process changing spheres 5.",
+        "options": [
+          "Carbon process 5",
+          "Combustion 5",
+          "Outgassing 5",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 5"
+      },
+      {
+        "question": "Carbon DOK2 Act5 Q6: Track carbon process changing spheres 6.",
+        "options": [
+          "Carbon process 6",
+          "Combustion 6",
+          "Outgassing 6",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 6"
+      },
+      {
+        "question": "Carbon DOK2 Act5 Q7: Track carbon process changing spheres 7.",
+        "options": [
+          "Carbon process 7",
+          "Combustion 7",
+          "Outgassing 7",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 7"
+      },
+      {
+        "question": "Carbon DOK2 Act5 Q8: Track carbon process changing spheres 8.",
+        "options": [
+          "Carbon process 8",
+          "Combustion 8",
+          "Outgassing 8",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 8"
+      },
+      {
+        "question": "Carbon DOK2 Act5 Q9: Track carbon process changing spheres 9.",
+        "options": [
+          "Carbon process 9",
+          "Combustion 9",
+          "Outgassing 9",
+          "Photosynthesis"
+        ],
+        "answer": "Carbon process 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Carbon DOK3 Act1 Q0: Simulate global carbon pump net changes 0.",
+        "options": [
+          "Carbon pump 0",
+          "Net change 0",
+          "Greenhouse 0",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 0"
+      },
+      {
+        "question": "Carbon DOK3 Act1 Q1: Simulate global carbon pump net changes 1.",
+        "options": [
+          "Carbon pump 1",
+          "Net change 1",
+          "Greenhouse 1",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 1"
+      },
+      {
+        "question": "Carbon DOK3 Act1 Q2: Simulate global carbon pump net changes 2.",
+        "options": [
+          "Carbon pump 2",
+          "Net change 2",
+          "Greenhouse 2",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 2"
+      },
+      {
+        "question": "Carbon DOK3 Act1 Q3: Simulate global carbon pump net changes 3.",
+        "options": [
+          "Carbon pump 3",
+          "Net change 3",
+          "Greenhouse 3",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 3"
+      },
+      {
+        "question": "Carbon DOK3 Act1 Q4: Simulate global carbon pump net changes 4.",
+        "options": [
+          "Carbon pump 4",
+          "Net change 4",
+          "Greenhouse 4",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 4"
+      },
+      {
+        "question": "Carbon DOK3 Act1 Q5: Simulate global carbon pump net changes 5.",
+        "options": [
+          "Carbon pump 5",
+          "Net change 5",
+          "Greenhouse 5",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 5"
+      },
+      {
+        "question": "Carbon DOK3 Act1 Q6: Simulate global carbon pump net changes 6.",
+        "options": [
+          "Carbon pump 6",
+          "Net change 6",
+          "Greenhouse 6",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 6"
+      },
+      {
+        "question": "Carbon DOK3 Act1 Q7: Simulate global carbon pump net changes 7.",
+        "options": [
+          "Carbon pump 7",
+          "Net change 7",
+          "Greenhouse 7",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 7"
+      },
+      {
+        "question": "Carbon DOK3 Act1 Q8: Simulate global carbon pump net changes 8.",
+        "options": [
+          "Carbon pump 8",
+          "Net change 8",
+          "Greenhouse 8",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 8"
+      },
+      {
+        "question": "Carbon DOK3 Act1 Q9: Simulate global carbon pump net changes 9.",
+        "options": [
+          "Carbon pump 9",
+          "Net change 9",
+          "Greenhouse 9",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK3 Act2 Q0: Simulate global carbon pump net changes 0.",
+        "options": [
+          "Carbon pump 0",
+          "Net change 0",
+          "Greenhouse 0",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 0"
+      },
+      {
+        "question": "Carbon DOK3 Act2 Q1: Simulate global carbon pump net changes 1.",
+        "options": [
+          "Carbon pump 1",
+          "Net change 1",
+          "Greenhouse 1",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 1"
+      },
+      {
+        "question": "Carbon DOK3 Act2 Q2: Simulate global carbon pump net changes 2.",
+        "options": [
+          "Carbon pump 2",
+          "Net change 2",
+          "Greenhouse 2",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 2"
+      },
+      {
+        "question": "Carbon DOK3 Act2 Q3: Simulate global carbon pump net changes 3.",
+        "options": [
+          "Carbon pump 3",
+          "Net change 3",
+          "Greenhouse 3",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 3"
+      },
+      {
+        "question": "Carbon DOK3 Act2 Q4: Simulate global carbon pump net changes 4.",
+        "options": [
+          "Carbon pump 4",
+          "Net change 4",
+          "Greenhouse 4",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 4"
+      },
+      {
+        "question": "Carbon DOK3 Act2 Q5: Simulate global carbon pump net changes 5.",
+        "options": [
+          "Carbon pump 5",
+          "Net change 5",
+          "Greenhouse 5",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 5"
+      },
+      {
+        "question": "Carbon DOK3 Act2 Q6: Simulate global carbon pump net changes 6.",
+        "options": [
+          "Carbon pump 6",
+          "Net change 6",
+          "Greenhouse 6",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 6"
+      },
+      {
+        "question": "Carbon DOK3 Act2 Q7: Simulate global carbon pump net changes 7.",
+        "options": [
+          "Carbon pump 7",
+          "Net change 7",
+          "Greenhouse 7",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 7"
+      },
+      {
+        "question": "Carbon DOK3 Act2 Q8: Simulate global carbon pump net changes 8.",
+        "options": [
+          "Carbon pump 8",
+          "Net change 8",
+          "Greenhouse 8",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 8"
+      },
+      {
+        "question": "Carbon DOK3 Act2 Q9: Simulate global carbon pump net changes 9.",
+        "options": [
+          "Carbon pump 9",
+          "Net change 9",
+          "Greenhouse 9",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK3 Act3 Q0: Simulate global carbon pump net changes 0.",
+        "options": [
+          "Carbon pump 0",
+          "Net change 0",
+          "Greenhouse 0",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 0"
+      },
+      {
+        "question": "Carbon DOK3 Act3 Q1: Simulate global carbon pump net changes 1.",
+        "options": [
+          "Carbon pump 1",
+          "Net change 1",
+          "Greenhouse 1",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 1"
+      },
+      {
+        "question": "Carbon DOK3 Act3 Q2: Simulate global carbon pump net changes 2.",
+        "options": [
+          "Carbon pump 2",
+          "Net change 2",
+          "Greenhouse 2",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 2"
+      },
+      {
+        "question": "Carbon DOK3 Act3 Q3: Simulate global carbon pump net changes 3.",
+        "options": [
+          "Carbon pump 3",
+          "Net change 3",
+          "Greenhouse 3",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 3"
+      },
+      {
+        "question": "Carbon DOK3 Act3 Q4: Simulate global carbon pump net changes 4.",
+        "options": [
+          "Carbon pump 4",
+          "Net change 4",
+          "Greenhouse 4",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 4"
+      },
+      {
+        "question": "Carbon DOK3 Act3 Q5: Simulate global carbon pump net changes 5.",
+        "options": [
+          "Carbon pump 5",
+          "Net change 5",
+          "Greenhouse 5",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 5"
+      },
+      {
+        "question": "Carbon DOK3 Act3 Q6: Simulate global carbon pump net changes 6.",
+        "options": [
+          "Carbon pump 6",
+          "Net change 6",
+          "Greenhouse 6",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 6"
+      },
+      {
+        "question": "Carbon DOK3 Act3 Q7: Simulate global carbon pump net changes 7.",
+        "options": [
+          "Carbon pump 7",
+          "Net change 7",
+          "Greenhouse 7",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 7"
+      },
+      {
+        "question": "Carbon DOK3 Act3 Q8: Simulate global carbon pump net changes 8.",
+        "options": [
+          "Carbon pump 8",
+          "Net change 8",
+          "Greenhouse 8",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 8"
+      },
+      {
+        "question": "Carbon DOK3 Act3 Q9: Simulate global carbon pump net changes 9.",
+        "options": [
+          "Carbon pump 9",
+          "Net change 9",
+          "Greenhouse 9",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK3 Act4 Q0: Simulate global carbon pump net changes 0.",
+        "options": [
+          "Carbon pump 0",
+          "Net change 0",
+          "Greenhouse 0",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 0"
+      },
+      {
+        "question": "Carbon DOK3 Act4 Q1: Simulate global carbon pump net changes 1.",
+        "options": [
+          "Carbon pump 1",
+          "Net change 1",
+          "Greenhouse 1",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 1"
+      },
+      {
+        "question": "Carbon DOK3 Act4 Q2: Simulate global carbon pump net changes 2.",
+        "options": [
+          "Carbon pump 2",
+          "Net change 2",
+          "Greenhouse 2",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 2"
+      },
+      {
+        "question": "Carbon DOK3 Act4 Q3: Simulate global carbon pump net changes 3.",
+        "options": [
+          "Carbon pump 3",
+          "Net change 3",
+          "Greenhouse 3",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 3"
+      },
+      {
+        "question": "Carbon DOK3 Act4 Q4: Simulate global carbon pump net changes 4.",
+        "options": [
+          "Carbon pump 4",
+          "Net change 4",
+          "Greenhouse 4",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 4"
+      },
+      {
+        "question": "Carbon DOK3 Act4 Q5: Simulate global carbon pump net changes 5.",
+        "options": [
+          "Carbon pump 5",
+          "Net change 5",
+          "Greenhouse 5",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 5"
+      },
+      {
+        "question": "Carbon DOK3 Act4 Q6: Simulate global carbon pump net changes 6.",
+        "options": [
+          "Carbon pump 6",
+          "Net change 6",
+          "Greenhouse 6",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 6"
+      },
+      {
+        "question": "Carbon DOK3 Act4 Q7: Simulate global carbon pump net changes 7.",
+        "options": [
+          "Carbon pump 7",
+          "Net change 7",
+          "Greenhouse 7",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 7"
+      },
+      {
+        "question": "Carbon DOK3 Act4 Q8: Simulate global carbon pump net changes 8.",
+        "options": [
+          "Carbon pump 8",
+          "Net change 8",
+          "Greenhouse 8",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 8"
+      },
+      {
+        "question": "Carbon DOK3 Act4 Q9: Simulate global carbon pump net changes 9.",
+        "options": [
+          "Carbon pump 9",
+          "Net change 9",
+          "Greenhouse 9",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK3 Act5 Q0: Simulate global carbon pump net changes 0.",
+        "options": [
+          "Carbon pump 0",
+          "Net change 0",
+          "Greenhouse 0",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 0"
+      },
+      {
+        "question": "Carbon DOK3 Act5 Q1: Simulate global carbon pump net changes 1.",
+        "options": [
+          "Carbon pump 1",
+          "Net change 1",
+          "Greenhouse 1",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 1"
+      },
+      {
+        "question": "Carbon DOK3 Act5 Q2: Simulate global carbon pump net changes 2.",
+        "options": [
+          "Carbon pump 2",
+          "Net change 2",
+          "Greenhouse 2",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 2"
+      },
+      {
+        "question": "Carbon DOK3 Act5 Q3: Simulate global carbon pump net changes 3.",
+        "options": [
+          "Carbon pump 3",
+          "Net change 3",
+          "Greenhouse 3",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 3"
+      },
+      {
+        "question": "Carbon DOK3 Act5 Q4: Simulate global carbon pump net changes 4.",
+        "options": [
+          "Carbon pump 4",
+          "Net change 4",
+          "Greenhouse 4",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 4"
+      },
+      {
+        "question": "Carbon DOK3 Act5 Q5: Simulate global carbon pump net changes 5.",
+        "options": [
+          "Carbon pump 5",
+          "Net change 5",
+          "Greenhouse 5",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 5"
+      },
+      {
+        "question": "Carbon DOK3 Act5 Q6: Simulate global carbon pump net changes 6.",
+        "options": [
+          "Carbon pump 6",
+          "Net change 6",
+          "Greenhouse 6",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 6"
+      },
+      {
+        "question": "Carbon DOK3 Act5 Q7: Simulate global carbon pump net changes 7.",
+        "options": [
+          "Carbon pump 7",
+          "Net change 7",
+          "Greenhouse 7",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 7"
+      },
+      {
+        "question": "Carbon DOK3 Act5 Q8: Simulate global carbon pump net changes 8.",
+        "options": [
+          "Carbon pump 8",
+          "Net change 8",
+          "Greenhouse 8",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 8"
+      },
+      {
+        "question": "Carbon DOK3 Act5 Q9: Simulate global carbon pump net changes 9.",
+        "options": [
+          "Carbon pump 9",
+          "Net change 9",
+          "Greenhouse 9",
+          "Carbonate"
+        ],
+        "answer": "Carbon pump 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Carbon DOK4 Act1 Q0: Calibrate geological sequestration and albedo 0.",
+        "options": [
+          "Global optimizer 0",
+          "Sequestration 0",
+          "Albedo 0",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 0"
+      },
+      {
+        "question": "Carbon DOK4 Act1 Q1: Calibrate geological sequestration and albedo 1.",
+        "options": [
+          "Global optimizer 1",
+          "Sequestration 1",
+          "Albedo 1",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 1"
+      },
+      {
+        "question": "Carbon DOK4 Act1 Q2: Calibrate geological sequestration and albedo 2.",
+        "options": [
+          "Global optimizer 2",
+          "Sequestration 2",
+          "Albedo 2",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 2"
+      },
+      {
+        "question": "Carbon DOK4 Act1 Q3: Calibrate geological sequestration and albedo 3.",
+        "options": [
+          "Global optimizer 3",
+          "Sequestration 3",
+          "Albedo 3",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 3"
+      },
+      {
+        "question": "Carbon DOK4 Act1 Q4: Calibrate geological sequestration and albedo 4.",
+        "options": [
+          "Global optimizer 4",
+          "Sequestration 4",
+          "Albedo 4",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 4"
+      },
+      {
+        "question": "Carbon DOK4 Act1 Q5: Calibrate geological sequestration and albedo 5.",
+        "options": [
+          "Global optimizer 5",
+          "Sequestration 5",
+          "Albedo 5",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 5"
+      },
+      {
+        "question": "Carbon DOK4 Act1 Q6: Calibrate geological sequestration and albedo 6.",
+        "options": [
+          "Global optimizer 6",
+          "Sequestration 6",
+          "Albedo 6",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 6"
+      },
+      {
+        "question": "Carbon DOK4 Act1 Q7: Calibrate geological sequestration and albedo 7.",
+        "options": [
+          "Global optimizer 7",
+          "Sequestration 7",
+          "Albedo 7",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 7"
+      },
+      {
+        "question": "Carbon DOK4 Act1 Q8: Calibrate geological sequestration and albedo 8.",
+        "options": [
+          "Global optimizer 8",
+          "Sequestration 8",
+          "Albedo 8",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 8"
+      },
+      {
+        "question": "Carbon DOK4 Act1 Q9: Calibrate geological sequestration and albedo 9.",
+        "options": [
+          "Global optimizer 9",
+          "Sequestration 9",
+          "Albedo 9",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK4 Act2 Q0: Calibrate geological sequestration and albedo 0.",
+        "options": [
+          "Global optimizer 0",
+          "Sequestration 0",
+          "Albedo 0",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 0"
+      },
+      {
+        "question": "Carbon DOK4 Act2 Q1: Calibrate geological sequestration and albedo 1.",
+        "options": [
+          "Global optimizer 1",
+          "Sequestration 1",
+          "Albedo 1",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 1"
+      },
+      {
+        "question": "Carbon DOK4 Act2 Q2: Calibrate geological sequestration and albedo 2.",
+        "options": [
+          "Global optimizer 2",
+          "Sequestration 2",
+          "Albedo 2",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 2"
+      },
+      {
+        "question": "Carbon DOK4 Act2 Q3: Calibrate geological sequestration and albedo 3.",
+        "options": [
+          "Global optimizer 3",
+          "Sequestration 3",
+          "Albedo 3",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 3"
+      },
+      {
+        "question": "Carbon DOK4 Act2 Q4: Calibrate geological sequestration and albedo 4.",
+        "options": [
+          "Global optimizer 4",
+          "Sequestration 4",
+          "Albedo 4",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 4"
+      },
+      {
+        "question": "Carbon DOK4 Act2 Q5: Calibrate geological sequestration and albedo 5.",
+        "options": [
+          "Global optimizer 5",
+          "Sequestration 5",
+          "Albedo 5",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 5"
+      },
+      {
+        "question": "Carbon DOK4 Act2 Q6: Calibrate geological sequestration and albedo 6.",
+        "options": [
+          "Global optimizer 6",
+          "Sequestration 6",
+          "Albedo 6",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 6"
+      },
+      {
+        "question": "Carbon DOK4 Act2 Q7: Calibrate geological sequestration and albedo 7.",
+        "options": [
+          "Global optimizer 7",
+          "Sequestration 7",
+          "Albedo 7",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 7"
+      },
+      {
+        "question": "Carbon DOK4 Act2 Q8: Calibrate geological sequestration and albedo 8.",
+        "options": [
+          "Global optimizer 8",
+          "Sequestration 8",
+          "Albedo 8",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 8"
+      },
+      {
+        "question": "Carbon DOK4 Act2 Q9: Calibrate geological sequestration and albedo 9.",
+        "options": [
+          "Global optimizer 9",
+          "Sequestration 9",
+          "Albedo 9",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK4 Act3 Q0: Calibrate geological sequestration and albedo 0.",
+        "options": [
+          "Global optimizer 0",
+          "Sequestration 0",
+          "Albedo 0",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 0"
+      },
+      {
+        "question": "Carbon DOK4 Act3 Q1: Calibrate geological sequestration and albedo 1.",
+        "options": [
+          "Global optimizer 1",
+          "Sequestration 1",
+          "Albedo 1",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 1"
+      },
+      {
+        "question": "Carbon DOK4 Act3 Q2: Calibrate geological sequestration and albedo 2.",
+        "options": [
+          "Global optimizer 2",
+          "Sequestration 2",
+          "Albedo 2",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 2"
+      },
+      {
+        "question": "Carbon DOK4 Act3 Q3: Calibrate geological sequestration and albedo 3.",
+        "options": [
+          "Global optimizer 3",
+          "Sequestration 3",
+          "Albedo 3",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 3"
+      },
+      {
+        "question": "Carbon DOK4 Act3 Q4: Calibrate geological sequestration and albedo 4.",
+        "options": [
+          "Global optimizer 4",
+          "Sequestration 4",
+          "Albedo 4",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 4"
+      },
+      {
+        "question": "Carbon DOK4 Act3 Q5: Calibrate geological sequestration and albedo 5.",
+        "options": [
+          "Global optimizer 5",
+          "Sequestration 5",
+          "Albedo 5",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 5"
+      },
+      {
+        "question": "Carbon DOK4 Act3 Q6: Calibrate geological sequestration and albedo 6.",
+        "options": [
+          "Global optimizer 6",
+          "Sequestration 6",
+          "Albedo 6",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 6"
+      },
+      {
+        "question": "Carbon DOK4 Act3 Q7: Calibrate geological sequestration and albedo 7.",
+        "options": [
+          "Global optimizer 7",
+          "Sequestration 7",
+          "Albedo 7",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 7"
+      },
+      {
+        "question": "Carbon DOK4 Act3 Q8: Calibrate geological sequestration and albedo 8.",
+        "options": [
+          "Global optimizer 8",
+          "Sequestration 8",
+          "Albedo 8",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 8"
+      },
+      {
+        "question": "Carbon DOK4 Act3 Q9: Calibrate geological sequestration and albedo 9.",
+        "options": [
+          "Global optimizer 9",
+          "Sequestration 9",
+          "Albedo 9",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK4 Act4 Q0: Calibrate geological sequestration and albedo 0.",
+        "options": [
+          "Global optimizer 0",
+          "Sequestration 0",
+          "Albedo 0",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 0"
+      },
+      {
+        "question": "Carbon DOK4 Act4 Q1: Calibrate geological sequestration and albedo 1.",
+        "options": [
+          "Global optimizer 1",
+          "Sequestration 1",
+          "Albedo 1",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 1"
+      },
+      {
+        "question": "Carbon DOK4 Act4 Q2: Calibrate geological sequestration and albedo 2.",
+        "options": [
+          "Global optimizer 2",
+          "Sequestration 2",
+          "Albedo 2",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 2"
+      },
+      {
+        "question": "Carbon DOK4 Act4 Q3: Calibrate geological sequestration and albedo 3.",
+        "options": [
+          "Global optimizer 3",
+          "Sequestration 3",
+          "Albedo 3",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 3"
+      },
+      {
+        "question": "Carbon DOK4 Act4 Q4: Calibrate geological sequestration and albedo 4.",
+        "options": [
+          "Global optimizer 4",
+          "Sequestration 4",
+          "Albedo 4",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 4"
+      },
+      {
+        "question": "Carbon DOK4 Act4 Q5: Calibrate geological sequestration and albedo 5.",
+        "options": [
+          "Global optimizer 5",
+          "Sequestration 5",
+          "Albedo 5",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 5"
+      },
+      {
+        "question": "Carbon DOK4 Act4 Q6: Calibrate geological sequestration and albedo 6.",
+        "options": [
+          "Global optimizer 6",
+          "Sequestration 6",
+          "Albedo 6",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 6"
+      },
+      {
+        "question": "Carbon DOK4 Act4 Q7: Calibrate geological sequestration and albedo 7.",
+        "options": [
+          "Global optimizer 7",
+          "Sequestration 7",
+          "Albedo 7",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 7"
+      },
+      {
+        "question": "Carbon DOK4 Act4 Q8: Calibrate geological sequestration and albedo 8.",
+        "options": [
+          "Global optimizer 8",
+          "Sequestration 8",
+          "Albedo 8",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 8"
+      },
+      {
+        "question": "Carbon DOK4 Act4 Q9: Calibrate geological sequestration and albedo 9.",
+        "options": [
+          "Global optimizer 9",
+          "Sequestration 9",
+          "Albedo 9",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 9"
+      }
+    ],
+    [
+      {
+        "question": "Carbon DOK4 Act5 Q0: Calibrate geological sequestration and albedo 0.",
+        "options": [
+          "Global optimizer 0",
+          "Sequestration 0",
+          "Albedo 0",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 0"
+      },
+      {
+        "question": "Carbon DOK4 Act5 Q1: Calibrate geological sequestration and albedo 1.",
+        "options": [
+          "Global optimizer 1",
+          "Sequestration 1",
+          "Albedo 1",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 1"
+      },
+      {
+        "question": "Carbon DOK4 Act5 Q2: Calibrate geological sequestration and albedo 2.",
+        "options": [
+          "Global optimizer 2",
+          "Sequestration 2",
+          "Albedo 2",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 2"
+      },
+      {
+        "question": "Carbon DOK4 Act5 Q3: Calibrate geological sequestration and albedo 3.",
+        "options": [
+          "Global optimizer 3",
+          "Sequestration 3",
+          "Albedo 3",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 3"
+      },
+      {
+        "question": "Carbon DOK4 Act5 Q4: Calibrate geological sequestration and albedo 4.",
+        "options": [
+          "Global optimizer 4",
+          "Sequestration 4",
+          "Albedo 4",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 4"
+      },
+      {
+        "question": "Carbon DOK4 Act5 Q5: Calibrate geological sequestration and albedo 5.",
+        "options": [
+          "Global optimizer 5",
+          "Sequestration 5",
+          "Albedo 5",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 5"
+      },
+      {
+        "question": "Carbon DOK4 Act5 Q6: Calibrate geological sequestration and albedo 6.",
+        "options": [
+          "Global optimizer 6",
+          "Sequestration 6",
+          "Albedo 6",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 6"
+      },
+      {
+        "question": "Carbon DOK4 Act5 Q7: Calibrate geological sequestration and albedo 7.",
+        "options": [
+          "Global optimizer 7",
+          "Sequestration 7",
+          "Albedo 7",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 7"
+      },
+      {
+        "question": "Carbon DOK4 Act5 Q8: Calibrate geological sequestration and albedo 8.",
+        "options": [
+          "Global optimizer 8",
+          "Sequestration 8",
+          "Albedo 8",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 8"
+      },
+      {
+        "question": "Carbon DOK4 Act5 Q9: Calibrate geological sequestration and albedo 9.",
+        "options": [
+          "Global optimizer 9",
+          "Sequestration 9",
+          "Albedo 9",
+          "CO2 concentration"
+        ],
+        "answer": "Global optimizer 9"
+      }
+    ]
+  ]
+}
+,
+  "OAS.B.LS2.6": {
+  "1": [
+    [
+      {
+        "question": "Stability DOK1 Act1 Q0: Match resistance/resilience stability terms 0.",
+        "options": [
+          "Stability terms 0",
+          "Resistance 0",
+          "Resilience 0",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 0"
+      },
+      {
+        "question": "Stability DOK1 Act1 Q1: Match resistance/resilience stability terms 1.",
+        "options": [
+          "Stability terms 1",
+          "Resistance 1",
+          "Resilience 1",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 1"
+      },
+      {
+        "question": "Stability DOK1 Act1 Q2: Match resistance/resilience stability terms 2.",
+        "options": [
+          "Stability terms 2",
+          "Resistance 2",
+          "Resilience 2",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 2"
+      },
+      {
+        "question": "Stability DOK1 Act1 Q3: Match resistance/resilience stability terms 3.",
+        "options": [
+          "Stability terms 3",
+          "Resistance 3",
+          "Resilience 3",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 3"
+      },
+      {
+        "question": "Stability DOK1 Act1 Q4: Match resistance/resilience stability terms 4.",
+        "options": [
+          "Stability terms 4",
+          "Resistance 4",
+          "Resilience 4",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 4"
+      },
+      {
+        "question": "Stability DOK1 Act1 Q5: Match resistance/resilience stability terms 5.",
+        "options": [
+          "Stability terms 5",
+          "Resistance 5",
+          "Resilience 5",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 5"
+      },
+      {
+        "question": "Stability DOK1 Act1 Q6: Match resistance/resilience stability terms 6.",
+        "options": [
+          "Stability terms 6",
+          "Resistance 6",
+          "Resilience 6",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 6"
+      },
+      {
+        "question": "Stability DOK1 Act1 Q7: Match resistance/resilience stability terms 7.",
+        "options": [
+          "Stability terms 7",
+          "Resistance 7",
+          "Resilience 7",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 7"
+      },
+      {
+        "question": "Stability DOK1 Act1 Q8: Match resistance/resilience stability terms 8.",
+        "options": [
+          "Stability terms 8",
+          "Resistance 8",
+          "Resilience 8",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 8"
+      },
+      {
+        "question": "Stability DOK1 Act1 Q9: Match resistance/resilience stability terms 9.",
+        "options": [
+          "Stability terms 9",
+          "Resistance 9",
+          "Resilience 9",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK1 Act2 Q0: Match resistance/resilience stability terms 0.",
+        "options": [
+          "Stability terms 0",
+          "Resistance 0",
+          "Resilience 0",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 0"
+      },
+      {
+        "question": "Stability DOK1 Act2 Q1: Match resistance/resilience stability terms 1.",
+        "options": [
+          "Stability terms 1",
+          "Resistance 1",
+          "Resilience 1",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 1"
+      },
+      {
+        "question": "Stability DOK1 Act2 Q2: Match resistance/resilience stability terms 2.",
+        "options": [
+          "Stability terms 2",
+          "Resistance 2",
+          "Resilience 2",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 2"
+      },
+      {
+        "question": "Stability DOK1 Act2 Q3: Match resistance/resilience stability terms 3.",
+        "options": [
+          "Stability terms 3",
+          "Resistance 3",
+          "Resilience 3",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 3"
+      },
+      {
+        "question": "Stability DOK1 Act2 Q4: Match resistance/resilience stability terms 4.",
+        "options": [
+          "Stability terms 4",
+          "Resistance 4",
+          "Resilience 4",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 4"
+      },
+      {
+        "question": "Stability DOK1 Act2 Q5: Match resistance/resilience stability terms 5.",
+        "options": [
+          "Stability terms 5",
+          "Resistance 5",
+          "Resilience 5",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 5"
+      },
+      {
+        "question": "Stability DOK1 Act2 Q6: Match resistance/resilience stability terms 6.",
+        "options": [
+          "Stability terms 6",
+          "Resistance 6",
+          "Resilience 6",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 6"
+      },
+      {
+        "question": "Stability DOK1 Act2 Q7: Match resistance/resilience stability terms 7.",
+        "options": [
+          "Stability terms 7",
+          "Resistance 7",
+          "Resilience 7",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 7"
+      },
+      {
+        "question": "Stability DOK1 Act2 Q8: Match resistance/resilience stability terms 8.",
+        "options": [
+          "Stability terms 8",
+          "Resistance 8",
+          "Resilience 8",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 8"
+      },
+      {
+        "question": "Stability DOK1 Act2 Q9: Match resistance/resilience stability terms 9.",
+        "options": [
+          "Stability terms 9",
+          "Resistance 9",
+          "Resilience 9",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK1 Act3 Q0: Match resistance/resilience stability terms 0.",
+        "options": [
+          "Stability terms 0",
+          "Resistance 0",
+          "Resilience 0",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 0"
+      },
+      {
+        "question": "Stability DOK1 Act3 Q1: Match resistance/resilience stability terms 1.",
+        "options": [
+          "Stability terms 1",
+          "Resistance 1",
+          "Resilience 1",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 1"
+      },
+      {
+        "question": "Stability DOK1 Act3 Q2: Match resistance/resilience stability terms 2.",
+        "options": [
+          "Stability terms 2",
+          "Resistance 2",
+          "Resilience 2",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 2"
+      },
+      {
+        "question": "Stability DOK1 Act3 Q3: Match resistance/resilience stability terms 3.",
+        "options": [
+          "Stability terms 3",
+          "Resistance 3",
+          "Resilience 3",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 3"
+      },
+      {
+        "question": "Stability DOK1 Act3 Q4: Match resistance/resilience stability terms 4.",
+        "options": [
+          "Stability terms 4",
+          "Resistance 4",
+          "Resilience 4",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 4"
+      },
+      {
+        "question": "Stability DOK1 Act3 Q5: Match resistance/resilience stability terms 5.",
+        "options": [
+          "Stability terms 5",
+          "Resistance 5",
+          "Resilience 5",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 5"
+      },
+      {
+        "question": "Stability DOK1 Act3 Q6: Match resistance/resilience stability terms 6.",
+        "options": [
+          "Stability terms 6",
+          "Resistance 6",
+          "Resilience 6",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 6"
+      },
+      {
+        "question": "Stability DOK1 Act3 Q7: Match resistance/resilience stability terms 7.",
+        "options": [
+          "Stability terms 7",
+          "Resistance 7",
+          "Resilience 7",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 7"
+      },
+      {
+        "question": "Stability DOK1 Act3 Q8: Match resistance/resilience stability terms 8.",
+        "options": [
+          "Stability terms 8",
+          "Resistance 8",
+          "Resilience 8",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 8"
+      },
+      {
+        "question": "Stability DOK1 Act3 Q9: Match resistance/resilience stability terms 9.",
+        "options": [
+          "Stability terms 9",
+          "Resistance 9",
+          "Resilience 9",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK1 Act4 Q0: Match resistance/resilience stability terms 0.",
+        "options": [
+          "Stability terms 0",
+          "Resistance 0",
+          "Resilience 0",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 0"
+      },
+      {
+        "question": "Stability DOK1 Act4 Q1: Match resistance/resilience stability terms 1.",
+        "options": [
+          "Stability terms 1",
+          "Resistance 1",
+          "Resilience 1",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 1"
+      },
+      {
+        "question": "Stability DOK1 Act4 Q2: Match resistance/resilience stability terms 2.",
+        "options": [
+          "Stability terms 2",
+          "Resistance 2",
+          "Resilience 2",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 2"
+      },
+      {
+        "question": "Stability DOK1 Act4 Q3: Match resistance/resilience stability terms 3.",
+        "options": [
+          "Stability terms 3",
+          "Resistance 3",
+          "Resilience 3",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 3"
+      },
+      {
+        "question": "Stability DOK1 Act4 Q4: Match resistance/resilience stability terms 4.",
+        "options": [
+          "Stability terms 4",
+          "Resistance 4",
+          "Resilience 4",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 4"
+      },
+      {
+        "question": "Stability DOK1 Act4 Q5: Match resistance/resilience stability terms 5.",
+        "options": [
+          "Stability terms 5",
+          "Resistance 5",
+          "Resilience 5",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 5"
+      },
+      {
+        "question": "Stability DOK1 Act4 Q6: Match resistance/resilience stability terms 6.",
+        "options": [
+          "Stability terms 6",
+          "Resistance 6",
+          "Resilience 6",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 6"
+      },
+      {
+        "question": "Stability DOK1 Act4 Q7: Match resistance/resilience stability terms 7.",
+        "options": [
+          "Stability terms 7",
+          "Resistance 7",
+          "Resilience 7",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 7"
+      },
+      {
+        "question": "Stability DOK1 Act4 Q8: Match resistance/resilience stability terms 8.",
+        "options": [
+          "Stability terms 8",
+          "Resistance 8",
+          "Resilience 8",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 8"
+      },
+      {
+        "question": "Stability DOK1 Act4 Q9: Match resistance/resilience stability terms 9.",
+        "options": [
+          "Stability terms 9",
+          "Resistance 9",
+          "Resilience 9",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK1 Act5 Q0: Match resistance/resilience stability terms 0.",
+        "options": [
+          "Stability terms 0",
+          "Resistance 0",
+          "Resilience 0",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 0"
+      },
+      {
+        "question": "Stability DOK1 Act5 Q1: Match resistance/resilience stability terms 1.",
+        "options": [
+          "Stability terms 1",
+          "Resistance 1",
+          "Resilience 1",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 1"
+      },
+      {
+        "question": "Stability DOK1 Act5 Q2: Match resistance/resilience stability terms 2.",
+        "options": [
+          "Stability terms 2",
+          "Resistance 2",
+          "Resilience 2",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 2"
+      },
+      {
+        "question": "Stability DOK1 Act5 Q3: Match resistance/resilience stability terms 3.",
+        "options": [
+          "Stability terms 3",
+          "Resistance 3",
+          "Resilience 3",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 3"
+      },
+      {
+        "question": "Stability DOK1 Act5 Q4: Match resistance/resilience stability terms 4.",
+        "options": [
+          "Stability terms 4",
+          "Resistance 4",
+          "Resilience 4",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 4"
+      },
+      {
+        "question": "Stability DOK1 Act5 Q5: Match resistance/resilience stability terms 5.",
+        "options": [
+          "Stability terms 5",
+          "Resistance 5",
+          "Resilience 5",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 5"
+      },
+      {
+        "question": "Stability DOK1 Act5 Q6: Match resistance/resilience stability terms 6.",
+        "options": [
+          "Stability terms 6",
+          "Resistance 6",
+          "Resilience 6",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 6"
+      },
+      {
+        "question": "Stability DOK1 Act5 Q7: Match resistance/resilience stability terms 7.",
+        "options": [
+          "Stability terms 7",
+          "Resistance 7",
+          "Resilience 7",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 7"
+      },
+      {
+        "question": "Stability DOK1 Act5 Q8: Match resistance/resilience stability terms 8.",
+        "options": [
+          "Stability terms 8",
+          "Resistance 8",
+          "Resilience 8",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 8"
+      },
+      {
+        "question": "Stability DOK1 Act5 Q9: Match resistance/resilience stability terms 9.",
+        "options": [
+          "Stability terms 9",
+          "Resistance 9",
+          "Resilience 9",
+          "Equilibrium"
+        ],
+        "answer": "Stability terms 9"
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "question": "Stability DOK2 Act1 Q0: Model primary vs secondary succession phases 0.",
+        "options": [
+          "Succession phases 0",
+          "Climax 0",
+          "Pioneer 0",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 0"
+      },
+      {
+        "question": "Stability DOK2 Act1 Q1: Model primary vs secondary succession phases 1.",
+        "options": [
+          "Succession phases 1",
+          "Climax 1",
+          "Pioneer 1",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 1"
+      },
+      {
+        "question": "Stability DOK2 Act1 Q2: Model primary vs secondary succession phases 2.",
+        "options": [
+          "Succession phases 2",
+          "Climax 2",
+          "Pioneer 2",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 2"
+      },
+      {
+        "question": "Stability DOK2 Act1 Q3: Model primary vs secondary succession phases 3.",
+        "options": [
+          "Succession phases 3",
+          "Climax 3",
+          "Pioneer 3",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 3"
+      },
+      {
+        "question": "Stability DOK2 Act1 Q4: Model primary vs secondary succession phases 4.",
+        "options": [
+          "Succession phases 4",
+          "Climax 4",
+          "Pioneer 4",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 4"
+      },
+      {
+        "question": "Stability DOK2 Act1 Q5: Model primary vs secondary succession phases 5.",
+        "options": [
+          "Succession phases 5",
+          "Climax 5",
+          "Pioneer 5",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 5"
+      },
+      {
+        "question": "Stability DOK2 Act1 Q6: Model primary vs secondary succession phases 6.",
+        "options": [
+          "Succession phases 6",
+          "Climax 6",
+          "Pioneer 6",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 6"
+      },
+      {
+        "question": "Stability DOK2 Act1 Q7: Model primary vs secondary succession phases 7.",
+        "options": [
+          "Succession phases 7",
+          "Climax 7",
+          "Pioneer 7",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 7"
+      },
+      {
+        "question": "Stability DOK2 Act1 Q8: Model primary vs secondary succession phases 8.",
+        "options": [
+          "Succession phases 8",
+          "Climax 8",
+          "Pioneer 8",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 8"
+      },
+      {
+        "question": "Stability DOK2 Act1 Q9: Model primary vs secondary succession phases 9.",
+        "options": [
+          "Succession phases 9",
+          "Climax 9",
+          "Pioneer 9",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK2 Act2 Q0: Model primary vs secondary succession phases 0.",
+        "options": [
+          "Succession phases 0",
+          "Climax 0",
+          "Pioneer 0",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 0"
+      },
+      {
+        "question": "Stability DOK2 Act2 Q1: Model primary vs secondary succession phases 1.",
+        "options": [
+          "Succession phases 1",
+          "Climax 1",
+          "Pioneer 1",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 1"
+      },
+      {
+        "question": "Stability DOK2 Act2 Q2: Model primary vs secondary succession phases 2.",
+        "options": [
+          "Succession phases 2",
+          "Climax 2",
+          "Pioneer 2",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 2"
+      },
+      {
+        "question": "Stability DOK2 Act2 Q3: Model primary vs secondary succession phases 3.",
+        "options": [
+          "Succession phases 3",
+          "Climax 3",
+          "Pioneer 3",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 3"
+      },
+      {
+        "question": "Stability DOK2 Act2 Q4: Model primary vs secondary succession phases 4.",
+        "options": [
+          "Succession phases 4",
+          "Climax 4",
+          "Pioneer 4",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 4"
+      },
+      {
+        "question": "Stability DOK2 Act2 Q5: Model primary vs secondary succession phases 5.",
+        "options": [
+          "Succession phases 5",
+          "Climax 5",
+          "Pioneer 5",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 5"
+      },
+      {
+        "question": "Stability DOK2 Act2 Q6: Model primary vs secondary succession phases 6.",
+        "options": [
+          "Succession phases 6",
+          "Climax 6",
+          "Pioneer 6",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 6"
+      },
+      {
+        "question": "Stability DOK2 Act2 Q7: Model primary vs secondary succession phases 7.",
+        "options": [
+          "Succession phases 7",
+          "Climax 7",
+          "Pioneer 7",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 7"
+      },
+      {
+        "question": "Stability DOK2 Act2 Q8: Model primary vs secondary succession phases 8.",
+        "options": [
+          "Succession phases 8",
+          "Climax 8",
+          "Pioneer 8",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 8"
+      },
+      {
+        "question": "Stability DOK2 Act2 Q9: Model primary vs secondary succession phases 9.",
+        "options": [
+          "Succession phases 9",
+          "Climax 9",
+          "Pioneer 9",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK2 Act3 Q0: Model primary vs secondary succession phases 0.",
+        "options": [
+          "Succession phases 0",
+          "Climax 0",
+          "Pioneer 0",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 0"
+      },
+      {
+        "question": "Stability DOK2 Act3 Q1: Model primary vs secondary succession phases 1.",
+        "options": [
+          "Succession phases 1",
+          "Climax 1",
+          "Pioneer 1",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 1"
+      },
+      {
+        "question": "Stability DOK2 Act3 Q2: Model primary vs secondary succession phases 2.",
+        "options": [
+          "Succession phases 2",
+          "Climax 2",
+          "Pioneer 2",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 2"
+      },
+      {
+        "question": "Stability DOK2 Act3 Q3: Model primary vs secondary succession phases 3.",
+        "options": [
+          "Succession phases 3",
+          "Climax 3",
+          "Pioneer 3",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 3"
+      },
+      {
+        "question": "Stability DOK2 Act3 Q4: Model primary vs secondary succession phases 4.",
+        "options": [
+          "Succession phases 4",
+          "Climax 4",
+          "Pioneer 4",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 4"
+      },
+      {
+        "question": "Stability DOK2 Act3 Q5: Model primary vs secondary succession phases 5.",
+        "options": [
+          "Succession phases 5",
+          "Climax 5",
+          "Pioneer 5",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 5"
+      },
+      {
+        "question": "Stability DOK2 Act3 Q6: Model primary vs secondary succession phases 6.",
+        "options": [
+          "Succession phases 6",
+          "Climax 6",
+          "Pioneer 6",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 6"
+      },
+      {
+        "question": "Stability DOK2 Act3 Q7: Model primary vs secondary succession phases 7.",
+        "options": [
+          "Succession phases 7",
+          "Climax 7",
+          "Pioneer 7",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 7"
+      },
+      {
+        "question": "Stability DOK2 Act3 Q8: Model primary vs secondary succession phases 8.",
+        "options": [
+          "Succession phases 8",
+          "Climax 8",
+          "Pioneer 8",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 8"
+      },
+      {
+        "question": "Stability DOK2 Act3 Q9: Model primary vs secondary succession phases 9.",
+        "options": [
+          "Succession phases 9",
+          "Climax 9",
+          "Pioneer 9",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK2 Act4 Q0: Model primary vs secondary succession phases 0.",
+        "options": [
+          "Succession phases 0",
+          "Climax 0",
+          "Pioneer 0",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 0"
+      },
+      {
+        "question": "Stability DOK2 Act4 Q1: Model primary vs secondary succession phases 1.",
+        "options": [
+          "Succession phases 1",
+          "Climax 1",
+          "Pioneer 1",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 1"
+      },
+      {
+        "question": "Stability DOK2 Act4 Q2: Model primary vs secondary succession phases 2.",
+        "options": [
+          "Succession phases 2",
+          "Climax 2",
+          "Pioneer 2",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 2"
+      },
+      {
+        "question": "Stability DOK2 Act4 Q3: Model primary vs secondary succession phases 3.",
+        "options": [
+          "Succession phases 3",
+          "Climax 3",
+          "Pioneer 3",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 3"
+      },
+      {
+        "question": "Stability DOK2 Act4 Q4: Model primary vs secondary succession phases 4.",
+        "options": [
+          "Succession phases 4",
+          "Climax 4",
+          "Pioneer 4",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 4"
+      },
+      {
+        "question": "Stability DOK2 Act4 Q5: Model primary vs secondary succession phases 5.",
+        "options": [
+          "Succession phases 5",
+          "Climax 5",
+          "Pioneer 5",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 5"
+      },
+      {
+        "question": "Stability DOK2 Act4 Q6: Model primary vs secondary succession phases 6.",
+        "options": [
+          "Succession phases 6",
+          "Climax 6",
+          "Pioneer 6",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 6"
+      },
+      {
+        "question": "Stability DOK2 Act4 Q7: Model primary vs secondary succession phases 7.",
+        "options": [
+          "Succession phases 7",
+          "Climax 7",
+          "Pioneer 7",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 7"
+      },
+      {
+        "question": "Stability DOK2 Act4 Q8: Model primary vs secondary succession phases 8.",
+        "options": [
+          "Succession phases 8",
+          "Climax 8",
+          "Pioneer 8",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 8"
+      },
+      {
+        "question": "Stability DOK2 Act4 Q9: Model primary vs secondary succession phases 9.",
+        "options": [
+          "Succession phases 9",
+          "Climax 9",
+          "Pioneer 9",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK2 Act5 Q0: Model primary vs secondary succession phases 0.",
+        "options": [
+          "Succession phases 0",
+          "Climax 0",
+          "Pioneer 0",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 0"
+      },
+      {
+        "question": "Stability DOK2 Act5 Q1: Model primary vs secondary succession phases 1.",
+        "options": [
+          "Succession phases 1",
+          "Climax 1",
+          "Pioneer 1",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 1"
+      },
+      {
+        "question": "Stability DOK2 Act5 Q2: Model primary vs secondary succession phases 2.",
+        "options": [
+          "Succession phases 2",
+          "Climax 2",
+          "Pioneer 2",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 2"
+      },
+      {
+        "question": "Stability DOK2 Act5 Q3: Model primary vs secondary succession phases 3.",
+        "options": [
+          "Succession phases 3",
+          "Climax 3",
+          "Pioneer 3",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 3"
+      },
+      {
+        "question": "Stability DOK2 Act5 Q4: Model primary vs secondary succession phases 4.",
+        "options": [
+          "Succession phases 4",
+          "Climax 4",
+          "Pioneer 4",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 4"
+      },
+      {
+        "question": "Stability DOK2 Act5 Q5: Model primary vs secondary succession phases 5.",
+        "options": [
+          "Succession phases 5",
+          "Climax 5",
+          "Pioneer 5",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 5"
+      },
+      {
+        "question": "Stability DOK2 Act5 Q6: Model primary vs secondary succession phases 6.",
+        "options": [
+          "Succession phases 6",
+          "Climax 6",
+          "Pioneer 6",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 6"
+      },
+      {
+        "question": "Stability DOK2 Act5 Q7: Model primary vs secondary succession phases 7.",
+        "options": [
+          "Succession phases 7",
+          "Climax 7",
+          "Pioneer 7",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 7"
+      },
+      {
+        "question": "Stability DOK2 Act5 Q8: Model primary vs secondary succession phases 8.",
+        "options": [
+          "Succession phases 8",
+          "Climax 8",
+          "Pioneer 8",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 8"
+      },
+      {
+        "question": "Stability DOK2 Act5 Q9: Model primary vs secondary succession phases 9.",
+        "options": [
+          "Succession phases 9",
+          "Climax 9",
+          "Pioneer 9",
+          "Intermediate"
+        ],
+        "answer": "Succession phases 9"
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "question": "Stability DOK3 Act1 Q0: Calibrate disturbance frequency and severity 0.",
+        "options": [
+          "Disturbance severity 0",
+          "Frequency 0",
+          "Resiliency 0",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 0"
+      },
+      {
+        "question": "Stability DOK3 Act1 Q1: Calibrate disturbance frequency and severity 1.",
+        "options": [
+          "Disturbance severity 1",
+          "Frequency 1",
+          "Resiliency 1",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 1"
+      },
+      {
+        "question": "Stability DOK3 Act1 Q2: Calibrate disturbance frequency and severity 2.",
+        "options": [
+          "Disturbance severity 2",
+          "Frequency 2",
+          "Resiliency 2",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 2"
+      },
+      {
+        "question": "Stability DOK3 Act1 Q3: Calibrate disturbance frequency and severity 3.",
+        "options": [
+          "Disturbance severity 3",
+          "Frequency 3",
+          "Resiliency 3",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 3"
+      },
+      {
+        "question": "Stability DOK3 Act1 Q4: Calibrate disturbance frequency and severity 4.",
+        "options": [
+          "Disturbance severity 4",
+          "Frequency 4",
+          "Resiliency 4",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 4"
+      },
+      {
+        "question": "Stability DOK3 Act1 Q5: Calibrate disturbance frequency and severity 5.",
+        "options": [
+          "Disturbance severity 5",
+          "Frequency 5",
+          "Resiliency 5",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 5"
+      },
+      {
+        "question": "Stability DOK3 Act1 Q6: Calibrate disturbance frequency and severity 6.",
+        "options": [
+          "Disturbance severity 6",
+          "Frequency 6",
+          "Resiliency 6",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 6"
+      },
+      {
+        "question": "Stability DOK3 Act1 Q7: Calibrate disturbance frequency and severity 7.",
+        "options": [
+          "Disturbance severity 7",
+          "Frequency 7",
+          "Resiliency 7",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 7"
+      },
+      {
+        "question": "Stability DOK3 Act1 Q8: Calibrate disturbance frequency and severity 8.",
+        "options": [
+          "Disturbance severity 8",
+          "Frequency 8",
+          "Resiliency 8",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 8"
+      },
+      {
+        "question": "Stability DOK3 Act1 Q9: Calibrate disturbance frequency and severity 9.",
+        "options": [
+          "Disturbance severity 9",
+          "Frequency 9",
+          "Resiliency 9",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK3 Act2 Q0: Calibrate disturbance frequency and severity 0.",
+        "options": [
+          "Disturbance severity 0",
+          "Frequency 0",
+          "Resiliency 0",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 0"
+      },
+      {
+        "question": "Stability DOK3 Act2 Q1: Calibrate disturbance frequency and severity 1.",
+        "options": [
+          "Disturbance severity 1",
+          "Frequency 1",
+          "Resiliency 1",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 1"
+      },
+      {
+        "question": "Stability DOK3 Act2 Q2: Calibrate disturbance frequency and severity 2.",
+        "options": [
+          "Disturbance severity 2",
+          "Frequency 2",
+          "Resiliency 2",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 2"
+      },
+      {
+        "question": "Stability DOK3 Act2 Q3: Calibrate disturbance frequency and severity 3.",
+        "options": [
+          "Disturbance severity 3",
+          "Frequency 3",
+          "Resiliency 3",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 3"
+      },
+      {
+        "question": "Stability DOK3 Act2 Q4: Calibrate disturbance frequency and severity 4.",
+        "options": [
+          "Disturbance severity 4",
+          "Frequency 4",
+          "Resiliency 4",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 4"
+      },
+      {
+        "question": "Stability DOK3 Act2 Q5: Calibrate disturbance frequency and severity 5.",
+        "options": [
+          "Disturbance severity 5",
+          "Frequency 5",
+          "Resiliency 5",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 5"
+      },
+      {
+        "question": "Stability DOK3 Act2 Q6: Calibrate disturbance frequency and severity 6.",
+        "options": [
+          "Disturbance severity 6",
+          "Frequency 6",
+          "Resiliency 6",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 6"
+      },
+      {
+        "question": "Stability DOK3 Act2 Q7: Calibrate disturbance frequency and severity 7.",
+        "options": [
+          "Disturbance severity 7",
+          "Frequency 7",
+          "Resiliency 7",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 7"
+      },
+      {
+        "question": "Stability DOK3 Act2 Q8: Calibrate disturbance frequency and severity 8.",
+        "options": [
+          "Disturbance severity 8",
+          "Frequency 8",
+          "Resiliency 8",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 8"
+      },
+      {
+        "question": "Stability DOK3 Act2 Q9: Calibrate disturbance frequency and severity 9.",
+        "options": [
+          "Disturbance severity 9",
+          "Frequency 9",
+          "Resiliency 9",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK3 Act3 Q0: Calibrate disturbance frequency and severity 0.",
+        "options": [
+          "Disturbance severity 0",
+          "Frequency 0",
+          "Resiliency 0",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 0"
+      },
+      {
+        "question": "Stability DOK3 Act3 Q1: Calibrate disturbance frequency and severity 1.",
+        "options": [
+          "Disturbance severity 1",
+          "Frequency 1",
+          "Resiliency 1",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 1"
+      },
+      {
+        "question": "Stability DOK3 Act3 Q2: Calibrate disturbance frequency and severity 2.",
+        "options": [
+          "Disturbance severity 2",
+          "Frequency 2",
+          "Resiliency 2",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 2"
+      },
+      {
+        "question": "Stability DOK3 Act3 Q3: Calibrate disturbance frequency and severity 3.",
+        "options": [
+          "Disturbance severity 3",
+          "Frequency 3",
+          "Resiliency 3",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 3"
+      },
+      {
+        "question": "Stability DOK3 Act3 Q4: Calibrate disturbance frequency and severity 4.",
+        "options": [
+          "Disturbance severity 4",
+          "Frequency 4",
+          "Resiliency 4",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 4"
+      },
+      {
+        "question": "Stability DOK3 Act3 Q5: Calibrate disturbance frequency and severity 5.",
+        "options": [
+          "Disturbance severity 5",
+          "Frequency 5",
+          "Resiliency 5",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 5"
+      },
+      {
+        "question": "Stability DOK3 Act3 Q6: Calibrate disturbance frequency and severity 6.",
+        "options": [
+          "Disturbance severity 6",
+          "Frequency 6",
+          "Resiliency 6",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 6"
+      },
+      {
+        "question": "Stability DOK3 Act3 Q7: Calibrate disturbance frequency and severity 7.",
+        "options": [
+          "Disturbance severity 7",
+          "Frequency 7",
+          "Resiliency 7",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 7"
+      },
+      {
+        "question": "Stability DOK3 Act3 Q8: Calibrate disturbance frequency and severity 8.",
+        "options": [
+          "Disturbance severity 8",
+          "Frequency 8",
+          "Resiliency 8",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 8"
+      },
+      {
+        "question": "Stability DOK3 Act3 Q9: Calibrate disturbance frequency and severity 9.",
+        "options": [
+          "Disturbance severity 9",
+          "Frequency 9",
+          "Resiliency 9",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK3 Act4 Q0: Calibrate disturbance frequency and severity 0.",
+        "options": [
+          "Disturbance severity 0",
+          "Frequency 0",
+          "Resiliency 0",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 0"
+      },
+      {
+        "question": "Stability DOK3 Act4 Q1: Calibrate disturbance frequency and severity 1.",
+        "options": [
+          "Disturbance severity 1",
+          "Frequency 1",
+          "Resiliency 1",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 1"
+      },
+      {
+        "question": "Stability DOK3 Act4 Q2: Calibrate disturbance frequency and severity 2.",
+        "options": [
+          "Disturbance severity 2",
+          "Frequency 2",
+          "Resiliency 2",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 2"
+      },
+      {
+        "question": "Stability DOK3 Act4 Q3: Calibrate disturbance frequency and severity 3.",
+        "options": [
+          "Disturbance severity 3",
+          "Frequency 3",
+          "Resiliency 3",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 3"
+      },
+      {
+        "question": "Stability DOK3 Act4 Q4: Calibrate disturbance frequency and severity 4.",
+        "options": [
+          "Disturbance severity 4",
+          "Frequency 4",
+          "Resiliency 4",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 4"
+      },
+      {
+        "question": "Stability DOK3 Act4 Q5: Calibrate disturbance frequency and severity 5.",
+        "options": [
+          "Disturbance severity 5",
+          "Frequency 5",
+          "Resiliency 5",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 5"
+      },
+      {
+        "question": "Stability DOK3 Act4 Q6: Calibrate disturbance frequency and severity 6.",
+        "options": [
+          "Disturbance severity 6",
+          "Frequency 6",
+          "Resiliency 6",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 6"
+      },
+      {
+        "question": "Stability DOK3 Act4 Q7: Calibrate disturbance frequency and severity 7.",
+        "options": [
+          "Disturbance severity 7",
+          "Frequency 7",
+          "Resiliency 7",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 7"
+      },
+      {
+        "question": "Stability DOK3 Act4 Q8: Calibrate disturbance frequency and severity 8.",
+        "options": [
+          "Disturbance severity 8",
+          "Frequency 8",
+          "Resiliency 8",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 8"
+      },
+      {
+        "question": "Stability DOK3 Act4 Q9: Calibrate disturbance frequency and severity 9.",
+        "options": [
+          "Disturbance severity 9",
+          "Frequency 9",
+          "Resiliency 9",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK3 Act5 Q0: Calibrate disturbance frequency and severity 0.",
+        "options": [
+          "Disturbance severity 0",
+          "Frequency 0",
+          "Resiliency 0",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 0"
+      },
+      {
+        "question": "Stability DOK3 Act5 Q1: Calibrate disturbance frequency and severity 1.",
+        "options": [
+          "Disturbance severity 1",
+          "Frequency 1",
+          "Resiliency 1",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 1"
+      },
+      {
+        "question": "Stability DOK3 Act5 Q2: Calibrate disturbance frequency and severity 2.",
+        "options": [
+          "Disturbance severity 2",
+          "Frequency 2",
+          "Resiliency 2",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 2"
+      },
+      {
+        "question": "Stability DOK3 Act5 Q3: Calibrate disturbance frequency and severity 3.",
+        "options": [
+          "Disturbance severity 3",
+          "Frequency 3",
+          "Resiliency 3",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 3"
+      },
+      {
+        "question": "Stability DOK3 Act5 Q4: Calibrate disturbance frequency and severity 4.",
+        "options": [
+          "Disturbance severity 4",
+          "Frequency 4",
+          "Resiliency 4",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 4"
+      },
+      {
+        "question": "Stability DOK3 Act5 Q5: Calibrate disturbance frequency and severity 5.",
+        "options": [
+          "Disturbance severity 5",
+          "Frequency 5",
+          "Resiliency 5",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 5"
+      },
+      {
+        "question": "Stability DOK3 Act5 Q6: Calibrate disturbance frequency and severity 6.",
+        "options": [
+          "Disturbance severity 6",
+          "Frequency 6",
+          "Resiliency 6",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 6"
+      },
+      {
+        "question": "Stability DOK3 Act5 Q7: Calibrate disturbance frequency and severity 7.",
+        "options": [
+          "Disturbance severity 7",
+          "Frequency 7",
+          "Resiliency 7",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 7"
+      },
+      {
+        "question": "Stability DOK3 Act5 Q8: Calibrate disturbance frequency and severity 8.",
+        "options": [
+          "Disturbance severity 8",
+          "Frequency 8",
+          "Resiliency 8",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 8"
+      },
+      {
+        "question": "Stability DOK3 Act5 Q9: Calibrate disturbance frequency and severity 9.",
+        "options": [
+          "Disturbance severity 9",
+          "Frequency 9",
+          "Resiliency 9",
+          "Wetland"
+        ],
+        "answer": "Disturbance severity 9"
+      }
+    ]
+  ],
+  "4": [
+    [
+      {
+        "question": "Stability DOK4 Act1 Q0: Optimize reforestation planting and nitrogen levels 0.",
+        "options": [
+          "Recovery planner 0",
+          "Density 0",
+          "Litter 0",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 0"
+      },
+      {
+        "question": "Stability DOK4 Act1 Q1: Optimize reforestation planting and nitrogen levels 1.",
+        "options": [
+          "Recovery planner 1",
+          "Density 1",
+          "Litter 1",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 1"
+      },
+      {
+        "question": "Stability DOK4 Act1 Q2: Optimize reforestation planting and nitrogen levels 2.",
+        "options": [
+          "Recovery planner 2",
+          "Density 2",
+          "Litter 2",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 2"
+      },
+      {
+        "question": "Stability DOK4 Act1 Q3: Optimize reforestation planting and nitrogen levels 3.",
+        "options": [
+          "Recovery planner 3",
+          "Density 3",
+          "Litter 3",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 3"
+      },
+      {
+        "question": "Stability DOK4 Act1 Q4: Optimize reforestation planting and nitrogen levels 4.",
+        "options": [
+          "Recovery planner 4",
+          "Density 4",
+          "Litter 4",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 4"
+      },
+      {
+        "question": "Stability DOK4 Act1 Q5: Optimize reforestation planting and nitrogen levels 5.",
+        "options": [
+          "Recovery planner 5",
+          "Density 5",
+          "Litter 5",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 5"
+      },
+      {
+        "question": "Stability DOK4 Act1 Q6: Optimize reforestation planting and nitrogen levels 6.",
+        "options": [
+          "Recovery planner 6",
+          "Density 6",
+          "Litter 6",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 6"
+      },
+      {
+        "question": "Stability DOK4 Act1 Q7: Optimize reforestation planting and nitrogen levels 7.",
+        "options": [
+          "Recovery planner 7",
+          "Density 7",
+          "Litter 7",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 7"
+      },
+      {
+        "question": "Stability DOK4 Act1 Q8: Optimize reforestation planting and nitrogen levels 8.",
+        "options": [
+          "Recovery planner 8",
+          "Density 8",
+          "Litter 8",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 8"
+      },
+      {
+        "question": "Stability DOK4 Act1 Q9: Optimize reforestation planting and nitrogen levels 9.",
+        "options": [
+          "Recovery planner 9",
+          "Density 9",
+          "Litter 9",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK4 Act2 Q0: Optimize reforestation planting and nitrogen levels 0.",
+        "options": [
+          "Recovery planner 0",
+          "Density 0",
+          "Litter 0",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 0"
+      },
+      {
+        "question": "Stability DOK4 Act2 Q1: Optimize reforestation planting and nitrogen levels 1.",
+        "options": [
+          "Recovery planner 1",
+          "Density 1",
+          "Litter 1",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 1"
+      },
+      {
+        "question": "Stability DOK4 Act2 Q2: Optimize reforestation planting and nitrogen levels 2.",
+        "options": [
+          "Recovery planner 2",
+          "Density 2",
+          "Litter 2",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 2"
+      },
+      {
+        "question": "Stability DOK4 Act2 Q3: Optimize reforestation planting and nitrogen levels 3.",
+        "options": [
+          "Recovery planner 3",
+          "Density 3",
+          "Litter 3",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 3"
+      },
+      {
+        "question": "Stability DOK4 Act2 Q4: Optimize reforestation planting and nitrogen levels 4.",
+        "options": [
+          "Recovery planner 4",
+          "Density 4",
+          "Litter 4",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 4"
+      },
+      {
+        "question": "Stability DOK4 Act2 Q5: Optimize reforestation planting and nitrogen levels 5.",
+        "options": [
+          "Recovery planner 5",
+          "Density 5",
+          "Litter 5",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 5"
+      },
+      {
+        "question": "Stability DOK4 Act2 Q6: Optimize reforestation planting and nitrogen levels 6.",
+        "options": [
+          "Recovery planner 6",
+          "Density 6",
+          "Litter 6",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 6"
+      },
+      {
+        "question": "Stability DOK4 Act2 Q7: Optimize reforestation planting and nitrogen levels 7.",
+        "options": [
+          "Recovery planner 7",
+          "Density 7",
+          "Litter 7",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 7"
+      },
+      {
+        "question": "Stability DOK4 Act2 Q8: Optimize reforestation planting and nitrogen levels 8.",
+        "options": [
+          "Recovery planner 8",
+          "Density 8",
+          "Litter 8",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 8"
+      },
+      {
+        "question": "Stability DOK4 Act2 Q9: Optimize reforestation planting and nitrogen levels 9.",
+        "options": [
+          "Recovery planner 9",
+          "Density 9",
+          "Litter 9",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK4 Act3 Q0: Optimize reforestation planting and nitrogen levels 0.",
+        "options": [
+          "Recovery planner 0",
+          "Density 0",
+          "Litter 0",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 0"
+      },
+      {
+        "question": "Stability DOK4 Act3 Q1: Optimize reforestation planting and nitrogen levels 1.",
+        "options": [
+          "Recovery planner 1",
+          "Density 1",
+          "Litter 1",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 1"
+      },
+      {
+        "question": "Stability DOK4 Act3 Q2: Optimize reforestation planting and nitrogen levels 2.",
+        "options": [
+          "Recovery planner 2",
+          "Density 2",
+          "Litter 2",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 2"
+      },
+      {
+        "question": "Stability DOK4 Act3 Q3: Optimize reforestation planting and nitrogen levels 3.",
+        "options": [
+          "Recovery planner 3",
+          "Density 3",
+          "Litter 3",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 3"
+      },
+      {
+        "question": "Stability DOK4 Act3 Q4: Optimize reforestation planting and nitrogen levels 4.",
+        "options": [
+          "Recovery planner 4",
+          "Density 4",
+          "Litter 4",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 4"
+      },
+      {
+        "question": "Stability DOK4 Act3 Q5: Optimize reforestation planting and nitrogen levels 5.",
+        "options": [
+          "Recovery planner 5",
+          "Density 5",
+          "Litter 5",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 5"
+      },
+      {
+        "question": "Stability DOK4 Act3 Q6: Optimize reforestation planting and nitrogen levels 6.",
+        "options": [
+          "Recovery planner 6",
+          "Density 6",
+          "Litter 6",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 6"
+      },
+      {
+        "question": "Stability DOK4 Act3 Q7: Optimize reforestation planting and nitrogen levels 7.",
+        "options": [
+          "Recovery planner 7",
+          "Density 7",
+          "Litter 7",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 7"
+      },
+      {
+        "question": "Stability DOK4 Act3 Q8: Optimize reforestation planting and nitrogen levels 8.",
+        "options": [
+          "Recovery planner 8",
+          "Density 8",
+          "Litter 8",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 8"
+      },
+      {
+        "question": "Stability DOK4 Act3 Q9: Optimize reforestation planting and nitrogen levels 9.",
+        "options": [
+          "Recovery planner 9",
+          "Density 9",
+          "Litter 9",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK4 Act4 Q0: Optimize reforestation planting and nitrogen levels 0.",
+        "options": [
+          "Recovery planner 0",
+          "Density 0",
+          "Litter 0",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 0"
+      },
+      {
+        "question": "Stability DOK4 Act4 Q1: Optimize reforestation planting and nitrogen levels 1.",
+        "options": [
+          "Recovery planner 1",
+          "Density 1",
+          "Litter 1",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 1"
+      },
+      {
+        "question": "Stability DOK4 Act4 Q2: Optimize reforestation planting and nitrogen levels 2.",
+        "options": [
+          "Recovery planner 2",
+          "Density 2",
+          "Litter 2",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 2"
+      },
+      {
+        "question": "Stability DOK4 Act4 Q3: Optimize reforestation planting and nitrogen levels 3.",
+        "options": [
+          "Recovery planner 3",
+          "Density 3",
+          "Litter 3",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 3"
+      },
+      {
+        "question": "Stability DOK4 Act4 Q4: Optimize reforestation planting and nitrogen levels 4.",
+        "options": [
+          "Recovery planner 4",
+          "Density 4",
+          "Litter 4",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 4"
+      },
+      {
+        "question": "Stability DOK4 Act4 Q5: Optimize reforestation planting and nitrogen levels 5.",
+        "options": [
+          "Recovery planner 5",
+          "Density 5",
+          "Litter 5",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 5"
+      },
+      {
+        "question": "Stability DOK4 Act4 Q6: Optimize reforestation planting and nitrogen levels 6.",
+        "options": [
+          "Recovery planner 6",
+          "Density 6",
+          "Litter 6",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 6"
+      },
+      {
+        "question": "Stability DOK4 Act4 Q7: Optimize reforestation planting and nitrogen levels 7.",
+        "options": [
+          "Recovery planner 7",
+          "Density 7",
+          "Litter 7",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 7"
+      },
+      {
+        "question": "Stability DOK4 Act4 Q8: Optimize reforestation planting and nitrogen levels 8.",
+        "options": [
+          "Recovery planner 8",
+          "Density 8",
+          "Litter 8",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 8"
+      },
+      {
+        "question": "Stability DOK4 Act4 Q9: Optimize reforestation planting and nitrogen levels 9.",
+        "options": [
+          "Recovery planner 9",
+          "Density 9",
+          "Litter 9",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 9"
+      }
+    ],
+    [
+      {
+        "question": "Stability DOK4 Act5 Q0: Optimize reforestation planting and nitrogen levels 0.",
+        "options": [
+          "Recovery planner 0",
+          "Density 0",
+          "Litter 0",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 0"
+      },
+      {
+        "question": "Stability DOK4 Act5 Q1: Optimize reforestation planting and nitrogen levels 1.",
+        "options": [
+          "Recovery planner 1",
+          "Density 1",
+          "Litter 1",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 1"
+      },
+      {
+        "question": "Stability DOK4 Act5 Q2: Optimize reforestation planting and nitrogen levels 2.",
+        "options": [
+          "Recovery planner 2",
+          "Density 2",
+          "Litter 2",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 2"
+      },
+      {
+        "question": "Stability DOK4 Act5 Q3: Optimize reforestation planting and nitrogen levels 3.",
+        "options": [
+          "Recovery planner 3",
+          "Density 3",
+          "Litter 3",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 3"
+      },
+      {
+        "question": "Stability DOK4 Act5 Q4: Optimize reforestation planting and nitrogen levels 4.",
+        "options": [
+          "Recovery planner 4",
+          "Density 4",
+          "Litter 4",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 4"
+      },
+      {
+        "question": "Stability DOK4 Act5 Q5: Optimize reforestation planting and nitrogen levels 5.",
+        "options": [
+          "Recovery planner 5",
+          "Density 5",
+          "Litter 5",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 5"
+      },
+      {
+        "question": "Stability DOK4 Act5 Q6: Optimize reforestation planting and nitrogen levels 6.",
+        "options": [
+          "Recovery planner 6",
+          "Density 6",
+          "Litter 6",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 6"
+      },
+      {
+        "question": "Stability DOK4 Act5 Q7: Optimize reforestation planting and nitrogen levels 7.",
+        "options": [
+          "Recovery planner 7",
+          "Density 7",
+          "Litter 7",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 7"
+      },
+      {
+        "question": "Stability DOK4 Act5 Q8: Optimize reforestation planting and nitrogen levels 8.",
+        "options": [
+          "Recovery planner 8",
+          "Density 8",
+          "Litter 8",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 8"
+      },
+      {
+        "question": "Stability DOK4 Act5 Q9: Optimize reforestation planting and nitrogen levels 9.",
+        "options": [
+          "Recovery planner 9",
+          "Density 9",
+          "Litter 9",
+          "Nitrogen"
+        ],
+        "answer": "Recovery planner 9"
+      }
+    ]
+  ]
+}
 };
 
 const BIO_DOK2_ACT1_VARIANTS = [
@@ -18470,6 +27038,798 @@ export default function Home() {
         }
       };
 
+  const renderLs23Workspaces = () => {
+    const key = `OAS.B.LS2.3_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const carbon = wsState.carbon || "";
+      const phosphorus = wsState.phosphorus || "";
+      const nitrogen = wsState.nitrogen || "";
+      const water = wsState.water || "";
+
+      const verifyCycles = () => {
+        const correct = carbon === "Carbon" && phosphorus === "Phosphorus" && nitrogen === "Nitrogen" && water === "Hydrologic";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls23", carbon, phosphorus, nitrogen, water, is_correct: correct }, "matter_cycle_match", "OAS.B.LS2.3");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls23" }, "matter_cycle_match", "OAS.B.LS2.3");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Match each nutrient to its major biogeochemical cycle pathway:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Carbon Dioxide (CO2) Gas</label>
+              <select disabled={isCompleted} value={carbon} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, carbon: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select cycle...</option>
+                <option value="Carbon">Carbon Cycle</option>
+                <option value="Phosphorus">Phosphorus Cycle</option>
+                <option value="Nitrogen">Nitrogen Cycle</option>
+                <option value="Hydrologic">Hydrologic Cycle</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Phosphate Mineral Sediments</label>
+              <select disabled={isCompleted} value={phosphorus} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, phosphorus: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select cycle...</option>
+                <option value="Carbon">Carbon Cycle</option>
+                <option value="Phosphorus">Phosphorus Cycle</option>
+                <option value="Nitrogen">Nitrogen Cycle</option>
+                <option value="Hydrologic">Hydrologic Cycle</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Ammonia & Nitrogen Gas</label>
+              <select disabled={isCompleted} value={nitrogen} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, nitrogen: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select cycle...</option>
+                <option value="Carbon">Carbon Cycle</option>
+                <option value="Phosphorus">Phosphorus Cycle</option>
+                <option value="Nitrogen">Nitrogen Cycle</option>
+                <option value="Hydrologic">Hydrologic Cycle</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">4. Water Vapor & Precipitation</label>
+              <select disabled={isCompleted} value={water} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, water: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select cycle...</option>
+                <option value="Carbon">Carbon Cycle</option>
+                <option value="Phosphorus">Phosphorus Cycle</option>
+                <option value="Nitrogen">Nitrogen Cycle</option>
+                <option value="Hydrologic">Hydrologic Cycle</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyCycles} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Cycles Verified" : "Verify Cycles"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const respiration = wsState.respiration || "";
+      const denitrification = wsState.denitrification || "";
+      const methanogenesis = wsState.methanogenesis || "";
+      const nitrification = wsState.nitrification || "";
+
+      const verifyAerobic = () => {
+        const correct = respiration === "Aerobic" && denitrification === "Anaerobic" && methanogenesis === "Anaerobic" && nitrification === "Aerobic";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls23", respiration, denitrification, methanogenesis, nitrification, is_correct: correct }, "aerobic_anaerobic", "OAS.B.LS2.3");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls23" }, "aerobic_anaerobic", "OAS.B.LS2.3");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify each biological process as Aerobic (requires oxygen) or Anaerobic (oxygen-free environment):</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Aerobic Respiration (cellular energy)</label>
+              <select disabled={isCompleted} value={respiration} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, respiration: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select class...</option>
+                <option value="Aerobic">Aerobic</option>
+                <option value="Anaerobic">Anaerobic</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Denitrification by soil bacteria (nitrates to nitrogen gas)</label>
+              <select disabled={isCompleted} value={denitrification} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, denitrification: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select class...</option>
+                <option value="Aerobic">Aerobic</option>
+                <option value="Anaerobic">Anaerobic</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Methanogenesis in wetland muds</label>
+              <select disabled={isCompleted} value={methanogenesis} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, methanogenesis: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select class...</option>
+                <option value="Aerobic">Aerobic</option>
+                <option value="Anaerobic">Anaerobic</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">4. Nitrification (ammonia to nitrates)</label>
+              <select disabled={isCompleted} value={nitrification} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, nitrification: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select class...</option>
+                <option value="Aerobic">Aerobic</option>
+                <option value="Anaerobic">Anaerobic</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyAerobic} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Process Types Verified" : "Verify Processes"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const moisture = wsState.moisture || 10;
+      const rate = wsState.rate || 10;
+
+      const verifyFlux = () => {
+        const correct = parseInt(moisture) === 60 && parseInt(rate) === 80;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls23", moisture, rate, is_correct: correct }, "matter_flux_simulator", "OAS.B.LS2.3");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls23" }, "matter_flux_simulator", "OAS.B.LS2.3");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate soil moisture and bacterial rates to maximize Nitrogen mineral fluxes. Targets: Soil Moisture = **60%**, Nitrification Rate = **80%**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Soil Moisture Level</span>
+                <span className="text-indigo-400">{moisture}%</span>
+              </div>
+              <input type="range" min="0" max="100" step="10" disabled={isCompleted} value={moisture} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, moisture: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Nitrification Efficiency</span>
+                <span className="text-rose-400">{rate}%</span>
+              </div>
+              <input type="range" min="0" max="100" step="10" disabled={isCompleted} value={rate} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, rate: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyFlux} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Nitrogen Flux Optimized" : "Calibrate Flux Sandbox"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const runoff = wsState.runoff || 2;
+      const oxygen = wsState.oxygen || 2;
+
+      const verifyEutrophication = () => {
+        const correct = parseInt(runoff) === 10 && parseInt(oxygen) === 8;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls23", runoff, oxygen, is_correct: correct }, "eutrophication_tuner", "OAS.B.LS2.3");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls23" }, "eutrophication_tuner", "OAS.B.LS2.3");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate phosphorus runoff limits and aeration rates to prevent algal blooms and maintain Dissolved Oxygen. Target Phosphorus Runoff = **10 ppm**, Dissolved Oxygen = **8 ppm**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Phosphorus Runoff Limit</span>
+                <span className="text-indigo-400">{runoff} ppm</span>
+              </div>
+              <input type="range" min="2" max="20" step="2" disabled={isCompleted} value={runoff} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, runoff: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Dissolved Oxygen (DO) Goal</span>
+                <span className="text-rose-400">{oxygen} ppm</span>
+              </div>
+              <input type="range" min="2" max="14" step="1" disabled={isCompleted} value={oxygen} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, oxygen: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyEutrophication} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Eutrophication Parameters Verified" : "Tune Eutrophication"}</button>
+        </div>
+      );
+    }
+  };
+
+  const renderLs24Workspaces = () => {
+    const key = `OAS.B.LS2.4_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const producer = wsState.producer || "";
+      const primary = wsState.primary || "";
+      const secondary = wsState.secondary || "";
+      const tertiary = wsState.tertiary || "";
+
+      const verifyLevels = () => {
+        const correct = producer === "Producer" && primary === "Primary" && secondary === "Secondary" && tertiary === "Tertiary";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls24", producer, primary, secondary, tertiary, is_correct: correct }, "trophic_level_match", "OAS.B.LS2.4");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls24" }, "trophic_level_match", "OAS.B.LS2.4");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify each species role into its correct trophic level category:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Marine Phytoplankton</label>
+              <select disabled={isCompleted} value={producer} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, producer: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select level...</option>
+                <option value="Producer">Primary Producer (Autotroph)</option>
+                <option value="Primary">Primary Consumer (Herbivore)</option>
+                <option value="Secondary">Secondary Consumer (Carnivore)</option>
+                <option value="Tertiary">Tertiary Consumer (Apex Predator)</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Zooplankton grazers</label>
+              <select disabled={isCompleted} value={primary} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, primary: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select level...</option>
+                <option value="Producer">Primary Producer</option>
+                <option value="Primary">Primary Consumer</option>
+                <option value="Secondary">Secondary Consumer</option>
+                <option value="Tertiary">Tertiary Consumer</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Northern Anchovy small schooling fish</label>
+              <select disabled={isCompleted} value={secondary} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, secondary: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select level...</option>
+                <option value="Producer">Primary Producer</option>
+                <option value="Primary">Primary Consumer</option>
+                <option value="Secondary">Secondary Consumer</option>
+                <option value="Tertiary">Tertiary Consumer</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">4. Bluefin Tuna large pelagic predator</label>
+              <select disabled={isCompleted} value={tertiary} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, tertiary: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select level...</option>
+                <option value="Producer">Primary Producer</option>
+                <option value="Primary">Primary Consumer</option>
+                <option value="Secondary">Secondary Consumer</option>
+                <option value="Tertiary">Tertiary Consumer</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyLevels} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Trophic Levels Verified" : "Verify Levels"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const defaultOrder = ["10,000 J", "1,000 J", "100 J", "10 J"];
+      const currentOrder = wsState.order || ["100 J", "10,000 J", "10 J", "1,000 J"];
+
+      const moveItem = (index, direction) => {
+        if (isCompleted) return;
+        const newOrder = [...currentOrder];
+        const nextIndex = index + direction;
+        if (nextIndex < 0 || nextIndex >= newOrder.length) return;
+        [newOrder[index], newOrder[nextIndex]] = [newOrder[nextIndex], newOrder[index]];
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, order: newOrder } }));
+      };
+
+      const verifyRule = () => {
+        const correct = JSON.stringify(currentOrder) === JSON.stringify(defaultOrder);
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls24", order: currentOrder, is_correct: correct }, "energy_10_percent", "OAS.B.LS2.4");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls24" }, "energy_10_percent", "OAS.B.LS2.4");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Arrange remaining energy values from producers (top) down to tertiary consumers (bottom) based on the 10% transfer rule:</p>
+          <div className="space-y-2">
+            {currentOrder.map((component, idx) => (
+              <div key={component} className="flex justify-between items-center bg-zinc-900 border border-zinc-800 rounded-xl p-3">
+                <span className="text-xs font-mono font-bold text-white">{idx + 1}. {component}</span>
+                <div className="flex gap-1">
+                  <button onClick={() => moveItem(idx, -1)} disabled={isCompleted || idx === 0} className="p-1 text-xs bg-zinc-950 hover:bg-zinc-850 border border-zinc-855 rounded text-zinc-400 disabled:opacity-30">▲</button>
+                  <button onClick={() => moveItem(idx, 1)} disabled={isCompleted || idx === currentOrder.length - 1} className="p-1 text-xs bg-zinc-950 hover:bg-zinc-850 border border-zinc-855 rounded text-zinc-400 disabled:opacity-30">▼</button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button onClick={verifyRule} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ 10% Rule Sorter Verified" : "Verify Energy Sorter"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const phytoplankton = wsState.phytoplankton || "";
+      const zooplankton = wsState.zooplankton || "";
+      const smallfish = wsState.smallfish || "";
+
+      const verifyBiomass = () => {
+        const correct = phytoplankton === "Low" && zooplankton === "High" && smallfish === "Medium";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls24", phytoplankton, zooplankton, smallfish, is_correct: correct }, "trophic_biomass", "OAS.B.LS2.4");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls24" }, "trophic_biomass", "OAS.B.LS2.4");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Identify the standing crop biomass density levels in an inverted aquatic ecosystem pyramid:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Phytoplankton Producers (High turnover)</label>
+              <select disabled={isCompleted} value={phytoplankton} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, phytoplankton: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select density...</option>
+                <option value="Low">Low (Fast reproduction, low standing crop)</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High (High standing crop)</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Zooplankton Primary Consumers</label>
+              <select disabled={isCompleted} value={zooplankton} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, zooplankton: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select density...</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High (Higher standing crop than producers)</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Small Schooling Fish Secondary Consumers</label>
+              <select disabled={isCompleted} value={smallfish} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, smallfish: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select density...</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium (Balanced intermediate density)</option>
+                <option value="High">High</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyBiomass} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Biomass Turnover Verified" : "Verify Biomass Matches"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const solar = wsState.solar || 1000;
+      const efficiency = wsState.efficiency || 5;
+
+      const verifyEfficiency = () => {
+        const correct = parseInt(solar) === 5000 && parseInt(efficiency) === 10;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls24", solar, efficiency, is_correct: correct }, "ecosystem_efficiency", "OAS.B.LS2.4");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls24" }, "ecosystem_efficiency", "OAS.B.LS2.4");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate insolation rates and trophic transfer efficiency to maintain food chain length. Targets: Solar Insolation = **5000 W/m2**, Ecological Efficiency = **10%**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Solar Insolation</span>
+                <span className="text-indigo-400">{solar} W/m2</span>
+              </div>
+              <input type="range" min="1000" max="10000" step="1000" disabled={isCompleted} value={solar} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, solar: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Ecological Transfer Efficiency</span>
+                <span className="text-rose-400">{efficiency}%</span>
+              </div>
+              <input type="range" min="5" max="25" step="5" disabled={isCompleted} value={efficiency} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, efficiency: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyEfficiency} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Trophic Efficiency Verified" : "Tune Efficiency"}</button>
+        </div>
+      );
+    }
+  };
+
+  const renderLs25Workspaces = () => {
+    const key = `OAS.B.LS2.5_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const atmosphere = wsState.atmosphere || "";
+      const geosphere = wsState.geosphere || "";
+      const biosphere = wsState.biosphere || "";
+      const hydrosphere = wsState.hydrosphere || "";
+
+      const verifyReservoirs = () => {
+        const correct = atmosphere === "Atmosphere" && geosphere === "Geosphere" && biosphere === "Biosphere" && hydrosphere === "Hydrosphere";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls25", atmosphere, geosphere, biosphere, hydrosphere, is_correct: correct }, "carbon_reservoirs", "OAS.B.LS2.5");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls25" }, "carbon_reservoirs", "OAS.B.LS2.5");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify each carbon reservoir into its correct planetary sphere:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Atmospheric CO2 Gas</label>
+              <select disabled={isCompleted} value={atmosphere} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, atmosphere: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select sphere...</option>
+                <option value="Atmosphere">Atmosphere</option>
+                <option value="Geosphere">Geosphere</option>
+                <option value="Biosphere">Biosphere</option>
+                <option value="Hydrosphere">Hydrosphere</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Fossil Coal & Limestone Sediments</label>
+              <select disabled={isCompleted} value={geosphere} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, geosphere: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select sphere...</option>
+                <option value="Atmosphere">Atmosphere</option>
+                <option value="Geosphere">Geosphere</option>
+                <option value="Biosphere">Biosphere</option>
+                <option value="Hydrosphere">Hydrosphere</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Living Vegetation cellulose</label>
+              <select disabled={isCompleted} value={biosphere} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, biosphere: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select sphere...</option>
+                <option value="Atmosphere">Atmosphere</option>
+                <option value="Geosphere">Geosphere</option>
+                <option value="Biosphere">Biosphere</option>
+                <option value="Hydrosphere">Hydrosphere</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">4. Dissolved Bicarbonate Ions</label>
+              <select disabled={isCompleted} value={hydrosphere} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, hydrosphere: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select sphere...</option>
+                <option value="Atmosphere">Atmosphere</option>
+                <option value="Geosphere">Geosphere</option>
+                <option value="Biosphere">Biosphere</option>
+                <option value="Hydrosphere">Hydrosphere</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyReservoirs} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Reservoirs Verified" : "Verify Reservoirs"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const photosynthesis = wsState.photosynthesis || "";
+      const combustion = wsState.combustion || "";
+      const outgassing = wsState.outgassing || "";
+      const absorption = wsState.absorption || "";
+
+      const verifyProcesses = () => {
+        const correct = photosynthesis === "AtmToBio" && combustion === "GeoToAtm" && outgassing === "GeoToAtm" && absorption === "AtmToHyd";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls25", photosynthesis, combustion, outgassing, absorption, is_correct: correct }, "carbon_processes", "OAS.B.LS2.5");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls25" }, "carbon_processes", "OAS.B.LS2.5");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify the directional path of each carbon cycle chemical process:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Plant Photosynthesis</label>
+              <select disabled={isCompleted} value={photosynthesis} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, photosynthesis: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select direction...</option>
+                <option value="AtmToBio">Atmosphere to Biosphere</option>
+                <option value="GeoToAtm">Geosphere to Atmosphere</option>
+                <option value="AtmToHyd">Atmosphere to Hydrosphere</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Industrial Coal Combustion</label>
+              <select disabled={isCompleted} value={combustion} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, combustion: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select direction...</option>
+                <option value="AtmToBio">Atmosphere to Biosphere</option>
+                <option value="GeoToAtm">Geosphere to Atmosphere</option>
+                <option value="AtmToHyd">Atmosphere to Hydrosphere</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Volcanic outgassing</label>
+              <select disabled={isCompleted} value={outgassing} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, outgassing: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select direction...</option>
+                <option value="AtmToBio">Atmosphere to Biosphere</option>
+                <option value="GeoToAtm">Geosphere to Atmosphere</option>
+                <option value="AtmToHyd">Atmosphere to Hydrosphere</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">4. Ocean dissolution absorption</label>
+              <select disabled={isCompleted} value={absorption} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, absorption: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select direction...</option>
+                <option value="AtmToBio">Atmosphere to Biosphere</option>
+                <option value="GeoToAtm">Geosphere to Atmosphere</option>
+                <option value="AtmToHyd">Atmosphere to Hydrosphere</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyProcesses} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Processes Verified" : "Verify Processes"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const emission = wsState.emission || 1;
+      const sink = wsState.sink || 1;
+
+      const verifyFlux = () => {
+        const correct = parseInt(emission) === 5 && parseInt(sink) === 3;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls25", emission, sink, is_correct: correct }, "carbon_flux", "OAS.B.LS2.5");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls25" }, "carbon_flux", "OAS.B.LS2.5");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate human emissions and ocean buffer carbon fluxes to balance atmospheric spikes. Target Fossil Fuel Emissions = **5 GtC/yr**, Ocean Carbon Sink = **3 GtC/yr**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Fossil Fuel Emissions</span>
+                <span className="text-indigo-400">{emission} GtC/yr</span>
+              </div>
+              <input type="range" min="1" max="10" step="1" disabled={isCompleted} value={emission} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, emission: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Ocean Carbon Sink</span>
+                <span className="text-rose-400">{sink} GtC/yr</span>
+              </div>
+              <input type="range" min="1" max="5" step="1" disabled={isCompleted} value={sink} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, sink: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyFlux} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Carbon Fluxes Balanced" : "Verify Flux Simulator"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const co2 = wsState.co2 || 400;
+      const albedo = wsState.albedo || 10;
+
+      const verifyGlobal = () => {
+        const correct = parseInt(co2) === 350 && parseInt(albedo) === 30;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls25", co2, albedo, is_correct: correct }, "global_temp_optimizer", "OAS.B.LS2.5");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls25" }, "global_temp_optimizer", "OAS.B.LS2.5");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate atmospheric greenhouse concentration and Earth surface albedo indices to stabilize global temperature anomalies. Targets: Atmospheric CO2 = **350 ppm**, Global Albedo = **30%**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Atmospheric CO2 Concentration</span>
+                <span className="text-indigo-400">{co2} ppm</span>
+              </div>
+              <input type="range" min="300" max="600" step="10" disabled={isCompleted} value={co2} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, co2: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Global Albedo Index</span>
+                <span className="text-rose-400">{albedo}%</span>
+              </div>
+              <input type="range" min="10" max="50" step="5" disabled={isCompleted} value={albedo} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, albedo: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyGlobal} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Temperature Anomalies Stabilized" : "Optimize Temperature"}</button>
+        </div>
+      );
+    }
+  };
+
+  const renderLs26Workspaces = () => {
+    const key = `OAS.B.LS2.6_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+
+    if (selectedDok === 1) {
+      const resistance = wsState.resistance || "";
+      const resilience = wsState.resilience || "";
+      const equilibrium = wsState.equilibrium || "";
+
+      const verifyStability = () => {
+        const correct = resistance === "Resistance" && resilience === "Resilience" && equilibrium === "Equilibrium";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok1_activity_check", { activity_id: "bio_dok1_act1_workspace_ls26", resistance, resilience, equilibrium, is_correct: correct }, "stability_factors", "OAS.B.LS2.6");
+        if (correct) {
+          logTelemetryEvent("dok1_activity_complete", { activity_id: "bio_dok1_act1_workspace_ls26" }, "stability_factors", "OAS.B.LS2.6");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Match each ecology term to its correct ecosystem stability definition:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Ability to withstand perturbation or direct disruption without change</label>
+              <select disabled={isCompleted} value={resistance} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, resistance: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select term...</option>
+                <option value="Resistance">Resistance</option>
+                <option value="Resilience">Resilience</option>
+                <option value="Equilibrium">Dynamic Equilibrium</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Speed and capacity of an ecosystem to recover following a disturbance</label>
+              <select disabled={isCompleted} value={resilience} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, resilience: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select term...</option>
+                <option value="Resistance">Resistance</option>
+                <option value="Resilience">Resilience</option>
+                <option value="Equilibrium">Dynamic Equilibrium</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. A state of balance around a physiological or environmental setpoint</label>
+              <select disabled={isCompleted} value={equilibrium} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, equilibrium: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select term...</option>
+                <option value="Resistance">Resistance</option>
+                <option value="Resilience">Resilience</option>
+                <option value="Equilibrium">Dynamic Equilibrium</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifyStability} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Stability Terms Verified" : "Verify Terms"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const pioneer = wsState.pioneer || "";
+      const intermediate = wsState.intermediate || "";
+      const climax = wsState.climax || "";
+
+      const verifySuccession = () => {
+        const correct = pioneer === "Pioneer" && intermediate === "Intermediate" && climax === "Climax";
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok2_activity_check", { activity_id: "bio_dok2_act1_workspace_ls26", pioneer, intermediate, climax, is_correct: correct }, "succession_colonizers", "OAS.B.LS2.6");
+        if (correct) {
+          logTelemetryEvent("dok2_activity_complete", { activity_id: "bio_dok2_act1_workspace_ls26" }, "succession_colonizers", "OAS.B.LS2.6");
+        }
+      };
+
+      return (
+        <div className="space-y-4 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Classify each species community into its correct succession developmental stage:</p>
+          <div className="space-y-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">1. Lichens & pioneer mosses</label>
+              <select disabled={isCompleted} value={pioneer} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, pioneer: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select stage...</option>
+                <option value="Pioneer">Pioneer Stage (Initial colonization)</option>
+                <option value="Intermediate">Intermediate Stage (Grasses/Shrubs)</option>
+                <option value="Climax">Climax Stage (Shade-tolerant trees)</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">2. Grasses, herbaceous perennials & shrubs</label>
+              <select disabled={isCompleted} value={intermediate} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, intermediate: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select stage...</option>
+                <option value="Pioneer">Pioneer Stage</option>
+                <option value="Intermediate">Intermediate Stage</option>
+                <option value="Climax">Climax Stage</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] text-zinc-500 font-bold uppercase">3. Oak & hickory climax trees</label>
+              <select disabled={isCompleted} value={climax} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, climax: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2 text-xs text-white">
+                <option value="">Select stage...</option>
+                <option value="Pioneer">Pioneer Stage</option>
+                <option value="Intermediate">Intermediate Stage</option>
+                <option value="Climax">Climax Stage</option>
+              </select>
+            </div>
+          </div>
+          <button onClick={verifySuccession} disabled={isCompleted} className={`w-full py-2 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Succession Stages Verified" : "Verify Succession"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const frequency = wsState.frequency || 5;
+      const severity = wsState.severity || 10;
+
+      const verifyDisturbance = () => {
+        const correct = parseInt(frequency) === 20 && parseInt(severity) === 40;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok3_activity_check", { activity_id: "bio_dok3_act1_workspace_ls26", frequency, severity, is_correct: correct }, "disturbance_sandbox", "OAS.B.LS2.6");
+        if (correct) {
+          logTelemetryEvent("dok3_activity_complete", { activity_id: "bio_dok3_act1_workspace_ls26" }, "disturbance_sandbox", "OAS.B.LS2.6");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate fire frequencies and severity factors to analyze ecosystem patch recovery. Targets: Fire Frequency = **20 years**, Disturbance Severity = **40%**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Fire Return Interval (Frequency)</span>
+                <span className="text-indigo-400">{frequency} years</span>
+              </div>
+              <input type="range" min="5" max="50" step="5" disabled={isCompleted} value={frequency} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, frequency: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Disturbance Severity</span>
+                <span className="text-rose-400">{severity}%</span>
+              </div>
+              <input type="range" min="10" max="100" step="10" disabled={isCompleted} value={severity} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, severity: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyDisturbance} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Disturbance Severity Calibrated" : "Verify Disturbance Sandbox"}</button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const density = wsState.density || 50;
+      const nitrogen = wsState.nitrogen || 20;
+
+      const verifyRecovery = () => {
+        const correct = parseInt(density) === 200 && parseInt(nitrogen) === 80;
+        setDokWorkspaces(prev => ({ ...prev, [`${key}_completed`]: correct }));
+        logTelemetryEvent("dok4_activity_check", { activity_id: "bio_dok4_act1_workspace_ls26", density, nitrogen, is_correct: correct }, "ecosystem_recovery_planner", "OAS.B.LS2.6");
+        if (correct) {
+          logTelemetryEvent("dok4_activity_complete", { activity_id: "bio_dok4_act1_workspace_ls26" }, "ecosystem_recovery_planner", "OAS.B.LS2.6");
+        }
+      };
+
+      return (
+        <div className="space-y-6 max-w-md mx-auto">
+          <p className="text-xs text-zinc-400 text-center">Calibrate reforestation planting density and soil nitrogen content to recover logged lands to dynamic equilibrium. Targets: Planting Density = **200 trees/acre**, Soil Nitrogen = **80 ppm**:</p>
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Reforestation Planting Density</span>
+                <span className="text-indigo-400">{density} trees/acre</span>
+              </div>
+              <input type="range" min="50" max="500" step="50" disabled={isCompleted} value={density} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, density: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[10px] font-bold text-zinc-500 uppercase">
+                <span>Soil Nitrogen Content</span>
+                <span className="text-rose-400">{nitrogen} ppm</span>
+              </div>
+              <input type="range" min="20" max="200" step="20" disabled={isCompleted} value={nitrogen} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, nitrogen: e.target.value } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-rose-500" />
+            </div>
+          </div>
+          <button onClick={verifyRecovery} disabled={isCompleted} className={`w-full py-2.5 rounded-lg border text-xs font-bold transition ${isCompleted ? "bg-emerald-600/10 border-emerald-500/20 text-emerald-400" : "bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500"}`}>{isCompleted ? "✓ Ecosystem Recovery Planner Calibrated" : "Verify Recovery Planner"}</button>
+        </div>
+      );
+    }
+  };
+
+
+
       return (
         <div className="space-y-6 max-w-md mx-auto">
           <p className="text-xs text-zinc-400 text-center">Calibrate community biodiversity parameters to maximize ecosystem resilience against wildfire disturbances. Targets: Richness = **15**, Evenness = **100%**:</p>
@@ -19219,6 +28579,10 @@ export default function Home() {
                           <option value="OAS.B.LS1.7">OAS B.LS1.7: Cellular Respiration</option>
                           <option value="OAS.B.LS2.1">OAS B.LS2.1: Carrying Capacity Factors</option>
                           <option value="OAS.B.LS2.2">OAS B.LS2.2: Biodiversity Factors</option>
+                          <option value="OAS.B.LS2.3">OAS B.LS2.3: Cycling of Matter</option>
+                          <option value="OAS.B.LS2.4">OAS B.LS2.4: Ecosystem Energy Flow</option>
+                          <option value="OAS.B.LS2.5">OAS B.LS2.5: Carbon Cycling Spheres</option>
+                          <option value="OAS.B.LS2.6">OAS B.LS2.6: Ecosystem Stability Evaluation</option>
                           <option value="OAS.B.PS1.1">OAS B.PS1.1: Matter & Interactions</option>
                         </select>
                       </div>
@@ -21202,8 +30566,8 @@ export default function Home() {
                           </div>
                         )}
                       </div>
-                    ) : (selectedStandard === "OAS.B.LS1.2" || selectedStandard === "OAS.B.LS1.3" || selectedStandard === "OAS.B.LS1.4" || selectedStandard === "OAS.B.LS1.5" || selectedStandard === "OAS.B.LS1.6" || selectedStandard === "OAS.B.LS1.7" || selectedStandard === "OAS.B.LS2.1" || selectedStandard === "OAS.B.LS2.2") ? (
-                      /* DOK Workspaces for B.LS1.2, B.LS1.3, B.LS1.4, B.LS1.5, B.LS1.6, B.LS1.7, B.LS2.1, B.LS2.2 */
+                    ) : (selectedStandard === "OAS.B.LS1.2" || selectedStandard === "OAS.B.LS1.3" || selectedStandard === "OAS.B.LS1.4" || selectedStandard === "OAS.B.LS1.5" || selectedStandard === "OAS.B.LS1.6" || selectedStandard === "OAS.B.LS1.7" || selectedStandard === "OAS.B.LS2.1" || selectedStandard === "OAS.B.LS2.2" || selectedStandard === "OAS.B.LS2.3" || selectedStandard === "OAS.B.LS2.4" || selectedStandard === "OAS.B.LS2.5" || selectedStandard === "OAS.B.LS2.6") ? (
+                      /* DOK Workspaces for B.LS1.2 to B.LS2.6 */
                       <div className="space-y-6 animate-fadeIn">
                         <div>
                           <span className="text-xs font-bold uppercase tracking-wider text-indigo-400">Active Workspace</span>
@@ -21259,6 +30623,18 @@ export default function Home() {
  
                             {/* Render B.LS2.2 Workspaces */}
                             {selectedStandard === "OAS.B.LS2.2" && renderLs22Workspaces()}
+ 
+                            {/* Render B.LS2.3 Workspaces */}
+                            {selectedStandard === "OAS.B.LS2.3" && renderLs23Workspaces()}
+ 
+                            {/* Render B.LS2.4 Workspaces */}
+                            {selectedStandard === "OAS.B.LS2.4" && renderLs24Workspaces()}
+ 
+                            {/* Render B.LS2.5 Workspaces */}
+                            {selectedStandard === "OAS.B.LS2.5" && renderLs25Workspaces()}
+ 
+                            {/* Render B.LS2.6 Workspaces */}
+                            {selectedStandard === "OAS.B.LS2.6" && renderLs26Workspaces()}
                           </div>
                         )}
                       </div>
@@ -23570,6 +32946,150 @@ export default function Home() {
                           <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
                             <span>Biodiversity Ecosystem Stability & Resiliency:</span>
                             <span className="text-white font-bold">{parentReportData.bkt_biodiversity_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS2.3) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS2.3</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_matter_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_matter_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_matter_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_matter_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_matter_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Biogeochemical Matter Cycling (Aerobic & Anaerobic):</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_matter_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS2.4) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS2.4</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_energy_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_energy_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_energy_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_energy_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_energy_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Ecosystem Energy Flow & Food Web Pyramids:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_energy_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS2.5) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS2.5</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_carbon_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_carbon_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_carbon_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_carbon_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_carbon_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Global Carbon Cycle & Environmental Spheres:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_carbon_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Life Sciences - B.LS2.6) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: B.LS2.6</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_stability_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_stability_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_stability_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_stability_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_stability_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Ecosystem Stability & Disturbance Resilience:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_stability_mastery ?? "15.0"}%</span>
                           </div>
                         </div>
                       </div>

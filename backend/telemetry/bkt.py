@@ -37,6 +37,14 @@ def run_student_bkt_updates(student_id, session_id):
             ev_type = 'capacity_check'
         elif ev.construct_tag == 'OAS.B.LS2.2':
             ev_type = 'biodiversity_check'
+        elif ev.construct_tag == 'OAS.B.LS2.3':
+            ev_type = 'matter_check'
+        elif ev.construct_tag == 'OAS.B.LS2.4':
+            ev_type = 'energy_check'
+        elif ev.construct_tag == 'OAS.B.LS2.5':
+            ev_type = 'carbon_check'
+        elif ev.construct_tag == 'OAS.B.LS2.6':
+            ev_type = 'stability_check'
         elif ev_type in ['dok1_activity_check', 'dok2_activity_check', 'dok3_activity_check', 'dok4_activity_check']:
             activity_id = ev.payload.get('activity_id', '')
             if activity_id in [
@@ -246,6 +254,70 @@ def run_student_bkt_updates(student_id, session_id):
                 state.biodiversity_p_slip = min(0.30, state.biodiversity_p_slip + 0.01)
                 
             state.biodiversity_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'matter_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.matter_p_know
+            p_guess = state.matter_p_guess
+            p_slip = state.matter_p_slip
+            p_transit = state.matter_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.matter_p_slip = max(0.02, state.matter_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.matter_p_slip = min(0.30, state.matter_p_slip + 0.01)
+                
+            state.matter_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'energy_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.energy_p_know
+            p_guess = state.energy_p_guess
+            p_slip = state.energy_p_slip
+            p_transit = state.energy_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.energy_p_slip = max(0.02, state.energy_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.energy_p_slip = min(0.30, state.energy_p_slip + 0.01)
+                
+            state.energy_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'carbon_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.carbon_p_know
+            p_guess = state.carbon_p_guess
+            p_slip = state.carbon_p_slip
+            p_transit = state.carbon_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.carbon_p_slip = max(0.02, state.carbon_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.carbon_p_slip = min(0.30, state.carbon_p_slip + 0.01)
+                
+            state.carbon_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'stability_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.stability_p_know
+            p_guess = state.stability_p_guess
+            p_slip = state.stability_p_slip
+            p_transit = state.stability_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.stability_p_slip = max(0.02, state.stability_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.stability_p_slip = min(0.30, state.stability_p_slip + 0.01)
+                
+            state.stability_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
 
     state.save()
 

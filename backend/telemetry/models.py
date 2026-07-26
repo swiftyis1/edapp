@@ -193,6 +193,30 @@ class StudentBKTState(models.Model):
     biodiversity_p_slip = models.FloatField(default=0.10)
     biodiversity_p_transit = models.FloatField(default=0.15)
     
+    # Skill: Cycling of Matter (OAS B.LS2.3)
+    matter_p_know = models.FloatField(default=0.15)
+    matter_p_guess = models.FloatField(default=0.20)
+    matter_p_slip = models.FloatField(default=0.10)
+    matter_p_transit = models.FloatField(default=0.15)
+    
+    # Skill: Ecosystem Energy Flow (OAS B.LS2.4)
+    energy_p_know = models.FloatField(default=0.15)
+    energy_p_guess = models.FloatField(default=0.20)
+    energy_p_slip = models.FloatField(default=0.10)
+    energy_p_transit = models.FloatField(default=0.15)
+    
+    # Skill: Carbon Cycling Spheres (OAS B.LS2.5)
+    carbon_p_know = models.FloatField(default=0.15)
+    carbon_p_guess = models.FloatField(default=0.20)
+    carbon_p_slip = models.FloatField(default=0.10)
+    carbon_p_transit = models.FloatField(default=0.15)
+    
+    # Skill: Ecosystem Stability Evaluation (OAS B.LS2.6)
+    stability_p_know = models.FloatField(default=0.15)
+    stability_p_guess = models.FloatField(default=0.20)
+    stability_p_slip = models.FloatField(default=0.10)
+    stability_p_transit = models.FloatField(default=0.15)
+    
     last_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):

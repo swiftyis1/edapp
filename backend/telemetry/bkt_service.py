@@ -193,6 +193,66 @@ def update_bkt_state_for_event(student, event_type, is_correct):
             
         state.biodiversity_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
 
+    elif event_type == 'matter_check':
+        p_know = state.matter_p_know
+        p_guess = state.matter_p_guess
+        p_slip = state.matter_p_slip
+        p_transit = state.matter_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.matter_p_slip = max(0.02, state.matter_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.matter_p_slip = min(0.30, state.matter_p_slip + 0.01)
+            
+        state.matter_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'energy_check':
+        p_know = state.energy_p_know
+        p_guess = state.energy_p_guess
+        p_slip = state.energy_p_slip
+        p_transit = state.energy_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.energy_p_slip = max(0.02, state.energy_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.energy_p_slip = min(0.30, state.energy_p_slip + 0.01)
+            
+        state.energy_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'carbon_check':
+        p_know = state.carbon_p_know
+        p_guess = state.carbon_p_guess
+        p_slip = state.carbon_p_slip
+        p_transit = state.carbon_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.carbon_p_slip = max(0.02, state.carbon_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.carbon_p_slip = min(0.30, state.carbon_p_slip + 0.01)
+            
+        state.carbon_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'stability_check':
+        p_know = state.stability_p_know
+        p_guess = state.stability_p_guess
+        p_slip = state.stability_p_slip
+        p_transit = state.stability_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.stability_p_slip = max(0.02, state.stability_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.stability_p_slip = min(0.30, state.stability_p_slip + 0.01)
+            
+        state.stability_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
     state.save()
 
     # Append to BKT History for temporal growth charting
@@ -256,6 +316,30 @@ def update_bkt_state_for_event(student, event_type, is_correct):
             student=student,
             construct_tag='OAS.B.LS2.2',
             p_know=state.biodiversity_p_know
+        )
+    elif event_type == 'matter_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS2.3',
+            p_know=state.matter_p_know
+        )
+    elif event_type == 'energy_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS2.4',
+            p_know=state.energy_p_know
+        )
+    elif event_type == 'carbon_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS2.5',
+            p_know=state.carbon_p_know
+        )
+    elif event_type == 'stability_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.B.LS2.6',
+            p_know=state.stability_p_know
         )
 
     return state
