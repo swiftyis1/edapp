@@ -1,4 +1,4 @@
-# Sprint 17: Interactive Data Analytics Pipeline & Dashboards (Weeks 33 & 34)
+# Future Sprint 7: Interactive Data Analytics Pipeline & Dashboards (Weeks 33 & 34)
 
 **Status:** 🗄️ Backlog
 **Theme:** Implement a data science dashboard allowing students to filter, aggregate, and plot datasets using Python/pandas simulation models.

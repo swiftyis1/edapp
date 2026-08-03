@@ -1,4 +1,4 @@
-# Sprint 13: Vertex AI Integration & CareerTech ML Predictor (Weeks 25 & 26)
+# Future Sprint 3: Vertex AI Integration & CareerTech ML Predictor (Weeks 25 & 26)
 
 **Status:** 🗄️ Backlog
 **Theme:** Connect Google Cloud Vertex AI to predict student credential readiness and classify skill gaps using student telemetry.

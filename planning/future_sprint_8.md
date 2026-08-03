@@ -1,4 +1,4 @@
-# Sprint 18: Video Game Design Engine & Scripting Sandbox (Weeks 35 & 36)
+# Future Sprint 8: Video Game Design Engine & Scripting Sandbox (Weeks 35 & 36)
 
 **Status:** 🗄️ Backlog
 **Theme:** Implement a visual 2D game editor, sprite sheets manager, and Javascript event loop scripting sandbox.

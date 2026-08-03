@@ -1,4 +1,4 @@
-# Sprint 15: Animatronics Microcontroller & Logic Gates Simulator (Weeks 29 & 30)
+# Future Sprint 5: Animatronics Microcontroller & Logic Gates Simulator (Weeks 29 & 30)
 
 **Status:** 🗄️ Backlog
 **Theme:** Create a visual breadboard, logic gate circuit board designer, and microcontroller compiler simulation for high school robotics.

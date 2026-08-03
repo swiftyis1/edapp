@@ -1,4 +1,4 @@
-# Sprint 12: Drone Engineering & Flight Physics Simulator (Weeks 23 & 24)
+# Future Sprint 2: Drone Engineering & Flight Physics Simulator (Weeks 23 & 24)
 
 **Status:** 🗄️ Backlog
 **Theme:** Implement a drone assembly workbench, 3D lift/thrust physics modeler, and flight telemetry ingestion services.

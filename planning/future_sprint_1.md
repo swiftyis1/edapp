@@ -1,4 +1,4 @@
-# Sprint 11: FAA Part 107 Exam Prep & Drone Ground School (Weeks 21 & 22)
+# Future Sprint 1: FAA Part 107 Exam Prep & Drone Ground School (Weeks 21 & 22)
 
 **Status:** 🗄️ Backlog
 **Theme:** Implement a Part 107 ground school training simulator with dynamic study modules, mock exams, and teacher telemetry tracking for FAA regulations.

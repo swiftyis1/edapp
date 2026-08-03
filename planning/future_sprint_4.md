@@ -1,4 +1,4 @@
-# Sprint 14: AI Ethics Simulator & Ethical Decision Trees (Weeks 27 & 28)
+# Future Sprint 4: AI Ethics Simulator & Ethical Decision Trees (Weeks 27 & 28)
 
 **Status:** 🗄️ Backlog
 **Theme:** Create interactive case studies and decision-tree simulators addressing bias, safety, privacy, and accountability in AI applications.
