@@ -139,6 +139,24 @@ def telemetry_receive(request):
                 actual_event_type = 'extinction_check'
             elif construct_tag == 'OAS.PS.PS1.2':
                 actual_event_type = 'reactions_check'
+            elif construct_tag == 'OAS.PS.PS1.5':
+                actual_event_type = 'rates_check'
+            elif construct_tag == 'OAS.PS.PS1.7':
+                actual_event_type = 'conservation_check'
+            elif construct_tag == 'OAS.PS.PS2.5':
+                actual_event_type = 'induction_check'
+            elif construct_tag == 'OAS.PS.PS3.1':
+                actual_event_type = 'energyflows_check'
+            elif construct_tag == 'OAS.PS.PS3.2':
+                actual_event_type = 'storage_check'
+            elif construct_tag == 'OAS.PS.PS3.3':
+                actual_event_type = 'devices_check'
+            elif construct_tag == 'OAS.PS.PS3.4':
+                actual_event_type = 'thermal_check'
+            elif construct_tag == 'OAS.PS.PS4.1':
+                actual_event_type = 'wavekinematics_check'
+            elif construct_tag == 'OAS.PS.PS4.4':
+                actual_event_type = 'radiation_check'
             elif event_type in ['dok1_activity_check', 'dok2_activity_check', 'dok3_activity_check', 'dok4_activity_check']:
                 activity_id = payload.get('activity_id', '')
                 if activity_id in [
@@ -357,6 +375,15 @@ def teacher_report(request):
             bkt_adaptation_mastery = round(bkt_state.adaptation_p_know * 100, 1)
             bkt_extinction_mastery = round(bkt_state.extinction_p_know * 100, 1)
             bkt_reactions_mastery = round(bkt_state.reactions_p_know * 100, 1)
+            bkt_rates_mastery = round(bkt_state.rates_p_know * 100, 1)
+            bkt_conservation_mastery = round(bkt_state.conservation_p_know * 100, 1)
+            bkt_induction_mastery = round(bkt_state.induction_p_know * 100, 1)
+            bkt_energyflows_mastery = round(bkt_state.energyflows_p_know * 100, 1)
+            bkt_storage_mastery = round(bkt_state.storage_p_know * 100, 1)
+            bkt_devices_mastery = round(bkt_state.devices_p_know * 100, 1)
+            bkt_thermal_mastery = round(bkt_state.thermal_p_know * 100, 1)
+            bkt_wavekinematics_mastery = round(bkt_state.wavekinematics_p_know * 100, 1)
+            bkt_radiation_mastery = round(bkt_state.radiation_p_know * 100, 1)
         else:
             bkt_mastery = 15.0
             bkt_bonding_mastery = 15.0
@@ -382,6 +409,15 @@ def teacher_report(request):
             bkt_adaptation_mastery = 15.0
             bkt_extinction_mastery = 15.0
             bkt_reactions_mastery = 15.0
+            bkt_rates_mastery = 15.0
+            bkt_conservation_mastery = 15.0
+            bkt_induction_mastery = 15.0
+            bkt_energyflows_mastery = 15.0
+            bkt_storage_mastery = 15.0
+            bkt_devices_mastery = 15.0
+            bkt_thermal_mastery = 15.0
+            bkt_wavekinematics_mastery = 15.0
+            bkt_radiation_mastery = 15.0
 
         report_data.append({
             "id": str(student.id),
@@ -421,7 +457,16 @@ def teacher_report(request):
             "bkt_advantage_mastery": bkt_advantage_mastery,
             "bkt_adaptation_mastery": bkt_adaptation_mastery,
             "bkt_extinction_mastery": bkt_extinction_mastery,
-            "bkt_reactions_mastery": bkt_reactions_mastery
+            "bkt_reactions_mastery": bkt_reactions_mastery,
+            "bkt_rates_mastery": bkt_rates_mastery,
+            "bkt_conservation_mastery": bkt_conservation_mastery,
+            "bkt_induction_mastery": bkt_induction_mastery,
+            "bkt_energyflows_mastery": bkt_energyflows_mastery,
+            "bkt_storage_mastery": bkt_storage_mastery,
+            "bkt_devices_mastery": bkt_devices_mastery,
+            "bkt_thermal_mastery": bkt_thermal_mastery,
+            "bkt_wavekinematics_mastery": bkt_wavekinematics_mastery,
+            "bkt_radiation_mastery": bkt_radiation_mastery
         })
 
     cache.set(cache_key, report_data, 300)
@@ -968,6 +1013,15 @@ def parent_report(request):
         bkt_adaptation_mastery = round(bkt_state.adaptation_p_know * 100, 1)
         bkt_extinction_mastery = round(bkt_state.extinction_p_know * 100, 1)
         bkt_reactions_mastery = round(bkt_state.reactions_p_know * 100, 1)
+        bkt_rates_mastery = round(bkt_state.rates_p_know * 100, 1)
+        bkt_conservation_mastery = round(bkt_state.conservation_p_know * 100, 1)
+        bkt_induction_mastery = round(bkt_state.induction_p_know * 100, 1)
+        bkt_energyflows_mastery = round(bkt_state.energyflows_p_know * 100, 1)
+        bkt_storage_mastery = round(bkt_state.storage_p_know * 100, 1)
+        bkt_devices_mastery = round(bkt_state.devices_p_know * 100, 1)
+        bkt_thermal_mastery = round(bkt_state.thermal_p_know * 100, 1)
+        bkt_wavekinematics_mastery = round(bkt_state.wavekinematics_p_know * 100, 1)
+        bkt_radiation_mastery = round(bkt_state.radiation_p_know * 100, 1)
     else:
         bkt_transcription = 20.0
         bkt_translation = 15.0
@@ -996,6 +1050,15 @@ def parent_report(request):
         bkt_adaptation_mastery = 15.0
         bkt_extinction_mastery = 15.0
         bkt_reactions_mastery = 15.0
+        bkt_rates_mastery = 15.0
+        bkt_conservation_mastery = 15.0
+        bkt_induction_mastery = 15.0
+        bkt_energyflows_mastery = 15.0
+        bkt_storage_mastery = 15.0
+        bkt_devices_mastery = 15.0
+        bkt_thermal_mastery = 15.0
+        bkt_wavekinematics_mastery = 15.0
+        bkt_radiation_mastery = 15.0
 
     # Retrieve temporal BKT history milestones
     history_qs = StudentBKTHistory.objects.filter(student=student).order_by('timestamp')
@@ -1050,6 +1113,15 @@ def parent_report(request):
         "bkt_adaptation_mastery": bkt_adaptation_mastery,
         "bkt_extinction_mastery": bkt_extinction_mastery,
         "bkt_reactions_mastery": bkt_reactions_mastery,
+        "bkt_rates_mastery": bkt_rates_mastery,
+        "bkt_conservation_mastery": bkt_conservation_mastery,
+        "bkt_induction_mastery": bkt_induction_mastery,
+        "bkt_energyflows_mastery": bkt_energyflows_mastery,
+        "bkt_storage_mastery": bkt_storage_mastery,
+        "bkt_devices_mastery": bkt_devices_mastery,
+        "bkt_thermal_mastery": bkt_thermal_mastery,
+        "bkt_wavekinematics_mastery": bkt_wavekinematics_mastery,
+        "bkt_radiation_mastery": bkt_radiation_mastery,
         "bkt_history": bkt_history_list
     }, status=status.HTTP_200_OK)
 

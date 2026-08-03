@@ -403,6 +403,141 @@ def update_bkt_state_for_event(student, event_type, is_correct):
             
         state.reactions_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
 
+    elif event_type == 'rates_check':
+        p_know = state.rates_p_know
+        p_guess = state.rates_p_guess
+        p_slip = state.rates_p_slip
+        p_transit = state.rates_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.rates_p_slip = max(0.02, state.rates_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.rates_p_slip = min(0.30, state.rates_p_slip + 0.01)
+            
+        state.rates_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'conservation_check':
+        p_know = state.conservation_p_know
+        p_guess = state.conservation_p_guess
+        p_slip = state.conservation_p_slip
+        p_transit = state.conservation_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.conservation_p_slip = max(0.02, state.conservation_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.conservation_p_slip = min(0.30, state.conservation_p_slip + 0.01)
+            
+        state.conservation_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'induction_check':
+        p_know = state.induction_p_know
+        p_guess = state.induction_p_guess
+        p_slip = state.induction_p_slip
+        p_transit = state.induction_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.induction_p_slip = max(0.02, state.induction_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.induction_p_slip = min(0.30, state.induction_p_slip + 0.01)
+            
+        state.induction_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'energyflows_check':
+        p_know = state.energyflows_p_know
+        p_guess = state.energyflows_p_guess
+        p_slip = state.energyflows_p_slip
+        p_transit = state.energyflows_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.energyflows_p_slip = max(0.02, state.energyflows_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.energyflows_p_slip = min(0.30, state.energyflows_p_slip + 0.01)
+            
+        state.energyflows_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'storage_check':
+        p_know = state.storage_p_know
+        p_guess = state.storage_p_guess
+        p_slip = state.storage_p_slip
+        p_transit = state.storage_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.storage_p_slip = max(0.02, state.storage_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.storage_p_slip = min(0.30, state.storage_p_slip + 0.01)
+            
+        state.storage_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'devices_check':
+        p_know = state.devices_p_know
+        p_guess = state.devices_p_guess
+        p_slip = state.devices_p_slip
+        p_transit = state.devices_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.devices_p_slip = max(0.02, state.devices_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.devices_p_slip = min(0.30, state.devices_p_slip + 0.01)
+            
+        state.devices_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'thermal_check':
+        p_know = state.thermal_p_know
+        p_guess = state.thermal_p_guess
+        p_slip = state.thermal_p_slip
+        p_transit = state.thermal_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.thermal_p_slip = max(0.02, state.thermal_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.thermal_p_slip = min(0.30, state.thermal_p_slip + 0.01)
+            
+        state.thermal_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'wavekinematics_check':
+        p_know = state.wavekinematics_p_know
+        p_guess = state.wavekinematics_p_guess
+        p_slip = state.wavekinematics_p_slip
+        p_transit = state.wavekinematics_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.wavekinematics_p_slip = max(0.02, state.wavekinematics_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.wavekinematics_p_slip = min(0.30, state.wavekinematics_p_slip + 0.01)
+            
+        state.wavekinematics_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+    elif event_type == 'radiation_check':
+        p_know = state.radiation_p_know
+        p_guess = state.radiation_p_guess
+        p_slip = state.radiation_p_slip
+        p_transit = state.radiation_p_transit
+        
+        if is_correct:
+            p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+            state.radiation_p_slip = max(0.02, state.radiation_p_slip - 0.005)
+        else:
+            p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+            state.radiation_p_slip = min(0.30, state.radiation_p_slip + 0.01)
+            
+        state.radiation_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
     state.save()
 
     # Append to BKT History for temporal growth charting
@@ -550,6 +685,60 @@ def update_bkt_state_for_event(student, event_type, is_correct):
             student=student,
             construct_tag='OAS.PS.PS1.2',
             p_know=state.reactions_p_know
+        )
+    elif event_type == 'rates_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.PS.PS1.5',
+            p_know=state.rates_p_know
+        )
+    elif event_type == 'conservation_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.PS.PS1.7',
+            p_know=state.conservation_p_know
+        )
+    elif event_type == 'induction_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.PS.PS2.5',
+            p_know=state.induction_p_know
+        )
+    elif event_type == 'energyflows_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.PS.PS3.1',
+            p_know=state.energyflows_p_know
+        )
+    elif event_type == 'storage_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.PS.PS3.2',
+            p_know=state.storage_p_know
+        )
+    elif event_type == 'devices_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.PS.PS3.3',
+            p_know=state.devices_p_know
+        )
+    elif event_type == 'thermal_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.PS.PS3.4',
+            p_know=state.thermal_p_know
+        )
+    elif event_type == 'wavekinematics_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.PS.PS4.1',
+            p_know=state.wavekinematics_p_know
+        )
+    elif event_type == 'radiation_check':
+        StudentBKTHistory.objects.create(
+            student=student,
+            construct_tag='OAS.PS.PS4.4',
+            p_know=state.radiation_p_know
         )
 
     return state

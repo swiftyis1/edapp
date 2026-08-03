@@ -65,6 +65,24 @@ def run_student_bkt_updates(student_id, session_id):
             ev_type = 'extinction_check'
         elif ev.construct_tag == 'OAS.PS.PS1.2':
             ev_type = 'reactions_check'
+        elif ev.construct_tag == 'OAS.PS.PS1.5':
+            ev_type = 'rates_check'
+        elif ev.construct_tag == 'OAS.PS.PS1.7':
+            ev_type = 'conservation_check'
+        elif ev.construct_tag == 'OAS.PS.PS2.5':
+            ev_type = 'induction_check'
+        elif ev.construct_tag == 'OAS.PS.PS3.1':
+            ev_type = 'energyflows_check'
+        elif ev.construct_tag == 'OAS.PS.PS3.2':
+            ev_type = 'storage_check'
+        elif ev.construct_tag == 'OAS.PS.PS3.3':
+            ev_type = 'devices_check'
+        elif ev.construct_tag == 'OAS.PS.PS3.4':
+            ev_type = 'thermal_check'
+        elif ev.construct_tag == 'OAS.PS.PS4.1':
+            ev_type = 'wavekinematics_check'
+        elif ev.construct_tag == 'OAS.PS.PS4.4':
+            ev_type = 'radiation_check'
         elif ev_type in ['dok1_activity_check', 'dok2_activity_check', 'dok3_activity_check', 'dok4_activity_check']:
             activity_id = ev.payload.get('activity_id', '')
             if activity_id in [
@@ -498,6 +516,150 @@ def run_student_bkt_updates(student_id, session_id):
                 state.reactions_p_slip = min(0.30, state.reactions_p_slip + 0.01)
                 
             state.reactions_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'rates_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.rates_p_know
+            p_guess = state.rates_p_guess
+            p_slip = state.rates_p_slip
+            p_transit = state.rates_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.rates_p_slip = max(0.02, state.rates_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.rates_p_slip = min(0.30, state.rates_p_slip + 0.01)
+                
+            state.rates_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'conservation_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.conservation_p_know
+            p_guess = state.conservation_p_guess
+            p_slip = state.conservation_p_slip
+            p_transit = state.conservation_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.conservation_p_slip = max(0.02, state.conservation_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.conservation_p_slip = min(0.30, state.conservation_p_slip + 0.01)
+                
+            state.conservation_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'induction_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.induction_p_know
+            p_guess = state.induction_p_guess
+            p_slip = state.induction_p_slip
+            p_transit = state.induction_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.induction_p_slip = max(0.02, state.induction_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.induction_p_slip = min(0.30, state.induction_p_slip + 0.01)
+                
+            state.induction_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'energyflows_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.energyflows_p_know
+            p_guess = state.energyflows_p_guess
+            p_slip = state.energyflows_p_slip
+            p_transit = state.energyflows_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.energyflows_p_slip = max(0.02, state.energyflows_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.energyflows_p_slip = min(0.30, state.energyflows_p_slip + 0.01)
+                
+            state.energyflows_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'storage_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.storage_p_know
+            p_guess = state.storage_p_guess
+            p_slip = state.storage_p_slip
+            p_transit = state.storage_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.storage_p_slip = max(0.02, state.storage_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.storage_p_slip = min(0.30, state.storage_p_slip + 0.01)
+                
+            state.storage_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'devices_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.devices_p_know
+            p_guess = state.devices_p_guess
+            p_slip = state.devices_p_slip
+            p_transit = state.devices_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.devices_p_slip = max(0.02, state.devices_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.devices_p_slip = min(0.30, state.devices_p_slip + 0.01)
+                
+            state.devices_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'thermal_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.thermal_p_know
+            p_guess = state.thermal_p_guess
+            p_slip = state.thermal_p_slip
+            p_transit = state.thermal_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.thermal_p_slip = max(0.02, state.thermal_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.thermal_p_slip = min(0.30, state.thermal_p_slip + 0.01)
+                
+            state.thermal_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'wavekinematics_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.wavekinematics_p_know
+            p_guess = state.wavekinematics_p_guess
+            p_slip = state.wavekinematics_p_slip
+            p_transit = state.wavekinematics_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.wavekinematics_p_slip = max(0.02, state.wavekinematics_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.wavekinematics_p_slip = min(0.30, state.wavekinematics_p_slip + 0.01)
+                
+            state.wavekinematics_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
+
+        elif ev_type == 'radiation_check':
+            is_correct = ev.payload.get('is_correct', True)
+            p_know = state.radiation_p_know
+            p_guess = state.radiation_p_guess
+            p_slip = state.radiation_p_slip
+            p_transit = state.radiation_p_transit
+            
+            if is_correct:
+                p_know_given_obs = (p_know * (1.0 - p_slip)) / ((p_know * (1.0 - p_slip)) + ((1.0 - p_know) * p_guess))
+                state.radiation_p_slip = max(0.02, state.radiation_p_slip - 0.005)
+            else:
+                p_know_given_obs = (p_know * p_slip) / ((p_know * p_slip) + ((1.0 - p_know) * (1.0 - p_guess)))
+                state.radiation_p_slip = min(0.30, state.radiation_p_slip + 0.01)
+                
+            state.radiation_p_know = min(0.999, max(0.001, p_know_given_obs + (1.0 - p_know_given_obs) * p_transit))
 
     state.save()
 

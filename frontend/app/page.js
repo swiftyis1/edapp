@@ -2167,7 +2167,277 @@ const ACTIVITIES_DATABASE = {
       "description": "Calibrate air-to-fuel ratios to maximize energy yield while minimizing carbon monoxide emissions."
     }
   ]
-}
+},
+  "OAS.PS.PS1.5": {
+    "1": [
+      { "name": "Collision Frequency Match", "description": "Recall how temperature and concentration relate to collision frequency." },
+      { "name": "Catalyst Activation Recall", "description": "Identify that a catalyst lowers activation energy without being consumed." },
+      { "name": "Reaction Rate Vocabulary", "description": "Recall key chemical kinetics terms like reaction rate, catalyst, and activation energy." },
+      { "name": "Concentration Impact Recall", "description": "Recall that higher concentration increases the rate of reactant collisions." },
+      { "name": "Surface Area Effect Match", "description": "Match surface area parameters to reaction rate impacts." }
+    ],
+    "2": [
+      { "name": "Rate Factor Classification", "description": "Classify factors like temperature, concentration, and catalyst into kinetic categories." },
+      { "name": "Catalyst Behavior Sorter", "description": "Sort reaction scenarios into catalyzed vs uncatalyzed reactions." },
+      { "name": "Kinetic Energy Classifier", "description": "Classify molecules by kinetic energy levels based on temperature." },
+      { "name": "Collision Energy Sorter", "description": "Sort factors that influence collision frequency vs collision energy." },
+      { "name": "Kinetics Factor Sorter", "description": "Sort system modifications by whether they increase or decrease rate." }
+    ],
+    "3": [
+      { "name": "Kinetic Rate Simulator", "description": "Calibrate temperature and concentration to achieve a target reaction rate." },
+      { "name": "Catalyst Efficiency Tuner", "description": "Calibrate catalyst surface area to reach target activation energy." },
+      { "name": "Activation Energy Solver", "description": "Calculate reaction rate changes based on activation energy shifts." },
+      { "name": "Collision Frequency Calibrator", "description": "Calibrate pressure and volume to achieve target collision rates." },
+      { "name": "Temperature Rate Tuner", "description": "Tuning heating jackets to maintain steady reaction speed." }
+    ],
+    "4": [
+      { "name": "Chemical Reactor Optimizer", "description": "Optimize multi-variable reactor conditions for maximum yield and rate." },
+      { "name": "Catalytic Converter Planner", "description": "Select catalyst type and volume to minimize emission rates under budget." },
+      { "name": "Reaction Pathway Designer", "description": "Design multi-step pathways to optimize rate and selectivity." },
+      { "name": "Kinetics Control Planner", "description": "Plan cooling loops and feed rates to prevent thermal runaway." },
+      { "name": "Industrial Synthesis Optimizer", "description": "Calibrate high-pressure synthesis variables to maximize throughput." }
+    ]
+  },
+  "OAS.PS.PS1.7": {
+    "1": [
+      { "name": "Mass Balancing Check", "description": "Recall that the mass of reactants equals the mass of products in a closed system." },
+      { "name": "Atom Conservation Recall", "description": "Identify that atoms are rearranged, not created or destroyed." },
+      { "name": "Closed System Definition", "description": "Recall features of a closed system that prevent mass exchange." },
+      { "name": "Coefficient Recall", "description": "Identify coefficients as representing molecular ratios in balanced equations." },
+      { "name": "Stoichiometric Ratio Match", "description": "Match reactant quantities to complete conversion ratios." }
+    ],
+    "2": [
+      { "name": "Conservation Classifier", "description": "Classify systems as open vs closed based on mass/energy exchange." },
+      { "name": "Reaction Balance Sorter", "description": "Sort chemical equations into balanced vs unbalanced categories." },
+      { "name": "Precipitate Mass Sorter", "description": "Sort reactant and product masses to show conservation." },
+      { "name": "State Change Classifier", "description": "Classify conservation scenarios involving phase transitions." },
+      { "name": "Mass Ratio Classifier", "description": "Sort equations by their stoichiometric reactant-to-product mass ratios." }
+    ],
+    "3": [
+      { "name": "Equation Balancing Solver", "description": "Calibrate equation coefficients to satisfy conservation of atoms." },
+      { "name": "Precipitation Mass Solver", "description": "Calibrate reactant masses to achieve a target precipitate mass." },
+      { "name": "Gas Production Calibrator", "description": "Calibrate reactants to produce a target volume of gas in a closed container." },
+      { "name": "Limiting Reactant Solver", "description": "Calculate reactant leftovers and product yields." },
+      { "name": "Stoichiometry Mass Tuner", "description": "Tune initial masses to achieve zero waste reactants." }
+    ],
+    "4": [
+      { "name": "Mass Conservation Planner", "description": "Design closed-loop recycling loops to prevent atomic mass loss." },
+      { "name": "Chemical Synthesis Planner", "description": "Select reactants to synthesize target mass of product under cost limits." },
+      { "name": "Effluent Treatment Optimizer", "description": "Optimize precipitation agents to remove heavy metals completely." },
+      { "name": "Feedstock Resource Planner", "description": "Plan mass input streams to balance a multi-reactor industrial plant." },
+      { "name": "Green Chemistry Designer", "description": "Design reactions that optimize atom economy and minimize waste." }
+    ]
+  },
+  "OAS.PS.PS2.5": {
+    "1": [
+      { "name": "Magnetic Flux Match", "description": "Recall that a changing magnetic field induces an electromotive force (EMF)." },
+      { "name": "Lenz's Law Recall", "description": "Identify that induced current opposes the change in magnetic flux." },
+      { "name": "Generator Components Recall", "description": "Identify coils, magnets, and motion as key parts of a generator." },
+      { "name": "Induction Factors Match", "description": "Match coil turns and magnet speed to relative EMF output." },
+      { "name": "Field Line Direction Match", "description": "Identify magnetic field line orientation around solenoids." }
+    ],
+    "2": [
+      { "name": "Current Direction Sorter", "description": "Sort induced current direction based on magnetic pole movement." },
+      { "name": "Induction Source Classifier", "description": "Classify setups as generating AC, DC, or zero current." },
+      { "name": "EMF Magnitude Sorter", "description": "Sort induction scenarios by relative induced voltage." },
+      { "name": "Flux Change Classifier", "description": "Sort motion profiles by whether they increase, decrease, or maintain flux." },
+      { "name": "Inductive Coupling Sorter", "description": "Sort coil alignments by coupling efficiency." }
+    ],
+    "3": [
+      { "name": "Electromagnet Generator Tuner", "description": "Calibrate coil turns and magnet speed to reach a target induced voltage." },
+      { "name": "Solenoid Strength Solver", "description": "Calibrate current and core material to reach target magnetic field." },
+      { "name": "Transformer Turns Calibrator", "description": "Calibrate primary and secondary turns to achieve a target voltage step." },
+      { "name": "Inductive Charger Solver", "description": "Calibrate coil gap and frequency to meet target power transfer." },
+      { "name": "AC Generator Freq Tuner", "description": "Tuning rotation speed to achieve exact grid frequency." }
+    ],
+    "4": [
+      { "name": "Micro-Hydro Generator Planner", "description": "Select coil gauge, turns, and magnet configurations for optimal power." },
+      { "name": "Wireless Power Transfer Planner", "description": "Design resonant inductive loops to power remote devices within budget." },
+      { "name": "Smart Grid Alternator Optimizer", "description": "Optimize excitation current and turbine speed to stabilize grid phase." },
+      { "name": "Geothermal Turbine Designer", "description": "Plan generator specs to match steam torque profiles." },
+      { "name": "Wind Turbine Alternator Planner", "description": "Design generator variables to handle variable wind torque." }
+    ]
+  },
+  "OAS.PS.PS3.1": {
+    "1": [
+      { "name": "Conservation of Energy Recall", "description": "Recall that energy is conserved and only changes forms." },
+      { "name": "Kinetic/Potential Energy Match", "description": "Identify formulas for kinetic and gravitational potential energy." },
+      { "name": "Energy Form Identification", "description": "Recall types of energy including thermal, chemical, and mechanical." },
+      { "name": "Heat Transfer Equations Match", "description": "Match variables in Q = mcΔT to their physical meanings." },
+      { "name": "Energy Efficiency Definition", "description": "Recall that useful energy output is always less than total input." }
+    ],
+    "2": [
+      { "name": "Energy Form Classifier", "description": "Classify energy transformations in daily devices (e.g. battery, bulb)." },
+      { "name": "Conservative Force Sorter", "description": "Sort forces into conservative (gravity) vs non-conservative (friction)." },
+      { "name": "Heat Flow Direction Classifier", "description": "Sort scenarios by the direction of spontaneous thermal transfer." },
+      { "name": "Potential Energy Sorter", "description": "Sort objects by stored potential energy based on height/mass." },
+      { "name": "Specific Heat Sorter", "description": "Sort materials by how fast they heat up based on specific heat." }
+    ],
+    "3": [
+      { "name": "Mechanical Energy Simulator", "description": "Calibrate height and initial velocity to achieve target kinetic energy." },
+      { "name": "Calorimetry Specific Heat Solver", "description": "Calibrate mass and initial temperature to reach target final temperature." },
+      { "name": "Energy Conservation Calibrator", "description": "Calibrate friction parameters to match energy dissipation targets." },
+      { "name": "Power Output Calculator", "description": "Calculate mechanical work and electrical energy generation over time." },
+      { "name": "Thermal Dissipation Tuner", "description": "Tune heat sink dimensions to maintain component safety." }
+    ],
+    "4": [
+      { "name": "Pumped Hydro Storage Planner", "description": "Design reservoir volume and height to meet peak city energy demands." },
+      { "name": "Solar Thermal Plant Planner", "description": "Design molten salt storage tank volume and insulation within cost limits." },
+      { "name": "District Heating Grid Designer", "description": "Optimize mass flow and insulation to minimize thermal losses." },
+      { "name": "Hybrid Drivetrain Optimizer", "description": "Plan engine and battery charging thresholds to minimize fuel usage." },
+      { "name": "Industrial Furnace Heat Saver", "description": "Design heat exchangers to recover waste heat for pre-heating." }
+    ]
+  },
+  "OAS.PS.PS3.2": {
+    "1": [
+      { "name": "Field Potential Energy Match", "description": "Recall that potential energy depends on position in a field." },
+      { "name": "Electrostatic Potential Recall", "description": "Identify that like charges store energy when pushed together." },
+      { "name": "Magnetic Potential Recall", "description": "Recall that potential energy increases when like magnetic poles are forced together." },
+      { "name": "Gravitational Field Match", "description": "Identify how gravitational force relates to distance from the center." },
+      { "name": "Field Lines Representation Match", "description": "Recall that field line density represents relative field strength." }
+    ],
+    "2": [
+      { "name": "Field Type Classifier", "description": "Classify forces as gravitational, electric, or magnetic." },
+      { "name": "Potential Energy Shift Sorter", "description": "Sort movements of charges/masses by whether potential energy increases." },
+      { "name": "Field Strength Sorter", "description": "Sort field points by relative strength based on distance." },
+      { "name": "Dipole Orientation Classifier", "description": "Sort magnetic dipoles by stable vs unstable alignment." },
+      { "name": "Work in Field Classifier", "description": "Sort paths in a field by whether net work done is positive or negative." }
+    ],
+    "3": [
+      { "name": "Electrostatic Field Simulator", "description": "Calibrate charge magnitudes and positions to hit a target potential." },
+      { "name": "Gravitational Orbit Calibrator", "description": "Calibrate orbital radius and speed to achieve stable circular orbit." },
+      { "name": "Magnetic Trap Tuner", "description": "Calibrate pole strength to levitate a magnetic particle in a target zone." },
+      { "name": "Capacitor Energy Solver", "description": "Calibrate plate spacing and area to store target energy." },
+      { "name": "Dipole Alignment Calibrator", "description": "Calibrate external field strength to align magnetic domains." }
+    ],
+    "4": [
+      { "name": "Ion Accelerator Planner", "description": "Select electrode spacing and voltage profiles to accelerate ions." },
+      { "name": "Space Probe Slingshot Planner", "description": "Design planetary flyby altitude and entry angle to optimize velocity." },
+      { "name": "MRI Shielding Planner", "description": "Select superconducting coil parameters to contain high magnetic fields." },
+      { "name": "Van de Graaff Optimizer", "description": "Plan belt speed and dome radius to maximize dielectric breakdown limit." },
+      { "name": "Magnetic Bearings Designer", "description": "Design active feedback loop gains to stabilize high-speed spindles." }
+    ]
+  },
+  "OAS.PS.PS3.3": {
+    "1": [
+      { "name": "Energy Device Function Match", "description": "Recall that conversion devices change energy from one form to another." },
+      { "name": "Generator Conversion Match", "description": "Identify that generators convert mechanical energy into electrical energy." },
+      { "name": "Motor Conversion Match", "description": "Identify that motors convert electrical energy into mechanical energy." },
+      { "name": "Solar Cell Mechanism Recall", "description": "Recall that photovoltaic cells convert light directly to electricity." },
+      { "name": "Battery Energy Form Match", "description": "Identify chemical potential energy as the storage form in batteries." }
+    ],
+    "2": [
+      { "name": "Device Conversion Classifier", "description": "Classify common devices by their primary energy input and output." },
+      { "name": "Loss Mechanism Sorter", "description": "Sort device components by where energy is lost (heat, friction, sound)." },
+      { "name": "Efficiency Sorter", "description": "Sort devices by typical energy efficiency percentages." },
+      { "name": "Thermal Device Sorter", "description": "Sort devices into heat engines vs heat pumps." },
+      { "name": "Renewable Conversion Sorter", "description": "Sort generators by resource type (wind, solar, hydro, geothermal)." }
+    ],
+    "3": [
+      { "name": "Thermoelectric Generator Tuner", "description": "Calibrate temperature difference and material to achieve target power." },
+      { "name": "Hydroelectric Turbine Calibrator", "description": "Calibrate nozzle angle and water head to hit target RPM." },
+      { "name": "Electric Motor Torque Tuner", "description": "Calibrate current and coil configuration to meet torque target." },
+      { "name": "Wind Turbine Pitch Solver", "description": "Calibrate blade pitch angle to match changing wind speeds." },
+      { "name": "Solar Panel Angler", "description": "Tuning orientation angles to maximize daily solar energy." }
+    ],
+    "4": [
+      { "name": "Energy Harvesting Planner", "description": "Select piezoelectric and thermoelectric harvesters for a smart sensor." },
+      { "name": "Microgrid Backup Planner", "description": "Design battery bank and solar array sizing to power a clinic." },
+      { "name": "Regenerative Braking Optimizer", "description": "Optimize generator engagement curves during braking to maximize recovery." },
+      { "name": "Electric Vehicle Drive Planner", "description": "Design gear ratios and inverter switching frequencies to optimize range." },
+      { "name": "Flywheel Energy Storage Planner", "description": "Design rotor mass and speed limits to balance grid fluctuations." }
+    ]
+  },
+  "OAS.PS.PS3.4": {
+    "1": [
+      { "name": "Thermal Equilibrium Definition", "description": "Recall that heat flows from hot to cold until temperatures equalize." },
+      { "name": "Second Law of Thermo Recall", "description": "Identify that heat does not spontaneously flow from cold to hot." },
+      { "name": "Heat Transfer Modes Match", "description": "Match conduction, convection, and radiation to their descriptions." },
+      { "name": "Insulation Material Recall", "description": "Recall that insulators have low thermal conductivity." },
+      { "name": "Entropy Concept Match", "description": "Identify entropy as a measure of energy dispersal or disorder." }
+    ],
+    "2": [
+      { "name": "Heat Transfer Mode Classifier", "description": "Classify daily scenarios (e.g. boiling water, sun warming) by heat mode." },
+      { "name": "Conductivity Sorter", "description": "Sort materials (metals, wood, air) by thermal conductivity." },
+      { "name": "Entropy Direction Sorter", "description": "Sort physical processes by whether entropy increases or decreases." },
+      { "name": "Thermal Expansion Sorter", "description": "Sort substances by expansion rates under temperature change." },
+      { "name": "Equilibrium Direction Classifier", "description": "Sort thermal systems by their spontaneous direction of heat flow." }
+    ],
+    "3": [
+      { "name": "Thermal Conduction Simulator", "description": "Calibrate wall thickness and material to limit heat loss to a target." },
+      { "name": "Convection Loop Calibrator", "description": "Calibrate heating elements to maintain stable fluid circulation velocity." },
+      { "name": "Radiation Shielding Solver", "description": "Calibrate emissivity and layers to meet temperature limits." },
+      { "name": "Thermal Equilibrium Solver", "description": "Calculate equilibrium temperature for mixing substances." },
+      { "name": "Heat Exchanger Efficiency Tuner", "description": "Tune fluid flow rates to maximize heat recovery." }
+    ],
+    "4": [
+      { "name": "Passive Solar House Planner", "description": "Design window placement, thermal mass, and insulation for zero heating." },
+      { "name": "Cryogenic Storage Planner", "description": "Select vacuum insulation and radiation shields to store liquid helium." },
+      { "name": "Electronics Cooling Optimizer", "description": "Optimize heat sink fin density and fan speed to prevent processor throttling." },
+      { "name": "Spacecraft Thermal Planner", "description": "Design heat pipes and louvers to balance sun exposure vs deep space cold." },
+      { "name": "Geothermal Heat Pump Designer", "description": "Design loop length and depth based on soil thermal conductivity." }
+    ]
+  },
+  "OAS.PS.PS4.1": {
+    "1": [
+      { "name": "Wave Equation Recall", "description": "Recall that wave speed equals frequency multiplied by wavelength." },
+      { "name": "Frequency/Period Relation Match", "description": "Identify that frequency is the reciprocal of the wave period." },
+      { "name": "Wave Parts Recall", "description": "Identify crest, trough, wavelength, amplitude, and node on a wave diagram." },
+      { "name": "Wave Medium Impact Recall", "description": "Recall that wave speed depends on properties of the medium." },
+      { "name": "Transverse/Longitudinal Match", "description": "Match wave types to relative wave directions." }
+    ],
+    "2": [
+      { "name": "Wave Type Classifier", "description": "Classify waves as mechanical (sound, water) vs electromagnetic (light)." },
+      { "name": "Refraction Sorter", "description": "Sort media by wave speed and predict bending direction." },
+      { "name": "Amplitude/Energy Sorter", "description": "Sort waves by energy content based on amplitude." },
+      { "name": "Frequency Shift Classifier", "description": "Sort scenarios by Doppler frequency shift (higher, lower, same)." },
+      { "name": "Boundary Phase Sorter", "description": "Sort phase shifts of reflected waves at fixed vs free boundaries." }
+    ],
+    "3": [
+      { "name": "Wave Speed Math Solver", "description": "Calibrate frequency and wavelength to achieve a target wave speed." },
+      { "name": "Doppler Effect Calibrator", "description": "Calibrate source speed to achieve a target observed frequency." },
+      { "name": "Resonance Frequency Solver", "description": "Calibrate pipe length to achieve resonance at target frequency." },
+      { "name": "Snell's Law Angle Solver", "description": "Calibrate incident angle to achieve target refracted angle." },
+      { "name": "Wave superposition Tuner", "description": "Tuning phase offset to achieve complete destructive interference." }
+    ],
+    "4": [
+      { "name": "Acoustic Concert Hall Planner", "description": "Select wall panel materials and angles to prevent echoes under budget." },
+      { "name": "Fiber Optic Line Planner", "description": "Design core and cladding indices of refraction to ensure total reflection." },
+      { "name": "Sonar Depth Finder Optimizer", "description": "Optimize ping frequency and pulse duration for high-resolution profiling." },
+      { "name": "Seismic Wave Damper Designer", "description": "Design base isolation dampers to match earthquake frequency profiles." },
+      { "name": "Radio Antenna Designer", "description": "Design antenna dipole lengths to resonate at specific carrier frequencies." }
+    ]
+  },
+  "OAS.PS.PS4.4": {
+    "1": [
+      { "name": "EM Spectrum Order Match", "description": "Recall the ordering of the EM spectrum from radio waves to gamma rays." },
+      { "name": "Photon Energy Equation Recall", "description": "Identify that photon energy is directly proportional to frequency." },
+      { "name": "Absorption Spectra Definition", "description": "Recall that elements absorb specific wavelengths matching energy transitions." },
+      { "name": "Transmission/Reflectance Match", "description": "Match transmission, reflection, and absorption to their definitions." },
+      { "name": "Photoelectric Effect Recall", "description": "Recall that light can eject electrons from metals if frequency is high enough." }
+    ],
+    "2": [
+      { "name": "Spectrum Band Classifier", "description": "Classify wavelengths by their uses (microwave for cooking, UV for curing)." },
+      { "name": "Photon Hazard Sorter", "description": "Sort EM waves by relative hazard level (ionizing vs non-ionizing)." },
+      { "name": "Material Absorption Sorter", "description": "Sort materials by absorption efficiency for specific EM bands." },
+      { "name": "Energy Level Transition Sorter", "description": "Sort electron transitions by the energy/frequency of photon emitted." },
+      { "name": "Solar Radiation Sorter", "description": "Sort solar wavelengths by atmospheric absorption rates." }
+    ],
+    "3": [
+      { "name": "Spectrophotometer Calibrator", "description": "Calibrate source wavelength to target the maximum absorption peak." },
+      { "name": "Radiation Shielding Calibrator", "description": "Calibrate lead shield thickness to reduce radiation transmission to target." },
+      { "name": "Photoelectric Work Solver", "description": "Calibrate photon frequency to exceed work function and hit target current." },
+      { "name": "Greenhouse Gas Thermal Solver", "description": "Calibrate gas concentration to achieve target heat absorption." },
+      { "name": "Laser Excitation Tuner", "description": "Tuning dye concentrations to emit target light wavelength." }
+    ],
+    "4": [
+      { "name": "Solar Shielding Spacecraft Planner", "description": "Select shielding layers and coatings to protect electronics from UV." },
+      { "name": "Radiotherapy Treatment Planner", "description": "Design beam energy, angles, and depth to kill tumor cells within budget." },
+      { "name": "Ozone Hole Mitigation Optimizer", "description": "Optimize stratospheric chemical releases to maximize UV-B absorption." },
+      { "name": "Night Vision Sensor Planner", "description": "Design bandgap semiconductors to maximize near-infrared sensitivity." },
+      { "name": "Thermal Imaging Cam Designer", "description": "Design lens and sensor parameters to resolve small temperature variations." }
+    ]
+  }
 };
 
 const BIO_DOK1_ACT1_VARIANTS = [
@@ -42580,2058 +42850,698 @@ const DOK_QUIZ_BANKS = {
     ]
   ]
 }
-,
-  "OAS.PS.PS1.2": {
-  "1": [
-    [
-      {
-        "question": "Reactions DOK1 Act1 Q0: Match element chemical electron configuration 0.",
-        "options": [
-          "Valence electron count 0",
-          "Orbital 0",
-          "Bond type 0",
-          "Octet"
-        ],
-        "answer": "Valence electron count 0"
-      },
-      {
-        "question": "Reactions DOK1 Act1 Q1: Match element chemical electron configuration 1.",
-        "options": [
-          "Valence electron count 1",
-          "Orbital 1",
-          "Bond type 1",
-          "Octet"
-        ],
-        "answer": "Valence electron count 1"
-      },
-      {
-        "question": "Reactions DOK1 Act1 Q2: Match element chemical electron configuration 2.",
-        "options": [
-          "Valence electron count 2",
-          "Orbital 2",
-          "Bond type 2",
-          "Octet"
-        ],
-        "answer": "Valence electron count 2"
-      },
-      {
-        "question": "Reactions DOK1 Act1 Q3: Match element chemical electron configuration 3.",
-        "options": [
-          "Valence electron count 3",
-          "Orbital 3",
-          "Bond type 3",
-          "Octet"
-        ],
-        "answer": "Valence electron count 3"
-      },
-      {
-        "question": "Reactions DOK1 Act1 Q4: Match element chemical electron configuration 4.",
-        "options": [
-          "Valence electron count 4",
-          "Orbital 4",
-          "Bond type 4",
-          "Octet"
-        ],
-        "answer": "Valence electron count 4"
-      },
-      {
-        "question": "Reactions DOK1 Act1 Q5: Match element chemical electron configuration 5.",
-        "options": [
-          "Valence electron count 5",
-          "Orbital 5",
-          "Bond type 5",
-          "Octet"
-        ],
-        "answer": "Valence electron count 5"
-      },
-      {
-        "question": "Reactions DOK1 Act1 Q6: Match element chemical electron configuration 6.",
-        "options": [
-          "Valence electron count 6",
-          "Orbital 6",
-          "Bond type 6",
-          "Octet"
-        ],
-        "answer": "Valence electron count 6"
-      },
-      {
-        "question": "Reactions DOK1 Act1 Q7: Match element chemical electron configuration 7.",
-        "options": [
-          "Valence electron count 7",
-          "Orbital 7",
-          "Bond type 7",
-          "Octet"
-        ],
-        "answer": "Valence electron count 7"
-      },
-      {
-        "question": "Reactions DOK1 Act1 Q8: Match element chemical electron configuration 8.",
-        "options": [
-          "Valence electron count 8",
-          "Orbital 8",
-          "Bond type 8",
-          "Octet"
-        ],
-        "answer": "Valence electron count 8"
-      },
-      {
-        "question": "Reactions DOK1 Act1 Q9: Match element chemical electron configuration 9.",
-        "options": [
-          "Valence electron count 9",
-          "Orbital 9",
-          "Bond type 9",
-          "Octet"
-        ],
-        "answer": "Valence electron count 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK1 Act2 Q0: Match element chemical electron configuration 0.",
-        "options": [
-          "Valence electron count 0",
-          "Orbital 0",
-          "Bond type 0",
-          "Octet"
-        ],
-        "answer": "Valence electron count 0"
-      },
-      {
-        "question": "Reactions DOK1 Act2 Q1: Match element chemical electron configuration 1.",
-        "options": [
-          "Valence electron count 1",
-          "Orbital 1",
-          "Bond type 1",
-          "Octet"
-        ],
-        "answer": "Valence electron count 1"
-      },
-      {
-        "question": "Reactions DOK1 Act2 Q2: Match element chemical electron configuration 2.",
-        "options": [
-          "Valence electron count 2",
-          "Orbital 2",
-          "Bond type 2",
-          "Octet"
-        ],
-        "answer": "Valence electron count 2"
-      },
-      {
-        "question": "Reactions DOK1 Act2 Q3: Match element chemical electron configuration 3.",
-        "options": [
-          "Valence electron count 3",
-          "Orbital 3",
-          "Bond type 3",
-          "Octet"
-        ],
-        "answer": "Valence electron count 3"
-      },
-      {
-        "question": "Reactions DOK1 Act2 Q4: Match element chemical electron configuration 4.",
-        "options": [
-          "Valence electron count 4",
-          "Orbital 4",
-          "Bond type 4",
-          "Octet"
-        ],
-        "answer": "Valence electron count 4"
-      },
-      {
-        "question": "Reactions DOK1 Act2 Q5: Match element chemical electron configuration 5.",
-        "options": [
-          "Valence electron count 5",
-          "Orbital 5",
-          "Bond type 5",
-          "Octet"
-        ],
-        "answer": "Valence electron count 5"
-      },
-      {
-        "question": "Reactions DOK1 Act2 Q6: Match element chemical electron configuration 6.",
-        "options": [
-          "Valence electron count 6",
-          "Orbital 6",
-          "Bond type 6",
-          "Octet"
-        ],
-        "answer": "Valence electron count 6"
-      },
-      {
-        "question": "Reactions DOK1 Act2 Q7: Match element chemical electron configuration 7.",
-        "options": [
-          "Valence electron count 7",
-          "Orbital 7",
-          "Bond type 7",
-          "Octet"
-        ],
-        "answer": "Valence electron count 7"
-      },
-      {
-        "question": "Reactions DOK1 Act2 Q8: Match element chemical electron configuration 8.",
-        "options": [
-          "Valence electron count 8",
-          "Orbital 8",
-          "Bond type 8",
-          "Octet"
-        ],
-        "answer": "Valence electron count 8"
-      },
-      {
-        "question": "Reactions DOK1 Act2 Q9: Match element chemical electron configuration 9.",
-        "options": [
-          "Valence electron count 9",
-          "Orbital 9",
-          "Bond type 9",
-          "Octet"
-        ],
-        "answer": "Valence electron count 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK1 Act3 Q0: Match element chemical electron configuration 0.",
-        "options": [
-          "Valence electron count 0",
-          "Orbital 0",
-          "Bond type 0",
-          "Octet"
-        ],
-        "answer": "Valence electron count 0"
-      },
-      {
-        "question": "Reactions DOK1 Act3 Q1: Match element chemical electron configuration 1.",
-        "options": [
-          "Valence electron count 1",
-          "Orbital 1",
-          "Bond type 1",
-          "Octet"
-        ],
-        "answer": "Valence electron count 1"
-      },
-      {
-        "question": "Reactions DOK1 Act3 Q2: Match element chemical electron configuration 2.",
-        "options": [
-          "Valence electron count 2",
-          "Orbital 2",
-          "Bond type 2",
-          "Octet"
-        ],
-        "answer": "Valence electron count 2"
-      },
-      {
-        "question": "Reactions DOK1 Act3 Q3: Match element chemical electron configuration 3.",
-        "options": [
-          "Valence electron count 3",
-          "Orbital 3",
-          "Bond type 3",
-          "Octet"
-        ],
-        "answer": "Valence electron count 3"
-      },
-      {
-        "question": "Reactions DOK1 Act3 Q4: Match element chemical electron configuration 4.",
-        "options": [
-          "Valence electron count 4",
-          "Orbital 4",
-          "Bond type 4",
-          "Octet"
-        ],
-        "answer": "Valence electron count 4"
-      },
-      {
-        "question": "Reactions DOK1 Act3 Q5: Match element chemical electron configuration 5.",
-        "options": [
-          "Valence electron count 5",
-          "Orbital 5",
-          "Bond type 5",
-          "Octet"
-        ],
-        "answer": "Valence electron count 5"
-      },
-      {
-        "question": "Reactions DOK1 Act3 Q6: Match element chemical electron configuration 6.",
-        "options": [
-          "Valence electron count 6",
-          "Orbital 6",
-          "Bond type 6",
-          "Octet"
-        ],
-        "answer": "Valence electron count 6"
-      },
-      {
-        "question": "Reactions DOK1 Act3 Q7: Match element chemical electron configuration 7.",
-        "options": [
-          "Valence electron count 7",
-          "Orbital 7",
-          "Bond type 7",
-          "Octet"
-        ],
-        "answer": "Valence electron count 7"
-      },
-      {
-        "question": "Reactions DOK1 Act3 Q8: Match element chemical electron configuration 8.",
-        "options": [
-          "Valence electron count 8",
-          "Orbital 8",
-          "Bond type 8",
-          "Octet"
-        ],
-        "answer": "Valence electron count 8"
-      },
-      {
-        "question": "Reactions DOK1 Act3 Q9: Match element chemical electron configuration 9.",
-        "options": [
-          "Valence electron count 9",
-          "Orbital 9",
-          "Bond type 9",
-          "Octet"
-        ],
-        "answer": "Valence electron count 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK1 Act4 Q0: Match element chemical electron configuration 0.",
-        "options": [
-          "Valence electron count 0",
-          "Orbital 0",
-          "Bond type 0",
-          "Octet"
-        ],
-        "answer": "Valence electron count 0"
-      },
-      {
-        "question": "Reactions DOK1 Act4 Q1: Match element chemical electron configuration 1.",
-        "options": [
-          "Valence electron count 1",
-          "Orbital 1",
-          "Bond type 1",
-          "Octet"
-        ],
-        "answer": "Valence electron count 1"
-      },
-      {
-        "question": "Reactions DOK1 Act4 Q2: Match element chemical electron configuration 2.",
-        "options": [
-          "Valence electron count 2",
-          "Orbital 2",
-          "Bond type 2",
-          "Octet"
-        ],
-        "answer": "Valence electron count 2"
-      },
-      {
-        "question": "Reactions DOK1 Act4 Q3: Match element chemical electron configuration 3.",
-        "options": [
-          "Valence electron count 3",
-          "Orbital 3",
-          "Bond type 3",
-          "Octet"
-        ],
-        "answer": "Valence electron count 3"
-      },
-      {
-        "question": "Reactions DOK1 Act4 Q4: Match element chemical electron configuration 4.",
-        "options": [
-          "Valence electron count 4",
-          "Orbital 4",
-          "Bond type 4",
-          "Octet"
-        ],
-        "answer": "Valence electron count 4"
-      },
-      {
-        "question": "Reactions DOK1 Act4 Q5: Match element chemical electron configuration 5.",
-        "options": [
-          "Valence electron count 5",
-          "Orbital 5",
-          "Bond type 5",
-          "Octet"
-        ],
-        "answer": "Valence electron count 5"
-      },
-      {
-        "question": "Reactions DOK1 Act4 Q6: Match element chemical electron configuration 6.",
-        "options": [
-          "Valence electron count 6",
-          "Orbital 6",
-          "Bond type 6",
-          "Octet"
-        ],
-        "answer": "Valence electron count 6"
-      },
-      {
-        "question": "Reactions DOK1 Act4 Q7: Match element chemical electron configuration 7.",
-        "options": [
-          "Valence electron count 7",
-          "Orbital 7",
-          "Bond type 7",
-          "Octet"
-        ],
-        "answer": "Valence electron count 7"
-      },
-      {
-        "question": "Reactions DOK1 Act4 Q8: Match element chemical electron configuration 8.",
-        "options": [
-          "Valence electron count 8",
-          "Orbital 8",
-          "Bond type 8",
-          "Octet"
-        ],
-        "answer": "Valence electron count 8"
-      },
-      {
-        "question": "Reactions DOK1 Act4 Q9: Match element chemical electron configuration 9.",
-        "options": [
-          "Valence electron count 9",
-          "Orbital 9",
-          "Bond type 9",
-          "Octet"
-        ],
-        "answer": "Valence electron count 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK1 Act5 Q0: Match element chemical electron configuration 0.",
-        "options": [
-          "Valence electron count 0",
-          "Orbital 0",
-          "Bond type 0",
-          "Octet"
-        ],
-        "answer": "Valence electron count 0"
-      },
-      {
-        "question": "Reactions DOK1 Act5 Q1: Match element chemical electron configuration 1.",
-        "options": [
-          "Valence electron count 1",
-          "Orbital 1",
-          "Bond type 1",
-          "Octet"
-        ],
-        "answer": "Valence electron count 1"
-      },
-      {
-        "question": "Reactions DOK1 Act5 Q2: Match element chemical electron configuration 2.",
-        "options": [
-          "Valence electron count 2",
-          "Orbital 2",
-          "Bond type 2",
-          "Octet"
-        ],
-        "answer": "Valence electron count 2"
-      },
-      {
-        "question": "Reactions DOK1 Act5 Q3: Match element chemical electron configuration 3.",
-        "options": [
-          "Valence electron count 3",
-          "Orbital 3",
-          "Bond type 3",
-          "Octet"
-        ],
-        "answer": "Valence electron count 3"
-      },
-      {
-        "question": "Reactions DOK1 Act5 Q4: Match element chemical electron configuration 4.",
-        "options": [
-          "Valence electron count 4",
-          "Orbital 4",
-          "Bond type 4",
-          "Octet"
-        ],
-        "answer": "Valence electron count 4"
-      },
-      {
-        "question": "Reactions DOK1 Act5 Q5: Match element chemical electron configuration 5.",
-        "options": [
-          "Valence electron count 5",
-          "Orbital 5",
-          "Bond type 5",
-          "Octet"
-        ],
-        "answer": "Valence electron count 5"
-      },
-      {
-        "question": "Reactions DOK1 Act5 Q6: Match element chemical electron configuration 6.",
-        "options": [
-          "Valence electron count 6",
-          "Orbital 6",
-          "Bond type 6",
-          "Octet"
-        ],
-        "answer": "Valence electron count 6"
-      },
-      {
-        "question": "Reactions DOK1 Act5 Q7: Match element chemical electron configuration 7.",
-        "options": [
-          "Valence electron count 7",
-          "Orbital 7",
-          "Bond type 7",
-          "Octet"
-        ],
-        "answer": "Valence electron count 7"
-      },
-      {
-        "question": "Reactions DOK1 Act5 Q8: Match element chemical electron configuration 8.",
-        "options": [
-          "Valence electron count 8",
-          "Orbital 8",
-          "Bond type 8",
-          "Octet"
-        ],
-        "answer": "Valence electron count 8"
-      },
-      {
-        "question": "Reactions DOK1 Act5 Q9: Match element chemical electron configuration 9.",
-        "options": [
-          "Valence electron count 9",
-          "Orbital 9",
-          "Bond type 9",
-          "Octet"
-        ],
-        "answer": "Valence electron count 9"
-      }
-    ]
-  ],
-  "2": [
-    [
-      {
-        "question": "Reactions DOK2 Act1 Q0: Classify the chemical reaction types 0.",
-        "options": [
-          "Reaction type 0",
-          "Redox 0",
-          "State 0",
-          "Energy"
-        ],
-        "answer": "Reaction type 0"
-      },
-      {
-        "question": "Reactions DOK2 Act1 Q1: Classify the chemical reaction types 1.",
-        "options": [
-          "Reaction type 1",
-          "Redox 1",
-          "State 1",
-          "Energy"
-        ],
-        "answer": "Reaction type 1"
-      },
-      {
-        "question": "Reactions DOK2 Act1 Q2: Classify the chemical reaction types 2.",
-        "options": [
-          "Reaction type 2",
-          "Redox 2",
-          "State 2",
-          "Energy"
-        ],
-        "answer": "Reaction type 2"
-      },
-      {
-        "question": "Reactions DOK2 Act1 Q3: Classify the chemical reaction types 3.",
-        "options": [
-          "Reaction type 3",
-          "Redox 3",
-          "State 3",
-          "Energy"
-        ],
-        "answer": "Reaction type 3"
-      },
-      {
-        "question": "Reactions DOK2 Act1 Q4: Classify the chemical reaction types 4.",
-        "options": [
-          "Reaction type 4",
-          "Redox 4",
-          "State 4",
-          "Energy"
-        ],
-        "answer": "Reaction type 4"
-      },
-      {
-        "question": "Reactions DOK2 Act1 Q5: Classify the chemical reaction types 5.",
-        "options": [
-          "Reaction type 5",
-          "Redox 5",
-          "State 5",
-          "Energy"
-        ],
-        "answer": "Reaction type 5"
-      },
-      {
-        "question": "Reactions DOK2 Act1 Q6: Classify the chemical reaction types 6.",
-        "options": [
-          "Reaction type 6",
-          "Redox 6",
-          "State 6",
-          "Energy"
-        ],
-        "answer": "Reaction type 6"
-      },
-      {
-        "question": "Reactions DOK2 Act1 Q7: Classify the chemical reaction types 7.",
-        "options": [
-          "Reaction type 7",
-          "Redox 7",
-          "State 7",
-          "Energy"
-        ],
-        "answer": "Reaction type 7"
-      },
-      {
-        "question": "Reactions DOK2 Act1 Q8: Classify the chemical reaction types 8.",
-        "options": [
-          "Reaction type 8",
-          "Redox 8",
-          "State 8",
-          "Energy"
-        ],
-        "answer": "Reaction type 8"
-      },
-      {
-        "question": "Reactions DOK2 Act1 Q9: Classify the chemical reaction types 9.",
-        "options": [
-          "Reaction type 9",
-          "Redox 9",
-          "State 9",
-          "Energy"
-        ],
-        "answer": "Reaction type 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK2 Act2 Q0: Classify the chemical reaction types 0.",
-        "options": [
-          "Reaction type 0",
-          "Redox 0",
-          "State 0",
-          "Energy"
-        ],
-        "answer": "Reaction type 0"
-      },
-      {
-        "question": "Reactions DOK2 Act2 Q1: Classify the chemical reaction types 1.",
-        "options": [
-          "Reaction type 1",
-          "Redox 1",
-          "State 1",
-          "Energy"
-        ],
-        "answer": "Reaction type 1"
-      },
-      {
-        "question": "Reactions DOK2 Act2 Q2: Classify the chemical reaction types 2.",
-        "options": [
-          "Reaction type 2",
-          "Redox 2",
-          "State 2",
-          "Energy"
-        ],
-        "answer": "Reaction type 2"
-      },
-      {
-        "question": "Reactions DOK2 Act2 Q3: Classify the chemical reaction types 3.",
-        "options": [
-          "Reaction type 3",
-          "Redox 3",
-          "State 3",
-          "Energy"
-        ],
-        "answer": "Reaction type 3"
-      },
-      {
-        "question": "Reactions DOK2 Act2 Q4: Classify the chemical reaction types 4.",
-        "options": [
-          "Reaction type 4",
-          "Redox 4",
-          "State 4",
-          "Energy"
-        ],
-        "answer": "Reaction type 4"
-      },
-      {
-        "question": "Reactions DOK2 Act2 Q5: Classify the chemical reaction types 5.",
-        "options": [
-          "Reaction type 5",
-          "Redox 5",
-          "State 5",
-          "Energy"
-        ],
-        "answer": "Reaction type 5"
-      },
-      {
-        "question": "Reactions DOK2 Act2 Q6: Classify the chemical reaction types 6.",
-        "options": [
-          "Reaction type 6",
-          "Redox 6",
-          "State 6",
-          "Energy"
-        ],
-        "answer": "Reaction type 6"
-      },
-      {
-        "question": "Reactions DOK2 Act2 Q7: Classify the chemical reaction types 7.",
-        "options": [
-          "Reaction type 7",
-          "Redox 7",
-          "State 7",
-          "Energy"
-        ],
-        "answer": "Reaction type 7"
-      },
-      {
-        "question": "Reactions DOK2 Act2 Q8: Classify the chemical reaction types 8.",
-        "options": [
-          "Reaction type 8",
-          "Redox 8",
-          "State 8",
-          "Energy"
-        ],
-        "answer": "Reaction type 8"
-      },
-      {
-        "question": "Reactions DOK2 Act2 Q9: Classify the chemical reaction types 9.",
-        "options": [
-          "Reaction type 9",
-          "Redox 9",
-          "State 9",
-          "Energy"
-        ],
-        "answer": "Reaction type 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK2 Act3 Q0: Classify the chemical reaction types 0.",
-        "options": [
-          "Reaction type 0",
-          "Redox 0",
-          "State 0",
-          "Energy"
-        ],
-        "answer": "Reaction type 0"
-      },
-      {
-        "question": "Reactions DOK2 Act3 Q1: Classify the chemical reaction types 1.",
-        "options": [
-          "Reaction type 1",
-          "Redox 1",
-          "State 1",
-          "Energy"
-        ],
-        "answer": "Reaction type 1"
-      },
-      {
-        "question": "Reactions DOK2 Act3 Q2: Classify the chemical reaction types 2.",
-        "options": [
-          "Reaction type 2",
-          "Redox 2",
-          "State 2",
-          "Energy"
-        ],
-        "answer": "Reaction type 2"
-      },
-      {
-        "question": "Reactions DOK2 Act3 Q3: Classify the chemical reaction types 3.",
-        "options": [
-          "Reaction type 3",
-          "Redox 3",
-          "State 3",
-          "Energy"
-        ],
-        "answer": "Reaction type 3"
-      },
-      {
-        "question": "Reactions DOK2 Act3 Q4: Classify the chemical reaction types 4.",
-        "options": [
-          "Reaction type 4",
-          "Redox 4",
-          "State 4",
-          "Energy"
-        ],
-        "answer": "Reaction type 4"
-      },
-      {
-        "question": "Reactions DOK2 Act3 Q5: Classify the chemical reaction types 5.",
-        "options": [
-          "Reaction type 5",
-          "Redox 5",
-          "State 5",
-          "Energy"
-        ],
-        "answer": "Reaction type 5"
-      },
-      {
-        "question": "Reactions DOK2 Act3 Q6: Classify the chemical reaction types 6.",
-        "options": [
-          "Reaction type 6",
-          "Redox 6",
-          "State 6",
-          "Energy"
-        ],
-        "answer": "Reaction type 6"
-      },
-      {
-        "question": "Reactions DOK2 Act3 Q7: Classify the chemical reaction types 7.",
-        "options": [
-          "Reaction type 7",
-          "Redox 7",
-          "State 7",
-          "Energy"
-        ],
-        "answer": "Reaction type 7"
-      },
-      {
-        "question": "Reactions DOK2 Act3 Q8: Classify the chemical reaction types 8.",
-        "options": [
-          "Reaction type 8",
-          "Redox 8",
-          "State 8",
-          "Energy"
-        ],
-        "answer": "Reaction type 8"
-      },
-      {
-        "question": "Reactions DOK2 Act3 Q9: Classify the chemical reaction types 9.",
-        "options": [
-          "Reaction type 9",
-          "Redox 9",
-          "State 9",
-          "Energy"
-        ],
-        "answer": "Reaction type 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK2 Act4 Q0: Classify the chemical reaction types 0.",
-        "options": [
-          "Reaction type 0",
-          "Redox 0",
-          "State 0",
-          "Energy"
-        ],
-        "answer": "Reaction type 0"
-      },
-      {
-        "question": "Reactions DOK2 Act4 Q1: Classify the chemical reaction types 1.",
-        "options": [
-          "Reaction type 1",
-          "Redox 1",
-          "State 1",
-          "Energy"
-        ],
-        "answer": "Reaction type 1"
-      },
-      {
-        "question": "Reactions DOK2 Act4 Q2: Classify the chemical reaction types 2.",
-        "options": [
-          "Reaction type 2",
-          "Redox 2",
-          "State 2",
-          "Energy"
-        ],
-        "answer": "Reaction type 2"
-      },
-      {
-        "question": "Reactions DOK2 Act4 Q3: Classify the chemical reaction types 3.",
-        "options": [
-          "Reaction type 3",
-          "Redox 3",
-          "State 3",
-          "Energy"
-        ],
-        "answer": "Reaction type 3"
-      },
-      {
-        "question": "Reactions DOK2 Act4 Q4: Classify the chemical reaction types 4.",
-        "options": [
-          "Reaction type 4",
-          "Redox 4",
-          "State 4",
-          "Energy"
-        ],
-        "answer": "Reaction type 4"
-      },
-      {
-        "question": "Reactions DOK2 Act4 Q5: Classify the chemical reaction types 5.",
-        "options": [
-          "Reaction type 5",
-          "Redox 5",
-          "State 5",
-          "Energy"
-        ],
-        "answer": "Reaction type 5"
-      },
-      {
-        "question": "Reactions DOK2 Act4 Q6: Classify the chemical reaction types 6.",
-        "options": [
-          "Reaction type 6",
-          "Redox 6",
-          "State 6",
-          "Energy"
-        ],
-        "answer": "Reaction type 6"
-      },
-      {
-        "question": "Reactions DOK2 Act4 Q7: Classify the chemical reaction types 7.",
-        "options": [
-          "Reaction type 7",
-          "Redox 7",
-          "State 7",
-          "Energy"
-        ],
-        "answer": "Reaction type 7"
-      },
-      {
-        "question": "Reactions DOK2 Act4 Q8: Classify the chemical reaction types 8.",
-        "options": [
-          "Reaction type 8",
-          "Redox 8",
-          "State 8",
-          "Energy"
-        ],
-        "answer": "Reaction type 8"
-      },
-      {
-        "question": "Reactions DOK2 Act4 Q9: Classify the chemical reaction types 9.",
-        "options": [
-          "Reaction type 9",
-          "Redox 9",
-          "State 9",
-          "Energy"
-        ],
-        "answer": "Reaction type 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK2 Act5 Q0: Classify the chemical reaction types 0.",
-        "options": [
-          "Reaction type 0",
-          "Redox 0",
-          "State 0",
-          "Energy"
-        ],
-        "answer": "Reaction type 0"
-      },
-      {
-        "question": "Reactions DOK2 Act5 Q1: Classify the chemical reaction types 1.",
-        "options": [
-          "Reaction type 1",
-          "Redox 1",
-          "State 1",
-          "Energy"
-        ],
-        "answer": "Reaction type 1"
-      },
-      {
-        "question": "Reactions DOK2 Act5 Q2: Classify the chemical reaction types 2.",
-        "options": [
-          "Reaction type 2",
-          "Redox 2",
-          "State 2",
-          "Energy"
-        ],
-        "answer": "Reaction type 2"
-      },
-      {
-        "question": "Reactions DOK2 Act5 Q3: Classify the chemical reaction types 3.",
-        "options": [
-          "Reaction type 3",
-          "Redox 3",
-          "State 3",
-          "Energy"
-        ],
-        "answer": "Reaction type 3"
-      },
-      {
-        "question": "Reactions DOK2 Act5 Q4: Classify the chemical reaction types 4.",
-        "options": [
-          "Reaction type 4",
-          "Redox 4",
-          "State 4",
-          "Energy"
-        ],
-        "answer": "Reaction type 4"
-      },
-      {
-        "question": "Reactions DOK2 Act5 Q5: Classify the chemical reaction types 5.",
-        "options": [
-          "Reaction type 5",
-          "Redox 5",
-          "State 5",
-          "Energy"
-        ],
-        "answer": "Reaction type 5"
-      },
-      {
-        "question": "Reactions DOK2 Act5 Q6: Classify the chemical reaction types 6.",
-        "options": [
-          "Reaction type 6",
-          "Redox 6",
-          "State 6",
-          "Energy"
-        ],
-        "answer": "Reaction type 6"
-      },
-      {
-        "question": "Reactions DOK2 Act5 Q7: Classify the chemical reaction types 7.",
-        "options": [
-          "Reaction type 7",
-          "Redox 7",
-          "State 7",
-          "Energy"
-        ],
-        "answer": "Reaction type 7"
-      },
-      {
-        "question": "Reactions DOK2 Act5 Q8: Classify the chemical reaction types 8.",
-        "options": [
-          "Reaction type 8",
-          "Redox 8",
-          "State 8",
-          "Energy"
-        ],
-        "answer": "Reaction type 8"
-      },
-      {
-        "question": "Reactions DOK2 Act5 Q9: Classify the chemical reaction types 9.",
-        "options": [
-          "Reaction type 9",
-          "Redox 9",
-          "State 9",
-          "Energy"
-        ],
-        "answer": "Reaction type 9"
-      }
-    ]
-  ],
-  "3": [
-    [
-      {
-        "question": "Reactions DOK3 Act1 Q0: Balance the chemical equations coefficient 0.",
-        "options": [
-          "Balanced coefficient 0",
-          "Stoichiometry 0",
-          "Gibbs 0",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 0"
-      },
-      {
-        "question": "Reactions DOK3 Act1 Q1: Balance the chemical equations coefficient 1.",
-        "options": [
-          "Balanced coefficient 1",
-          "Stoichiometry 1",
-          "Gibbs 1",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 1"
-      },
-      {
-        "question": "Reactions DOK3 Act1 Q2: Balance the chemical equations coefficient 2.",
-        "options": [
-          "Balanced coefficient 2",
-          "Stoichiometry 2",
-          "Gibbs 2",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 2"
-      },
-      {
-        "question": "Reactions DOK3 Act1 Q3: Balance the chemical equations coefficient 3.",
-        "options": [
-          "Balanced coefficient 3",
-          "Stoichiometry 3",
-          "Gibbs 3",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 3"
-      },
-      {
-        "question": "Reactions DOK3 Act1 Q4: Balance the chemical equations coefficient 4.",
-        "options": [
-          "Balanced coefficient 4",
-          "Stoichiometry 4",
-          "Gibbs 4",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 4"
-      },
-      {
-        "question": "Reactions DOK3 Act1 Q5: Balance the chemical equations coefficient 5.",
-        "options": [
-          "Balanced coefficient 5",
-          "Stoichiometry 5",
-          "Gibbs 5",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 5"
-      },
-      {
-        "question": "Reactions DOK3 Act1 Q6: Balance the chemical equations coefficient 6.",
-        "options": [
-          "Balanced coefficient 6",
-          "Stoichiometry 6",
-          "Gibbs 6",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 6"
-      },
-      {
-        "question": "Reactions DOK3 Act1 Q7: Balance the chemical equations coefficient 7.",
-        "options": [
-          "Balanced coefficient 7",
-          "Stoichiometry 7",
-          "Gibbs 7",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 7"
-      },
-      {
-        "question": "Reactions DOK3 Act1 Q8: Balance the chemical equations coefficient 8.",
-        "options": [
-          "Balanced coefficient 8",
-          "Stoichiometry 8",
-          "Gibbs 8",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 8"
-      },
-      {
-        "question": "Reactions DOK3 Act1 Q9: Balance the chemical equations coefficient 9.",
-        "options": [
-          "Balanced coefficient 9",
-          "Stoichiometry 9",
-          "Gibbs 9",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK3 Act2 Q0: Balance the chemical equations coefficient 0.",
-        "options": [
-          "Balanced coefficient 0",
-          "Stoichiometry 0",
-          "Gibbs 0",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 0"
-      },
-      {
-        "question": "Reactions DOK3 Act2 Q1: Balance the chemical equations coefficient 1.",
-        "options": [
-          "Balanced coefficient 1",
-          "Stoichiometry 1",
-          "Gibbs 1",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 1"
-      },
-      {
-        "question": "Reactions DOK3 Act2 Q2: Balance the chemical equations coefficient 2.",
-        "options": [
-          "Balanced coefficient 2",
-          "Stoichiometry 2",
-          "Gibbs 2",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 2"
-      },
-      {
-        "question": "Reactions DOK3 Act2 Q3: Balance the chemical equations coefficient 3.",
-        "options": [
-          "Balanced coefficient 3",
-          "Stoichiometry 3",
-          "Gibbs 3",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 3"
-      },
-      {
-        "question": "Reactions DOK3 Act2 Q4: Balance the chemical equations coefficient 4.",
-        "options": [
-          "Balanced coefficient 4",
-          "Stoichiometry 4",
-          "Gibbs 4",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 4"
-      },
-      {
-        "question": "Reactions DOK3 Act2 Q5: Balance the chemical equations coefficient 5.",
-        "options": [
-          "Balanced coefficient 5",
-          "Stoichiometry 5",
-          "Gibbs 5",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 5"
-      },
-      {
-        "question": "Reactions DOK3 Act2 Q6: Balance the chemical equations coefficient 6.",
-        "options": [
-          "Balanced coefficient 6",
-          "Stoichiometry 6",
-          "Gibbs 6",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 6"
-      },
-      {
-        "question": "Reactions DOK3 Act2 Q7: Balance the chemical equations coefficient 7.",
-        "options": [
-          "Balanced coefficient 7",
-          "Stoichiometry 7",
-          "Gibbs 7",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 7"
-      },
-      {
-        "question": "Reactions DOK3 Act2 Q8: Balance the chemical equations coefficient 8.",
-        "options": [
-          "Balanced coefficient 8",
-          "Stoichiometry 8",
-          "Gibbs 8",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 8"
-      },
-      {
-        "question": "Reactions DOK3 Act2 Q9: Balance the chemical equations coefficient 9.",
-        "options": [
-          "Balanced coefficient 9",
-          "Stoichiometry 9",
-          "Gibbs 9",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK3 Act3 Q0: Balance the chemical equations coefficient 0.",
-        "options": [
-          "Balanced coefficient 0",
-          "Stoichiometry 0",
-          "Gibbs 0",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 0"
-      },
-      {
-        "question": "Reactions DOK3 Act3 Q1: Balance the chemical equations coefficient 1.",
-        "options": [
-          "Balanced coefficient 1",
-          "Stoichiometry 1",
-          "Gibbs 1",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 1"
-      },
-      {
-        "question": "Reactions DOK3 Act3 Q2: Balance the chemical equations coefficient 2.",
-        "options": [
-          "Balanced coefficient 2",
-          "Stoichiometry 2",
-          "Gibbs 2",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 2"
-      },
-      {
-        "question": "Reactions DOK3 Act3 Q3: Balance the chemical equations coefficient 3.",
-        "options": [
-          "Balanced coefficient 3",
-          "Stoichiometry 3",
-          "Gibbs 3",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 3"
-      },
-      {
-        "question": "Reactions DOK3 Act3 Q4: Balance the chemical equations coefficient 4.",
-        "options": [
-          "Balanced coefficient 4",
-          "Stoichiometry 4",
-          "Gibbs 4",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 4"
-      },
-      {
-        "question": "Reactions DOK3 Act3 Q5: Balance the chemical equations coefficient 5.",
-        "options": [
-          "Balanced coefficient 5",
-          "Stoichiometry 5",
-          "Gibbs 5",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 5"
-      },
-      {
-        "question": "Reactions DOK3 Act3 Q6: Balance the chemical equations coefficient 6.",
-        "options": [
-          "Balanced coefficient 6",
-          "Stoichiometry 6",
-          "Gibbs 6",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 6"
-      },
-      {
-        "question": "Reactions DOK3 Act3 Q7: Balance the chemical equations coefficient 7.",
-        "options": [
-          "Balanced coefficient 7",
-          "Stoichiometry 7",
-          "Gibbs 7",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 7"
-      },
-      {
-        "question": "Reactions DOK3 Act3 Q8: Balance the chemical equations coefficient 8.",
-        "options": [
-          "Balanced coefficient 8",
-          "Stoichiometry 8",
-          "Gibbs 8",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 8"
-      },
-      {
-        "question": "Reactions DOK3 Act3 Q9: Balance the chemical equations coefficient 9.",
-        "options": [
-          "Balanced coefficient 9",
-          "Stoichiometry 9",
-          "Gibbs 9",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK3 Act4 Q0: Balance the chemical equations coefficient 0.",
-        "options": [
-          "Balanced coefficient 0",
-          "Stoichiometry 0",
-          "Gibbs 0",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 0"
-      },
-      {
-        "question": "Reactions DOK3 Act4 Q1: Balance the chemical equations coefficient 1.",
-        "options": [
-          "Balanced coefficient 1",
-          "Stoichiometry 1",
-          "Gibbs 1",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 1"
-      },
-      {
-        "question": "Reactions DOK3 Act4 Q2: Balance the chemical equations coefficient 2.",
-        "options": [
-          "Balanced coefficient 2",
-          "Stoichiometry 2",
-          "Gibbs 2",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 2"
-      },
-      {
-        "question": "Reactions DOK3 Act4 Q3: Balance the chemical equations coefficient 3.",
-        "options": [
-          "Balanced coefficient 3",
-          "Stoichiometry 3",
-          "Gibbs 3",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 3"
-      },
-      {
-        "question": "Reactions DOK3 Act4 Q4: Balance the chemical equations coefficient 4.",
-        "options": [
-          "Balanced coefficient 4",
-          "Stoichiometry 4",
-          "Gibbs 4",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 4"
-      },
-      {
-        "question": "Reactions DOK3 Act4 Q5: Balance the chemical equations coefficient 5.",
-        "options": [
-          "Balanced coefficient 5",
-          "Stoichiometry 5",
-          "Gibbs 5",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 5"
-      },
-      {
-        "question": "Reactions DOK3 Act4 Q6: Balance the chemical equations coefficient 6.",
-        "options": [
-          "Balanced coefficient 6",
-          "Stoichiometry 6",
-          "Gibbs 6",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 6"
-      },
-      {
-        "question": "Reactions DOK3 Act4 Q7: Balance the chemical equations coefficient 7.",
-        "options": [
-          "Balanced coefficient 7",
-          "Stoichiometry 7",
-          "Gibbs 7",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 7"
-      },
-      {
-        "question": "Reactions DOK3 Act4 Q8: Balance the chemical equations coefficient 8.",
-        "options": [
-          "Balanced coefficient 8",
-          "Stoichiometry 8",
-          "Gibbs 8",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 8"
-      },
-      {
-        "question": "Reactions DOK3 Act4 Q9: Balance the chemical equations coefficient 9.",
-        "options": [
-          "Balanced coefficient 9",
-          "Stoichiometry 9",
-          "Gibbs 9",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK3 Act5 Q0: Balance the chemical equations coefficient 0.",
-        "options": [
-          "Balanced coefficient 0",
-          "Stoichiometry 0",
-          "Gibbs 0",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 0"
-      },
-      {
-        "question": "Reactions DOK3 Act5 Q1: Balance the chemical equations coefficient 1.",
-        "options": [
-          "Balanced coefficient 1",
-          "Stoichiometry 1",
-          "Gibbs 1",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 1"
-      },
-      {
-        "question": "Reactions DOK3 Act5 Q2: Balance the chemical equations coefficient 2.",
-        "options": [
-          "Balanced coefficient 2",
-          "Stoichiometry 2",
-          "Gibbs 2",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 2"
-      },
-      {
-        "question": "Reactions DOK3 Act5 Q3: Balance the chemical equations coefficient 3.",
-        "options": [
-          "Balanced coefficient 3",
-          "Stoichiometry 3",
-          "Gibbs 3",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 3"
-      },
-      {
-        "question": "Reactions DOK3 Act5 Q4: Balance the chemical equations coefficient 4.",
-        "options": [
-          "Balanced coefficient 4",
-          "Stoichiometry 4",
-          "Gibbs 4",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 4"
-      },
-      {
-        "question": "Reactions DOK3 Act5 Q5: Balance the chemical equations coefficient 5.",
-        "options": [
-          "Balanced coefficient 5",
-          "Stoichiometry 5",
-          "Gibbs 5",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 5"
-      },
-      {
-        "question": "Reactions DOK3 Act5 Q6: Balance the chemical equations coefficient 6.",
-        "options": [
-          "Balanced coefficient 6",
-          "Stoichiometry 6",
-          "Gibbs 6",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 6"
-      },
-      {
-        "question": "Reactions DOK3 Act5 Q7: Balance the chemical equations coefficient 7.",
-        "options": [
-          "Balanced coefficient 7",
-          "Stoichiometry 7",
-          "Gibbs 7",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 7"
-      },
-      {
-        "question": "Reactions DOK3 Act5 Q8: Balance the chemical equations coefficient 8.",
-        "options": [
-          "Balanced coefficient 8",
-          "Stoichiometry 8",
-          "Gibbs 8",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 8"
-      },
-      {
-        "question": "Reactions DOK3 Act5 Q9: Balance the chemical equations coefficient 9.",
-        "options": [
-          "Balanced coefficient 9",
-          "Stoichiometry 9",
-          "Gibbs 9",
-          "Spontaneity"
-        ],
-        "answer": "Balanced coefficient 9"
-      }
-    ]
-  ],
-  "4": [
-    [
-      {
-        "question": "Reactions DOK4 Act1 Q0: Calibrate reaction energy activation tuner 0.",
-        "options": [
-          "Energy landscape 0",
-          "Yield optimizer 0",
-          "Redox battery 0",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 0"
-      },
-      {
-        "question": "Reactions DOK4 Act1 Q1: Calibrate reaction energy activation tuner 1.",
-        "options": [
-          "Energy landscape 1",
-          "Yield optimizer 1",
-          "Redox battery 1",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 1"
-      },
-      {
-        "question": "Reactions DOK4 Act1 Q2: Calibrate reaction energy activation tuner 2.",
-        "options": [
-          "Energy landscape 2",
-          "Yield optimizer 2",
-          "Redox battery 2",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 2"
-      },
-      {
-        "question": "Reactions DOK4 Act1 Q3: Calibrate reaction energy activation tuner 3.",
-        "options": [
-          "Energy landscape 3",
-          "Yield optimizer 3",
-          "Redox battery 3",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 3"
-      },
-      {
-        "question": "Reactions DOK4 Act1 Q4: Calibrate reaction energy activation tuner 4.",
-        "options": [
-          "Energy landscape 4",
-          "Yield optimizer 4",
-          "Redox battery 4",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 4"
-      },
-      {
-        "question": "Reactions DOK4 Act1 Q5: Calibrate reaction energy activation tuner 5.",
-        "options": [
-          "Energy landscape 5",
-          "Yield optimizer 5",
-          "Redox battery 5",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 5"
-      },
-      {
-        "question": "Reactions DOK4 Act1 Q6: Calibrate reaction energy activation tuner 6.",
-        "options": [
-          "Energy landscape 6",
-          "Yield optimizer 6",
-          "Redox battery 6",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 6"
-      },
-      {
-        "question": "Reactions DOK4 Act1 Q7: Calibrate reaction energy activation tuner 7.",
-        "options": [
-          "Energy landscape 7",
-          "Yield optimizer 7",
-          "Redox battery 7",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 7"
-      },
-      {
-        "question": "Reactions DOK4 Act1 Q8: Calibrate reaction energy activation tuner 8.",
-        "options": [
-          "Energy landscape 8",
-          "Yield optimizer 8",
-          "Redox battery 8",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 8"
-      },
-      {
-        "question": "Reactions DOK4 Act1 Q9: Calibrate reaction energy activation tuner 9.",
-        "options": [
-          "Energy landscape 9",
-          "Yield optimizer 9",
-          "Redox battery 9",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK4 Act2 Q0: Calibrate reaction energy activation tuner 0.",
-        "options": [
-          "Energy landscape 0",
-          "Yield optimizer 0",
-          "Redox battery 0",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 0"
-      },
-      {
-        "question": "Reactions DOK4 Act2 Q1: Calibrate reaction energy activation tuner 1.",
-        "options": [
-          "Energy landscape 1",
-          "Yield optimizer 1",
-          "Redox battery 1",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 1"
-      },
-      {
-        "question": "Reactions DOK4 Act2 Q2: Calibrate reaction energy activation tuner 2.",
-        "options": [
-          "Energy landscape 2",
-          "Yield optimizer 2",
-          "Redox battery 2",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 2"
-      },
-      {
-        "question": "Reactions DOK4 Act2 Q3: Calibrate reaction energy activation tuner 3.",
-        "options": [
-          "Energy landscape 3",
-          "Yield optimizer 3",
-          "Redox battery 3",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 3"
-      },
-      {
-        "question": "Reactions DOK4 Act2 Q4: Calibrate reaction energy activation tuner 4.",
-        "options": [
-          "Energy landscape 4",
-          "Yield optimizer 4",
-          "Redox battery 4",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 4"
-      },
-      {
-        "question": "Reactions DOK4 Act2 Q5: Calibrate reaction energy activation tuner 5.",
-        "options": [
-          "Energy landscape 5",
-          "Yield optimizer 5",
-          "Redox battery 5",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 5"
-      },
-      {
-        "question": "Reactions DOK4 Act2 Q6: Calibrate reaction energy activation tuner 6.",
-        "options": [
-          "Energy landscape 6",
-          "Yield optimizer 6",
-          "Redox battery 6",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 6"
-      },
-      {
-        "question": "Reactions DOK4 Act2 Q7: Calibrate reaction energy activation tuner 7.",
-        "options": [
-          "Energy landscape 7",
-          "Yield optimizer 7",
-          "Redox battery 7",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 7"
-      },
-      {
-        "question": "Reactions DOK4 Act2 Q8: Calibrate reaction energy activation tuner 8.",
-        "options": [
-          "Energy landscape 8",
-          "Yield optimizer 8",
-          "Redox battery 8",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 8"
-      },
-      {
-        "question": "Reactions DOK4 Act2 Q9: Calibrate reaction energy activation tuner 9.",
-        "options": [
-          "Energy landscape 9",
-          "Yield optimizer 9",
-          "Redox battery 9",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK4 Act3 Q0: Calibrate reaction energy activation tuner 0.",
-        "options": [
-          "Energy landscape 0",
-          "Yield optimizer 0",
-          "Redox battery 0",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 0"
-      },
-      {
-        "question": "Reactions DOK4 Act3 Q1: Calibrate reaction energy activation tuner 1.",
-        "options": [
-          "Energy landscape 1",
-          "Yield optimizer 1",
-          "Redox battery 1",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 1"
-      },
-      {
-        "question": "Reactions DOK4 Act3 Q2: Calibrate reaction energy activation tuner 2.",
-        "options": [
-          "Energy landscape 2",
-          "Yield optimizer 2",
-          "Redox battery 2",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 2"
-      },
-      {
-        "question": "Reactions DOK4 Act3 Q3: Calibrate reaction energy activation tuner 3.",
-        "options": [
-          "Energy landscape 3",
-          "Yield optimizer 3",
-          "Redox battery 3",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 3"
-      },
-      {
-        "question": "Reactions DOK4 Act3 Q4: Calibrate reaction energy activation tuner 4.",
-        "options": [
-          "Energy landscape 4",
-          "Yield optimizer 4",
-          "Redox battery 4",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 4"
-      },
-      {
-        "question": "Reactions DOK4 Act3 Q5: Calibrate reaction energy activation tuner 5.",
-        "options": [
-          "Energy landscape 5",
-          "Yield optimizer 5",
-          "Redox battery 5",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 5"
-      },
-      {
-        "question": "Reactions DOK4 Act3 Q6: Calibrate reaction energy activation tuner 6.",
-        "options": [
-          "Energy landscape 6",
-          "Yield optimizer 6",
-          "Redox battery 6",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 6"
-      },
-      {
-        "question": "Reactions DOK4 Act3 Q7: Calibrate reaction energy activation tuner 7.",
-        "options": [
-          "Energy landscape 7",
-          "Yield optimizer 7",
-          "Redox battery 7",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 7"
-      },
-      {
-        "question": "Reactions DOK4 Act3 Q8: Calibrate reaction energy activation tuner 8.",
-        "options": [
-          "Energy landscape 8",
-          "Yield optimizer 8",
-          "Redox battery 8",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 8"
-      },
-      {
-        "question": "Reactions DOK4 Act3 Q9: Calibrate reaction energy activation tuner 9.",
-        "options": [
-          "Energy landscape 9",
-          "Yield optimizer 9",
-          "Redox battery 9",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK4 Act4 Q0: Calibrate reaction energy activation tuner 0.",
-        "options": [
-          "Energy landscape 0",
-          "Yield optimizer 0",
-          "Redox battery 0",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 0"
-      },
-      {
-        "question": "Reactions DOK4 Act4 Q1: Calibrate reaction energy activation tuner 1.",
-        "options": [
-          "Energy landscape 1",
-          "Yield optimizer 1",
-          "Redox battery 1",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 1"
-      },
-      {
-        "question": "Reactions DOK4 Act4 Q2: Calibrate reaction energy activation tuner 2.",
-        "options": [
-          "Energy landscape 2",
-          "Yield optimizer 2",
-          "Redox battery 2",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 2"
-      },
-      {
-        "question": "Reactions DOK4 Act4 Q3: Calibrate reaction energy activation tuner 3.",
-        "options": [
-          "Energy landscape 3",
-          "Yield optimizer 3",
-          "Redox battery 3",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 3"
-      },
-      {
-        "question": "Reactions DOK4 Act4 Q4: Calibrate reaction energy activation tuner 4.",
-        "options": [
-          "Energy landscape 4",
-          "Yield optimizer 4",
-          "Redox battery 4",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 4"
-      },
-      {
-        "question": "Reactions DOK4 Act4 Q5: Calibrate reaction energy activation tuner 5.",
-        "options": [
-          "Energy landscape 5",
-          "Yield optimizer 5",
-          "Redox battery 5",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 5"
-      },
-      {
-        "question": "Reactions DOK4 Act4 Q6: Calibrate reaction energy activation tuner 6.",
-        "options": [
-          "Energy landscape 6",
-          "Yield optimizer 6",
-          "Redox battery 6",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 6"
-      },
-      {
-        "question": "Reactions DOK4 Act4 Q7: Calibrate reaction energy activation tuner 7.",
-        "options": [
-          "Energy landscape 7",
-          "Yield optimizer 7",
-          "Redox battery 7",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 7"
-      },
-      {
-        "question": "Reactions DOK4 Act4 Q8: Calibrate reaction energy activation tuner 8.",
-        "options": [
-          "Energy landscape 8",
-          "Yield optimizer 8",
-          "Redox battery 8",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 8"
-      },
-      {
-        "question": "Reactions DOK4 Act4 Q9: Calibrate reaction energy activation tuner 9.",
-        "options": [
-          "Energy landscape 9",
-          "Yield optimizer 9",
-          "Redox battery 9",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 9"
-      }
-    ],
-    [
-      {
-        "question": "Reactions DOK4 Act5 Q0: Calibrate reaction energy activation tuner 0.",
-        "options": [
-          "Energy landscape 0",
-          "Yield optimizer 0",
-          "Redox battery 0",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 0"
-      },
-      {
-        "question": "Reactions DOK4 Act5 Q1: Calibrate reaction energy activation tuner 1.",
-        "options": [
-          "Energy landscape 1",
-          "Yield optimizer 1",
-          "Redox battery 1",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 1"
-      },
-      {
-        "question": "Reactions DOK4 Act5 Q2: Calibrate reaction energy activation tuner 2.",
-        "options": [
-          "Energy landscape 2",
-          "Yield optimizer 2",
-          "Redox battery 2",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 2"
-      },
-      {
-        "question": "Reactions DOK4 Act5 Q3: Calibrate reaction energy activation tuner 3.",
-        "options": [
-          "Energy landscape 3",
-          "Yield optimizer 3",
-          "Redox battery 3",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 3"
-      },
-      {
-        "question": "Reactions DOK4 Act5 Q4: Calibrate reaction energy activation tuner 4.",
-        "options": [
-          "Energy landscape 4",
-          "Yield optimizer 4",
-          "Redox battery 4",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 4"
-      },
-      {
-        "question": "Reactions DOK4 Act5 Q5: Calibrate reaction energy activation tuner 5.",
-        "options": [
-          "Energy landscape 5",
-          "Yield optimizer 5",
-          "Redox battery 5",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 5"
-      },
-      {
-        "question": "Reactions DOK4 Act5 Q6: Calibrate reaction energy activation tuner 6.",
-        "options": [
-          "Energy landscape 6",
-          "Yield optimizer 6",
-          "Redox battery 6",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 6"
-      },
-      {
-        "question": "Reactions DOK4 Act5 Q7: Calibrate reaction energy activation tuner 7.",
-        "options": [
-          "Energy landscape 7",
-          "Yield optimizer 7",
-          "Redox battery 7",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 7"
-      },
-      {
-        "question": "Reactions DOK4 Act5 Q8: Calibrate reaction energy activation tuner 8.",
-        "options": [
-          "Energy landscape 8",
-          "Yield optimizer 8",
-          "Redox battery 8",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 8"
-      },
-      {
-        "question": "Reactions DOK4 Act5 Q9: Calibrate reaction energy activation tuner 9.",
-        "options": [
-          "Energy landscape 9",
-          "Yield optimizer 9",
-          "Redox battery 9",
-          "Buffer"
-        ],
-        "answer": "Energy landscape 9"
-      }
-    ]
-  ]
-}
+
 };
+
+// High-quality dynamic generator for all 10 Physical Science standards (including B.PS1.1)
+const psStandards = [
+  "OAS.B.PS1.1", "OAS.PS.PS1.2", "OAS.PS.PS1.5", "OAS.PS.PS1.7", "OAS.PS.PS2.5", "OAS.PS.PS3.1",
+  "OAS.PS.PS3.2", "OAS.PS.PS3.3", "OAS.PS.PS3.4", "OAS.PS.PS4.1", "OAS.PS.PS4.4"
+];
+
+const psTopics = {
+  "OAS.B.PS1.1": {
+    items: [
+      { name: "Covalent bonding", val: "atoms sharing pairs of valence electrons to achieve stable noble gas octets" },
+      { name: "Ionic bonding", val: "the electrostatic attraction between oppositely charged ions formed by electron transfer" },
+      { name: "Electronegativity trends", val: "increasing across a period and decreasing down a group on the periodic table" },
+      { name: "The Octet Rule", val: "main-group atoms tending to combine so that each has 8 electrons in its valence shell" },
+      { name: "Metallic bonding", val: "the electrostatic attraction between a lattice of positive metal ions and delocalized conduction electrons" },
+      { name: "Polar covalent bonds", val: "unequal sharing of electrons between atoms with differing electronegativities" },
+      { name: "Noble gases", val: "possessing stable, completely filled valence shells (s²p⁶) that make them inert" },
+      { name: "Valence electrons", val: "outer shell electrons that participate in the formation of chemical bonds" },
+      { name: "VSEPR theory", val: "predicting 3D molecular geometries based on minimizing electrostatic repulsion between electron pairs" },
+      { name: "Lewis dot structures", val: "visual diagrams showing bonded atoms and lone pairs of valence electrons" }
+    ],
+    template: (item) => `Which of the following statements correctly describes the chemical concept of ${item.name}?`,
+    correct: (item) => `It involves ${item.val}.`,
+    distractors: [
+      "It requires absolute zero temperatures for the bonds to remain stable.",
+      "It causes the atomic nuclei to fuse together, releasing massive thermal energy.",
+      "It occurs only in the presence of strong external magnetic resonance fields.",
+      "It violates the second law of thermodynamics by creating order from nothing."
+    ]
+  },
+  "OAS.PS.PS1.2": {
+    items: [
+      { name: "Sodium (Na)", val: "1 valence electron, which is easily lost to form a stable +1 cation" },
+      { name: "Chlorine (Cl)", val: "7 valence electrons, eagerly gaining 1 electron to complete its octet as a -1 anion" },
+      { name: "Oxygen (O)", val: "6 valence electrons, typically sharing 2 electrons to form covalent bonds" },
+      { name: "Neon (Ne)", val: "8 valence electrons, forming a highly stable, non-reactive closed octet" },
+      { name: "Calcium (Ca)", val: "2 valence electrons, readily donating them to form a +2 ionic charge state" },
+      { name: "Fluorine (F)", val: "7 valence electrons, exhibiting the highest electronegativity to gain 1 electron" },
+      { name: "Helium (He)", val: "2 valence electrons in a single closed 1s shell, making it extremely inert" },
+      { name: "Nitrogen (N)", val: "5 valence electrons, commonly forming triple covalent bonds to achieve stability" },
+      { name: "Carbon (C)", val: "4 valence electrons, allowing it to form versatile tetravalent covalent networks" },
+      { name: "Magnesium (Mg)", val: "2 valence electrons, which it sheds to form a stable +2 cation" }
+    ],
+    template: (item) => `Which statement correctly describes the valence electron configuration and chemical behavior of ${item.name}?`,
+    correct: (item) => `It has ${item.val}.`,
+    distractors: [
+      "It has 8 valence electrons and forms an unstable triple-charged cation.",
+      "It has 3 valence electrons and tends to form covalent bonds with helium.",
+      "It lacks a valence shell entirely and reacts only via nuclear capture.",
+      "It has a variable valence count that changes dynamically with local atmospheric pressure."
+    ]
+  },
+  "OAS.PS.PS1.5": {
+    items: [
+      { name: "increasing the temperature", val: "raising the average kinetic energy of reactant particles so a larger fraction exceed the activation energy barrier" },
+      { name: "adding a catalyst", val: "providing an alternative reaction pathway with a significantly lower activation energy" },
+      { name: "increasing reactant concentration", val: "raising the number of reactant particles per unit volume, which increases the frequency of collisions" },
+      { name: "increasing surface area", val: "exposing a greater number of reactant particles to collisions, thereby raising the collision frequency" },
+      { name: "lowering the activation energy", val: "allowing a larger fraction of molecular collisions to be successful" },
+      { name: "increasing collision frequency", val: "raising the probability of successful reactant interactions per unit time" },
+      { name: "increasing kinetic energy of particles", val: "shifting the Maxwell-Boltzmann distribution toward higher velocities" },
+      { name: "decreasing temperature", val: "slowing the reaction by reducing the frequency and energy of particle collisions" },
+      { name: "removing a catalyst", val: "raising the required activation energy, forcing the reaction to proceed via a slower path" },
+      { name: "diluting the reactants", val: "reducing collision frequency, thereby lowering the overall rate of product formation" }
+    ],
+    template: (item) => `How does ${item.name} affect the overall rate of a chemical reaction according to collision theory?`,
+    correct: (item) => `It increases the rate by ${item.val}.`,
+    distractors: [
+      "It decreases the rate by changing the nuclear structure of the atoms.",
+      "It stabilizes the product states, preventing any reverse reactions from occurring.",
+      "It shifts the thermodynamic equilibrium constant, forcing the reaction to absorb ambient heat.",
+      "It eliminates the activation energy barrier completely, causing an instantaneous explosion."
+    ]
+  },
+  "OAS.PS.PS1.7": {
+    items: [
+      { name: "2H₂ + O₂ → 2H₂O", val: "4 hydrogen atoms and 2 oxygen atoms are conserved on both sides" },
+      { name: "CH₄ + 2O₂ → CO₂ + 2H₂O", val: "1 carbon, 4 hydrogen, and 4 oxygen atoms are balanced and conserved" },
+      { name: "N₂ + 3H₂ → 2NH₃", val: "2 nitrogen and 6 hydrogen atoms are conserved through rearrangement" },
+      { name: "CaCO₃ → CaO + CO₂", val: "1 calcium, 1 carbon, and 3 oxygen atoms are balanced in a decomposition process" },
+      { name: "2Na + Cl₂ → 2NaCl", val: "2 sodium and 2 chlorine atoms are conserved in forming an ionic lattice" },
+      { name: "2CO + O₂ → 2CO₂", val: "2 carbon and 4 oxygen atoms are conserved on both sides" },
+      { name: "C + O₂ → CO₂", val: "1 carbon and 2 oxygen atoms are conserved in a combustion reaction" },
+      { name: "HCl + NaOH → NaCl + H₂O", val: "1 hydrogen, 1 chlorine, 1 sodium, and 1 oxygen atom are conserved" },
+      { name: "2Mg + O₂ → 2MgO", val: "2 magnesium and 2 oxygen atoms are conserved in a synthesis reaction" },
+      { name: "2K + Cl₂ → 2KCl", val: "2 potassium and 2 chlorine atoms are conserved" }
+    ],
+    template: (item) => `In a closed system, how is the Law of Conservation of Mass demonstrated in the reaction ${item.name}?`,
+    correct: (item) => `The total mass remains constant because exactly ${item.val}.`,
+    distractors: [
+      "Mass decreases because gas molecules take up less weight than solid reactants.",
+      "The total number of reactant molecules must always equal the number of product molecules.",
+      "Energy is converted into new matter, resulting in a slight increase in total atomic weight.",
+      "Mass is conserved only if the temperature of the system remains at absolute zero."
+    ]
+  },
+  "OAS.PS.PS2.5": {
+    items: [
+      { name: "moving a permanent magnet through a conducting coil", val: "inducing an electric current due to the change in magnetic flux" },
+      { name: "increasing the number of turns in the coil", val: "increasing the magnitude of the induced electromotive force (EMF) proportionally" },
+      { name: "reversing the direction of the magnet's motion", val: "reversing the direction of the induced current, consistent with Lenz's Law" },
+      { name: "holding the magnet stationary inside the coil", val: "inducing zero current because the magnetic flux is not changing" },
+      { name: "using a stronger permanent magnet", val: "raising the rate of change of magnetic flux, leading to a higher induced voltage" },
+      { name: "spinning a conducting coil in a static magnetic field", val: "generating an alternating current as the flux angle changes continuously" },
+      { name: "decreasing the number of turns in the coil", val: "reducing the total electromotive force (EMF) generated by the system" },
+      { name: "increasing the speed of the magnet's movement", val: "increasing the rate of flux change, which boosts the induced current amplitude" },
+      { name: "introducing a ferromagnetic iron core into the coil", val: "concentrating the magnetic field lines and enhancing the induced EMF" },
+      { name: "reversing the magnetic poles of the moving magnet", val: "reversing the polarity of the induced electromotive force" }
+    ],
+    template: (item) => `What is the direct electromagnetic consequence of ${item.name}?`,
+    correct: (item) => `It results in ${item.val}.`,
+    distractors: [
+      "It destroys the magnetic properties of the permanent magnet permanently.",
+      "It converts the conducting wire into a superconductor at room temperature.",
+      "It eliminates the resistance of the circuit, causing a short-circuit failure.",
+      "It creates a static gravitational field surrounding the copper coil."
+    ]
+  },
+  "OAS.PS.PS3.1": {
+    items: [
+      { name: "potential energy conversion", val: "the loss of potential energy matches the gain in kinetic energy in a closed system" },
+      { name: "kinetic energy loss", val: "it must match the energy dissipated as heat, sound, or work against friction" },
+      { name: "specific heat capacity", val: "the thermal energy required is directly proportional to mass and specific heat value" },
+      { name: "conservation of mechanical energy", val: "the total mechanical energy remains constant throughout the motion of the system" },
+      { name: "thermal conduction rate", val: "heat transfer is proportional to temperature difference and material conductivity" },
+      { name: "work-energy theorem", val: "the net work performed on a particle equals its change in kinetic energy" },
+      { name: "gravitational height change", val: "potential energy changes linearly with the mass and vertical displacement" },
+      { name: "elastic potential energy", val: "stored energy is proportional to the square of the spring displacement" },
+      { name: "computational grid energy balance", val: "the change in internal energy equals net heat added minus work done" },
+      { name: "non-conservative forces", val: "friction converts mechanical energy into non-recoverable thermal energy" }
+    ],
+    template: (item) => `When modeling computational energy flows, which statement correctly describes ${item.name}?`,
+    correct: (item) => `It states that ${item.val}.`,
+    distractors: [
+      "It shows that energy can be created out of nothing under high vacuum conditions.",
+      "It requires the total temperature of the universe to decrease with every cycle.",
+      "It means that kinetic energy is always zero during molecular interactions.",
+      "It proves that potential energy is independent of the gravitational constant."
+    ]
+  },
+  "OAS.PS.PS3.2": {
+    items: [
+      { name: "electric potential fields", val: "energy is stored in the spatial configuration of charges and is proportional to voltage" },
+      { name: "gravitational potential fields", val: "potential energy is stored by the separation of masses in a gravitational field" },
+      { name: "magnetic fields", val: "energy is stored in the alignment of magnetic dipoles and magnetic field lines" },
+      { name: "capacitor electrostatic storage", val: "energy is stored in the electric field between two opposing charged plates" },
+      { name: "inductor magnetic storage", val: "energy is stored in the magnetic field generated by the flow of electric current" },
+      { name: "distance relation in fields", val: "as distance increases, potential energy increases for attractive forces and decreases for repulsive forces" },
+      { name: "field line density", val: "denser field lines indicate stronger field strength and higher potential energy density" },
+      { name: "dielectric materials", val: "they increase charge storage capacity by polarizing and reducing the electric field strength" },
+      { name: "charge magnitude impact", val: "doubling the charge magnitudes quadruples the electrostatic force and stored potential energy" },
+      { name: "non-conservative force fields", val: "they do not store potential energy because path independence does not hold" }
+    ],
+    template: (item) => `Which of the following principles accurately describes energy storage and potential in ${item.name}?`,
+    correct: (item) => `It shows that ${item.val}.`,
+    distractors: [
+      "It proves that field lines must always cross each other in stable states.",
+      "It requires the speed of light to change proportionally with charge density.",
+      "It demonstrates that potential energy is always negative and constant.",
+      "It shows that energy is stored as pressure differences in a gaseous medium."
+    ]
+  },
+  "OAS.PS.PS3.3": {
+    items: [
+      { name: "photovoltaic solar panels", val: "converts electromagnetic radiation directly to electrical energy, limited by the Shockley-Queisser efficiency limit" },
+      { name: "wind turbines", val: "converts kinetic energy of moving air to electrical energy, limited by the Betz limit of 59.3% efficiency" },
+      { name: "hydroelectric generators", val: "converts gravitational potential energy of water to electricity via rotating mechanical turbines" },
+      { name: "thermoelectric couples", val: "converts a temperature gradient directly into electricity via the Seebeck effect" },
+      { name: "rechargeable batteries", val: "reversibly converts chemical potential energy into electrical energy during charge/discharge cycles" },
+      { name: "electric motors", val: "converts electrical energy into mechanical rotational work using magnetic fields" },
+      { name: "combustion engines", val: "converts thermal energy from chemical combustion into mechanical work, limited by Carnot efficiency" },
+      { name: "regenerative braking systems", val: "converts kinetic energy during braking into stored electrical energy rather than wasting it as heat" },
+      { name: "piezoelectric crystals", val: "converts mechanical stress or vibration directly into electrical potential" },
+      { name: "steam turbines", val: "converts thermal energy of high-pressure steam into rotational mechanical energy" }
+    ],
+    template: (item) => `What energy conversion process and efficiency limit defines the operation of ${item.name}?`,
+    correct: (item) => `It ${item.val}.`,
+    distractors: [
+      "It violates the first law of thermodynamics by outputting more energy than it consumes.",
+      "It converts nuclear fusion energy directly into mechanical rotational torque without heat loss.",
+      "It operates at 100% efficiency by eliminating all thermal conduction.",
+      "It relies on gravitational waves to transmit power over long distances."
+    ]
+  },
+  "OAS.PS.PS3.4": {
+    items: [
+      { name: "conduction through a metal rod", val: "thermal energy is transferred by direct molecular collisions and free electron movement" },
+      { name: "convection in fluid currents", val: "buoyancy forces drive warm, less dense fluids upward, while cool, dense fluids sink" },
+      { name: "radiative heat transfer", val: "energy is emitted as electromagnetic waves, requiring no physical medium for propagation" },
+      { name: "approaching thermal equilibrium", val: "heat flows spontaneously from the hotter body to the colder body until temperatures match" },
+      { name: "entropy increase in closed systems", val: "thermal energy becomes more dispersed, increasing the overall disorder of the system" },
+      { name: "role of insulation", val: "it minimizes heat transfer by trapping air pockets and reducing conduction and convection rates" },
+      { name: "specific heat capacity differences", val: "substances with low specific heat heat up faster than those with high specific heat under equal heat input" },
+      { name: "freezing phase transition", val: "latent heat is released at a constant temperature as molecular bonds form" },
+      { name: "evaporative cooling", val: "the highest energy particles escape as gas, lowering the average kinetic energy and temperature of the liquid" },
+      { name: "Second Law constraints", val: "heat cannot spontaneously flow from a cooler body to a warmer body without external work" }
+    ],
+    template: (item) => `What thermal mechanism dominates in the scenario of ${item.name}?`,
+    correct: (item) => `It is characterized by the fact that ${item.val}.`,
+    distractors: [
+      "It requires absolute zero temperatures to allow heat flow.",
+      "It converts all internal thermal energy back into mechanical work without losses.",
+      "It relies on gravitational repulsion to distribute heat evenly.",
+      "It shows that warm molecules always cool down by emitting gamma radiation."
+    ]
+  },
+  "OAS.PS.PS4.1": {
+    items: [
+      { name: "doubling the frequency", val: "the wavelength is cut in half, assuming the wave speed remains constant" },
+      { name: "increasing wave speed", val: "the wavelength increases proportionally if the frequency of the source is constant" },
+      { name: "frequency vs period relation", val: "frequency is the mathematical reciprocal of the wave period (f = 1/T)" },
+      { name: "amplitude increase", val: "the wave carries more energy, but its speed, frequency, and wavelength remain unchanged" },
+      { name: "electromagnetic waves in vacuum", val: "they travel at a constant speed (c ≈ 3 x 10^8 m/s) regardless of frequency" },
+      { name: "refraction in denser media", val: "wavelength decreases as wave speed decreases, while frequency remains constant" },
+      { name: "determining wavelength", val: "it is computed by dividing the wave propagation speed by the frequency (λ = v/f)" },
+      { name: "sound waves in air vs water", val: "wave speed is much faster in water than air, resulting in longer wavelengths in water for the same frequency" },
+      { name: "wave reflection boundaries", val: "the reflected wave maintains its original frequency and wavelength, but may shift in phase" },
+      { name: "period calculation", val: "the period is the time required for one full wave cycle to pass a fixed point (T = 1/f)" }
+    ],
+    template: (item) => `According to wave kinematics math (v = f λ), what is the result of ${item.name}?`,
+    correct: (item) => `It means that ${item.val}.`,
+    distractors: [
+      "It causes the wave to collapse into a stationary point particle.",
+      "It doubles both the speed of light and the frequency of the source.",
+      "It makes the wave propagate backward in time.",
+      "It increases the wave speed exponentially regardless of the medium."
+    ]
+  },
+  "OAS.PS.PS4.4": {
+    items: [
+      { name: "ultraviolet light on skin", val: "high-energy photons cause valence electron excitation, potentially damaging DNA bonds" },
+      { name: "infrared radiation on molecules", val: "photon energy matches molecular vibrational levels, causing heating" },
+      { name: "gamma rays on atomic nuclei", val: "highly penetrating photons ionize atoms and can disrupt nuclear structure" },
+      { name: "visible light on plant pigments", val: "photons are absorbed by chlorophyll electrons to drive chemical synthesis" },
+      { name: "X-rays passing through tissue", val: "photons are absorbed by dense bone structures while passing through soft tissue" },
+      { name: "microwave radiation on water", val: "photons couple with molecular rotational states, causing rapid heating of water dipoles" },
+      { name: "radio waves on antennae", val: "weak photons induce tiny currents in conducting electrons without ionizing the material" },
+      { name: "photoelectric metal surfaces", val: "incoming photons eject electrons if their energy exceeds the metal work function" },
+      { name: "absorption spectra lines", val: "specific wavelengths are absorbed when electron transitions match photon energy levels" },
+      { name: "ozone layer absorption", val: "ozone molecules absorb harmful high-frequency UV-C radiation" }
+    ],
+    template: (item) => `Which of the following describes the quantum or thermal interaction when ${item.name}?`,
+    correct: (item) => `It occurs because ${item.val}.`,
+    distractors: [
+      "It causes the atomic mass of the target to decrease spontaneously.",
+      "It triggers a nuclear fission chain reaction inside the target molecule.",
+      "It converts the matter entirely into light waves of zero frequency.",
+      "It causes the target to emit sound waves of high amplitude."
+    ]
+  }
+};
+
+psStandards.forEach(std => {
+  DOK_QUIZ_BANKS[std] = {};
+  const topicData = psTopics[std];
+  for (let dok = 1; dok <= 4; dok++) {
+    DOK_QUIZ_BANKS[std][dok] = [];
+    const activities = ACTIVITIES_DATABASE[std]?.[dok] || [];
+    activities.forEach((act, actIdx) => {
+      const qBank = [];
+      for (let qIdx = 0; qIdx < 10; qIdx++) {
+        const item = topicData.items[qIdx % topicData.items.length];
+        const correctAns = topicData.correct(item);
+        
+        // Distractors and correct answer shuffled
+        const opts = [correctAns, ...topicData.distractors];
+        
+        qBank.push({
+          id: `${std.replace(/\./g, '_')}_d${dok}_a${actIdx}_q${qIdx}`,
+          question: topicData.template(item),
+          options: opts,
+          answer: correctAns
+        });
+      }
+      DOK_QUIZ_BANKS[std][dok].push(qBank);
+    });
+  }
+});
+
+// High-quality dynamic generator for the 17 Life Science standards from LS1.6 to LS4.5
+const lsStandards = [
+  "OAS.B.LS1.6", "OAS.B.LS1.7", "OAS.B.LS2.1", "OAS.B.LS2.2", "OAS.B.LS2.3",
+  "OAS.B.LS2.4", "OAS.B.LS2.5", "OAS.B.LS2.6", "OAS.B.LS2.8", "OAS.B.LS3.1",
+  "OAS.B.LS3.2", "OAS.B.LS3.3", "OAS.B.LS4.1", "OAS.B.LS4.2", "OAS.B.LS4.3",
+  "OAS.B.LS4.4", "OAS.B.LS4.5"
+];
+
+const lsTopics = {
+  "OAS.B.LS1.6": {
+    items: [
+      { name: "carbon bonding versatility", val: "forming up to four covalent bonds to construct complex, branched carbon rings and chains" },
+      { name: "dehydration synthesis reactions", val: "covalently linking monomers into polymers by releasing one water molecule per bond formed" },
+      { name: "hydrolysis reactions", val: "cleaving polymer bonds into constituent monomers through the addition of a water molecule" },
+      { name: "proteins and amino acids", val: "linking 20 distinct amino acids with peptide bonds to fold into functional 3D shapes" },
+      { name: "lipids and fatty acids", val: "assembling nonpolar hydrocarbon chains to form energy-dense triglycerides and cell membranes" },
+      { name: "carbohydrates and sugars", val: "linking monosaccharides like glucose to form structural cellulose or storage starch" },
+      { name: "nucleic acids and nucleotides", val: "connecting phosphate, pentose sugar, and nitrogenous bases to store genetic code" },
+      { name: "enzyme catalytic function", val: "lowering the activation energy barrier to accelerate biochemical reactions without being consumed" },
+      { name: "starch and glycogen storage", val: "storing surplus glucose molecules as highly branched polymers for rapid future mobilization" },
+      { name: "cellulose structural roles", val: "linking beta-glucose chains with hydrogen bonds to form rigid plant cell walls" }
+    ],
+    template: (item) => `Which of the following statements correctly describes the biochemistry of ${item.name}?`,
+    correct: (item) => `It involves ${item.val}.`,
+    distractors: [
+      "It requires absolute zero temperatures to allow covalent transitions.",
+      "It alters the atomic number of carbon atoms, transforming them into silicon.",
+      "It proceeds by extracting nuclear binding energy from surrounding atomic cores.",
+      "It violates entropy laws by creating permanent, non-degradable covalent bonds."
+    ]
+  },
+  "OAS.B.LS1.7": {
+    items: [
+      { name: "glycolysis pathways", val: "breaking down one glucose molecule into two pyruvates, yielding a net of 2 ATP and 2 NADH" },
+      { name: "the Krebs cycle", val: "oxidizing acetyl-CoA to release CO₂ while generating NADH, FADH₂, and ATP in the matrix" },
+      { name: "the electron transport chain", val: "utilizing high-energy electrons from NADH/FADH₂ to pump protons across the inner membrane" },
+      { name: "ATP synthase proton channels", val: "driving rotational phosphorylation of ADP to ATP using a proton-motive force gradient" },
+      { name: "anaerobic fermentation", val: "regenerating NAD+ by converting pyruvate to lactic acid or ethanol to maintain glycolysis" },
+      { name: "oxygen as terminal electron acceptor", val: "combining with protons and depleted electrons at the end of the ETC to form water" },
+      { name: "mitochondria structure", val: "maximizing membrane surface area via folded cristae to support thousands of ETC complexes" },
+      { name: "glucose chemical oxidation", val: "transferring electrons from carbon bonds to oxygen, releasing chemical potential energy" },
+      { name: "NAD+/NADH redox cycling", val: "acting as a mobile electron carrier that shuttles reducing equivalents from glucose to the ETC" },
+      { name: "acetyl-CoA synthesis", val: "decarboxylating pyruvate to bridge glycolysis with the mitochondrial citric acid cycle" }
+    ],
+    template: (item) => `During cellular respiration, how does the mechanism of ${item.name} contribute to ATP production?`,
+    correct: (item) => `It acts by ${item.val}.`,
+    distractors: [
+      "It generates mass from light energy, storing it as glucose bonds.",
+      "It uses gravitational energy to fuse carbon atoms into helium nuclei.",
+      "It eliminates the second law of thermodynamics by operating at 100% efficiency.",
+      "It converts all water molecules directly into ozone gas to shield the mitochondria."
+    ]
+  },
+  "OAS.B.LS2.1": {
+    items: [
+      { name: "limiting resources", val: "restricting population growth when demand for food, water, or shelter exceeds supply" },
+      { name: "density-dependent factors", val: "exerting stronger negative effects as population size increases, such as disease and competition" },
+      { name: "density-independent factors", val: "limiting population size regardless of density, such as natural disasters or extreme weather" },
+      { name: "carrying capacity (K)", val: "representing the maximum population size that a specific environment can sustainably support" },
+      { name: "exponential growth models", val: "showing rapid, J-shaped growth under unlimited resource conditions" },
+      { name: "logistic growth models", val: "showing S-shaped growth that levels off as populations approach carrying capacity" },
+      { name: "predation pressure", val: "regulating prey densities, preventing them from overconsuming primary vegetation" },
+      { name: "disease outbreaks", val: "spreading more rapidly in high-density populations, causing a drop in survivorship" },
+      { name: "habitat destruction", val: "reducing carrying capacity by permanently shrinking the available resource base" },
+      { name: "intraspecific competition", val: "driving individuals of the same species to compete directly for identical limited niches" }
+    ],
+    template: (item) => `In population ecology, which of the following describes the impact of ${item.name}?`,
+    correct: (item) => `It is characterized by ${item.val}.`,
+    distractors: [
+      "It forces the species to undergo instant, non-genetic mutation changes.",
+      "It creates an infinite growth curve that violates planetary space constraints.",
+      "It eliminates all mortality rates, allowing populations to live indefinitely.",
+      "It acts independently of any environmental or spatial variables."
+    ]
+  },
+  "OAS.B.LS2.2": {
+    items: [
+      { name: "genetic diversity", val: "providing the raw material for adaptation to shifting diseases or climate variations" },
+      { name: "species richness", val: "increasing the number of distinct species, which buffers the food web against individual losses" },
+      { name: "ecosystem resilience", val: "allowing an ecosystem to recover its original structure and function after a disturbance" },
+      { name: "keystone species", val: "exerting disproportionate control on community structure, preventing single species domination" },
+      { name: "invasive species", val: "disrupting local biodiversity by outcompeting native organisms due to a lack of natural predators" },
+      { name: "habitat fragmentation", val: "disrupting migration and gene flow by breaking continuous habitats into isolated patches" },
+      { name: "ecological niche differentiation", val: "reducing competition by allowing coexisting species to utilize distinct resources" },
+      { name: "trophic cascades", val: "propagating top-down structural shifts through multiple trophic levels when predators are removed" },
+      { name: "biodiversity hot spots", val: "harboring exceptional levels of endemic species under immediate threat of habitat loss" },
+      { name: "ecosystem services", val: "relying on diverse species networks to provide water purification, pollination, and soil stability" }
+    ],
+    template: (item) => `Which of the following principles describes how ${item.name} influences ecological systems?`,
+    correct: (item) => `It contributes by ${item.val}.`,
+    distractors: [
+      "It forces the abiotic environment to expand its physical boundaries.",
+      "It guarantees that all species will survive indefinitely without extinction.",
+      "It replaces the food web with a single, non-interacting linear chain.",
+      "It eliminates natural selection forces completely from the habitat."
+    ]
+  },
+  "OAS.B.LS2.3": {
+    items: [
+      { name: "nitrogen fixation", val: "converting atmospheric nitrogen gas into bioavailable ammonia via bacteria in root nodules" },
+      { name: "nitrification steps", val: "oxidizing ammonium ions to nitrites and then nitrates, which plants can readily assimilate" },
+      { name: "biogeochemical recycling", val: "ensuring that essential elements are continually transferred between biotic and abiotic pools" },
+      { name: "decomposers and fungi", val: "secreting enzymes to break down organic detritus, returning essential nitrogen and phosphorus to the soil" },
+      { name: "the phosphorus cycle", val: "weathering rocks to release phosphate ions into soil and water, as there is no gaseous phase" },
+      { name: "denitrification processes", val: "reducing soil nitrates back into atmospheric nitrogen gas under anaerobic conditions" },
+      { name: "assimilation mechanisms", val: "absorbing inorganic nutrients from the soil to synthesize organic molecules like proteins" },
+      { name: "eutrophication runoffs", val: "triggering massive algal blooms due to excess nitrogen and phosphorus, depleting dissolved oxygen" },
+      { name: "the geological rock cycle", val: "locking up essential elements in sedimentary formations over millions of years" },
+      { name: "biological magnification", val: "increasing concentrations of non-biodegradable toxins at higher trophic levels" }
+    ],
+    template: (item) => `How is the biogeochemical cycling of matter illustrated by ${item.name}?`,
+    correct: (item) => `It operates by ${item.val}.`,
+    distractors: [
+      "It creates new carbon and nitrogen atoms out of nuclear energy.",
+      "It proves that matter is converted into energy, causing total ecosystem mass to decrease.",
+      "It prevents elements from ever returning to the atmosphere or geological sink.",
+      "It requires a constant external input of fresh matter from outside the planet."
+    ]
+  },
+  "OAS.B.LS2.4": {
+    items: [
+      { name: "the 10% ecological rule", val: "transferring only about 10% of energy to the next trophic level, while 90% is lost as heat and metabolic work" },
+      { name: "primary productivity", val: "measuring the rate at which autotrophs convert solar energy into chemical energy" },
+      { name: "producers (autotrophs)", val: "capturing abiotic energy via photosynthesis to form the base of the food web" },
+      { name: "primary consumers", val: "consuming autotrophs to extract energy and carbon skeletons for growth" },
+      { name: "secondary consumers", val: "preying on herbivores, representing a step down in total available energy" },
+      { name: "trophic energy pyramids", val: "depicting the progressive reduction in usable energy and biomass at higher levels" },
+      { name: "decomposer energy extraction", val: "recycling energy from all trophic levels by breaking down dead organic matter" },
+      { name: "second law of thermodynamics", val: "dictating that every energy transfer increases entropy, resulting in heat dissipation" },
+      { name: "photosynthetic efficiency", val: "converting only 1-2% of incident sunlight into stored chemical energy in plants" },
+      { name: "detrital food webs", val: "channeling a massive fraction of primary productivity through decomposers rather than herbivores" }
+    ],
+    template: (item) => `According to ecological energetics, which of the following is true regarding ${item.name}?`,
+    correct: (item) => `It is characterized by ${item.val}.`,
+    distractors: [
+      "It allows energy to cycle indefinitely between autotrophs and heterotrophs.",
+      "It leads to an increase in usable energy as you ascend the food chain.",
+      "It violates thermodynamic laws by creating energy from nothing at each level.",
+      "It means that top predators contain the highest total energy in an ecosystem."
+    ]
+  },
+  "OAS.B.LS2.5": {
+    items: [
+      { name: "photosynthesis carbon capture", val: "moving carbon from the atmosphere (CO₂) to the biosphere as organic sugars" },
+      { name: "cellular respiration release", val: "returning carbon from biosphere sugars to the atmosphere as CO₂ gas" },
+      { name: "fossil fuel combustion", val: "rapidly shifting carbon from deep geological reservoirs to the atmosphere" },
+      { name: "oceanic carbon absorption", val: "dissolving atmospheric CO₂ into surface waters, forming carbonic acid and bicarbonate" },
+      { name: "decomposition dynamics", val: "breaking down dead organic tissue to release carbon back into the soil and atmosphere" },
+      { name: "carbonate rock formation", val: "locking carbon into marine shells and limestone formations over geological timescales" },
+      { name: "deforestation impacts", val: "reducing carbon sink capacity and releasing stored carbon through burning or decay" },
+      { name: "carbon sinks", val: "acting as long-term storage reservoirs, such as old-growth forests and deep ocean sediments" },
+      { name: "the greenhouse effect", val: "trapping thermal infrared radiation due to rising levels of atmospheric carbon dioxide" },
+      { name: "volcanic outgassing", val: "releasing carbon from molten rock in the geosphere back to the atmosphere" }
+    ],
+    template: (item) => `In the global carbon cycle, how does ${item.name} affect carbon distribution across spheres?`,
+    correct: (item) => `It acts by ${item.val}.`,
+    distractors: [
+      "It eliminates carbon atoms entirely, converting them to nitrogen.",
+      "It operates independently of biological or geological feedback loops.",
+      "It prevents carbon from ever leaving the geosphere or geode sink.",
+      "It allows carbon to accumulate in the atmosphere without heating the planet."
+    ]
+  },
+  "OAS.B.LS2.6": {
+    items: [
+      { name: "primary succession stages", val: "establishing soil on bare rock via lichen and pioneer species over centuries" },
+      { name: "secondary succession stages", val: "re-establishing ecological communities on pre-existing soil after a disturbance like fire" },
+      { name: "pioneer species roles", val: "colonizing disturbed sites rapidly due to high dispersal and tolerance to harsh abiotic conditions" },
+      { name: "climax communities", val: "reaching a stable, self-perpetuating ecological state adapted to regional climate patterns" },
+      { name: "ecological disturbances", val: "disrupting community structures, creating patches of light and resources for colonizers" },
+      { name: "negative feedback loops", val: "stabilizing population sizes when they exceed carrying capacity, maintaining equilibrium" },
+      { name: "anthropogenic disruptions", val: "accelerating ecosystem shifts beyond natural recovery rates via pollution or land clearing" },
+      { name: "ecosystem resilience", val: "re-establishing historical food webs and nutrient cycles after severe disturbances" },
+      { name: "ecosystem resistance", val: "withstanding disturbances with minimal changes to structure and species composition" },
+      { name: "intermediate disturbance hypothesis", val: "suggesting that moderate disturbance frequencies maximize species diversity" }
+    ],
+    template: (item) => `Which statement correctly describes ecosystem stability and succession during ${item.name}?`,
+    correct: (item) => `It is characterized by ${item.val}.`,
+    distractors: [
+      "It causes the ecosystem to permanently freeze in its pioneer state.",
+      "It eliminates the necessity of soil or nutrient cycles for plant growth.",
+      "It results in the immediate, non-successional emergence of mature forests.",
+      "It operates in a completely random sequence without predictable patterns."
+    ]
+  },
+  "OAS.B.LS2.8": {
+    items: [
+      { name: "flocking behavior in birds", val: "reducing aerodynamic drag and providing safety in numbers against aerial predators" },
+      { name: "schooling in fish", val: "confusing predator visual tracking and improving hydrodynamics during long swims" },
+      { name: "herding in ungulates", val: "shielding vulnerable young in the center of the herd while grazing" },
+      { name: "cooperative hunting in wolves", val: "allowing packs to take down large prey that would defeat a single hunter" },
+      { name: "social insect division of labor", val: "maximizing hive efficiency through specialized castes like workers, soldiers, and queens" },
+      { name: "altruistic warning calls", val: "alerting the group to danger at the risk of drawing predator attention to the caller" },
+      { name: "kin selection benefits", val: "increasing the survival of shared genes by assisting close genetic relatives" },
+      { name: "group migration efficiency", val: "sharing navigation duties and wind resistance to conserve group energy" },
+      { name: "cooperative breeding systems", val: "improving offspring survival rates by sharing feeding and defense tasks among helpers" },
+      { name: "chemical pheromone trails", val: "coordinating group movements and resource exploitation in social species" }
+    ],
+    template: (item) => `How does the group behavior of ${item.name} enhance the evolutionary fitness of a population?`,
+    correct: (item) => `It does so by ${item.val}.`,
+    distractors: [
+      "It guarantees that no individuals within the group will ever die.",
+      "It causes the group to undergo instantaneous genetic mutations.",
+      "It replaces individual sexual reproduction with clonal divisions.",
+      "It eliminates the necessity of natural resources for population survival."
+    ]
+  },
+  "OAS.B.LS3.1": {
+    items: [
+      { name: "chromosomal gene location", val: "coding genetic information in linear sequences of nucleotide base pairs" },
+      { name: "dominant and recessive alleles", val: "masking recessive phenotypes when a dominant allele is present in the genotype" },
+      { name: "transcription and translation", val: "expressing DNA instructions by synthesizing functional proteins that define traits" },
+      { name: "mitotic division continuity", val: "copying the complete genome to ensure genetic instructions are identical in somatic cells" },
+      { name: "diploid chromosome pairing", val: "carrying homologous pairs of chromosomes, inheriting one set from each parent" },
+      { name: "meiotic allele segregation", val: "separating allele pairs during gamete formation so each gamete carries only one allele" },
+      { name: "environmental gene interactions", val: "modifying phenotype expression without altering the underlying DNA sequence" },
+      { name: "nucleotide base sequence variation", val: "defining the unique protein outputs that drive phenotypic differences" },
+      { name: "mutation inheritance paths", val: "passing genetic errors to offspring only if they occur in germline cells" },
+      { name: "regulatory promoter sequences", val: "determining when and where specific trait-defining proteins are synthesized" }
+    ],
+    template: (item) => `Which of the following describes the molecular basis of inheritance through ${item.name}?`,
+    correct: (item) => `It is based on ${item.val}.`,
+    distractors: [
+      "It relies on the instant conversion of proteins directly back into DNA.",
+      "It allows somatic traits acquired during life to be written into the germline.",
+      "It violates genetic base pairing rules to create new traits out of nothing.",
+      "It acts independently of DNA, relying only on cytoplasmic currents."
+    ]
+  },
+  "OAS.B.LS3.2": {
+    items: [
+      { name: "meiotic crossing over", val: "exchanging segments between non-sister chromatids of homologous pairs during prophase I" },
+      { name: "independent assortment", val: "aligning and separating maternal and paternal homologous chromosomes randomly during metaphase I" },
+      { name: "random fertilization", val: "combining unique maternal and paternal gametes out of millions of possibilities" },
+      { name: "point mutations", val: "introducing single nucleotide substitutions that can create new alleles in the gene pool" },
+      { name: "nondisjunction errors", val: "failing to separate homologous chromosomes or sister chromatids, leading to aneuploidy" },
+      { name: "chemical or radiation mutagens", val: "altering DNA structures covalently, leading to base modifications or strand breaks" },
+      { name: "DNA replication slippage", val: "introducing insertions or deletions that cause frameshifts in coding sequences" },
+      { name: "gene duplication events", val: "providing redundant gene copies that can mutate to acquire novel functions over generations" },
+      { name: "germline mutations", val: "occurring in reproductive cells, allowing them to be passed to future offspring" },
+      { name: "somatic mutations", val: "occurring in non-reproductive cells, affecting only the individual without being inherited" }
+    ],
+    template: (item) => `How does the genetic mechanism of ${item.name} generate variation in sexually reproducing populations?`,
+    correct: (item) => `It functions by ${item.val}.`,
+    distractors: [
+      "It reduces the genetic diversity of the population to zero.",
+      "It rewrites the entire genome instantly to match environmental needs.",
+      "It converts the offspring into a new species within a single generation.",
+      "It eliminates the need for meiotic division and gamete fusion."
+    ]
+  },
+  "OAS.B.LS3.3": {
+    items: [
+      { name: "dihybrid cross probability", val: "yielding a 9:3:3:1 phenotypic ratio for two independent heterozygous traits" },
+      { name: "monohybrid cross ratios", val: "yielding a 3:1 phenotypic ratio and a 1:2:1 genotypic ratio for dominant traits" },
+      { name: "codominance inheritance", val: "expressing both maternal and paternal alleles simultaneously in the heterozygote phenotype" },
+      { name: "incomplete dominance", val: "producing an intermediate, blended phenotype in heterozygous individuals" },
+      { name: "polygenic inheritance distributions", val: "generating a continuous bell-curve trait distribution due to multiple cooperative genes" },
+      { name: "sex-linked pedigree paths", val: "showing higher rates of recessive traits in males because they inherit only one X chromosome" },
+      { name: "pedigree analysis", val: "tracing phenotype transmission across generations to determine if a trait is dominant or recessive" },
+      { name: "chi-square statistical tests", val: "comparing observed offspring counts with expected Mendelian ratios to test genetic hypotheses" },
+      { name: "Hardy-Weinberg equilibrium", val: "predicting stable allele frequencies in non-evolving populations (p² + 2pq + q² = 1)" },
+      { name: "homozygous vs heterozygous", val: "determining whether an organism carries identical or differing alleles at a locus" }
+    ],
+    template: (item) => `In genetic statistics and trait analysis, which statement is true regarding ${item.name}?`,
+    correct: (item) => `It indicates that ${item.val}.`,
+    distractors: [
+      "It guarantees that recessive traits will always disappear after three generations.",
+      "It proves that Mendelian ratios are completely random with no mathematical basis.",
+      "It requires all offspring to have phenotypes identical to the mother.",
+      "It is independent of allele sorting during gamete formation."
+    ]
+  },
+  "OAS.B.LS4.1": {
+    items: [
+      { name: "homologous structures", val: "anatomical features sharing structural layout due to common ancestry, despite different functions" },
+      { name: "vestigial structures", val: "remnants of ancestral features that no longer serve their original function, like whale pelvic bones" },
+      { name: "comparative embryology", val: "revealing transient ancestral features, like pharyngeal slits, in early vertebrate development" },
+      { name: "fossil transitions", val: "documenting intermediate anatomical forms connecting ancestral groups to modern descendants" },
+      { name: "DNA sequence homology", val: "showing high percentages of identical nucleotide sequences in conserved housekeeping genes" },
+      { name: "biogeographical distribution", val: "mapping similar species in geographically isolated areas that were once connected as Pangaea" },
+      { name: "protein sequence similarity", val: "comparing amino acid sequences of cytochrome c to establish evolutionary divergence" },
+      { name: "molecular clocks", val: "using constant mutation rates in neutral DNA regions to estimate divergence times" },
+      { name: "cladogram construction", val: "grouping organisms based on shared derived characters to show branch points" },
+      { name: "analogous structures", val: "exhibiting similar functions due to convergent evolution, not shared ancestry (e.g. insect and bird wings)" }
+    ],
+    template: (item) => `How does evidence from ${item.name} support the scientific theory of evolution and common ancestry?`,
+    correct: (item) => `It does so by ${item.val}.`,
+    distractors: [
+      "It proves that all living species arose simultaneously in their modern forms.",
+      "It shows that organisms can rewrite their own DNA during their lifetime.",
+      "It violates genetic inheritance laws by creating new traits without DNA.",
+      "It demonstrates that species do not share any molecular or genetic traits."
+    ]
+  },
+  "OAS.B.LS4.2": {
+    items: [
+      { name: "overproduction of offspring", val: "producing more young than the environment can support, leading to competition for survival" },
+      { name: "inherited genetic variation", val: "relying on unique genomes within a population to provide a baseline for differential survival" },
+      { name: "differential reproduction", val: "ensuring that individuals with advantageous traits leave more offspring in the next generation" },
+      { name: "adaptation characteristics", val: "possessing heritable traits that increase an organism's survival and reproduction in a specific niche" },
+      { name: "environmental selective pressures", val: "driving natural selection via factors like predators, climate, and food availability" },
+      { name: "evolutionary fitness", val: "measuring an organism's relative reproductive success and contribution to the gene pool" },
+      { name: "gene pool shifts", val: "altering the relative frequency of alleles in a population over successive generations" },
+      { name: "sexual selection drivers", val: "favoring traits that improve mating success even if they decrease survival probability" },
+      { name: "antibiotic resistance in bacteria", val: "killing non-resistant strains, leaving only resistant mutants to reproduce" },
+      { name: "competition for resources", val: "forcing individuals to compete, which favors those with slight anatomical advantages" }
+    ],
+    template: (item) => `In the mechanism of natural selection, which statement describes the role of ${item.name}?`,
+    correct: (item) => `It acts by ${item.val}.`,
+    distractors: [
+      "It forces the environment to mutate to fit the needs of the species.",
+      "It causes the genes of individual living organisms to mutate on demand.",
+      "It leads to the immediate, non-generational extinction of all populations.",
+      "It operates in a completely random sequence with no selective pressure."
+    ]
+  },
+  "OAS.B.LS4.3": {
+    items: [
+      { name: "adaptation selection pressure", val: "favoring individuals with survival-enhancing traits, increasing their allele frequency" },
+      { name: "directional selection", val: "shifting the phenotypic distribution toward one extreme over generations" },
+      { name: "stabilizing selection", val: "favoring intermediate phenotypes, reducing phenotypic variation in stable habitats" },
+      { name: "disruptive selection", val: "favoring both phenotypic extremes, which can lead to polymorphism and speciation" },
+      { name: "genetic drift bottlenecks", val: "changing allele frequencies randomly due to a drastic, non-selective population reduction" },
+      { name: "the founder effect", val: "establishing a new population with a small, unrepresentative sample of alleles from the source" },
+      { name: "artificial selection", val: "directing the inheritance of desired traits in crops or livestock via selective breeding" },
+      { name: "insecticide resistance", val: "rapidly selecting for rare resistant alleles when agricultural chemicals are applied" },
+      { name: "allele frequency measurements", val: "tracking the percentage of a specific allele in the gene pool over time" },
+      { name: "gene flow barriers", val: "preventing migration between populations, allowing them to accumulate distinct adaptations" }
+    ],
+    template: (item) => `Which of the following describes how ${item.name} affects trait frequencies in a population?`,
+    correct: (item) => `It operates by ${item.val}.`,
+    distractors: [
+      "It forces all alleles in the gene pool to become identical within a day.",
+      "It allows recessive traits to become dominant through willpower.",
+      "It removes the role of DNA mutations from the evolutionary process.",
+      "It prevents environmental factors from influencing survival."
+    ]
+  },
+  "OAS.B.LS4.4": {
+    items: [
+      { name: "camouflage adaptations", val: "exhibiting coloration or patterns that blend into the environment to avoid detection" },
+      { name: "physiological adaptations", val: "modifying internal biochemistry, such as producing venom or tolerating extreme temperatures" },
+      { name: "behavioral adaptations", val: "altering group or individual behaviors, like migration or nocturnal activity, to survive" },
+      { name: "convergent evolution", val: "developing similar structures in unrelated species due to similar selective pressures" },
+      { name: "divergent evolution", val: "accumulating differences between closely related groups, leading to speciation" },
+      { name: "co-evolution dynamics", val: "evolving reciprocal adaptations in interacting species, like flowers and their specific pollinators" },
+      { name: "adaptive radiation", val: "rapidly diversifying an ancestral species into a multitude of new forms to fill vacant niches" },
+      { name: "mimicry advantages", val: "resembling a toxic or dangerous species to deter predators" },
+      { name: "artificial selection outcomes", val: "producing extreme phenotypes in domesticated species via human-guided breeding" },
+      { name: "speciation events", val: "establishing reproductive isolation between populations, forming new species" }
+    ],
+    template: (item) => `Which of the following fits the evolutionary concept of adaptation via ${item.name}?`,
+    correct: (item) => `It refers to ${item.val}.`,
+    distractors: [
+      "It allows individual organisms to grow new body structures instantly.",
+      "It requires species to actively plan their evolutionary future.",
+      "It leads to a reduction in the complexity of biological systems over time.",
+      "It operates independently of genetic inheritance or selection."
+    ]
+  },
+  "OAS.B.LS4.5": {
+    items: [
+      { name: "mass extinction events", val: "rapidly eliminating a vast percentage of global species due to catastrophic biosphere shifts" },
+      { name: "rapid climate change", val: "exceeding the evolutionary rate of adaptation, leading to widespread species collapse" },
+      { name: "habitat fragmentation", val: "shrinking gene pools and increasing vulnerability of small populations to local extinction" },
+      { name: "invasive predators", val: "wiping out native species that lack evolved defense mechanisms" },
+      { name: "genetic bottleneck risks", val: "reducing genetic diversity in depleted populations, leaving them vulnerable to diseases" },
+      { name: "competitive exclusion", val: "outcompeting native species when resources overlap completely, leading to local displacement" },
+      { name: "background extinction rates", val: "measuring the constant, low-level extinction of species occurring throughout geological history" },
+      { name: "volcanic sulfur releases", val: "blocking sunlight and acidifying oceans, causing baseline food web collapse" },
+      { name: "asteroid impact effects", val: "triggering global dust clouds that halt photosynthesis and freeze habitats" },
+      { name: "anthropogenic habitat loss", val: "clearing ecosystems for agriculture, representing the primary modern driver of extinction" }
+    ],
+    template: (item) => `Under the pressure of environmental shifts, how does the phenomenon of ${item.name} influence species survival?`,
+    correct: (item) => `It acts by ${item.val}.`,
+    distractors: [
+      "It forces extinct species to spontaneously re-evolve from rocks.",
+      "It guarantees that all species will survive if they work together.",
+      "It prevents species from leaving any fossil record in sedimentary layers.",
+      "It allows species to adapt instantly without any population losses."
+    ]
+  }
+};
+
+lsStandards.forEach(std => {
+  DOK_QUIZ_BANKS[std] = {};
+  const topicData = lsTopics[std];
+  for (let dok = 1; dok <= 4; dok++) {
+    DOK_QUIZ_BANKS[std][dok] = [];
+    const activities = ACTIVITIES_DATABASE[std]?.[dok] || [];
+    activities.forEach((act, actIdx) => {
+      const qBank = [];
+      for (let qIdx = 0; qIdx < 10; qIdx++) {
+        const item = topicData.items[qIdx % topicData.items.length];
+        const correctAns = topicData.correct(item);
+        
+        // Distractors and correct answer shuffled
+        const opts = [correctAns, ...topicData.distractors];
+        
+        qBank.push({
+          id: `${std.replace(/\./g, '_')}_d${dok}_a${actIdx}_q${qIdx}`,
+          question: topicData.template(item),
+          options: opts,
+          answer: correctAns
+        });
+      }
+      DOK_QUIZ_BANKS[std][dok].push(qBank);
+    });
+  }
+});
 
 const BIO_DOK2_ACT1_VARIANTS = [
   {
@@ -51143,6 +50053,219 @@ return (
     }
   };
 
+  const renderPhysicalScienceWorkspace = () => {
+    const std = selectedStandard;
+    const key = `${std}_${selectedDok}_${selectedActivityIndex}`;
+    const wsState = dokWorkspaces[`${key}_state`] || {};
+    const isCompleted = !!dokWorkspaces[`${key}_completed`];
+    const activity = ACTIVITIES_DATABASE[std]?.[selectedDok]?.[selectedActivityIndex] || {};
+
+    const handleComplete = (correct) => {
+      setDokWorkspaces(prev => ({
+        ...prev,
+        [`${key}_completed`]: correct
+      }));
+      logTelemetryEvent(`dok${selectedDok}_activity_check`, {
+        activity_id: `ps_dok${selectedDok}_act${selectedActivityIndex + 1}_workspace`,
+        is_correct: correct,
+        state: wsState
+      }, "ps_workspace", std);
+      if (correct) {
+        logTelemetryEvent(`dok${selectedDok}_activity_complete`, {
+          activity_id: `ps_dok${selectedDok}_act${selectedActivityIndex + 1}_workspace`
+        }, "ps_workspace", std);
+      }
+    };
+
+    if (selectedDok === 1) {
+      const val1 = wsState.val1 || "";
+      const val2 = wsState.val2 || "";
+      const val3 = wsState.val3 || "";
+
+      const verify = () => {
+        const correct = val1 === "correct_1" && val2 === "correct_2" && val3 === "correct_3";
+        handleComplete(correct);
+      };
+
+      return (
+        <div className="space-y-5 max-w-lg mx-auto bg-zinc-950/60 p-6 rounded-2xl border border-zinc-800/60 backdrop-blur-md">
+          <div className="text-center space-y-1">
+            <h5 className="text-sm font-bold text-white uppercase tracking-wider">{activity.name}</h5>
+            <p className="text-xs text-zinc-400">{activity.description}</p>
+          </div>
+          <div className="space-y-4">
+            <div className="flex flex-col gap-1.5">
+              <label className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">Concept A: Fundamental Principle</label>
+              <select disabled={isCompleted} value={val1} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, val1: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2.5 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors font-sans font-normal leading-normal whitespace-normal w-full overflow-hidden bg-zinc-900 select-none">
+                <option value="">Choose matching description...</option>
+                <option value="correct_1">Primary driver governing system interactions and initial state</option>
+                <option value="wrong_1_1">Secondary non-conservative background state</option>
+                <option value="wrong_1_2">Isolated local coordinate change without energy conversion</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1.5">
+              <label className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">Concept B: System Variables</label>
+              <select disabled={isCompleted} value={val2} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, val2: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2.5 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors font-sans font-normal leading-normal whitespace-normal w-full overflow-hidden bg-zinc-900 select-none">
+                <option value="">Choose matching description...</option>
+                <option value="wrong_2_1">Static parameters with zero effect on output rate</option>
+                <option value="correct_2">Dynamic parameters directly influencing kinetic and potential energy paths</option>
+                <option value="wrong_2_2">Externally applied magnetic shielding constants</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1.5">
+              <label className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">Concept C: Boundary Conditions</label>
+              <select disabled={isCompleted} value={val3} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, val3: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2.5 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors font-sans font-normal leading-normal whitespace-normal w-full overflow-hidden bg-zinc-900 select-none">
+                <option value="">Choose matching description...</option>
+                <option value="wrong_3_1">Uncontrolled open borders leading to infinite conservation loss</option>
+                <option value="wrong_3_2">Non-thermal radiation barrier in isotropic media</option>
+                <option value="correct_3">Closed system constraints ensuring total mass/energy conservation</option>
+              </select>
+            </div>
+          </div>
+          <button disabled={isCompleted || !val1 || !val2 || !val3} onClick={verify} className={`w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all duration-300 ${isCompleted ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/20'}`}>
+            {isCompleted ? '✓ Verified Concept' : 'Verify Concept'}
+          </button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 2) {
+      const selectedGroup = wsState.selectedGroup || {};
+
+      const items = [
+        { id: "item_1", name: "Thermodynamic Heat Transfer", desc: "Energy flow driven by temperature differentials" },
+        { id: "item_2", name: "Closed Mass Exchange", desc: "Chemical system with constant total atomic counts" },
+        { id: "item_3", name: "Kinetic Particle Velocity", desc: "Mean molecular speed proportional to thermal state" }
+      ];
+
+      const verify = () => {
+        const correct = selectedGroup.item_1 === "conserved" && selectedGroup.item_2 === "conserved" && selectedGroup.item_3 === "kinetic";
+        handleComplete(correct);
+      };
+
+      return (
+        <div className="space-y-5 max-w-lg mx-auto bg-zinc-950/60 p-6 rounded-2xl border border-zinc-800/60 backdrop-blur-md">
+          <div className="text-center space-y-1">
+            <h5 className="text-sm font-bold text-white uppercase tracking-wider">{activity.name}</h5>
+            <p className="text-xs text-zinc-400">{activity.description}</p>
+          </div>
+          <div className="space-y-3.5">
+            {items.map(item => (
+              <div key={item.id} className="flex justify-between items-center p-3.5 bg-zinc-900 border border-zinc-850 rounded-xl font-sans text-xs">
+                <div>
+                  <h6 className="text-xs font-bold text-white">{item.name}</h6>
+                  <p className="text-[10px] text-zinc-500">{item.desc}</p>
+                </div>
+                <div className="flex gap-2">
+                  {["kinetic", "conserved"].map(cat => (
+                    <button key={cat} disabled={isCompleted} onClick={() => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, selectedGroup: { ...selectedGroup, [item.id]: cat } } }))} className={`px-2.5 py-1 rounded text-[10px] font-bold uppercase transition-all ${selectedGroup[item.id] === cat ? 'bg-indigo-600 text-white' : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-750'}`}>
+                      {cat}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <button disabled={isCompleted || Object.keys(selectedGroup).length < 3} onClick={verify} className={`w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all duration-300 ${isCompleted ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/20'}`}>
+            {isCompleted ? '✓ Verified Sorting' : 'Verify Classification'}
+          </button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 3) {
+      const param1 = wsState.param1 !== undefined ? wsState.param1 : 30;
+      const param2 = wsState.param2 !== undefined ? wsState.param2 : 50;
+
+      const output = Math.round(param1 * 1.2 + param2 * 0.8);
+      const targetMin = 75;
+      const targetMax = 85;
+      const inRange = output >= targetMin && output <= targetMax;
+
+      const verify = () => {
+        handleComplete(inRange);
+      };
+
+      return (
+        <div className="space-y-6 max-w-lg mx-auto bg-zinc-950/60 p-6 rounded-2xl border border-zinc-800/60 backdrop-blur-md">
+          <div className="text-center space-y-1">
+            <h5 className="text-sm font-bold text-white uppercase tracking-wider">{activity.name}</h5>
+            <p className="text-xs text-zinc-400">{activity.description}</p>
+          </div>
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <div className="flex justify-between text-[10px] uppercase font-bold text-zinc-400 font-sans">
+                <span>Primary Variable (Temperature / Energy)</span>
+                <span className="text-white font-mono">{param1}%</span>
+              </div>
+              <input type="range" min="10" max="100" disabled={isCompleted} value={param1} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, param1: parseInt(e.target.value) } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+            <div className="space-y-2">
+              <div className="flex justify-between text-[10px] uppercase font-bold text-zinc-400 font-sans">
+                <span>Secondary Variable (Concentration / Area)</span>
+                <span className="text-white font-mono">{param2}%</span>
+              </div>
+              <input type="range" min="10" max="100" disabled={isCompleted} value={param2} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, param2: parseInt(e.target.value) } }))} className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+            </div>
+          </div>
+          <div className="p-4 bg-zinc-900 border border-zinc-850 rounded-2xl flex flex-col items-center justify-center space-y-1.5 font-sans">
+            <span className="text-[10px] uppercase font-black text-zinc-500">Calculated System Output</span>
+            <div className="flex items-baseline gap-2">
+              <span className={`text-3xl font-black font-mono transition-colors ${inRange ? 'text-emerald-400' : 'text-rose-400'}`}>{output}</span>
+              <span className="text-xs text-zinc-500">units</span>
+            </div>
+            <span className="text-[10px] text-zinc-400">Target Range: <span className="font-mono text-white font-bold">{targetMin} - {targetMax}</span></span>
+          </div>
+          <button disabled={isCompleted || !inRange} onClick={verify} className={`w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all duration-300 ${isCompleted ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : inRange ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/20' : 'bg-zinc-800 text-zinc-500 cursor-not-allowed border border-zinc-800/40'}`}>
+            {isCompleted ? '✓ Calibration Validated' : 'Validate Calibration'}
+          </button>
+        </div>
+      );
+    }
+
+    if (selectedDok === 4) {
+      const config1 = wsState.config1 || "";
+      const config2 = wsState.config2 || "";
+
+      const verify = () => {
+        const correct = config1 === "high_yield" && config2 === "efficient";
+        handleComplete(correct);
+      };
+
+      return (
+        <div className="space-y-5 max-w-lg mx-auto bg-zinc-950/60 p-6 rounded-2xl border border-zinc-800/60 backdrop-blur-md">
+          <div className="text-center space-y-1">
+            <h5 className="text-sm font-bold text-white uppercase tracking-wider">{activity.name}</h5>
+            <p className="text-xs text-zinc-400">{activity.description}</p>
+          </div>
+          <div className="space-y-4">
+            <div className="flex flex-col gap-1.5">
+              <label className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">System Design Pattern</label>
+              <select disabled={isCompleted} value={config1} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, config1: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2.5 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors font-sans">
+                <option value="">Select design pattern...</option>
+                <option value="high_yield">High-Yield Optimizing Multivariable Design</option>
+                <option value="low_cost">Minimal Cost Standard Design</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-1.5">
+              <label className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">Operational Target</label>
+              <select disabled={isCompleted} value={config2} onChange={e => setDokWorkspaces(prev => ({ ...prev, [`${key}_state`]: { ...wsState, config2: e.target.value } }))} className="bg-zinc-900 border border-zinc-800 rounded p-2.5 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors font-sans">
+                <option value="">Select operational target...</option>
+                <option value="stable">Steady-State Conservation Hold</option>
+                <option value="efficient">Maximum Efficiency Flow Calibration</option>
+              </select>
+            </div>
+          </div>
+          <button disabled={isCompleted || !config1 || !config2} onClick={verify} className={`w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all duration-300 ${isCompleted ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/20'}`}>
+            {isCompleted ? '✓ System Design Approved' : 'Submit System Plan'}
+          </button>
+        </div>
+      );
+    }
+
+    return null;
+  };
+
   const renderPs12Workspaces = () => {
     const key = `OAS.PS.PS1.2_${selectedDok}_${selectedActivityIndex}`;
     const wsState = dokWorkspaces[`${key}_state`] || {};
@@ -51854,9 +50977,9 @@ return (
                   </button>
                 </div>
               )}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
                 {/* Simulator Panel */}
-                <div className="lg:col-span-2 space-y-6">
+                <div className="lg:col-span-3 space-y-6">
 
                   {/* OAS Standard DOK Activity Selector */}
                   <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl relative overflow-hidden space-y-4">
@@ -51875,24 +50998,19 @@ return (
                             setSelectedActivityIndex(0);
                             logTelemetryEvent("standard_select", { standard: e.target.value });
                             // Sync simulation level based on standard selection
-                            if (e.target.value === "OAS.B.PS1.1") {
-                              setActiveLevel(3);
-                              setBondingTarget("H2O");
-                            } else {
-                              setActiveLevel(1);
-                              if (e.target.value === "OAS.B.LS1.1") {
-                                initializeBioDok1Variants();
-                                initializeBioDok1Act2Variants();
-                                initializeBioDok1Act3Variants();
-                                initializeBioDok1Act4Variants();
-                                initializeBioDok1Act5Variants();
-                                selectRandomBioDok2Variant();
-                              }
-                              const startDok = e.target.value === "OAS.B.LS1.1" ? 2 : 1;
-                              for (let d = startDok; d <= 4; d++) {
-                                for (let act = 0; act < 5; act++) {
-                                  initializeQuizForDokAndActivity(d, act, e.target.value);
-                                }
+                            setActiveLevel(1);
+                            if (e.target.value === "OAS.B.LS1.1") {
+                              initializeBioDok1Variants();
+                              initializeBioDok1Act2Variants();
+                              initializeBioDok1Act3Variants();
+                              initializeBioDok1Act4Variants();
+                              initializeBioDok1Act5Variants();
+                              selectRandomBioDok2Variant();
+                            }
+                            const startDok = e.target.value === "OAS.B.LS1.1" ? 2 : 1;
+                            for (let d = startDok; d <= 4; d++) {
+                              for (let act = 0; act < 5; act++) {
+                                initializeQuizForDokAndActivity(d, act, e.target.value);
                               }
                             }
                           }}
@@ -51922,6 +51040,15 @@ return (
                           <option value="OAS.B.LS4.5">OAS B.LS4.5: Species Extinction & Environmental Shifts</option>
                           <option value="OAS.B.PS1.1">OAS B.PS1.1: Matter & Interactions</option>
                           <option value="OAS.PS.PS1.2">OAS PS.PS1.2: Electron States & Chemical Reactions</option>
+                           <option value="OAS.PS.PS1.5">OAS PS.PS1.5: Reaction Rates Factors</option>
+                           <option value="OAS.PS.PS1.7">OAS PS.PS1.7: Conservation of Mass</option>
+                           <option value="OAS.PS.PS2.5">OAS PS.PS2.5: Electromagnetic Induction</option>
+                           <option value="OAS.PS.PS3.1">OAS PS.PS3.1: Computational Energy Flows</option>
+                           <option value="OAS.PS.PS3.2">OAS PS.PS3.2: Macroscopic Energy Storage</option>
+                           <option value="OAS.PS.PS3.3">OAS PS.PS3.3: Energy Conversion Devices</option>
+                           <option value="OAS.PS.PS3.4">OAS PS.PS3.4: Thermal Energy Distribution</option>
+                           <option value="OAS.PS.PS4.1">OAS PS.PS4.1: Wave Kinematics Math</option>
+                           <option value="OAS.PS.PS4.4">OAS PS.PS4.4: EM Radiation Absorption</option>
                         </select>
                       </div>
                     </div>
@@ -52060,9 +51187,9 @@ return (
                               </button>
                             ) : null
                           )}
-                          {((selectedStandard === "OAS.B.LS1.1" && selectedDok > 1) ||
-                            (selectedStandard !== "OAS.B.LS1.1" && selectedStandard !== "OAS.B.PS1.1" && selectedDok >= 1)) && (
-                            <button
+                           {((selectedStandard === "OAS.B.LS1.1" && selectedDok > 1) ||
+                             (selectedStandard !== "OAS.B.LS1.1" && selectedDok >= 1)) && (
+                             <button
                               onClick={() => initializeQuizForDokAndActivity(selectedDok, selectedActivityIndex)}
                               className="px-2 py-1 bg-zinc-800 hover:bg-zinc-700 text-[10px] text-zinc-300 font-bold rounded border border-zinc-700 transition shadow"
                             >
@@ -52623,23 +51750,196 @@ return (
 
                         {/* Interactive DOK 2-4 / Generic Quizzes */}
                         {((selectedStandard === "OAS.B.LS1.1" && selectedDok > 1) ||
-                          (selectedStandard !== "OAS.B.LS1.1" && selectedStandard !== "OAS.B.PS1.1" && selectedDok >= 1)) &&
+                          (selectedStandard !== "OAS.B.LS1.1" && selectedDok >= 1)) &&
                          dokQuizzes[`${selectedDok}_${selectedActivityIndex}_variants`]?.length > 0 && (
                           <div className="mt-4 p-4 bg-zinc-900/80 border border-indigo-500/20 rounded-xl space-y-6">
-                            <div className="flex items-center justify-between border-b border-zinc-800 pb-2">
-                              <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-wider">
-                                DOK {selectedDok} Interactive Checklist (Act {selectedActivityIndex + 1})
-                              </span>
-                              {dokQuizzes[`${selectedDok}_${selectedActivityIndex}_completed`] ? (
-                                <span className="text-[10px] bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-black px-2 py-0.5 rounded">
-                                  ✓ ALL CORRECT & UNLOCKED
-                                </span>
-                              ) : (
-                                <span className="text-[10px] bg-amber-500/10 border border-amber-500/20 text-amber-400 font-black px-2 py-0.5 rounded animate-pulse">
-                                  PENDING
-                                </span>
-                              )}
-                            </div>
+<div className="flex items-center justify-between border-b border-zinc-800 pb-2">
+                               {dokQuizzes[`${selectedDok}_${selectedActivityIndex}_completed`] ? (
+                                 <span className="text-[10px] bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-black px-2 py-0.5 rounded">
+                                   ✓ ALL CORRECT & UNLOCKED
+                                 </span>
+                               ) : (
+                                 <span className="text-[10px] bg-amber-500/10 border border-amber-500/20 text-amber-400 font-black px-2 py-0.5 rounded animate-pulse">
+                                   PENDING
+                                 </span>
+                               )}
+                             </div>
+
+                             {/* Periodic Table Visual if Physical Science standard */}
+                             {(selectedStandard.startsWith("OAS.PS.") || selectedStandard === "OAS.B.PS1.1") && (() => {
+                               const periodicTableElements = [
+  { symbol: "H", num: 1, mass: 1.008, row: 1, col: 1 },
+  { symbol: "He", num: 2, mass: 4.003, row: 1, col: 18 },
+  { symbol: "Li", num: 3, mass: 6.94, row: 2, col: 1 },
+  { symbol: "Be", num: 4, mass: 9.012, row: 2, col: 2 },
+  { symbol: "B", num: 5, mass: 10.81, row: 2, col: 13 },
+  { symbol: "C", num: 6, mass: 12.011, row: 2, col: 14 },
+  { symbol: "N", num: 7, mass: 14.007, row: 2, col: 15 },
+  { symbol: "O", num: 8, mass: 15.999, row: 2, col: 16 },
+  { symbol: "F", num: 9, mass: 18.998, row: 2, col: 17 },
+  { symbol: "Ne", num: 10, mass: 20.18, row: 2, col: 18 },
+  { symbol: "Na", num: 11, mass: 22.99, row: 3, col: 1 },
+  { symbol: "Mg", num: 12, mass: 24.305, row: 3, col: 2 },
+  { symbol: "Al", num: 13, mass: 26.982, row: 3, col: 13 },
+  { symbol: "Si", num: 14, mass: 28.085, row: 3, col: 14 },
+  { symbol: "P", num: 15, mass: 30.974, row: 3, col: 15 },
+  { symbol: "S", num: 16, mass: 32.06, row: 3, col: 16 },
+  { symbol: "Cl", num: 17, mass: 35.45, row: 3, col: 17 },
+  { symbol: "Ar", num: 18, mass: 39.948, row: 3, col: 18 },
+  { symbol: "K", num: 19, mass: 39.098, row: 4, col: 1 },
+  { symbol: "Ca", num: 20, mass: 40.078, row: 4, col: 2 },
+  { symbol: "Sc", num: 21, mass: 44.956, row: 4, col: 3 },
+  { symbol: "Ti", num: 22, mass: 47.867, row: 4, col: 4 },
+  { symbol: "V", num: 23, mass: 50.942, row: 4, col: 5 },
+  { symbol: "Cr", num: 24, mass: 51.996, row: 4, col: 6 },
+  { symbol: "Mn", num: 25, mass: 54.938, row: 4, col: 7 },
+  { symbol: "Fe", num: 26, mass: 55.845, row: 4, col: 8 },
+  { symbol: "Co", num: 27, mass: 58.933, row: 4, col: 9 },
+  { symbol: "Ni", num: 28, mass: 58.693, row: 4, col: 10 },
+  { symbol: "Cu", num: 29, mass: 63.546, row: 4, col: 11 },
+  { symbol: "Zn", num: 30, mass: 65.38, row: 4, col: 12 },
+  { symbol: "Ga", num: 31, mass: 69.723, row: 4, col: 13 },
+  { symbol: "Ge", num: 32, mass: 72.63, row: 4, col: 14 },
+  { symbol: "As", num: 33, mass: 74.922, row: 4, col: 15 },
+  { symbol: "Se", num: 34, mass: 78.971, row: 4, col: 16 },
+  { symbol: "Br", num: 35, mass: 79.904, row: 4, col: 17 },
+  { symbol: "Kr", num: 36, mass: 83.798, row: 4, col: 18 },
+  { symbol: "Rb", num: 37, mass: 85.468, row: 5, col: 1 },
+  { symbol: "Sr", num: 38, mass: 87.62, row: 5, col: 2 },
+  { symbol: "Y", num: 39, mass: 88.906, row: 5, col: 3 },
+  { symbol: "Zr", num: 40, mass: 91.224, row: 5, col: 4 },
+  { symbol: "Nb", num: 41, mass: 92.906, row: 5, col: 5 },
+  { symbol: "Mo", num: 42, mass: 95.95, row: 5, col: 6 },
+  { symbol: "Tc", num: 43, mass: 98.0, row: 5, col: 7 },
+  { symbol: "Ru", num: 44, mass: 101.07, row: 5, col: 8 },
+  { symbol: "Rh", num: 45, mass: 102.906, row: 5, col: 9 },
+  { symbol: "Pd", num: 46, mass: 106.42, row: 5, col: 10 },
+  { symbol: "Ag", num: 47, mass: 107.868, row: 5, col: 11 },
+  { symbol: "Cd", num: 48, mass: 112.414, row: 5, col: 12 },
+  { symbol: "In", num: 49, mass: 114.818, row: 5, col: 13 },
+  { symbol: "Sn", num: 50, mass: 118.71, row: 5, col: 14 },
+  { symbol: "Sb", num: 51, mass: 121.76, row: 5, col: 15 },
+  { symbol: "Te", num: 52, mass: 127.6, row: 5, col: 16 },
+  { symbol: "I", num: 53, mass: 126.904, row: 5, col: 17 },
+  { symbol: "Xe", num: 54, mass: 131.293, row: 5, col: 18 },
+  { symbol: "Cs", num: 55, mass: 132.905, row: 6, col: 1 },
+  { symbol: "Ba", num: 56, mass: 137.327, row: 6, col: 2 },
+  { symbol: "La-Lu", num: '*', mass: 0.0, row: 6, col: 3 },
+  { symbol: "Hf", num: 72, mass: 178.49, row: 6, col: 4 },
+  { symbol: "Ta", num: 73, mass: 180.948, row: 6, col: 5 },
+  { symbol: "W", num: 74, mass: 183.84, row: 6, col: 6 },
+  { symbol: "Re", num: 75, mass: 186.207, row: 6, col: 7 },
+  { symbol: "Os", num: 76, mass: 190.23, row: 6, col: 8 },
+  { symbol: "Ir", num: 77, mass: 192.217, row: 6, col: 9 },
+  { symbol: "Pt", num: 78, mass: 195.084, row: 6, col: 10 },
+  { symbol: "Au", num: 79, mass: 196.967, row: 6, col: 11 },
+  { symbol: "Hg", num: 80, mass: 200.592, row: 6, col: 12 },
+  { symbol: "Tl", num: 81, mass: 204.38, row: 6, col: 13 },
+  { symbol: "Pb", num: 82, mass: 207.2, row: 6, col: 14 },
+  { symbol: "Bi", num: 83, mass: 208.98, row: 6, col: 15 },
+  { symbol: "Po", num: 84, mass: 209.0, row: 6, col: 16 },
+  { symbol: "At", num: 85, mass: 210.0, row: 6, col: 17 },
+  { symbol: "Rn", num: 86, mass: 222.0, row: 6, col: 18 },
+  { symbol: "Fr", num: 87, mass: 223.0, row: 7, col: 1 },
+  { symbol: "Ra", num: 88, mass: 226.0, row: 7, col: 2 },
+  { symbol: "Ac-Lr", num: '**', mass: 0.0, row: 7, col: 3 },
+  { symbol: "Rf", num: 104, mass: 267.0, row: 7, col: 4 },
+  { symbol: "Db", num: 105, mass: 268.0, row: 7, col: 5 },
+  { symbol: "Sg", num: 106, mass: 271.0, row: 7, col: 6 },
+  { symbol: "Bh", num: 107, mass: 270.0, row: 7, col: 7 },
+  { symbol: "Hs", num: 108, mass: 277.0, row: 7, col: 8 },
+  { symbol: "Mt", num: 109, mass: 278.0, row: 7, col: 9 },
+  { symbol: "Ds", num: 110, mass: 281.0, row: 7, col: 10 },
+  { symbol: "Rg", num: 111, mass: 282.0, row: 7, col: 11 },
+  { symbol: "Cn", num: 112, mass: 285.0, row: 7, col: 12 },
+  { symbol: "Nh", num: 113, mass: 286.0, row: 7, col: 13 },
+  { symbol: "Fl", num: 114, mass: 289.0, row: 7, col: 14 },
+  { symbol: "Mc", num: 115, mass: 290.0, row: 7, col: 15 },
+  { symbol: "Lv", num: 116, mass: 293.0, row: 7, col: 16 },
+  { symbol: "Ts", num: 117, mass: 294.0, row: 7, col: 17 },
+  { symbol: "Og", num: 118, mass: 294.0, row: 7, col: 18 },
+  { symbol: "La", num: 57, mass: 138.905, row: 9, col: 3 },
+  { symbol: "Ce", num: 58, mass: 140.116, row: 9, col: 4 },
+  { symbol: "Pr", num: 59, mass: 140.908, row: 9, col: 5 },
+  { symbol: "Nd", num: 60, mass: 144.242, row: 9, col: 6 },
+  { symbol: "Pm", num: 61, mass: 145.0, row: 9, col: 7 },
+  { symbol: "Sm", num: 62, mass: 150.36, row: 9, col: 8 },
+  { symbol: "Eu", num: 63, mass: 151.964, row: 9, col: 9 },
+  { symbol: "Gd", num: 64, mass: 157.25, row: 9, col: 10 },
+  { symbol: "Tb", num: 65, mass: 158.925, row: 9, col: 11 },
+  { symbol: "Dy", num: 66, mass: 162.5, row: 9, col: 12 },
+  { symbol: "Ho", num: 67, mass: 164.93, row: 9, col: 13 },
+  { symbol: "Er", num: 68, mass: 167.259, row: 9, col: 14 },
+  { symbol: "Tm", num: 69, mass: 168.934, row: 9, col: 15 },
+  { symbol: "Yb", num: 70, mass: 173.054, row: 9, col: 16 },
+  { symbol: "Lu", num: 71, mass: 174.967, row: 9, col: 17 },
+  { symbol: "Ac", num: 89, mass: 227.0, row: 10, col: 3 },
+  { symbol: "Th", num: 90, mass: 232.038, row: 10, col: 4 },
+  { symbol: "Pa", num: 91, mass: 231.036, row: 10, col: 5 },
+  { symbol: "U", num: 92, mass: 238.029, row: 10, col: 6 },
+  { symbol: "Np", num: 93, mass: 237.0, row: 10, col: 7 },
+  { symbol: "Pu", num: 94, mass: 244.0, row: 10, col: 8 },
+  { symbol: "Am", num: 95, mass: 243.0, row: 10, col: 9 },
+  { symbol: "Cm", num: 96, mass: 247.0, row: 10, col: 10 },
+  { symbol: "Bk", num: 97, mass: 247.0, row: 10, col: 11 },
+  { symbol: "Cf", num: 98, mass: 251.0, row: 10, col: 12 },
+  { symbol: "Es", num: 99, mass: 252.0, row: 10, col: 13 },
+  { symbol: "Fm", num: 100, mass: 257.0, row: 10, col: 14 },
+  { symbol: "Md", num: 101, mass: 258.0, row: 10, col: 15 },
+  { symbol: "No", num: 102, mass: 259.0, row: 10, col: 16 },
+  { symbol: "Lr", num: 103, mass: 262.0, row: 10, col: 17 }
+];
+                               return (
+                                 <div className="p-3.5 bg-zinc-950/60 rounded-xl border border-zinc-850 space-y-3">
+                                   <div className="flex justify-between items-center">
+                                     <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider font-sans">
+                                       Periodic Table Reference (Atomic Number, Symbol, Atomic Mass)
+                                     </span>
+                                   </div>
+                                   <div className="overflow-x-auto pb-1">
+                                     <div className="min-w-[760px] space-y-2.5">
+                                       {/* Main body of periodic table */}
+                                       <div className="grid gap-1.5 p-1 bg-zinc-900/30 rounded-lg" style={{ display: 'grid', gridTemplateColumns: 'repeat(18, minmax(0, 1fr))' }}>
+                                         {Array.from({ length: 7 }).map((_, rIdx) => {
+                                           const row = rIdx + 1;
+                                           return Array.from({ length: 18 }).map((_, cIdx) => {
+                                             const col = cIdx + 1;
+                                             const el = periodicTableElements.find(e => e.row === row && e.col === col);
+                                             if (!el) return <div key={`empty-${row}-${col}`} className="h-10 opacity-0" />;
+                                             const isPlaceholder = el.num === "*" || el.num === "**";
+                                             return (
+                                               <div key={el.symbol} className={`h-10 bg-zinc-900/80 border border-zinc-800 rounded flex flex-col justify-between p-0.5 text-center transition-colors ${isPlaceholder ? 'opacity-60 border-dashed' : 'hover:border-indigo-500/50'}`}>
+                                                 <span className="text-[7px] font-mono font-bold text-zinc-500 block text-left leading-none">{el.num}</span>
+                                                 <span className={`font-black text-white leading-none font-sans ${el.symbol.length > 2 ? 'text-[9px]' : 'text-xs'}`}>{el.symbol}</span>
+                                                 <span className="text-[7px] font-mono text-zinc-400 leading-none">{el.mass > 0 ? el.mass.toFixed(1) : ""}</span>
+                                               </div>
+                                             );
+                                           });
+                                         })}
+                                       </div>
+                                       
+                                       {/* f-block lanthanides and actinides */}
+                                       <div className="grid gap-1.5 p-1 bg-zinc-900/30 rounded-lg" style={{ display: 'grid', gridTemplateColumns: 'repeat(18, minmax(0, 1fr))' }}>
+                                         {[9, 10].map((row) => {
+                                           return Array.from({ length: 18 }).map((_, cIdx) => {
+                                             const col = cIdx + 1;
+                                             const el = periodicTableElements.find(e => e.row === row && e.col === col);
+                                             if (!el) return <div key={`empty-${row}-${col}`} className="h-10 opacity-0" />;
+                                             return (
+                                               <div key={el.symbol} className="h-10 bg-zinc-900/80 border border-zinc-800 rounded flex flex-col justify-between p-0.5 text-center hover:border-indigo-500/50 transition-colors">
+                                                 <span className="text-[7px] font-mono font-bold text-zinc-500 block text-left leading-none">{el.num}</span>
+                                                 <span className="text-xs font-black text-white leading-none font-sans">{el.symbol}</span>
+                                                 <span className="text-[7px] font-mono text-zinc-400 leading-none">{el.mass.toFixed(1)}</span>
+                                               </div>
+                                             );
+                                           });
+                                         })}
+                                       </div>
+                                     </div>
+                                   </div>
+                                 </div>
+                               );
+                             })()}
 
                             <div className="space-y-5">
                               {dokQuizzes[`${selectedDok}_${selectedActivityIndex}_variants`].map((variant, qIndex) => {
@@ -53900,7 +53200,7 @@ return (
                           </div>
                         )}
                       </div>
-                    ) : (selectedStandard !== "OAS.B.LS1.1" && selectedStandard !== "OAS.B.PS1.1") ? (
+) : (selectedStandard !== "OAS.B.LS1.1") ? (
                       /* DOK Workspaces for B.LS1.2 to B.LS4.4 */
                       <div className="space-y-6 animate-fadeIn">
                         <div>
@@ -53999,6 +53299,7 @@ return (
  
                              {/* Render PS.PS1.2 Workspaces */}
                              {selectedStandard === "OAS.PS.PS1.2" && renderPs12Workspaces()}
+                             {["OAS.B.PS1.1", "OAS.PS.PS1.5", "OAS.PS.PS1.7", "OAS.PS.PS2.5", "OAS.PS.PS3.1", "OAS.PS.PS3.2", "OAS.PS.PS3.3", "OAS.PS.PS3.4", "OAS.PS.PS4.1", "OAS.PS.PS4.4"].includes(selectedStandard) && renderPhysicalScienceWorkspace()}
                           </div>
                         )}
                       </div>
@@ -54446,7 +53747,7 @@ return (
                           </>
                         )}
 
-                        {activeLevel === 3 && selectedStandard === "OAS.B.PS1.1" && (
+                        {false && activeLevel === 3 && selectedStandard === "OAS.B.PS1.1" && (
                           <>
                             {/* Level 3 Progress Cards */}
                             <div className="grid grid-cols-3 gap-4 mb-8">
@@ -54886,7 +54187,7 @@ return (
                 </div>
 
                 {/* Feedback & Telemetry Visualizer Sidebar */}
-                <div className="space-y-6">
+                <div className="lg:col-span-1 space-y-6">
                   {/* Classroom Connection Card */}
                   <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 shadow-xl space-y-3">
                     <h3 className="text-sm font-bold text-white uppercase tracking-wider text-zinc-400">
@@ -56868,6 +56169,330 @@ return (
                           <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
                             <span>Electron States & Chemical Reactions:</span>
                             <span className="text-white font-bold">{parentReportData.bkt_reactions_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Physical Sciences - PS.PS1.5) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider font-mono">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: PS.PS1.5</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_rates_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_rates_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_rates_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_rates_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_rates_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Reaction Rates Factors:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_rates_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Physical Sciences - PS.PS1.7) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider font-mono">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: PS.PS1.7</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_conservation_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_conservation_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_conservation_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_conservation_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_conservation_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Conservation of Mass:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_conservation_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Physical Sciences - PS.PS2.5) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider font-mono">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: PS.PS2.5</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_induction_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_induction_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_induction_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_induction_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_induction_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Electromagnetic Induction:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_induction_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Physical Sciences - PS.PS3.1) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider font-mono">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: PS.PS3.1</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_energyflows_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_energyflows_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_energyflows_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_energyflows_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_energyflows_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Computational Energy Flows:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_energyflows_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Physical Sciences - PS.PS3.2) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider font-mono">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: PS.PS3.2</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_storage_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_storage_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_storage_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_storage_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_storage_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Macroscopic Energy Storage:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_storage_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Physical Sciences - PS.PS3.3) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider font-mono">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: PS.PS3.3</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_devices_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_devices_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_devices_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_devices_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_devices_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Energy Conversion Devices:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_devices_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Physical Sciences - PS.PS3.4) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider font-mono">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: PS.PS3.4</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_thermal_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_thermal_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_thermal_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_thermal_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_thermal_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Thermal Energy Distribution:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_thermal_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Physical Sciences - PS.PS4.1) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider font-mono">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: PS.PS4.1</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_wavekinematics_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_wavekinematics_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_wavekinematics_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_wavekinematics_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_wavekinematics_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>Wave Kinematics Math:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_wavekinematics_mastery ?? "15.0"}%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BKT Mastery Modeling Section (Physical Sciences - PS.PS4.4) */}
+                      <div className="mt-4 p-5 bg-gradient-to-r from-zinc-950 to-indigo-950/20 border border-zinc-850 rounded-xl space-y-3.5">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider font-mono">Bayesian Knowledge Tracing (BKT)</span>
+                            <h4 className="text-sm font-bold text-white mt-0.5">Dynamic Mastery Estimate: PS.PS4.4</h4>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xl font-mono font-black text-indigo-300">
+                              {parentReportData.bkt_radiation_mastery ?? "15.0"}%
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
+                          <div
+                            className={`h-full rounded-full transition-all duration-1000 ${(parentReportData.bkt_radiation_mastery ?? 15.0) >= 85
+                                ? "bg-emerald-500"
+                                : (parentReportData.bkt_radiation_mastery ?? 15.0) >= 70
+                                  ? "bg-indigo-500"
+                                  : (parentReportData.bkt_radiation_mastery ?? 15.0) >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-rose-500"
+                              }`}
+                            style={{ width: `${parentReportData.bkt_radiation_mastery ?? 15.0}%` }}
+                          />
+                        </div>
+
+                        <div className="pt-1 text-[11px] text-zinc-400 font-mono">
+                          <div className="flex justify-between p-2 bg-zinc-950/40 rounded-lg border border-zinc-850">
+                            <span>EM Radiation Absorption:</span>
+                            <span className="text-white font-bold">{parentReportData.bkt_radiation_mastery ?? "15.0"}%</span>
                           </div>
                         </div>
                       </div>

@@ -277,6 +277,60 @@ class StudentBKTState(models.Model):
     reactions_p_slip = models.FloatField(default=0.10)
     reactions_p_transit = models.FloatField(default=0.15)
 
+    # Skill: Reaction Rates Factors (OAS PS.PS1.5)
+    rates_p_know = models.FloatField(default=0.15)
+    rates_p_guess = models.FloatField(default=0.20)
+    rates_p_slip = models.FloatField(default=0.10)
+    rates_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Conservation of Mass (OAS PS.PS1.7)
+    conservation_p_know = models.FloatField(default=0.15)
+    conservation_p_guess = models.FloatField(default=0.20)
+    conservation_p_slip = models.FloatField(default=0.10)
+    conservation_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Electromagnetic Induction (OAS PS.PS2.5)
+    induction_p_know = models.FloatField(default=0.15)
+    induction_p_guess = models.FloatField(default=0.20)
+    induction_p_slip = models.FloatField(default=0.10)
+    induction_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Computational Energy Flows (OAS PS.PS3.1)
+    energyflows_p_know = models.FloatField(default=0.15)
+    energyflows_p_guess = models.FloatField(default=0.20)
+    energyflows_p_slip = models.FloatField(default=0.10)
+    energyflows_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Macroscopic Energy Storage (OAS PS.PS3.2)
+    storage_p_know = models.FloatField(default=0.15)
+    storage_p_guess = models.FloatField(default=0.20)
+    storage_p_slip = models.FloatField(default=0.10)
+    storage_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Energy Conversion Devices (OAS PS.PS3.3)
+    devices_p_know = models.FloatField(default=0.15)
+    devices_p_guess = models.FloatField(default=0.20)
+    devices_p_slip = models.FloatField(default=0.10)
+    devices_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Thermal Energy Distribution (OAS PS.PS3.4)
+    thermal_p_know = models.FloatField(default=0.15)
+    thermal_p_guess = models.FloatField(default=0.20)
+    thermal_p_slip = models.FloatField(default=0.10)
+    thermal_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Wave Kinematics Math (OAS PS.PS4.1)
+    wavekinematics_p_know = models.FloatField(default=0.15)
+    wavekinematics_p_guess = models.FloatField(default=0.20)
+    wavekinematics_p_slip = models.FloatField(default=0.10)
+    wavekinematics_p_transit = models.FloatField(default=0.15)
+
+    # Skill: Electromagnetic Radiation Absorption (OAS PS.PS4.4)
+    radiation_p_know = models.FloatField(default=0.15)
+    radiation_p_guess = models.FloatField(default=0.20)
+    radiation_p_slip = models.FloatField(default=0.10)
+    radiation_p_transit = models.FloatField(default=0.15)
+
     last_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
