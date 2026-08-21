@@ -1,6 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import Editor, { loader } from "@monaco-editor/react";
+
+if (typeof window !== "undefined") {
+  loader.config({
+    paths: {
+      vs: "https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.43.0/min/vs"
+    }
+  });
+}
 
 // Standard Complementary Pairing Map (DNA -> mRNA)
 const COMPLEMENTARY_MAP = {
@@ -43623,22 +43632,279 @@ export default function Home() {
   // Auth States
   const [token, setToken] = useState(null);
   const [currentUser, setCurrentUser] = useState(null);
+  const [currentProduct, setCurrentProduct] = useState(null);
+  const pyodideWorkerRef = useRef(null);
+  const [workerReady, setWorkerReady] = useState(false);
+  const [pyodideLogs, setPyodideLogs] = useState([]);
+  const [isPyodideLoading, setIsPyodideLoading] = useState(false);
+  const [selectedCsModule, setSelectedCsModule] = useState(0);
+  const [csCode, setCsCode] = useState("x = 45\ny = 15\n# Write your code to divide x by y and print the result\nprint(x / y)\n");
+  const [isClassroomLinked, setIsClassroomLinked] = useState(false);
+  const [showClassroomModal, setShowClassroomModal] = useState(false);
+  const [isClassroomSyncing, setIsClassroomSyncing] = useState(false);
+  const [classroomSyncLogs, setClassroomSyncLogs] = useState([]);
+
+  // Python Curriculum States
+  const [pythonAssignments, setPythonAssignments] = useState([]);
+  const [selectedAssignmentIndex, setSelectedAssignmentIndex] = useState(0);
+  const [selectedAssignmentId, setSelectedAssignmentId] = useState(null);
+  const [isGrading, setIsGrading] = useState(false);
+
+  const fetchPythonAssignments = async () => {
+  if (!token) return;
+  try {
+  const response = await fetch("http://localhost:8000/api/python/assignments/", {
+  headers: {
+  'Authorization': `Token ${token}`
+  }
+  });
+  if (response.ok) {
+  const data = await response.json();
+  setPythonAssignments(data);
+  }
+  } catch (e) {
+  console.error("Failed to fetch python assignments", e);
+  }
+  };
 
   useEffect(() => {
-    setIsMounted(true);
+  if (token && currentProduct === "cs") {
+  fetchPythonAssignments();
+  }
+  }, [token, currentProduct]);
+  useEffect(() => {
+    let activeAssign = pythonAssignments.find(a => a.id === selectedAssignmentId);
+    if (!activeAssign && pythonAssignments.length > 0) {
+      const moduleAssigns = pythonAssignments.filter(a => a.module === selectedCsModule);
+      if (moduleAssigns.length > 0) {
+        activeAssign = moduleAssigns[0];
+        setSelectedAssignmentId(activeAssign.id);
+      }
+    }
+    if (activeAssign) {
+      setCsCode(activeAssign.submission?.code || activeAssign.starter_code || "");
+    }
+  }, [selectedAssignmentId, selectedCsModule, pythonAssignments]);
+  useEffect(() => {
+  setIsMounted(true);
+  if (typeof window !== "undefined") {
+  const storedToken = localStorage.getItem("swift_science_token");
+  const storedUser = localStorage.getItem("swift_science_user");
+  const storedProduct = localStorage.getItem("swift_science_product");
+  if (storedToken) setToken(storedToken);
+  if (storedUser) {
+  try {
+  setCurrentUser(JSON.parse(storedUser));
+  } catch (e) {
+  console.error(e);
+  }
+  }
+  if (storedProduct) setCurrentProduct(storedProduct);
+  }
+  }, []);
+
+  const [googleCourses, setGoogleCourses] = useState([]);
+  const [selectedGoogleCourseId, setSelectedGoogleCourseId] = useState(null);
+  const [googleRoster, setGoogleRoster] = useState([]);
+  const [googleCoursework, setGoogleCoursework] = useState([]);
+  const [isLoadingGoogleData, setIsLoadingGoogleData] = useState(false);
+
+  const fetchGoogleCourses = async (tokenVal = token) => {
+    const activeToken = tokenVal || token;
+    if (!activeToken) return;
+    setIsLoadingGoogleData(true);
+    try {
+      const response = await fetch("http://localhost:8000/api/google/courses/", {
+        headers: { 'Authorization': `Token ${activeToken}` }
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setGoogleCourses(data);
+      }
+    } catch (e) {
+      console.error("Failed to fetch Google courses", e);
+    } finally {
+      setIsLoadingGoogleData(false);
+    }
+  };
+
+  const fetchGoogleRosterAndCoursework = async (courseId) => {
+    if (!token || !courseId) return;
+    setIsLoadingGoogleData(true);
+    try {
+      const [rosterRes, courseworkRes] = await Promise.all([
+        fetch(`http://localhost:8000/api/google/courses/${courseId}/roster/`, {
+          headers: { 'Authorization': `Token ${token}` }
+        }),
+        fetch(`http://localhost:8000/api/google/courses/${courseId}/coursework/`, {
+          headers: { 'Authorization': `Token ${token}` }
+        })
+      ]);
+      if (rosterRes.ok) {
+        const rosterData = await rosterRes.json();
+        setGoogleRoster(rosterData);
+      }
+      if (courseworkRes.ok) {
+        const courseworkData = await courseworkRes.json();
+        setGoogleCoursework(courseworkData);
+      }
+    } catch (e) {
+      console.error("Failed to fetch Google roster/coursework", e);
+    } finally {
+      setIsLoadingGoogleData(false);
+    }
+  };
+
+  const importGoogleCourse = async (courseId) => {
+    if (!token || !courseId) return;
+    setIsClassroomSyncing(true);
+    setClassroomSyncLogs(["Authorizing API connection...", "Syncing Classroom Roster with student emails..."]);
+    try {
+      const response = await fetch(`http://localhost:8000/api/google/courses/${courseId}/import/`, {
+        method: 'POST',
+        headers: { 'Authorization': `Token ${token}` }
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setClassroomSyncLogs(prev => [
+          ...prev, 
+          `✓ Success: Imported classroom "${data.classroom_name}" (Code: ${data.class_code})`, 
+          `✓ Linked ${data.synced_students.length} student profiles.`
+        ]);
+        setIsClassroomLinked(true);
+        if (typeof fetchTeacherPythonSubmissions === 'function') {
+          fetchTeacherPythonSubmissions();
+        }
+      } else {
+        setClassroomSyncLogs(prev => [...prev, "❌ Error: Failed to import Google course."]);
+      }
+    } catch (e) {
+      console.error(e);
+      setClassroomSyncLogs(prev => [...prev, "❌ Error: Network timeout mapping rosters."]);
+    } finally {
+      setIsClassroomSyncing(false);
+    }
+  };
+
+  useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedToken = localStorage.getItem("swift_science_token");
-      const storedUser = localStorage.getItem("swift_science_user");
-      if (storedToken) setToken(storedToken);
-      if (storedUser) {
-        try {
-          setCurrentUser(JSON.parse(storedUser));
-        } catch (e) {
-          console.error(e);
+      const searchParams = new URLSearchParams(window.location.search);
+      if (searchParams.get("google_sync") === "success") {
+        setIsClassroomLinked(true);
+        setShowClassroomModal(true);
+        window.history.replaceState({}, document.title, window.location.pathname);
+        const storedToken = localStorage.getItem("swift_science_token");
+        if (storedToken) {
+          fetchGoogleCourses(storedToken);
         }
       }
     }
   }, []);
+
+  useEffect(() => {
+  if (typeof window !== "undefined") {
+  if (currentProduct) {
+  localStorage.setItem("swift_science_product", currentProduct);
+  } else {
+  localStorage.removeItem("swift_science_product");
+  }
+  }
+  }, [currentProduct]);
+
+  const initWorkerInstance = () => {
+    if (typeof window === "undefined") return;
+    
+    if (pyodideWorkerRef.current) {
+      pyodideWorkerRef.current.terminate();
+    }
+    
+    const worker = new Worker("/workers/pyodide.worker.js");
+    pyodideWorkerRef.current = worker;
+    setWorkerReady(false);
+    
+    worker.onmessage = (e) => {
+      const { type, status, error, stdout, stderr, passed, score, mainStdout, mainStderr, assertionResults, ioResults } = e.data;
+      if (type === "status") {
+        if (status === "ready") {
+          setWorkerReady(true);
+          setIsPyodideLoading(false);
+          setPyodideLogs(prev => [...prev, "✓ Python 3.11 Interpreter Ready (Sandboxed Web Worker)!", "Type your code and click Run Code."]);
+        } else if (status === "error") {
+          setPyodideLogs(prev => [...prev, "❌ Error loading interpreter in Web Worker: " + error]);
+          setIsPyodideLoading(false);
+        }
+      } else if (type === "run_success") {
+        const output = stdout + (stderr ? "\n" + stderr : "");
+        setPyodideLogs(prev => [...prev, output || "(Code executed successfully with no console output)"]);
+      } else if (type === "run_error") {
+        setPyodideLogs(prev => [...prev, error]);
+      } else if (type === "grade_success") {
+        setPyodideLogs(prev => [
+          ...prev,
+          `=== AUTOGRADER RESULTS ===`,
+          ...assertionResults.map(r => `${r.passed ? "✅ PASS" : "❌ FAIL"}: ${r.msg}`),
+          ...ioResults.map(r => `${r.passed ? "✅ PASS" : "❌ FAIL"}: Input ${JSON.stringify(r.inputs)} -> Expected contains: "${r.expected}", Got: "${r.actual}"`),
+          `==========================`,
+          passed ? "🎉 CONGRATULATIONS! All tests passed!" : "⚠️ Some tests failed. Please review your code and try again."
+        ]);
+        
+        const activeAssign = pythonAssignments.find(a => a.id === selectedAssignmentId);
+        if (activeAssign) {
+          fetch("http://localhost:8000/api/python/submit/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": token ? `Token ${token}` : ""
+            },
+            body: JSON.stringify({
+              assignment_id: activeAssign.id,
+              code: csCode,
+              output: mainStdout + (mainStderr ? "\n" + mainStderr : ""),
+              passed: passed,
+              score: score,
+              duration: 1.5,
+              test_results: {
+                assertions: assertionResults,
+                io_tests: ioResults
+              }
+            })
+          }).then(res => {
+            if (res.ok) {
+              fetchPythonAssignments();
+            }
+          });
+        }
+        setIsGrading(false);
+      } else if (type === "grade_error") {
+        setPyodideLogs(prev => [...prev, "❌ Grading Error: " + error]);
+        setIsGrading(false);
+      }
+    };
+  };
+
+  useEffect(() => {
+    if (token && currentProduct === "cs") {
+      setPyodideLogs(["Initializing Wasm Environment...", "Loading Pyodide inside isolated Web Worker..."]);
+      setIsPyodideLoading(true);
+      initWorkerInstance();
+      return () => {
+        if (pyodideWorkerRef.current) {
+          pyodideWorkerRef.current.terminate();
+          pyodideWorkerRef.current = null;
+        }
+        setWorkerReady(false);
+      };
+    }
+  }, [token, currentProduct]);
+
+  useEffect(() => {
+  if (typeof window !== "undefined") {
+  const el = document.getElementById("cs-terminal-output");
+  if (el) {
+  el.scrollTop = el.scrollHeight;
+  }
+  }
+  }, [pyodideLogs]);
 
   const [authMode, setAuthMode] = useState("login"); // 'login' or 'register'
   const [usernameInput, setUsernameInput] = useState("");
@@ -43784,6 +44050,10 @@ export default function Home() {
   // Teacher dashboard live report states
   const [teacherReportData, setTeacherReportData] = useState([]);
   const [isLoadingReport, setIsLoadingReport] = useState(false);
+  const [teacherPythonSubmissions, setTeacherPythonSubmissions] = useState([]);
+  const [expandedStudentId, setExpandedStudentId] = useState(null);
+  const [teacherPythonAdminStats, setTeacherPythonAdminStats] = useState(null);
+  const [selectedAdminModule, setSelectedAdminModule] = useState("1");
 
   // Parent dashboard report states
   const [parentReportData, setParentReportData] = useState(null);
@@ -43862,6 +44132,7 @@ export default function Home() {
     if (role === "teacher" && token) {
       fetchTeacherReport();
       fetchLtiLogs();
+      fetchTeacherPythonSubmissions();
     }
   }, [role, token]);
 
@@ -43870,6 +44141,7 @@ export default function Home() {
     if (role === "admin" && token) {
       fetchAdminKpis();
       fetchAuditLogs();
+      fetchPythonAdminStats();
     }
   }, [role, token]);
 
@@ -43957,6 +44229,36 @@ export default function Home() {
     }
   }, [role]);
 
+
+  const fetchPythonAdminStats = async () => {
+    if (role !== "admin" || !token) return;
+    try {
+      const res = await fetch("/api/python/admin/stats/", {
+        headers: {
+          "Authorization": `Token ${token}`
+        }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setTeacherPythonAdminStats(data);
+      }
+    } catch (err) {}
+  };
+
+  const fetchTeacherPythonSubmissions = async () => {
+    if (role !== "teacher" || !token) return;
+    try {
+      const res = await fetch("/api/python/teacher/submissions/", {
+        headers: {
+          "Authorization": `Token ${token}`
+        }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setTeacherPythonSubmissions(data);
+      }
+    } catch (err) {}
+  };
 
   const fetchTeacherReport = async () => {
     setIsLoadingReport(true);
@@ -44313,22 +44615,142 @@ export default function Home() {
         setLastNameInput("");
         setClassCodeInput("");
       } else {
-        const err = await response.json();
-        setAuthError(err.error || "Registration failed.");
+      const err = await response.json();
+      setAuthError(err.error || "Registration failed.");
       }
-    } catch (err) {
+      } catch (err) {
       setAuthError("Failed to connect to backend server.");
+      }
+      };
+
+  const handleRunCsCode = async () => {
+    if (!pyodideWorkerRef.current || !workerReady) {
+      setPyodideLogs(prev => [...prev, "Python interpreter is not ready yet."]);
+      return;
     }
+
+    // Safety check: Prevent freezing browser via infinite while loops
+    const normalizedCode = csCode.replace(/\s+/g, "");
+    if (normalizedCode.includes("whileTrue") || normalizedCode.includes("while1") || normalizedCode.includes("whileTrue:") || normalizedCode.includes("while1:")) {
+      if (!csCode.includes("break") && !csCode.includes("return")) {
+        setPyodideLogs(prev => [
+          ...prev, 
+          "⚠️ Execution Blocked: Detected potential infinite 'while' loop. Please include a 'break' or exit condition to avoid freezing your browser."
+        ]);
+        return;
+      }
+    }
+
+    // Safety check: Bounded iteration limits
+    const hugeRangeRegex = /range\(\s*(\d{7,})\s*\)/; // 1,000,000 or greater
+    if (hugeRangeRegex.test(csCode)) {
+      setPyodideLogs(prev => [
+        ...prev,
+        "⚠️ Execution Blocked: Range iteration limit exceeded (max 1,000,000). Please scale down iteration bounds."
+      ]);
+      return;
+    }
+
+    setPyodideLogs(prev => [...prev, ">>> Running code..."]);
+
+    // 5-second watchdog timer
+    let watchdogTimer = setTimeout(() => {
+      setPyodideLogs(prev => [
+        ...prev,
+        "❌ TimeoutError: Code execution exceeded the 5-second limit. Terminating run environment..."
+      ]);
+      initWorkerInstance(); // Re-initialize the worker
+    }, 5000);
+
+    // Intercept message once to clear the watchdog timer
+    const originalOnMessage = pyodideWorkerRef.current.onmessage;
+    pyodideWorkerRef.current.onmessage = (e) => {
+      clearTimeout(watchdogTimer);
+      originalOnMessage(e);
+      if (pyodideWorkerRef.current) {
+        pyodideWorkerRef.current.onmessage = originalOnMessage;
+      }
+    };
+
+    pyodideWorkerRef.current.postMessage({ type: "run", code: csCode });
   };
 
-  const handleLogout = () => {
-    setToken(null);
-    setCurrentUser(null);
-    localStorage.removeItem("swift_science_token");
-    localStorage.removeItem("swift_science_user");
-    setRole("student");
-    resetSimulation();
+  const handleGradeCsCode = async () => {
+    if (!pyodideWorkerRef.current || !workerReady) {
+      setPyodideLogs(prev => [...prev, "Python interpreter is not ready yet."]);
+      return;
+    }
+    if (pythonAssignments.length === 0) {
+      setPyodideLogs(prev => [...prev, "No assignments loaded. Please wait or refresh."]);
+      return;
+    }
+
+    const activeAssign = pythonAssignments.find(a => a.id === selectedAssignmentId);
+    if (!activeAssign) return;
+
+    // Safety checks
+    const normalizedCode = csCode.replace(/\s+/g, "");
+    if (normalizedCode.includes("whileTrue") || normalizedCode.includes("while1") || normalizedCode.includes("whileTrue:") || normalizedCode.includes("while1:")) {
+      if (!csCode.includes("break") && !csCode.includes("return")) {
+        setPyodideLogs(prev => [
+          ...prev, 
+          "⚠️ Execution Blocked: Detected potential infinite 'while' loop. Please include a 'break' or exit condition to avoid freezing your browser."
+        ]);
+        return;
+      }
+    }
+    const hugeRangeRegex = /range\(\s*(\d{7,})\s*\)/;
+    if (hugeRangeRegex.test(csCode)) {
+      setPyodideLogs(prev => [
+        ...prev,
+        "⚠️ Execution Blocked: Range iteration limit exceeded (max 1,000,000)."
+      ]);
+      return;
+    }
+
+    setIsGrading(true);
+    setPyodideLogs(prev => [...prev, ">>> Running autograding test suite..."]);
+
+    // 5-second watchdog timer for grading
+    let watchdogTimer = setTimeout(() => {
+      setPyodideLogs(prev => [
+        ...prev,
+        "❌ TimeoutError: Autograding exceeded the 5-second limit. Terminating run environment..."
+      ]);
+      setIsGrading(false);
+      initWorkerInstance(); // Re-initialize the worker
+    }, 5000);
+
+    const originalOnMessage = pyodideWorkerRef.current.onmessage;
+    pyodideWorkerRef.current.onmessage = (e) => {
+      clearTimeout(watchdogTimer);
+      originalOnMessage(e);
+      if (pyodideWorkerRef.current) {
+        pyodideWorkerRef.current.onmessage = originalOnMessage;
+      }
+    };
+
+    pyodideWorkerRef.current.postMessage({
+      type: "grade",
+      code: csCode,
+      testSuite: activeAssign.test_suite || { assertions: [], io_tests: [] }
+    });
   };
+
+      const handleClearTerminal = () => {
+      setPyodideLogs(["Terminal cleared."]);
+      };
+
+      const handleLogout = () => {
+      setToken(null);
+      setCurrentUser(null);
+      setCurrentProduct(null);
+      localStorage.removeItem("swift_science_token");
+      localStorage.removeItem("swift_science_user");
+      localStorage.removeItem("swift_science_product");
+      setRole("student");
+      resetSimulation();
+      };
 
   // ==========================================
   // Billing, SSO, Invite Handlers
@@ -44594,6 +45016,18 @@ export default function Home() {
   };
 
   const handleRosterSync = async (provider) => {
+    if (provider === 'google') {
+      if (!isClassroomLinked) {
+        setShowSyncModal(false);
+        window.location.href = `http://localhost:8000/api/google/authorize/?token=${token}`;
+        return;
+      } else {
+        setShowSyncModal(false);
+        setShowClassroomModal(true);
+        fetchGoogleCourses();
+        return;
+      }
+    }
     setIsSyncing(true);
     setSyncLogs([]);
 
@@ -44619,17 +45053,27 @@ export default function Home() {
       });
 
       if (response.ok) {
-        const data = await response.json();
-        await new Promise(r => setTimeout(r, 800));
-        addLog(`Successfully synced classroom: "${data.classroom_name}" (Code: ${data.class_code})`);
+      const data = await response.json();
+      await new Promise(r => setTimeout(r, 800));
+      addLog(`Successfully synced classroom: "${data.classroom_name}" (Code: ${data.class_code})`);
 
-        data.synced_students.forEach(std => {
-          addLog(`  -> Synced student: ${std.name} (${std.username}) [${std.created ? 'NEW' : 'EXISTS'}]`);
-        });
+      let existingLookup = {};
+      try {
+      const stored = sessionStorage.getItem("google_classroom_lookup");
+      if (stored) existingLookup = JSON.parse(stored);
+      } catch (e) {}
 
-        addLog("Sync operation completed. Invalidating cache and rebuilding student roster...");
-        await fetchTeacherReport();
-        addLog("✓ Roster refreshed successfully!");
+      data.synced_students.forEach(std => {
+      addLog(`  -> Synced student: ${std.name} (${std.username}) [${std.created ? 'NEW' : 'EXISTS'}]`);
+      if (std.real_name) {
+      existingLookup[std.username] = std.real_name;
+      }
+      });
+      sessionStorage.setItem("google_classroom_lookup", JSON.stringify(existingLookup));
+
+      addLog("Sync operation completed. Invalidating cache and rebuilding student roster...");
+      await fetchTeacherReport();
+      addLog("✓ Roster refreshed successfully!");
       } else {
         const errData = await response.json();
         addLog(`❌ Error: ${errData.error || 'Failed to sync with provider API'}`);
@@ -47897,8 +48341,8 @@ return (
               <div key={component} className="flex justify-between items-center bg-zinc-900 border border-zinc-800 rounded-xl p-3">
                 <span className="text-xs font-mono font-bold text-white">{idx + 1}. {component}</span>
                 <div className="flex gap-1">
-                  <button onClick={() => moveItem(idx, -1)} disabled={isCompleted || idx === 0} className="p-1 text-xs bg-zinc-950 hover:bg-zinc-850 border border-zinc-855 rounded text-zinc-400 disabled:opacity-30">▲</button>
-                  <button onClick={() => moveItem(idx, 1)} disabled={isCompleted || idx === currentOrder.length - 1} className="p-1 text-xs bg-zinc-950 hover:bg-zinc-850 border border-zinc-855 rounded text-zinc-400 disabled:opacity-30">▼</button>
+                  <button onClick={() => moveItem(idx, -1)} disabled={isCompleted || idx === 0} className="p-1 text-xs bg-zinc-950 hover:bg-zinc-850 border border-zinc-850 rounded text-zinc-400 disabled:opacity-30">▲</button>
+                  <button onClick={() => moveItem(idx, 1)} disabled={isCompleted || idx === currentOrder.length - 1} className="p-1 text-xs bg-zinc-950 hover:bg-zinc-850 border border-zinc-850 rounded text-zinc-400 disabled:opacity-30">▼</button>
                 </div>
               </div>
             ))}
@@ -50490,7 +50934,7 @@ return (
       <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col font-sans justify-center items-center">
         <div className="flex flex-col items-center gap-3">
           <div className="h-6 w-6 border-2 border-indigo-500/80 border-t-transparent rounded-full animate-spin"></div>
-          <span className="text-xs text-zinc-500 font-medium uppercase tracking-wider">Initializing Swift Science...</span>
+          <span className="text-xs text-zinc-500 font-medium uppercase tracking-wider">Initializing Swift Education Suite...</span>
         </div>
       </div>
     );
@@ -50694,21 +51138,36 @@ return (
 
       {/* Header Bar */}
       <header className="border-b border-zinc-800 bg-zinc-900/50 backdrop-blur px-6 py-4 flex justify-between items-center sticky top-0 z-50">
-        <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center font-bold text-lg text-white shadow-lg shadow-indigo-500/30">
-            S
-          </div>
-          <div>
-            <h1 className="text-xl font-bold tracking-tight bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-              Swift Science
-            </h1>
-            <p className="text-xs text-zinc-500">Grade 11 OAS Biology & Physical Science Simulator</p>
-          </div>
-        </div>
+      <div className="flex items-center gap-3">
+      <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center font-bold text-lg text-white shadow-lg shadow-indigo-500/30">
+      {currentProduct === "cs" ? "CS" : "S"}
+      </div>
+      <div>
+      <h1 className="text-xl font-bold tracking-tight bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
+      {currentProduct === "cs" ? "Swift CS" : currentProduct === "science" ? "Swift Science" : "Swift Education Suite"}
+      </h1>
+      <p className="text-xs text-zinc-500">
+      {currentProduct === "cs" 
+      ? "Python Programming & Google Classroom Sync" 
+      : currentProduct === "science" 
+      ? "Grade 11 OAS Biology & Physical Science Simulator" 
+      : "OAS Science & Computer Science Adaptive Assessment"}
+      </p>
+      </div>
+      </div>
 
-        {/* Role-Based Route Guards / Tab Toggles */}
-        {token && currentUser && (
-          <div className="flex bg-zinc-800 p-1 rounded-lg border border-zinc-700/50">
+      {/* Role-Based Route Guards / Tab Toggles */}
+      {token && currentUser && (
+      <div className="flex items-center gap-4">
+      {currentProduct && (
+      <button
+      onClick={() => setCurrentProduct(null)}
+      className="px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-bold rounded-lg border border-zinc-700 transition flex items-center gap-1.5"
+      >
+      🏠 Switch Module
+      </button>
+      )}
+      <div className="flex bg-zinc-800 p-1 rounded-lg border border-zinc-700/50">
             {(currentUser.role === "student" || currentUser.role === "teacher" || currentUser.role === "admin") && (
               <button
                 onClick={() => setRole("student")}
@@ -50765,7 +51224,8 @@ return (
               </button>
             )}
           </div>
-        )}
+        </div>
+      )}
 
         {/* User Account Info / Logout */}
         {token && currentUser ? (
@@ -50956,10 +51416,1387 @@ return (
             </div>
           </div>
         </main>
+      ) : !currentProduct ? (
+      <main className="flex-1 max-w-5xl w-full mx-auto p-6 flex flex-col justify-center items-center space-y-8">
+      <div className="text-center space-y-2">
+      <span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider">Swift Learning Ecosystem</span>
+      <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Select Your Active Learning Module</h2>
+      <p className="text-sm text-zinc-400 max-w-lg mx-auto leading-relaxed">
+      Access adaptive science simulations, standard progress dashboards, and computer science program code editors.
+      </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+      {/* Card 1: Swift Science */}
+      <div 
+      onClick={() => setCurrentProduct("science")}
+      className="group cursor-pointer bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 shadow-xl hover:border-indigo-500/50 hover:bg-zinc-900 transition duration-300 relative overflow-hidden flex flex-col justify-between min-h-[250px]"
+      >
+      <div className="absolute top-0 right-0 h-32 w-32 bg-indigo-500/5 rounded-full blur-3xl group-hover:bg-indigo-500/10 transition-colors pointer-events-none" />
+      <div className="space-y-4">
+      <div className="h-12 w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-2xl shadow-inner group-hover:scale-110 transition duration-300">
+      🧬
+      </div>
+      <div>
+      <h3 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Swift Science</h3>
+      <p className="text-xs text-zinc-500 font-medium uppercase mt-0.5">OAS Adaptive Assessment</p>
+      </div>
+      <p className="text-xs text-zinc-400 leading-relaxed">
+      Explore Oklahoma Academic Standards (OAS) Biology and Physical Sciences. Run interactive dna pairing simulations, track student progress with BKT, and evaluate CCRA OPI scoring bands.
+      </p>
+      </div>
+      <button className="w-full mt-6 py-2.5 bg-zinc-800 hover:bg-indigo-600 text-zinc-300 group-hover:text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all duration-300 border border-zinc-700 group-hover:border-indigo-500">
+      Enter Science Suite
+      </button>
+      </div>
+
+      {/* Card 2: Swift CS */}
+      <div 
+      onClick={() => setCurrentProduct("cs")}
+      className="group cursor-pointer bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 shadow-xl hover:border-amber-500/50 hover:bg-zinc-900 transition duration-300 relative overflow-hidden flex flex-col justify-between min-h-[250px]"
+      >
+      <div className="absolute top-0 right-0 h-32 w-32 bg-amber-500/5 rounded-full blur-3xl group-hover:bg-amber-500/10 transition-colors pointer-events-none" />
+      <div className="space-y-4">
+      <div className="h-12 w-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-2xl shadow-inner group-hover:scale-110 transition duration-300">
+      🐍
+      </div>
+      <div>
+      <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">Swift CS</h3>
+      <p className="text-xs text-zinc-500 font-medium uppercase mt-0.5">Python coding & Sync</p>
+      </div>
+      <p className="text-xs text-zinc-400 leading-relaxed">
+      Learn programming via an AP Computer Science A equivalent curriculum. Write Python, run code natively in WebAssembly, auto-grade tasks, and sync rosters/grades directly with Google Classroom.
+      </p>
+      </div>
+      <button className="w-full mt-6 py-2.5 bg-zinc-800 hover:bg-amber-600 text-zinc-300 group-hover:text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all duration-300 border border-zinc-700 group-hover:border-amber-500">
+      Enter Coding Suite
+      </button>
+      </div>
+      </div>
+      </main>
+      ) : role === "admin" ? (
+        <main className="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+              <div className="flex justify-between items-center">
+                <div>
+                  <h2 className="text-3xl font-bold tracking-tight text-white">District Administrator Hub</h2>
+                  <p className="text-sm text-zinc-400">Manage licenses, view campus performance, and calibrate predictive models.</p>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+                  <span className="text-xs font-semibold text-zinc-300">
+                    Model: {isCalibrated ? "Active v1.3 (Calibrated)" : "Active v1.2 (Default Heuristic)"}
+                  </span>
+                </div>
+              </div>
+
+              {/* Stat Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Active Campuses</span>
+                  <div className="text-2xl font-bold text-white mt-1">
+                    {adminKpisData ? adminKpisData.campuses.length : 4} Schools
+                  </div>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Seat Licenses</span>
+                  <div className="text-2xl font-bold text-white mt-1">
+                    {adminKpisData ? `${adminKpisData.total_seats_active} / ${adminKpisData.total_seats_allocated}` : "1,420 / 2,000"}
+                  </div>
+                  <div className="text-xs text-zinc-500 mt-0.5">
+                    {adminKpisData && adminKpisData.total_seats_allocated > 0
+                      ? `${Math.round((adminKpisData.total_seats_active / adminKpisData.total_seats_allocated) * 100)}% Seat Utilization`
+                      : "71% Seat Utilization"}
+                  </div>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Est. Proficiency Rate</span>
+                  <div className="text-2xl font-bold text-indigo-400 mt-1">
+                    {adminKpisData ? `${adminKpisData.overall_proficiency_rate}%` : "68.4%"}
+                  </div>
+                  <div className="text-xs text-zinc-500 mt-0.5">Target: 70% for positive card</div>
+                </div>
+              </div>
+
+              {/* District OPI Averages Row */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">District Avg Overall OPI</span>
+                  <div className="text-2xl font-bold text-white mt-1">
+                    {adminKpisData ? adminKpisData.overall_opi_avg : "295.4"}
+                  </div>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">District Avg Life Science OPI</span>
+                  <div className="text-2xl font-bold text-indigo-400 mt-1">
+                    {adminKpisData ? adminKpisData.ls_opi_avg : "292.1"}
+                  </div>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
+                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">District Avg Physical Science OPI</span>
+                  <div className="text-2xl font-bold text-rose-400 mt-1">
+                    {adminKpisData ? adminKpisData.ps_opi_avg : "298.5"}
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                {/* Campus List Table */}
+                <div className="lg:col-span-2 bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-lg font-bold text-white">Campus Performance Summary</h3>
+                    <button
+                      onClick={fetchAdminKpis}
+                      disabled={isLoadingAdminKpis}
+                      className="px-2.5 py-1 text-[11px] font-semibold bg-zinc-850 hover:bg-zinc-750 text-zinc-350 rounded border border-zinc-700 transition"
+                    >
+                      {isLoadingAdminKpis ? "Loading..." : "Refresh KPIs"}
+                    </button>
+                  </div>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left text-sm text-zinc-400">
+                      <thead className="text-xs text-zinc-500 uppercase border-b border-zinc-850">
+                        <tr>
+                          <th className="py-3">School Name</th>
+                          <th className="py-3">Students Active / Seats</th>
+                          <th className="py-3">Seat Utilization</th>
+                          <th className="py-3 text-right">District Calibration Status</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-zinc-850 font-medium">
+                        {!adminKpisData || adminKpisData.campuses.length === 0 ? (
+                          <>
+                            <tr>
+                              <td className="py-3.5 text-white">Central High School</td>
+                              <td className="py-3.5">680 / 800 seats</td>
+                              <td className="py-3.5">85%</td>
+                              <td className="py-3.5 text-right text-emerald-400">Active</td>
+                            </tr>
+                            <tr>
+                              <td className="py-3.5 text-white">Westside Academy</td>
+                              <td className="py-3.5">420 / 600 seats</td>
+                              <td className="py-3.5">70%</td>
+                              <td className="py-3.5 text-right text-emerald-400">Active</td>
+                            </tr>
+                            <tr>
+                              <td className="py-3.5 text-white">Oak Creek High</td>
+                              <td className="py-3.5">210 / 400 seats</td>
+                              <td className="py-3.5">52.5%</td>
+                              <td className="py-3.5 text-right text-emerald-400">Active</td>
+                            </tr>
+                            <tr>
+                              <td className="py-3.5 text-white">Innovation Charter</td>
+                              <td className="py-3.5">110 / 200 seats</td>
+                              <td className="py-3.5">55%</td>
+                              <td className="py-3.5 text-right text-emerald-400">Active</td>
+                            </tr>
+                          </>
+                        ) : (
+                          adminKpisData.campuses.map((campus) => (
+                            <tr key={campus.id} className="hover:bg-zinc-900/30 transition-colors">
+                              <td className="py-3.5 text-white">{campus.name}</td>
+                              <td className="py-3.5 font-mono">{campus.students_active} / {campus.seat_limit}</td>
+                              <td className="py-3.5">
+                                <div className="flex items-center gap-2">
+                                  <span className="font-mono">{campus.utilization_pct}%</span>
+                                  <div className="w-16 bg-zinc-800 h-1.5 rounded-full overflow-hidden">
+                                    <div
+                                      className="h-full bg-indigo-500"
+                                      style={{ width: `${campus.utilization_pct}%` }}
+                                    ></div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td className="py-3.5 text-right font-sans">
+                                <span className="inline-flex items-center gap-1.5 px-2 py-1 text-xs font-semibold text-emerald-400 bg-emerald-500/5 rounded-md border border-emerald-500/10">
+                                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                                  Active
+                                </span>
+                              </td>
+                            </tr>
+                          ))
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* B2B Seat Purchasing, Invite generation, and Manual Quota overrides */}
+                <div className="lg:col-span-2 space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* B2B Seat Purchasing */}
+                    <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+                      <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                        <span>💳</span> B2B Campus Seat Purchasing
+                      </h3>
+                      <p className="text-xs text-zinc-500 leading-relaxed">
+                        Purchase additional student seat blocks for any campus in the district ($6.00 / seat / year).
+                      </p>
+                      {adminKpisData && adminKpisData.campuses && (
+                        <form onSubmit={(e) => {
+                          e.preventDefault();
+                          const targetCampus = e.target.elements.campus.value;
+                          const count = parseInt(e.target.elements.seats.value, 10);
+                          if (targetCampus && count > 0) {
+                            handleBuySeats(targetCampus, count);
+                          }
+                        }} className="space-y-3">
+                          <div className="grid grid-cols-2 gap-3">
+                            <div>
+                              <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Select Campus</label>
+                              <select name="campus" required className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900">
+                                <option value="">-- Select --</option>
+                                {adminKpisData.campuses.map(c => (
+                                  <option key={c.id} value={c.id}>{c.name}</option>
+                                ))}
+                              </select>
+                            </div>
+                            <div>
+                              <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Seats Count</label>
+                              <input type="number" name="seats" defaultValue="50" min="10" required className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none" />
+                            </div>
+                          </div>
+                          <button type="submit" className="w-full py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all">
+                            Purchase Seat Block
+                          </button>
+                        </form>
+                      )}
+                    </div>
+
+                    {/* Teacher Invite Panel */}
+                    <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4 font-sans">
+                      <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                        <span>✉️</span> Generate Teacher Invites
+                      </h3>
+                      <p className="text-xs text-zinc-500 leading-relaxed">
+                        Issue secure invite codes linking teachers directly to their designated campuses.
+                      </p>
+
+                      <form onSubmit={handleCreateInvite} className="space-y-3">
+                        <div className="grid grid-cols-2 gap-3">
+                          <div>
+                            <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Teacher Email</label>
+                            <input
+                              type="email"
+                              value={inviteEmailInput}
+                              onChange={(e) => setInviteEmailInput(e.target.value)}
+                              placeholder="teacher@school.edu"
+                              required
+                              className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                            />
+                          </div>
+                          <div>
+                            <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Designated Campus</label>
+                            {adminKpisData && adminKpisData.campuses ? (
+                              <select
+                                value={inviteCampusIdInput}
+                                onChange={(e) => setInviteCampusIdInput(e.target.value)}
+                                required
+                                className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900"
+                              >
+                                <option value="">-- Select --</option>
+                                {adminKpisData.campuses.map(c => (
+                                  <option key={c.id} value={c.id}>{c.name}</option>
+                                ))}
+                              </select>
+                            ) : (
+                              <select required className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900">
+                                <option value="">No Campuses</option>
+                              </select>
+                            )}
+                          </div>
+                        </div>
+                        <button type="submit" className="w-full py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all">
+                          Generate Invite Code
+                        </button>
+                      </form>
+
+                      {inviteSuccessMessage && (
+                        <div className="p-3 bg-zinc-950 border border-zinc-850 rounded-lg space-y-2">
+                          <p className="text-[11px] text-emerald-400 font-bold">{inviteSuccessMessage}</p>
+                          {generatedInviteCode && (
+                            <div className="flex gap-2 items-center">
+                              <input
+                                type="text"
+                                readOnly
+                                value={`http://localhost:3000/?invite_code=${generatedInviteCode}`}
+                                className="flex-1 bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-[10px] font-mono text-zinc-300 focus:outline-none cursor-pointer"
+                                onClick={(e) => e.target.select()}
+                              />
+                              <span className="text-[9px] uppercase font-bold text-zinc-500">Copied url</span>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                      {inviteErrorMessage && (
+                        <p className="text-[11px] text-rose-400 font-semibold">{inviteErrorMessage}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Manual Quota Override */}
+                  <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+                    <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                      <span>⚙️</span> District Quota Overrides
+                    </h3>
+                    <p className="text-xs text-zinc-500 leading-relaxed">
+                      District Admin overrides to manually adjust campus seat allocations (without B2B Stripe transactions).
+                    </p>
+
+                    <form onSubmit={handleAdjustQuota} className="flex flex-col sm:flex-row gap-3 items-end">
+                      <div className="flex-1">
+                        <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Select Campus</label>
+                        {adminKpisData && adminKpisData.campuses ? (
+                          <select
+                            value={adjustCampusIdInput}
+                            onChange={(e) => setAdjustCampusIdInput(e.target.value)}
+                            required
+                            className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900"
+                          >
+                            <option value="">-- Select --</option>
+                            {adminKpisData.campuses.map(c => (
+                              <option key={c.id} value={c.id}>{c.name}</option>
+                            ))}
+                          </select>
+                        ) : (
+                          <select required className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900">
+                            <option value="">No Campuses</option>
+                          </select>
+                        )}
+                      </div>
+                      <div className="w-32">
+                        <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">New Limit</label>
+                        <input
+                          type="number"
+                          value={adjustSeatLimitInput}
+                          onChange={(e) => setAdjustSeatLimitInput(e.target.value)}
+                          placeholder="e.g. 500"
+                          required
+                          className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none"
+                        />
+                      </div>
+                      <button type="submit" className="py-2 px-6 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 font-bold rounded-lg text-xs uppercase tracking-wider transition-colors h-9">
+                        Update Limit
+                      </button>
+                    </form>
+                    {adjustQuotaSuccessMessage && (
+                      <p className="text-[11px] text-emerald-400 font-bold">{adjustQuotaSuccessMessage}</p>
+                    )}
+                    {adjustQuotaErrorMessage && (
+                      <p className="text-[11px] text-rose-400 font-semibold">{adjustQuotaErrorMessage}</p>
+                    )}
+                  </div>
+                </div>
+
+
+                {/* Score Calibration Panel */}
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-1">EOY Score Calibration</h3>
+                    <p className="text-xs text-zinc-500 mb-4">
+                      Upload de-identified score tables to map EOY actual CCRA grades to in-app telemetry for model retraining.
+                    </p>
+
+                    {/* Upload Action Area */}
+                    <div className="border border-dashed border-zinc-800 bg-zinc-950/40 rounded-xl p-6 text-center space-y-3">
+                      <div className="text-3xl text-zinc-650">📊</div>
+                      <div>
+                        <span className="text-xs font-semibold text-indigo-400 hover:text-indigo-300 cursor-pointer" onClick={simulateCsvUpload}>
+                          {csvFile ? `Attached: ${csvFile}` : "Click to select de-identified CSV"}
+                        </span>
+                        <p className="text-[10px] text-zinc-600 mt-1">Accepts serial user-id & scaled score columns.</p>
+                      </div>
+                    </div>
+
+                    {/* Progress bar */}
+                    {isCalibrating && (
+                      <div className="mt-4 space-y-1.5">
+                        <div className="flex justify-between text-[10px] font-semibold text-zinc-500">
+                          <span>Calibrating model...</span>
+                          <span>{uploadProgress}%</span>
+                        </div>
+                        <div className="w-full bg-zinc-800 h-1 rounded-full overflow-hidden">
+                          <div className="bg-indigo-500 h-1 transition-all duration-300" style={{ width: `${uploadProgress}%` }}></div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Ingestion Log Output */}
+                    {calibrationLogs.length > 0 && (
+                      <div className="mt-4 bg-zinc-950 border border-zinc-850 p-3 rounded-lg font-mono text-[9px] text-zinc-400 h-36 overflow-y-auto space-y-1.5">
+                        {calibrationLogs.map((log, idx) => (
+                          <div key={idx} className={log.startsWith("[SUCCESS]") ? "text-emerald-400" : ""}>
+                            {log}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-zinc-850 flex gap-3">
+                    <button
+                      disabled={isCalibrating || !csvFile}
+                      onClick={() => {
+                        setCsvFile(null);
+                        setCalibrationLogs([]);
+                        setIsCalibrated(false);
+                      }}
+                      className="flex-1 py-2 text-xs font-semibold bg-zinc-800 text-zinc-300 rounded-lg hover:bg-zinc-700 transition disabled:opacity-40"
+                    >
+                      Clear Data
+                    </button>
+                    <button
+                      disabled={isCalibrating || isCalibrated}
+                      onClick={simulateCsvUpload}
+                      className="flex-1 py-2 text-xs font-semibold bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition shadow-md shadow-indigo-600/20 disabled:opacity-40"
+                    >
+                      {isCalibrated ? "Calibrated" : "Run Ingestion"}
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* OSDE Compliance Export Hub, Scheduling, Retention Policies & Audit Log streams */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                {/* OSDE Export & Scheduling Hub */}
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-5">
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-1">OSDE Export & Scheduling</h3>
+                    <p className="text-xs text-zinc-500">
+                      Download official compliance reports or schedule automated deliveries.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3">
+                    <button
+                      onClick={() => handleDownloadExport('csv')}
+                      className="py-2.5 bg-zinc-850 hover:bg-zinc-750 text-zinc-200 border border-zinc-700 text-xs font-bold rounded-xl transition flex flex-col items-center gap-1.5"
+                    >
+                      <span>📊</span> Download CSV Report
+                    </button>
+                    <button
+                      onClick={() => handleDownloadExport('zip')}
+                      className="py-2.5 bg-zinc-850 hover:bg-zinc-750 text-zinc-200 border border-zinc-700 text-xs font-bold rounded-xl transition flex flex-col items-center gap-1.5"
+                    >
+                      <span>📦</span> Export Telemetry ZIP
+                    </button>
+                  </div>
+
+                  <form onSubmit={handleScheduleReport} className="border-t border-zinc-850 pt-4 space-y-3">
+                    <h4 className="text-xs uppercase font-bold text-zinc-450 tracking-wider">Schedule Automated Reports</h4>
+                    <div className="space-y-2">
+                      <input
+                        type="email"
+                        required
+                        value={scheduleEmail}
+                        onChange={(e) => setScheduleEmail(e.target.value)}
+                        placeholder="coordinator@district.edu"
+                        className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                      />
+                      <div className="flex gap-2">
+                        <select
+                          value={scheduleFrequency}
+                          onChange={(e) => setScheduleFrequency(e.target.value)}
+                          className="flex-1 bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900"
+                        >
+                          <option value="weekly">Weekly Frequency</option>
+                          <option value="monthly">Monthly Frequency</option>
+                        </select>
+                        <button
+                          type="submit"
+                          className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs transition"
+                        >
+                          Schedule
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+
+                  {/* Data Retention purger */}
+                  <div className="border-t border-zinc-850 pt-4 space-y-2.5">
+                    <h4 className="text-xs uppercase font-bold text-zinc-450 tracking-wider">Data Retention Clean Policies</h4>
+                    <p className="text-[10px] text-zinc-500 leading-relaxed">
+                      Purge student telemetry older than 1 year to comply with state records retention schedules.
+                    </p>
+                    <button
+                      onClick={handleRunPurge}
+                      disabled={isPurging}
+                      className="w-full py-2 bg-rose-950 hover:bg-rose-900 text-rose-350 border border-rose-900/40 text-xs font-bold rounded-lg transition"
+                    >
+                      {isPurging ? "Purging Records..." : "Trigger Manual Retention Purge (365d)"}
+                    </button>
+                  </div>
+                </div>
+
+                {/* Audit Trail Log Stream Console */}
+                <div className="lg:col-span-2 bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4 font-sans">
+                  <div className="flex justify-between items-center border-b border-zinc-850 pb-3">
+                    <div>
+                      <h3 className="text-lg font-bold text-white">Administrative Audit Trail</h3>
+                      <p className="text-xs text-zinc-500">
+                        Real-time stream of administrative modifications and de-identified uploads.
+                      </p>
+                    </div>
+                    <button
+                      onClick={fetchAuditLogs}
+                      disabled={isLoadingAuditLogs}
+                      className="px-2.5 py-1 bg-zinc-800 hover:bg-zinc-750 text-zinc-200 border border-zinc-700 text-xs font-bold rounded-lg transition"
+                    >
+                      {isLoadingAuditLogs ? "Refreshing..." : "Refresh Trail"}
+                    </button>
+                  </div>
+
+                  <div className="overflow-y-auto max-h-[360px] pr-2 space-y-3">
+                    {auditLogs.length === 0 ? (
+                      <p className="text-zinc-500 italic text-center py-12 text-sm">
+                        No administrative events logged in the audit trail.
+                      </p>
+                    ) : (
+                      auditLogs.map((log) => (
+                        <div key={log.id} className="p-3.5 bg-zinc-950 border border-zinc-850 rounded-xl space-y-1.5 hover:border-zinc-800 transition">
+                          <div className="flex justify-between items-center text-[10px]">
+                            <span className="font-bold text-indigo-400 uppercase tracking-wider">{log.action_name}</span>
+                            <span className="text-zinc-650 font-mono">{new Date(log.timestamp).toLocaleString()}</span>
+                          </div>
+                          <p className="text-xs text-zinc-300 leading-relaxed font-sans">{log.description}</p>
+                          <div className="text-[9px] text-zinc-500 flex items-center gap-1">
+                            <span>Initiated by:</span>
+                            <span className="font-bold text-zinc-400">{log.action_by}</span>
+                          </div>
+                        </div>
+                      ))
+                    )}
+                  </div>
+                </div>
+
+              </div>
+
+              {/* NEW: CS STUDENT BODY STATS & MODULE PICKER DROPDOWN SECTION */}
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-6">
+                <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-zinc-800 pb-4 gap-4">
+                  <div>
+                    <span className="text-[10px] uppercase font-black text-amber-500 tracking-wider">Computer Science Analytics Suite</span>
+                    <h3 className="text-lg font-bold text-white">Curriculum Modules & Student body Performance</h3>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <select 
+                      value={selectedAdminModule} 
+                      onChange={(e) => setSelectedAdminModule(e.target.value)}
+                      className="bg-zinc-950 border border-zinc-800 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900 font-bold cursor-pointer"
+                    >
+                      <option value="0">Module 0: System Orientation</option>
+                      <option value="1">Module 1: Variables & Expressions</option>
+                      <option value="2">Module 2: Selection & Loops</option>
+                      <option value="3">Module 3: Functions & Scoping</option>
+                      <option value="4">Module 4: Custom Class Design</option>
+                      <option value="5">Module 5: Inheritance Hierarchies</option>
+                      <option value="6">Module 6: 1D Lists & Traversals</option>
+                      <option value="7">Module 7: 2D Lists & Matrices</option>
+                      <option value="8">Module 8: Search, Sort & Recursion</option>
+                    </select>
+                    <button
+                      onClick={fetchPythonAdminStats}
+                      className="px-2.5 py-2 bg-zinc-800 hover:bg-zinc-750 text-zinc-200 rounded border border-zinc-700 text-xs font-bold transition cursor-pointer"
+                    >
+                      🔄 Refresh CS
+                    </button>
+                  </div>
+                </div>
+
+                {teacherPythonAdminStats ? (
+                  <div className="space-y-6">
+                    {teacherPythonAdminStats.modules_data && teacherPythonAdminStats.modules_data[selectedAdminModule] ? (
+                      <div className="space-y-6">
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                          <div className="bg-zinc-950/60 p-4 border border-zinc-850 rounded-xl space-y-1">
+                            <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wide font-sans">Active Coding Students</span>
+                            <p className="text-xl font-bold text-white font-mono">{teacherPythonAdminStats.total_students_active} students</p>
+                          </div>
+                          <div className="bg-zinc-950/60 p-4 border border-zinc-850 rounded-xl space-y-1">
+                            <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wide font-sans">Total Code Executions</span>
+                            <p className="text-xl font-bold text-white font-mono">{teacherPythonAdminStats.total_submissions_count} runs</p>
+                          </div>
+                          <div className="bg-zinc-950/60 p-4 border border-zinc-850 rounded-xl space-y-1">
+                            <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wide font-sans">Module Student Completion</span>
+                            <p className="text-xl font-bold text-emerald-450 font-mono">{teacherPythonAdminStats.modules_data[selectedAdminModule].completion_rate}%</p>
+                          </div>
+                          <div className="bg-zinc-950/60 p-4 border border-zinc-850 rounded-xl space-y-1">
+                            <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wide font-sans">Module Average Grade</span>
+                            <p className="text-xl font-bold text-amber-500 font-mono">{teacherPythonAdminStats.modules_data[selectedAdminModule].avg_score}%</p>
+                          </div>
+                        </div>
+
+                        {/* Task Breakdown Table */}
+                        <div className="space-y-3 font-sans">
+                          <h4 className="text-[10px] font-black uppercase text-zinc-400 tracking-wider">Module Tasks Performance Summary</h4>
+                          <div className="overflow-x-auto">
+                            <table className="w-full text-left text-xs border-collapse">
+                              <thead>
+                                <tr className="text-[9px] uppercase font-bold text-zinc-500 border-b border-zinc-800">
+                                  <th className="py-2.5">Task Name</th>
+                                  <th className="py-2.5">Slug ID</th>
+                                  <th className="py-2.5">Students Completed</th>
+                                  <th className="py-2.5">Pass Rate</th>
+                                  <th className="py-2.5">Avg Attempts / Student</th>
+                                  <th className="py-2.5 text-right">Avg Grade</th>
+                                </tr>
+                              </thead>
+                              <tbody className="divide-y divide-zinc-850 text-zinc-300">
+                                {teacherPythonAdminStats.modules_data[selectedAdminModule].task_breakdown.map((task) => (
+                                  <tr key={task.slug} className="hover:bg-zinc-950/40">
+                                    <td className="py-3 font-semibold text-white">{task.title}</td>
+                                    <td className="py-3 font-mono text-[9px] text-zinc-500">{task.slug}</td>
+                                    <td className="py-3 text-zinc-400">{task.passed_count} / {teacherPythonAdminStats.total_students_active}</td>
+                                    <td className="py-3 text-zinc-400 font-mono">{task.pass_rate}%</td>
+                                    <td className="py-3 text-zinc-400 font-mono">{task.avg_attempts} attempts</td>
+                                    <td className="py-3 text-right text-emerald-400 font-bold font-mono">{task.avg_score}%</td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <p className="text-xs text-zinc-500 italic">No module metrics computed.</p>
+                    )}
+                  </div>
+                ) : (
+                  <div className="py-6 text-center text-zinc-500 italic text-xs">
+                    Click refresh or load statistics to view student body CS stats.
+                  </div>
+                )}
+              </div>
+
+
+
+            </main>
+      ) : currentProduct === "cs" ? (
+      <main className="flex-1 max-w-7xl w-full mx-auto p-6">
+      {role === "student" ? (
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      {/* Left Column: Lesson Modules */}
+      <div className="lg:col-span-1 space-y-4">
+      <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 shadow-xl">
+      <h3 className="text-xs font-black uppercase text-amber-400 tracking-wider mb-3">AP CSA Course Modules</h3>
+      <div className="space-y-1.5">
+      {[
+      { id: 0, name: "0. System Orientation", unit: "Orientation" },
+      { id: 1, name: "1. Variables & Expressions", unit: "Unit 1" },
+      { id: 2, name: "2. Selection & Loops", unit: "Unit 2" },
+      { id: 3, name: "3. Functions & Scoping", unit: "Unit 1/2" },
+      { id: 4, name: "4. Custom Class Design", unit: "Unit 3" },
+      { id: 5, name: "5. Inheritance Hierarchies", unit: "Unit 3" },
+      { id: 6, name: "6. Lists & ArrayLists", unit: "Unit 4" },
+      { id: 7, name: "7. 2D Coordinate Grids", unit: "Unit 4" },
+      { id: 8, name: "8. Search & Sort Algorithms", unit: "Unit 3/4" },
+      { id: 9, name: "9. Recursion & Advanced Sort", unit: "Unit 4" },
+      { id: 10, name: "10. Social & Ethical Impact", unit: "Unit 3" }
+      ].map((mod) => (
+      <div key={mod.id} className="space-y-1">
+      <button
+      onClick={() => {
+      setSelectedCsModule(mod.id);
+      setSelectedAssignmentId(null);
+      }}
+      className={`w-full text-left p-3 rounded-xl border text-xs flex justify-between items-center transition ${selectedCsModule === mod.id ? "bg-amber-500/10 border-amber-500/40 text-white font-bold" : "bg-zinc-950/40 border-zinc-850 hover:bg-zinc-900/40 text-zinc-400"}`}
+      >
+      <div className="truncate text-left">
+      <span className="text-[9px] uppercase font-bold text-zinc-500 block mb-0.5">{mod.unit}</span>
+      <div className="flex items-center gap-1.5 truncate">
+        <span className="truncate">{mod.name}</span>
+        {pythonAssignments.filter(a => a.module === mod.id).length > 0 && 
+         pythonAssignments.filter(a => a.module === mod.id).every(a => a.submission?.passed) && (
+           <span className="text-emerald-500 font-bold select-none text-[10px]">✅</span>
+         )}
+      </div>
+      </div>
+      <span className="text-xs">{selectedCsModule === mod.id ? "👉" : "🔒"}</span>
+      </button>
+      {mod.id === selectedCsModule && pythonAssignments.filter(a => a.module === selectedCsModule).length > 0 && (
+      <div className="pl-3 mt-1.5 space-y-1 border-l border-zinc-800 ml-3">
+      {pythonAssignments.filter(a => a.module === selectedCsModule).map((assign) => (
+      <button
+      key={assign.id}
+      onClick={() => {
+        if (assign.locked) return;
+        setSelectedAssignmentId(assign.id);
+      }}
+      disabled={assign.locked}
+      className={`w-full text-left p-2 rounded-lg text-[11px] border transition ${assign.locked ? "opacity-40 cursor-not-allowed text-zinc-650" : selectedAssignmentId === assign.id ? "bg-amber-500/10 border-amber-500/30 text-amber-400 font-bold" : "bg-zinc-950/20 border-transparent hover:bg-zinc-900/40 text-zinc-400"}`}
+      >
+      <div className="truncate flex items-center gap-2">
+        <span className="text-[10px] flex-shrink-0 select-none">{assign.locked ? "🔒" : assign.submission?.passed ? "✅" : "📝"}</span>
+        <span className="truncate">{assign.title}</span>
+      </div>
+      </button>
+      ))}
+      </div>
+      )}
+      </div>
+      ))}
+      </div>
+      </div>
+      </div>
+
+      {/* Right Column: Code Editor & Terminal */}
+      <div className="lg:col-span-3 space-y-6">
+      <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+      <div className="flex justify-between items-start">
+      <div>
+      <span className="text-[10px] uppercase font-black text-amber-400 tracking-wider">Wasm Coding Environment</span>
+      <h3 className="text-lg font-bold text-white mt-0.5">
+      {pythonAssignments.find(a => a.id === selectedAssignmentId)
+      ? pythonAssignments.find(a => a.id === selectedAssignmentId).title
+      : "Interactive Python Workspace"}
+      </h3>
+      {(() => {
+        const activeAssignment = pythonAssignments.find(a => a.id === selectedAssignmentId);
+        if (!activeAssignment) {
+          return (
+            <p className="text-xs text-zinc-400 mt-1 whitespace-pre-wrap">
+              {"Write Python code for Module " + selectedCsModule + ". Execute your script in the WebAssembly sandbox."}
+            </p>
+          );
+        }
+        
+        const rawPrompt = activeAssignment.prompt;
+        const startTag = "<example_code>";
+        const endTag = "</example_code>";
+        
+        let displayPrompt = rawPrompt;
+        let exampleCode = null;
+        
+        if (rawPrompt.includes(startTag) && rawPrompt.includes(endTag)) {
+          const parts = rawPrompt.split(startTag);
+          const before = parts[0];
+          const rest = parts[1].split(endTag);
+          exampleCode = rest[0].trim();
+          const after = rest[1];
+          displayPrompt = before.trim() + "\n\n" + after.trim();
+        }
+        
+        // Parse into Curriculum and Task Instructions
+        const instructionsDelimiter = "### Task Instructions";
+        let curriculumText = displayPrompt;
+        let instructionsText = null;
+        
+        if (displayPrompt.includes(instructionsDelimiter)) {
+          const parts = displayPrompt.split(instructionsDelimiter);
+          curriculumText = parts[0].trim();
+          instructionsText = parts[1].trim();
+        }
+
+        return (
+          <div className="space-y-4 w-full">
+            {curriculumText && (
+              <p className="text-xs text-zinc-400 mt-1 whitespace-pre-wrap">{curriculumText}</p>
+            )}
+            {exampleCode && (
+              <div className="mt-3 p-3 bg-zinc-950 border border-zinc-850 rounded-xl space-y-2">
+                <div className="flex justify-between items-center text-[10px] font-bold text-zinc-500 uppercase tracking-wider">
+                  <span>Interactive Example</span>
+                  <button
+                    onClick={() => setCsCode(exampleCode)}
+                    className="px-2.5 py-1 bg-amber-600/10 hover:bg-amber-600/20 text-amber-400 border border-amber-600/20 rounded font-bold transition text-[9px] uppercase cursor-pointer"
+                  >
+                    📝 Try in Editor
+                  </button>
+                </div>
+                <pre className="font-mono text-xs text-zinc-300 overflow-x-auto whitespace-pre p-2 bg-black/40 rounded-lg">{exampleCode}</pre>
+              </div>
+            )}
+            {instructionsText && (
+              <div className="p-4 bg-emerald-950/15 border border-emerald-500/25 rounded-xl space-y-2">
+                <h4 className="text-xs font-black uppercase text-emerald-400 tracking-wider flex items-center gap-1.5">
+                  <span>📋</span> Task Instructions
+                </h4>
+                <p className="text-xs text-zinc-200 leading-relaxed whitespace-pre-wrap">{instructionsText}</p>
+              </div>
+            )}
+          </div>
+        );
+      })()}
+      </div>
+      <div className="flex items-center gap-3">
+        {pythonAssignments.find(a => a.id === selectedAssignmentId)?.submission?.passed && (
+        <span className="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full text-[10px] font-bold uppercase animate-pulse">✓ Passed & Submitted</span>
+        )}
+        {(() => {
+          const activeAssign = pythonAssignments.find(a => a.id === selectedAssignmentId);
+          if (activeAssign && activeAssign.max_attempts !== null) {
+            const remaining = activeAssign.max_attempts - activeAssign.attempts_count;
+            return (
+              <span className={`px-2 py-0.5 rounded text-[9px] font-bold uppercase border ${remaining <= 0 ? "bg-rose-500/10 text-rose-450 border-rose-500/20 animate-pulse" : "bg-zinc-800 text-zinc-400 border-zinc-700"}`}>
+                Attempts: {activeAssign.attempts_count} / {activeAssign.max_attempts}
+              </span>
+            );
+          }
+          return null;
+        })()}
+      </div>
+      </div>
+
+      {/* Code Editor */}
+      <div className="space-y-2">
+      <div className="flex justify-between items-center bg-zinc-950 px-4 py-2 border border-zinc-850 rounded-t-xl text-xs font-mono text-zinc-500">
+      <div className="flex items-center gap-3">
+        <span>main.py</span>
+        {pythonAssignments.find(a => a.id === selectedAssignmentId) && (
+          <button
+            onClick={() => {
+              const activeAssign = pythonAssignments.find(a => a.id === selectedAssignmentId);
+              if (activeAssign) {
+                setCsCode(activeAssign.submission?.code || activeAssign.starter_code || "");
+              }
+            }}
+            className="text-[9px] uppercase font-bold text-zinc-400 hover:text-white border border-zinc-800 hover:border-zinc-700 px-2 py-0.5 rounded transition bg-zinc-900/40 cursor-pointer"
+          >
+            ↩ Reset Starter Code
+          </button>
+        )}
+      </div>
+      <span className="text-[10px] uppercase font-bold text-amber-500 bg-amber-500/10 px-1.5 py-0.5 rounded">Python 3</span>
+      </div>
+      <div className="border-x border-b border-zinc-850 rounded-b-xl overflow-hidden bg-zinc-950">
+        <Editor
+          height="260px"
+          language="python"
+          theme="vs-dark"
+          value={csCode}
+          onChange={(val) => setCsCode(val || "")}
+          options={{
+            minimap: { enabled: false },
+            fontSize: 12,
+            fontFamily: "monospace",
+            lineNumbers: "on",
+            scrollBeyondLastLine: false,
+            automaticLayout: true,
+            padding: { top: 8, bottom: 8 }
+          }}
+        />
+      </div>
+      </div>
+
+      {/* Actions */}
+      <div className="flex gap-3">
+      <button
+      onClick={handleRunCsCode}
+      disabled={isPyodideLoading}
+      className="flex-1 py-2.5 bg-amber-600 hover:bg-amber-500 disabled:opacity-50 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all"
+      >
+      {isPyodideLoading ? "Loading Interpreter..." : "Run Code"}
+      </button>
+      <button
+      onClick={handleGradeCsCode}
+      disabled={isPyodideLoading || isGrading || (() => {
+        const activeAssign = pythonAssignments.find(a => a.id === selectedAssignmentId);
+        if (activeAssign && activeAssign.max_attempts !== null && activeAssign.attempts_count >= activeAssign.max_attempts) {
+          return true;
+        }
+        return false;
+      })()}
+      className="flex-1 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-bold rounded-lg text-xs uppercase tracking-wider transition-all border border-zinc-700 disabled:opacity-50"
+      >
+      {(() => {
+        const activeAssign = pythonAssignments.find(a => a.id === selectedAssignmentId);
+        if (activeAssign && activeAssign.max_attempts !== null && activeAssign.attempts_count >= activeAssign.max_attempts) {
+          return "Attempts Limit Reached";
+        }
+        return isGrading ? "Grading..." : "Submit & Grade";
+      })()}
+      </button>
+      </div>
+      </div>
+
+      {/* Console Terminal */}
+      <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+      <div className="flex justify-between items-center">
+      <h4 className="text-xs font-black uppercase text-zinc-400 tracking-wider">Output Terminal</h4>
+      <button
+      onClick={handleClearTerminal}
+      className="text-[10px] uppercase font-bold text-zinc-500 hover:text-zinc-300"
+      >
+      Clear Terminal
+      </button>
+      </div>
+      <div id="cs-terminal-output" className="bg-black/85 border border-zinc-850 p-4 rounded-xl font-mono text-xs text-emerald-400 h-40 overflow-y-auto space-y-1">
+      {pyodideLogs.map((log, idx) => (
+      <div key={idx} className="whitespace-pre-wrap">{log}</div>
+      ))}
+      </div>
+      </div>
+      </div>
+      </div>
+      ) : role === "teacher" ? (
+      <div className="space-y-6">
+      {/* Classroom Link Banner */}
+      <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div className="space-y-1">
+      <span className="text-[10px] uppercase font-black text-amber-400 tracking-wider">Integrations Manager</span>
+      <h3 className="text-lg font-bold text-white">Google Classroom Connection</h3>
+      <p className="text-xs text-zinc-400 max-w-xl">
+      Import rosters, assign curriculum coursework automatically, and sync grades to student submissions on Google Classroom.
+      </p>
+      </div>
+      {!isClassroomLinked ? (
+      <button
+      onClick={() => {
+      setClassroomSyncLogs([]);
+      window.location.href = `http://localhost:8000/api/google/authorize/?token=${token}`;
+      }}
+      className="px-5 py-2.5 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all"
+      >
+      🔗 Link Google Classroom
+      </button>
       ) : (
-        <>
-          {role === "student" && (
+      <div className="flex items-center gap-4">
+      <span className="text-xs text-emerald-400 font-bold bg-emerald-500/10 px-3 py-1.5 border border-emerald-500/20 rounded-lg">✓ Linked to Google Classroom</span>
+      <button
+      onClick={() => {
+        setShowClassroomModal(true);
+        fetchGoogleCourses();
+      }}
+      className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all"
+      >
+      Manage Course Imports
+      </button>
+      <button
+      onClick={() => {
+        setIsClassroomLinked(false);
+        setGoogleCourses([]);
+        setGoogleRoster([]);
+        setGoogleCoursework([]);
+      }}
+      className="text-[10px] text-zinc-500 hover:text-zinc-300 underline"
+      >
+      Disconnect
+      </button>
+      </div>
+      )}
+      </div>
+
+      {/* Classroom Modal */}
+      {showClassroomModal && (
+      <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-6 z-[110]">
+      <div className="bg-zinc-900 border border-zinc-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-4">
+      <div className="flex justify-between items-center border-b border-zinc-800 pb-3">
+      <div className="flex items-center gap-2">
+      <span className="text-xl">🏫</span>
+      <h3 className="text-lg font-bold text-white">Google Classroom Sync</h3>
+      </div>
+      <button
+      onClick={() => setShowClassroomModal(false)}
+      className="text-zinc-500 hover:text-zinc-300"
+      >
+      ✕
+      </button>
+      </div>
+
+      <p className="text-xs text-zinc-400 leading-relaxed">
+      Import your Google Classroom courses to sync grades and rosters.
+      </p>
+
+      <div className="space-y-3">
+      {isLoadingGoogleData ? (
+        <div className="text-xs text-zinc-400 text-center py-4">Loading Classroom data from Google API...</div>
+      ) : googleCourses.length > 0 ? (
+        <div className="space-y-2">
+          {googleCourses.map((cls) => (
+            <div key={cls.id} className="p-4 bg-zinc-950 border border-zinc-850 rounded-xl space-y-3">
+              <div className="flex justify-between items-center">
+                <div>
+                  <p className="text-xs font-bold text-white">{cls.name}</p>
+                  <p className="text-[10px] text-zinc-500 font-mono mt-0.5">Code: {cls.enrollmentCode || cls.id}</p>
+                </div>
+                <button
+                  onClick={() => {
+                    setSelectedGoogleCourseId(cls.id);
+                    fetchGoogleRosterAndCoursework(cls.id);
+                  }}
+                  className="px-3 py-1 bg-amber-600/20 hover:bg-amber-600/30 text-amber-400 border border-amber-500/20 rounded text-[10px] font-bold transition"
+                >
+                  View Details
+                </button>
+              </div>
+
+              {selectedGoogleCourseId === cls.id && (
+                <div className="border-t border-zinc-850/60 pt-3 space-y-3">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-1">
+                      <p className="text-[10px] font-black uppercase text-zinc-500 tracking-wider">Class Roster ({googleRoster.length})</p>
+                      <div className="max-h-24 overflow-y-auto space-y-1 bg-black/30 p-2 rounded border border-zinc-850">
+                        {googleRoster.map((s, idx) => (
+                          <div key={idx} className="text-[10px] text-zinc-400 flex justify-between">
+                            <span>{s.name}</span>
+                            <span className="text-zinc-600">{s.email}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-[10px] font-black uppercase text-zinc-500 tracking-wider">Ingestable Coursework ({googleCoursework.length})</p>
+                      <div className="max-h-24 overflow-y-auto space-y-1 bg-black/30 p-2 rounded border border-zinc-850">
+                        {googleCoursework.map((cw, idx) => (
+                          <div key={idx} className="text-[10px] text-zinc-400 truncate">
+                            📝 {cw.title}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => importGoogleCourse(cls.id)}
+                    disabled={isClassroomSyncing}
+                    className="w-full py-2 bg-amber-600 hover:bg-amber-500 disabled:bg-zinc-800 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all"
+                  >
+                    {isClassroomSyncing ? "Syncing Roster..." : "📥 Import Course & Sync Roster"}
+                  </button>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="text-xs text-zinc-500 text-center py-4">No active Google Classroom courses found. Make sure you are linked.</div>
+      )}
+      </div>
+
+      {classroomSyncLogs.length > 0 && (
+      <div className="bg-black/60 border border-zinc-850 p-4 rounded-lg font-mono text-[10px] text-amber-300 h-28 overflow-y-auto space-y-1">
+      {classroomSyncLogs.map((log, idx) => (
+      <div key={idx}>{log}</div>
+      ))}
+      </div>
+      )}
+      </div>
+      </div>
+      )}
+
+      {/* Roster & Gradebook Dashboard */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2 bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+      <div className="flex justify-between items-center border-b border-zinc-800/60 pb-3">
+      <h3 className="text-base font-bold text-white">CS Roster & Grades</h3>
+      {isClassroomLinked && (
+      <button
+      onClick={async () => {
+        setIsClassroomSyncing(true);
+        setClassroomSyncLogs(["Syncing grades to Google Classroom coursework...", "API calls: courses.courseWork.studentSubmissions.patch..."]);
+        setShowClassroomModal(true);
+        try {
+          const res = await fetch("http://localhost:8000/api/google/sync-grades/", {
+            method: 'POST',
+            headers: { 'Authorization': `Token ${token}` }
+          });
+          if (res.ok) {
+            const data = await res.json();
+            setClassroomSyncLogs(prev => [
+              ...prev, 
+              `✓ Success: Synced ${data.synced_submissions_count} student grades with Google Classroom Coursework!`
+            ]);
+          } else {
+            setClassroomSyncLogs(prev => [...prev, "❌ Error: Failed to sync grades to Google Classroom."]);
+          }
+        } catch (e) {
+          console.error(e);
+          setClassroomSyncLogs(prev => [...prev, "❌ Error: Network timeout syncing grades."]);
+        } finally {
+          setIsClassroomSyncing(false);
+        }
+      }}
+      className="px-3 py-1.5 bg-zinc-850 hover:bg-zinc-800 text-zinc-300 text-xs font-bold rounded-lg border border-zinc-700 transition"
+      >
+      Sync Grades to Google Classroom
+      </button>
+      )}
+      </div>
+
+      <div className="overflow-x-auto">
+      <table className="w-full text-left text-xs border-collapse">
+      <thead>
+      <tr className="text-[10px] uppercase font-bold text-zinc-500 border-b border-zinc-800">
+      <th className="py-2.5">Student</th>
+      <th className="py-2.5">Email</th>
+      <th className="py-2.5">Completed Assignments</th>
+      <th className="py-2.5 text-right">Avg Grade</th>
+      </tr>
+      </thead>
+      <tbody className="divide-y divide-zinc-850 text-zinc-300">
+      {teacherPythonSubmissions.length > 0 ? (
+        teacherPythonSubmissions.map((student) => {
+          const completedCount = student.assignments.filter(a => a.submissions.some(s => s.passed)).length;
+          const gradedAssignments = student.assignments.filter(a => a.submissions.some(s => s.selected_for_grading));
+          const avgScore = gradedAssignments.length > 0 ? Math.round(gradedAssignments.reduce((acc, a) => acc + (a.submissions.find(s => s.selected_for_grading)?.score || 0), 0) / gradedAssignments.length) : 0;
+          
+          const isExpanded = expandedStudentId === student.student_id;
+          
+          return (
+            <React.Fragment key={student.student_id}>
+              <tr 
+                onClick={() => setExpandedStudentId(isExpanded ? null : student.student_id)}
+                className="hover:bg-zinc-850/30 transition cursor-pointer"
+              >
+                <td className="py-3 font-semibold flex items-center gap-2">
+                  <span className="text-[9px] text-zinc-550">{isExpanded ? "▼" : "▶"}</span>
+                  {student.student_name}
+                </td>
+                <td className="py-3 font-mono text-[10px] text-zinc-500">{student.student_email}</td>
+                <td className="py-3 text-zinc-400">{completedCount} / {student.assignments.length} Completed</td>
+                <td className="py-3 text-right text-emerald-400 font-bold">{avgScore}%</td>
+              </tr>
+              {isExpanded && (
+                <tr>
+                  <td colSpan={4} className="bg-zinc-950/40 p-4 border-t border-b border-zinc-800">
+                    <div className="space-y-4">
+                      <h4 className="text-[10px] font-black uppercase text-amber-500 tracking-wider">Student Coding Portfolios</h4>
+                      <div className="divide-y divide-zinc-900">
+                        {student.assignments.map((assign) => (
+                          <div key={assign.assignment_id} className="py-3 space-y-2">
+                            <div className="flex justify-between items-center">
+                              <div className="flex items-center gap-2">
+                                <span className="font-bold text-xs text-zinc-300">{assign.assignment_title} (Module {assign.module})</span>
+                                {assign.extra_attempts > 0 && (
+                                  <span className="px-1.5 py-0.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded text-[8px] font-bold uppercase">+{assign.extra_attempts} Extra Attempts</span>
+                                )}
+                              </div>
+                              <div className="flex items-center gap-3">
+                                <span className="text-[10px] text-zinc-500">{assign.submissions.length} / {assign.max_attempts} attempts used</span>
+                                <button
+                                  onClick={async () => {
+                                    try {
+                                      const res = await fetch("/api/python/teacher/grant-extra-attempt/", {
+                                        method: "POST",
+                                        headers: {
+                                          "Content-Type": "application/json",
+                                          "Authorization": `Token ${token}`
+                                        },
+                                        body: JSON.stringify({
+                                          student_id: student.student_id,
+                                          assignment_slug: assign.assignment_slug
+                                        })
+                                      });
+                                      if (res.ok) {
+                                        fetchTeacherPythonSubmissions();
+                                      }
+                                    } catch (err) {}
+                                  }}
+                                  className="px-2 py-0.5 bg-purple-600/10 hover:bg-purple-600/20 text-purple-400 border border-purple-600/20 rounded text-[9px] font-bold cursor-pointer"
+                                >
+                                  + Grant Extra Attempt
+                                </button>
+                              </div>
+                            </div>
+                            
+                            {assign.submissions.length === 0 ? (
+                              <p className="text-[11px] text-zinc-650 italic">No submissions yet for this task.</p>
+                            ) : (
+                              <div className="space-y-1.5 pl-3">
+                                {assign.submissions.map((sub, idx) => (
+                                  <div key={sub.id} className="flex justify-between items-center p-2 bg-zinc-900/60 border border-zinc-850 rounded">
+                                    <div className="flex items-center gap-3">
+                                      <span className={`text-[10px] font-bold ${sub.passed ? "text-emerald-400" : "text-rose-400"}`}>
+                                        Attempt #{assign.submissions.length - idx} - Score: {sub.score}%
+                                      </span>
+                                      <span className="text-[9px] text-zinc-500">{new Date(sub.submitted_at).toLocaleString()}</span>
+                                      
+                                      <div className="flex gap-1.5">
+                                        {sub.selected_for_grading && (
+                                          <span className="px-1.5 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded text-[8px] font-bold uppercase">Active Grade</span>
+                                        )}
+                                        {sub.is_highest && (
+                                          <span className="px-1.5 py-0.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded text-[8px] font-bold uppercase">Highest</span>
+                                        )}
+                                        {sub.is_latest && (
+                                          <span className="px-1.5 py-0.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded text-[8px] font-bold uppercase">Latest</span>
+                                        )}
+                                      </div>
+                                    </div>
+                                    
+                                    <div className="flex items-center gap-2">
+                                      <button
+                                        onClick={() => {
+                                          const codeWin = window.open("", "_blank");
+                                          codeWin.document.write(`<pre style="background:#111;color:#eee;padding:20px;font-family:monospace;">${sub.code}</pre>`);
+                                        }}
+                                        className="px-2 py-0.5 bg-zinc-800 hover:bg-zinc-700 text-zinc-400 rounded text-[9px] font-bold cursor-pointer"
+                                      >
+                                        👀 View Code
+                                      </button>
+                                      {!sub.selected_for_grading && (
+                                        <button
+                                          onClick={async () => {
+                                            try {
+                                              const res = await fetch("/api/python/teacher/select-submission/", {
+                                                method: "POST",
+                                                headers: {
+                                                  "Content-Type": "application/json",
+                                                  "Authorization": `Token ${token}`
+                                                },
+                                                body: JSON.stringify({ submission_id: sub.id })
+                                              });
+                                              if (res.ok) {
+                                                fetchTeacherPythonSubmissions();
+                                              }
+                                            } catch (err) {}
+                                          }}
+                                          className="px-2.5 py-0.5 bg-amber-600/10 hover:bg-amber-600/20 text-amber-400 border border-amber-600/20 rounded text-[9px] font-bold cursor-pointer"
+                                        >
+                                          Select Attempt
+                                        </button>
+                                      )}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              )}
+            </React.Fragment>
+          );
+        })
+      ) : (
+        <tr className="text-zinc-500 italic">
+          <td colSpan={4} className="py-4 text-center">No students registered or submissions available.</td>
+        </tr>
+      )}
+      </tbody>
+      </table>
+      </div>
+      </div>
+
+      <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+      <div className="flex justify-between items-center border-b border-zinc-800 pb-3">
+        <h3 className="text-base font-bold text-white">Course Curriculum Map</h3>
+        <div className="flex items-center gap-2">
+          <label className="text-[9px] uppercase font-black text-zinc-500 tracking-wider">Assessment Attempt Limit:</label>
+          <input
+            type="number"
+            min="1"
+            placeholder="100"
+            className="w-16 px-2 py-0.5 bg-zinc-950 border border-zinc-800 rounded text-[11px] text-amber-400 font-bold font-mono focus:border-amber-500 focus:outline-none"
+            onChange={async (e) => {
+              const val = e.target.value;
+              if (val && parseInt(val) > 0) {
+                try {
+                  await fetch("/api/python/classroom/settings/", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                      "Authorization": `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ limit: parseInt(val) })
+                  });
+                } catch (err) {}
+              }
+            }}
+          />
+        </div>
+      </div>
+      <div className="space-y-3">
+      {[
+      { num: "Module 0", title: "System Orientation", state: "Auto-graded" },
+      { num: "Module 1", title: "Variables & Expressions", state: "Auto-graded" },
+      { num: "Module 2", title: "Loops & Selection", state: "Auto-graded" },
+      { num: "Module 3", title: "Functions", state: "Auto-graded" },
+      { num: "Module 4", title: "Class Blueprints", state: "Manual Review" },
+      { num: "Module 5", title: "Inheritance", state: "Manual Review" },
+      { num: "Module 6", title: "1D Lists & Traversals", state: "Auto-graded" },
+      { num: "Module 7", title: "2D Lists & Matrices", state: "Auto-graded" },
+      { num: "Module 8", title: "Search, Sort & Recursion", state: "Auto-graded" }
+      ].map((mod, idx) => (
+      <div key={idx} className="flex justify-between items-center text-xs p-2.5 bg-zinc-950/40 border border-zinc-850 rounded-xl">
+      <div className="text-left">
+      <p className="font-bold text-white">{mod.num}: {mod.title}</p>
+      <p className="text-[9px] text-zinc-550 mt-0.5">{mod.state}</p>
+      </div>
+      <span className="text-[10px] text-zinc-400">Mapped</span>
+      </div>
+      ))}
+      </div>
+      </div>
+      </div>
+      </div>
+      ) : (
+        <div className="space-y-6 animate-fadeIn">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+            <div className="flex justify-between items-center border-b border-zinc-800 pb-3">
+              <div>
+                <span className="text-[10px] uppercase font-black text-amber-400 tracking-wider">District Analytics Dashboard</span>
+                <h3 className="text-lg font-bold text-white">CS Student Body Performance</h3>
+              </div>
+              <button
+                onClick={fetchPythonAdminStats}
+                className="px-3 py-1.5 bg-zinc-850 hover:bg-zinc-755 text-zinc-300 border border-zinc-700 rounded-lg text-xs font-bold transition cursor-pointer"
+              >
+                🔄 Refresh Report
+              </button>
+            </div>
+
+            {teacherPythonAdminStats ? (
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-zinc-950/60 p-4 border border-zinc-850 rounded-xl space-y-1">
+                    <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wide">Total Active Coders</span>
+                    <p className="text-xl font-bold text-white font-mono">{teacherPythonAdminStats.total_students_active} Students</p>
+                  </div>
+                  <div className="bg-zinc-950/60 p-4 border border-zinc-850 rounded-xl space-y-1">
+                    <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wide">Total Submissions Checked</span>
+                    <p className="text-xl font-bold text-white font-mono">{teacherPythonAdminStats.total_submissions_count} Runs</p>
+                  </div>
+                  <div className="bg-zinc-950/60 p-4 border border-zinc-850 rounded-xl space-y-1">
+                    <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wide">Overall Student Body Completion</span>
+                    <p className="text-xl font-bold text-emerald-400 font-mono">{teacherPythonAdminStats.overall_completion_rate}%</p>
+                  </div>
+                </div>
+
+                <div className="bg-zinc-950/40 border border-zinc-850 p-5 rounded-xl space-y-3">
+                  <h4 className="text-[10px] font-black uppercase text-amber-500 tracking-wider">Unit Assessment Averages</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {teacherPythonAdminStats.average_assessment_scores && Object.entries(teacherPythonAdminStats.average_assessment_scores).length > 0 ? (
+                      Object.entries(teacherPythonAdminStats.average_assessment_scores).map(([unitName, score]) => (
+                        <div key={unitName} className="p-4 bg-zinc-900/50 border border-zinc-850 rounded-lg flex flex-col justify-between h-24">
+                          <span className="text-[10px] font-bold text-zinc-400 leading-normal">{unitName}</span>
+                          <div className="flex justify-between items-end mt-2">
+                            <span className="text-[10px] text-zinc-500">Avg Score:</span>
+                            <span className="text-lg font-black font-mono text-amber-400">{score}%</span>
+                          </div>
+                        </div>
+                      ))
+                    ) : (
+                      <p className="text-xs text-zinc-500 italic col-span-3">No unit assessment submissions recorded yet.</p>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <p className="text-xs text-zinc-500 italic">No admin stats loaded.</p>
+            )}
+          </div>
+        </div>
+      )}
+      </main>
+      ) : (
+      <>
+      {role === "student" && (
             <main className="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+              <div className="flex justify-between items-center">
+                <div>
+                  <h2 className="text-3xl font-bold tracking-tight text-white">District Administrator Hub</h2>
+                  <p className="text-sm text-zinc-400">Manage licenses, view campus performance, and calibrate predictive models.</p>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+                  <span className="text-xs font-semibold text-zinc-300">
+                    Model: {isCalibrated ? "Active v1.3 (Calibrated)" : "Active v1.2 (Default Heuristic)"}
+                  </span>
+                </div>
+              </div>
               {joinError && joinError.includes("Seat limit") && (
                 <div className="bg-rose-500/10 border border-rose-500/30 text-rose-450 p-4 rounded-2xl flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
@@ -52711,7 +54548,7 @@ return (
                                 const isCorrect = selection === correct;
 
                                 return (
-                                  <div key={idx} className="bg-zinc-900/40 border border-zinc-855 p-4 rounded-xl flex flex-col justify-between space-y-3">
+                                  <div key={idx} className="bg-zinc-900/40 border border-zinc-850 p-4 rounded-xl flex flex-col justify-between space-y-3">
                                     <div className="text-center font-bold text-white text-xs">{aa}</div>
                                     <select
                                       disabled={dokWorkspaces["2_4_completed"]}
@@ -52777,7 +54614,7 @@ return (
                           </div>
                         ) : (
                           <div className="bg-zinc-950/80 border border-zinc-850 p-6 rounded-2xl space-y-6 animate-fadeIn">
-                            <div className="flex justify-between items-center border-b border-zinc-855 pb-4">
+                            <div className="flex justify-between items-center border-b border-zinc-850 pb-4">
                               <div>
                                 <span className="text-[10px] text-indigo-400 font-black uppercase tracking-wider block">Activity Goal</span>
                                 <span className="text-sm text-zinc-300">{getActiveActivity()?.description}</span>
@@ -53010,7 +54847,7 @@ return (
                           </div>
                         ) : (
                           <div className="bg-zinc-950/80 border border-zinc-850 p-6 rounded-2xl space-y-6 animate-fadeIn">
-                            <div className="flex justify-between items-center border-b border-zinc-855 pb-4">
+                            <div className="flex justify-between items-center border-b border-zinc-850 pb-4">
                               <div>
                                 <span className="text-[10px] text-indigo-400 font-black uppercase tracking-wider block">Activity Goal</span>
                                 <span className="text-sm text-zinc-300">{getActiveActivity()?.description}</span>
@@ -53219,7 +55056,7 @@ return (
                           </div>
                         ) : (
                           <div className="bg-zinc-950/80 border border-zinc-850 p-6 rounded-2xl space-y-6 animate-fadeIn">
-                            <div className="flex justify-between items-center border-b border-zinc-855 pb-4">
+                            <div className="flex justify-between items-center border-b border-zinc-850 pb-4">
                               <div>
                                 <span className="text-[10px] text-indigo-400 font-black uppercase tracking-wider block">Activity Goal</span>
                                 <span className="text-sm text-zinc-300">{getActiveActivity()?.description}</span>
@@ -53995,7 +55832,7 @@ return (
                         {activeLevel === 3 && selectedStandard === "OAS.B.LS1.1" && (
                           <>
                             {selectedStandard === "OAS.B.LS1.1" && !bioDok1Completed ? (
-                              <div className="text-center py-12 px-6 bg-zinc-950/40 border border-dashed border-zinc-855 rounded-2xl space-y-4">
+                              <div className="text-center py-12 px-6 bg-zinc-950/40 border border-dashed border-zinc-850 rounded-2xl space-y-4">
                                 <div className="h-12 w-12 bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded-full flex items-center justify-center text-xl mx-auto animate-bounce">
                                   🔒
                                 </div>
@@ -54347,6 +56184,18 @@ return (
           )}
           {role === "teacher" && (
             <main className="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+              <div className="flex justify-between items-center">
+                <div>
+                  <h2 className="text-3xl font-bold tracking-tight text-white">District Administrator Hub</h2>
+                  <p className="text-sm text-zinc-400">Manage licenses, view campus performance, and calibrate predictive models.</p>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+                  <span className="text-xs font-semibold text-zinc-300">
+                    Model: {isCalibrated ? "Active v1.3 (Calibrated)" : "Active v1.2 (Default Heuristic)"}
+                  </span>
+                </div>
+              </div>
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                 <div>
                   <h2 className="text-3xl font-bold tracking-tight text-white">Teacher Analytics Dashboard</h2>
@@ -54498,27 +56347,35 @@ return (
                         </tr>
                       ) : (
                         teacherReportData.map((student) => {
-                          let recommendation = "No active intervention required.";
-                          if (student.performance_band === "Advanced") {
-                            recommendation = "On track. Recommend advanced challenges (e.g. translation/protein synthesis).";
-                          } else if (student.performance_band === "Proficient") {
-                            recommendation = "On track. Encourage speed improvements.";
-                          } else if (student.performance_band === "Basic") {
-                            recommendation = "Struggles with GC/AU base-pairing. Suggest additional guided practice.";
-                          } else if (student.performance_band === "Below Basic") {
-                            recommendation = "High error rate. Recommend direct teacher-led intervention on mRNA matching.";
-                          } else if (student.performance_band === "N/A" || student.total_actions === 0) {
-                            recommendation = "Waiting for first gameplay telemetry data.";
-                          }
+                        let lookupMap = {};
+                        try {
+                        const stored = typeof window !== 'undefined' ? sessionStorage.getItem("google_classroom_lookup") : null;
+                        if (stored) lookupMap = JSON.parse(stored);
+                        } catch (e) {}
 
-                          return (
-                            <tr key={student.id} className="hover:bg-zinc-900/30 transition-colors">
-                              <td className="py-3.5 text-white flex items-center gap-3">
-                                <div className="h-7 w-7 rounded-full bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 text-indigo-400 border border-indigo-500/30 flex items-center justify-center text-xs font-bold font-mono">
-                                  {student.name.split(' ').map(n => n[0]).join('')}
-                                </div>
-                                <span>{student.name}</span>
-                              </td>
+                        const displayName = lookupMap[student.username] || student.name;
+
+                        let recommendation = "No active intervention required.";
+                        if (student.performance_band === "Advanced") {
+                        recommendation = "On track. Recommend advanced challenges (e.g. translation/protein synthesis).";
+                        } else if (student.performance_band === "Proficient") {
+                        recommendation = "On track. Encourage speed improvements.";
+                        } else if (student.performance_band === "Basic") {
+                        recommendation = "Struggles with GC/AU base-pairing. Suggest additional guided practice.";
+                        } else if (student.performance_band === "Below Basic") {
+                        recommendation = "High error rate. Recommend direct teacher-led intervention on mRNA matching.";
+                        } else if (student.performance_band === "N/A" || student.total_actions === 0) {
+                        recommendation = "Waiting for first gameplay telemetry data.";
+                        }
+
+                        return (
+                        <tr key={student.id} className="hover:bg-zinc-900/30 transition-colors">
+                        <td className="py-3.5 text-white flex items-center gap-3">
+                        <div className="h-7 w-7 rounded-full bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 text-indigo-400 border border-indigo-500/30 flex items-center justify-center text-xs font-bold font-mono">
+                        {displayName.split(' ').map(n => n[0]).join('')}
+                        </div>
+                        <span>{displayName}</span>
+                        </td>
                               <td className="py-3.5">
                                 {student.performance_band !== "N/A" ? (
                                   <span className={`px-2.5 py-1 rounded-full text-xs font-bold border ${student.color_class}`}>
@@ -54697,8 +56554,8 @@ return (
             </main>
           )}
 
-          {role === "admin" && (
-            /* District Admin Dashboard View */
+          role === "admin" && null
+          {role === "parent" && (
             <main className="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
               <div className="flex justify-between items-center">
                 <div>
@@ -54712,499 +56569,6 @@ return (
                   </span>
                 </div>
               </div>
-
-              {/* Stat Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
-                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Active Campuses</span>
-                  <div className="text-2xl font-bold text-white mt-1">
-                    {adminKpisData ? adminKpisData.campuses.length : 4} Schools
-                  </div>
-                </div>
-                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
-                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Seat Licenses</span>
-                  <div className="text-2xl font-bold text-white mt-1">
-                    {adminKpisData ? `${adminKpisData.total_seats_active} / ${adminKpisData.total_seats_allocated}` : "1,420 / 2,000"}
-                  </div>
-                  <div className="text-xs text-zinc-500 mt-0.5">
-                    {adminKpisData && adminKpisData.total_seats_allocated > 0
-                      ? `${Math.round((adminKpisData.total_seats_active / adminKpisData.total_seats_allocated) * 100)}% Seat Utilization`
-                      : "71% Seat Utilization"}
-                  </div>
-                </div>
-                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
-                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Est. Proficiency Rate</span>
-                  <div className="text-2xl font-bold text-indigo-400 mt-1">
-                    {adminKpisData ? `${adminKpisData.overall_proficiency_rate}%` : "68.4%"}
-                  </div>
-                  <div className="text-xs text-zinc-500 mt-0.5">Target: 70% for positive card</div>
-                </div>
-                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
-                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">District Avg Accuracy</span>
-                  <div className="text-2xl font-bold text-white mt-1">
-                    {adminKpisData ? `${adminKpisData.overall_avg_accuracy}%` : "82.5%"}
-                  </div>
-                </div>
-              </div>
-
-              {/* District OPI Averages Row */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
-                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">District Avg Overall OPI</span>
-                  <div className="text-2xl font-bold text-white mt-1">
-                    {adminKpisData ? adminKpisData.overall_opi_avg : "295.4"}
-                  </div>
-                </div>
-                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
-                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">District Avg Life Science OPI</span>
-                  <div className="text-2xl font-bold text-indigo-400 mt-1">
-                    {adminKpisData ? adminKpisData.ls_opi_avg : "292.1"}
-                  </div>
-                </div>
-                <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
-                  <span className="text-xs text-zinc-500 uppercase tracking-wider font-bold">District Avg Physical Science OPI</span>
-                  <div className="text-2xl font-bold text-rose-400 mt-1">
-                    {adminKpisData ? adminKpisData.ps_opi_avg : "298.5"}
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {/* Campus List Table */}
-                <div className="lg:col-span-2 bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl">
-                  <div className="flex justify-between items-center mb-4">
-                    <h3 className="text-lg font-bold text-white">Campus Performance Summary</h3>
-                    <button
-                      onClick={fetchAdminKpis}
-                      disabled={isLoadingAdminKpis}
-                      className="px-2.5 py-1 text-[11px] font-semibold bg-zinc-850 hover:bg-zinc-750 text-zinc-350 rounded border border-zinc-700 transition"
-                    >
-                      {isLoadingAdminKpis ? "Loading..." : "Refresh KPIs"}
-                    </button>
-                  </div>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-left text-sm text-zinc-400">
-                      <thead className="text-xs text-zinc-500 uppercase border-b border-zinc-850">
-                        <tr>
-                          <th className="py-3">School Name</th>
-                          <th className="py-3">Students Active / Seats</th>
-                          <th className="py-3">Seat Utilization</th>
-                          <th className="py-3 text-right">District Calibration Status</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-zinc-850 font-medium">
-                        {!adminKpisData || adminKpisData.campuses.length === 0 ? (
-                          <>
-                            <tr>
-                              <td className="py-3.5 text-white">Central High School</td>
-                              <td className="py-3.5">680 / 800 seats</td>
-                              <td className="py-3.5">85%</td>
-                              <td className="py-3.5 text-right text-emerald-400">Active</td>
-                            </tr>
-                            <tr>
-                              <td className="py-3.5 text-white">Westside Academy</td>
-                              <td className="py-3.5">420 / 600 seats</td>
-                              <td className="py-3.5">70%</td>
-                              <td className="py-3.5 text-right text-emerald-400">Active</td>
-                            </tr>
-                            <tr>
-                              <td className="py-3.5 text-white">Oak Creek High</td>
-                              <td className="py-3.5">210 / 400 seats</td>
-                              <td className="py-3.5">52.5%</td>
-                              <td className="py-3.5 text-right text-emerald-400">Active</td>
-                            </tr>
-                            <tr>
-                              <td className="py-3.5 text-white">Innovation Charter</td>
-                              <td className="py-3.5">110 / 200 seats</td>
-                              <td className="py-3.5">55%</td>
-                              <td className="py-3.5 text-right text-emerald-400">Active</td>
-                            </tr>
-                          </>
-                        ) : (
-                          adminKpisData.campuses.map((campus) => (
-                            <tr key={campus.id} className="hover:bg-zinc-900/30 transition-colors">
-                              <td className="py-3.5 text-white">{campus.name}</td>
-                              <td className="py-3.5 font-mono">{campus.students_active} / {campus.seat_limit}</td>
-                              <td className="py-3.5">
-                                <div className="flex items-center gap-2">
-                                  <span className="font-mono">{campus.utilization_pct}%</span>
-                                  <div className="w-16 bg-zinc-800 h-1.5 rounded-full overflow-hidden">
-                                    <div
-                                      className="h-full bg-indigo-500"
-                                      style={{ width: `${campus.utilization_pct}%` }}
-                                    ></div>
-                                  </div>
-                                </div>
-                              </td>
-                              <td className="py-3.5 text-right font-sans">
-                                <span className="inline-flex items-center gap-1.5 px-2 py-1 text-xs font-semibold text-emerald-400 bg-emerald-500/5 rounded-md border border-emerald-500/10">
-                                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-                                  Active
-                                </span>
-                              </td>
-                            </tr>
-                          ))
-                        )}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                {/* B2B Seat Purchasing, Invite generation, and Manual Quota overrides */}
-                <div className="lg:col-span-2 space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* B2B Seat Purchasing */}
-                    <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
-                      <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                        <span>💳</span> B2B Campus Seat Purchasing
-                      </h3>
-                      <p className="text-xs text-zinc-500 leading-relaxed">
-                        Purchase additional student seat blocks for any campus in the district ($6.00 / seat / year).
-                      </p>
-                      {adminKpisData && adminKpisData.campuses && (
-                        <form onSubmit={(e) => {
-                          e.preventDefault();
-                          const targetCampus = e.target.elements.campus.value;
-                          const count = parseInt(e.target.elements.seats.value, 10);
-                          if (targetCampus && count > 0) {
-                            handleBuySeats(targetCampus, count);
-                          }
-                        }} className="space-y-3">
-                          <div className="grid grid-cols-2 gap-3">
-                            <div>
-                              <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Select Campus</label>
-                              <select name="campus" required className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900">
-                                <option value="">-- Select --</option>
-                                {adminKpisData.campuses.map(c => (
-                                  <option key={c.id} value={c.id}>{c.name}</option>
-                                ))}
-                              </select>
-                            </div>
-                            <div>
-                              <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Seats Count</label>
-                              <input type="number" name="seats" defaultValue="50" min="10" required className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none" />
-                            </div>
-                          </div>
-                          <button type="submit" className="w-full py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all">
-                            Purchase Seat Block
-                          </button>
-                        </form>
-                      )}
-                    </div>
-
-                    {/* Teacher Invite Panel */}
-                    <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4 font-sans">
-                      <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                        <span>✉️</span> Generate Teacher Invites
-                      </h3>
-                      <p className="text-xs text-zinc-500 leading-relaxed">
-                        Issue secure invite codes linking teachers directly to their designated campuses.
-                      </p>
-
-                      <form onSubmit={handleCreateInvite} className="space-y-3">
-                        <div className="grid grid-cols-2 gap-3">
-                          <div>
-                            <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Teacher Email</label>
-                            <input
-                              type="email"
-                              value={inviteEmailInput}
-                              onChange={(e) => setInviteEmailInput(e.target.value)}
-                              placeholder="teacher@school.edu"
-                              required
-                              className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors"
-                            />
-                          </div>
-                          <div>
-                            <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Designated Campus</label>
-                            {adminKpisData && adminKpisData.campuses ? (
-                              <select
-                                value={inviteCampusIdInput}
-                                onChange={(e) => setInviteCampusIdInput(e.target.value)}
-                                required
-                                className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900"
-                              >
-                                <option value="">-- Select --</option>
-                                {adminKpisData.campuses.map(c => (
-                                  <option key={c.id} value={c.id}>{c.name}</option>
-                                ))}
-                              </select>
-                            ) : (
-                              <select required className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900">
-                                <option value="">No Campuses</option>
-                              </select>
-                            )}
-                          </div>
-                        </div>
-                        <button type="submit" className="w-full py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition-all">
-                          Generate Invite Code
-                        </button>
-                      </form>
-
-                      {inviteSuccessMessage && (
-                        <div className="p-3 bg-zinc-950 border border-zinc-850 rounded-lg space-y-2">
-                          <p className="text-[11px] text-emerald-400 font-bold">{inviteSuccessMessage}</p>
-                          {generatedInviteCode && (
-                            <div className="flex gap-2 items-center">
-                              <input
-                                type="text"
-                                readOnly
-                                value={`http://localhost:3000/?invite_code=${generatedInviteCode}`}
-                                className="flex-1 bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-[10px] font-mono text-zinc-300 focus:outline-none cursor-pointer"
-                                onClick={(e) => e.target.select()}
-                              />
-                              <span className="text-[9px] uppercase font-bold text-zinc-500">Copied url</span>
-                            </div>
-                          )}
-                        </div>
-                      )}
-                      {inviteErrorMessage && (
-                        <p className="text-[11px] text-rose-400 font-semibold">{inviteErrorMessage}</p>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Manual Quota Override */}
-                  <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
-                    <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                      <span>⚙️</span> District Quota Overrides
-                    </h3>
-                    <p className="text-xs text-zinc-500 leading-relaxed">
-                      District Admin overrides to manually adjust campus seat allocations (without B2B Stripe transactions).
-                    </p>
-
-                    <form onSubmit={handleAdjustQuota} className="flex flex-col sm:flex-row gap-3 items-end">
-                      <div className="flex-1">
-                        <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">Select Campus</label>
-                        {adminKpisData && adminKpisData.campuses ? (
-                          <select
-                            value={adjustCampusIdInput}
-                            onChange={(e) => setAdjustCampusIdInput(e.target.value)}
-                            required
-                            className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900"
-                          >
-                            <option value="">-- Select --</option>
-                            {adminKpisData.campuses.map(c => (
-                              <option key={c.id} value={c.id}>{c.name}</option>
-                            ))}
-                          </select>
-                        ) : (
-                          <select required className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900">
-                            <option value="">No Campuses</option>
-                          </select>
-                        )}
-                      </div>
-                      <div className="w-32">
-                        <label className="text-[10px] uppercase font-bold text-zinc-500 block mb-1">New Limit</label>
-                        <input
-                          type="number"
-                          value={adjustSeatLimitInput}
-                          onChange={(e) => setAdjustSeatLimitInput(e.target.value)}
-                          placeholder="e.g. 500"
-                          required
-                          className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none"
-                        />
-                      </div>
-                      <button type="submit" className="py-2 px-6 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 font-bold rounded-lg text-xs uppercase tracking-wider transition-colors h-9">
-                        Update Limit
-                      </button>
-                    </form>
-                    {adjustQuotaSuccessMessage && (
-                      <p className="text-[11px] text-emerald-400 font-bold">{adjustQuotaSuccessMessage}</p>
-                    )}
-                    {adjustQuotaErrorMessage && (
-                      <p className="text-[11px] text-rose-400 font-semibold">{adjustQuotaErrorMessage}</p>
-                    )}
-                  </div>
-                </div>
-
-
-                {/* Score Calibration Panel */}
-                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-1">EOY Score Calibration</h3>
-                    <p className="text-xs text-zinc-500 mb-4">
-                      Upload de-identified score tables to map EOY actual CCRA grades to in-app telemetry for model retraining.
-                    </p>
-
-                    {/* Upload Action Area */}
-                    <div className="border border-dashed border-zinc-800 bg-zinc-950/40 rounded-xl p-6 text-center space-y-3">
-                      <div className="text-3xl text-zinc-650">📊</div>
-                      <div>
-                        <span className="text-xs font-semibold text-indigo-400 hover:text-indigo-300 cursor-pointer" onClick={simulateCsvUpload}>
-                          {csvFile ? `Attached: ${csvFile}` : "Click to select de-identified CSV"}
-                        </span>
-                        <p className="text-[10px] text-zinc-600 mt-1">Accepts serial user-id & scaled score columns.</p>
-                      </div>
-                    </div>
-
-                    {/* Progress bar */}
-                    {isCalibrating && (
-                      <div className="mt-4 space-y-1.5">
-                        <div className="flex justify-between text-[10px] font-semibold text-zinc-500">
-                          <span>Calibrating model...</span>
-                          <span>{uploadProgress}%</span>
-                        </div>
-                        <div className="w-full bg-zinc-800 h-1 rounded-full overflow-hidden">
-                          <div className="bg-indigo-500 h-1 transition-all duration-300" style={{ width: `${uploadProgress}%` }}></div>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Ingestion Log Output */}
-                    {calibrationLogs.length > 0 && (
-                      <div className="mt-4 bg-zinc-950 border border-zinc-850 p-3 rounded-lg font-mono text-[9px] text-zinc-400 h-36 overflow-y-auto space-y-1.5">
-                        {calibrationLogs.map((log, idx) => (
-                          <div key={idx} className={log.startsWith("[SUCCESS]") ? "text-emerald-400" : ""}>
-                            {log}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="mt-6 pt-4 border-t border-zinc-850 flex gap-3">
-                    <button
-                      disabled={isCalibrating || !csvFile}
-                      onClick={() => {
-                        setCsvFile(null);
-                        setCalibrationLogs([]);
-                        setIsCalibrated(false);
-                      }}
-                      className="flex-1 py-2 text-xs font-semibold bg-zinc-800 text-zinc-300 rounded-lg hover:bg-zinc-700 transition disabled:opacity-40"
-                    >
-                      Clear Data
-                    </button>
-                    <button
-                      disabled={isCalibrating || isCalibrated}
-                      onClick={simulateCsvUpload}
-                      className="flex-1 py-2 text-xs font-semibold bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition shadow-md shadow-indigo-600/20 disabled:opacity-40"
-                    >
-                      {isCalibrated ? "Calibrated" : "Run Ingestion"}
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* OSDE Compliance Export Hub, Scheduling, Retention Policies & Audit Log streams */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-                {/* OSDE Export & Scheduling Hub */}
-                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-5">
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-1">OSDE Export & Scheduling</h3>
-                    <p className="text-xs text-zinc-500">
-                      Download official compliance reports or schedule automated deliveries.
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <button
-                      onClick={() => handleDownloadExport('csv')}
-                      className="py-2.5 bg-zinc-850 hover:bg-zinc-750 text-zinc-200 border border-zinc-700 text-xs font-bold rounded-xl transition flex flex-col items-center gap-1.5"
-                    >
-                      <span>📊</span> Download CSV Report
-                    </button>
-                    <button
-                      onClick={() => handleDownloadExport('zip')}
-                      className="py-2.5 bg-zinc-850 hover:bg-zinc-750 text-zinc-200 border border-zinc-700 text-xs font-bold rounded-xl transition flex flex-col items-center gap-1.5"
-                    >
-                      <span>📦</span> Export Telemetry ZIP
-                    </button>
-                  </div>
-
-                  <form onSubmit={handleScheduleReport} className="border-t border-zinc-855 pt-4 space-y-3">
-                    <h4 className="text-xs uppercase font-bold text-zinc-450 tracking-wider">Schedule Automated Reports</h4>
-                    <div className="space-y-2">
-                      <input
-                        type="email"
-                        required
-                        value={scheduleEmail}
-                        onChange={(e) => setScheduleEmail(e.target.value)}
-                        placeholder="coordinator@district.edu"
-                        className="w-full bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors"
-                      />
-                      <div className="flex gap-2">
-                        <select
-                          value={scheduleFrequency}
-                          onChange={(e) => setScheduleFrequency(e.target.value)}
-                          className="flex-1 bg-zinc-950 border border-zinc-850 rounded-lg px-3 py-2 text-xs text-white focus:outline-none bg-zinc-900"
-                        >
-                          <option value="weekly">Weekly Frequency</option>
-                          <option value="monthly">Monthly Frequency</option>
-                        </select>
-                        <button
-                          type="submit"
-                          className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg text-xs transition"
-                        >
-                          Schedule
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-
-                  {/* Data Retention purger */}
-                  <div className="border-t border-zinc-855 pt-4 space-y-2.5">
-                    <h4 className="text-xs uppercase font-bold text-zinc-450 tracking-wider">Data Retention Clean Policies</h4>
-                    <p className="text-[10px] text-zinc-500 leading-relaxed">
-                      Purge student telemetry older than 1 year to comply with state records retention schedules.
-                    </p>
-                    <button
-                      onClick={handleRunPurge}
-                      disabled={isPurging}
-                      className="w-full py-2 bg-rose-950 hover:bg-rose-900 text-rose-350 border border-rose-900/40 text-xs font-bold rounded-lg transition"
-                    >
-                      {isPurging ? "Purging Records..." : "Trigger Manual Retention Purge (365d)"}
-                    </button>
-                  </div>
-                </div>
-
-                {/* Audit Trail Log Stream Console */}
-                <div className="lg:col-span-2 bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4 font-sans">
-                  <div className="flex justify-between items-center border-b border-zinc-850 pb-3">
-                    <div>
-                      <h3 className="text-lg font-bold text-white">Administrative Audit Trail</h3>
-                      <p className="text-xs text-zinc-500">
-                        Real-time stream of administrative modifications and de-identified uploads.
-                      </p>
-                    </div>
-                    <button
-                      onClick={fetchAuditLogs}
-                      disabled={isLoadingAuditLogs}
-                      className="px-2.5 py-1 bg-zinc-800 hover:bg-zinc-750 text-zinc-200 border border-zinc-700 text-xs font-bold rounded-lg transition"
-                    >
-                      {isLoadingAuditLogs ? "Refreshing..." : "Refresh Trail"}
-                    </button>
-                  </div>
-
-                  <div className="overflow-y-auto max-h-[360px] pr-2 space-y-3">
-                    {auditLogs.length === 0 ? (
-                      <p className="text-zinc-500 italic text-center py-12 text-sm">
-                        No administrative events logged in the audit trail.
-                      </p>
-                    ) : (
-                      auditLogs.map((log) => (
-                        <div key={log.id} className="p-3.5 bg-zinc-950 border border-zinc-850 rounded-xl space-y-1.5 hover:border-zinc-800 transition">
-                          <div className="flex justify-between items-center text-[10px]">
-                            <span className="font-bold text-indigo-400 uppercase tracking-wider">{log.action_name}</span>
-                            <span className="text-zinc-650 font-mono">{new Date(log.timestamp).toLocaleString()}</span>
-                          </div>
-                          <p className="text-xs text-zinc-300 leading-relaxed font-sans">{log.description}</p>
-                          <div className="text-[9px] text-zinc-500 flex items-center gap-1">
-                            <span>Initiated by:</span>
-                            <span className="font-bold text-zinc-400">{log.action_by}</span>
-                          </div>
-                        </div>
-                      ))
-                    )}
-                  </div>
-                </div>
-
-              </div>
-            </main>
-          )}
-
-          {role === "parent" && (
-            <main className="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
               <div className="flex justify-between items-center">
                 <div>
                   <h2 className="text-3xl font-bold tracking-tight text-white">Parent Progress Portal</h2>
@@ -56656,6 +58020,18 @@ return (
 
           {role === "school_admin" && (
             <main className="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+              <div className="flex justify-between items-center">
+                <div>
+                  <h2 className="text-3xl font-bold tracking-tight text-white">District Administrator Hub</h2>
+                  <p className="text-sm text-zinc-400">Manage licenses, view campus performance, and calibrate predictive models.</p>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+                  <span className="text-xs font-semibold text-zinc-300">
+                    Model: {isCalibrated ? "Active v1.3 (Calibrated)" : "Active v1.2 (Default Heuristic)"}
+                  </span>
+                </div>
+              </div>
               <div className="flex justify-between items-center">
                 <div>
                   <h2 className="text-3xl font-bold tracking-tight text-white">School Administrator Quota Portal</h2>

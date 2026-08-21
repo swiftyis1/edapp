@@ -143,6 +143,14 @@ REST_FRAMEWORK = {
         'telemetry.auth.ExpiringTokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '45/minute',
+        'user': '45/minute',
+    },
 }
 
 # Stripe API Keys & Settings
@@ -170,4 +178,23 @@ CACHES = {
         'LOCATION': 'swift-science-cache',
     }
 }
+
+# Strategy B: HTTPS/SSL Production Transit Security
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = 31536000  # 1 year
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+
+
+# Celery Configuration
+CELERY_BROKER_URL = 'memory://'  # Fallback memory broker for local dev
+CELERY_TASK_ALWAYS_EAGER = True  # Always run tasks synchronously in eager mode for testing/dev ease
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
 

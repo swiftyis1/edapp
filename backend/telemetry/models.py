@@ -22,6 +22,10 @@ class UserProfile(models.Model):
     stripe_customer_id = models.CharField(max_length=100, null=True, blank=True)
     stripe_subscription_id = models.CharField(max_length=100, null=True, blank=True)
     subscription_status = models.CharField(max_length=50, default='inactive')
+    
+    # Google Classroom credentials (encrypted)
+    google_access_token = models.TextField(null=True, blank=True)
+    google_refresh_token = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.user.username} ({self.role})"
@@ -48,6 +52,7 @@ class Classroom(models.Model):
     campus = models.ForeignKey(Campus, on_delete=models.SET_NULL, null=True, blank=True, related_name='classrooms')
     created_at = models.DateTimeField(auto_now_add=True)
     lti_context_id = models.CharField(max_length=255, blank=True, null=True)
+    python_assessment_max_attempts = models.IntegerField(default=100)
 
     def __str__(self):
         return f"{self.name} ({self.class_code})"
@@ -70,6 +75,7 @@ class Student(models.Model):
     classroom = models.ForeignKey(Classroom, on_delete=models.SET_NULL, null=True, blank=True, related_name='students')
     created_at = models.DateTimeField(auto_now_add=True)
     lti_user_id = models.CharField(max_length=255, blank=True, null=True)
+    python_extra_attempts = models.JSONField(default=dict, blank=True)
 
     def __str__(self):
         return self.name
@@ -406,3 +412,33 @@ class ReportSchedule(models.Model):
 
     def __str__(self):
         return f"Report for {self.email} ({self.frequency})"
+
+class PythonAssignment(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=100, unique=True)
+    prompt = models.TextField()
+    starter_code = models.TextField(blank=True, null=True)
+    test_suite = models.JSONField(help_text="List of test assertions to run in Pyodide.")
+    module = models.IntegerField(default=1, help_text="The curriculum module index (1 = Variables, 2 = Selection/Loops, etc.)")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+
+class PythonSubmission(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='python_submissions')
+    assignment = models.ForeignKey(PythonAssignment, on_delete=models.CASCADE, related_name='submissions')
+    code = models.TextField()
+    output = models.TextField(blank=True, null=True)
+    passed = models.BooleanField(default=False)
+    score = models.IntegerField(default=0)  # 0 to 100
+    duration_seconds = models.FloatField(default=0.0)
+    test_results = models.JSONField(help_text="Detailed results of each assertion.")
+    selected_for_grading = models.BooleanField(default=False)
+    submitted_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.student.name} - {self.assignment.title} ({'Passed' if self.passed else 'Failed'})"

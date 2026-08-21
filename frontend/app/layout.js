@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Swift Science",
-  description: "Playable Science Assessment Puzzles & Analytics Portal",
+  title: "Swift Education Suite",
+  description: "Swift Education Suite: OAS Science & CS Adaptive Learning Ecosystem",
 };
 
 

@@ -30,6 +30,16 @@ urlpatterns = [
     path('parent/add-child/', views.parent_add_child, name='parent_add_child'),
     path('sync/google-classroom/', views.sync_google_classroom, name='sync_google_classroom'),
     path('sync/clever/', views.sync_clever, name='sync_clever'),
+    
+    # Google Classroom Ingestion & OAuth
+    path('google/authorize/', views.google_classroom_authorize, name='google_classroom_authorize'),
+    path('google/callback/', views.google_classroom_callback, name='google_classroom_callback'),
+    path('google/courses/', views.google_classroom_courses, name='google_classroom_courses'),
+    path('google/courses/<str:course_id>/roster/', views.google_classroom_course_roster, name='google_classroom_course_roster'),
+    path('google/courses/<str:course_id>/coursework/', views.google_classroom_coursework, name='google_classroom_coursework'),
+    path('google/courses/<str:course_id>/import/', views.google_classroom_import_course, name='google_classroom_import_course'),
+    path('google/sync-grades/', views.google_classroom_sync_grades, name='google_classroom_sync_grades'),
+    
     path('reports/school-admin/', views.school_admin_dashboard, name='school_admin_dashboard'),
 
     # LTI 1.3
@@ -45,4 +55,14 @@ urlpatterns = [
     path('admin/schedule-report/', views.schedule_report_update, name='schedule_report_update'),
     path('admin/audit-logs/', views.audit_logs_list, name='audit_logs_list'),
     path('admin/run-purge/', views.run_retention_purge, name='run_retention_purge'),
+
+    # Python Curriculum
+    path('python/assignments/', views.python_assignments_list, name='python_assignments_list'),
+    path('python/submit/', views.python_submit_solution, name='python_submit_solution'),
+    path('python/classroom/settings/', views.python_update_attempts_limit, name='python_update_attempts_limit'),
+    path('python/teacher/submissions/', views.python_teacher_submissions_list, name='python_teacher_submissions_list'),
+    path('python/teacher/select-submission/', views.python_teacher_select_submission, name='python_teacher_select_submission'),
+    path('python/teacher/grant-extra-attempt/', views.python_teacher_grant_extra_attempt, name='python_teacher_grant_extra_attempt'),
+    path('python/admin/stats/', views.python_admin_stats, name='python_admin_stats'),
 ]
+
